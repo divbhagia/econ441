@@ -1,0 +1,24 @@
+---
+title: "Lecture 8"
+nav-sidebar: false
+---
+
+## Topics 
+- Unconstrained Single-Variable Optimization
+- Concave and Convex Functions
+  
+## References
+- Textbook sections 9.1, 9.2, 9.3, 9.4
+- Review notes for [Optimization](./../../Notes/Optimization.pdf) (Lectures 8-11)
+  
+## Slides 
+
+Open slides in a new <a href="Slides8.pdf" target="_blank"> tab </a> or 
+<a href="Slides8.pdf" download="Slides8">download</a> them.
+
+<object class="slide-deck" data="Slides8.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Unconstrained Optimization Worksheet](Handout-Unconstrained-Optimization.pdf)
+- [Homework](homework8.pdf) ([Solutions](homework8_solutions.pdf))

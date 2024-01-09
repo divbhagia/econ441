@@ -1,0 +1,25 @@
+---
+title: "Lecture 1"
+nav-sidebar: false
+---
+
+## Topics 
+- Numbers and sets
+- Relations and functions
+- Summation notation
+- Necessary and sufficient conditions
+  
+**Textbook references**: Sections 2.2, 2.3, 2.4-2.6, pg 163, 5.1
+
+## Slides 
+
+Open slides in a new <a href="Slides1.pdf" target="_blank"> tab </a> or 
+<a href="Slides1.pdf" download="Slides1">download</a> them.
+
+<object class="slide-deck" data="Slides1.pdf" type="application/pdf" style="width:80%; height:450px;">PDF display not supported in browser.
+</object>
+
+## Practice Questions
+- [Sets and Functions Worksheet](Handout-Sets-and-Functions.pdf)
+- [Summation Notation Worksheet](Handout-Summation-Notation.pdf)
+- [Homework](homework1.pdf) ([Solutions](homework1_solutions.pdf))

@@ -1,0 +1,69 @@
+project:
+  type: website
+  output-dir: docs
+  render: 
+    - "*.qmd"
+  
+execute:
+  freeze: auto
+
+
+website:
+  title: "Introduction to Mathematical Economics"
+  navbar:
+    right:
+      - text: "Syllabus"
+        file: syllabus.qmd
+      - text: "Schedule"
+        file: schedule.qmd
+      - text: "Content"
+        file: Lectures/Lecture1/lecture1.qmd
+      - icon: github
+        href: https://divbhagia.github.io/Econ441/
+
+  sidebar:
+    - title: "Lectures"
+      style: "docked"
+      search: false
+      background: light
+      contents:
+      - section: "Preliminaries"
+        contents:
+          - text: "Lecture 1"
+            file: Lectures/Lecture1/lecture1.qmd
+      - section: "Linear Algebra"
+        contents:
+          - text: "Lecture 2"
+            file: Lectures/Lecture2/lecture2.qmd
+          - text: "Lecture 3"
+            file: Lectures/Lecture3/lecture3.qmd
+          - text: "Lecture 4"
+            file: Lectures/Lecture4/lecture4.qmd
+      - section: "Calculus"
+        contents:
+          - text: "Lecture 5"
+            file: Lectures/Lecture5/lecture5.qmd
+          - text: "Lecture 6"
+            file: Lectures/Lecture6/lecture6.qmd
+          - text: "Lecture 7"
+            file: Lectures/Lecture7/lecture7.qmd    
+      - section: "Optimization" 
+        contents:
+          - text: "Lecture 8"
+            file: Lectures/Lecture8/lecture8.qmd
+          - text: "Lecture 9" 
+            file: Lectures/Lecture9/lecture9.qmd
+          - text: "Lecture 10"
+            file: Lectures/Lecture10/lecture10.qmd
+          - text: "Lecture 11"
+            file: Lectures/Lecture11/lecture11.qmd
+  
+  page-footer:
+      2024 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
+
+format:
+  html:
+    theme: assets/custom.scss
+    toc: true
+    link-external-newwindow: true
+    css: assets/styles.css

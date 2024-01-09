@@ -1,0 +1,287 @@
+\documentclass{./../../Latex/homework}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Homework 5 Solutions}
+
+%%%%%%%%%%%%%%%% Exercise 6.2
+\subsection*{Exercise 6.2} 
+\begin{enumerate}
+
+%%%%% Question 2
+\item[2.] $y=5 x^{2}-4 x$
+
+\begin{enumerate}
+\item
+$$
+\begin{aligned}
+\frac{\Delta y}{\Delta x} &=\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
+&=\frac{5(x+\Delta x)^{2}-4(x+\Delta x)-\left(5 x^{2}-4 x\right)}{\Delta x} \\
+&=\frac{5\left(x^{2}+\Delta x^{2}+2 x \Delta x\right)-4 x-4 \Delta x-5 x^{2}+4 x}{\Delta x} \\
+&=\frac{5 \Delta x^{2}+10 x \Delta x-4 \Delta x}{\Delta x}=5 \Delta x+10 x-4
+\end{aligned}
+$$
+\item $$\frac{d y}{d x}=\lim _{\Delta x \rightarrow 0} \frac{\Delta y}{\Delta x}=\lim _{\Delta x \rightarrow 0} 5 \Delta x+10 x-4=10 x-4$$ 
+
+\item $$\begin{aligned} f^{\prime}(2) &=10 \times 2-4=16 \\ f^{\prime}(3) &=10 \times 3-4=26 \end{aligned}$$ 
+\end{enumerate}
+
+%%%%% Question 2
+\item[3.] $y=5 x-2$ \\
+\begin{enumerate}
+\item $$\frac{\Delta y}{\Delta x}=\frac{5(\Delta x+x)-2-(5 x-2)}{\Delta x}$$
+$$
+=\frac{5 \Delta x}{\Delta x}=5
+$$
+It is a constant function. 
+
+\item No it doesn't matter whether $\Delta x$ is small or large. $\dfrac{d y}{d x}=5$
+\end{enumerate}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%% Exercise 7.1
+\subsection*{Exercise 7.1} 
+\begin{enumerate}
+
+%%%%% Question 3
+\item[3.]
+
+\begin{enumerate}
+	 
+\item $f^{\prime}(x)=18$ \\
+$f^{\prime}(1)=18$ and $f^{\prime}(2)=18$. \\
+
+\item  $f^{\prime}(x)=3 c x^{2}$ \\
+$f^{\prime}(1)=3 c$ and $f^{\prime}(2)=12 c$.\\
+
+\item  $f^{\prime}(x)=10 x^{-3}$ \\
+$f^{\prime}(1)=10$ and $f^{\prime}(2)=\frac{10}{8} = \frac{5}{4}$ \\
+
+\item $f^{\prime}(x)=x^{1 / 3}=\sqrt[3]{x}$ \\
+$f^{\prime}(1)=1$ and $f^{\prime}(2)=\sqrt[3]{2}$ \\
+
+\item $f^{\prime}(w)=2 w^{-2 / 3}$ \\
+$f^{\prime}(1)=2$ and $f^{\prime}(2)=2 \cdot 2^{-2 / 3}=2^{1 / 3}$ \\
+
+\item  $f^{\prime}(w)=\frac{1}{2} w^{-7 / 6}$ \\
+$f^{\prime}(1)=\frac{1}{2}$ and $f^{\prime}(2)=\frac{1}{2}\left(2^{-7 / 6}\right)=2^{-1} \cdot 2^{-7 / 6}$ \\
+\end{enumerate}
+\end{enumerate}
+
+\subsection*{Exercise 7.2} 
+\begin{enumerate}
+
+%%%%% Question 3
+\item[3.] \begin{enumerate}
+ \item[(d)] $\underbrace{(a x-b)}_{f(x)} \underbrace{\left(c x^{2}\right)}_{g(x)}$ \\~\\
+$f^{\prime}(x) =a$ \\
+$g^{\prime}(x)=2 c x$ \\
+
+
+$\begin{aligned}
+\frac{d}{d x} f(x) g(x) &=f^{\prime}(x) g(x)+f(x) g^{\prime}(x) \\
+&=a c x^{2}+(a x-b) 2 c x \\
+&=a c x^{2}+2 a c x^{2}-2 b c x \\
+&=3 a c x^{2}-2 b c x
+\end{aligned}$ \\~\\
+
+
+\item[(e)] \(\underbrace{(2-3 x)(1+x)}_{f(x)} \underbrace{(x+2)}_{g(x)}\) \\
+
+\(g^{\prime}(x) =1 \) \\
+
+\( f(x) =\underbrace{(2-3 x)}_{h(x)} \underbrace{1+x)}_{p(x)} \) \\~\\
+
+$\begin{aligned}
+f^{\prime}(x) &=h^{\prime}(x) p(x)+h(x) p^{\prime}(x) \\
+&=-3(1+x)+(2-3 x) \\
+&=-(6 x+1)
+\end{aligned}$ \\~\\
+
+$\begin{aligned}
+\frac{d}{d x} f(x) g(x) &=f^{\prime}(x) g(x)+f(x) g^{\prime}(x) \\
+&=-(6 x+1)(x+2)+(2-3 x)(1+x) \\
+&=-6 x^{2}-x-12 x-2+2-3 x+2 x-3 x^{2} \\
+&=-9 x^{2}-14 x \\
+&=-x(9 x+14)
+\end{aligned}$
+\end{enumerate}
+
+%%%%% Question 7
+\item[7.] \begin{enumerate} \item $$\frac{x^{2}+3}{x} $$ 
+$$
+\begin{array}{ll}
+f(x)=x^{2}+3 & \rightarrow f^{\prime}(x)=2 x \\
+g(x)=x & \rightarrow g^{\prime}(x)=1
+\end{array}
+$$ 
+
+$$
+\begin{aligned}
+\frac{d}{d x} \frac{f(x)}{g(x)} &=\frac{f^{\prime}(x) g(x)-f(x) g^{\prime}(x)}{g(x)^{2}} \\
+&=\frac{(2 x) x-\left(x^{2}+3\right) \cdot 1}{x^{2}} \\
+&=\frac{2 x^{2}-x^{2}-3}{x^{2}}=\frac{x^{2}-3}{x^{2}}
+\end{aligned}
+$$ 
+
+\item
+$$
+\begin{aligned}
+f(x) &=\frac{x+9}{x} \\~\\
+f^{\prime}(x) &=\frac{1 \cdot x-1 \cdot(x+9)}{x^{2}}=\frac{-9}{x^{2}}
+\end{aligned}
+$$ 
+
+\item
+$$
+\begin{aligned}
+&f(x)=\frac{6 x}{x+5} \\
+&f^{\prime}(x)=\frac{6 \cdot(x+5)-1.6 x}{(x+5)^{2}}=\frac{30}{(x+5)^{2}}
+\end{aligned}
+$$ 
+
+\item
+$$
+\begin{aligned}
+f(x) &=\frac{a x^{2}+b}{c x+d} \\~\\
+f^{\prime}(x) &=\frac{2 a x(c x+d)-\left(a x^{2}+b\right) c}{(c x+d)^{2}} \\
+&=\frac{2 a c x^{2}+2 a d x-c a x^{2}-b c}{(c x+d)^{2}} \\
+&= \frac{a c x^{2}+2 a d x-b c}{(c x+d)^{2}}
+\end{aligned}
+$$ \\
+\end{enumerate}
+
+%%%%% Question 8
+\item[8.]
+ $f(x)=a x+b$ 
+\begin{enumerate}
+\item $f^{\prime}(x)=a$ 
+\item $\frac{d}{d x} a x^{2}+b x=2 a x+b$ 
+\item $$\frac{d}{d x} \frac{1}{a x+b}=\frac{0(a x+b)-(a) \cdot 1}{(a x+b)^{2}}=\frac{-a}{(a x+b)^{2}}$$ 
+\item $$\frac{d}{d x} \frac{a x+b}{x}=\frac{a x-(a x+b) \cdot 1}{x^{2}}=\frac{-b}{x^{2}}$$ 
+\end{enumerate}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%% Exercise 7.3
+\subsection*{Exercise 7.3} 
+
+\begin{enumerate}
+\item 
+$$
+\begin{aligned}
+y &=u^{3}+2 u \\
+u &=5-x^{2} \\ 
+\end{aligned} 
+$$
+
+$$
+\begin{aligned}
+\frac{d y}{d u} &=3 u^{2}+2 \\
+\frac{d u}{d x} &=-2 x
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\frac{d y}{d x}=\frac{d y}{d y} \cdot \frac{d y}{d x} &=\left(3 y^{2}+2\right)(-2 x) \\
+&=\left(3\left(5-x^{2}\right)^{2}+2\right)(-2 x)
+\end{aligned}
+$$
+\item
+$$
+\begin{aligned}
+w&=a y^{2} \\
+y &=b x^{2}+c x \\
+\end{aligned} 
+$$ \\
+$$
+\begin{aligned}
+\frac{d w}{d x} &=\frac{d w}{d y} \cdot \frac{d y}{d x} \\
+&=2 a y(2 b x+c) \\
+&=2 a\left(b x^{2}+c x\right)(2 b x+c)
+\end{aligned}
+$$ \\
+
+\item \begin{enumerate}
+\item $y=\left(3 x^{2}-13\right)^{3}$ \\
+
+Denote, $z=3 x^{2}-13$
+
+Then, $y=z^{3}$
+$$
+\frac{d y}{d x}=\frac{d y}{d z} \cdot \frac{d z}{d x}=3 z^{2}(6 x)=18 x\left(3 x^{2}-13\right)^{2}
+$$ \\
+
+\item
+$$
+\begin{aligned}
+y &=\left(7 x^{3}-5\right)^{9} \\
+z &=7 x^{3}-5 \rightarrow y=z^{9} \\~\\
+\frac{d y}{d x} &=\frac{d y}{d z} \cdot \frac{d z}{d x}=9 z^{8}\left(21 x^{2}\right)=189 x^{2}\left(7 x^{3}-5\right)^{8}
+\end{aligned}
+$$\\
+
+\item
+$$
+ \begin{aligned}
+y &=(a x+b)^{5} \\
+z &=a x+b \rightarrow y=z^{5} \\~\\
+\frac{d y}{d x} &=\frac{d y}{d z} \cdot \frac{d z}{d x}=5 z^{4}(a)=5 a(a x+b)^{4}
+\end{aligned}
+$$\\
+\end{enumerate}
+
+\item $$
+\begin{aligned}
+  y&=(16 x+3)^{-2} \\
+z&=16 x+3
+\end{aligned}
+$$ \\
+$$
+\begin{aligned}
+&\frac{d y}{d x}=\frac{d y}{d z} \cdot \frac{dz}{d x} =-32(16 x+3)^{-3} \\
+\end{aligned}
+$$
+\\
+Using the quotient rule:
+$$y=\frac{1}{(16 x+3)^{2}}$$
+
+$$
+\begin{aligned}
+\frac{d y}{d x} &=\frac{0 \cdot(16 x+3)^{2}-32(16 x+3)}{(16 x+3)^{4}} \\
+&=\frac{-32}{(16 x+3)^{-3}}
+\end{aligned}
+$$ \\
+
+\item $$\begin{aligned} y &=7x+21 \rightarrow \frac{d y}{d x} &=7 \end{aligned}$$
+$$ \\
+\begin{aligned}
+ x &=\frac{y-21}{7} \rightarrow \frac{d x}{d y} &=\frac{1}{7}  \\
+\end{aligned}
+$$
+%\includegraphics[scale=0.2]{image}
+
+
+\item 
+\begin{enumerate} \item $$\frac{d y}{d x}=-6 x^{5}<0$$
+
+For $x>0$, this function is strictly decreasing as its derivative is negative.
+$$
+\frac{d x}{d y}=\frac{1}{d y / d x}=\frac{-1}{6 x^{5}}
+$$ \\
+
+\item
+$$
+\begin{aligned}
+y &=4 x^{5}+x^{3}+3 x \\
+\frac{d y}{d x} &=20 x^{4}+3 x^{2}+3>0
+\end{aligned}
+$$
+This function is strictly increasing as $\frac{d y}{d x}>0$ for all $x$.
+$$
+\frac{d x}{d y}=\frac{1}{20 x^{4}+3 x^{2}+3}
+$$
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

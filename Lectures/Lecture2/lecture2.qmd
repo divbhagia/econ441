@@ -1,0 +1,28 @@
+---
+title: "Lecture 2"
+nav-sidebar: false
+---
+
+## Topics 
+- Matrices: Addition, Subtraction, Scalar Multiplication
+- Matrix Multiplication
+- Vectors
+- Identity and Null Matrices
+- Transpose and Inverse of a Matrix
+  
+## References
+- Textbook sections 4.1-4.6
+- Review notes for [Linear Algebra](./../../Notes/Linear-Algebra.pdf) (Lectures 2-4)
+
+
+## Slides 
+
+Open slides in a new <a href="Slides2.pdf" target="_blank"> tab </a> or 
+<a href="Slides2.pdf" download="Slides2">download</a> them.
+
+<object class="slide-deck" data="Slides2.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Matrix Operations Worksheet](Handout-Matrix-Operations.pdf)
+- [Homework](homework2.pdf) ([Solutions](homework2_solutions.pdf))

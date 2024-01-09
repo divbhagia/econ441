@@ -1,0 +1,574 @@
+\documentclass{./../../Latex/homework}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Homework 4 Solutions}
+
+%%%%%%%%%%%%%%%% Exercise 5.3
+\subsection*{Exercise 5.3}
+
+% Question 1
+\begin{enumerate}
+\item 
+$$
+\begin{aligned}
+\left|\begin{array}{ccc}
+4 & 0 & -1 \\
+2 & 1 & -7 \\
+3 & 3 & 9
+\end{array}\right| &=4\left|\begin{array}{rr}
+1 & -7 \\
+3 & 9
+\end{array}\right|-0\left|\begin{array}{cc}
+2 & -7 \\
+3 & 9
+\end{array}\right|-1\left|\begin{array}{ll}
+2 & 1 \\
+3 & 3
+\end{array}\right| \\
+&=4(9+21)-0(18+21)-1(6-3) \\
+&=120-0-3=117
+\end{aligned}
+$$
+
+Interchanging rows and columns:\\
+
+\( \begin{aligned}\left|\begin{array}{ccc}4 & 2 & 3 \\ 0 & 1 & 3 \\ -1 & -7 & 9\end{array}\right| &=4\left|\begin{array}{cc}1 & 3 \\ -7 & 9\end{array}\right|-2\left|\begin{array}{cc}0 & 3 \\ -1 & 9\end{array}\right|+3\left|\begin{array}{cc}0 & 1 \\ -1 & -7\end{array}\right| \\ &=4(9+21)-2(0+3)+3(0+1) \\ &=120-6+3=117 \end{aligned} \) \\
+
+Interchange row 1 and 2:
+$$
+\begin{aligned}
+\left|\begin{array}{rrr}
+2 & 1 & -7 \\
+4 & 0 & -1 \\
+3 & 3 & 9
+\end{array}\right| &=2\left|\begin{array}{rr}
+0 & -1 \\
+3 & 9
+\end{array}\right|-1\left|\begin{array}{cc}
+4 & -1 \\
+3 & 9
+\end{array}\right|-7\left|\begin{array}{ll}
+4 & 0 \\
+3 & 3
+\end{array}\right| \\
+&=2(0+3)-1(36+3)-7(12-0) \\
+&=6-39-84=-117
+\end{aligned}
+$$
+You can verify the other two properties in the same way. \\~\\
+
+% Question 5
+\item[5.] 
+\begin{enumerate}
+\item[(a)] $$
+\begin{array}{l}
+4\left|\begin{array}{cc}
+1 & -3 \\
+1 & 0
+\end{array}\right|+1\left|\begin{array}{cc}
+19 & 1 \\
+7 & 1
+\end{array}\right| \\
+=4(0+3)+1(19-7) \\
+=\quad 12+12=24
+\end{array}
+$$
+
+Non-singular, rank = 3. \\
+
+\item[(b)] $$
+\begin{aligned}
+& 5\left|\begin{array}{cc}
+-2 & 1 \\
+0 & 3
+\end{array}\right|+6 \left| \begin{array}{ll}
+4 & 1 \\
+7 & 3
+\end{array}\right| \\
+=& 5(-6-0)+6(12-7) \\
+=&-30+30=0
+\end{aligned}
+$$
+
+Singular. Rank<3, will need to put in echelon form to find exact rank. \\
+
+\item[(c)]
+\[
+\begin{aligned} & 7\left|\begin{array}{cc}1 & 4 \\ -3 & -4\end{array}\right|+1\left|\begin{array}{cc}1 & 4 \\ 13 & -4\end{array}\right| \\=& 7(-4+12)+1(-4-52) \\=& 56-56=0 \end{aligned}
+\]
+
+Singular. Rank <3, will need to put in echelon form to find exact rank. \\
+
+\item[(d)]
+$$ \begin{aligned} &-3\left|\begin{array}{ll}9 & 5 \\ 8 & 6\end{array}\right|-1\left|\begin{array}{cc}-4 & 9 \\ 10 & 8\end{array}\right| \\
+ =&-3(54-40)-1(-32-90) \\
+ =&-42+122=80 \end{aligned}$$
+Non-singular, rank = 3. \\~\\
+\end{enumerate}
+
+% Question 8
+\item[8.] 
+\begin{enumerate}
+\item False. While we can find the transpose of any matrix, the determinant is only defined for square matrices. 
+\item False. Multiplying each element of an $n \times n$ by 2 will increase the determinant by $2^n$ times. 
+\item $A$ cannot be 0, but the determinant of $A$ can. In any case, if $|A|$=0, $A$ is singular.
+\end{enumerate}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%% Exercise 5.4
+\subsection*{Exercise 5.4} 
+
+\begin{enumerate}
+
+% Question 2
+\item[2.] Note that $$
+A^{-1}=\frac{1}{|A|} \operatorname{adj} A
+$$
+
+Here, \( \operatorname{adj} A=C^{\prime} \) where \( C=\left[\left|C_{i j}\right|\right] \).
+
+\begin{enumerate}
+
+\item 
+$$ |A|=5-0=5 $$
+$$\operatorname{adj} A=\left[\begin{array}{ll}\left|C_{11}\right| & \left|C_{21}\right| \\ \left|C_{12}\right| & \left|C_{22}\right|\end{array}\right]=\left[\begin{array}{cc}1 & -2 \\ 0 & 5\end{array}\right] $$
+$$A^{-1}=\frac{1}{|A|} \operatorname{adj} A=\frac{1}{5}\left[\begin{array}{cc}1 & -2 \\ 0 & 5\end{array}\right]=\left[\begin{array}{cc}1 / 5 & -2 / 5 \\ 0 & 1\end{array}\right] $$
+
+\item $$
+\begin{array}{l}
+|B|=-2-0=-2 \\
+B^{-1}=\frac{-1}{2}\left[\begin{array}{rr}
+2 & 0 \\
+-9 & -1
+\end{array}\right]
+\end{array} 
+$$
+
+\item $$
+\begin{array}{l}
+|C|=-3-21=-24 \\
+C^{-1}=\frac{-1}{24}\left[\begin{array}{cc}
+-1 & -7 \\
+-3 & 3
+\end{array}\right]
+\end{array}
+$$
+
+\item $$
+\begin{array}{l}
+|D|=21-0=21 \\
+D^{-1}=\frac{1}{21}\left[\begin{array}{rr}
+3 & -6 \\
+0 & 7
+\end{array}\right]
+\end{array}
+$$
+\end{enumerate}
+
+% Question 3
+\item[3.] 
+\begin{enumerate}
+\item Step 1: Exchange the two diagonal elements.\\
+Step 2: Multiply both the off-diagonal elements by -1.
+
+\item Step 3: Multiply the resulting matrix from steps 1 and 2 by \(1/|A|\).
+\end{enumerate}
+
+% Question 4
+\item[4.] (a)$$
+\begin{aligned}
+|E| &=1\left|\begin{array}{ll}
+7 & 3 \\
+2 & 0
+\end{array}\right|+1\left|\begin{array}{rr}
+4 & -2 \\
+7 & 3
+\end{array}\right| \\
+&=1(0-6)+1(12+14) \\
+&=-6+26=20
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\operatorname{adj} E &=\left[\begin{array}{ccc}
+\left|C_{11}\right| & \left|C_{21}\right| & \left|C_{31}\right| \\
+\left|C_{12}\right| & \left|C_{22}\right| & \left|C_{32}\right| \\
+\left|C_{13}\right| & \left|C_{23}\right| & \left|C_{33}\right|
+\end{array}\right] \\
+&=\left[\begin{array}{ccc}
+3 & 2 & -3 \\
+-7 & 2 & 7 \\
+-6 & -4 & 26
+\end{array}\right]
+\end{aligned}
+$$
+$$ E^{-1}=\frac{1}{|E|} a d j E $$ 
+
+(b)
+$$
+F^{-1}=\frac{-1}{10}\left[\begin{array}{ccc}
+0 & 2 & -3 \\
+10 & -6 & -1 \\
+0 & -4 & 1
+\end{array}\right]
+$$
+
+(c)
+$$ \left|C_{11}\right|=\left|\begin{array}{ll}0 & 1 \\ 1 & 0\end{array}\right|=-1 
+\quad  \left|C_{12}\right|=-\left|\begin{array}{ll}0 & 1 \\ 0 & 0\end{array}\right|=0 
+\quad  \left|C_{13}\right|=\left|\begin{array}{ll}0 & 0 \\ 0 & 1\end{array}\right|=0 
+$$
+$$ \left|C_{21}\right|=-\left|\begin{array}{ll}0 & 0 \\ 1 & 0\end{array}\right|=0 
+\quad  \left|C_{22}\right|=\left|\begin{array}{ll}0 & 1 \\ 0 & 0\end{array}\right|=0 
+\quad  \left|C_{23}\right|=-\left|\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right|=-1 $$
+$$
+\left|C_{31}\right|=\left|\begin{array}{cc}
+0 & 0 \\
+0 & 1
+\end{array}\right|=0 \quad\left|C_{32}\right|=-\left|\begin{array}{cc}
+1 & 0 \\
+0 & 1
+\end{array}\right|=-1 \quad\left|C_{33}\right|=\left|\begin{array}{ll}
+1 & 0 \\
+0 & 0
+\end{array}\right|=0
+$$
+$$ G^{-1}=-1\left[\begin{array}{ccc}-1 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & -1 & 0\end{array}\right]=\left[\begin{array}{lll}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0\end{array}\right] $$ \\
+
+(d) $$ H^{-1}=\left[\begin{array}{lll}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{array}\right] $$ \\
+
+
+% Question 6
+\item[6.] (a) $$
+\begin{array}{l}
+A=\left[\begin{array}{ll}
+4 & 3 \\
+2 & 5
+\end{array}\right] \quad v=\left[\begin{array}{l}
+x \\
+y
+\end{array}\right] \quad b=\left[\begin{array}{ll}
+28 \\
+42
+\end{array}\right] \\~\\
+\because A v=b \Rightarrow A^{-1} A v=A^{-1} b \Rightarrow v=A^{-1}b
+\end{array}
+$$
+
+\(|A| =20-6=14 \)
+
+\(A^{-1} =\frac{1}{14}\left[\begin{array}{cc}5 & -3 \\ -2 & 4\end{array}\right] \)
+\[
+\begin{aligned}v=A^{-1} b &=\frac{1}{14}\left[\begin{array}{cc}5 & -3 \\ -2 & 4\end{array}\right]\left[\begin{array}{l}28 \\ 42\end{array}\right] \\ &=\frac{1}{14}\left[\begin{array}{l}140-126 \\ -56+168\end{array}\right] = \frac{1}{14}\left[\begin{array}{l}14 \\ 112\end{array}\right] =\left[\begin{array}{l}1 \\ 8\end{array}\right] \end{aligned}
+\]\\
+So \(x=1\) and \(y=8\). \\~\\
+
+(b)
+$$ A=\left[\begin{array}{ccc}4 & 1 & -5 \\ -2 & 3 & 1 \\ 3 & -1 & 4\end{array}\right] \quad x=\left[\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right] \quad b=\left[\begin{array}{c}8 \\ 12 \\ 5\end{array}\right] $$ 
+
+$$
+\begin{aligned}
+|A| &=4\left|\begin{array}{cc}
+3 & 1 \\
+-1 & 4
+\end{array}\right|-1\left|\begin{array}{cc}
+-2 & 1 \\
+3 & 4
+\end{array}\right|-5\left|\begin{array}{cc}
+-2 & 3 \\
+3 & -1
+\end{array}\right| \\
+&=4(12+1)-1(-8-3)-5(2-9) \\
+&=52+11+35=98
+\end{aligned}
+$$
+$$
+\operatorname{adj} A =\left[\begin{array}{ccc}
+13 & 1 & 16 \\
+11 & 31 & 6 \\
+-7 & 7 & 14
+\end{array}\right] $$
+$$
+x=A^{-1} b =\frac{1}{98}\left[\begin{array}{ccc}
+13 & 1 & 16 \\
+11 & 31 & 6 \\
+-7 & 7 & 14
+\end{array}\right]_{3 \times 3} \left[\begin{array}{l}
+8 \\
+12 \\
+5
+\end{array}\right]_{3 \times 1} \\
+=\frac{1}{98}\left[\begin{array}{c}
+196 \\
+490 \\
+98
+\end{array}\right]_{3 \times 1}=\left[\begin{array}{c}
+2 \\
+5 \\
+1
+\end{array}\right]
+$$ \\
+
+% Question 7
+\item[7.] If a matrix is its own inverse, we would need that \(A^2 = I \). This is true for the identity matrix. There are other possibilities such as matrix \(G\) in exercise 4. \\~\\
+\end{enumerate}
+
+%%%%%%%%%%%%%%%% Exercise 5.5
+\subsection*{Exercise 5.5} 
+
+\begin{enumerate}
+% Question 1 & 2
+\item[1 \& 2.]  
+(a) $A=\left[\begin{array}{cc}3 & -2 \\ 2 & 1\end{array}\right] \rightarrow|A|=7 \quad b=\left[\begin{array}{c}6 \\ 11\end{array}\right]$ \\
+
+By Cramer's Rule:
+
+$$
+\begin{aligned}
+A_{1} & =\left[\begin{array}{rr}
+6 & -2 \\
+11 & 1
+\end{array}\right] \rightarrow\left|A_{1}\right|=28 \\
+A_{2} & =\left[\begin{array}{ll}
+3 & 6 \\
+2 & 11
+\end{array}\right] \rightarrow\left|A_{2}\right|=21 \\
+x_{1}^{*} & =\frac{\left|A_{1}\right|}{|A|}=\frac{28}{7}=4 \\
+x_{2}^{*} & =\frac{\left|A_{2}\right|}{|A|}=\frac{21}{7}=3
+\end{aligned}
+$$
+
+Taking the inverse:
+
+$$
+\begin{aligned}
+& A^{-1}=\frac{1}{|A|} \operatorname{adj}=\frac{1}{7}\left[\begin{array}{cc}1 & 2 \\-2 & 3\end{array}\right] \\
+& \left[\begin{array}{l}x_{1}^{*} \\x_{2}^{*}\end{array}\right]=A^{-1} b=\frac{1}{7}\left[\begin{array}{rr}1 & 2 \\-2 & 3\end{array}\right]\left[\begin{array}{l}6 \\11\end{array}\right]=\frac{1}{7}\left[\begin{array}{l}28 \\21\end{array}\right]=\left[\begin{array}{l}4 \\3\end{array}\right] 
+\end{aligned}
+$$
+
+(b)
+$$
+A=\left[\begin{array}{cc}
+-1 & 3 \\
+4 & -1
+\end{array}\right] \rightarrow|A|=-11 \quad b=\left[\begin{array}{c}
+-3 \\
+12
+\end{array}\right]
+$$
+
+By Cramer's rule:
+
+$$
+\begin{aligned}
+& \left|A_{1}\right|=\left|\begin{array}{cc}
+-3 & 3 \\
+12 & -1
+\end{array}\right|=-33 \rightarrow x_{1}^{*}=\frac{-33}{-11}=3 \\
+& \left|A_{2}\right|=\left|\begin{array}{cc}
+-1 & -3 \\
+4 & 12
+\end{array}\right|=0 \rightarrow x_{2}^{*}=\frac{0}{-11}=0
+\end{aligned}
+$$
+
+By taking the inverse:
+
+$$
+\left[\begin{array}{l}
+x_{1}^{*} \\
+x_{2}
+\end{array}\right]=\frac{-1}{11}\left[\begin{array}{cc}
+-1 & -3 \\
+-4 & -1
+\end{array}\right]\left[\begin{array}{c}
+-3 \\
+12
+\end{array}\right]=\frac{-1}{11}\left[\begin{array}{c}
+-33 \\
+0
+\end{array}\right]=\left[\begin{array}{l}
+3 \\
+0
+\end{array}\right] 
+$$
+
+(c)
+$$
+\begin{aligned}
+& |A|=\left|\begin{array}{cc}
+8 & -7 \\
+1 & 1
+\end{array}\right|=15 \\
+& \left|A_{1}\right|=\left|\begin{array}{cc}
+9 & -7 \\
+3 & 1
+\end{array}\right|=30 \quad \rightarrow x_{1}^{*}=\frac{30}{15}=2 \\
+& \left|A_{2}\right|=\left|\begin{array}{cc}
+8 & 9 \\
+1 & 3
+\end{array}\right|=15 \rightarrow x_{2}^{*}=\frac{15}{15}=1 \\
+\end{aligned}
+$$
+Alternatively, 
+$$\left[\begin{array}{c}
+x_{1}^{*} \\
+x_{2}^{*}
+\end{array}\right]=\frac{1}{15}\left[\begin{array}{cc}
+1 & 7 \\
+-1 & 8
+\end{array}\right]\left[\begin{array}{l}
+9 \\
+3
+\end{array}\right]=\left[\begin{array}{l}
+2 \\
+1
+\end{array}\right]
+$$
+
+(d)
+$$
+\begin{aligned}
+& |A|=\left|\begin{array}{cc}
+5 & 9 \\
+7 & -3
+\end{array}\right|=-78 \\
+& \left|A_{1}\right|=\left|\begin{array}{cc}
+14 & 9 \\
+4 & -3
+\end{array}\right|=-78 \rightarrow x_{1}^{*}=1 \\
+& \left|A_{2}\right|=\left|\begin{array}{cc}
+5 & 14 \\
+7 & 4
+\end{array}\right|=-78 \rightarrow x_{2}^{*}=1
+\end{aligned}
+$$
+
+Alternatively, $$\left[\begin{array}{l}x_{1}^{2} \\ x_{2}^{*}\end{array}\right]=\frac{-1}{78}\left[\begin{array}{cc}-3 & -9 \\ -7 & 5\end{array}\right]\left[\begin{array}{c}14 \\ 4\end{array}\right]=\left[\begin{array}{l}1 \\ 1\end{array}\right]$$
+
+% Question 3
+\item[3.] (a) $$
+\begin{aligned}
+|A| & =\left|\begin{array}{rrr}
+8 & -1 & 0 \\
+0 & 2 & 5 \\
+2 & 0 & 3
+\end{array}\right| \\
+& =8\left|\begin{array}{cc}
+2 & 5 \\
+0 & 3
+\end{array}\right|-1\left|\begin{array}{ll}
+0 & 5 \\
+2 & 3
+\end{array}\right|=48-10=38
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\left|A_{1}\right|= & \left|\begin{array}{ccc}
+16 & -1 & 0 \\
+5 & 2 & 5 \\
+7 & 0 & 3
+\end{array}\right| \\
+& 16\left|\begin{array}{cc}
+2 & 5 \\
+0 & 3
+\end{array}\right|-(-1)\left|\begin{array}{rr}
+5 & 5 \\
+7 & 3
+\end{array}\right|=96-20=76 \\
+& x_{1}^{*}=\frac{76}{38}=2
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+\left|A_{2}\right| & =\left|\begin{array}{ccc}
+8 & 16 & 0 \\
+0 & 5 & 5 \\
+2 & 7 & 3
+\end{array}\right| \\
+& =8\left|\begin{array}{cc}
+5 & 5 \\
+7 & 3
+\end{array}\right|-16\left|\begin{array}{cc}
+0 & 5 \\
+2 & 3
+\end{array}\right| \\
+& =8 \times-20-16 \times-10=-160+160=0 \\
+& x_{2}^{*}=0
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\left|A_{3}\right| & =\left|\begin{array}{ccc}
+8 & -1 & 16 \\
+0 & 2 & 5 \\
+2 & 0 & 7
+\end{array}\right| \\
+& =8\left|\begin{array}{cc}
+2 & 5 \\
+0 & 7
+\end{array}\right|+1\left|\begin{array}{cc}
+0 & 5 \\
+2 & 7
+\end{array}\right|+16\left|\begin{array}{ll}
+0 & 2 \\
+2 & 0
+\end{array}\right| \\
+& =112-10-64=38 \rightarrow x_{3}^{*}=1 
+\end{aligned}
+$$
+
+(d) 
+$$
+\begin{aligned}
+|A| & =\left|\begin{array}{rrr}
+-1 & 1 & 1 \\
+1 & -1 & 1 \\
+1 & 1 & -1
+\end{array}\right| \\
+& =1\left|\begin{array}{rr}
+-1 & 1 \\
+1 & -1
+\end{array}\right|-1\left|\begin{array}{rr}
+1 & 1 \\
+1 & -1
+\end{array}\right|+1\left|\begin{array}{rr}
+1 & -1 \\
+1 & 1
+\end{array}\right| \\
+& =0+2+2=4
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+& \left|A_{1}\right|=\left|\begin{array}{ccc}a & 1 & 1 \\b & -1 & 1 \\c & 1 & -1\end{array}\right| \\
+& =a\left|\begin{array}{cc}-1 & 1 \\1 & -1\end{array}\right|-1\left|\begin{array}{cc}b & 1 \\c & -1\end{array}\right|+1\left|\begin{array}{cc}b & -1 \\c & 1\end{array}\right| \\
+& =0-(-b-c)+(b+c)=2(b+c) \\~\\
+& \left|A_{2}\right|=\left|\begin{array}{rrr}-1 & a & 1 \\1 & b & 1 \\1 & c & -1\end{array}\right| \\
+& =-1\left|\begin{array}{cc}b & 1 \\c & -1\end{array}\right|-a\left|\begin{array}{cc}1 & 1 \\1 & -1\end{array}\right|+1\left|\begin{array}{ll}1 & b \\1 & c\end{array}\right| \\
+& =-1(-b-c)-a(-1-1)+1(c-b) \\
+& =b+c-2 a+c-b=2(a+c) \\~\\
+& \left|A_{3}\right|=\left|\begin{array}{rrr}-1 & 1 & a \\1 & -1 & b \\1 & 1 & c\end{array}\right| \\
+& =-1\left|\begin{array}{rr}-1 & b \\1 & c\end{array}\right|-1\left|\begin{array}{ll}1 & b \\1 & c\end{array}\right|+a\left|\begin{array}{cc}1 & -1 \\1 & 1\end{array}\right| \\
+& =-1(-c-b)-1(c-b)+2 a \\
+& =c+b-c+b+2 a=2(a+b) \\
+\end{aligned}
+$$
+
+$$
+x^{*}=\frac{b+c}{2} \quad y^{*}=\frac{a+c}{2} \quad z^{*}=\frac{a+b}{2}
+$$
+
+\end{enumerate}
+
+
+\end{document}

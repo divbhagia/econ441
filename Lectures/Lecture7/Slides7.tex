@@ -1,0 +1,324 @@
+\documentclass{./../../Latex/teaching_slides}
+
+\usepackage{venndiagram}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\title{ECON 441 \\ \vspace{0.4em} \normalsize Introduction to Mathematical Economics}
+\author{Div Bhagia}
+\date{Lecture 7: Calculus}
+
+%%%%%%%%%%%%%%
+\begin{frame}[noframenumbering, plain]
+\maketitle
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Elasticity}
+Demand curve:
+$$ Q(p) = \frac{c}{p^{\alpha}} $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Partial Elasticities}
+Production function:
+$$ F(K,L) = A K^{\alpha} L^{\beta}$$
+Find $\varepsilon_{QK}$ and $\varepsilon_{QL}$.
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Total Differential}
+For a function of $n$ variables \[y=f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\]
+Total differential:
+\[
+d f=\frac{\partial f}{\partial x_{1}} d x_{1}+\frac{\partial f}{\partial x_{2}} d x_{2}+\cdots+\frac{\partial f}{\partial x_{n}} d x_{n}=\sum_{i=1}^{n} f_{i} d x_{i}
+\]
+
+\vspace{1em}
+\textit{I am using $\partial$ to differentiate partial derivatives from total derivatives. In particular, $$\left.\frac{\partial f}{\partial x_{i}} = \frac{d f}{d x_{i}} \right\vert_{\text{other variables are constant}} $$}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Total Derivative}
+For a function of $n$ variables \[y=f\left(x_{1}, x_{2}, \cdots, x_{n}\right)\] \\~\\
+\[
+\frac{d f}{d t}= f_1 \cdot \frac{d x_{1}}{d t} +f_2\cdot \frac{d x_{2}}{d t}+\cdots+f_n \cdot\frac{d x_{n}}{d t} \]
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Total Derivative}
+Given the function 
+\[ y = f(x_1, x_2) \] \\~\\
+We are interested in how $y$ changes with respect to $x_1$, but $x_2$ also depends of $x_1$
+\[ x_2 = g(x_1) \] \\~\\
+Total derivative with respect to $x_1$:
+\[ \frac{dy}{dx_1} =  f_1+f_2 \cdot g'(x_1)   \]
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}{Example}
+Utility from consumption ($C$) and leisure hours ($L$).
+$$ U = U(C,L) = \ln C + \ln L $$
+Budget constraint:
+$ C = w (T-L) $
+where $w$ is the hourly wage and $T$ is total hours. How does utility change due to change in leisure hours?
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Implicit Functions}
+Explicit function:
+$$y=f\left(x_{1}, x_{2}, \cdots, x_{n}\right)$$
+
+\vspace{1cm}
+Implicit function:
+\[F\left(y, x_{1}, x_{2}, \cdots, x_{n}\right)=0\]
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Example}
+Implicit function:
+\[ F(x,y)=y-3x^2 =0 \] \\ \vspace{1em}
+Corresponding explicit function:
+$$ y = f(x) = 3x^2 $$ \\ \vspace{1em}
+However, not all implicit functions have a corresponding explicit function. E.g. $F(x,y) = x^2 + y^2 -9=0$
+\end{frame}
+
+
+%%%%%%%%%%%%%%
+\begin{frame}{Implicit Function Theorem}
+Given,
+\[F\left(x, y \right)=0\]
+
+\vspace{1em}
+If the following conditions are met: \\ \vspace{0.5em}
+\begin{witemize}
+  \item $F_y$ and $F_x$ are continuous, and
+  \item At some point $(a,b)$, $F_y$ is non-zero  \\~\\
+\end{witemize}
+Then in a neighborhood around $(a,b)$, an implicit function exists. Moreover, this function is continuous and has continuous partial derivatives. 
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Derivatives of Implicit Functions}
+
+Total differentiating $F$, we have $d F=0$, or
+$$
+F_{y} d y+F_{1} d x_{1}+\cdots+F_{n} d x_{n}=0 
+$$
+
+\vspace{1em}
+Suppose that only $y$ and $x_{1}$ are allowed to vary:
+$$
+\frac{\partial y}{\partial x_{1}}=-\frac{F_{1}}{F_{y}} .
+$$
+
+\vspace{1em}
+In the simple case where the given equation is $F(y, x)=0$, the rule gives
+$$
+\frac{d y}{d x}=-\frac{F_{x}}{F_{y}} .
+$$
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Example}
+Given the following function, let's find $\partial y/\partial x$ and $\partial y/\partial z$. 
+$$ F(x,y,z) = x^3 z^2+y^3+4xyz = 0  $$
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Another Example}
+Estimate the following model for demand for fast food:
+$$ orders = \beta_0 + \beta_1 price + \beta_2 quality + \varepsilon   $$
+What is the interpretation of $\beta_1$?
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Another Example (cont.)}
+What if instead we estimate:
+$$ \ln(orders) = \beta_0 + \beta_1 \ln(price) + \beta_2 quality + \varepsilon   $$
+What is the interpretation of $\beta_1$?
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{Another related example}
+Production function: 
+$$ Y = A L^{\alpha} K^\beta  $$ \vspace{0.5em}
+
+To estimate the elasticities from data:
+$$ \ln Y = \ln A + \alpha \ln L+ \beta \ln K + \varepsilon $$
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Find the Derivative by Taking the Log}
+$$ \text{Demand: \quad} Q(p) = \frac{c}{p^{\alpha}} $$
+\end{frame}
+
+\section{Integral Calculus}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Inverse of Differentiation}
+Path of population over time: 
+$$ P(t) = 2 t^{0.5} $$
+
+Rate of change of population:
+$$ P'(t)= \frac{d P}{dt} = t^{-0.5} $$
+
+But what if instead we were given $P'(t)$ and were tasked with finding $P(t)$. 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Inverse of Differentiation}
+Note that,
+$$ P'(t)= \frac{d P}{dt} = t^{-0.5} $$
+is the derivative of $P(t) = 2 t^{0.5}$, but also of $P(t) = 2 t^{0.5} + 30$.\\~\\
+Generally, at best, we can find the following from just $P'(t)$:
+$$P(t) = 2 t^{0.5} + c$$
+However, if we have an initial condition such as $ P(0) = 50 $, we can also find $c$.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Integration}
+\begin{witemize}
+  \item Integration is the reverse of differentiation 
+  \item If $f(x)$ is the derivative of $F(x)$, we can \textit{integrate} $f(x)$ to find $F(x)$
+  $$ \frac{d}{d x} F(x)=f(x) \Rightarrow \int f(x) d x=F(x)+c $$
+  \item Rules of integration follow from rules of differentiation
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Rules of Integration}
+\underline{Power Rule}
+$$\int x^n d x=\frac{1}{n+1} \cdot x^{n +1} + c \quad(n \neq-1)$$
+
+\textit{Examples}: $$ \int x^3 d x , \quad \quad \int x d x, \quad  \quad \int 1 d x $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Rules of Integration}
+\underline{Exponential Rule}
+$$
+\int e^x d x=e^x+c
+$$
+
+\underline{Log Rule}
+$$
+\int \frac{1}{x} d x=\ln x+c \quad(x>0)
+$$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Rules of Integration}
+\underline{Integral of a sum}
+$$
+\int[f(x)+g(x)] d x=\int f(x) d x+\int g(x) d x$$
+
+\underline{Integral of a multiple}
+$$\int k f(x) d x=k \int f(x) d x$$
+
+\textit{Example}: $$ \int (x^2 + 3x + 1) dx \hspace{7cm} $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Definite Integrals}
+Definite integral:
+$$ \left.\int_a^b f(x) d x=F(x)\right]_{a}^b=F(b)-F(a) $$
+\textit{Example}:  $$ \int_1^3 2 x^2 = \hspace{7cm}$$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Area under the curve} 
+\vspace{0.5em}
+\begin{columns}[c]
+\begin{column}{0.6\textwidth}
+  	\begin{tikzpicture}
+  \begin{axis}[
+      axis lines = middle,
+      xlabel = \(x\), 
+      xlabel style={at={(axis description cs:1,0)}, anchor=west},
+      ylabel = {\(f(x)\)}, 
+      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
+      ymin=0,
+      xmin=0,
+      xmax=6,
+      ymax=30,
+      xtick={0.01,1.1,2.2,3.3, 4.4, 5.5},
+      xticklabels = {$x_0$, $x_1$, $x_2$, $x_3$, $x_4$, $x_5$},
+      ytick=\empty,
+      samples=100
+    ]
+    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=6]{25+ x-x^2}\closedcycle;
+    \addplot[domain=0:6, black, very thick]{25+ x-x^2};
+  \end{axis}
+  \draw[decorate,decoration={brace,amplitude=4pt,mirror}, thick] (2.5,-0.65) -- (3.8,-0.65);
+  \node at (3.1,-1.25) {$\Delta x_3 $};
+    \node at (3.1,4.6) {$f(x_3) $};
+\end{tikzpicture}
+\end{column}	
+\begin{column}{0.4\textwidth}
+ $ Area \approx \sum_{i=1}^n f(x_i) \Delta x_i $
+\end{column}	
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Area under the curve} 
+\vspace{1em}
+\begin{columns}[c]
+\begin{column}{0.5\textwidth}
+  	\begin{tikzpicture}
+  \begin{axis}[
+      axis lines = middle,
+      xlabel = \(x\), 
+      xlabel style={at={(axis description cs:1,0)}, anchor=west},
+      ylabel = {\(f(x)\)}, 
+      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
+      ymin=0,
+      xmin=0,
+      xmax=6,
+      ymax=30,
+      xtick=\empty,
+      ytick=\empty,
+      samples=100
+    ]
+    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=20]{25+ x-x^2}\closedcycle;
+    \addplot[domain=0:6, black,  very thick]{25+ x-x^2};
+    
+  \end{axis}
+\end{tikzpicture}
+\end{column}	
+\begin{column}{0.5\textwidth}
+\begin{align*}
+	Area &= \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i) \Delta x_i \\
+	& = \int_{x_1}^{x_n} f(x) dx
+\end{align*}  
+\end{column}	
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%
+\begin{frame}{References and Homework}
+\begin{witemize}
+  \item References: Sections 8.5 and Sections 14.1-14.3
+  \item Homework problems: \\
+  \begin{witemize}
+    \normalsize
+    %\item For Ex 7.4 7, find the Hessian matrix
+  	\item Ex 8.5: 1, 2(d), 3 (a)
+  	\item Ex 14.2: 1 (a), (c), (d)
+  	\item Ex 14.3: 1 (a) (e), 2 (a) (d), 5
+  	\end{witemize}
+ \item Next week: Review class
+ \item Midterm is in two weeks (10/17)
+  	\end{witemize}
+
+\end{frame}
+
+
+\end{document}

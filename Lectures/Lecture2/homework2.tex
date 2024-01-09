@@ -1,0 +1,104 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Homework 2 Problems}
+
+%%%%% Exercise $4.2$
+\underline{Exercise $4.2$}
+\begin{itemize}
+
+% Question 1
+\item[1.] Given $A=\left[\begin{array}{cc}7 & -1 \\ 6 & 9\end{array}\right],  B=\left[\begin{array}{cc}0 & 4 \\ 3 & -2\end{array}\right], \text{ and }C=\left[\begin{array}{ll}8 & 3 \\ 6 & 1\end{array}\right]$, find: 
+\begin{tasks}(2)
+	\task[(a)] $A+B$
+	\task[(b)] $C-A$
+	\task[(c)] $3A$
+	\task[(d)] $4B+2C$ 
+\end{tasks} 
+
+% Question 2
+\item[2.] Given $A = \left[\begin{array}{cc}
+2 & 8 \\
+3 & 0 \\
+5 & 1
+\end{array}\right], B=\left[\begin{array}{cc} 2 & 0 \\ 3 & 8\end{array}\right], \text{ and }
+C=\left[\begin{array}{cc} 7 & 2 \\ 6 & 3\end{array}\right]$:
+\begin{enumerate}
+	\item[(a)] Is $AB$ defined? Calculate $AB$. Can you calculate $BA$? Why?
+	\item[(b)] Is $BC$ defined? Calculate $BC$. Is $CB$ defined? If so, calculate $CB$. Is it true that $BC=CB$. 
+\end{enumerate}
+
+% Question 4
+\item[4.] Find the product matrices in the following (in each case, append beneath every matrix a dimension indicator): 
+\begin{tasks}(2)
+\task[(a)] $\left[\begin{array}{lll}0 & 2 & 0 \\ 3 & 0 & 4 \\ 2 & 3 & 0\end{array}\right]\left[\begin{array}{ll}8 & 0 \\ 0 & 1 \\ 3 & 5\end{array}\right]$
+\task[(b)] $\left[\begin{array}{rrr}6 & 5 & -1 \\ 1 & 0 & 4\end{array}\right]\left[\begin{array}{rr}4 & -1 \\ 5 & 2 \\ 0 & 1\end{array}\right]$
+\task[(c)] $\left[\begin{array}{rrr}3 & 5 & 0 \\ 4 & 2 & -7\end{array}\right]\left[\begin{array}{l}x \\ y \\ z\end{array}\right]$
+\task[(d)] $\left[\begin{array}{lll}a & b & c\end{array}\right]\left[\begin{array}{ll}7 & 0 \\ 0 & 2 \\ 1 & 4\end{array}\right]$ 
+\end{tasks}
+\end{itemize}
+
+%%%%% Exercise $4.4$
+\underline{Exercise $4.4$}
+\begin{itemize}
+	
+% Question 5
+\item[5.] 
+\begin{itemize}
+\item[(e)] Find (i) $C=A B$, and (ii) $D=B A$, if
+$$
+A=\left[\begin{array}{r}
+-2 \\
+4 \\
+7
+\end{array}\right] \quad B=\left[\begin{array}{lll}
+3 & 6 & -2
+\end{array}\right]
+$$
+\end{itemize}
+
+% Question 7
+\item[7.] If the matrix $A$ in Example 5 had all its four elements nonzero, would $x^{\prime} A x$ still give a weighted sum of squares? Would the associative law still apply? \\
+\end{itemize}
+
+%%%%% Exercise $4.5$
+\underline{Exercise $4.5$}
+\begin{itemize}
+% Question 1
+\item[1.] Given $A=\left[\begin{array}{rrr}-1 & 5 & 7 \\ 0 & -2 & 4\end{array}\right], b=\left[\begin{array}{l}9 \\ 6 \\ 0\end{array}\right]$, and $x=\left[\begin{array}{l}x_1 \\ x_2\end{array}\right]$ : \\~\\
+Calculate: (a) $AI \quad$ (b) $I A \quad$ (c) $I x \quad$ (d) $x^{\prime} I$ \\
+Indicate the dimension of the identity matrix used in each case.
+
+% Question 4
+\item[4.] Show that the diagonal matrix
+$$
+\left[\begin{array}{cccc}
+a_{11} & 0 & \cdots & 0 \\
+0 & a_{22} & \cdots & 0 \\
+\cdots  & \cdots & \cdots & \cdots  \\
+0 & 0 & \cdots & a_{n n}
+\end{array}\right]
+$$
+can be idempotent only if each diagonal element is either 1 or 0 . How many different numerical idempotent diagonal matrices of dimension $n \times n$ can be constructed altogether from such a matrix? \\
+\end{itemize}
+
+%%%%% Exercise $4.6$
+\underline{Exercise $4.6$} 
+\begin{itemize}
+
+% Question 2
+\item[2.] Given $A=\left[\begin{array}{rr}0 & 4 \\ -1 & 3\end{array}\right], B=\left[\begin{array}{rr}3 & -8 \\ 0 & 1\end{array}\right]$, and $C=\left[\begin{array}{lll}1 & 0 & 9 \\ 6 & 1 & 1\end{array}\right]$, verify that
+\begin{enumerate}
+\item[(a)] $(A+B)^{\prime}=A^{\prime}+B^{\prime}$
+\item[(b)] $(A C)^{\prime}=C^{\prime} A^{\prime}$ 
+\end{enumerate}
+
+% Question 6
+\item[6.]  Let \( A=I-X\left(X^{\prime} X\right)^{-1} X^{\prime} \).
+\begin{enumerate}
+\item[(a)] Must $A$ be square? Must $\left(X^{\prime} X\right)$ be square? Must $X$ be square?
+\item[(b)] Show that matrix $A$ is idempotent.
+\end{enumerate}
+\end{itemize}
+
+\end{document}

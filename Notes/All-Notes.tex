@@ -1,0 +1,46 @@
+\documentclass{./../Latex/notes}
+
+\numberwithin{section}{chapter} 
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries \phantom{#1} \par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+
+\begin{document}
+
+\title{Review Notes \\~\\ Econ 441 \\ Introduction to Mathematical Economics}
+\author{Div Bhagia}
+\date{}
+
+\begin{titlepage}
+    \maketitle
+    \tableofcontents    
+\end{titlepage}
+
+\chapter{Linear Algebra}
+\vspace{-6cm}
+\input{Linear-Algebra.tex}
+
+\chapter{Comparative Statics}
+\vspace{-6cm}
+\input{Calculus.tex}
+
+\chapter{Exponential and Logarithmic Functions}
+\vspace{-6cm}
+\input{Log-and-Exponential-Functions.tex}
+
+\chapter{Optimization}
+\vspace{-6cm}
+\input{Optimization.tex}
+
+\chapter{Optimization Examples}
+\vspace{-6cm}
+\input{Optimization-Examples.tex}
+
+\end{document}

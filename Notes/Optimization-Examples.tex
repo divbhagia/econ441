@@ -1,0 +1,95 @@
+\documentclass{./../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Optimization Examples}
+
+% Example 1
+\section*{Example 1: Utility Maximization}
+Consider the following utility maximization problem:$$ \max_{\{x_1,x_2\}} \quad x_1^{\alpha} x_2^{\beta} \quad s.t. \quad p_1 x_1 + p_2 x_2 = m $$
+ 
+ Here, $p_1$ and $p_2$ are the prices of goods 1 and 2, and $m$ is the total income available to spend on the two goods. 
+ To find the critical points, we start by setting up the Lagrange function: 
+  $$ \mathcal{L}(x_1,x_2,\lambda) =  x_1^{\alpha} x_2^{\beta} + \lambda(m-p_1 x_1-p_2 x_2)$$
+  
+The first-order conditions are given by:
+\begin{align}
+	\frac{\partial \mathcal{L}}{\partial x_1} &= \alpha x_1^{\alpha-1}x_2^{\beta}-\lambda p_1 = 0 \\ 
+	 \frac{\partial \mathcal{L}}{\partial x_1} &= \beta x_1^{\alpha}x_2^{\beta-1}-\lambda p_2 = 0 \\
+	  \frac{\partial \mathcal{L}}{\partial \lambda} &= m-p_1 x_1-p_2 x_2 = 0 
+\end{align}
+
+From equations (1) and (2), we have $\alpha x_1^{\alpha-1}x_2^{\beta}=\lambda p_1 $ and  $\beta x_1^{\alpha}x_2^{\beta-1}=\lambda p_2$, dividing the first expression by the second, we get:
+$$ \frac{\alpha x_1^{\alpha-1}x_2^{\beta}}{\beta x_1^{\alpha}x_2^{\beta-1}} = \frac{\lambda p_1}{\lambda p_2}$$
+
+Simplifying this expression further:
+$$ \frac{\alpha x_2^{\beta}x_2^{1-\beta}}{\beta x_1^{\alpha}x_1^{1-\alpha}} = \frac{ p_1}{ p_2} \rightarrow \frac{\alpha x_2}{\beta x_1} = \frac{p_1}{p_2} $$
+
+Then we can write that, 
+$$ x_2 = \frac{\beta}{\alpha}\cdot\frac{p_1}{p_2} \cdot x_1$$
+
+Plugging the above expression for $x_2$  in equation (3):
+$$ m-p_1 x_1-p_2 x_2 = m-p_1 x_1- \frac{\beta}{\alpha}\cdot p_1 x_1 = m-p_1 x_1\left(1+ \frac{\beta}{\alpha}\right) =0  $$
+So we can find, $$x^*_1 = \frac{\alpha}{\alpha+\beta}\frac{m}{p_1}$$
+
+Plugging back $x_1$ in the expression for $x_2$, we can find:
+$$x^*_2 = \frac{\beta}{\alpha+\beta}\frac{m}{p_2}$$ 
+
+% Example 2
+\section*{Example 2: Cost Minimization}
+Consider the following cost minimization problem where $p$ is the price of capital, and $w$ is the price of labor. Quantity is constrained at $\bar{Q}$. 
+$$ \max_{\{K,L\}} \quad p K + w L \quad s.t. \quad Q(K,L) = \bar{Q} $$
+
+Lagrange function: 
+  $$ \mathcal{L}(x_1,x_2,\lambda) =  p K + w L + \lambda(\bar{Q}-Q(K,L))$$
+First-order conditions:
+\begin{align*}
+	\frac{\partial \mathcal{L}}{\partial K} &= p-\lambda Q_K(K,L)=0 \\ 
+	 \frac{\partial \mathcal{L}}{\partial L} &= w-\lambda Q_L(K,L) = 0 \\
+	  \frac{\partial \mathcal{L}}{\partial \lambda} &= \bar{Q}-Q(K,L)
+\end{align*}
+Note that here $Q_K = \dfrac{\partial Q}{\partial K}$ and $Q_L = \dfrac{\partial Q}{\partial L}$. \\
+
+So optimal $K$ and $L$ satisfy:
+$$ (1). \quad \frac{Q_K(K^*,L^*)}{Q_L(K^*,L^*)} = \frac{p}{w},  \quad \quad (2). \quad Q(K^*,L^*) = \bar{Q}$$ 
+
+% Example 3
+\section*{Example 3: Inter-Temporal Utility Maximization}
+You are given the following inter-temporal utility function:
+\begin{align}
+	U = U(c_1, c_2) =  \ln c_1 + \beta \ln c_2
+\end{align}
+where $c_1$ and $c_2$ is consumption in period 1 and 2, respectively. $0<\beta<1$ is the rate at which you discount the future and it measures your impatient. You earn income $y_1>0$ in period 1 and income $y_2>0$ in period 2. Any of the income you save $s$ in period 1 earns interest $r>0$. So, $$ c_1 + s = y_1, \quad \quad c_2 = y_2 + (1+r) s $$
+Combining these constraints:
+$$ c_1 + \frac{1}{1+r} c_2 = y_1 + \frac{1}{1+r} y_2 $$
+Let the present-discounted income be denoted by $m$, such that:
+$$ m = y_1 + \frac{1}{1+r} y_2 $$
+
+\vspace{1em}
+You want to choose $c_1$ and $c_2$ to maximize utility $U(c_1, c_2)$ in equation (4) subject to the constraint:
+ \begin{align} c_1 + \frac{1}{1+r} c_2 = m \end{align}
+ 
+ Lagrangian function:
+$$ L(c_1, c_2, \lambda) = \ln c_1 + \beta \ln c_2 + \lambda\left(m- c_1 - \frac{1}{1+r} c_2 \right) $$
+
+First order conditions:
+\begin{align}
+		\frac{\partial L}{\partial c_1}&=\frac{1}{c^*_1}-\lambda^*=0 \\
+		\frac{\partial L}{\partial c_2}&=\frac{\beta}{c^*_2}-\frac{\lambda^*}{1+r}=0 \\
+		\frac{\partial L}{\partial \lambda}&=m- c^*_1 - \frac{1}{1+r} c^*_2=0
+	\end{align}
+	
+Note that from (6), $\lambda^*=1/c_1^*$, plugging this in (7), we get:
+$$ c_2^* = \beta(1+r)c_1^*  $$
+Plugging this expression for $ c_2^*$ in (8):
+$$ c_1^* + \frac{1}{1+r}\beta(1+r)c_1^* = m \rightarrow c_1^* =\frac{m}{1+\beta}  $$
+In which case,
+$$ c_2^* = \beta(1+r)c_1^* = \frac{\beta m(1+r)}{1+\beta}    $$
+Finally, since $\lambda^*=1/c_1^*$,
+$$\lambda^*=\frac{1}{c_1^*} = \frac{1+\beta}{m} $$	\\
+
+Now suppose we are interested in knowing how utility changes due to changes in total income. By the envelope theorem:
+$$ \frac{\partial U^*}{\partial m}=\frac{\partial L^*}{\partial m} = \lambda^* = \frac{1+\beta}{m} $$ \\
+Similarly, how utility changes due to a change in interest rate would be given by:
+$$ \frac{\partial U^*}{\partial r}=\frac{\partial L^*}{\partial r} = \lambda^*\cdot \frac{1}{(1+r)^2}\cdot c_2^* = \frac{\beta}{1+r} $$ \\
+
+\end{document}

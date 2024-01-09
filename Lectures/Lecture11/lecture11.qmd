@@ -1,0 +1,26 @@
+---
+title: "Lecture 11"
+nav-sidebar: false
+---
+
+## Topics 
+- Envelope Theorem
+- Quasiconcavity
+- Convex sets
+- Homogenous Functions
+  
+## References
+- Textbook sections 11.5, 12.4, 12.6
+- Review notes for [Optimization](./../../Notes/Optimization.pdf) (Lectures 8-11)
+  
+## Slides 
+
+Open slides in a new <a href="Slides11.pdf" target="_blank"> tab </a> or 
+<a href="Slides11.pdf" download="Slides11">download</a> them.
+
+<object class="slide-deck" data="Slides11.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Quasiconcavity Worksheet](Quasiconcavity-Handout.pdf)
+- [Homework](homework11.pdf) ([Solutions](homework11_solutions.pdf))

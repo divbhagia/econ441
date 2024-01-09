@@ -1,0 +1,268 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Homework 2 Solutions}
+
+%%%%% Exercise $4.2$
+\underline{Exercise $4.2$}
+
+\begin{enumerate}	
+	% Question 1
+  \item $A=\left[\begin{array}{cc}7 & -1 \\ 6 & 9\end{array}\right] \quad B=\left[\begin{array}{cc}0 & 4 \\ 3 & -2\end{array}\right] \quad C=\left[\begin{array}{ll}8 & 3 \\ 6 & 1\end{array}\right]$
+\begin{enumerate}
+\item  $A+B=\left[\begin{array}{ll}7 & 3 \\ 9 & 7\end{array}\right]$
+\item  $C-A=\left[\begin{array}{cc}1 & 4 \\ 0 & -8\end{array}\right]$
+\item  $3 A=\left[\begin{array}{cc}21 & -3 \\ 18 & 27\end{array}\right]$
+\item  $4 B+2 C=\left[\begin{array}{cc}0 & 16 \\ 12 & -8\end{array}\right]+\left[\begin{array}{cc}16 & 6 \\ 12 & 2\end{array}\right]=\left[\begin{array}{cc}16 & 22 \\ 24 & -6\end{array}\right]$ \\~\\
+\end{enumerate} 
+
+% Question 2
+\item $A = \left[\begin{array}{cc}
+2 & 8 \\
+3 & 0 \\
+5 & 1
+\end{array}\right] \quad B=\left[\begin{array}{cc} 2 & 0 \\ 3 & 8\end{array}\right] \quad
+C=\left[\begin{array}{cc} 7 & 2 \\ 6 & 3\end{array}\right]$
+
+\begin{enumerate}
+\item $A B$ is defined as number of columns in $A$ is two which is equal to the number of rows in $B$.
+$$
+A B=\left[\begin{array}{cc}
+2 \times 2+8 \times 3 & 2 \times 0+8 \times 8 \\
+3 \times 2+6 \times 3 & 3 \times 0+0 \times 0 \\
+5 \times 2+1 \times 3 & 5 \times 0+1 \times 8
+\end{array}\right]=\left[\begin{array}{cc}
+28 & 64 \\
+6 & 0 \\
+13 & 8
+\end{array}\right]
+$$
+Not possible to calculate BA as $B$ has two columns, but $A$ has three rows.
+
+\item $B C$ and $C B$ are both defined as both have two rows and two columns.
+$$
+B C=\left[\begin{array}{ll}
+14 & 4 \\
+69 & 30
+\end{array}\right] \neq C B=\left[\begin{array}{cc}
+20 & 16 \\
+21 & 24
+\end{array}\right]
+$$ \\
+\end{enumerate} 
+
+% Question 4
+\item[4.] \begin{tasks}(2)
+\task[(a)] $\left[\begin{array}{cc}0 & 2 \\ 36 & 30 \\ 16 & 3\end{array}\right]_{3 \times 2}$
+\task[(b)] $\left[\begin{array}{ll}49 & 3 \\ 4 & 3\end{array}\right]_{2 \times 2}$
+\task[(c)] $\left[\begin{array}{l}3 x+5 y \\ 4 x+2 y-7 z\end{array}\right]_{2 \times 1}$ 
+\task[(d)] $[7 a+c \quad 2 b+4 c]$ \\~\\
+\end{tasks} 
+\end{enumerate} 
+
+
+%%%%% Exercise $4.4$
+\underline{Exercise $4.4$}
+
+% Question 5 (e)
+\begin{enumerate}
+\item[5.] (e)  $$ \begin{aligned}
+ & A=\left[\begin{array}{c}
+-2 \\
+4 \\
+7
+\end{array}\right]_{3 \times 1} \quad B=\left[\begin{array}{lll}
+3 & 6 & -2
+\end{array}\right]_{1 \times 3} \\~\\
+& C=A B=\left[\begin{array}{ccc}
+-6 & -12 & 4 \\
+12 & 24 & -8 \\
+21 & 42 & -14
+\end{array}\right] \\~\\
+& D=B A=[3 \times-2+6 \times 4+-2 \times 7]=[4]
+\end{aligned} $$\\~\\
+
+% Question 7
+\item[7.] In example 5, $
+\begin{aligned} x=\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right] \text{ and }A=\left[\begin{array}{cc}a_{11} & 0 \\0 & a_{22}\end{array}\right] \end{aligned} $.
+In which case, 
+$$
+\begin{aligned}
+& x^{\prime} A x=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\left[\begin{array}{cc}a_{11} & 0 \\0 & a_{22}\end{array}\right]\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2 \times 1} \\
+& =\left[\begin{array}{lll}a_{11} x_{1} & a_{22} x_{2}\end{array}\right]_{1 \times 2}\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2 \times 1} \\
+& =\underbrace{a_{11} x_{1}^{2}+a_{22} x_{2}^{2}}_{\text{Weighted sum of squares}}=\sum_{i=1}^{2} a_{i i} x_{i}^{2}
+\end{aligned}
+$$
+
+So $x^{\prime} A x$ represents a weighted sum of squares where $a_{11}, a_{22}$ are weights.\\
+
+But now what if $A=\left[\begin{array}{ll}a_{11} & a_{12} \\ a_{21} & a_{22}\end{array}\right]$. In this case, 
+
+$$
+x^{\prime} A x=\left[\begin{array}{ll}
+x_{1} & x_{2}
+\end{array}\right]\left[\begin{array}{ll}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{array}\right]_{2 \times 2}\left[\begin{array}{l}
+x_{1} \\
+x_{2}
+\end{array}\right]_{2 \times 1}
+$$
+
+$$
+\begin{aligned}
+& =\left[\begin{array}{rr}
+a_{11} x_{1}+a_{21} x_{2} & a_{12} x_{1}+a_{22} x_{2}
+\end{array}\right]\left[\begin{array}{l}
+x_{1} \\
+x_{2}
+\end{array}\right]_{2 \times 1} \\
+& =a_{11} x_{1}^{2}+a_{21} x_{1} x_{2}+a_{12} x_{1} x_{2}+a_{22} x_{2}^{2} \\
+& =a_{11} x_{1}^{2}+\left(a_{21}+a_{12}\right) x_{1} x_{2}+a_{22} x_{2}^{2}
+\end{aligned}
+$$
+
+So $x^{\prime} A x$ no longer represents a weighted sum of squares. \\
+
+You can check that the associative law i.e.
+$$
+\left(x^{\prime} A\right) x=x^{\prime}(A x)
+$$
+will apply in both cases (after all, its a law!) as all products are possible.\\~\\
+
+\newpage
+%%%%% Exercise $4.5$
+\underline{Exercise $4.5$}
+	
+% Question 1
+\item[1.] $$A=\left[\begin{array}{ccc}-1 & 5 & 7 \\0 & -2 & 4\end{array}\right]_{2 \times 3} \quad \quad B=\left[\begin{array}{c}9 \\6 \\0\end{array}\right]_{3 \times 1} \quad \quad x=\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2\times 1}$$ 
+
+\begin{enumerate}
+
+\item $ \begin{aligned} A I=\left[\begin{array}{ccc}-1 & 5 & 7 \\0 & -2 & 4\end{array}\right]\left[\begin{array}{lll}1 & 0 & 0 \\0 & 1 & 0 \\0 & 0 & 1\end{array}\right]_{3 \times 3}  =\left[\begin{array}{ccc}-1 & 5 & 7 \\0 & -2 & 4\end{array}\right]=A \end{aligned}$  \\~\\
+
+\item $ \begin{aligned} IA =\left[\begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array}\right]_{2\times 2}\left[\begin{array}{ccc}
+-1 & 5 & 7 \\
+0 & -2 & 4
+\end{array}\right]  =\left[\begin{array}{rrr}
+-1 & 5 & 7 \\
+0 & -2 & 4
+\end{array}\right] \end{aligned}$ \\~\\
+
+\item $ \begin{aligned} Ix=\left[\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right]_{2 \times 2}\left[\begin{array}{l}x_{1} \\ x_{2}\end{array}\right]=\left[\begin{array}{l}x_{1} \\ x_{2}\end{array}\right]\end{aligned}$ \\~\\
+
+\item $ \begin{aligned} x^{\prime} I=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\left[\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right]_{2 \times 2}=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\end{aligned}$ \\~\\
+\end{enumerate}
+
+% Question 4
+\item[4.]Let's start with a $2 \times 2$ diagonal matrix
+
+$$
+\left[\begin{array}{cc}
+a_{11} & 0 \\
+0 & a_{22}
+\end{array}\right]\left[\begin{array}{cc}
+a_{11} & 0 \\
+0 & a_{22}
+\end{array}\right]=\left[\begin{array}{cc}
+a_{11}^{2} & 0 \\
+0 & a_{22}^{2}
+\end{array}\right]
+$$
+
+$x=x^{2}$ for only $x=0,1$ so $a_{11}$ and $a_{22}$ can either be 0 or 1 . So we can have the following $2 \times 2$ idempotent diagonal matrices:
+
+$$
+\left[\begin{array}{ll}
+1 & 0 \\
+0 & 0
+\end{array}\right],\left[\begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array}\right],\left[\begin{array}{ll}
+0 & 0 \\
+0 & 0
+\end{array}\right],\left[\begin{array}{ll}
+0 & 0 \\
+0 & 1
+\end{array}\right]
+$$
+
+More generally, for $n \times n$ matrix, there can be $2^{n}$ such matrices. This is because there will be $n$ elements, each of which can take two values.
+\end{enumerate}
+
+%%%%%%%%%% Exercise 4.6
+\underline{Exercise 4.6}  \\
+
+2. $
+A=\left[\begin{array}{cc}
+0 & 4 \\
+-1 & 3
+\end{array}\right] \quad B=\left[\begin{array}{cc}
+3 & -8 \\
+0 & 1
+\end{array}\right] \quad C=\left[\begin{array}{lll}
+1 & 0 & 9 \\
+6 & 1 & 1
+\end{array}\right]
+$ \\
+
+\begin{itemize}
+
+\item[(a)] \( A+B=\left[\begin{array}{cc}3 & -4 \\ -1 & 4\end{array}\right] \) \\~\\
+\( A^{\prime}+B^{\prime}=\left[\begin{array}{rr}0 & -1 \\ 4 & 3\end{array}\right]+\left[\begin{array}{cc}3 & 0 \\ -8 & 1\end{array}\right]=\left[\begin{array}{cc}3 & -1 \\ -4 & 4\end{array}\right] \) \\~\\
+So, \((A+B)^{\prime}=A^{\prime}+B^{\prime}\) \\
+
+
+\item[(b)] \(
+A C=\left[\begin{array}{cc}
+0 & 4 \\
+-1 & 3
+\end{array}\right]_{2 \times 2}\left[\begin{array}{lll}
+1 & 0 & 9 \\
+6 & 1 & 1
+\end{array}\right]_{2 \times 3}=\left[\begin{array}{ccc}
+24 & 4 & 4 \\
+17 & 3 & -6
+\end{array}\right]_{2 \times 3}
+\)
+\\~\\
+\(
+C^{\prime} A^{\prime}=\left[\begin{array}{ll}
+1 & 6 \\
+0 & 1 \\
+9 & 1
+\end{array}\right]_{3 \times 2}\left[\begin{array}{cc}
+0 & -1 \\
+4 & 3
+\end{array}\right]_{2 \times 2}=\left[\begin{array}{cc}
+24 & 17 \\
+4 & 3 \\
+4 & -6
+\end{array}\right]_{3 \times 2}
+\) \\~\\
+So, $(AC)^{\prime}=C^{\prime} A^{\prime}$.
+\end{itemize}
+
+6. \( A=I-X\left(X^{\prime} X\right)^{-1} X^{\prime} \) 
+
+\begin{itemize}
+
+\item[(a.)] Say the dimension of $X$ is \( m \times n \). Then the dimension of \( X_{n \times m}^{\prime} X_{m \times n} \) is \( n \times n \). So the dimension of \( \left(X^{\prime} X\right)^{-1} \) is also  \( n \times n \).  This implies that the dimension of \( X_{m \times n}\left(X^{\prime} X\right)_{n \times n}^{-1} X_{n \times m}^{\prime} \) is \( m \times m \). Hence, \( X^{\prime} X \) and $A$ must be square matrices, but $X$ need not be square.
+
+\item[(b.)] To prove a matrix is idempotent, we need to show $AA=A$.
+$$
+\begin{aligned}
+A A &= (I-X\left(X^{\prime} X\right)^{-1} X^{\prime})(I-X\left(X^{\prime} X\right)^{-1} X^{\prime}) \\
+& = I-X\left(X^{\prime} X\right)^{-1} X^{\prime}-X\left(X^{\prime} X\right)^{-1} X^{\prime}+X\underbrace{\left(X^{\prime} X\right)^{-1} X^{\prime} X}_{I}\left(X^{\prime} X\right)^{-1} X^{\prime} \\
+&= I-X\left(X^{\prime} X\right)^{-1} X^{\prime}-X\left(X^{\prime} X\right)^{-1} X^{\prime}+X\left(X^{\prime} X\right)^{-1} X^{\prime} \\ 
+&=I-X\left(X^{\prime} X\right)^{-1} X^{\prime} = A
+\end{aligned}
+$$
+\end{itemize}
+
+\end{document}

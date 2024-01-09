@@ -1,0 +1,31 @@
+---
+title: "Schedule"
+sidebar: false
+---
+
+<!-- Download Link Handler -->
+
+<div style="text-align: right">
+📔: Notes
+🖥️: Slides 
+🗒️: Worksheet
+✍️: Homework
+📖: Solutions
+</div>
+
+```{python}
+#| echo: false
+import pandas as pd
+from IPython.display import display, HTML
+from bs4 import BeautifulSoup
+
+# Initilise
+df = pd.read_excel('schedule.xlsx', dtype=str)
+html_table = df.to_html(escape=False, index=False, na_rep='')
+soup = BeautifulSoup(html_table, 'html.parser')
+
+# Get the modified HTML
+html_table_modified = str(soup)
+display(HTML(html_table_modified))
+```
+

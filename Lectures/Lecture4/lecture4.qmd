@@ -1,0 +1,25 @@
+---
+title: "Lecture 4"
+nav-sidebar: false
+---
+
+## Topics 
+- Finding the Inverse of a Matrix,
+- Cramer’s Rule
+- Economic Applications
+  
+## References
+- Textbook sections 5.3-5.5
+- Review notes for [Linear Algebra](./../../Notes/Linear-Algebra.pdf) (Lectures 2-4)
+
+## Slides 
+
+Open slides in a new <a href="Slides4.pdf" target="_blank"> tab </a> or 
+<a href="Slides4.pdf" download="Slides4">download</a> them.
+
+<object class="slide-deck" data="Slides4.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Determinant and Inverse Worksheet](Handout-Determinant-and-Inverse.pdf)
+- [Homework](homework4.pdf) ([Solutions](homework4_solutions.pdf))

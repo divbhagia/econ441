@@ -1,0 +1,172 @@
+\documentclass{./../../Latex/homework}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Homework 10 Solutions}
+
+\underline{Exercise $12.2$} 
+\begin{enumerate}
+
+%%%% Question 1
+\item 
+\begin{enumerate}
+
+% part a
+\item $z=x y$ s.t. $x+2 y=2$  \\~\\
+Setting up the Lagrangian:
+$$
+L(x, y, \lambda)=x y+\lambda(2-x-2 y)
+$$
+First-order conditions (F.O.C.s):
+\begin{align}
+&\frac{d L}{d x}=y-\lambda=0 \\
+&\frac{d L}{d y}=x-2 \lambda=0 \\
+&\frac{d L}{d \lambda}=2-x-2 y=0
+\end{align}
+From (1) and (2), $y=\lambda$ and $x=2 \lambda$, so
+$$
+\frac{y}{x}=\frac{\lambda}{2 \lambda} \rightarrow \quad x=2 y
+$$
+Pugging in $x=2 y$ in (3):
+$$
+2-x-x=0 \rightarrow x=1
+$$
+Stationary point: $x^{*}=1, y^{*}=1/2$. 
+Also note that from (1),  $\lambda^{*}=y^{*}=1/2$. \\
+
+% part b
+\item $\quad 2=x(y+4)$ s.t. $x+y=8$ \\~\\
+Lagrangian function:
+$$ L(x, y, \lambda)=x(y+4)+\lambda(8-x-y) $$
+First-order conditions (F.O.C.s):
+\setcounter{equation}{0}
+\begin{align}
+& L_{x}=y+4-\lambda=0 \\
+& L_{y}=x-\lambda=0 \\
+& L_{\lambda}=8-x-y=0
+\end{align}
+From equations (1) and (2):
+$$
+\frac{y+4}{x}=\frac{\lambda}{\lambda} \rightarrow y+4=x
+$$
+Plugging $x=y+4$ in equation (3):
+$$
+8-y-4-y=0 \rightarrow y^{*}=2
+$$
+Stationary point: $x^{*}=y^{*}+4=6, y^{*}=2$. Also note, $\lambda^{*}=x^{*}=6$. \\
+
+% part c
+\item $f(x, y)=x-3 y-x y$ s.t. $x+y=6$ \\~\\
+Lagrangian function :
+$$ L(x, y, \lambda)=x-3 y-x y+\lambda(6-x-y) $$
+First-order conditions (F.O.C.s):
+\setcounter{equation}{0}
+\begin{align}
+& \frac{d L}{d x}=1-y-\lambda=0 \\
+& \frac{d L}{d y}=-3-x-\lambda=0 \\
+& \frac{d L}{d \lambda}=6-x-y=0
+\end{align}
+From equations (1) and (2):
+$$
+1-y=-3-x \rightarrow y=x+4
+$$
+Plugging in (3):
+$$
+6-x-x-4=2-2 x=0 \rightarrow x=1
+$$
+Stationary point: $x^{*}=1, y^{*}=5$ \\
+Lagrange multiplier, $\lambda^{*}=1-y^{*}=-4$ \\
+
+% part d
+\item $z=7-y+x^{2}$ s.t. $x+y=0$ \\~\\
+Lagrangian function:
+$$ L(x, y, \lambda)=7-y+x^{2}+\lambda(-x-y) $$
+\setcounter{equation}{0}
+First-order conditions (F.O.C.s):
+\begin{align}
+&L_{x}=2 x-\lambda=0 \\
+&L_{y}=-1-\lambda=0 \\
+&L_{\lambda}=-x-y=0
+\end{align}
+From equation (2), $\lambda^{*}=-1$
+From equation (1), $x^{*}=\frac{\lambda^{*}}{2}=-\frac{1}{2}$
+From equation (3), $y^{*}=-x^{*}=\frac{1}{2}$ \\
+So the Stationary point: $\left(x^{*}, y^{*}\right)=\left(\frac{-1}{2}, \frac{1}{2}\right)$ \\~\\
+\end{enumerate}
+
+%%%% Question 2
+\item Suppose we are interested in finding the optimal value of $f(x, y)$ subject to the constraint $g(x, y)=c$. We would start by setting up the Lagrangian function:
+$$
+L(x, y, \lambda)=f(x, y)+\lambda(c-g(x, y)) 
+$$
+\vspace{0.1em}
+At the optimizing point $(x^{*}, y^{*})$, the following first-order conditions hold: 
+\setcounter{equation}{0}
+\begin{align}
+&L_{x}(x^{*}, y^{*},\lambda^*)=f_{x}\left(x^{*}, y^{*}\right)-\lambda^{*} g_{x}\left(x^{*}, y^{*}\right)=0 \\
+&L_{y}(x^{*}, y^{*},\lambda^*)=f_{y}\left(x^{*}, y^{*}\right)-\lambda^{*} g_{y}\left(x^{*}, y^{*}\right)=0 \\
+&L_{\lambda}(x^{*}, y^{*},\lambda^*)=c-g\left(x^{*}, y^{*}\right)=0
+\end{align}
+Now note that implicitly the optimal inputs $x^{*}$ and $y^{*}$ depend on $c$. So we could express $x^{*}$ and $y^{*}$ as functions of $c$, i.e., $x^{*}(c)$ and $y^{*}(c)$. Then optimal value of $f$ is given by $f\left(x^{*}(c), y^{*}(c)\right)$. \\
+Now, say, we want to know how the optimal value of $f$ changes if we relax the constraint i.e. if we increase $c$ slightly. To find this we can differentiate $f\left(x^{*}(c), y^{*}(c)\right)$ with respect to $c$, then by chain-rule:
+\begin{equation}
+	\frac{d}{d c} f\left(x^{*}(c), y^{*}(c)\right)=f_{x}\left(x^{*}, y^{*}\right) \cdot \frac{d x^{*}}{d c}+f_{y}\left(x^{*}, y^{*}\right) \frac{d y^{*}}{d c} 
+\end{equation} 
+Now note that from (1) and (2), we have $f_{x}\left(x^{*}, y^{*}\right)=\lambda^{*} g_{x}\left(x^{*}, y^{*}\right)$ and $f_{y}\left(x^{*}, y^{*}\right)=\lambda^{*} g_{y}\left(x^{*}, y^{*}\right)$.  Plugging these terms in equation (4), we get: 
+$$
+	\frac{d}{d c} f\left(x^{*}(c), y^{*}(c)\right)=\lambda^* \underbrace{\left[g_{x}\left(x^{*}, y^{*}\right) \cdot \frac{d x^{*}}{d c}+g_{y}\left(x^{*}, y^{*}\right) \frac{d y^{*}}{d c}\right]}_{=1} 
+$$
+The term in the parenthesis is 1 because if we take the derivative of (3) with respect to $c$, we get
+$$
+g_{x}\left(x^{*}, y^{*}\right) \cdot \frac{d x^{*}}{d c}+g_{y}\left(x^{*}, y^{*}\right) \frac{d y^{*}}{d c} = 1 $$
+So we have that,
+$$\frac{d}{d c} f\left(x^{*}(c), y^{*}(c)\right)=\lambda^*$$
+
+In which case, $\lambda^{*}$ tells us what happens to the optimal value of the function by relaxing the constraint. Whenever, $\lambda^{*}>0$, the optimal value increases and whenever $\lambda^{*}<0$, it decreases. \\~\\
+Note: In the class, we came to the above conclusion by taking the derivative of $L$ with respect to $c$. We showed that $ d L (x^{*}, y^{*},\lambda^*)/dc = \lambda^*$. Both approaches are equivalent because at the optimal value $L=f$ as the constraint always binds. In the hindsight, I think the proof I outline here is slightly more intuitive. \\~\\
+
+%%%% Question 3
+\item 
+
+\begin{enumerate}
+% Part a
+\item $L(x, y, \omega, \lambda)=x+2 y+3 \omega+x y-y \omega+\lambda(10-x-y-2 \omega)$ \\~\\
+First-order conditions:
+$$
+\begin{aligned}
+&L_{x}=1+y-\lambda=0 \\
+&L_{y}=2+x-\omega-\lambda=0 \\
+&L_{\omega}=3-y-2 \lambda=0 \\
+&L_{\lambda}=10-x-y-2 \omega=0
+\end{aligned}
+$$
+
+% Part b
+\item
+$ L(x, y, \omega, \lambda)=x^{2}+2 x y+y \omega^{2}+\lambda\left(24-2 x-y-\omega^{2}\right)+\mu(8-x-\omega)$ \\~\\
+First-order conditions:
+$$
+\begin{aligned}
+&L_{x}=2 x+2 y-2 \lambda-\mu=0 \\
+&L_{y}=2 x+\omega^{2}-\lambda=0 \\
+&L_{\omega}=2 y \omega-2 \omega \lambda-\mu=0 \\
+&L_{\lambda}=24-2 x-y-\omega^{2}=0 \\
+&L_{\mu}=8-x-\omega=0 \\~\\
+\end{aligned}
+$$
+\end{enumerate}
+
+%%%% Question 4
+\item  $L(x, y, \lambda)=f(x, y)+\lambda(-G(x, y))$ 
+
+First-order conditions:
+$$
+\begin{aligned}
+&L_{x}=f_{x}-\lambda G_{x}=0 \\
+&L_{y}=f_{y}-\lambda G_{y}=0 \\
+&L_{\lambda}=-G(x, y)=0
+\end{aligned}
+$$
+\end{enumerate}
+
+
+\end{document}

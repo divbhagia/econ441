@@ -1,0 +1,25 @@
+---
+title: "Lecture 6"
+nav-sidebar: false
+---
+
+## Topics 
+- Exponential and Log Functions
+- Partial Derivatives
+- Total Differential and Derivative
+  
+## References
+- Textbook sections 10.5, 7.4, 8.1, 8.2, 8.4
+- Notes on [Log and Exponential Functions](./../../Notes/Log-and-Exponential-Functions.pdf) 
+- Review notes for [Calculus](./../../Notes/Calculus.pdf) (Lectures 5-7)
+
+## Slides 
+
+Open slides in a new <a href="Slides6.pdf" target="_blank"> tab </a> or 
+<a href="Slides6.pdf" download="Slides6">download</a> them.
+
+<object class="slide-deck" data="Slides6.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Homework](homework6.pdf) ([Solutions](homework6_solutions.pdf))

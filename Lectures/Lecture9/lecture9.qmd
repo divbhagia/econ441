@@ -1,0 +1,22 @@
+---
+title: "Lecture 9"
+nav-sidebar: false
+---
+
+## Topics 
+- Multivariable Optimization
+  
+## References
+- Textbook sections 11.1, 11.2
+- Review notes for [Optimization](./../../Notes/Optimization.pdf) (Lectures 8-11)
+  
+## Slides 
+
+Open slides in a new <a href="Slides9.pdf" target="_blank"> tab </a> or 
+<a href="Slides9.pdf" download="Slides9">download</a> them.
+
+<object class="slide-deck" data="Slides9.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Homework](homework9.pdf) ([Solutions](homework9_solutions.pdf))

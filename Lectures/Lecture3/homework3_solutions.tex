@@ -1,0 +1,265 @@
+\documentclass{./../../Latex/homework}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Homework 3 Solutions}
+
+%%%%%%%%%%%%%% Exercise 5.1
+\subsection*{Exercise 5.1}  
+\begin{enumerate}
+
+% Question 3
+\item[3.] \begin{tasks}(2)
+\task Yes
+\task Yes
+\task Yes
+\task No, the second row $=$ 2 $\times$ first row. \\
+\end{tasks}
+
+% Question 4
+\item[4.] Yes, we get the same answer. \\
+
+% Question 5
+\item[5.]
+\begin{enumerate}
+\item[(a)]  \[
+A=\left[\begin{array}{ccc}
+1 & 5 & 1 \\
+0 & 3 & 9 \\
+-1 & 0 & 0
+\end{array}\right]
+\]
+Exchange Row 2 and 3
+\[
+A_{1}=\left[\begin{array}{ccc}
+1 & 5 & 1 \\
+-1 & 0 & 0 \\
+0 & 3 & 9
+\end{array}\right]
+\]
+
+New Row 2 = Row 1 $+$ Row 2
+\[
+A_{2}=\left[\begin{array}{lll}
+1 & 5 & 1 \\
+0 & 5 & 1 \\
+0 & 3 & 9
+\end{array}\right]
+\]
+
+New Row 3 = Row 3$-$3/5 $\times$ Row 2
+\[
+A_{3}=\left[\begin{array}{lll}
+1 & 5 & 1 \\
+0 & 5 & 1 \\
+0 & 0 & \frac{42}{5}
+\end{array}\right]
+\]
+The resulting echelon matrix $A_3$ contains 3 nonzero rows and hence $A$ has rank 3. Since $A$ is full-rank, it is a nonsingular matrix.  \\~\\
+
+\item[(b)]  \[
+B=\left[\begin{array}{rrr}
+0 & -1 & -4 \\
+3 & 1 & 2 \\
+6 & 1 & 0
+\end{array}\right] 
+\]
+New Row 1 = Row 2, New Row 2 = Row 3, New Row 3 = Row 1
+\[ 
+B_{1}=\left[\begin{array}{rrr}
+3 & 1 & 2 \\
+6 & 1 & 0 \\
+0 & -1 & -4
+\end{array}\right] 
+\]
+New Row 2 = Row 2$-$2 $\times$ Row 1
+$$
+B_{2}=\left[\begin{array}{rrr}
+3 & 1 & 2 \\
+0 & -1 & -4 \\
+0 & -1 & -4
+\end{array}\right]
+$$
+New Row 3 = Row 3$-$Row 2
+
+$$
+B_{3}=\left[\begin{array}{rrr}
+3 & 1 & 2 \\
+0 & -1 & -4 \\
+0 & 0 & 0
+\end{array}\right]
+$$
+The resulting echelon matrix $B_3$ contains only 2 nonzero rows and hence $B$ has rank 2. Since the rank of $B$ is less than the number of rows and columns, $B$ is a singular matrix.  \\~\\
+
+\item[(c)] $$
+C =\left[\begin{array}{llll}
+7 & 6 & 3 & 3 \\
+0 & 1 & 2 & 1 \\
+8 & 0 & 0 & 8
+\end{array}\right]
+$$ 
+Interchange rows 2 and 3.
+$$
+C_1 =\left[\begin{array}{rrrr}
+7 & 6 & 3 & 3 \\
+8 & 0 & 0 & 8 \\
+0 & 1 & 2 & 1 \\
+\end{array}\right]
+$$ 
+New Row 2 = Row 2$-\frac{8}{7} \times$Row 1
+\[
+C_2 =\left[\begin{array}{rrrr}
+7 & 6 & 3 & 3 \\
+0 & -\frac{48}{7} &  -\frac{24}{7} & 8-\frac{24}{7}  \\
+0 & 1 & 2 & 1 \\
+\end{array}\right]
+\] 
+\[
+C_2 =\left[\begin{array}{rrrr}
+7 & 6 & 3 & 3 \\
+0 & -\frac{48}{7} &  -\frac{24}{7} & \frac{32}{7}  \\
+0 & 1 & 2 & 1 \\
+\end{array}\right]
+\]
+New Row 3 = Row 3$+\frac{7}{48}$ Row 2
+$$
+C_3 =\left[\begin{array}{rrrr}
+7 & 6 & 3 & 3 \\
+0 & -\frac{48}{7} &  -\frac{24}{7} & \frac{32}{7}  \\
+0 & 0 & \frac{3}{2} & \frac{5}{3} \\
+\end{array}\right]
+$$ 
+Rank of $C$ is 3. The concept of nonsingularity is only defined for square matrices. \\~\\
+ 
+\item[(d)] $$ D =\left[\begin{array}{rrrr}
+2 & 7 & 9 & -1 \\
+1 & 1 & 0 & 1 \\
+0 & 5 & 9 & -3
+\end{array}\right] $$
+New Row 2$=$ Row 2$- 0.5 \times$ Row 1
+$$ D_1 =\left[\begin{array}{rrrr}
+2 & 7 & 9 & -1 \\
+0 & -2.5 & -4.5 & 1.5 \\
+0 & 5 & 9 & -3
+\end{array}\right] $$
+New Row 3$=$ Row 3 $+ 2  \times$ Row 2
+$$ D_2 =\left[\begin{array}{rrrr}
+2 & 7 & 9 & -1 \\
+0 & -2.5 & -4.5 & 1.5 \\
+0 & 0& 0 & 0
+\end{array}\right] $$
+Rank of $D$ is 2.
+\end{enumerate}
+
+% Question 6
+\item[6.] In the end, converting the matrix to echelon form is trying to find if any combination of rows will lead to a sum of 0, which is the definition of linear independence. 
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%% Exercise 5.2
+\subsection*{Exercise 5.2}
+
+% Question 1
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item[(c)] $$
+\begin{aligned}
+& 8\left|\begin{array}{ll}
+0 & 1 \\
+0 & 3
+\end{array}\right|-1\left|\begin{array}{ll}
+4 & 1 \\
+6 & 3
+\end{array}\right|+3\left|\begin{array}{ll}
+4 & 0 \\
+6 & 0
+\end{array}\right| \\
+=& 8(0-0)-1(12-6)+3(0-0) \\
+=& 0-6+0 \\
+= &-6 \\
+\end{aligned}
+$$
+
+\item[(e)] $$
+\begin{aligned}
+& a\left|\begin{array}{ll}
+c & a \\
+a & b
+\end{array}\right|-b\left|\begin{array}{cc}
+b & a \\
+c & b
+\end{array}\right|+c\left|\begin{array}{cc}
+b & c \\
+c & a
+\end{array}\right| \\
+=& a\left(c b-a^{2}\right)-b\left(b^{2}-a c\right)+c\left(a b-c^{2}\right) \\
+=& a b c-a^{3}-b^{3}+a b c+a b c-c^{3} \\
+=&-a^{3}-b^{3}-c^{3}+3 a b c
+\end{aligned}
+$$
+
+\item[(f)] $$
+\begin{aligned}
+& x\left|\begin{array}{cc}
+y & 2 \\
+-1 & 8
+\end{array}\right|-5\left|\begin{array}{cc}
+3 & 2 \\
+9 & 8
+\end{array}\right|+0\left|\begin{array}{rr}
+3 & y \\
+9 & -1
+\end{array}\right| \\
+=& x(8 y+2)-5(24-18)+0(-3-9 y) \\
+=& 8 x y+2 x-30+0 \\
+=& 8 x y+2 x-30
+\end{aligned}
+$$
+\end{enumerate}
+
+% Question 2
+  \item \( \left|C_{13}\right|: 1+3=4 \) is even so \( + \)\\
+\( \left|C_{23}\right|: 2+3=5 \) is odd so \(- \)\\
+\( \left|C_{33}\right|: 3+3=6 \) is even so \( + \)\\
+\( \left|C_{41}\right|: 4+1=5 \) is odd so \( - \)\\
+\( \left|C_{34}\right|: 3+4=7 \) is odd so \( - \) \\
+
+
+% Question 3
+\item 
+Minor of \(a\):
+$$ \left|M_{11}\right|=\left|\begin{array}{cc}e & f \\ h & i\end{array}\right|=e i-f h $$
+Cofactor of \(a\): $$
+\left|C_{11}\right|=(-1)^{1+1}\left|M_{11}\right|=\left|M_{11}\right|
+$$
+
+Minor of \(b\):
+$$ \left|M_{12}\right|=\left|\begin{array}{ll}d & f \\ g & i\end{array}\right|=d i-f g $$
+Cofactor of \(b\):
+$$\left|C_{12}\right|=(-1)^{3}\left|M_{12}\right|=-\left|M_{12}\right| $$
+Minor of \(f\):
+$$ \left|M_{23}\right|=\left|\begin{array}{ll}a & b \\ g & h\end{array}\right|=a h-b g $$
+Cofactor of \(f\):
+$$\left|C_{23}\right|=(-1)^{5}\left|M_{23}\right|=-\left|M_{23}\right| $$ \\
+
+% Question 6
+\item[6.] Minors of third row:
+\[
+\begin{aligned}
+\left|M_{31}\right| &=\left|\begin{array}{cc}
+11 & 4 \\
+2 & 7
+\end{array}\right| = 69, \quad
+\left|M_{32}\right|&=\left|\begin{array}{cc}
+9 & 4 \\
+3 & 7
+\end{array}\right| = 51, \quad
+ \left|M_{33}\right|&=\left|\begin{array}{ll}
+9 & 11 \\
+3 & 2
+\end{array}\right| =-15
+\end{aligned}
+\]
+Cofactors: $ |C_{31}| =  |M_{31}|, |C_{32}| =  -|M_{32}| , |C_{33}| =  |M_{33}| $.\end{enumerate}
+
+\end{document}

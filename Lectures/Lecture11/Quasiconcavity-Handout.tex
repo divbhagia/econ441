@@ -1,0 +1,121 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Quasiconcave and Quasiconvex Functions}
+
+\textbf{Definitions}
+\begin{itemize}
+\item A function is \textit{quasiconcave} if and only if for any pair of distinct points $u$ and $v$ in the convex domain of $f$, and for $0<\lambda<1$, we have
+$$
+\begin{array}{r}
+f(\lambda u+(1-\lambda) v) \geq \min \{f(u), f(v)\} 
+\end{array}
+$$
+  \item A function is \textit{quasiconvex} if and only if for any pair of distinct points $u$ and $v$ in the convex domain of $f$, and for $0<\lambda<1$, we have
+$$
+\begin{array}{r}
+f(\lambda u+(1-\lambda) v) \leq \max \{f(u), f(v)\} 
+\end{array}
+$$
+\item Replace inequalities with strict inequalities to get the definitions of strict quasiconcavity and quasiconvexity. 
+\end{itemize}
+
+Answer whether the following functions are (strictly) quasiconcave, (strictly) quasiconvex, both, or neither.
+
+\begin{tasks}(2)
+\task 
+\begin{tikzpicture}[scale=0.75, baseline=(current bounding box.north)]
+\begin{axis}[
+    axis lines = left,
+    xlabel = \(x\),
+    ylabel = {\(f(x)\)},
+    ymax = 35,
+]
+%Below the red parabola is defined
+\addplot [
+    domain=-4:6, 
+    samples=100, 
+    color=red,
+    very thick,
+]
+{x^2 - 2*x};
+\end{axis}
+
+\end{tikzpicture}	
+\task 
+\begin{tikzpicture}[scale=0.75, baseline=(current bounding box.north)]
+\begin{axis}[
+    axis lines = left,
+    xlabel = \(x\),
+    ylabel = {\(f(x)\)},
+    ymax = 35,
+]
+%Below the red parabola is defined
+\addplot [
+    domain=-3:4, 
+    samples=100, 
+    color=red,
+    very thick,
+]
+{x^3 - 2*x};
+\end{axis}
+
+\end{tikzpicture}	
+\end{tasks}
+
+\newpage
+\textbf{Alternative Definitions}
+\begin{itemize}
+  \item A function $f(x)$, where $x$ is a vector of variables is \textit{quasiconcave} iff for any constant $k$, the upper-contour set
+$$ S^U = \{x | f(x) \geq k \} $$
+is a convex set. 
+\item A function $f(x)$, where $x$ is a vector of variables is \textit{quasiconvex} iff for any constant $k$, the lower-contour set
+$$ S^L = \{x | f(x) \leq k \} $$
+is a convex set.
+\end{itemize}
+
+Use the alternative definitions to answer whether the following functions are (strictly) quasiconcave, (strictly) quasiconvex, both, or neither.
+
+\begin{tasks}(2)
+\task 
+\begin{tikzpicture}[scale=0.75, baseline=(current bounding box.north)]
+\begin{axis}[
+    axis lines = left,
+    xlabel = \(x\),
+    ylabel = {\(f(x)\)},
+    ymax = 35,
+]
+%Below the red parabola is defined
+\addplot [
+    domain=-4:6, 
+    samples=100, 
+    color=red,
+    very thick,
+]
+{x^2 - 2*x};
+\end{axis}
+
+\end{tikzpicture}	
+\task 
+\begin{tikzpicture}[scale=0.75, baseline=(current bounding box.north)]
+\begin{axis}[
+    axis lines = left,
+    xlabel = \(x\),
+    ylabel = {\(f(x)\)},
+    ymax = 35,
+]
+%Below the red parabola is defined
+\addplot [
+    domain=-3:4, 
+    samples=100, 
+    color=red,
+    very thick,
+]
+{x^3 - 2*x};
+\end{axis}
+\end{tikzpicture}	
+\vspace{2cm}
+\task $f(x_1, x_2) = 6x_1-9x_2$
+\end{tasks}
+
+\end{document}

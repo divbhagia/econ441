@@ -1,0 +1,401 @@
+[
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsCourse StructureCourse MaterialGrading Criteria\n\n\n\nOverview\nThe economy is shaped by the actions of various economic agents, each driven by their own unique set of incentives and constraints. Understanding this complex system is a challenging task, as it involves keeping track of the interplay of several moving pieces. Enter Mathematics, the protagonist of this story, which enables us to represent complex economic relationships and interactions elegantly. Mathematical economic models, while often simplifications of reality, provide us with a structured way of thinking about economic issues.\nThis class will introduce you to the world of mathematical economics. We will cover essential tools used in economics, including linear algebra, calculus, and optimization, and apply these tools to economic problems. For example, you will learn how to express and solve complex systems of equations that describe the economy using matrix algebra and to solve unconstrained and constrained optimization problems, such as those related to utility maximization, price determination, wage setting, and more.\nWe will also spend some time thinking about suitable assumptions for effectively modeling specific aspects the economy. Hopefully, after this class, you will develop some appreciation for mathematical economics, while also being able to think critically about the advantages and limitations of this approach to understand economics.\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nGain a deep understanding of essential mathematical tools used in economics, including the application of matrix algebra to solve systems of equations and the solving of constrained and unconstrained optimization problems.\nLearn how these mathematical tools are applied to a range of economic issues, from analyzing firm and consumer behavior to implications of fiscal policies, preparing students for graduate-level coursework in economics.\nDevelop the ability to mathematically model economic phenomenon, carefully considering the appropriate assumptions to best represent specific behavior of economic agents or particular market structures.\n\n\n\n\n\nCourse Structure\nAll meetings for this course are expected to be held in person. During our class sessions, I utilize lecture slides to cover the topics for the day, and we work on related problems together, typically using worksheets. While you work on these worksheets, I move around the classroom to provide assistance, and you can also seek help from your peers; it’s an engaging and collaborative learning experience. As a result, class attendance is crucial for this course.\nFor each week’s material, you will have homework problems that, while not graded, you should aim to complete every week. Even though solutions to the problems are provided, you will benefit immensely from trying them on your own before checking the answers. We will also have in-class quizzes about every other week, with questions similar to the homework. So another reason to keep on top of that homework!\n\n\n\n\nCourse Material\nAll course materials—including lecture slides, worksheets, notes for each topic, and homework problems with solutions—are available on the course website. These materials should generally be sufficient for your study needs. However, if you find yourself needing more detailed explanations for certain topics, you might consider acquiring the following textbook that this course is based on:\n\nChiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition\n\nYou can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me and I will try my best to find you one.\n\n\n\n\nGrading Criteria\nYour overall grade will be based on active engagement, five in-class quizzes, and two exams. The grading breakdown is as follows:\n\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nActive Engagement\n\n\n10\n\n\n\n\nQuizzes\n\n\n20\n\n\n\n\nMidterm\n\n\n30\n\n\n\n\nFinal Exam\n\n\n40\n\n\n\n\nIf you’re enrolled in this course for graduate-level credit, you must also complete a project that requires building an economic model and coding it using Python. The project will count for an additional 20 points."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to Mathematical Economics",
+    "section": "",
+    "text": "Learn essential mathematical tools encompassing linear algebra, calculus, and optimization, that are widely utlilised in analysis of economic problems.\n\nECON 441 | Spring 2024 | College of Business and Economics | California State University\n\n\nInstructor\n   Dr. Div Bhagia     Office: SGMH 3361     dbhagia@fullerton.edu \n\n\nCourse details\n   SGMH 2501, Thursdays, 7-9:45 PM     Office hours:\n\n\nThursdays, 4-6.45 PM, or\nBy appointment (in-person or on Zoom)"
+  },
+  {
+    "objectID": "Lectures/Lecture8/lecture8.html",
+    "href": "Lectures/Lecture8/lecture8.html",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "Unconstrained Single-Variable Optimization\nConcave and Convex Functions"
+  },
+  {
+    "objectID": "Lectures/Lecture8/lecture8.html#topics",
+    "href": "Lectures/Lecture8/lecture8.html#topics",
+    "title": "Lecture 8",
+    "section": "",
+    "text": "Unconstrained Single-Variable Optimization\nConcave and Convex Functions"
+  },
+  {
+    "objectID": "Lectures/Lecture8/lecture8.html#references",
+    "href": "Lectures/Lecture8/lecture8.html#references",
+    "title": "Lecture 8",
+    "section": "References",
+    "text": "References\n\nTextbook sections 9.1, 9.2, 9.3, 9.4\nReview notes for Optimization (Lectures 8-11)"
+  },
+  {
+    "objectID": "Lectures/Lecture8/lecture8.html#slides",
+    "href": "Lectures/Lecture8/lecture8.html#slides",
+    "title": "Lecture 8",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture8/lecture8.html#practice-questions",
+    "href": "Lectures/Lecture8/lecture8.html#practice-questions",
+    "title": "Lecture 8",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nUnconstrained Optimization Worksheet\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture6/lecture6.html",
+    "href": "Lectures/Lecture6/lecture6.html",
+    "title": "Lecture 6",
+    "section": "",
+    "text": "Exponential and Log Functions\nPartial Derivatives\nTotal Differential and Derivative"
+  },
+  {
+    "objectID": "Lectures/Lecture6/lecture6.html#topics",
+    "href": "Lectures/Lecture6/lecture6.html#topics",
+    "title": "Lecture 6",
+    "section": "",
+    "text": "Exponential and Log Functions\nPartial Derivatives\nTotal Differential and Derivative"
+  },
+  {
+    "objectID": "Lectures/Lecture6/lecture6.html#references",
+    "href": "Lectures/Lecture6/lecture6.html#references",
+    "title": "Lecture 6",
+    "section": "References",
+    "text": "References\n\nTextbook sections 10.5, 7.4, 8.1, 8.2, 8.4\nNotes on Log and Exponential Functions\nReview notes for Calculus (Lectures 5-7)"
+  },
+  {
+    "objectID": "Lectures/Lecture6/lecture6.html#slides",
+    "href": "Lectures/Lecture6/lecture6.html#slides",
+    "title": "Lecture 6",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture6/lecture6.html#practice-questions",
+    "href": "Lectures/Lecture6/lecture6.html#practice-questions",
+    "title": "Lecture 6",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html",
+    "href": "Lectures/Lecture4/lecture4.html",
+    "title": "Lecture 4",
+    "section": "",
+    "text": "Finding the Inverse of a Matrix,\nCramer’s Rule\nEconomic Applications"
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html#topics",
+    "href": "Lectures/Lecture4/lecture4.html#topics",
+    "title": "Lecture 4",
+    "section": "",
+    "text": "Finding the Inverse of a Matrix,\nCramer’s Rule\nEconomic Applications"
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html#references",
+    "href": "Lectures/Lecture4/lecture4.html#references",
+    "title": "Lecture 4",
+    "section": "References",
+    "text": "References\n\nTextbook sections 5.3-5.5\nReview notes for Linear Algebra (Lectures 2-4)"
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html#slides",
+    "href": "Lectures/Lecture4/lecture4.html#slides",
+    "title": "Lecture 4",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html#practice-questions",
+    "href": "Lectures/Lecture4/lecture4.html#practice-questions",
+    "title": "Lecture 4",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nDeterminant and Inverse Worksheet\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html",
+    "href": "Lectures/Lecture2/lecture2.html",
+    "title": "Lecture 2",
+    "section": "",
+    "text": "Matrices: Addition, Subtraction, Scalar Multiplication\nMatrix Multiplication\nVectors\nIdentity and Null Matrices\nTranspose and Inverse of a Matrix"
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html#topics",
+    "href": "Lectures/Lecture2/lecture2.html#topics",
+    "title": "Lecture 2",
+    "section": "",
+    "text": "Matrices: Addition, Subtraction, Scalar Multiplication\nMatrix Multiplication\nVectors\nIdentity and Null Matrices\nTranspose and Inverse of a Matrix"
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html#references",
+    "href": "Lectures/Lecture2/lecture2.html#references",
+    "title": "Lecture 2",
+    "section": "References",
+    "text": "References\n\nTextbook sections 4.1-4.6\nReview notes for Linear Algebra (Lectures 2-4)"
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html#slides",
+    "href": "Lectures/Lecture2/lecture2.html#slides",
+    "title": "Lecture 2",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html#practice-questions",
+    "href": "Lectures/Lecture2/lecture2.html#practice-questions",
+    "title": "Lecture 2",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nMatrix Operations Worksheet\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html",
+    "href": "Lectures/Lecture10/lecture10.html",
+    "title": "Lecture 10",
+    "section": "",
+    "text": "Constrained Optimization"
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html#topics",
+    "href": "Lectures/Lecture10/lecture10.html#topics",
+    "title": "Lecture 10",
+    "section": "",
+    "text": "Constrained Optimization"
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html#references",
+    "href": "Lectures/Lecture10/lecture10.html#references",
+    "title": "Lecture 10",
+    "section": "References",
+    "text": "References\n\nTextbook sections 12.1, 12.2\nReview notes for Optimization (Lectures 8-11)\nAdditional Constrained Optimization Examples"
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html#slides",
+    "href": "Lectures/Lecture10/lecture10.html#slides",
+    "title": "Lecture 10",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html#practice-questions",
+    "href": "Lectures/Lecture10/lecture10.html#practice-questions",
+    "title": "Lecture 10",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nConstrained Maximization Worksheet\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture1/lecture1.html",
+    "href": "Lectures/Lecture1/lecture1.html",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Numbers and sets\nRelations and functions\nSummation notation\nNecessary and sufficient conditions\n\nTextbook references: Sections 2.2, 2.3, 2.4-2.6, pg 163, 5.1"
+  },
+  {
+    "objectID": "Lectures/Lecture1/lecture1.html#topics",
+    "href": "Lectures/Lecture1/lecture1.html#topics",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Numbers and sets\nRelations and functions\nSummation notation\nNecessary and sufficient conditions\n\nTextbook references: Sections 2.2, 2.3, 2.4-2.6, pg 163, 5.1"
+  },
+  {
+    "objectID": "Lectures/Lecture1/lecture1.html#slides",
+    "href": "Lectures/Lecture1/lecture1.html#slides",
+    "title": "Lecture 1",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.\n\nPDF display not supported in browser."
+  },
+  {
+    "objectID": "Lectures/Lecture1/lecture1.html#practice-questions",
+    "href": "Lectures/Lecture1/lecture1.html#practice-questions",
+    "title": "Lecture 1",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nSets and Functions Worksheet\nSummation Notation Worksheet\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html",
+    "href": "Lectures/Lecture11/lecture11.html",
+    "title": "Lecture 11",
+    "section": "",
+    "text": "Envelope Theorem\nQuasiconcavity\nConvex sets\nHomogenous Functions"
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html#topics",
+    "href": "Lectures/Lecture11/lecture11.html#topics",
+    "title": "Lecture 11",
+    "section": "",
+    "text": "Envelope Theorem\nQuasiconcavity\nConvex sets\nHomogenous Functions"
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html#references",
+    "href": "Lectures/Lecture11/lecture11.html#references",
+    "title": "Lecture 11",
+    "section": "References",
+    "text": "References\n\nTextbook sections 11.5, 12.4, 12.6\nReview notes for Optimization (Lectures 8-11)"
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html#slides",
+    "href": "Lectures/Lecture11/lecture11.html#slides",
+    "title": "Lecture 11",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html#practice-questions",
+    "href": "Lectures/Lecture11/lecture11.html#practice-questions",
+    "title": "Lecture 11",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nQuasiconcavity Worksheet\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html",
+    "href": "Lectures/Lecture3/lecture3.html",
+    "title": "Lecture 3",
+    "section": "",
+    "text": "Conditions for Nonsingularity of a Matrix\nDeterminant of a Matrix"
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html#topics",
+    "href": "Lectures/Lecture3/lecture3.html#topics",
+    "title": "Lecture 3",
+    "section": "",
+    "text": "Conditions for Nonsingularity of a Matrix\nDeterminant of a Matrix"
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html#references",
+    "href": "Lectures/Lecture3/lecture3.html#references",
+    "title": "Lecture 3",
+    "section": "References",
+    "text": "References\n\nTextbook sections 4.7, 5.1-5.3\nReview notes for Linear Algebra (Lectures 2-4)"
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html#slides",
+    "href": "Lectures/Lecture3/lecture3.html#slides",
+    "title": "Lecture 3",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html#practice-questions",
+    "href": "Lectures/Lecture3/lecture3.html#practice-questions",
+    "title": "Lecture 3",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nEchelon Form Worksheet\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html",
+    "href": "Lectures/Lecture5/lecture5.html",
+    "title": "Lecture 5",
+    "section": "",
+    "text": "Limit Definition of a Derivative\nLimits\nContinuity\nRules of Differentiation"
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html#topics",
+    "href": "Lectures/Lecture5/lecture5.html#topics",
+    "title": "Lecture 5",
+    "section": "",
+    "text": "Limit Definition of a Derivative\nLimits\nContinuity\nRules of Differentiation"
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html#references",
+    "href": "Lectures/Lecture5/lecture5.html#references",
+    "title": "Lecture 5",
+    "section": "References",
+    "text": "References\n\nTextbook sections 6.2-6.4, 6.7, 7.1-7.3\nReview notes for Calculus (Lectures 5-7)"
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html#slides",
+    "href": "Lectures/Lecture5/lecture5.html#slides",
+    "title": "Lecture 5",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html#practice-questions",
+    "href": "Lectures/Lecture5/lecture5.html#practice-questions",
+    "title": "Lecture 5",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nRules of Differentiation Worksheet\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html",
+    "href": "Lectures/Lecture7/lecture7.html",
+    "title": "Lecture 7",
+    "section": "",
+    "text": "Implicit Function Theorem\nIntegration"
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html#topics",
+    "href": "Lectures/Lecture7/lecture7.html#topics",
+    "title": "Lecture 7",
+    "section": "",
+    "text": "Implicit Function Theorem\nIntegration"
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html#references",
+    "href": "Lectures/Lecture7/lecture7.html#references",
+    "title": "Lecture 7",
+    "section": "References",
+    "text": "References\n\nTextbook sections 8.5, 14.1-14.3\nReview notes for Calculus (Lectures 5-7)"
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html#slides",
+    "href": "Lectures/Lecture7/lecture7.html#slides",
+    "title": "Lecture 7",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html#practice-questions",
+    "href": "Lectures/Lecture7/lecture7.html#practice-questions",
+    "title": "Lecture 7",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nHomework (Solutions)"
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html",
+    "href": "Lectures/Lecture9/lecture9.html",
+    "title": "Lecture 9",
+    "section": "",
+    "text": "Multivariable Optimization"
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html#topics",
+    "href": "Lectures/Lecture9/lecture9.html#topics",
+    "title": "Lecture 9",
+    "section": "",
+    "text": "Multivariable Optimization"
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html#references",
+    "href": "Lectures/Lecture9/lecture9.html#references",
+    "title": "Lecture 9",
+    "section": "References",
+    "text": "References\n\nTextbook sections 11.1, 11.2\nReview notes for Optimization (Lectures 8-11)"
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html#slides",
+    "href": "Lectures/Lecture9/lecture9.html#slides",
+    "title": "Lecture 9",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them."
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html#practice-questions",
+    "href": "Lectures/Lecture9/lecture9.html#practice-questions",
+    "title": "Lecture 9",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nHomework (Solutions)"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "📔: Notes 🖥️: Slides 🗒️: Worksheet ✍️: Homework 📖: Solutions\n\n\n\n\n\n\n\n\n\n\n\n\n\nDate\nModule\nTopics\nMaterial\nAssessment\n\n\n\n\nJan 25\nLecture 1\nPreliminaries\nNumbers and sets; Relations and functions; Summation notation; Necessary and sufficient conditions\n🖥️ 🗒️ 🗒️ ✍️ 📖\n\n\n\nFeb 1\nLecture 2\nLinear Algebra\n📔\nMatrices: Addition, Subtraction, and Scalar Multiplication, Matrix Multiplication, Vectors, Identity and Null Matrices, Transpose and Inverse of a Matrix\n🖥️ 🗒️ ✍️ 📖\n\n\n\nFeb 8\nLecture 3\n\nConditions for Nonsingularity of a Matrix, Determinant of a Matrix\n🖥️ 🗒️ ✍️ 📖\nQuiz 1\n\n\nFeb 15\nLecture 4\n\nFinding the Inverse of a Matrix, Cramer’s Rule, Applications\n🖥️ 🗒️ ✍️ 📖\n\n\n\nFeb 22\nLecture 5\nCalculus\n📔 📔\nLimit Definition of a Derivative, Limits, Continuity, Rules of Differentiation\n🖥️ 🗒️ ✍️ 📖\nQuiz 2\n\n\nFeb 29\nLecture 6\n\nExponential and Log Functions, Partial Derivatives, Total Differential and Derivative\n🖥️ ✍️ 📖\n\n\n\nMar 7\nLecture 7\n\nImplicit Function Theorem, Integration\n🖥️ ✍️ 📖\nQuiz 3\n\n\nMar 14\n\nReview Class\n\n\n\n\nMar 21\n\n\n\nMidterm Exam\n\n\nMar 28\nLecture 8\nOptimization\n📔 📔\nUnconstrained Single-Variable Optimization, Concave and Convex Functions\n🖥️ 🗒️ ✍️ 📖\n\n\n\nApr 11\nLecture 9\n\nMultivariable Optimization\n🖥️ ✍️ 📖\n\n\n\nApr 18\nLecture 10\n\nConstrained Optimization\n🖥️ 🗒️ ✍️ 📖\nQuiz 4\n\n\nApr 25\nLecture 11\n\nEnvelope Theorem Quasiconcavity, Convex sets, Homogenous Functions\n🖥️ 🗒️ ✍️ 📖\n\n\n\nMay 2\nLecture 12\nAdd. Topics\nTBA\n\nQuiz 5\n\n\nMay 9\n\nReview Class\n\n\n\n\nMay 16\n\n\n\nFinal Exam"
+  }
+]

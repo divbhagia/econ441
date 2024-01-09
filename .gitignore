@@ -1,0 +1,12 @@
+# Ignore selected folders
+Compiled Material/
+Exams/
+Homeworks/
+Quizzes/
+References/
+*/archived/
+
+# Ignore temporary files
+.DS_Store
+*/.vscode/
+

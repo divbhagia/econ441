@@ -1,0 +1,42 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Constrained Optimization}
+
+
+Given an objective function
+$$
+y=f(x_1, x_2)
+$$
+subject to the constraint
+$$
+g(x_1, x_2)=c
+$$
+where $c$ is a constant. We can write the Lagrange function as
+$$
+L(x_1,x_2,\lambda)=f(x_1, x_2)+\lambda[c-g(x_1, x_2)]
+$$
+
+First-order conditions:
+\begin{align*}
+\frac{\partial L}{\partial x_1} = 0, \quad  \frac{\partial L}{\partial x_2} = 0, \quad \frac{\partial L}{\partial \lambda} = 0
+\end{align*}
+
+\vspace{2em}
+For each of the problems below, set up the Lagrange function, write down the first-order conditions, and find the critical points. \\~\\
+\underline{Example I}:\vspace{-1em}
+\large $$ \max_{\{x_1,x_2\}} \quad x_1^2x_2 \quad s.t. \quad  2x_1^2 + x_2^2 = 3$$ 
+\newpage
+\normalsize \underline{Example II}: \vspace{-1em}
+\large $$ \max_{\{x,y\}} \quad x^a y^b \quad s.t. \quad x+y=10$$
+\vspace{9.5cm}
+
+\normalsize \underline{Example III}:\vspace{-1em}
+\large $$ \max_{\{x_1,x_2\}} \quad x_1^{1/3} x_2^{2/3} \quad s.t. \quad x_1 + 4 x_2 = 30 $$
+
+\newpage
+\normalsize \underline{Example IV}:\vspace{-1em}
+\large $$ \max_{\{x,y,z\}} \quad yz + xz \quad s.t. \quad y^2+z^2=1 \quad and \quad xz=3 $$
+
+
+\end{document}

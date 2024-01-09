@@ -1,0 +1,354 @@
+\documentclass{./../../Latex/teaching_slides}
+\usepackage{venndiagram}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+%\usepackage{siunitx}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+
+\title{ECON 441 \\ \vspace{0.4em} \normalsize Introduction to Mathematical Economics}
+\author{Div Bhagia}
+\date{Final Exam Review}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[noframenumbering, plain]
+\maketitle
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Numbers, Sets, and Functions}
+\begin{witemize}
+\item Types of numbers: integers, fractions, rational numbers, irrational numbers, real numbers.  
+  \item Set notation: \\ \vspace{0.1em}
+     Example: $ A = \{a, b, c, d\} \quad or \quad A = \{x | x \in  \mathbb{R}\} $
+\item Set relations: equivalence, subset, disjoint
+\item Set operations: union, intersection, complement
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Numbers, Sets, and Functions}
+\begin{witemize}
+\item  Cartesian product \\ \vspace{0.1em} Example: $ \mathbb{R}^2 =  \{(x,y) | x \in \mathbb{R}, y \in \mathbb{R}\} $
+\item Relation: subset of a Cartesian product
+\item Function: a relation where for each $x$ there is a unique $y$
+ $$ f: X \rightarrow Y, \quad y = f(x) $$ 
+$X:$ domain, $Y:$ codomain, $f(X):$ range
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Numbers, Sets, and Functions}
+\begin{witemize}
+ \item One-to-one function: each value of $y$ is also associated with a unique value of $x$
+\item One-to-one mapping unique to strictly monotonic functions
+\item Inverse of a function only exists for strictly monotonic functions $$x=f^{-1}(y)$$ returns the value corresponding value of $x$ for each $y$. 
+\end{witemize}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Summation Notation}
+Example 1:
+$$ \sum_{i=1}^3 \sum_{j\leq i} X_i Y_j $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Summation Notation}
+Example 2:
+$$ \sum_{i=1}^2 \sum_{j=1}^2 (X_i Y_j + 4Y_j^2 + 1)$$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Linear Algebra}
+\vspace{-.5em}
+\begin{witemize}
+  \item Matrix operations: addition, subtraction, scalar multiplication, matrix multiplication
+  \item Identity matrix, transpose of a matrix
+  \item Inverse of a matrix: $ A A^{-1} = A^{-1} A  = I $
+  \item Solution of a linear-equation system $Ax = b$
+  $$ A^{-1} A x  =  A^{-1}b \rightarrow x = A^{-1}b  $$
+  \item Finding the determinant $|A|$ and inverse of a matrix $$A^{-1} = \frac{1}{|A|}Adj A$$
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Linear Algebra}
+\begin{witemize}
+  \item  If a matrix's inverse exists, it's called a \textbf{nonsingular} matrix
+\item Necessary and sufficient conditions for nonsingularity: \vspace{0.25em}
+\begin{itemize}
+  \item \textit{Necessary}: square matrix
+  \item \textit{Sufficient}: rows (or equivalently columns) are linearly independent
+\end{itemize}
+\item Rank of matrix: maximum number of linearly independent rows (square matrix with full rank = nonsingular)
+\item For singular matrices the determinant $|A|=0$
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Linear Algebra}
+\vspace{-.5em}
+Say we have the following system of equations:
+$$
+\begin{aligned}
+& 3x+2y=20 \\
+& 6 x + 4 y =40
+\end{aligned}
+$$
+
+Can write this as:
+$$
+A v=b
+$$
+where
+$$
+A=\left[\begin{array}{cc}
+3 & 2 \\
+6 & 4
+\end{array}\right] \quad v=\left[\begin{array}{l}
+x \\
+y
+\end{array}\right] \quad b=\left[\begin{array}{c}
+20 \\
+40
+\end{array}\right]
+$$
+Unique solution for this system does not exist as $A$ is singular.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Linear Algebra}
+\vspace{-.5em}
+Let's solve the following system of equations $$
+\begin{aligned}
+& 3x+2y=20 \\
+& 6 x - 3 y =40
+\end{aligned}
+$$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Calculus}
+\begin{witemize}
+  \item Limit definition of differentiability and continuity
+  \item Rules of differentiation to differentiate functions (including log and exponential functions)
+  \item Partial and total derivatives
+  \item Second-order derivatives
+  \item Elasticities and partial elasticities 
+\end{witemize}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Calculus}
+For the function:
+$$ y = f(x_1, x_2,...,x_n) $$ 
+\vspace{1em}
+
+Note that the gradient and Hessian is given by
+$$ \nabla f = \begin{bmatrix}
+	f_1 \\
+	f_2 \\
+	\vdots \\
+	f_n
+\end{bmatrix} \quad \quad
+H = \begin{bmatrix}
+	f_{11} & f_{12} & \hdots & f_{1n} \\
+	f_{21} & f_{22} & \hdots & f_{2n} \\
+	\vdots & \vdots & & \vdots \\
+	f_{n1} & f_{n2} & \hdots & f_{nn} \\
+\end{bmatrix} $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Calculus}
+Calculate the total differential of the production function $$Q = F(K,L)$$ to find how a small change in both labor and capital affects the production.
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Calculus}
+\vspace{-0.25em}
+Consider a company that allocates its marketing budget \( X(a) \) based on the economic climate, represented by an economic index \( a \).
+\[ X(a) = 10a \] \vspace{0.1em}
+
+ The company's sales revenue \( Y \) depends on both the marketing spend \( X(a) \) and the economic index \( a \).
+
+\[ Y(X(a), a) = X(a) \cdot \log(1 + a) \]  \vspace{0.1em}
+
+How does this company's revenue vary with respect to the economic index $a$?
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Optimization
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Single-Variable Optimization}
+\begin{witemize}
+\item Given a function
+$$ y = f(x) $$ 
+  \item Critical point $f^{\prime}\left(x^*\right)=0$, necessary condition for an optimum
+  \item Sufficient condition: \vspace{0.25em}
+  \begin{itemize}
+  \normalsize
+  \item maximum if $f''(x^*)<0$
+  \item minimum if $f''(x^*)>0$ \\~\\
+\end{itemize}
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Single-Variable Optimization}
+Let's find the extrema for the following function and plot it:
+$$ f(x) = x^4-2x^2 $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Single-Variable Optimization}
+Say, $f(x)$ is a strictly concave function and 
+$$f'(x^*) = 0 $$ 
+Is $f(x^*)$ the global maximum? Can you explain why?
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Multiple-Variable Optimization}
+$$ y = f(x_1, x_2,...,x_n) $$
+
+First-order condition:
+$$ \nabla f (x_1,x_2,...,x_n)  = 0 $$
+That is:
+$$ f_1(x_1,x_2,...,x_n) = 0$$
+$$ f_2(x_1,x_2,...,x_n) = 0$$
+$$ \vdots $$ 
+$$ f_n(x_1,x_2,...,x_n) = 0$$
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Multiple-Variable Optimization}
+\vspace{-1.5em}
+$$ \pi(K, L) = AK^{1/3}L^{2/3}-wL-rK  $$ 
+Show that at the optimal: $wL = 2 rK$ \\
+ \begin{tikzpicture}[remember picture,overlay]
+    \draw[gray!50, opacity=0.75] (0,-5.25) grid[step=0.75] (14.25,0);
+  \end{tikzpicture}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Envelope Theorem}
+Value function:
+$$
+V=f\left(x^{*}(\alpha), y^{*}(\alpha), \alpha\right)
+$$
+
+\vspace{0.5em}
+If we differentiate $V$ with respect to $\alpha$:
+$$
+\frac{d V}{d \alpha} =f_{x}^{*} \cdot \frac{d x^{*}}{d \alpha}+f_{y}^{*} \cdot \frac{d y^{*}}{d \alpha}+f_{\alpha}^{*}
+$$
+
+\vspace{0.5em}
+From the first order conditions we know $f_{x}^{*}=f_{y}^{*}=0$, therefore
+$$
+\frac{d V}{d \alpha}=f_{\alpha}^{*}
+$$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Envelope Theorem}
+
+$$ V= \pi(K^*, L^*)$$ \\~\\
+
+How does optimal profit change due to a change in $w$ or $r$?
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Constrained Optimization}
+\vspace{-1.25em}
+$$ 	U = U(c_1, c_2) =  \ln c_1 + \beta \ln c_2 \quad \quad 0<\beta<1$$
+\vspace{-0.65em}
+\begin{witemize}
+  \item $y_1,y_2>0$: income in period 1 and 2
+  \item Income you save $s$ in period 1 earns interest $r>0$
+  \item In which case,
+ $$ c_1 + s = y_1 \quad \quad \quad  c_2 = y_2 + (1+r) s $$
+ \item Combining these constraints:
+$$ c_1 + \frac{1}{1+r} c_2 = \underbrace{y_1 + \frac{1}{1+r} y_2}_{m \equiv \text{present-discounted income}}$$
+%$$ m = y_1 + \frac{1}{1+r} y_2 $$}} $$
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Constrained Optimization}
+\vspace{-1.5em}
+$$ \max_{\{c_1,c_2\}} \quad U(c_1, c_2) = \ln c_1 + \beta \ln c_2 \quad s.t. \quad c_1 + \frac{1}{1+r} c_2 = m $$
+ \begin{tikzpicture}[remember picture,overlay]
+    \draw[gray!50, opacity=0.75] (0,-5.25) grid[step=0.75] (14.25,0);
+  \end{tikzpicture}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Envelope Theorem with Constraints}
+Value function:
+$$
+V=f\left(x^{*}(\alpha), y^{*}(\alpha), \alpha\right)
+$$
+
+\vspace{0.5em}
+By envelope theorem:
+$$
+\frac{d V}{d \alpha}=\frac{\partial L^{*}}{\partial \alpha}
+$$
+
+\vspace{2em}
+How does the optimal utility change due to changes in $r$, $y_1$, $y_2$, or $\beta$?
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Interpretation of the Lagrange Multiplier}
+Lagrangian function:
+$$
+L=f(x, y )+\lambda [c-g(x, y)]
+$$
+Substituting the solutions into the objective function, we get
+$$
+V = f(x^{*}(c), y^{*}(c))
+$$
+By the envelope theorem,
+$$
+\frac{d V}{d c}=\frac{\partial L^{*}}{\partial c}=\lambda^*
+$$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Global Optimizers with Constraints}
+
+Consider the problem:\\~\\
+Maximize $f(x_1,x_2,...,x_n)$ subject to $g(x_1, x_2,...,x_n)=k$.\\~\\
+
+The stationary point $(x_1^*, x_2^*, ..., x_n^*)$ of the lagrangian is a global maximum if:
+\begin{enumerate}
+  \item $f(x_1,x_2,...,x_n)$ is quasiconcave
+  \item The constraint set is convex
+\end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\vspace{1em} \huge A Few Last Words}
+\vspace{0.7em}
+\large \centering
+Please fill the SOQs :) \\~\\
+Thanks for a greatsemester. \\~\\
+Good luck and don’t be a stranger!
+\end{frame}
+
+\end{document}

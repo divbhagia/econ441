@@ -1,0 +1,97 @@
+\documentclass{./../../Latex/homework}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Homework 7 Solutions}
+
+%%%%%%%%%%%%%% Exercise 8.5
+\subsection*{Exercise 8.5}
+
+\begin{enumerate}
+
+% Question 1
+\item[1.] For each $F(x, y) = 0$, find $d y / d x$ for each of the following:
+\begin{tasks}(1)
+\task $y-6 x+7=0$ $$
+\frac{d y}{d x}-6=0 \rightarrow \frac{d y}{d x}=6
+$$
+
+\task $3 y+12 x+17=0$
+$$
+ 3 \frac{d y}{d x}+12=0 \rightarrow \frac{d y}{d x}=\frac{-12}{3}=-4
+$$
+
+\task $x^{2}+6 x-13-y=0$
+$$
+ 2 x+6-\frac{d y}{d x}=0 \rightarrow \frac{d y}{d x}=2 x+6
+$$
+\end{tasks}
+
+% Question 2
+\item[2.] 
+\begin{enumerate}
+\item[(d)] $F(x, y)=6 x^{3}-3 y=0$. By implicit function theorem:
+$$
+\begin{aligned}
+& \frac{d y}{d x}=\frac{-F_{x}}{F_{y}} \\
+& F_{x}=18 x^{2}, \quad F_{y}=-3 \\
+& \frac{d y}{d x}=\frac{-18 x^{2}}{-3}=6 x^{2}
+\end{aligned}
+$$
+
+\end{enumerate}
+
+% Question 3
+\item[3.] 
+\begin{enumerate}
+\item[(a)] $F(x, y, z)=x^{2} y^{3}+z^{2}+x y z=0$. By implicit function theorem:
+$$
+\begin{aligned}
+& \frac{\partial y}{\partial x}=\frac{-F_{x}}{F_{y}}=\frac{-\left(2 x y^{3}+y z\right)}{3 x^{2} y^{2}+x z} \\~\\
+& \frac{\partial y}{\partial z}=\frac{-F_{z}}{F_{y}}=\frac{-(2 z+x y)}{3 x^{2} y^{2}+x z}
+\end{aligned}
+$$
+\end{enumerate}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%% Exercise 14.2
+\subsection*{Exercise 14.2}
+
+\begin{enumerate}	
+% Question 1
+\item[1.] Find the following: 
+\begin{tasks}(1)
+\task[(a)] $\displaystyle\int 16 x^{-3}\ d x= \frac{16x^{-2}}{-2}+c=-8 x^{-2}+c \quad(x \neq 0)$
+\task[(c)] $\displaystyle\int (x^5-3x) \ dx =\int x^5 \ dx-3 \int x \ dx=\frac{x^6}{6}-\frac{3x^2}{2} +c$
+\task[(d)] $ \displaystyle\int 2e^{-2x} \ dx = 2 \displaystyle\int e^{-2x} \ dx = 2 \frac{e^{-2x}}{-2} + c= -e^{-2x} + c$
+\end{tasks}
+\end{enumerate}
+%%%%%%%%%%%%%% Exercise 14.3
+\subsection*{Exercise 14.3}
+
+\begin{enumerate}
+
+% Question 1
+\item[1.] Evaluate the following:
+\begin{tasks}(1)
+\task[(a)] $ \displaystyle\int_1^3 \dfrac{1}{2}x^2 \dx = \left[\frac{x^3}{6} \right]_1^3=\frac{3^3-1^3}{6}=\frac{26}{6}$
+\task[(e)] $\displaystyle \left[\frac{ax^3}{3}+\frac{bx^2}{2}+c x\right]_{-1}^1=\left(\frac{a}{3}+\frac{b}{2}+c\right)-\left(-\frac{a}{3}+\frac{b}{2}-c\right)=2\left(\frac{a}{3}+c\right)$ 
+\end{tasks}
+
+% Question 2
+\item[2.] Evaluate the following:
+\begin{tasks}(1)
+\task[(a)] $ \displaystyle\int_1^2 e^{-2x} \ dx = \left[\frac{-e^{-2 x}}{2} \right]_1^2=-\frac{1}{2}\left(e^{-4}-e^{-2}\right)=\frac{1}{2}\left(e^{-2}-e^{-4}\right) $
+\task[(d)] $ [\ln x+\ln (1+x)]_e^6= \ln 6+ \ln 7-\ln e - \ln (1+e) = \ln 42-1-\ln(1+e)$
+\end{tasks}
+
+% Question 3
+\item[5.] Verify that a constant $c$ can be equivalently expressed as a definite integral:
+\begin{tasks}(1)
+\task $ \displaystyle \int_0^b \dfrac{c}{b}\ dx = \left[\frac{cx}{b}\right]_0^b = \frac{cb}{b}-\frac{c.0}{b} = c	$
+\task $ \displaystyle  \int_0^c 1\ dt = [t]_0^c = c-0 = c 	$
+\end{tasks}
+
+\end{enumerate}
+
+\end{document}

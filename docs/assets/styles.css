@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 2px; /* Adjust the spacing between cells */
+    border: 0.5px solid #b7b7b7; /* White border color */
+    border-radius: 10px; /* Add rounded borders */
+
+  }
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 0.25px solid #b7b7b7; /* White border color for cells */
+    background-color: #fff !important; /* Light purple background color with !important */
+    color: #000; /* Black text color */
+    border-radius: 2px; /* Add rounded borders */
+    vertical-align: middle;
+  }
+  th {
+    background-color: #fff !important;  /* Light purple background color for header cells */
+  }
+  td {
+    background-color: #fff !important; /* White background color for data cells */
+  }
+  td:nth-child(3) { 
+    text-align: left;
+    min-width: 20em !important;
+  }
+  td:nth-child(4) { 
+    min-width: 5em !important;
+  }
+  td:nth-child(1) { 
+      width: 3em;
+  }

@@ -1,0 +1,110 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Homework 1 Solutions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercise 2.3
+\underline{Exercise $2.3$} 
+
+\begin{enumerate}
+\item \begin{enumerate}
+	\item $ \{x \in \mathbb{R} \mid x>34\}$ or  $\{x \mid x>34\} $
+	\item $\{x \mid 8<x<65\}$ 
+\end{enumerate}
+\item (a), (d), (f), (g), and (h) are true. 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercise 2.4
+\underline{Exercise $2.4$} 
+
+\begin{enumerate}
+\item[5.] We are given the function $y=5+3x$ with domain $X = \{x | 1 \leq x \leq 9 \}$. Note that for this function, when $x=1$, $y=8$ and when $x=9$, $y=32$. So the range for this function is:
+$$
+f(X) =\{y \mid 8 \leq y \leq 32\}
+$$
+Note: It is not always the case that extreme values of the domain correspond to extreme values of the range. For example, consider $y=x^{2}$ with domain $\{x \mid-2 \leq x \leq 2\}$, the range here is $\{y \mid 0 \leq y \leq 4\}$.
+
+\item[7.] (a) No, (b) Yes
+\item[8.] For each output, we would want to produce at the lowest cost. \\
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercise 2.5
+\newpage
+\underline{Exercise $2.5$} 
+\begin{enumerate}
+	
+\item Graph the following functions and find their inverse.
+\definecolor{mycolor}{RGB}{145,0,0}
+
+\begin{tasks}(2)
+\task $\begin{aligned} y = 16 + 2x, \quad  f^{-1}(y) = \frac{y-16}{2} \end{aligned}$ \\~\\
+\begin{tikzpicture}[scale=0.85]
+\begin{axis}[axis lines = center, xlabel = \(x\), ylabel = \(y\), ytick distance=8, xtick distance=4, extra x ticks = {0}, xlabel style={at={(axis description cs:0.8,1.05)}, anchor=north}, ylabel style={at={(axis description cs:1.05,0.3)}, anchor=north}]
+\addplot [domain=-9:1, samples=100, color=mycolor, line width = 0.4mm]
+{16 + 2*x};
+\end{axis}
+\end{tikzpicture} 
+
+\task $ \begin{aligned} y = 8-2x \quad  f^{-1}(y) = \frac{8-y}{2}\end{aligned}$ \\~\\
+\begin{tikzpicture}[scale=0.85]
+\begin{axis}[axis lines = center, xlabel = \(x\), ylabel = \(y\), ytick distance=4, xtick distance=2, extra x ticks = {0}, xlabel style={at={(axis description cs:0.25,1.05)}, anchor=north}, ylabel style={at={(axis description cs:1.05,0.4)}, anchor=north}]
+\addplot [domain=-1:5, samples=100, color=mycolor, line width = 0.4mm]
+{8-2*x};
+\end{axis}
+\end{tikzpicture} 
+
+\task $\begin{aligned} y = 2x+12 \quad  f^{-1}(y) = \frac{y-12}{2}\end{aligned}$ \\~\\
+\begin{tikzpicture}[scale=0.85]
+\begin{axis}[axis lines = center, xlabel = \(x\), ylabel = \(y\), ytick distance=4, xtick distance=2, extra x ticks = {0}, xlabel style={at={(axis description cs:0.75,1.05)}, anchor=north}, ylabel style={at={(axis description cs:1.05,0.3)}, anchor=north}]
+\addplot [domain=-8:2, samples=100, color=mycolor, line width = 0.4mm]
+{2*x+12};
+\end{axis}
+\end{tikzpicture}
+\end{tasks}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercise 4.2
+\underline{Exercise 4.2}  
+% Question 6
+\begin{enumerate}
+\item[6.]
+\begin{tasks}(2)
+\task  $x_{2}+x_{3}+x_{4}+x_{5}$
+\task $a_{5} x_{5}+a_{6} x_{6}+a_{7} x_{7}+a_{8} x_{8}$
+\task $b x_{1}+b x_{2}+b x_{3}+b x_{4}$
+\task $a_{1}+a_{2} x+a_{3} x^{2}+\ldots+a_{n} x^{n-1}$
+\task $x^{2}+(x+1)^{2}+(x+2)^{2}+(x+3)^{2}$  \\~\\
+\end{tasks}
+
+% Question 8
+\item[8.] 
+\begin{enumerate}
+\item $$ \left(\sum_{i=0}^{n} x_{i} \right)+x_{n+1} =x_{0}+x_{1}+x_{2}+\ldots+x_{n+1}  =\sum_{i=0}^{n+1} x_{i} $$
+\item $$ \begin{aligned} 
+\sum_{j=1}^{n} a b_{j} y_{j}&=a b_{1} y_{1}+a b_{2} y_{2}+\ldots+a b_{n} y_{n} \\ 
+&= a\left(b_{1} y_{1}+b_{2} y_{2}+\ldots+b_{n} y_{n}\right) \\
+&= a \sum_{j=1}^{n} b_{j} y_{j} \end{aligned}$$
+\item $$ \begin{aligned}  \sum_{j=1}^{n}\left(x_{j}+y_{j}\right) 
+& =\left(x_{1}+y_{1}\right)+\left(x_{2}+y_{2}\right)+\ldots+\left(x_{n}+y_{n}\right) \\
+& =x_{1}+x_{2}+\ldots+x_{n}+x_{1}+y_{2}+\ldots+y_{n} \\
+& =\sum_{j=1}^{n} x_{j}+\sum_{j=1}^{n} y_{j} \end{aligned} $$
+\end{enumerate}
+\end{enumerate}
+
+%%%%%%%%%% Exercise 5.1
+\underline{Exercise 5.1}  
+\begin{enumerate}
+\item[1.] \begin{tasks}(3)
+\task $ q \implies p $
+\task $ q \implies p $
+\task $ q \iff p $
+\task $ q \iff p $
+\task $ q \iff p $
+\task $ p \implies q $
+\task $ q \implies p $ 
+\end{tasks}
+\end{enumerate}
+
+
+
+\end{document}

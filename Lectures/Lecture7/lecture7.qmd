@@ -1,0 +1,23 @@
+---
+title: "Lecture 7"
+nav-sidebar: false
+---
+
+## Topics 
+- Implicit Function Theorem
+- Integration
+  
+## References
+- Textbook sections 8.5, 14.1-14.3
+- Review notes for [Calculus](./../../Notes/Calculus.pdf) (Lectures 5-7)
+  
+## Slides 
+
+Open slides in a new <a href="Slides7.pdf" target="_blank"> tab </a> or 
+<a href="Slides7.pdf" download="Slides7">download</a> them.
+
+<object class="slide-deck" data="Slides7.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Homework](homework7.pdf) ([Solutions](homework7_solutions.pdf))

@@ -1,0 +1,24 @@
+---
+title: "Lecture 10"
+nav-sidebar: false
+---
+
+## Topics 
+- Constrained Optimization
+  
+## References
+- Textbook sections 12.1, 12.2
+- Review notes for [Optimization](./../../Notes/Optimization.pdf) (Lectures 8-11)
+- Additional Constrained Optimization [Examples](./../../Notes/Optimization-Examples.pdf)
+  
+## Slides 
+
+Open slides in a new <a href="Slides10.pdf" target="_blank"> tab </a> or 
+<a href="Slides10.pdf" download="Slides10">download</a> them.
+
+<object class="slide-deck" data="Slides10.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Constrained Maximization Worksheet](Handout-Constrained-Optimization.pdf)
+- [Homework](homework10.pdf) ([Solutions](homework10_solutions.pdf))

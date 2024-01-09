@@ -1,0 +1,46 @@
+---
+title: "Introduction to Mathematical Economics"
+sidebar: false
+toc: false
+page-layout: full
+---
+::: {.grid .intro}
+
+::: {.g-col-20 .g-col-sm-12 .g-col-md-8}
+<p style="font-size:1.25rem;">
+Learn essential mathematical tools encompassing linear algebra, calculus, and optimization, that are widely utlilised in analysis of economic problems.
+</p>
+
+ECON 441 | Spring 2024 | College of Business and Economics | California State University
+
+::: {.grid .course-details}
+
+::: {.g-col-10 .g-col-sm-6 .g-col-md-4}
+### Instructor
+{{< fa user >}} &nbsp; [Dr. Div Bhagia](https://www.dbhagia.com) <br>
+{{< fa university >}} &nbsp; Office: SGMH 3361 <br>
+{{< fa envelope >}} &nbsp; [dbhagia@fullerton.edu](mailto:dbhagia@fullerton.edu) <br>
+:::
+
+::: {.g-col-20 .g-col-sm-12 .g-col-md-8}
+### Course details
+{{< fa location-dot >}} &nbsp; SGMH 2501, Thursdays, 7-9:45 PM <br>
+{{< fa clock >}} &nbsp; Office hours: 
+<ul style="margin-top: 0; margin-left: -1.5em;">
+- Thursdays, 4-6.45 PM, or
+- By appointment (in-person or on [Zoom](https://fullerton.zoom.us/j/81895171931))
+</ul>
+:::
+
+:::
+
+:::
+
+::: {.g-col-10 .g-col-sm-6 .g-col-md-4}
+<img src="/assets/stem_linal.png" alt="Alt text" width="315"/>
+:::
+
+:::
+
+
+

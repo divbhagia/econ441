@@ -1,0 +1,24 @@
+---
+title: "Lecture 3"
+nav-sidebar: false
+---
+
+## Topics 
+- Conditions for Nonsingularity of a Matrix
+- Determinant of a Matrix
+
+## References
+- Textbook sections 4.7, 5.1-5.3
+- Review notes for [Linear Algebra](./../../Notes/Linear-Algebra.pdf) (Lectures 2-4)
+
+## Slides 
+
+Open slides in a new <a href="Slides3.pdf" target="_blank"> tab </a> or 
+<a href="Slides3.pdf" download="Slides3">download</a> them.
+
+<object class="slide-deck" data="Slides3.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Echelon Form Worksheet](Handout-Echelon-Form.pdf)
+- [Homework](homework3.pdf) ([Solutions](homework3_solutions.pdf))

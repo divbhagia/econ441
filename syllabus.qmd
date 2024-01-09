@@ -1,0 +1,80 @@
+---
+title: "Syllabus"
+toc: false
+number-sections: false
+sidebar: false
+format: html
+---
+
+The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking [here](Syllabus/Econ441-Syllabus.pdf).
+
+::: {.panel-tabset}
+
+## Overview
+### Overview
+
+The economy is shaped by the actions of various economic agents, each driven by their own unique set of incentives and constraints. Understanding this complex system is a challenging task, as it involves keeping track of the interplay of several moving pieces. Enter Mathematics, the protagonist of this story, which enables us to represent complex economic relationships and interactions elegantly. Mathematical economic models, while often simplifications of reality, provide us with a structured way of thinking about economic issues.
+
+This class will introduce you to the world of mathematical economics. We will cover essential tools used in economics, including linear algebra, calculus, and optimization, and apply these tools to economic problems.  For example, you will learn how to express and solve complex systems of equations that describe the economy using matrix algebra and to solve unconstrained and constrained optimization problems, such as those related to utility maximization, price determination, wage setting, and more.
+
+We will also spend some time thinking about suitable assumptions  for effectively modeling specific aspects the economy. Hopefully, after this class, you will develop some appreciation for mathematical economics, while also being able to think critically about the advantages and limitations of this approach to understand economics.
+
+## Learning Goals
+### Learning Goals
+Upon successful completion of this course, students will:
+
+- Gain a deep understanding of essential mathematical tools used in economics, including the application of matrix algebra to solve systems of equations and the solving of constrained and unconstrained optimization problems.
+  
+- Learn how these mathematical tools are applied to a range of economic issues, from analyzing firm and consumer behavior to implications of fiscal policies, preparing students for graduate-level coursework in economics.
+
+- Develop the ability to mathematically model economic phenomenon, carefully considering the appropriate assumptions to best represent specific behavior of economic agents or particular market structures.
+
+## Course Structure
+### Course Structure
+
+All meetings for this course are expected to be held in person. During our class sessions, I utilize lecture slides to cover the topics for the day, and we work on related problems together, typically using worksheets. While you work on these worksheets, I move around the classroom to provide assistance, and you can also seek help from your peers; it's an engaging and collaborative learning experience. As a result, class attendance is crucial for this course.
+
+For each week's material, you will have homework problems that, while not graded, you should aim to complete every week. Even though solutions to the problems are provided, you will benefit immensely from trying them on your own before checking the answers. We will also have in-class quizzes about every other week, with questions similar to the homework. So another reason to keep on top of that homework!
+
+## Course Material
+### Course Material
+
+All course materials—including lecture slides, worksheets, notes for each topic, and homework problems with solutions—are available on the course website. These materials should generally be sufficient for your study needs. However, if you find yourself needing more detailed explanations for certain topics, you might consider acquiring the following textbook that this course is based on:<br>
+
+- *Chiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition*
+
+You can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me and I will try my best to find you one.
+
+
+## Grading Criteria
+
+### Grading Criteria
+
+Your overall grade will be based on active engagement, five in-class quizzes, and two exams. The grading breakdown is as follows:
+
+<table style="margin-left: auto; margin-right: auto; width: 50%;">
+  <tr>
+    <th style="width: 60%;">Component</th>
+    <th style="width: 40%;">Points</th>
+  </tr>
+  <tr>
+    <td>Active Engagement</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Quizzes</td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>Midterm</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>Final Exam</td>
+    <td>40</td>
+  </tr>
+</table>
+
+If you're enrolled in this course for graduate-level credit, you must also complete a project that requires building an economic model and coding it using Python. The project will count for an additional 20 points.
+
+:::

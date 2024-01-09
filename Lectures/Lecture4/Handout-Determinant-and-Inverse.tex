@@ -1,0 +1,135 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Nonsingularity, Determinant, Matrix Inversion}
+
+
+ \textbf{Determinant} $|A|$ is a unique scalar associated with a {square} matrix $A$. \\~\\
+ Determinant of a $2 \times 2$ matrix:
+ $$ A=\left[\begin{array}{ll}a_{11} & a_{12} \\ a_{21} & a_{22}\end{array}\right] $$
+ Can be calculated as:
+ $$ |A|=a_{11} a_{22}-a_{12} a_{21} $$  
+\vspace{2em}
+
+Find the determinant of $A$ and $B$ given below: $$A=\left[\begin{array}{ll}
+1 & 2 \\
+3 & 4
+\end{array}\right]
+\quad
+B=\left[\begin{array}{ll}
+1 & 2 \\
+2 & 4
+\end{array}\right]
+$$
+Is $A$ nonsingular? What about $B$? Check if you get the same answer by reducing $A$ and $B$ to their echelon form and then finding the rank. 
+\newpage
+ Determinant of a $3 \times 3$ matrix:
+$$
+\begin{aligned}
+|A| &=\left|\begin{array}{lll}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array}\right| \\~\\
+&=a_{11}\left|\begin{array}{ll}
+a_{22} & a_{23} \\
+a_{32} & a_{33}
+\end{array}\right|-a_{12}\left|\begin{array}{ll}
+a_{21} & a_{23} \\
+a_{31} & a_{33}
+\end{array}\right| 
++a_{13}\left|\begin{array}{ll}
+a_{21} & a_{22} \\
+a_{31} & a_{32}
+\end{array}\right|
+\end{aligned}
+$$
+
+\vspace{1em}
+Find the determinant for:
+\[
+A=\left[\begin{array}{ccc}
+1 & 5 & 1 \\
+0 & 3 & 9 \\
+-1 & 0 & 0
+\end{array}\right]
+\]
+
+\newpage
+\textbf{Properties of Determinants}
+\begin{itemize}
+\item[1.] $ |A| = |A'|$ 
+\item[2.] Interchanging rows or columns will alter the sign but not the value
+\item[3.] Multiplication of any one row (or one column) by a scalar $k$ will change the value of the determinant $k$-fold
+\item[4.] The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered
+\item[5.] If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero. 
+\end{itemize}
+
+\vspace{2em}
+Verify the above properties for a $2 \times 2$ matrix: 
+ $$ A=\left[\begin{array}{ll}a_{11} & a_{12} \\ a_{21} & a_{22}\end{array}\right] $$
+
+
+\newpage
+The \textbf{minor} of the element $a_{ij}$, denoted by $|M_{ij}|$ is obtained by deleting the $i$th row and $j$th column of the matrix and taking the determinant of the resulting matrix. \\
+
+Whereas, \textbf{cofactor} $|C_{ij}|$ is defined as:
+$$ |C_{ij}| = (-1)^{i+j} |M_{ij}| $$\\
+
+\textit{Example.} $$
+A=\left[\begin{array}{lll}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array}\right]
+$$
+Minor for the element $a_{12}$: 
+$$ \left|M_{12}\right|=\left|\begin{array}{ll}a_{21} & a_{23} \\ a_{31} & a_{33}\end{array}\right| $$ \\
+Cofactor for the element $a_{12}$: 
+$$ \left|C_{12}\right| = (-1)^{(1+2)}  \left|M_{12}\right| = -  \left|M_{12}\right| $$ \\
+Find $|C_{31}|,  |C_{32}|,$ and $|C_{33}|$ for \[
+A=\left[\begin{array}{ccc}
+1 & 5 & 1 \\
+0 & 3 & 9 \\
+-1 & 0 & 0
+\end{array}\right]
+\]
+
+\newpage
+\textbf{Determinant} for an  $n \times n$ matrix is given by:
+ $$|A| = \sum_{i=1}^n a_{ij} |C_{ij}| = \sum_{j=1}^n a_{ij} |C_{ij}| $$ \\
+The first expression corresponds to expanding with respect to the $j$th column, while the second expression is the expression for the determinant when expanding with respect to the $i$th row. \\~\\
+
+Find the determinant of $|A|$ by expanding with the third row.
+\[
+A=\left[\begin{array}{ccc}
+1 & 5 & 1 \\
+0 & 3 & 9 \\
+-1 & 0 & 0
+\end{array}\right]
+\]
+
+\newpage 
+
+To find the inverse of a nonsingular matrix $A$ take the transpose of its cofactor matrix $C = [|C_{ij}|]$ to find the adjoint of $A$ and divide it by the determinant of $A$. 
+$$ A^{-1} = \frac{1}{|A|} adj A$$ \\
+
+ \textbf{Adjoint} of a nonsingular $n \times n$ matrix \\~\\
+ $$adj A = C' = \left[\begin{array}{llll}
+|C_{11}| & |C_{21}| & \hdots & |C_{n1}| \\
+|C_{12}| & |C_{22}| & \hdots &  |C_{n2}| \\
+\vdots &\vdots & \hdots &  \vdots \\
+|C_{1n}| & |C_{2n}| & \hdots & |C_{nn}| \\
+\end{array}\right]$$
+\vspace{1em}
+
+Find the inverse of \[
+A=\left[\begin{array}{ccc}
+1 & 5 & 1 \\
+0 & 3 & 9 \\
+-1 & 0 & 0
+\end{array}\right]
+\]
+
+
+\end{document}

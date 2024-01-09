@@ -1,0 +1,26 @@
+---
+title: "Lecture 5"
+nav-sidebar: false
+---
+
+## Topics 
+- Limit Definition of a Derivative
+- Limits
+- Continuity
+- Rules of Differentiation
+  
+## References
+- Textbook sections 6.2-6.4, 6.7, 7.1-7.3
+- Review notes for [Calculus](./../../Notes/Calculus.pdf) (Lectures 5-7)
+  
+## Slides 
+
+Open slides in a new <a href="Slides5.pdf" target="_blank"> tab </a> or 
+<a href="Slides5.pdf" download="Slides5">download</a> them.
+
+<object class="slide-deck" data="Slides5.pdf" type="application/pdf" style="width:80%; height:450px;">
+</object>
+
+## Practice Questions
+- [Rules of Differentiation Worksheet](Handout-Rules-of-Differentiation.pdf)
+- [Homework](homework5.pdf) ([Solutions](homework5_solutions.pdf))

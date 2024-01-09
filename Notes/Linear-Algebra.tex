@@ -1,0 +1,581 @@
+\documentclass{./../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Linear Algebra}
+
+%%%%%%%%%%%%%%%%%%%%%%% Introduction to Matrices
+\section{Introduction to Matrices}
+A \textbf{matrix} is a rectangular array of numbers, parameters, or vectors. \\~\\
+\textit{Example.} $A = \begin{bmatrix}
+2 & 3 & 1 \\
+-1 &4 & 6
+\end{bmatrix}$ \\
+
+Dimensions of matrix:
+\begin{itemize}
+\item Number of rows ($m$)
+\item Number of columns ($n$)
+\end{itemize}
+A matrix with $m$ rows and $n$ columns is referred to as an $m \times n$ matrix. 
+
+It's common to denote the dimensions of a matrix as a subscript. So we can write the $ 2 \times 3$ matrix $A$ in the example above as:
+  $$A = \begin{bmatrix}
+2 & 3 & 1 \\
+-1 &4 & 6
+\end{bmatrix}_{2 \times 3}$$
+
+More generally a $m \times n$ matrix can be written as:
+$$A = \begin{bmatrix}
+a_{11} & a_{12} & a_{13} & \hdots & a_{1n} \\
+a_{21} & a_{22} & a_{23} & \hdots & a_{2n} \\
+\vdots & \vdots & \vdots & \vdots & \vdots \\
+a_{m1} & a_{m2} & a_{m3} & \hdots & a_{mn} \\
+\end{bmatrix}$$
+Or more compactly as:
+$$ A = [ a_{ij} ] \quad i=1,2,...,m; j=1,2,...,n$$ 
+
+A \textbf{square matrix} is matrix that has equal number of rows and columns. For example,
+$$A = \begin{bmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33} \\
+\end{bmatrix}_{3\times 3}$$
+
+Two matrices are \textbf{equal} if all their elements are identical. So $A=B$ if and only if $a_{ij} = b_{ij}$ for all $i, j$.
+\textit{Example.}
+$$ \begin{bmatrix}
+1 & 8  \\
+4 &-1  \\
+\end{bmatrix} \neq
+ \begin{bmatrix}
+1 & 8  \\
+4 & 2  \\
+\end{bmatrix}$$ 
+
+%%%%%%%%%%%%%%%%%%%%%%% Matrix Operations
+
+\section{Matrix Operations}
+
+\subsection{Addition and Subtraction}
+
+To add two matrices, we need to add each element of one matrix to the corresponding element in the other matrix. Similarly, to take the difference between two matrices, we subtract each element of one matrix from the corresponding element in the other matrix. For this to work, we need both matrices to have the same dimension. \\
+
+For two matrices of the same dimension, $A$ and $B$, we have 
+$$ A + B = [a_{ij}+b_{ij}] \quad \quad A - B = [a_{ij}-b_{ij}] $$
+
+
+In summary:
+\begin{itemize}
+\item Addition and subtraction operations are performed \textit{element-by-element}
+\item Only matrices with the same dimension can be added or subtracted. 
+\end{itemize}
+
+\subsection{Scalar Multiplication}
+
+To multiply a matrix $A$ by a scalar $\lambda$, we need to multiply each element of $A$ by  $\lambda$. So $$ \lambda A = [\lambda a_{ij}]$$ \\
+
+
+\textit{Example.}
+Given, $A = \begin{bmatrix}
+2 & 3 \\
+4 & -6 
+ \end{bmatrix} \text{ and }
+B = \begin{bmatrix}
+1 & 8 \\
+-2 & 3
+\end{bmatrix}$, we can find:
+\begin{tasks}(2)
+\task \( A+ B = \begin{bmatrix}
+3 & 11 \\
+2 & -3
+\end{bmatrix} \)
+
+\task \( A- B = \begin{bmatrix}
+1 & -5 \\
+6 & -9
+\end{bmatrix} \) 
+
+\task \( 2A = \begin{bmatrix}
+4 & 6 \\
+8 & -12
+\end{bmatrix} \) 
+
+\task \( A-2B =  \begin{bmatrix}
+2 & 3 \\
+4 & -6 
+ \end{bmatrix} -  \begin{bmatrix}
+2 & 16 \\
+-4 & 6 
+ \end{bmatrix} = \begin{bmatrix}
+0 & -13 \\
+8 & -12 
+ \end{bmatrix} \) 
+ \end{tasks}
+
+\subsection{Matrix Multiplication}
+
+We can only multiply two matrices $A_{m \times n}$ and $B_{p \times q}$ to get $AB$ if $ n = p $. In other words, we can only multiply two matrices, if the number of columns in the first matrix is equal to the number of rows in the second matrix. \\
+
+\textit{Example.}
+$A = \begin{bmatrix}
+2 & 3 & 1 \\
+4 & -6 & -2
+\end{bmatrix}_{2 \times 3}$ 
+$B = \begin{bmatrix}
+1 & 8 \\
+-2 & 3
+\end{bmatrix}_{2 \times 2}$ 
+
+Here, we cannot find $AB$, but can find $BA$. \\
+
+\textit{Note}: The order of multiplication matters, so even when both products are possible, $AB$ is not necessarily equal to $BA$. In fact, the two will only be equal under special circumstances. 
+
+If we have two matrices $A_{m \times n}$ and $B_{n \times p}$ and we can multiply these to get $C=AB$. Then the dimension of $C$ will be $m \times p$. To find $C$ we take the $i$th row of $A$ and the $j$th row of $B$ to get the $ij$ element of $C$ as follows:
+$$ c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + ... + a_{in} b_{nj} = \sum_{k=1}^n a_{ik} b_{kj}   $$
+
+\textit{Example.}
+$$A = \begin{bmatrix}
+a_{11} & a_{12} &  a_{13} \\
+a_{21} & a_{22} &  a_{23} \\
+\end{bmatrix}_{2 \times 3} \quad \quad \quad
+B = \begin{bmatrix}
+b_{11} & b_{12} \\
+b_{21} & b_{32} \\
+b_{21} & b_{32} \\
+\end{bmatrix}_{3 \times 2}$$ \\
+$$C = AB = \begin{bmatrix}
+ a_{11}b_{11} +  a_{12}b_{21} + a_{13}b_{31} &  a_{11}b_{12} +  a_{12}b_{22} + a_{13}b_{32} \\
+  a_{21}b_{11} +  a_{22}b_{21} + a_{23}b_{31} &  a_{21}b_{12} +  a_{22}b_{22} + a_{23}b_{32} \\
+\end{bmatrix}_{2 \times 2} $$
+
+%%%%%%%%%%%%%%%%%%%%%%% Vectors
+
+\section{Vectors}
+
+Matrices with only one column are called \textbf{column vectors}. 
+$$ x =  \begin{bmatrix}
+x_1\\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix} $$
+ Matrices with only one row are called \textbf{row vectors}.
+$$ x' =  \begin{bmatrix}
+x_1 &
+x_2 & \hdots &
+x_n
+\end{bmatrix} $$
+
+Inner product of two vectors each with $n$ elements is given by:
+$$ u \cdot v = u_1 v_1 + u_2 v_2 +...+ u_n v_n = \sum_{i=1}^n u_i v_i $$ 
+\textit{Example.} $$u = \begin{bmatrix} 1 \\ 5 \\ 2 \end{bmatrix} \quad \quad v = \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}$$
+$$ u \cdot v = 1.2 + 5.1 + 2.3 = 2+5+6=13 $$ \\
+\textit{The rows and columns of a matrix are row and column vectors, respectively.}  
+
+\subsection{Linear Dependence}
+
+A set of vectors is said to be \textbf{linearly dependent} if and only if any one of them can be expressed as a linear combination of the remaining vectors. \\~\\
+\textit{Example.}$$ v_1 =  \begin{bmatrix}
+1\\
+2 \\
+\end{bmatrix} \quad \quad v_2 = \begin{bmatrix}
+2\\
+4 \\
+\end{bmatrix}$$
+Here $v_1$ and $v_2$ are linearly dependent because $v_2=2 v_1$.\\
+
+Formally, a set of $m$-vectors $v_1, v_2, ...,v_n$ is {linearly dependent} if and only if there exists a set of scaler $k_1, k_2, ..., k_n$ (not all zero) such that:
+$$ \sum_{i=1}^n k_i v_i = 0 \quad (m \times 1) $$ 
+
+%%%%%%%%%%%%%%%%%%%%%%% Identity and Null Matrix
+
+\section{Identity and Null Matrix}
+An \textbf{identity matrix} is a square matrix that has all the elements in its \textit{principal diagonal} equal to $1$ and all other elements equal to $0$. \\~\\
+A $2 \times 2$ identity matrix:
+$$ I_2 = \begin{bmatrix}
+1 & 0\\
+0 & 1 \\
+\end{bmatrix}$$
+A $3 \times 3$ identity matrix:
+$$ I_3 = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}$$
+Identity matrix behaves like 1 for matrices:
+$$ AI = IA = A $$ 
+In particular, pre- or post-multiplying a matrix by the identity matrix returns the original matrix.
+
+A matrix is an \textbf{idempotent} matrix if it remains unchanged when multiplied by itself any number of times. That is $A$ is idempotent if and only if $A = A^k$. 
+
+A \textbf{nul}l matrix is a matrix with all elements $0$. \\~\\
+\textit{Example.} $$\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{bmatrix}$$
+\begin{itemize}
+\item $A + 0 = A$
+\item $A 0 = 0$
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%% Transpose and Inverse of a Matrix
+
+\section{Transpose and Inverse of a Matrix}
+
+Transpose of a matrix $A$ is denoted by $A'$ and is obtained by interchanging rows and columns of $A$. 
+
+\textit{Example.} $$A = \begin{bmatrix}
+2 & 3 & 1 \\
+4 & -6 & 2
+\end{bmatrix} \quad \quad A' = \begin{bmatrix}
+2 & 4 \\
+3 & -6 \\
+1 & 2
+\end{bmatrix}$$
+
+\begin{itemize}
+\item A matrix $A$ is said to be \textit{symmetric} if $A'=A$
+\item A matrix $A$ is said to be \textit{skew-symmetric} if $A'=-A$
+\item A matrix $A$ is said to be \textit{orthogonal} if $A'A=I$
+\end{itemize}
+
+Properties of transposes:
+$$
+\begin{array}{l}
+\left(A^{\prime}\right)^{\prime}=A \\
+(A+B)^{\prime}=A^{\prime}+B^{\prime} \\
+(A B)^{\prime}=B^{\prime} A^{\prime} \\
+\end{array}
+$$ \\
+
+For a \textit{square} matrix $A$, it's \textbf{inverse} $A^{-1}$ is defined as:
+$$
+A A^{-1}=A^{-1} A=I
+$$
+
+Properties of inverses:
+$$
+\begin{array}{l}
+ \left(A^{-1}\right)^{-1}=A \\
+ (A B)^{-1}=B^{-1} A^{-1}  \\
+\left(A^{\prime}\right)^{-1}=\left(A^{-1}\right)^{\prime} 
+\end{array}
+$$
+
+%%%%%%%%%%%%%%%%%%%%%%% Conditions for Nonsingularity
+
+\section{Conditions for Nonsingularity}
+
+ If a matrix's inverse exists, it's called a \textbf{nonsingular} matrix. 
+
+ Squareness is a \textit{necessary} condition for an inverse to exist, but not a \textit{sufficient} condition. The sufficient condition for nonsingularity of a matrix is if all the rows or (equivalently) columns of this matrix are linearly independent. 
+
+\textbf{Rank} of a matrix is defined as the maximum number of linearly independent rows or (equivalently) columns. 
+
+\textit{Example.} $$A=\left[\begin{array}{ll}
+1 & 2 \\
+3 & 4
+\end{array}\right]
+\quad
+B=\left[\begin{array}{ll}
+1 & 2 \\
+2 & 4
+\end{array}\right]
+$$
+
+Rows and columns of $A$ are linearly independent, so $A$ is nonsingular and has full rank 2. The second row of $B$ can be written as two times the first row of $B$,  so the rank of $B$ is 1 and $B$ is a singular matrix.  \\
+
+We can check for linear independence and find the rank of a matrix by converting the matrix to its \textbf{echelon} form. 
+
+For a matrix in echelon form:
+\begin{itemize}
+\item First row: all elements \textit{can be} non-zero
+\item Second row: first element $0$
+\item Third row: first two elements $0$
+$$\vdots$$
+\item Last row: first $m-1$ elements zero \\
+\end{itemize}
+
+\textit{Echelon} form of a $2 \times 2$ matrix. 
+$$
+A=\left[\begin{array}{ll}
+a_{11} & a_{12} \\
+0 & a_{22}
+\end{array}\right]
+$$
+
+\textit{Echelon} form of a $3 \times 3$ matrix. 
+$$
+A=\left[\begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+{0} & a_{22} & a_{23}  \\
+{0} & {0} & a_{33}
+\end{array}\right]
+$$
+
+Valid operations to convert to echelon form:
+\begin{itemize}
+\item Interchange any two rows
+\item Multiplication (or division) of a row by a scalar $k \neq 0$
+\item Addition of a (or $k$ times of a) row to another \\
+\end{itemize}
+
+%%%% Convert $3 \times 3$ matrix to echelon
+\fbox{\begin{minipage}{\textwidth}
+\textit{How to convert a $3 \times 3$ matrix to its echelon form?}
+
+$$
+A=\left[\begin{array}{lll}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array}\right]
+$$
+
+Step 1: Try to make $a_{31}=0$
+
+$$
+A_{1}=\left[\begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+0 & a_{32} & a_{33}
+\end{array}\right]
+$$
+
+Step 2: Try to make $a_{21}=0$
+
+$$
+A_{2}=\left[\begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+0 & a_{22} & a_{23} \\
+0 & a_{32} & a_{33}
+\end{array}\right]
+$$
+
+Step 3: Try to make $a_{32}=0$
+
+$$
+A_{3}=\left[\begin{array}{ccc}
+a_{11} & a_{12} & a_{13} \\
+0 & a_{22} & a_{23} \\
+0 & 0 & a_{33}
+\end{array}\right]
+$$ \\
+\end{minipage}} \\~\\
+
+In summary, a square matrix is nonsingular i.e. its inverse exists if and only if all its rows (or equivalently columns) are linearly independent. We can also rephrase this as --- a square matrix is nonsingular if it is full rank. 
+
+%%%%%%%%%%%%%%%%%%%%%%% Determinants
+
+\section{Determinants}
+
+Determinant $|A|$ is a unique scalar associated with a \textit{square} matrix $A$. Before we can write down the determinant for an $n \times n$ matrix, we need to define minors and cofactors. \\
+
+The \textbf{minor} of the element $a_{ij}$, denoted by $|M_{ij}|$ is obtained by deleting the $i$th row and $j$th column of the matrix and taking the determinant of the resulting matrix. 
+
+Whereas, \textbf{cofactor} $|C_{ij}|$ is defined as:
+$$ |C_{ij}| = (-1)^{i+j} |M_{ij}| $$
+
+\textit{Example.} $$
+A=\left[\begin{array}{lll}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array}\right]
+$$
+Minor for the element $a_{12}$: 
+$$ \left|M_{12}\right|=\left|\begin{array}{ll}a_{21} & a_{23} \\ a_{31} & a_{33}\end{array}\right| $$ \\
+Cofactor for the element $a_{12}$: 
+$$ \left|C_{12}\right| = (-1)^{(1+2)}  \left|M_{12}\right| = -  \left|M_{12}\right| $$ \\
+
+\textbf{Determinant} for an  $n \times n$ matrix is given by:
+ $$|A| = \sum_{i=1}^n a_{ij} |C_{ij}| = \sum_{j=1}^n a_{ij} |C_{ij}| $$ \\
+The first expression corresponds to expanding with respect to the $i$th row, while the second expression is the expression for the determinant when expanding with respect to the $j$th column. In practice, we can expand with respect to any row or column. 
+
+Using the above formula we can see that the determinant for a $2 \times 2$ matrix:
+ $$ A=\left[\begin{array}{ll}a_{11} & a_{12} \\ a_{21} & a_{22}\end{array}\right] $$
+ is given by: $$ |A|=a_{11} a_{22}-a_{12} a_{21} $$                
+ 
+ Similarly, the determinant of a $3 \times 3$ matrix is given by:
+
+ $$
+\begin{aligned}
+|A| &=\left|\begin{array}{lll}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{array}\right| \\~\\
+&=a_{11}\left|\begin{array}{ll}
+a_{22} & a_{23} \\
+a_{32} & a_{33}
+\end{array}\right|-a_{12}\left|\begin{array}{ll}
+a_{21} & a_{23} \\
+a_{31} & a_{33}
+\end{array}\right| 
++a_{13}\left|\begin{array}{ll}
+a_{21} & a_{22} \\
+a_{31} & a_{32}
+\end{array}\right|
+\end{aligned}
+$$ \\
+
+\textbf{Determinant criteria for nonsingularity:} {The determinant of singular matrices is equal to 0. }\ 
+
+\textit{Example.}
+$$
+\begin{aligned}
+\left|\begin{array}{ccc}
+4 & 0 & -1 \\
+2 & 1 & -7 \\
+3 & 3 & 9
+\end{array}\right| &=4\left|\begin{array}{rr}
+1 & -7 \\
+3 & 9
+\end{array}\right|-0\left|\begin{array}{cc}
+2 & -7 \\
+3 & 9
+\end{array}\right|-1\left|\begin{array}{ll}
+2 & 1 \\
+3 & 3
+\end{array}\right| \\
+&=4(9+21)-0(18+21)-1(6-3) \\
+&=120-0-3=117
+\end{aligned}
+$$
+
+Properties of determinants: 
+ \begin{itemize}
+\item[1.] $ |A| = |A'|$ 
+\item[2.] Interchanging rows or columns will alter the sign but not the value
+\item[3.] Multiplication of any one row (or one column) by a scalar $k$ will change the value of the determinant $k$-fold
+\item[4.] The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered
+\item[5.] If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero. 
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% Matrix Inversion
+
+
+\section{Matrix Inversion}
+
+To find the inverse of a nonsingular matrix $A$ take the transpose of its cofactor matrix $C = [|C_{ij}|]$ to find the adjoint of $A$ and divide it by the determinant of $A$. 
+$$ A^{-1} = \frac{1}{|A|} adj A$$ 
+
+ \textbf{Adjoint} of a nonsingular $n \times n$ matrix \\
+ $$adj A = C' = \left[\begin{array}{llll}
+|C_{11}| & |C_{21}| & \hdots & |C_{n1}| \\
+|C_{12}| & |C_{22}| & \hdots &  |C_{n2}| \\
+\vdots &\vdots & \hdots &  \vdots \\
+|C_{1n}| & |C_{2n}| & \hdots & |C_{nn}| \\
+\end{array}\right]$$
+\vspace{1em}
+
+\textit{Example.} 
+$$
+A=\left[\begin{array}{ccc}
+4 & -2 & 1 \\
+7 & 3 & 0 \\
+2 & 0 & 1
+\end{array}\right]
+$$ 
+We can write the cofactors of $A$ as follows: 
+\begin{align*}
+&\left|C_{11}\right|=\left|\begin{array}{cc}
+3 & 0 \\
+0 & 1
+\end{array}\right|=3 \quad
+&&\left|C_{12}\right|=-\left|\begin{array}{cc}
+7 & 0 \\
+2 & 1
+\end{array}\right|=-7 \quad
+&&\left|C_{13}\right|=\left|\begin{array}{cc}
+7 & 3 \\
+2 & 0
+\end{array}\right|=-6 \\
+&\left|C_{21}\right|=-\left|\begin{array}{cc}
+-2 & 1 \\
+0 & 1
+\end{array}\right|=2 \quad
+&& \left|C_{22}\right|=\left|\begin{array}{ll}
+4 & 1 \\
+2 & 1
+\end{array}\right|=2 \quad
+&&\left|C_{23}\right|=-\left|\begin{array}{cc}
+4 & -2 \\
+2 & 0
+\end{array}\right|=-4 \\
+&\left|C_{31}\right|=\left|\begin{array}{cc}
+-2 & 1 \\
+3 & 0
+\end{array}\right|=-3 \quad
+&&\left|C_{32}\right|=-\left|\begin{array}{ll}
+4 & 1 \\
+7 & 0
+\end{array}\right|=7 \quad
+&&\left|C_{33}\right|=\left|\begin{array}{cc}
+4 & -2 \\
+7 & 3
+\end{array}\right|=26
+\end{align*}
+
+$$
+\begin{aligned}
+\operatorname{adj} A =\left[\begin{array}{ccc}
+\left|C_{11}\right| & \left|C_{21}\right| & \left|C_{31}\right| \\
+\left|C_{12}\right| & \left|C_{22}\right| & \left|C_{32}\right| \\
+\left|C_{13}\right| & \left|C_{23}\right| & \left|C_{33}\right|
+\end{array}\right] 
+=\left[\begin{array}{ccc}
+3 & 2 & -3 \\
+-7 & 2 & 7 \\
+-6 & -4 & 26
+\end{array}\right]
+\end{aligned}
+$$
+
+Now to find the determinant of $|A|$, say we expand using the second row:
+$$A= a_{21} |C_{21}| + a_{22} |C_{22}| + a_{23} |C_{23}|  = 7\times 2 + 3 \times 2 + 0 \times -4 = 20$$
+Note that expanding by any row or column will give us the same answer. For example, expanding by the third column:
+$$A= a_{13} |C_{13}| + a_{23} |C_{23}| + a_{33} |C_{33}|  = 1\times -6 + 0 \times -4 + 1 \times 26 = 20$$
+
+%%%%%%%%%%%%%%%%%%%%%%% Solving a system of linear equations
+
+\section{Solving a system of linear equations}
+
+All the linear algebra we have learned so far can be used to solve a system of linear equations. 
+
+For example, we have the following two equations:
+\begin{align*}
+q + 2p &= 100 \\ q-3p &= 20
+\end{align*}
+We can write this as:
+$$ Ax = b $$
+where
+$$A = \begin{bmatrix}
+1 & 2 \\
+1 & -3 
+\end{bmatrix} \quad 
+x = \begin{bmatrix}
+q \\
+p 
+\end{bmatrix} \quad 
+b = \begin{bmatrix}
+100 \\
+20 
+\end{bmatrix}$$ \\
+If we pre-multiply the equation $Ax=b$ by $A^{-1}$, we get
+$$ A^{-1}Ax=A^{-1}b  \implies x^* = A^{-1}b $$ 
+
+\subsection{Cramer's Rule}
+
+Cramer's rule basically gives a slightly more efficient way of solving a system of equations than finding the inverse. This method is still based on matrix inversion. In particular, the $k$th element of $x$ can be solved by:
+$$ x^*_k = \frac{|A_k|}{|A|} $$
+where $A_k$ is a matrix formed by exchanging $k$th column of $A$ by $b$.
+
+\subsection{Homogeneous-equation system}
+
+A homogeneous equation system is given by 
+$$ Ax = 0$$
+For this system of equations, if $A$ is nonsingular, $x^* = A^{-1} 0 = 0$. If $A$ is singular there can be infinite number of solutions (this is true for any system of equations).
+
+\end{document}

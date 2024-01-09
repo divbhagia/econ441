@@ -1,0 +1,226 @@
+\documentclass{./../Latex/syllabus}
+
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{ECON 441: Introduction to Mathematical Economics} }
+\rhead{ \fancyplain{}{\includegraphics[scale=0.15]{CBE-Wordmark-CMYK} } }
+\fancyfoot[c] {\thepage\ }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+\includegraphics[scale=0.22]{CBE-Wordmark-CMYK} \\ \vspace{0.5em}
+{\large \textsc{ECON 441: Introduction to Mathematical Economics}} \\
+{\large \textsc{Spring 2024}}
+\end{center}
+%\date{September 26, 2014}
+
+\begin{center}
+\begin{minipage}[t]{\textwidth}
+\rule{\textwidth}{0.5pt} \\
+\setstretch{1.15} 
+\textbf{Instructor:} Div Bhagia \\
+\textbf{Office:} SGMH 3361 \\
+\textbf{Email:} dbhagia@fullerton.edu, preferred (usually respond within 48 hours except on weekends) \\
+\textbf{Phone:} (657) 278-2914 \\
+\textbf{Office hours:} Thursdays, 4-6.45 PM, or by appointment (in-person or on \href{https://fullerton.zoom.us/j/81895171931}{Zoom}) \\
+\textbf{Classroom:} SGMH 2501 \\
+\textbf{Class Schedule:} Thursdays, 7-9.45 PM \\
+\textbf{Technical support:} Call (657) 278-8888 or visit the \href{https://www.fullerton.edu/it/students/helpdesk/index.php}{IT Helpdesk website} \\
+\rule{\textwidth}{0.5pt} 
+\end{minipage}
+\end{center}
+
+\vspace{0.1em}
+\section*{Course Description}
+
+%\subsection*{Course Overview}
+
+The economy is shaped by the actions of various economic agents, each driven by their own unique set of incentives and constraints. Understanding this complex system is a challenging task, as it involves keeping track of the interplay of several moving pieces. Enter Mathematics, the protagonist of this story, which enables us to represent complex economic relationships and interactions elegantly. Mathematical economic models, while often simplifications of reality, provide us with a structured way of thinking about economic issues.
+
+This class will introduce you to the world of mathematical economics. We will cover essential tools used in economics, including linear algebra, calculus, and optimization, and apply these tools to economic problems.  For example, you will learn how to express and solve complex systems of equations that describe the economy using matrix algebra and to solve unconstrained and constrained optimization problems, such as those related to utility maximization, price determination, wage setting, and more.
+
+%We will also spend some time thinking about suitable assumptions  for effectively modeling specific aspects the economy. Hopefully, after this class, you will develop some appreciation for mathematical economics, while also being able to think critically about the advantages and limitations of this approach to understand economics.
+
+\subsection*{Learning Goals}
+Upon successful completion of this course, students will:
+\begin{enumerate}
+\itemsep0em 
+  \item Gain a deep understanding of essential mathematical tools used in economics, including the application of matrix algebra to solve systems of equations and the solving of constrained and unconstrained optimization problems.
+  \item Learn how these mathematical tools are applied to a range of economic issues, from analyzing firm and consumer behavior to implications of fiscal policies, preparing students for graduate-level coursework in economics.
+  \item Develop the ability to mathematically model economic phenomenon, carefully considering the appropriate assumptions to best represent specific behavior of economic agents or particular market structures.
+\end{enumerate}
+
+\newpage
+\subsection*{Prerequisites}
+ECON 310, ECON 315, or ECON 515; MATH 135, MATH 130, or MATH 150A
+
+\subsection*{Course Structure}
+
+All meetings for this course are expected to be held in person. During our class sessions, I utilize lecture slides to cover the topics for the day, and we work on related problems together, typically using worksheets. While you work on these worksheets, I move around the classroom to provide assistance, and you can also seek help from your peers; it's an engaging and collaborative learning experience. As a result, class attendance is crucial for this course.
+
+For each week's material, you will have homework problems that, while not graded, you should aim to complete every week. Even though solutions to the problems are provided, you will benefit immensely from trying them on your own before checking the answers. We will also have in-class quizzes about every other week, with questions similar to the homework. So another reason to keep on top of that homework!
+
+\subsection*{Course Materials}
+
+All course materials—including lecture slides, worksheets, notes for each topic, and homework problems with solutions—are available on the course website. These materials should generally be sufficient for your study needs. However, if you find yourself needing more detailed explanations for certain topics, you might consider acquiring the following textbook that this course is based on:
+
+\begin{itemize}
+  \item \textit{Chiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition}
+\end{itemize}
+
+You can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me and I will try my best to find you one.
+
+\section*{Instruction Modality}
+All meetings (including the midterm and final exam) for this course are expected to be held in person. You should inform me in advance if you cannot attend the class in any given week. If you test positive or are exposed to Covid, please report it using the \href{https://coronavirus.fullerton.edu/report-covid-19-case-or-exposure/}{CSUF COVID-19 Self Reporting Form}. If we must move the classes online due to unforeseen circumstances, we will meet on \href{https://fullerton.zoom.us/j/81895171931}{Zoom}.
+
+\section*{Course Communication}
+All course announcements and individual emails are sent through Canvas, which only uses CSUF email accounts. Therefore, you MUST check your CSUF email regularly (several times a week) for the course duration.
+
+\section*{Conduct in the Classroom}
+Use of phones, laptops, or other digital devices is not allowed during the lecture except when explicitly instructed to use one. Randomized Controlled Trials (RCTs) conducted at West Point show that in-class computer use inhibits learning. Here is a \href{https://oema.army.mil/pub/2017_Carter_Greenberg_Walker_Computer_Usage_RCT_USMA.pdf}{link} to the paper. Tablets used for taking notes that remain flat on the desk are allowed.
+
+\section*{Grading Criteria}
+
+Plus/minus grading will be used in this course. You are guaranteed at least the following grade if your weighted average course score falls within the specified range. A curve may be applied to the final grade.
+
+\begin{center}
+\begin{minipage}[t]{0.75\textwidth}
+\begin{tabular}{|ccc|}
+\hline
+Grade & \multicolumn{2}{c|}{Range} \\
+$\mathrm{A}+$ & $100 \%$ & to $97 \%$ \\
+$\mathrm{~A}$ & $<97 \%$ & to $93 \%$ \\
+$\mathrm{~A}-$ & $<93 \%$ & to $90 \%$ \\
+$\mathrm{~B}+$ & $<90 \%$ & to $87 \%$ \\
+$\mathrm{~B}$ & $<87 \%$ & to $84 \%$ \\
+$\mathrm{~B}-$ & $<84 \%$ & to $80 \%$ \\
+$\mathrm{C}+$ & $<80 \%$ & to $77 \%$ \\
+\hline
+\end{tabular} \hspace{2cm}
+\begin{tabular}{|ccc|}
+\hline
+Grade & \multicolumn{2}{c|}{Range} \\
+C & $<77 \%$ & to $74 \%$ \\
+C- & $<74 \%$ & to $70 \%$ \\
+D+ & $<70 \%$ & to $67 \%$ \\
+D & $<67 \%$ & to $64 \%$ \\
+D- & $<64 \%$ & to $61 \%$ \\
+F & $<61 \%$ & to $0 \%$ \\
+ &  &  \\
+\hline
+\end{tabular}
+\end{minipage}
+\end{center} 
+\vspace{1em}
+
+\noindent Your overall grade will be based on active engagement, five in-class quizzes, and two exams. The grading breakdown is as follows: 
+\begin{center}
+\begin{tabularx}{0.35\textwidth}{Xr}
+Active Engagement & 10\% \\
+Quizzes & 20\% \\
+Midterm & 30\% \\
+Final Exam & 40\% \\
+\end{tabularx}
+\end{center}
+
+\noindent If you're enrolled in this course for graduate-level credit, you must also complete a project that requires building an economic model and coding it using Python. The project will count for an additional 20 points. The project will be due on the last day of the class. More details will be provided later in the semester.
+
+\subsection*{Active Engagement}
+This class requires active engagement from students. I expect students to work on problems together in the class when instructed, be able to review material covered in the previous sessions and participate in other classroom activities. There is no separate grade for attendance, but if you miss class, you automatically lose points for active engagement.
+
+\subsection*{Homework Assignments}
+I will be assigning you homework problems each week. You must attempt these, as they are meant to reinforce the material covered in the lecture and will be crucial to your success in the quizzes and exams. I encourage you to do these problems in groups and come to my office hours for help when stuck. The homework problems will not be graded.
+
+\subsection*{Quizzes}
+There will be five in-class quizzes worth equal points (see schedule below). Each quiz will be around 15-20 minutes and will be based on the material and homework questions of the preceding 2-3 weeks. One quiz with the lowest grade will be dropped while calculating the final grade.  
+
+\subsection*{Exams}
+There will be a midterm and a final. The midterm will be based on material covered until a week before the exam. The final exam will be \underline{cumulative} and will cover all the material. 
+
+\section*{Examination Policy}
+There will be NO MAKE-UP for missed exams without a documented university-approved excuse such as illness or other verified emergencies. The student is required to submit verifiable documentation supporting the make-up request within three business days of the due date of the missed exam. Please be aware that a letter stating that a student visited a doctor on exam day does not qualify as a valid document.
+
+\section*{CBE Assessment Statement}
+The programs offered in the College of Business and Economics (CBE) at Cal State Fullerton are designed to provide every student with the knowledge and skills essential for a successful career in business. Since assessment plays a vital role in the college's drive to offer the best, several assessment tools are implemented to constantly evaluate our program as well as our students' progress. Students, faculty, and staff should expect to participate in CBE assessment activities. In doing so, the college can measure its strengths and weaknesses and continue cultivating a climate of excellence in its students and programs.
+
+Assurance of Learning (AoL) is an integral part of both our AACSB and WASC accreditation. Please visit the \href{https://business.fullerton.edu/assessment}{Assessment and Instructional Support website} for more information on our college-based assurance of learning efforts, please visit the Assessment and Instructional Support website.
+
+\section*{Important Student Information}
+It is the student's responsibility to read and understand the required and important information at this website: \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}. Included is information about students' rights to accommodations for special needs, academic integrity and dishonesty, emergency preparedness, student learning goals and outcomes, general education, library support, and the final exam schedule.
+
+
+\newgeometry{top=1in, bottom=1in, left=0.5in, right=0.5in} 
+\section*{\centering Tentative Course Schedule} \vspace{1em}
+{\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabularx}{1\textwidth}{|C{1.25cm}|C{1.25cm}|p{1.25cm}|p{2.75cm}|X|p{3cm}|}
+\hline
+Date & Lecture & Quiz & Module  & Lecture Content & References  \\
+\hline
+ 1/25 & 1 & & Preliminaries & Numbers and sets, Relations and functions, Summation notation, Necessary and sufficient conditions & 2.2, 2.3, 2.4-2.6, pg 163, 5.1  \\
+\hline
+
+ 2/01 & 2 & &  Linear Algebra & Matrices: Addition, Subtraction, and Scalar Multiplication, Matrix Multiplication, Vectors, Identity and Null Matrices, Transpose and Inverse of a Matrix & 4.1-4.6  \\
+\hline
+
+ 2/08 & 3 & Quiz 1 & Linear Algebra & Conditions for Nonsingularity of a Matrix, Determinant of a Matrix & 4.7, 5.1-5.3  \\
+\hline
+
+ 2/15 & 4 & & Linear Algebra & Finding the Inverse of a Matrix, Cramer’s Rule, Applications & 5.3-5.5  \\
+\hline
+
+ 2/22 & 5 & Quiz 2 & Calculus & Limit Definition of a Derivative, Limits, Continuity, Rules of Differentiation & 6.2-6.4, 6.7, 7.1-7.3   \\
+\hline
+
+ 2/29 & 6 & & Calculus & Exponential and Log Functions, Partial Derivatives, Total Differential and Derivative & 10.5, 7.4, 8.1, 8.2, 8.4  \\
+\hline
+
+ 3/07 & 7 & Quiz 3 & Calculus & Implicit Function Theorem, Integration & 8.5, 14.1-14.3  \\
+\hline
+
+ 3/14  &\multicolumn{4}{c}{\textit{Review Class}} &       \\
+\hline
+
+ 3/21  &\multicolumn{4}{c}{\textit{Midterm Exam}} &    \\
+\hline
+
+ 3/28 & 8 & & Optimization &  Unconstrained Single-Variable Optimization, Concave and Convex Functions & 9.1, 9.2, 9.3, 9.4   \\
+\hline
+
+&  \multicolumn{4}{c}{\textit{Fall Recess}} &    \\
+\hline
+
+ 4/11 & 9 & & Optimization & Multivariable Optimization  & 11.1, 11.2    \\
+\hline
+
+ 4/18 & 10 & Quiz 4 & Optimization & Constrained Optimization & 12.1, 12.2   \\
+\hline
+
+ 4/25 & 11 & & Optimization  & Envelope Theorem Quasiconcavity, Convex sets, Homogenous Functions & 11.5, 12.4, 12.6   \\
+\hline
+
+
+ 5/02 & 12 & Quiz 5 & Add. Topics & TBA  &  \\
+\hline
+
+ 5/09  & \multicolumn{4}{c}{\textit{Review Class}} &   \\
+\hline
+
+ 5/16 &   \multicolumn{4}{c}{\textit{Final Exam}}  &   \\
+\hline
+
+\end{tabularx}
+\end{center}
+\restoregeometry 
+
+
+
+%%%%%% THE END 
+\end{document} 
