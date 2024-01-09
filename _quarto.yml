@@ -27,7 +27,6 @@ website:
     - title: "Lectures"
       style: "docked"
       search: false
-      background: light
       contents:
       - section: "Preliminaries"
         contents:

@@ -36,7 +36,7 @@ All meetings for this course are expected to be held in person. During our class
 
 For each week's material, you will have homework problems that, while not graded, you should aim to complete every week. Even though solutions to the problems are provided, you will benefit immensely from trying them on your own before checking the answers. We will also have in-class quizzes about every other week, with questions similar to the homework. So another reason to keep on top of that homework!
 
-## Course Material
+## Material
 ### Course Material
 
 All course materials—including lecture slides, worksheets, notes for each topic, and homework problems with solutions—are available on the course website. These materials should generally be sufficient for your study needs. However, if you find yourself needing more detailed explanations for certain topics, you might consider acquiring the following textbook that this course is based on:<br>
@@ -46,7 +46,7 @@ All course materials—including lecture slides, worksheets, notes for each topi
 You can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me and I will try my best to find you one.
 
 
-## Grading Criteria
+## Grading
 
 ### Grading Criteria
 
@@ -66,7 +66,7 @@ Your overall grade will be based on active engagement, five in-class quizzes, an
     <td>20</td>
   </tr>
   <tr>
-    <td>Midterm</td>
+    <td>Midterm Exam</td>
     <td>30</td>
   </tr>
   <tr>

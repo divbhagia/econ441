@@ -18,19 +18,45 @@ $primary: #912040 !default;
 $secondary: #e8e1e1 !default;
 
 /*-- scss:rules --*/
-
-h1, h2 {
-  //text-transform: uppercase;
+$font-size-base: 1.1rem ;
+body {
+  font-size: $font-size-base;
+}
+h1 {
+  font-weight: 700;
+  font-size: 2.25 * $font-size-base;
+}
+h2, h3 {
+  font-weight: 700;
+  font-size: 1.7 * $font-size-base;
+}
+h4 {
+  font-weight: 600;
+  font-size: 1.25 * $font-size-base;
+}
+.sidebar-item-text {
+  font-size: 0.9 * $font-size-base; 
+  color: $gray !important;
+}
+.sidebar-item-text:hover {
+  color: $primary !important;
+}
+.sidebar-link.active {
+  color: $primary !important;
   font-weight: 700;
 }
-
+.nav-link {
+  font-size: 0.9 * $font-size-base; 
+}
+#toc-title {
+  font-size: 0.9 * $font-size-base; 
+}
 #quarto-header {
   //text-transform: uppercase;
   font-family: Lato, Helvetica, sans-serif;
   font-weight: 900;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
-
 .navbar-brand {
   font-size: 1.35rem;
 }
