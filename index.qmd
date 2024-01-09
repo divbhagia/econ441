@@ -8,7 +8,7 @@ page-layout: full
 
 ::: {.g-col-20 .g-col-sm-12 .g-col-md-8}
 <p style="font-size:1.25rem;">
-Learn essential mathematical tools encompassing linear algebra, calculus, and optimization, that are widely utlilised in analysis of economic problems.
+Learn essential mathematical tools encompassing linear algebra, calculus, and optimization, that are widely utilised in analysis of economic problems.
 </p>
 
 ECON 441 | Spring 2024 | College of Business and Economics | California State University

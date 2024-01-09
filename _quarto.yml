@@ -12,6 +12,8 @@ website:
   title: "Introduction to Mathematical Economics"
   navbar:
     right:
+      - text: "Home"
+        file: index.qmd
       - text: "Syllabus"
         file: syllabus.qmd
       - text: "Schedule"
