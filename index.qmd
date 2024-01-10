@@ -6,7 +6,7 @@ page-layout: full
 ---
 ::: {.grid .intro}
 
-::: {.g-col-20 .g-col-sm-12 .g-col-md-8}
+::: {.g-col-12 .g-col-md-6 .g-col-lg-8}
 <p style="font-size:1.25em;">
 Learn essential mathematical tools encompassing linear algebra, calculus, and optimization, that are widely utilised in analysis of economic problems.
 </p>
@@ -15,14 +15,14 @@ ECON 441 | Spring 2024 | College of Business and Economics | California State Un
 
 ::: {.grid .course-details}
 
-::: {.g-col-10 .g-col-sm-6 .g-col-md-4}
+::: {.g-col-12 .g-col-md-12 .g-col-lg-5}
 #### Instructor
 {{< fa user >}} &nbsp; [Dr. Div Bhagia](https://www.dbhagia.com) <br>
 {{< fa university >}} &nbsp; Office: SGMH 3361 <br>
 {{< fa envelope >}} &nbsp; [dbhagia@fullerton.edu](mailto:dbhagia@fullerton.edu) <br>
 :::
 
-::: {.g-col-20 .g-col-sm-12 .g-col-md-8}
+::: {.g-col-12 .g-col-md-12 .g-col-lg-7}
 #### Course Details
 {{< fa location-dot >}} &nbsp; SGMH 2501, Thursdays, 7-9:45 PM <br>
 {{< fa clock >}} &nbsp; Office hours: 
@@ -36,7 +36,7 @@ ECON 441 | Spring 2024 | College of Business and Economics | California State Un
 
 :::
 
-::: {.g-col-10 .g-col-sm-6 .g-col-md-4}
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 <img src="/assets/stem_linal.png" alt="Alt text" width="315"/>
 :::
 
