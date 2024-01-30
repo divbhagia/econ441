@@ -62,7 +62,7 @@ $$ \frac{1}{2}, \frac{3}{5}, -\frac{2}{3}$$
 \item A \textit{set} is a collection of distinct objects.
 $$ A = \{brownies, icecream, pizza, ramen\} $$
 \item $pizza \in A$, $\in$ stands for `is in' \\~\\
-\item \textit{Is $A$ finite? Is it countable?} \\~\\
+%\item \textit{Is $A$ finite? Is it countable?} \\~\\
 \item \pause What about sets $B$ and $C$?
 $$ B = \{x | x \text{ is a positive integer}\}$$
 $$ C = \{x | 1<x<5\}$$
@@ -158,7 +158,8 @@ $$ A \cap (B \cup C) = (A \cap B) \cup (A \cap C) $$
 \begin{frame}{Distributive law}
 \centering
  \fcolorbox{black}{grey}{$A \cup (B \cap C)$} $= (A \cup B) \cap (A \cup C) $ \\~\\
-\begin{columns}[T]
+\vskip-0.65em
+ \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 \centering $A$ \\ \vspace{0.5em}
 \begin{venndiagram3sets}[tikzoptions={scale=1,very thick}]
@@ -177,6 +178,7 @@ $$ A \cap (B \cup C) = (A \cap B) \cup (A \cap C) $$
 \begin{frame}{Distributive law}
 \centering
 $A \cup (B \cap C)=$  \fcolorbox{black}{grey}{$(A \cup B) \cap (A \cup C) $} \\~\\
+\vskip-0.65em
 \begin{columns}[T]
 \begin{column}{0.5\textwidth}
 \centering $A \cup B$ \\ \vspace{0.5em}
@@ -203,25 +205,25 @@ $$ (a,b) \neq (b,a) \text{ unless } a=b$$
 Example. $(age, weight)$, $(22,120)$ different from $(120,22)$
 \end{frame}
 
-\begin{frame}{Cartesian Plane}
-\centering
-\vfill
-\begin{tikzpicture}
-\begin{axis}[
-  axis lines=middle,
-  axis line style={Stealth-Stealth,very thick},
-  xmin=-4.5,xmax=4.5,ymin=-4.5,ymax=4.5,
-  xtick distance=1,
-  ytick distance=1,
-  xlabel=$x$,
-  ylabel=$y$,
-  %title={Wonderful plot},
-  grid=major,
-  grid style={thin,densely dotted,black!20}]
-%\addplot [Latex-Latex,domain=-5:3,samples=2] {x*2/3} node[right]{$a$};
-\end{axis}
-\end{tikzpicture}
-\end{frame}
+% \begin{frame}{Cartesian Plane}
+% \centering
+% \vfill
+% \begin{tikzpicture}
+% \begin{axis}[
+%   axis lines=middle,
+%   axis line style={Stealth-Stealth,very thick},
+%   xmin=-4.5,xmax=4.5,ymin=-4.5,ymax=4.5,
+%   xtick distance=1,
+%   ytick distance=1,
+%   xlabel=$x$,
+%   ylabel=$y$,
+%   %title={Wonderful plot},
+%   grid=major,
+%   grid style={thin,densely dotted,black!20}]
+% %\addplot [Latex-Latex,domain=-5:3,samples=2] {x*2/3} node[right]{$a$};
+% \end{axis}
+% \end{tikzpicture}
+% \end{frame}
 
 \begin{frame}{Cartesian Product}
 $$ A = \{1,2\} \quad B = \{3,4\} $$ \\~\\
@@ -486,8 +488,8 @@ $q$:  It is a rectangle
   \item Exercise 2.4: 5, 7, 8
   \item Exercise 2.5: 1 (For each part, find the inverse of the function too.)
   \item Exercise 4.2: 6, 8
+  \item Exercise 5.1: 1
 \end{witemize}
-
 \end{frame}
 
 
