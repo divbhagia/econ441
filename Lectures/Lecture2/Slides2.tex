@@ -12,7 +12,8 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{A Simple Economic Model}
-$ q $: quantity of hats, $p$: price of a single hat \\~\\
+  \vspace{-0.3em}
+$ q $: quantity of hats, $p$: price of a single hat \\ \vspace{0.5em}
 Demand for hats: $ q = 100-2p $ \\ \vspace{0.2em}
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
@@ -25,7 +26,8 @@ Demand for hats: $ q = 100-2p $ \\ \vspace{0.2em}
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{A Simple Economic Model}
-$ q $: quantity of hats, $p$: price of a single hat \\~\\
+  \vspace{-0.3em}
+$ q $: quantity of hats, $p$: price of a single hat \\ \vspace{0.5em}
 Supply for hats: $ q = 20+3p $ \\ \vspace{0.2em}
 \begin{center}
 \begin{tikzpicture}[scale=0.8]
@@ -487,15 +489,6 @@ $$\begin{bmatrix}
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Transpose of a Matrix}
-Transpose of A: interchange rows and columns ($A'$) \\~\\
-$$A = \begin{bmatrix}
-2 & 3 & 1 \\
-4 & -6 & 2
-\end{bmatrix}$$
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Transpose of a Matrix}
 Transpose of A  ($A'$ or $A^T$): interchange rows and columns \\~\\
 $$A = \begin{bmatrix}
 2 & 3 & 1 \\
@@ -593,6 +586,72 @@ $$ A^{-1} Ax = A^{-1} b \quad \implies x = A^{-1} b $$
 
 \pause If $A$ is singular, a unique solution does not exist. 
 \end{frame}
+
+%%%%%%%%%%%%%%% 
+\begin{frame}{Conditions for Nonsingularity}
+  Squareness is \textit{necessary} but not  \textit{sufficient} \\~\\
+  Sufficient condition for nonsingularity: \\~\\
+  \hspace{1em} \textit{Rows (or equivalently) columns are linearly independent} \\~\\
+  Example. $$
+  A=\left[\begin{array}{ll}
+  1 & 2 \\
+  2 & 4
+  \end{array}\right]
+  \quad
+  B=\left[\begin{array}{ll}
+  1 & 2 \\
+  3 & 4
+  \end{array}\right]
+  $$
+  \pause $A$ is singular, $B$ is nonsingular.
+  \end{frame}
+  
+  %%%%%%%%%%%%%%% 
+  \begin{frame}{Conditions for Nonsingularity}
+  $$
+  A=\left[\begin{array}{ll}
+  1 & 2 \\
+  2 & 4
+  \end{array}\right]
+  \quad  x=\left[\begin{array}{ll}
+  x_1 \\
+  x_2
+  \end{array}\right]
+  \quad d=\left[\begin{array}{ll}
+  a \\
+  b
+  \end{array}\right]
+  $$
+  \vspace{1em}
+  
+  We have a system of linear equations:
+  $$ Ax = d $$
+  Then, 
+  $$ x_1+2x_2 = a $$
+  $$ 2x_1+4x_2 = b $$
+  \end{frame}
+  
+  %%%%%%%%%%%%%%% 
+  \begin{frame}{Conditions for Nonsingularity}
+  $$ x_1+2x_2 = a $$
+  $$ 2x_1+4x_2 = b $$
+  For these equations to be consistent, we need $b=2a$:
+  $$ x_1+2x_2 = a $$
+  $$ 2x_1+4x_2 = 2a $$
+  Both are the same equation, infinite number of solutions.
+  \end{frame}
+  
+  %%%%%%%%%%%%%%% 
+  \begin{frame}{Conditions for Nonsingularity}
+  \vspace{1em}
+  
+  To summarize, for a matrix to be nonsingular (i.e. its inverse exists): \\~\\
+  
+  Necessary condition: \textbf{Squareness} \\~\\
+  
+  Sufficient condition: \textbf{Rows or (equivalently) columns are linearly independent} 
+  
+  \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Homework Problems}
