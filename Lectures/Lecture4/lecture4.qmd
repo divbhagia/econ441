@@ -22,4 +22,5 @@ Open slides in a new <a href="Slides4.pdf" target="_blank"> tab </a> or
 
 ## Practice Questions
 - [Determinant and Inverse Worksheet](Handout-Determinant-and-Inverse.pdf)
+- [Solving a System of Equations Worksheet](Handout-Solving-System-of-Equations.pdf)
 - [Homework](homework4.pdf) ([Solutions](homework4_solutions.pdf))

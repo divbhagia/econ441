@@ -310,12 +310,29 @@ Linear model with $k$ variables:
   $$ Y = X \beta + \varepsilon  \quad \quad \text{OLS estimator: } \hat{\beta} = (X'X)^{-1} X'Y$$
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Natural Language Processing (NLP)}
+\vspace{-0.75em}
+\begin{witemize}
+  \item Bag of Words (BoW) model is a simple and widely used method in NLP
+  \item Transform text into fixed-length vectors by counting how many times each word appears in a document
+  \item Example: 
+  \begin{itemize}
+  \item Doc1: ``the cat sat on the mat''
+  \item Doc2: ``the dog sat on the log''
+  \item Vocabulary for these documents: $[the, cat, sat, on, mat, dog, log]$
+  \item Vector for Doc1: $[2, 1, 1, 1, 1, 0, 0]$
+  \item Vector for Doc2: $[2, 0, 1, 1, 0, 1, 1]$
+\end{itemize}
+\item Calculate similarity between document vectors to classify documents into predefined classes
+\end{witemize}
+\end{frame}
 
  %%%%%%%%%%%%%%%% 
  \begin{frame}{What's next?}
  \begin{witemize}
   \item Quiz 2 next week will cover all of Linear Algebra
-  \item Notes for reviewing Linear Algebra uploaded on Canvas (not a substitute for the textbook for understanding concepts)
+  \item Notes for reviewing Linear Algebra uploaded (not a substitute for the textbook for understanding concepts)
   \item We will move on to differential calculus next week
 \end{witemize}
  \end{frame}
