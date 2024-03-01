@@ -1,7 +1,9 @@
-\ProvidesClass{div}
 \LoadClass[12pt, openany]{book}
 \setlength{\headheight}{15pt}
 \addtolength{\topmargin}{-3pt}
+
+% Custom Header: Title
+\newcommand{\myheader}[1]{}
 
 % Page style
 \RequirePackage{fancyhdr}
@@ -10,31 +12,19 @@
 \fancyhf{}
 \fancyheadoffset{1cm}
 \lhead{ECON 441: Introduction to Mathematical Economics}
-\rhead{Div Bhagia}
+%\rhead{\chapter}
 \rfoot{\center \thepage}
 \pagestyle{fancy}
 
-% Custom Header: Title
-\newcommand{\myheader}[1]{%
-\begin{center}
-  \framebox{
-    \vbox{
-    \vspace{0em}
-     \Large \sc #1 \\
-     \vspace{0.25em}
-      \small ECON 441: Introduction to Mathematical Economics \hfill Instructor: Div Bhagia
-      }
-    }
-\end{center}	
-\vspace{1em}
-}
-
+% Customize chapter titles
+\RequirePackage{titlesec}
 
 % Misc packages
 \RequirePackage{latexsym}
 \RequirePackage{tgbonum}
 \RequirePackage{amsfonts,epsfig}
 \RequirePackage{docmute}
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
 
 % Tables and columns
 \RequirePackage{tabularx}
@@ -60,9 +50,11 @@
 
 % Sections & Subsections
 \RequirePackage{sectsty}
+\setcounter{secnumdepth}{3}
 \renewcommand{\thesection}{\arabic{section}} 
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} 
-  \sectionfont{\large \normalfont \sc}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\sectionfont{\large \normalfont \sc}
 \subsectionfont{\fontsize{13}{1} \normalfont \textit}
 \subsubsectionfont{\fontsize{12}{1} \normalfont \textit}
 
@@ -76,9 +68,9 @@
 \RequirePackage{relsize}
 \RequirePackage{setspace}
 \RequirePackage{indentfirst}
-\setlength{\parindent}{0em}						% Paragraph Indentation
-\setlength{\skip\footins}{1cm} 					% Footnote Space
-\setlength{\parskip}{3mm} 						% Paragraph Skip
-\setstretch{1.25} 								% Line Space
-\RequirePackage[margin=1.15in]{geometry} 		% Margins
+\setlength{\parindent}{0em}					% Paragraph Indentation
+\setlength{\skip\footins}{1cm} 				% Footnote Space
+\setlength{\parskip}{3mm} 				    % Paragraph Skip
+\setstretch{1.15} 						    % Line Space
+\RequirePackage[margin=1.15in]{geometry} 	% Margins
 

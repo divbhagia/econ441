@@ -3,12 +3,11 @@
 \thispagestyle{plain}
 \myheader{Exponential and Logarithmic Functions}
 
-
-\textit{Reference:} Chiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition, Chapter 10 \\
+\textit{Reference:} Chiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition, Chapter 10 
 
 Exponential and logarithmic functions have important applications in economics. So we will discuss some basic properties and derivatives for these functions.
 
-\subsection*{Exponential Functions}
+\section{Exponential Functions}
 The exponential or power function can be represented as:
 $$
 y=f(t)=b^{t} \quad(b>1)
@@ -16,7 +15,7 @@ $$
 where $b$ denotes a fixed base of the exponent. Note that $y$ is a function of $t$, i.e. the power of $b$. A more generalized version can be written as:
 $$
 y=a b^{c t}
-$$ \\
+$$ 
 When the base is a special mathematical constant called Euler's number $e=2.71828...$, i.e.
 $$
 y=a e^{r t}
@@ -25,17 +24,15 @@ it is referred to as the natural exponential function (though common to just ref
 $$
 y=a \exp (r t)
 $$ 
-\\
+
 Where did this number $e$ come from? It can be shown that:
 $$
 e \equiv \lim _{n \rightarrow \infty}\left(1+\frac{1}{n}\right)^{n}
 $$
-Jacob Bernoulli discovered this constant in 1683 while studying a question about compound interest. \\
+Jacob Bernoulli discovered this constant in 1683 while studying a question about compound interest. 
 
 Suppose you invest A dollars at a 5\% interest rate that compounds yearly. After one year you will have:
-
 \[ A \left(1+0.05\right)  \] 
-
 After $t$ years:
 \[ A \left(1+0.05\right)^{t} \]
 Now rewrite the expression above as:
@@ -43,17 +40,17 @@ Now rewrite the expression above as:
 More generally, if $A$ is the initial principal, $r$ is the interest rate, and $t$ is the investment horizon, then the principal at $t$:
 $$ A_t \approx A_0 e^{rt} $$
 
-\subsection*{Logarithmic Functions}
-Since the exponential function is a monotonic function, its inverse exists. The inverse of the exponential function is called the log or logarithmic function.\\
+\section{Logarithmic Functions}
+Since the exponential function is a monotonic function, its inverse exists. The inverse of the exponential function is called the log or logarithmic function.
 
 For the exponential function: 
 \[ y=b^{t} \rightarrow log_b(y) = t  \]
 where the expression on the right-hand side is referred to as the $log$ of $y$ to base $b$. For the natural exponential function:
 \[y=e^{t} \rightarrow \log _{e} y =ln(y) \]
 
-Since the natural log is employed quite often, we can write it without the base as $ln$. If you say log of $x$, without mentioning the base, it is sort of assumed that you are talking about the natural log. \\
+Since the natural log is employed quite often, we can write it without the base as $ln$. If you say log of $x$, without mentioning the base, it is sort of assumed that you are talking about the natural log. 
 
-For example, since $2^{3}=8$. So we can write $\log _{3} 8=2$. \\
+For example, since $2^{3}=8$. So we can write $\log _{3} 8=2$. 
 
 Since $y=b^{t} \Longleftrightarrow t=\log _{b} y$, we can write
 $$
@@ -70,8 +67,8 @@ Figure 1 presents plots for $y = e^x = exp(x)$ and $y=ln(x)$. From the plots, we
 
 
 \pgfplotsset{%
-    width=7cm,
-    height=6cm
+    width=8cm,
+    height=7cm
 }
 \begin{figure*}[t]
 \begin{subfigure}[b]{0.5\textwidth}
@@ -96,7 +93,7 @@ Figure 1 presents plots for $y = e^x = exp(x)$ and $y=ln(x)$. From the plots, we
 \end{figure*}
 
 
-\section*{Rules for Logarithmic Functions}
+\section{Rules for Logarithmic Functions}
 \begin{itemize}
 	\item $\ln (u v)=\ln u+\ln v$ 
 	\item $\ln (u / v)=\ln u-\ln v$
@@ -110,14 +107,17 @@ Similarly,
 Finally for the last rule, 
 \[u^a = (e^s)^a=e^{as} \rightarrow \ln u^a = as = a\ln u \]
 
-\section*{Derivatives of Exponential and Logarithmic Functions}
+\section{Derivatives of Exponential and Logarithmic Functions}
 Derivative of the exponential function:
 \[ y=b^{t} \quad \rightarrow \quad \frac{dy}{dt} = b^t \ln b  \]
 
-Derivative of the generalized exponential function:
+Derivative of the natural exponential function:
+$$ y=e^t \quad \rightarrow \quad \frac{dy}{dt} = e^t $$
+Then by chain rule:
  $$y=e^{f(t)} \quad \rightarrow \quad \frac{dy}{dt} = f'(t) e^{f(t)}$$
- 
-Derivative of the log function:
+ Derivative of the log function:
+ $$ \frac{d}{d t} \ln t =\frac{1}{t} $$ \\
+ Then by chain rule:
  $$ \frac{d}{d t} \ln f(t) =\frac{f'(t)}{f(t)} $$ \\
  
 \textit{Let's find the derivatives for the following functions:}

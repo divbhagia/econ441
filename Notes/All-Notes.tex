@@ -1,46 +1,51 @@
-\documentclass{./../Latex/notes}
+\documentclass{./../Latex/allnotes}
 
+% Numbering
 \numberwithin{section}{chapter} 
+\numberwithin{subsection}{section} 
 \makeatletter
 \def\@makechapterhead#1{%
-  \vspace*{50\p@}%
+  \vspace*{20\p@}%
   {\parindent \z@ \raggedright \normalfont
     \interlinepenalty\@M
-    \Huge \bfseries \phantom{#1} \par\nobreak
+   \huge \bfseries \thechapter \ \ #1 \par\nobreak
     \vskip 40\p@
   }}
 \makeatother
-\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
 
+% Chapter name for headers
+\makeatletter
+\let\std@chapter\@chapter
+\def\@chapter[#1]#2{\std@chapter[#1]{#2}\fancyhead[RO]{#2}}
+\makeatother
+
+
+% Begin Document
 \begin{document}
-
-\title{Review Notes \\~\\ Econ 441 \\ Introduction to Mathematical Economics}
+\title{\uppercase{ Econ 441: Introduction to Mathematical Economics} \\~\\ Review Notes}
 \author{Div Bhagia}
-\date{}
+\date{Based on Chiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition}
 
 \begin{titlepage}
+  \setcounter{tocdepth}{1}
     \maketitle
     \tableofcontents    
 \end{titlepage}
 
 \chapter{Linear Algebra}
-\vspace{-6cm}
 \input{Linear-Algebra.tex}
+\rhead{\chaptername}
 
 \chapter{Comparative Statics}
-\vspace{-6cm}
 \input{Calculus.tex}
 
 \chapter{Exponential and Logarithmic Functions}
-\vspace{-6cm}
 \input{Log-and-Exponential-Functions.tex}
 
 \chapter{Optimization}
-\vspace{-6cm}
 \input{Optimization.tex}
 
 \chapter{Optimization Examples}
-\vspace{-6cm}
 \input{Optimization-Examples.tex}
 
 \end{document}
