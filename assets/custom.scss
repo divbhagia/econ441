@@ -63,9 +63,15 @@ h4 {
 
 // iframes for slides 
 iframe.slide-deck {
-  border: 3px solid $gray;
-  width: 80%;
-  height: 100vh;  
+  display: none;
+}
+@media (min-width: 1025px) {
+  iframe.slide-deck {
+    display: block; /* or inline-block, depending on your layout needs */
+    border: 3px solid gray; /* Replace 'gray' with your color value */
+    width: 80%;
+    height: 100vh;
+  }
 }
 
 .ar4x3 {
