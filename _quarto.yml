@@ -20,6 +20,8 @@ website:
         file: schedule.qmd
       - text: "Content"
         file: Lectures/Lecture1/lecture1.qmd
+      - text: "Exams"
+        file: exams.qmd
       - icon: github
         href: https://divbhagia.github.io/Econ441/
 
