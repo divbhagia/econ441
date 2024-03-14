@@ -74,15 +74,15 @@ C &= \{x | 1<x<5\}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Laws of Set Operations}
-\begin{itemize}
-\item Commutative law
-$$ A \cup B = B \cup A \quad \quad  A \cap B = B \cap A$$ \\~\\
-\item Distributive law
-$$ A \cup (B \cap C) = (A \cup B) \cap (A \cup C) $$
-$$ A \cap (B \cup C) = (A \cap B) \cup (A \cap C) $$
-\end{itemize}
-\end{frame}
+%\begin{frame}{Laws of Set Operations}
+%\begin{itemize}
+%\item Commutative law
+%$$ A \cup B = B \cup A \quad \quad  A \cap B = B \cap A$$ \\~\\
+%\item Distributive law
+%$$ A \cup (B \cap C) = (A \cup B) \cap (A \cup C) $$
+%$$ A \cap (B \cup C) = (A \cap B) \cup (A \cap C) $$
+%\end{itemize}
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Cartesian Product}
@@ -347,12 +347,12 @@ x_n
 \end{witemize}
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Inner Product}
-Inner product of two vectors each with $n$ elements:
-$$ u \cdot v = u_1 v_1 + u_2 v_2 +...+ u_n v_n = \sum_{i=1}^n u_i v_i $$ 
-Example. $$u = \begin{bmatrix} 1 \\ 5 \\ 2 \end{bmatrix} \quad \quad v = \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}$$
-\end{frame}
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Inner Product}
+%Inner product of two vectors each with $n$ elements:
+%$$ u \cdot v = u_1 v_1 + u_2 v_2 +...+ u_n v_n = \sum_{i=1}^n u_i v_i $$ 
+%Example. $$u = \begin{bmatrix} 1 \\ 5 \\ 2 \end{bmatrix} \quad \quad v = \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}$$
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Linear Dependence}
@@ -409,17 +409,17 @@ $$A = \begin{bmatrix}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Properties of Transposes}
-$$
-\begin{array}{l}
-\left(A^{\prime}\right)^{\prime}=A \\~\\
-(A+B)^{\prime}=A^{\prime}+B^{\prime} \\~\\
-(A B)^{\prime}=B^{\prime} A^{\prime} \\~\\
-\end{array}
-$$
-Example:
-\( A=\left[\begin{array}{ll}4 & 1 \\ 9 & 0\end{array}\right] \quad B=\left[\begin{array}{ll}2 & 0 \\ 7 & 1\end{array}\right] \)
-\end{frame}
+%\begin{frame}{Properties of Transposes}
+%$$
+%\begin{array}{l}
+%\left(A^{\prime}\right)^{\prime}=A \\~\\
+%(A+B)^{\prime}=A^{\prime}+B^{\prime} \\~\\
+%(A B)^{\prime}=B^{\prime} A^{\prime} \\~\\
+%\end{array}
+%$$
+%Example:
+%\( A=\left[\begin{array}{ll}4 & 1 \\ 9 & 0\end{array}\right] \quad B=\left[\begin{array}{ll}2 & 0 \\ 7 & 1\end{array}\right] \)
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Inverse of a Matrix}
@@ -433,12 +433,12 @@ $$
  If a matrix's inverse exists, it's called a \textbf{nonsingular} matrix
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Properties of Inverses}
-$$ \left(A^{-1}\right)^{-1}=A $$ \\~\\
-$$ (A B)^{-1}=B^{-1} A^{-1} $$ \\~\\
-$$ \left(A^{\prime}\right)^{-1}=\left(A^{-1}\right)^{\prime} $$
-\end{frame}
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Properties of Inverses}
+%$$ \left(A^{-1}\right)^{-1}=A $$ \\~\\
+%$$ (A B)^{-1}=B^{-1} A^{-1} $$ \\~\\
+%$$ \left(A^{\prime}\right)^{-1}=\left(A^{-1}\right)^{\prime} $$
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Conditions for Nonsingularity}
@@ -493,28 +493,28 @@ Full rank = all rows linearly independent =nonsingular matrix
  \end{frame}
  
    %%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Determinant of a $3 \times 3$ Matrix}
-$$
-\begin{aligned}
-|A| &=\left|\begin{array}{lll}
-a_{11} & a_{12} & a_{13} \\
-a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33}
-\end{array}\right| \\~\\
-&=a_{11}\left|\begin{array}{ll}
-a_{22} & a_{23} \\
-a_{32} & a_{33}
-\end{array}\right|-a_{12}\left|\begin{array}{ll}
-a_{21} & a_{23} \\
-a_{31} & a_{33}
-\end{array}\right| 
-+a_{13}\left|\begin{array}{ll}
-a_{21} & a_{22} \\
-a_{31} & a_{32}
-\end{array}\right|
-\end{aligned}
-$$
- \end{frame}
+%\begin{frame}{Determinant of a $3 \times 3$ Matrix}
+%$$
+%\begin{aligned}
+%|A| &=\left|\begin{array}{lll}
+%a_{11} & a_{12} & a_{13} \\
+%a_{21} & a_{22} & a_{23} \\
+%a_{31} & a_{32} & a_{33}
+%\end{array}\right| \\~\\
+%&=a_{11}\left|\begin{array}{ll}
+%a_{22} & a_{23} \\
+%a_{32} & a_{33}
+%\end{array}\right|-a_{12}\left|\begin{array}{ll}
+%a_{21} & a_{23} \\
+%a_{31} & a_{33}
+%\end{array}\right| 
+%+a_{13}\left|\begin{array}{ll}
+%a_{21} & a_{22} \\
+%a_{31} & a_{32}
+%\end{array}\right|
+%\end{aligned}
+%$$
+% \end{frame}
  
     %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Determinant of a $n \times n$ Matrix}
@@ -538,18 +538,18 @@ A=\left[\begin{array}{ccc}
 
 
  
- %%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Properties of Determinants}
-\vspace{-0.5em}
-\begin{witemize}
-\item[1.] $ |A| = |A'|$ 
-\item[2.] Interchanging rows or columns will alter the sign but not the value
-\item[3.] Multiplication of any one row (or one column) by a scalar $k$ will change the value of the determinant $k$-fold
-\item[4.] The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered
-\item[5.] If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero. 
-\end{witemize}
- \end{frame}
- 
+% %%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Properties of Determinants}
+%\vspace{-0.5em}
+%\begin{witemize}
+%\item[1.] $ |A| = |A'|$ 
+%\item[2.] Interchanging rows or columns will alter the sign but not the value
+%\item[3.] Multiplication of any one row (or one column) by a scalar $k$ will change the value of the determinant $k$-fold
+%\item[4.] The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered
+%\item[5.] If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero. 
+%\end{witemize}
+% \end{frame}
+% 
  %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Matrix Inversion}
  \textit{Adjoint} of a nonsingular $n \times n$ matrix \\~\\
@@ -607,52 +607,52 @@ $$ A^{-1} Ax = A^{-1} b \quad \implies x = A^{-1} b $$
 What happens if $A$ is singular? Infinite solutions.
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Homogeneous equation system}
-A homogeneous equation system is given by 
-$$ Ax = 0$$
-If $A$ is nonsingular, $x^* = A^{-1} 0 = 0$. \\~\\
- If $A$ is singular there can be infinite number of solutions (this is true for any system of equations).
-\end{frame}
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Homogeneous equation system}
+%A homogeneous equation system is given by 
+%$$ Ax = 0$$
+%If $A$ is nonsingular, $x^* = A^{-1} 0 = 0$. \\~\\
+% If $A$ is singular there can be infinite number of solutions (this is true for any system of equations).
+%\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{An Application of Matrix Algebra}
-Linear regression model:
-  $$ Y_i = \beta_0 + \beta_1 X_{1,i} + \beta_2 X_{2,i} + \hdots + \beta_{k} X_{k,i}  + \varepsilon_i $$ 
-Denote, \small 
-$$ Y  = \begin{bmatrix} Y_1 \\ Y_2 \\ \vdots \\ Y_n  \end{bmatrix}_{n \times 1}    
-  \beta  = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \vdots \\ \beta_{k}  \end{bmatrix}_{(k+1) \times 1}  
-  \boldsymbol{X} = \begin{bmatrix} 
-  	1 & X_{1,1} & \hdots & X_{k,1} \\ 
-  	1 & X_{1,2} & \hdots  & X_{k,2} \\
-   \vdots & \vdots & \hdots &  \vdots \\ 
-   1 & X_{1,n}  & \hdots & X_{k,n} \end{bmatrix}_{n \times (k+1)} 
-   \varepsilon = \begin{bmatrix} \varepsilon_1 \\ \varepsilon_2 \\ \vdots \\ \varepsilon_n  \end{bmatrix}_{n \times 1}$$
-   \normalsize
-   Can write the model as: $$ Y = X\beta + \varepsilon $$
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{An Application of Matrix Algebra}
-Linear regression model:
-$$ Y = X\beta + \varepsilon $$
-Ordinary least squares estimator: $\beta$ that minimizes
-$$ \varepsilon'\varepsilon = (Y-X\beta)'(Y-X\beta) $$
-Few lines of calculus: 
-$$ \hat{\beta} = (X'X)^{-1}(X'Y) $$
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Another Application of Matrix Algebra}
-In network theory, represent network as a matrix. \\~\\
-For example, consider 3 banks. Below is a matrix representing connectedness between banks:
-$$ M  = \begin{bmatrix} 
-0 & 1 & 0 \\ 
-0 & 0 & 1 \\
-0 & 0 & 0 
-\end{bmatrix} $$
-$M_{ij}$ is 1 if $i$ has lent to $j$. So bank 1 has lent to bank 2 and bank 2 has lent to bank 3. What if bank 3 fails? Look at $M^2$.
-\end{frame}
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{An Application of Matrix Algebra}
+%Linear regression model:
+%  $$ Y_i = \beta_0 + \beta_1 X_{1,i} + \beta_2 X_{2,i} + \hdots + \beta_{k} X_{k,i}  + \varepsilon_i $$ 
+%Denote, \small 
+%$$ Y  = \begin{bmatrix} Y_1 \\ Y_2 \\ \vdots \\ Y_n  \end{bmatrix}_{n \times 1}    
+%  \beta  = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \vdots \\ \beta_{k}  \end{bmatrix}_{(k+1) \times 1}  
+%  \boldsymbol{X} = \begin{bmatrix} 
+%  	1 & X_{1,1} & \hdots & X_{k,1} \\ 
+%  	1 & X_{1,2} & \hdots  & X_{k,2} \\
+%   \vdots & \vdots & \hdots &  \vdots \\ 
+%   1 & X_{1,n}  & \hdots & X_{k,n} \end{bmatrix}_{n \times (k+1)} 
+%   \varepsilon = \begin{bmatrix} \varepsilon_1 \\ \varepsilon_2 \\ \vdots \\ \varepsilon_n  \end{bmatrix}_{n \times 1}$$
+%   \normalsize
+%   Can write the model as: $$ Y = X\beta + \varepsilon $$
+%\end{frame}
+%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{An Application of Matrix Algebra}
+%Linear regression model:
+%$$ Y = X\beta + \varepsilon $$
+%Ordinary least squares estimator: $\beta$ that minimizes
+%$$ \varepsilon'\varepsilon = (Y-X\beta)'(Y-X\beta) $$
+%Few lines of calculus: 
+%$$ \hat{\beta} = (X'X)^{-1}(X'Y) $$
+%\end{frame}
+%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Another Application of Matrix Algebra}
+%In network theory, represent network as a matrix. \\~\\
+%For example, consider 3 banks. Below is a matrix representing connectedness between banks:
+%$$ M  = \begin{bmatrix} 
+%0 & 1 & 0 \\ 
+%0 & 0 & 1 \\
+%0 & 0 & 0 
+%\end{bmatrix} $$
+%$M_{ij}$ is 1 if $i$ has lent to $j$. So bank 1 has lent to bank 2 and bank 2 has lent to bank 3. What if bank 3 fails? Look at $M^2$.
+%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% Calculus
 \section{Calculus}
@@ -869,130 +869,139 @@ $$
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Integration}
-\begin{witemize}
-  \item Integration is the reverse of differentiation 
-  \item If $f(x)$ is the derivative of $F(x)$, we can \textit{integrate} $f(x)$ to find $F(x)$
-  $$ \frac{d}{d x} F(x)=f(x) \Rightarrow \int f(x) d x=F(x)+c $$
-  \item Rules of integration follow from rules of differentiation
-\end{witemize}
+\begin{frame}{Example}
+$$ Y = \beta_0 + \beta_1 \ln X + u $$ \\~\\
+
+What is the interpretation of $\beta_1$?
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Rules of Integration}
-\underline{Power Rule}
-$$\int x^n d x=\frac{1}{n+1} \cdot x^{n +1} + c \quad(n \neq-1)$$
 
-\textit{Examples}: $$ \int x^3 d x , \quad \quad \int x d x, \quad  \quad \int 1 d x $$
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Rules of Integration}
-\underline{Exponential Rule}
-$$
-\int e^x d x=e^x+c
-$$
-
-\underline{Log Rule}
-$$
-\int \frac{1}{x} d x=\ln x+c \quad(x>0)
-$$
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Rules of Integration}
-\underline{Integral of a sum}
-$$
-\int[f(x)+g(x)] d x=\int f(x) d x+\int g(x) d x$$
-
-\underline{Integral of a multiple}
-$$\int k f(x) d x=k \int f(x) d x$$
-
-\textit{Example}: $$ \int (x^2 + 3x + 1) dx \hspace{7cm} $$
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Definite Integrals}
-Definite integral:
-$$ \left.\int_a^b f(x) d x=F(x)\right]_{a}^b=F(b)-F(a) $$
-\textit{Example}:  $$ \int_1^3 2 x^2 = \hspace{7cm}$$
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Area under the curve} 
-\vspace{0.5em}
-\begin{columns}[c]
-\begin{column}{0.6\textwidth}
-  	\begin{tikzpicture}[scale=0.9]
-  \begin{axis}[
-      axis lines = middle,
-      xlabel = \(x\), 
-      xlabel style={at={(axis description cs:1,0)}, anchor=west},
-      ylabel = {\(f(x)\)}, 
-      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
-      ymin=0,
-      xmin=0,
-      xmax=6,
-      ymax=30,
-      xtick={0.01,1.1,2.2,3.3, 4.4, 5.5},
-      xticklabels = {$x_0$, $x_1$, $x_2$, $x_3$, $x_4$, $x_5$},
-      ytick=\empty,
-      samples=100
-    ]
-    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=6]{25+ x-x^2}\closedcycle;
-    \addplot[domain=0:6, black, very thick]{25+ x-x^2};
-  \end{axis}
-  \draw[decorate,decoration={brace,amplitude=4pt,mirror}, thick] (3.15,-0.65) -- (4.8,-0.65);
-  \node at (4,-1.25) {$\Delta x_3 $};
-    \node at (4,5.25) {$f(x_3) $};
-\end{tikzpicture}
-\end{column}	
-\begin{column}{0.4\textwidth}
- $ Area \approx \sum_{i=1}^n f(x_i) \Delta x_i $
-\end{column}	
-\end{columns}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Area under the curve} 
-\vspace{1em}
-\begin{columns}[c]
-\begin{column}{0.5\textwidth}
-  	\begin{tikzpicture}[scale=0.9]
-  \begin{axis}[
-      axis lines = middle,
-      xlabel = \(x\), 
-      xlabel style={at={(axis description cs:1,0)}, anchor=west},
-      ylabel = {\(f(x)\)}, 
-      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
-      ymin=0,
-      xmin=0,
-      xmax=6,
-      ymax=30,
-      xtick=\empty,
-      ytick=\empty,
-      samples=100
-    ]
-    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=20]{25+ x-x^2}\closedcycle;
-    \addplot[domain=0:6, black,  very thick]{25+ x-x^2};
-    
-  \end{axis}
-\end{tikzpicture}
-\end{column}	
-\begin{column}{0.5\textwidth}
-\begin{align*}
-	Area &= \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i) \Delta x_i \\
-	& = \int_{x_1}^{x_n} f(x) dx
-\end{align*}  
-\end{column}	
-\end{columns}
-\end{frame}
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Integration}
+%\begin{witemize}
+%  \item Integration is the reverse of differentiation 
+%  \item If $f(x)$ is the derivative of $F(x)$, we can \textit{integrate} $f(x)$ to find $F(x)$
+%  $$ \frac{d}{d x} F(x)=f(x) \Rightarrow \int f(x) d x=F(x)+c $$
+%  \item Rules of integration follow from rules of differentiation
+%\end{witemize}
+%\end{frame}
+%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Rules of Integration}
+%\underline{Power Rule}
+%$$\int x^n d x=\frac{1}{n+1} \cdot x^{n +1} + c \quad(n \neq-1)$$
+%
+%\textit{Examples}: $$ \int x^3 d x , \quad \quad \int x d x, \quad  \quad \int 1 d x $$
+%\end{frame}
+%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Rules of Integration}
+%\underline{Exponential Rule}
+%$$
+%\int e^x d x=e^x+c
+%$$
+%
+%\underline{Log Rule}
+%$$
+%\int \frac{1}{x} d x=\ln x+c \quad(x>0)
+%$$
+%\end{frame}
+%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Rules of Integration}
+%\underline{Integral of a sum}
+%$$
+%\int[f(x)+g(x)] d x=\int f(x) d x+\int g(x) d x$$
+%
+%\underline{Integral of a multiple}
+%$$\int k f(x) d x=k \int f(x) d x$$
+%
+%\textit{Example}: $$ \int (x^2 + 3x + 1) dx \hspace{7cm} $$
+%\end{frame}
+%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Definite Integrals}
+%Definite integral:
+%$$ \left.\int_a^b f(x) d x=F(x)\right]_{a}^b=F(b)-F(a) $$
+%\textit{Example}:  $$ \int_1^3 2 x^2 = \hspace{7cm}$$
+%\end{frame}
+%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Area under the curve} 
+%\vspace{0.5em}
+%\begin{columns}[c]
+%\begin{column}{0.6\textwidth}
+%  	\begin{tikzpicture}[scale=0.9]
+%  \begin{axis}[
+%      axis lines = middle,
+%      xlabel = \(x\), 
+%      xlabel style={at={(axis description cs:1,0)}, anchor=west},
+%      ylabel = {\(f(x)\)}, 
+%      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
+%      ymin=0,
+%      xmin=0,
+%      xmax=6,
+%      ymax=30,
+%      xtick={0.01,1.1,2.2,3.3, 4.4, 5.5},
+%      xticklabels = {$x_0$, $x_1$, $x_2$, $x_3$, $x_4$, $x_5$},
+%      ytick=\empty,
+%      samples=100
+%    ]
+%    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=6]{25+ x-x^2}\closedcycle;
+%    \addplot[domain=0:6, black, very thick]{25+ x-x^2};
+%  \end{axis}
+%  \draw[decorate,decoration={brace,amplitude=4pt,mirror}, thick] (3.15,-0.65) -- (4.8,-0.65);
+%  \node at (4,-1.25) {$\Delta x_3 $};
+%    \node at (4,5.25) {$f(x_3) $};
+%\end{tikzpicture}
+%\end{column}	
+%\begin{column}{0.4\textwidth}
+% $ Area \approx \sum_{i=1}^n f(x_i) \Delta x_i $
+%\end{column}	
+%\end{columns}
+%\end{frame}
+%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}{Area under the curve} 
+%\vspace{1em}
+%\begin{columns}[c]
+%\begin{column}{0.5\textwidth}
+%  	\begin{tikzpicture}[scale=0.9]
+%  \begin{axis}[
+%      axis lines = middle,
+%      xlabel = \(x\), 
+%      xlabel style={at={(axis description cs:1,0)}, anchor=west},
+%      ylabel = {\(f(x)\)}, 
+%      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
+%      ymin=0,
+%      xmin=0,
+%      xmax=6,
+%      ymax=30,
+%      xtick=\empty,
+%      ytick=\empty,
+%      samples=100
+%    ]
+%    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=20]{25+ x-x^2}\closedcycle;
+%    \addplot[domain=0:6, black,  very thick]{25+ x-x^2};
+%    
+%  \end{axis}
+%\end{tikzpicture}
+%\end{column}	
+%\begin{column}{0.5\textwidth}
+%\begin{align*}
+%	Area &= \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i) \Delta x_i \\
+%	& = \int_{x_1}^{x_n} f(x) dx
+%\end{align*}  
+%\end{column}	
+%\end{columns}
+%\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Few last words}
 \begin{witemize}
 \item Sample exam, midterm exams from previous semesters, and help sheet on course website
+\item Note: We skipped integration so ignore slides after slide 15 in Lecture 7 and homework problems from chapter 14.
 %  \item Additional office hours this week: Thursday, 4-6 pm. Or by appointment.
   \item Good luck for the exam!
 \end{witemize}
