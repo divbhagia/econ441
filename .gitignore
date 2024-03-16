@@ -1,6 +1,9 @@
 # Ignore selected folders
 Compiled Material/
-Exams/
+Exams/Midterm/Midterm-Spring*
+Exams/Midterm/Midterm-Fall*
+Exams/Final/Final.pdf
+Exams/Final/Final.tex
 Homeworks/
 Quizzes/
 References/

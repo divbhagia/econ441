@@ -1,0 +1,142 @@
+\documentclass{./../../../Latex/tests}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Fall 2022 Midterm Exam: Solutions}
+\rhead{Fall 2022 Midterm Exam}
+
+\vspace{0.5em}
+\testHeader{110}{30}
+
+
+\begin{enumerate}	
+
+\item (5 pts) Answer the following questions (1 point each)
+\begin{enumerate}
+	\item The cartesian product of two sets $X$ and $Y$ is defined as: $$ X \times Y = \{(x,y) | x \in X, y \in Y\} $$
+  	What is the cartesian product of $X=\{a,b\}$ and $Y=\{2,1\}$? \\
+  	$$  X \times Y = \{ (a,2), (b,2), (a,1), (b,1) \} $$
+  	\item A matrix's inverse exists if its determinant is equal to 0. 
+  \begin{itemize}
+  	\item[$\square$] True 
+  	\item[$\text{\rlap{$\checkmark$}}\square$] False \\~\\
+  \end{itemize}
+  \item The function $f(x) = |x|$ is \textit{differentiable} at $x=0$.
+  \begin{itemize}
+  	\item[$\square$] True 
+  	\item[$\text{\rlap{$\checkmark$}}\square$] False \\~\\
+  \end{itemize}
+    \item For the function $f(x) = e^x$, $f^{\prime} (x)=f(x)$ 
+  \begin{itemize}
+  	\item[$\text{\rlap{$\checkmark$}}\square$] True 
+  	\item[$\square$] False \\~\\
+  \end{itemize}
+  \item What is the derivative of $y=3x^2+2$? \\~\\  $$ \frac{dy}{dx} =6x$$
+  
+\end{enumerate}
+
+
+\newpage
+\item (5 pts) Given the vector $x$ and matrix $A$ below, show that $x'Ax$ represents a weighted sum of squares. What is the dimension of $x'Ax$?
+
+$$
+x = \begin{bmatrix}
+x_1 \\ x_2
+\end{bmatrix} \quad \quad \quad
+A = \begin{bmatrix}
+a_{11} & 0 \\ 0 & a_{22}
+\end{bmatrix} \quad \quad
+$$
+
+$$
+\begin{aligned}
+& x^{\prime} A x=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]_{1 \times 2}\left[\begin{array}{cc}a_{11} & 0 \\0 & a_{22}\end{array}\right]_{2 \times 2}\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2 \times 1} \\
+& =\left[\begin{array}{lll}a_{11} x_{1} & a_{22} x_{2}\end{array}\right]_{1 \times 2}\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2 \times 1} \\
+& =a_{11} x_{1}^{2}+a_{22} x_{2}^{2}=\sum_{i=1}^{2} a_{i i} x_{i}{ }^{2}
+\end{aligned}
+$$
+Dimension of $x'Ax$ is $1 \times 1$.
+\newpage
+\item (4 pts) Say I have a system of $m$ equations with $n$ unknowns. 
+\begin{align*}
+	a_{11} x_1 + a_{12} x_2 + \cdots a_{1n} x_n &= b_1 \\
+	a_{21} x_1 + a_{22} x_2 + \cdots a_{2n} x_n &= b_2 \\
+	\vdots \quad \quad \quad \quad \quad \quad \quad \vdots \\
+	a_{m1} x_1 + a_{m2} x_2 + \cdots a_{mn} x_n &= b_m \\
+\end{align*}
+\begin{enumerate}
+	\item (1 pt) What is the necessary condition for the existence of a unique solution for this system in terms of $m$ and $n$? 
+	\item [] \textit{Necessary condition for the existence of a unique solution is that the number of equations is equal to the number of unknowns i.e. $m=n$. } \\
+	\item (1 pt) What is the sufficient condition for the existence of a unique solution for this system? 
+	\item [] \textit{Sufficient condition for the existence of a unique solution is that all the equations are linearly independent.} \\
+	\item (2 pts) How would you use the tools learned in linear algebra to solve this system of equations? 
+	\item [] I \textit{would start by writing out the above system of equations in matrix format, i.e. $$ Ax = b $$
+	where }
+$$
+A = \begin{bmatrix}
+a_{11} & a_{12} & \hdots & a_{1n} \\
+a_{21} & a_{22} & \hdots & a_{2n} \\
+\vdots & \vdots & \vdots & \vdots \\
+a_{n1} & a_{n2} & \hdots & a_{nn} \\
+\end{bmatrix}, \quad  
+x = \begin{bmatrix} x_1 \\x_2 \\ \vdots \\x_n \end{bmatrix} , \quad  
+b = \begin{bmatrix} b_1 \\b_2 \\ \vdots \\b_n \end{bmatrix} 
+$$
+\textit{Now note that premultiplying $Ax = b$ by $A^{-1}$ implies that $x=A^{-1}b$. So I would find the inverse of $A$ and multiply it with the vector $b$ to find the solution to this system of equations.
+}\end{enumerate}
+
+\newpage
+\item (6 pts) Find the derivative for the following functions (2 pts each): \\
+\begin{enumerate}
+\item $y=\ln(x^2+1)$ \\ 
+$$
+\frac{d y}{d x}=\frac{2 x}{x^2+1}
+$$ \\
+\item $y=\dfrac{e^x}{1+e^x}$ \\ 
+$$\frac{d y}{d x} =\frac{e^x\left(1+e^x\right)-e^x e^x}{\left(1+e^x\right)^2} =\frac{e^x}{\left(1+e^x\right)^2} $$ \\
+\item $y=v+v^3 \quad \text{ where } v=x+1 $ \\ 
+$$\frac{d y}{d x} =\frac{d y}{d v} \cdot \frac{d v}{d x} =\left(1+3 v^2\right) \cdot 1 =1+3(x+1)^2 $$
+\end{enumerate}
+
+\newpage
+\item (5 pts) Given the consumption function $$ C= 200+0.6Y  $$
+where $C$ is consumption, and $Y$ is income. 
+\begin{enumerate}
+  \item (3 pts) Find the income elasticity of consumption $\varepsilon_{CY}$, and determine its sign, assuming $Y>0$. \\ 
+ $$
+\varepsilon_{CY}=\frac{d C}{d Y} \cdot \frac{Y}{C}=\frac{0.6 Y}{200+0.6 Y}>0 
+$$ \\
+
+  \item (1 pt) Show that this consumption function is inelastic at all positive income levels. 
+  $$ 0.6 Y<200+0.6 Y \rightarrow \varepsilon_{CY}<1 $$ \\
+  \item (1 pt) What is the income elasticity of consumption when income is equal to \$1000? 
+$$
+\varepsilon_{CY}=\frac{0.6 \times 1000}{200+0.6 \times 1000}=\frac{600}{800}=\frac{3}{4}=0.75
+$$ \\
+  \item (1 pt) If income increases by 1\% from \$1000 to \$1010, by what percent does consumption increase? \\~\\
+  By the definition of elasticity, a 1\% increase in income leads to a 0.75\% increase in consumption. 
+\end{enumerate}
+
+\newpage
+
+\item (5 pts) Given the following function:
+$$f(x,y,z) = xyz$$ \\
+\begin{enumerate}
+\item (2 pts)  Find the partial derivatives $f_x, f_y$, and $f_z$. 
+$$f_x=y z, f_y=x z, f_z=x y$$ \\
+\item (1 pt) Find the gradient of $f$. 
+$$\nabla f=\left[\begin{array}{l}y z \\ x z \\ x y\end{array}\right]$$ \\
+\item (1 pt) Find the total differential of $f$. You can denote it by $d f$. 
+$$\begin{aligned} d f &=f_x \cdot d x+f_y \cdot d y+f_z \cdot d z \\ &=y z \cdot d x+x z \cdot d y+x y \cdot d z
+\end{aligned}$$	\\
+\item (1 pt) Find the total derivative of $f$ with respect to $x$? 
+$$  \frac{d f}{d x} =f_x+f_y \cdot \frac{d y}{d x}+f_z \cdot \frac{d z}{d x} $$
+Since, $ \frac{d y}{d x}=0, \frac{d z}{d x}=0$ 
+$$\frac{d f}{d x} =f_x=y z $$
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+\end{document}

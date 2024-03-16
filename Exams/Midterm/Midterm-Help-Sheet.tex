@@ -1,0 +1,101 @@
+\documentclass{./../../Latex/tests}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Midterm Exam: Help Sheet}
+\rhead{Midterm Exam: Help Sheet}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Linear Algebra
+\vspace{-1cm}
+\section*{Linear Algebra} 
+The \textbf{minor} of the element $a_{ij}$, denoted by $|M_{ij}|$ is obtained by deleting the $i$th row and $j$th column of the matrix and taking the determinant of the resulting matrix. 
+
+Whereas, \textbf{cofactor} $|C_{ij}|$ is defined as:
+$$ |C_{ij}| = (-1)^{i+j} |M_{ij}| $$ 
+
+\textbf{Determinant} for an  $n \times n$ matrix when expanding with respect to the \textit{first row} is given by:
+ $$|A| = \sum_{j=1}^n a_{1j} |C_{1j}| $$ 
+
+To find the \textbf{inverse} of matrix $A$ take the transpose of its cofactor matrix $C = [|C_{ij}|]$ to find the adjoint of $A$ and divide it by the determinant of $A$. 
+$$ A^{-1} = \frac{1}{|A|} adj A$$ 
+
+\textbf{Adjoint} of a  $n \times n$ matrix \\
+ $$adj A = C' = \left[\begin{array}{llll}
+|C_{11}| & |C_{21}| & \hdots & |C_{n1}| \\
+|C_{12}| & |C_{22}| & \hdots &  |C_{n2}| \\
+\vdots &\vdots & \hdots &  \vdots \\
+|C_{1n}| & |C_{2n}| & \hdots & |C_{nn}| \\
+\end{array}\right]$$ 
+
+\textbf{Cramer's rule}: Given $Ax =b$, form matrix $A_k$ by interchanging the $k^{th}$ column of $A$ by $b$, then  $$x^*_k = \frac{|A_k|}{|A|}$$
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Comparative Statics
+\newpage
+\section*{Comparative Statics}
+
+\underline{Limit Definition of the Derivative}
+\[ \frac{d y}{d x} = f'(x_0) = \lim_{\Delta x \rightarrow 0} \frac{f\left(x_{0}+\Delta x\right)-f\left(x_{0}\right)}{\Delta x}\]
+
+\underline{Limit of a function} \\
+\textit{We say the limit of a function $f(x)$ exists at $x=a$ if both the right-side and left-side limits at $a$ are equal.} 
+\vspace{0.5em}
+
+\underline{Continuity of a Function} \\
+A function $y=f(x)$ is said to be continuous at $a$ if the limit of $f(x)$ at $a$ exists and is equal to the value of the function at $a$ i.e.,
+$\lim _{x \rightarrow a} f(x) = f(a)$.
+
+\underline{Product Rule} \vspace{-0.75em}
+$$
+\frac{d}{d x}[f(x) g(x)]=f(x) g^{\prime}(x)+f^{\prime}(x) g(x)
+$$ \vspace{0.2em}
+
+\underline{Quotient Rule} \vspace{-0.75em}
+$$ \frac{d}{d x} \frac{f(x)}{g(x)}=\frac{f^{\prime}(x) g(x)-f(x) g^{\prime}(x)}{g(x)^2} $$ \vspace{0.2em}
+
+\underline{Inverse Function Rule}\\ 
+For $y=f(x)$ and $x=f^-1(y)$ \vspace{-0.75em}
+$$ \frac{dy}{dx} = \frac{1}{dx/dy}  $$
+
+\underline{Chain Rule} 
+
+For functions $ z=f(y)$ and $y=g(x) $,
+$$\frac{d z}{d x}=\frac{d z}{d y} \cdot \frac{d y}{d x}=f^{\prime}(y) g^{\prime}(x) $$
+
+ \underline{Derivative of  Exponential \& Log function} \vspace{-0.75em}
+ $$ \frac{d}{dx}e^{x} =e^x \hspace{2.5cm} \frac{d}{d x} \ln x =\frac{1}{x} $$ 
+ 
+
+\newpage
+\underline{Partial Derivative} \\
+If $x_1$ changes by $\Delta x_1$ but all other variables remain constant: 
+$$
+\frac{\Delta y}{\Delta x_{1}}=\frac{f\left(x_{1}+\Delta x_1, x_{2}, \cdots, x_{n}\right)-f\left(x_{1}, x_{2}, \cdots, x_{n}\right)}{\Delta x_{1}}
+$$
+The partial derivative of $y$ with respect to $x_i$:
+$$
+\frac{\partial y}{\partial x_{i}}= f_i = \lim _{\Delta x_{i} \rightarrow 0} \frac{\Delta y}{\Delta x_{i}}
+$$
+
+
+\underline{Gradient Vector}
+$$ \nabla f(x_1, x_2, \cdots, x_n) = [f_1, f_2, \cdots, f_n]' $$
+
+
+\underline{Elasticity} \vspace{-0.75em}
+\[ \varepsilon = \frac{\text{Percentage change in $y$}}{\text{Percentage change in $x$}} = \frac{dy/y}{dx/x} = \frac{dy}{dx} \cdot \frac{x}{y} \] \vspace{-0.25em}
+
+
+\underline{Total differential} \vspace{-0.75em}
+\[
+d f=\frac{\partial f}{\partial x_{1}} d x_{1}+\frac{\partial f}{\partial x_{2}} d x_{2}+\cdots+\frac{\partial f}{\partial x_{n}} d x_{n}=\sum_{i=1}^{n} f_{i} d x_{i}
+\] \vspace{-0.75em}
+
+
+\underline{Total derivative} \\
+Total derivative with respect to $x_1$: 
+\[
+\frac{d f}{d x_1}=\frac{\partial f}{\partial x_{1}} +\frac{\partial f}{\partial x_{2}}\frac{d x_{2}}{d x_1}+\cdots+\frac{\partial f}{\partial x_{n}} \frac{d x_{n}}{d x_1}
+\]
+If $x_i$ doesn't depend on $x_1$ then $d x_i/d x_1=0$. If $f$ does not directly depend on $x_1$ then $\partial f/\partial x_{1}=0$. 
+
+\end{document}

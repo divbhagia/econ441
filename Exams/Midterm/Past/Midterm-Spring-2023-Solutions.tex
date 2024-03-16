@@ -1,0 +1,212 @@
+\documentclass{./../../../Latex/tests}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Spring 2023 Midterm Exam: Solutions}
+\rhead{Spring 2023 Midterm Exam}
+
+\vspace{0.5em}
+\testHeader{110}{30}
+
+\begin{enumerate}	
+
+%%%%%%%%%%%%%% Question 1
+\item (8 pts) Answer the following questions (1 point each)
+\begin{enumerate}
+% Part (a)
+\item Consider two sets $A$ and $B$, where $A$ is the set of all odd real numbers and $B$ is the set of all real numbers. What is the intersection of $A$ and $B$? 
+$$ A \cap B = A $$ \\
+% Part (b)
+\item Expand the following summation expression: $\sum_{i=0}^{3}(x+i)^{2}$
+$$ x^2 + (x+1)^2 + (x+2)^2 + (x+3)^2 $$ \\
+% Part (c)
+\item Find the inverse of $f(x) = \frac{x-2}{3}$.
+ $$ f^{-1}(y) = 3y+2 \quad \text{or} \quad g(x) =3x+2 $$ \\
+% Part (d)
+\item Why do we need a matrix to be nonsingular when solving systems of linear equations?
+\begin{itemize}
+\item[$\text{\rlap{$\checkmark$}}\square$] To ensure that the system of equations has a unique solution.
+\item[$\square$] To ensure that the system of equations has no solutions.
+\item[$\square$] To ensure that the system of equations has infinitely many solutions.
+\item[$\square$] It does not matter if the matrix is singular or nonsingular.  \\~\\
+ \end{itemize}
+% Part (e)
+\item Is the following function continuous? Is it differentiable?
+$$ f(x) = \begin{cases}
+	4 \quad \text{if } x<2 \\
+	10 \quad \text{if } x\geq2
+\end{cases} $$
+Neither continuous, nor differentiable. \\~\\
+% Part (f)
+\item For the function $f(x) = \ln x$, $f^{\prime} (x)=1/x$ 
+  \begin{itemize}
+  	\item[$\text{\rlap{$\checkmark$}}\square$] True 
+  	\item[$\square$] False \\~\\
+  \end{itemize}  
+  \item Find the derivative of $y = \frac{1}{x}$.
+  $$ \frac{dy}{dx} =-\frac{1}{x^2} $$ \\
+  \item Find the derivative of $y = (2-3x)(1+x)$.
+  $$ \frac{dy}{dx} =-3(1+x)+1(2-3x) = -3-3x+2-3x = -(1+6x) $$ \\
+
+\end{enumerate}
+
+%%%%%%%%%%%%%% Question 2
+\newpage
+\item (10 pts) Consider the following system of equations:
+\begin{align*}
+4 x + 3y -2z & = 7 \\
+x+y & = 5 \\
+3x+z &= 4	
+\end{align*}
+\begin{enumerate}
+% Part (a)
+  \item (1.5 pt) Write this system of equations in matrix format, i.e., $$ Av=b $$
+  What is $A$, $v$, and $b$ equal to?
+$$ A = \begin{bmatrix}
+	4 & 3 & -2 \\
+	1 & 1 & 0 \\
+	3 & 0 & 1 
+\end{bmatrix} \quad \quad
+v = \begin{bmatrix}
+	x \\ y \\ z
+\end{bmatrix} \quad \quad 
+b = \begin{bmatrix}
+	7 \\ 5 \\ 4
+\end{bmatrix}$$ \\
+% Part (b)
+   \item (3 pts) Calculate the adjoint of $A$. \\
+    
+To find the adjoint of a matrix, we need to find the transpose of the matrix of cofactors. Let's first find the 9 cofactors. \\
+
+$$\begin{aligned}
+	& C_{11} = (-1)^2 \begin{vmatrix}
+		1 & 0 \\
+		0 & 1
+	\end{vmatrix} =1  &
+	& C_{12} = (-1)^3 \begin{vmatrix}
+		1 & 0 \\
+		3 & 1
+	\end{vmatrix} =-1  &
+	& C_{13} = (-1)^4 \begin{vmatrix}
+		1 & 1 \\
+		3 & 0
+	\end{vmatrix} =-3 \\~\\
+	& C_{21} = (-1)^3 \begin{vmatrix}
+		3 & -2 \\
+		0 & 1
+	\end{vmatrix} =-3  &
+	& C_{22} = (-1)^4 \begin{vmatrix}
+		4 & -2 \\
+		3 & 1
+	\end{vmatrix} =10  &
+	& C_{23} = (-1)^5 \begin{vmatrix}
+		4 & 3 \\
+		3 & 0
+	\end{vmatrix} =9 \\~\\
+	& C_{31} = (-1)^4 \begin{vmatrix}
+		3 & -2 \\
+		1 & 0
+	\end{vmatrix} =2  &
+	& C_{32} = (-1)^5 \begin{vmatrix}
+		4 & -2 \\
+		1 & 0
+	\end{vmatrix} =-2  &
+	& C_{33} = (-1)^6 \begin{vmatrix}
+		4 & 3 \\
+		1 & 1
+	\end{vmatrix} =1 \\
+\end{aligned}$$ \\
+
+Then the adjoint of $A$ is given by:
+$$ Adj A = C' = \begin{bmatrix}
+	1 & -3 & 2 \\
+	-1 & 10 & -2 \\
+	-3 & 9 & 1 
+\end{bmatrix} $$
+
+\item (2 pts) Calculate the determinant of $A$. Is $A$ nonsingular? \\
+ 
+To calculate the determinant of $A$ by expanding with respect to the third row:
+$$ |A| = a_{31}|C_{31}| + a_{32}|C_{32}| + a_{33}|C_{33}| = 3.2+0.(-2)+1.1 = 7 $$
+Since $|A| \neq 0$, $A$ is nonsingular. \\
+  \item (1.5 pt) If you premultiply $A^{-1}$ on both sides of the equation $ Av=b $, you should be able to derive an expression to solve for $v$. Write down this expression. 
+  $$ \underbrace{A^{-1}A}_{I}v=A^{-1}b \rightarrow v^* =A^{-1}b  $$\\
+  
+  \item (2 pts) Using the expression in $(d)$ solve for $v^*$. \\
+  
+  Note that, $$ A^{-1} = \frac{1}{|A|} Adj A$$
+  Then, 
+  $$ v^* =A^{-1}b = \frac{1}{7}\begin{bmatrix}
+	1 & -3 & 2 \\
+	-1 & 10 & -2 \\
+	-3 & 9 & 1 
+\end{bmatrix} \begin{bmatrix}
+	7 \\ 5 \\ 4
+\end{bmatrix} = \frac{1}{7} \begin{bmatrix}
+	7-15+8 \\ -7+50-8 \\ -21+45+4
+\end{bmatrix}  =\frac{1}{7} \begin{bmatrix}
+	0 \\ 35 \\ 28
+\end{bmatrix} = \begin{bmatrix}
+	0 \\ 5 \\ 4
+\end{bmatrix}$$
+\end{enumerate}
+
+
+\newpage
+%%%%%%%%%%%%%% Question 3
+\item (6 pts) Fun with Calculus!
+\begin{enumerate}
+\item (3 pts) Demand for a good as a function of its price is given as follows:
+$$ Q(p) = p^{-\frac{1}{1+\alpha}}  $$
+Calculate the elasticity of demand with respect to price. (Note: You can also take the log of both sides of the equation and write $\ln Q = -\frac{1}{1+\alpha} \cdot \ln p$, and use that equation if you like.) \\~\\
+
+Note that,
+$$ \frac{dQ}{dp} = -\frac{1}{1+\alpha}\cdot p^{-\frac{1}{1+\alpha}-1}$$
+Plugging this and $Q = p^{-\frac{1}{1+\alpha}}$ in the formula for elasticity:
+$$ \varepsilon = \frac{dQ}{dp}\cdot \frac{p}{Q} = -\frac{1}{1+\alpha}\cdot p^{-\frac{1}{1+\alpha}-1} \cdot \frac{p}{p^{-\frac{1}{1+\alpha}}} = -\frac{1}{1+\alpha}  $$ \\
+
+I think my note in the parenthesis confused some of you. I was suggesting that alternatively you could write the equation in logs and find the elasticity as follows:
+$$\ln Q = -\frac{1}{1+\alpha} \cdot \ln p$$
+Differentiating both sides with respect to $p$:
+$$ \frac{dQ}{dp}\cdot\frac{1}{Q} = -\frac{1}{1+\alpha} \cdot \frac{1}{p}  $$
+Rearrange above equation to bring the $p$ on the left-hand side:
+$$ \frac{dQ}{dp}\cdot\frac{p}{Q} = -\frac{1}{1+\alpha} =\varepsilon  $$
+
+\newpage
+\item (3 pts) Suppose that aggregate income $Y$ and population $P$ are given by:
+$$Y(t) = \ln P(t), \quad \quad P(t) = ae^{rt}$$ 
+where $c, a$, and $r$ are constants. $t$ denotes time. Find the growth rate of income, which is given by the derivative of $Y$ with respect to $t$. \\
+
+We can find this using the chain rule:
+$$ \frac{dY}{dt} =  \frac{dY}{dP} \cdot \frac{dP}{dt} = \frac{1}{P(t)}\cdot are^{rt}= \frac{1}{ae^{rt}}\cdot are^{rt} = r $$
+In the last step we are just plugging in $P(t) = ae^{rt}$.
+\end{enumerate}
+
+%%%%%%%%%%%%%% Question 4
+\newpage
+\item (6 pts) Consider the following production function with two inputs, capital ($K$) and labor ($L$):
+$$ Q = 2K^{1/2}L^{1/2} $$
+The marginal product of an input is given by the partial derivative of the production function with respect to that input variable. 
+\begin{enumerate}
+\item (3 pts) Show that the marginal product of capital (MPK) and labor (MPL)for the above production function are given by:
+$$ MPK = \frac{1}{2}\cdot\frac{Q}{K} \quad \quad MPL = \frac{1}{2}\cdot \frac{Q}{L} $$ \\
+MPK is the partial derivative of $Q$ with respect to $K$:
+$$ MPK = \frac{\partial Q}{\partial K} = K^{-1/2} L^{1/2}  $$
+MPL is the partial derivative of $Q$ with respect to $L$:
+$$ MPL = \frac{\partial Q}{\partial L} = K^{1/2} L^{-1/2} $$
+To see that the expressions given in the question are the same as the partial derivatives above, we can plug-in $Q=2K^{1/2}L^{1/2}$ in both expressions as follows:
+$$ MPK = \frac{1}{2}\cdot\frac{Q}{K}=  \frac{1}{2}\cdot\frac{2K^{1/2}L^{1/2}}{K} =  K^{-1/2} L^{1/2} $$
+$$ MPL = \frac{1}{2}\cdot\frac{Q}{L} = \frac{1}{2}\cdot\frac{2K^{1/2}L^{1/2}}{L} =  K^{1/2} L^{-1/2} $$ \\
+
+\item (2 pts) Now, say that in equilibrium, wages ($w$) are equal to the marginal product of labor i.e.
+$$ w = \frac{1}{2}\cdot \frac{Q}{L} = K^{1/2}L^{-1/2}   $$
+Given $K=100$, write labor demand $L$ as a function of wages $w$. (Essentially, you are finding the inverse of a function). \\
+
+With $K=100$, we have:
+$$ w = (100)^{1/2} L^{-1/2} \rightarrow  L = \frac{100}{w^2}$$ \\
+
+\item (1 pt) Given your answer in (b), do you think labor demand increases or decreases with an increase in wages? \\
+Labor demand decreases with an increase in wages.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,97 @@
+\documentclass{./../../../Latex/tests}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Fall 2022 Midterm Exam}
+\rhead{Fall 2022 Midterm Exam}
+
+\vspace{0.5em}
+\testHeader{110}{30}
+
+
+\begin{enumerate}	
+\item (5 pts) Answer the following questions (1 point each)
+\begin{enumerate}
+	\item The cartesian product of two sets $X$ and $Y$ is defined as: $$ X \times Y = \{(x,y) | x \in X, y \in Y\} $$
+  	What is the cartesian product of $X=\{a,b\}$ and $Y=\{2,1\}$? \\~\\ \vspace{3cm}
+  	\item A matrix's inverse exists if its determinant is equal to 0. 
+  \begin{itemize}
+  	\item[$\square$] True 
+  	\item[$\square$] False \\~\\
+  \end{itemize}
+  \item The function $f(x) = |x|$ is \textit{differentiable} at $x=0$.
+  \begin{itemize}
+  	\item[$\square$] True 
+  	\item[$\square$] False \\~\\
+  \end{itemize}
+    \item For the function $f(x) = e^x$, $f^{\prime} (x)=f(x)$ 
+  \begin{itemize}
+  	\item[$\square$] True 
+  	\item[$\square$] False \\~\\
+  \end{itemize}
+  \item What is the derivative of $y=3x^2+2$? \\~\\ \vspace{2em}
+  
+\end{enumerate}
+
+
+\newpage
+\item (5 pts) Given the vector $x$ and matrix $A$ below, show that $x'Ax$ represents a weighted sum of squares. What is the dimension of $x'Ax$?
+
+$$
+x = \begin{bmatrix}
+x_1 \\ x_2
+\end{bmatrix} \quad \quad \quad
+A = \begin{bmatrix}
+a_{11} & 0 \\ 0 & a_{22}
+\end{bmatrix} \quad \quad
+$$
+
+\newpage
+\item (4 pts) Say I have a system of $m$ equations with $n$ unknowns. 
+\begin{align*}
+	a_{11} x_1 + a_{12} x_2 + \cdots a_{1n} x_n &= b_1 \\
+	a_{21} x_1 + a_{22} x_2 + \cdots a_{2n} x_n &= b_2 \\
+	\vdots \quad \quad \quad \quad \quad \quad \quad \vdots \\
+	a_{m1} x_1 + a_{m2} x_2 + \cdots a_{mn} x_n &= b_m \\
+\end{align*}
+\begin{enumerate}
+	\item (1 pt) What is the necessary condition for the existence of a unique solution for this system in terms of $m$ and $n$? \\ \vspace{2.5cm}
+	\item (1 pt) What is the sufficient condition for the existence of a unique solution for this system? \\ \vspace{3.5cm}
+	\item (2 pts) How would you use the tools learned in linear algebra to solve this system of equations? (\textit{No need to describe how you would calculate the inverse or multiply matrices, you can just say I take the inverse then multiply...}).
+\end{enumerate}
+
+\newpage
+\item (6 pts) Find the derivative for the following functions (2 pts each): \\
+\begin{enumerate}
+\item $y=\ln(x^2+1)$ \\ \vspace{4cm}
+\item $y=\dfrac{e^x}{1+e^x}$ \\ \vspace{5cm}
+\item $y=v+v^3 \quad \text{ where } v=x+1 $ \\ \vspace{3cm}
+\end{enumerate}
+
+\newpage
+\item (5 pts) Given the consumption function $$ C= 200+0.6Y  $$
+where $C$ is consumption, and $Y$ is income. 
+\begin{enumerate}
+  \item (3 pts) Find the income elasticity of consumption $\varepsilon_{CY}$, and determine its sign, assuming $Y>0$. \\ \vspace{3.5cm}
+  \item (1 pt) Show that this consumption function is inelastic at all positive income levels. \\ \vspace{2.75cm}
+  \item (1 pt) What is the income elasticity of consumption when income is equal to \$1000? \\ \vspace{2.75cm}
+  \item (1 pt) If income increases by 1\% from \$1000 to \$1100, by what percent does consumption increase?
+\end{enumerate}
+
+\newpage
+
+\item (5 pts) Given the following function:
+$$f(x,y,z) = xyz$$ \\
+\begin{enumerate}
+\item (2 pts)  Find the partial derivatives $f_x, f_y$, and $f_z$. \\ \vspace{2.75cm}
+\item (1 pt) Find the gradient of $f$. \\ \vspace{2.75cm}
+\item (1 pt) Find the total differential of $f$. You can denote it by $d f$. \\ \vspace{2.75cm}
+\item (1 pt) Find the total derivative of $f$ with respect to $x$? \\ \vspace{2.75cm}
+
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+\end{document}
