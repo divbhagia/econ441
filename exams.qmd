@@ -12,7 +12,7 @@ format: html
 - Review videos for finding the inverse of a matrix: [Method](https://www.youtube.com/watch?v=zoTcQd6hUE4), [Example](https://www.youtube.com/watch?v=ybj3tEBBuB0) 
 - [Help Sheet](Exams/Midterm/Midterm-Help-Sheet.pdf)
 - Past exams for practice:
-  - Fall 2022: [Exam](Exams/Midterm/Past/Midterm-Fall-2022.pdf), [Solution](Exams/Midterm/Past/Midterm-Fall-2023-Solution.pdf) 
+  - Fall 2022: [Exam](Exams/Midterm/Past/Midterm-Fall-2022.pdf), [Solution](Exams/Midterm/Past/Midterm-Fall-2022-Solution.pdf) 
   - Spring 2023: [Exam](Exams/Midterm/Past/Midterm-Spring-2023.pdf), [Solution](Exams/Midterm/Past/Midterm-Spring-2023-Solutions.pdf) 
   - Fall 2023: [Exam](Exams/Midterm/Past/Midterm-Fall-2023.pdf), [Solution](Exams/Midterm/Past/Midterm-Fall-2023-Solution.pdf) 
 
