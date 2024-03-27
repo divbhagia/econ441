@@ -1,0 +1,86 @@
+\documentclass{./../../../Latex/tests}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Midterm Spring 2024}
+\rhead{Midterm Spring 2024}
+
+\vspace{0.5em}
+\testHeader{110}{30}
+
+\begin{enumerate}
+\item (6 pts) Answer the following questions. 
+\begin{enumerate}
+\item (1 pt) Consider a mapping $f(x)$. For two distinct values of $x$, $x_0$ and $x_1$, $f(x_0) = f(x_1)$. Is $f$ a valid function? Answer yes or no. \\~\\
+\item (2 pts) Find the union and intersection for the following sets:
+$$ A = \{x: x \text{ is an even number} \} \quad \quad B = \{2, 4, 8 \} $$ \\~\\
+\item (1 pt) Consider the following two-variable function: 
+  $$ f(x,y) = x+y $$
+  where $x \in (0,1)$ and $y \in (0,1)$. What is the range of $f$? \\~\\
+ 
+\item (1 pt) Given a system of linear equations $A x = b$, if $|A|=5$, what can we say about the solution for this system of equations?
+\begin{itemize}
+	\item[$\square$] Has no solution. 
+	\item[$\square$] Has a unique solution.
+	\item[$\square$] Has infinitely many solutions.
+	\item[$\square$] None of the above \\~\\
+\end{itemize}  
+\item (1 pt) Is the function $y=|x|$ continuous at $x=0$? Answer yes or no. 
+%\item For this matrix $|A^{-1}|$ exists iff 
+% \item I have a matrix with 3 rows, 2 of the three rows are identical. Can you conclude if the matrix is nonsingular? remember 
+\end{enumerate} 
+
+\newpage
+\item (5 pts) Consider the following matrix $$A = I - X(X'X)^{-1}X'$$
+\begin{enumerate}
+\item (3 pts)  Is $A$ a square matrix? Show your work or reasoning that led you to this conclusion. \vspace{2.5cm}
+\item (2 pts) Prove that $A$ is idempotent i.e. $A A = A$. \vspace{5cm}
+\end{enumerate} 
+
+\item (8 pts) Consider the following system of equations:
+\begin{align*}
+x-2z & = 2 \\
+y+z & = 12 \\
+x+y+z &= 24	
+\end{align*}
+\begin{enumerate}
+  \item (1 pt) Write this system of equations in matrix format i.e., $$ Av=b $$
+  What is $A$, $v$, and $b$ equal to?
+  \newpage
+   \item (2 pts) Calculate the adjoint of $A$. \vspace{8.5cm}
+  \item (2 pts) Calculate the determinant of $A$. Is $A$ nonsingular? \vspace{4.5cm}
+  \item (1 pt) If you premultiply $A^{-1}$ on both sides of the equation $ Av=b $, you should be able to derive an expression to solve for $v$. Write down this expression. \vspace{2cm}
+  \item (2 pts) Using the expression in $(d)$ solve for $v^*$. 
+\end{enumerate}
+
+\newpage
+\item (4 pts) Differentiate the following functions:
+\begin{enumerate}
+\item $ \begin{aligned} y = 3x^3+x^2+4 \end{aligned} $ \vspace{2cm}
+  \item $ \begin{aligned} \frac{1}{x}+3x^2 \end{aligned} $ \vspace{2cm}
+  \item $\begin{aligned} \frac{x-1}{x^2+3} \end{aligned}$ \vspace{2cm}
+\end{enumerate}
+
+
+\vspace{1cm}
+
+\item (5 pts) Here is a demand function:
+ $$ Q = 100-0.4p$$
+ where $Q>0$ is the quantity demanded and $p>0$ is the price. 
+ \begin{enumerate}
+  \item  Calculate the elasticity of demand $\varepsilon$ in terms of $p$. \vspace{3.5cm}
+  \item What is the elasticity at $p=50$? What about at $p=100$? Is demand elastic ($|\varepsilon|>1$) or inelastic ($|\varepsilon|<1)$ at these prices? \newpage
+  \item Is the elasticity monotonically decreasing or increasing with price? (Note: I suggest taking the derivative of $\varepsilon$ with respect to $p$ instead of guessing.)\vspace{4.5cm}
+\end{enumerate}
+
+\vspace{2cm}
+
+\item (2 pts) Say we have the following relationship between income ($Y$), consumption ($C$), and saving ($S$). 
+$$ Y= C+S$$
+In addition, saving depends on interest rate $i$ as follows:
+$$ S = g(i)+100 $$
+Find the total derivative of income with respect to the interest rate. 
+
+
+\end{enumerate}
+
+\end{document}

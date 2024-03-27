@@ -1,0 +1,199 @@
+\documentclass{./../../../Latex/tests}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Midterm Spring 2024: Solutions}
+\rhead{Midterm Spring 2024}
+
+\vspace{0.5em}
+\testHeader{110}{30}
+
+\begin{enumerate}
+\item (6 pts) Answer the following questions. 
+\begin{enumerate}
+\item (1 pt) Consider a mapping $f(x)$. For two distinct values of $x$, $x_0$ and $x_1$, $f(x_0) = f(x_1)$. Is $f$ a valid function? Answer yes or no. \textbf{Yes} \\~\\
+\item (2 pts) Find the union and intersection for the following sets:
+$$ A = \{x: x \text{ is an even number} \} \quad \quad B = \{2, 4, 8 \} $$ 
+$$\mathbf{ A \cup B = A \quad \quad A \cap B = B }$$ \\
+\item (1 pt) Consider the following two-variable function: 
+  $$ f(x,y) = x+y $$
+  where $x \in (0,1)$ and $y \in (0,1)$. What is the range of $f$? $$\mathbf{(0,2)}$$ \\
+ 
+\item (1 pt) Given a system of linear equations $A x = b$, if $|A|=5$, what can we say about the solution for this system of equations?
+\begin{itemize}
+	\item[$\square$] Has no solution. 
+	\item[$\text{\rlap{$\checkmark$}}\square$] Has a unique solution.
+	\item[$\square$] Has infinitely many solutions.
+	\item[$\square$] None of the above \\~\\
+\end{itemize}  
+\item (1 pt) Is the function $y=|x|$ continuous at $x=0$? Answer yes or no. \textbf{Yes}
+%\item For this matrix $|A^{-1}|$ exists iff 
+% \item I have a matrix with 3 rows, 2 of the three rows are identical. Can you conclude if the matrix is nonsingular? remember 
+\end{enumerate} 
+
+\newpage
+\item (5 pts) \textit{Consider the following matrix $$A = I - X(X'X)^{-1}X'$$}
+\begin{enumerate}
+\item (3 pts)  \textit{Is $A$ a square matrix? Show your work or reasoning that led you to this conclusion.}
+\item[] Say the dimension of $X$ is \( m \times n \). Then the dimension of \( X_{n \times m}^{\prime} X_{m \times n} \) is \( n \times n \). So the dimension of \( \left(X^{\prime} X\right)^{-1} \) is also  \( n \times n \).  This implies that the dimension of \( X_{m \times n}\left(X^{\prime} X\right)_{n \times n}^{-1} X_{n \times m}^{\prime} \) is \( m \times m \). Hence, \( X^{\prime} X \) and $A$ must be square matrices, but $X$ need not be square. \\
+\item (2 pts) \textit{Prove that $A$ is idempotent i.e. $A A = A$.} 
+$$
+\begin{aligned}
+A A &=I-X\left(X^{\prime} X\right)^{-1} X^{\prime}-X\left(X^{\prime} X\right)^{-1} X^{\prime}+X\underbrace{\left(X^{\prime} X\right)^{-1} X^{\prime} X}_{I}\left(X^{\prime} X\right)^{-1} X^{\prime} \\
+&=I-X\left(X^{\prime} X\right)^{-1} X^{\prime} = A
+\end{aligned}
+$$
+\end{enumerate} 
+
+\vspace{1cm}
+
+\item (8 pts) \textit{Consider the following system of equations:
+}\begin{align*}
+x-2z & = 2 \\
+y+z & = 12 \\
+x+y+z &= 24	
+\end{align*}
+\begin{enumerate}
+  \item (1 pt) \textit{Write this system of equations in matrix format i.e., $$ Av=b $$
+  What is $A$, $v$, and $b$ equal to?} \\
+  
+  $A=\left[\begin{array}{rrr}1 & 0 & -2 \\ 0 & 1 & 1 \\ 1 & 1 & 1\end{array}\right] \quad v=\left[\begin{array}{l}x \\ y \\ z\end{array}\right] \quad b=\left[\begin{array}{c}2 \\ 12 \\ 24\end{array}\right]$ \\~\\
+   \item (2 pts) \textit{Calculate the adjoint of $A$. } \\
+   
+   We first need to calculate all the cofactors of $A$. \\
+$$   
+\begin{aligned}
+&\left|C_{11}\right|=\left|\begin{array}{ll}
+1 & 1 \\
+1 & 1
+\end{array}\right|=0 \quad\left|C_{12}\right|=-1\left|\begin{array}{ll}
+0 & 1 \\
+1 & 1
+\end{array}\right|=1 \quad\left|C_{13}\right|=\left|\begin{array}{ll}
+0 & 1 \\
+1 & 1
+\end{array}\right|=-1 \\~\\
+&\left|C_{21}\right|=-1\left|\begin{array}{cc}
+0 & -2 \\
+1 & 1
+\end{array}\right|=-2 \quad\left|C_{22}\right|=\left|\begin{array}{cc}
+1 & -2 \\
+1 & 1
+\end{array}\right|=3 \quad\left|C_{23}\right|=-1\left|\begin{array}{ll}
+1 & 0 \\
+1 & 1
+\end{array}\right|=-1 \\~\\
+&\left|C_{31}\right|=\left|\begin{array}{cc}
+0 & -2 \\
+1 & 1
+\end{array}\right|=2 \quad\left|C_{32}\right|=-1\left|\begin{array}{cc}
+1 & -2 \\
+0 & 1
+\end{array}\right|=-1 \quad\left|C_{33}\right|=\left|\begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array}\right|=1 \\~\\
+&\operatorname{Adj} A=\left[\begin{array}{ccc}
+0 & -2 & 2 \\
+1 & 3 & -1 \\
+-1 & -1 & 1
+\end{array}\right]
+\end{aligned}
+$$ \\
+  \item (2 pts) \textit{Calculate the determinant of $A$. Is $A$ nonsingular?} \\
+  $$
+\begin{aligned}
+|A| &=a_{11}\left|c_{11}\right|+a_{12}\left|c_{12}\right|+a_{13}\left|c_{13}\right| \\
+&=1.0+0.1+(-2) \cdot(-1)=2
+\end{aligned}
+$$ 
+$A$ is nonsingular as $|A| \neq 0$. \\
+
+  \item (1 pt) \textit{If you premultiply $A^{-1}$ on both sides of the equation $ Av=b $, you should be able to derive an expression to solve for $v$. Write down this expression. } \\
+
+  Premultiplying by $A^{-1}$ :
+$$
+A^{-1} A v=A^{-1} b 
+$$
+Since $A^{-1} A=I$, we have  $v^*=A^{-1} b$. \\
+
+
+  
+  \item (2 pts) \textit{Using the expression in $(d)$ solve for $v^*$. } \\
+
+Since, $A^{-1}=\frac{1}{|A|} A d j A$
+
+$$
+\begin{aligned}
+v^{*} &=\frac{1}{2}\left[\begin{array}{rrr}
+0 & -2 & 2 \\
+1 & 3 & -1 \\
+-1 & -1 & 1
+\end{array}\right]\left[\begin{array}{c}
+2 \\
+12 \\
+24
+\end{array}\right]_{3 \times 1} \\
+&=\frac{1}{2}\left[\begin{array}{c}
+-24+48 \\
+2+36-24 \\
+-2-12+24
+\end{array}\right]=\left[\begin{array}{c}
+12 \\
+7 \\
+5
+\end{array}\right]
+\end{aligned}
+$$
+
+Checking if it's correct:
+$$
+12-2(5)=2, \quad  7+5=12, \quad 12+7+5=24
+$$
+\end{enumerate}
+
+\item (4 pts) \textit{Differentiate the following functions:}
+\begin{enumerate}
+\item $$ y = 3x^3+x^2+4, \quad \frac{d y}{d x}=9 x^{2}+2 x $$
+  \item $$ y= \frac{1}{x}+3x^2, \quad \frac{d y}{d x}=\frac{-1}{x^{2}}+6 x$$
+  \item $$y=\frac{x-1}{x^2+3}, \quad \frac{d y}{d x}= \frac{1\left(x^{2}+3\right)-2 x(x-1)}{\left(x^{2}+3\right)^{2}} =\frac{-x^{2}+2 x+3}{\left(x^{2}+3\right)^{2}}$$
+\end{enumerate}
+
+
+\vspace{1cm}
+
+\item (5 pts) \textit{Here is a demand function:}
+ $$ Q = 100-0.4p$$
+\textit{ where $Q$ is the quantity demanded and $p$ is the price. }
+ \begin{enumerate}
+  \item  \textit{Calculate the elasticity of demand $\varepsilon$ in terms of $p$.}
+   $$\varepsilon=\frac{d Q}{d p} \cdot \frac{p}{Q}=\frac{-0.4 p}{100-0.4 p}$$
+   
+  \item \textit{What is the elasticity at $p=50$? What about at $p=100$? Is demand elastic ($|\varepsilon|>1$) or inelastic ($|\varepsilon|<1)$ at these prices?} \\
+ 
+At  $p=50, \varepsilon=-\frac{1}{4}=-0.25$
+
+At $p=100, \varepsilon=-\frac{2}{3}=-0.66$ \\
+Demand is inelastic at these prices. \\
+
+ \item \textit{Is the elasticity monotonically decreasing or increasing with price? (Note: I suggest taking the derivative of $\varepsilon$ with respect to $p$ instead of guessing.)} \\ 
+ $$
+\begin{aligned}
+\frac{d \varepsilon}{d p}&=\frac{-0.4(100-0.4 p)+0.4(-0.4 p)}{(100-0.4 p)^{2}} \\
+&=\frac{-40+0.16 p-0.16}{(100-0.4 p)^{2}} \\&=\frac{-40}{(100-0.4 p)^{2}}<0
+\end{aligned}
+$$
+
+$\varepsilon$ is monotonically decreasing in price. Higher the price, more elastic the demand is.
+\end{enumerate}
+
+\vspace{2cm}
+
+\item (2 pts) \textit{Say we have the following relationship between income ($Y$), consumption ($C$), and saving ($S$). }
+$$ Y= C+S$$
+\textit{In addition, saving depends on interest rate $i$ as follows:}
+$$ S = g(i)+100 $$
+\textit{Find the total derivative of income with respect to the interest rate. }
+ $$\frac{d Y}{d i}=\frac{d Y}{d C} \cdot \underbrace{\frac{d C}{d i}}_{0}+\underbrace{\frac{d Y}{d S}}_{1} \cdot \underbrace{\frac{d S}{d i}}_{g^{\prime}(i)} = g^{\prime}(i)$$
+\end{enumerate}
+
+\end{document}

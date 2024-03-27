@@ -15,6 +15,7 @@ format: html
   - Fall 2022: [Exam](Exams/Midterm/Past/Midterm-Fall-2022.pdf), [Solution](Exams/Midterm/Past/Midterm-Fall-2022-Solutions.pdf) 
   - Spring 2023: [Exam](Exams/Midterm/Past/Midterm-Spring-2023.pdf), [Solution](Exams/Midterm/Past/Midterm-Spring-2023-Solutions.pdf) 
   - Fall 2023: [Exam](Exams/Midterm/Past/Midterm-Fall-2023.pdf), [Solution](Exams/Midterm/Past/Midterm-Fall-2023-Solutions.pdf) 
+  - Spring 2024: [Exam](Exams/Midterm/Past/Midterm-Spring-2024.pdf), [Solution](Exams/Midterm/Past/Midterm-Spring-2024-Solutions.pdf) 
 
 ### Final Exam
 - [Final Exam Review Slides](Lectures/FinalReview/final_review.pdf)
