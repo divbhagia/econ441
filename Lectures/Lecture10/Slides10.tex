@@ -249,6 +249,24 @@ $$ \max_{\{c_1,c_2\}} \quad U(c_1, c_2) = \ln c_1 + \beta \ln c_2 \quad s.t. \qu
   \end{tikzpicture}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Another Example: Lasso Regression}
+\begin{witemize}
+  \item Regularization is a fundamental concept in machine learning and statistics, used to improve the generalization of models to new data by preventing overfitting
+  \item  Overfitting occurs when a model learns the detail and noise in the training data 
+  \item Regularization techniques modify the learning algorithm to impose constraints on the model parameters, typically by adding a penalty term to the loss function
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Lasso Regression}
+Linear regression, unconstrained maximization:
+$$ L(\beta) = \sum_{i=1}^n (Y_i - X_i^T \beta)^2 $$
+Lasso regression, constrained maximization:
+$$L(\beta) = \sum_{i=1}^n (Y_i - X_i^T \beta)^2 + \lambda \sum_{j=1}^p |\beta_j|$$
+ Higher values of $\lambda $ increase the penalty for large coefficients.
+\end{frame}
+
 
 %%%%%%%%%%%%%%
 \begin{frame}{References and Homework Problems}
