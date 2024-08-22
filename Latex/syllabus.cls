@@ -52,7 +52,7 @@
 \captionsetup[floatfoot]{footfont={normal,footnotesize}, singlelinecheck=off, format=hang, width=\linewidth}
 
 % Tables
-\RequirePackage{multirow}
+\RequirePackage{array, multirow}
 \RequirePackage{booktabs, siunitx}
 \RequirePackage{tabularx}
 \RequirePackage[para,flushleft]{threeparttable}
@@ -60,6 +60,8 @@
 \AtBeginEnvironment{tablenotes}{\setstretch{1} \footnotesize}	% notes font
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\RequirePackage{makecell}
 
 % Colors
 \definecolor{red}{RGB}{175 , 0 , 0}

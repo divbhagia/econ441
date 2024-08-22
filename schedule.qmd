@@ -15,17 +15,10 @@ sidebar: false
 
 ```{python}
 #| echo: false
-import pandas as pd
 from IPython.display import display, HTML
 from bs4 import BeautifulSoup
-
-# Initilise
-df = pd.read_excel('schedule.xlsx', dtype=str)
-html_table = df.to_html(escape=False, index=False, na_rep='')
+html_table = open('./Syllabus/schedule.html', 'r').read()
 soup = BeautifulSoup(html_table, 'html.parser')
-
-# Get the modified HTML
 html_table_modified = str(soup)
 display(HTML(html_table_modified))
 ```
-

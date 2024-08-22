@@ -52,5 +52,21 @@
   },
   "exams.qmd": {
     "exams.html": "af488bd4"
+  },
+  "Lectures/Lecture1/Slides1.qmd": {
+    "Slides1.html": "c6d8cf0c"
+  },
+  "tmp.qmd": {
+    "tmp.html": "41b28dca",
+    "tmp.tex": "489635b8"
+  },
+  "Lectures/Lecture1/tmp.qmd": {
+    "tmp.html": "74cec33c"
+  },
+  "Lectures/Lecture1/slides_raw.qmd": {
+    "slides_raw.html": "256a781a"
+  },
+  "Lectures/Lecture1/slides_edited.qmd": {
+    "slides_edited.html": "7ba38e6f"
   }
 }

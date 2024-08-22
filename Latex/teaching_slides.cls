@@ -1,6 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{div_teaching_slides}
-
 \LoadClass[14pt, aspectratio=169, t]{beamer} % normal is 43
 \usetheme{default}
 
@@ -9,7 +8,7 @@
 \RequirePackage{changepage}
 \RequirePackage{animate}
 \RequirePackage{setspace}
-\usepackage{soul} % Highlighting
+\RequirePackage{soul} % Highlighting
 \RequirePackage{venndiagram}
 \RequirePackage{tikz}
 \RequirePackage{pgfplots}

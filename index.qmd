@@ -11,7 +11,7 @@ page-layout: full
 Learn essential mathematical tools encompassing linear algebra, calculus, and optimization, that are widely utilised in analysis of economic problems.
 </p>
 
-ECON 441 | Spring 2024 | College of Business and Economics | California State University
+ECON 441 | Fall 2024 | College of Business and Economics | California State University
 
 ::: {.grid .course-details}
 
@@ -24,10 +24,10 @@ ECON 441 | Spring 2024 | College of Business and Economics | California State Un
 
 ::: {.g-col-12 .g-col-md-12 .g-col-lg-7}
 #### Course Details
-{{< fa location-dot >}} &nbsp; SGMH 2501, Thursdays, 7-9:45 PM <br>
+{{< fa location-dot >}} &nbsp; SGMH 1308, Tuesdays, 7-9:45 PM <br>
 {{< fa clock >}} &nbsp; Office hours: 
 <ul style="margin-top: 0; margin-left: -1.5em;">
-- Thursdays, 4-6.45 PM, or
+- Tuesdays, 4-6.45 PM, or
 - By appointment (in-person or on [Zoom](https://fullerton.zoom.us/j/81895171931))
 </ul>
 :::
