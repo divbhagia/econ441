@@ -1,0 +1,264 @@
+---
+title: "Project"
+---
+
+If you are taking this course for graduate credit, you will need to complete a project. The grade for the project will count in place of the active engagement grade. The project is due on the last day of class. 
+
+You only need to complete this assignment if you are graduate student taking this course for credit, undergraduate students are not required to complete this assignment, but can do so for fun and I would be happy to check your work, but it will not count towards your grade.
+
+This project will teach you how to use Python programming to solve a simple mathematical problem with some economic intution. The choice of programming language does not matter, but I chose Python since it's widely used in the industry and academia and most importantly it's open source and free.
+
+There are two different assignments you can choose from. You only need to complete one of the three assignments. For each assignment, you need to know some basic Python programming and set up. So use the sidebar and go through the Python setup and basic programming tutorials. Once you are done, each of the excercises build on an example or problem we solbed in class, and shows you how to code that problem. Once you understand the code, you will need to modify it to solve a related but expanded problem to the original problem and perform the tasks outlined. 
+
+The assignments are as follows:
+
+1. **Gasoline or electric cars**: This assignment builds on the example we did in class where we used linear algebra to solve a supply and demand system. I will show how we can use the simple 1 good case to derive some comparative statics and then you are expected to extend this to a 2 good case with gasoline and electric cars.
+2. **Demand for goods**: This assignment builds on the example we did in class where we derived demand for goods given a utility function. I will show how we can use Python to solve for the demand of goods given the Cobb-Douglas utility function, you are then expected to extend this to a CES utility function and do some comparative statics.
+   
+
+### Exercise 1
+
+Gasoline or electric cars. 
+
+Demand for gasoline cars is a function of price of both.
+
+$$ Q^d_{g} = c_g - a_g P_{g} + b_g P_{e} $$
+$$ Q^d_{e} = c_e - a_e P_{e} + b_e P_{g} $$
+
+Where $Q^d_{g}$ is the log of quantity demanded of gasoline cars, $Q^d_{e}$ is log of the quantity demanded of electric cars, $P_{g}$ is the log price of gasoline cars, and $P_{e}$ is the price of electric cars. $a_g$, $b_g$, $c_g$, $a_e$, $b_e$, and $c_e$ are some known parameters, say estimated from data. Here $a_g$ and $a_e$ are the price elasticities of demand for gasoline and electric cars, respectively. While, $b_g$ and $b_e$ are the cross price elasticities of demand for gasoline and electric cars, respectively ie. how the price of one good affects the demand for the other good.
+
+Producers can produce gasoline cars or electric cars. In the short run, they are constrained by the amount of capital they have, so if they want to produce more of one type of car, they have to produce less of the other.
+
+$$ Q^s_{g} = \alpha_g K - \beta_g Q^s_{e} $$
+$$ Q^s_{e} = \alpha_e K - \beta_e Q^s_{g} $$
+
+### Exercise 2
+
+Consider Example 1, we derived demand functions for good 1 and 2 given a utility function.
+
+$$ x_1^* = \frac{\alpha}{\alpha + \beta} \frac{m}{p_1} $$
+
+Assume $\beta = 1 - \alpha$.
+
+$$ x_1^* = \frac{\alpha m}{p_1} $$
+$$ x_1^* = \frac{(1-\alpha) m}{p_1} $$
+
+Note that $m = p_1 x_1 + p_2 x_2$ is the budget constraint.
+
+Does demand of good 1 depend on price of good 2?
+
+For the following parameters $\alpha = 0.5$,  $m = 100$, $p_1 = 5$, and $p_2 = 5$, calculate the demand for good 1 and good 2. Price same, both goods valued equally, so similar demand for both goods. Now what happens if you increase the price of good 2 to 10? Share of expenditure on goods same as determined by $\alpha$, more weight in utility function to good 1, higher $\alpha$, higher share spent on good 1.
+
+```{python}
+#| echo: false
+
+import numpy as np
+
+
+alpha = 0.2
+m = 100
+p1 = 5
+p2 = 5
+
+x1_ = alpha * m / p1
+x2_ = (1 - alpha) * m / p2
+
+print(f'Demand for good 1: {x1_}')
+print(f'Demand for good 2: {x2_}')
+
+
+```
+
+Now let's say you wanted to plot demand for good 1 as a function of price of good 1.
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+
+p1_vals = np.linspace(1, 10, 100)
+m_vals = np.linspace(1, 100, 100)
+def x1func(alpha, m, p1):
+    return alpha * m / p1
+
+
+plt.plot(p1_vals, x1func(alpha, m, p1_vals), label='m = 100')
+plt.plot(p1_vals, x1func(alpha, 2*m, p1_vals), label='m = 200')
+plt.legend()
+plt.xlabel('Price of good 1')
+plt.ylabel('Demand for good 1')
+plt.show()
+
+
+```
+
+
+Now instead of calculating this by hand, you can use Python to solve this problem. SO we didn't have expressions for x1 and x2, we calculated by hand. But we can use Python to solve this problem.
+
+```{python}
+#| echo: false
+import numpy as np
+from scipy.optimize import minimize
+
+alpha = 0.5
+m = 100
+p1 = 5
+p2 = 5
+
+def utility(x):
+    x1, x2 = x
+    return -x1 ** alpha * x2 ** (1 - alpha)
+
+def budget_constraint(x):
+    x1, x2 = x
+    return m - p1 * x1 - p2 * x2
+
+def non_negativity_x1(x):
+    return x[0] - 1e-6
+
+def non_negativity_x2(x):
+    return x[1] - 1e-6
+
+constraints = ({
+    'type': 'eq', 
+    'fun': budget_constraint
+})
+initial_guess = [1, 2] 
+result = minimize(utility, initial_guess, constraints=constraints)
+result.x
+
+```
+
+
+This so we can write a super function of all the parameters and then solve for the optimal values of x1 and x2.
+
+```{python}
+# | echo: false
+
+# Function to solve for demand
+
+
+def solve_demand(alpha, m, p1, p2):
+
+    def utility(x):
+        x1, x2 = x
+        return -(x1**alpha) * x2 ** (1 - alpha)
+
+    def budget_constraint(x):
+        x1, x2 = x
+        return m - p1 * x1 - p2 * x2
+
+    constraints = ({"type": "eq", "fun": budget_constraint})
+    initial_guess = [2, 5]
+    result = minimize(utility, initial_guess, constraints=constraints)
+    return result.x
+
+
+# Implement the function
+m = 100
+p1 = 5
+p2 = 5
+alpha = 0.5
+
+x1, x2 = solve_demand(alpha, m, p1, p2)
+
+print(f"Demand for good 1: {x1}")
+print(f"Demand for good 2: {x2}")
+
+```
+
+Now again you can plot demand for each good as a function of it's price aka demand curve. And also see how this changes with income, shifts right. 
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+
+K = 25 # Number of points
+p1_vals = np.linspace(1, 10, K)
+x1_vals = np.zeros(K)
+x1_vals_ = np.zeros(K)
+x2_vals = np.zeros(K)
+for i in range(K):
+    x1_vals[i], x2_vals[i] = solve_demand(alpha, m, p1_vals[i], p2)
+    x1_vals_[i], _ = solve_demand(alpha, 2*m, p1_vals[i], p2)
+
+plt.plot(p1_vals, x1_vals, label='m = 100')
+plt.plot(p1_vals, x1_vals_, label='m = 200')
+plt.xlabel('Price of good 1')
+plt.ylabel('Demand')
+plt.legend()
+plt.show()
+
+```
+
+# Exercise 
+
+Your excercise is to use Python and plot the demand curve for good 1 and good 2 where the utility function is CES. In particular, the utility function is given by:
+$$ U(x_1, x_2) = \left( \alpha x_1^{\rho} + (1 - \alpha) x_2^{\rho} \right)^{1/\rho} $$
+
+Where $x_1$ and $x_2$ are the quantities of good 1 and good 2 consumed, respectively. $\alpha$ is the share of expenditure on good 1, $\rho$ is the elasticity of substitution between the two goods.
+
+Modify the function `solve_demand` to solve for the demand of good 1 and good 2 given the utility function above. 
+
+Set $\alpha = 0.5$, $\rho = 0.5$, $m = 100$, $p_1 = 5$, and $p_2 = 5$ first and see what you get. 
+
+- Verify that the demand for good 1 and good 2 same as when using solve_demand function when rho very small ie. close to 0.001.
+- When rho really large (try a big number like 100), what happens to the demand for good 1 and good 2? Try a number close to 1 (like 0.95)
+
+```{python}
+
+# | echo: false
+
+from scipy.optimize import minimize
+
+def solve_demand_ces(alpha, rho, m, p1, p2):
+
+    def utility(x):
+        x1, x2 = x
+        return -((alpha * x1 ** rho + (1 - alpha) * x2 ** rho) ** (1 / rho))
+
+    def budget_constraint(x):
+        x1, x2 = x
+        return m - p1 * x1 - p2 * x2
+
+    constraints = ({"type": "eq", "fun": budget_constraint})
+    initial_guess = [2, 5]
+    result = minimize(utility, initial_guess, constraints=constraints)
+    return result.x
+
+# Implement the function
+m = 100
+p1 = 5
+p2 = 15
+alpha = 0.3
+rho = 0.5
+
+x1, x2 = solve_demand_ces(alpha, rho, m, p1, p2)
+x1_, x2_ = solve_demand(alpha, m, p1, p2)
+
+print(f"Demand for good 1: {round(x1, 2)}")
+print(f"Demand for good 2: {round(x2, 2)}")
+
+print(f"Demand for good 1: {round(x1_, 2)}")
+print(f"Demand for good 2: {round(x2_, 2)}")
+```
+
+Plot x2 as a function of p2 and p1.
+
+```{python}
+#| echo: false
+import matplotlib.pyplot as plt
+
+K = 25 # Number of points
+p1_vals = np.linspace(1, 10, K)
+x1_vals = np.zeros(K)
+x2_vals = np.zeros(K)
+
+for i in range(K):
+    x1_vals[i], x2_vals[i] = solve_demand_ces(alpha, rho, m, p1_vals[i], p2)
+
+plt.plot(p1_vals, x2_vals)
+plt.xlabel('Price of good 1')
+plt.ylabel('Demand for good 2')
+plt.show()
+
+```

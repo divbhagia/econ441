@@ -17,6 +17,9 @@ $gray2: #747576;
 $primary: #912040 !default;
 $secondary: #e8e1e1 !default;
 
+// navbar background color to primary
+$navbar-bg: $primary !default;
+
 /*-- scss:rules --*/
 $font-size-base: 1.1rem ;
 body {

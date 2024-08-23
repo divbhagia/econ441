@@ -377,13 +377,13 @@ df["Material"] = df["Lecture"].apply(material_str)
 notes = {}
 notes["prelim"] = []
 notes["linal"] = ["Linear-Algebra.pdf"]
-notes["calc"] = ["Calculus.pdf", "Log-and-Expontential-Functions.pdf"]
+notes["calc"] = ["Calculus.pdf", "Log-and-Exponential-Functions.pdf"]
 notes["opt"] = ["Optimization.pdf"]
 for mod, nnotes in notes.items():
     mod_idx = df[df["Module"] == modules[mod]].index[0]
     df.loc[mod_idx, "Module"] += "<br>"
     for note in nnotes:
-        df.loc[mod_idx, "Module"] += f"<a href='Lectures/{note}'>{icon('notes')}</a> "
+        df.loc[mod_idx, "Module"] += f"<a href='Notes/{note}'>{icon('notes')}</a> "
 
 # Assessment column
 df.loc[df.index[-1], "Topics"] = "Final Exam"
