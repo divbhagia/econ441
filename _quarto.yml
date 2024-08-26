@@ -59,7 +59,7 @@ website:
           - text: "Lecture 10"
             file: Lectures/Lecture10/lecture10.qmd
           - text: "Lecture 11"
-            file: Lectures/Lecture11/lecture11.qmd
+            file: Lectures/Lecture11/lecture11.qmd 
   
   page-footer:
       2024 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
