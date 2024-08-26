@@ -74,5 +74,14 @@
   },
   "Project/project.qmd": {
     "project.html": "fb0a73c7"
+  },
+  "Project/option1.qmd": {
+    "option1.html": "3d70fd18"
+  },
+  "Project/basics.qmd": {
+    "basics.html": "75170112"
+  },
+  "Project/option2.qmd": {
+    "option2.html": "94f784cf"
   }
 }

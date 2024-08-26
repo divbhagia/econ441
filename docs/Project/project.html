@@ -138,7 +138,7 @@ window.Quarto = {
 <span class="menu-text">Exams</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://divbhagia.github.io/Econ441/"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://divbhagia.github.io/econ441/"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -213,14 +213,14 @@ window.Quarto = {
 <p>Note that <span class="math inline">\(m = p_1 x_1 + p_2 x_2\)</span> is the budget constraint.</p>
 <p>Does demand of good 1 depend on price of good 2?</p>
 <p>For the following parameters <span class="math inline">\(\alpha = 0.5\)</span>, <span class="math inline">\(m = 100\)</span>, <span class="math inline">\(p_1 = 5\)</span>, and <span class="math inline">\(p_2 = 5\)</span>, calculate the demand for good 1 and good 2. Price same, both goods valued equally, so similar demand for both goods. Now what happens if you increase the price of good 2 to 10? Share of expenditure on goods same as determined by <span class="math inline">\(\alpha\)</span>, more weight in utility function to good 1, higher <span class="math inline">\(\alpha\)</span>, higher share spent on good 1.</p>
-<div id="254d82e3" class="cell" data-execution_count="1">
+<div id="56fbc3c2" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>Demand for good 1: 4.0
 Demand for good 2: 16.0</code></pre>
 </div>
 </div>
 <p>Now let’s say you wanted to plot demand for good 1 as a function of price of good 1.</p>
-<div id="515b8ebb" class="cell" data-execution_count="2">
+<div id="17f42e3a" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -230,20 +230,20 @@ Demand for good 2: 16.0</code></pre>
 </div>
 </div>
 <p>Now instead of calculating this by hand, you can use Python to solve this problem. SO we didn’t have expressions for x1 and x2, we calculated by hand. But we can use Python to solve this problem.</p>
-<div id="b560885f" class="cell" data-execution_count="3">
+<div id="c11221d5" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>array([ 9.99980564, 10.00019436])</code></pre>
 </div>
 </div>
 <p>This so we can write a super function of all the parameters and then solve for the optimal values of x1 and x2.</p>
-<div id="7d5ad790" class="cell" data-execution_count="4">
+<div id="49655cb1" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>Demand for good 1: 9.999954926633306
 Demand for good 2: 10.000045073366694</code></pre>
 </div>
 </div>
 <p>Now again you can plot demand for each good as a function of it’s price aka demand curve. And also see how this changes with income, shifts right.</p>
-<div id="7398673b" class="cell" data-execution_count="5">
+<div id="d5d944a8" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -263,7 +263,7 @@ Demand for good 2: 10.000045073366694</code></pre>
 <li>Verify that the demand for good 1 and good 2 same as when using solve_demand function when rho very small ie. close to 0.001.</li>
 <li>When rho really large (try a big number like 100), what happens to the demand for good 1 and good 2? Try a number close to 1 (like 0.95)</li>
 </ul>
-<div id="9d6e8492" class="cell" data-execution_count="6">
+<div id="b79ab863" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Demand for good 1: 7.1
 Demand for good 2: 4.3
@@ -272,7 +272,7 @@ Demand for good 2: 4.67</code></pre>
 </div>
 </div>
 <p>Plot x2 as a function of p2 and p1.</p>
-<div id="3918581e" class="cell" data-execution_count="7">
+<div id="1a29d909" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

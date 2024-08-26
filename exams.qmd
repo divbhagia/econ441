@@ -4,7 +4,19 @@ toc: false
 number-sections: false
 sidebar: false
 format: html
+filters:
+  - pyodide
 ---
+
+
+```{pyodide-python}
+n = 5
+while n > 0:
+  print(n)
+  n = n - 1
+
+print('Blastoff!')
+```
 
 ### Midterm Exam 
 
