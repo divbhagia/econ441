@@ -23,7 +23,7 @@ website:
       - text: "Exams"
         file: exams.qmd
       - icon: github
-        href: https://divbhagia.github.io/Econ441/
+        href: https://divbhagia.github.io/econ441/
 
   sidebar:
     - title: "Lectures"
