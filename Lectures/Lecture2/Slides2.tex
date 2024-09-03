@@ -396,6 +396,63 @@ x_n
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Geometric Representation}
+\begin{witemize}
+  \item Vectors can be graphically represented by arrows
+\item The direction of the arrow indicates the vector's \textit{direction} and the length of the arrow corresponds to its \textit{magnitude}.
+\item Here is a plot for vector $ v_1 =  \begin{bmatrix}
+2\\
+1 \\
+\end{bmatrix} $ \\~\\
+\end{witemize}
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle, % Places the axis in the middle
+        xlabel={},
+        ylabel={},
+        xtick={0,1,2},
+        ytick={0,1}, 
+        xmin=-0.5, xmax=2.5, 
+        ymin=-0.5, ymax=1.5, 
+        grid style=dashed,
+        grid=both, 
+        width=6cm, height=3cm, 
+        vector/.style={-Stealth, red, very thick} 
+    ]
+    \addplot[vector] coordinates {(0,0) (2,1)};
+    \end{axis}
+\end{tikzpicture}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Addition of Vectors}
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle, % Places the axis in the middle
+        xlabel={},
+        ylabel={},
+		xtick distance = 1, 
+		ytick distance = 1,
+        xmin=-0.25, xmax=12.25, 
+        ymin=-0.25, ymax=8.25, 
+        grid style=dashed,
+        grid=both, 
+        width=12cm, height=8cm, 
+        vector/.style={-Stealth, very thick} 
+    ]
+    \addplot[vector] coordinates {(0,0) (9,2)};
+    \addplot[vector] coordinates {(0,0) (2,5)};
+    \addplot[vector, dotted, -] coordinates {(2,5) (11,7)};
+    \addplot[vector, dotted, -] coordinates {(9,2) (11,7)};
+	\addplot[vector, red] coordinates {(0,0) (11, 7)};
+    \end{axis}
+\end{tikzpicture}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Inner Product}
 Inner product of two vectors each with $n$ elements:
 $$ u \cdot v = u_1 v_1 + u_2 v_2 +...+ u_n v_n = \sum_{i=1}^n u_i v_i $$ 
