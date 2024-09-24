@@ -15,12 +15,28 @@
 \maketitle
 \end{frame}
 
-
 \begin{frame}{\large (Hypothetical) Production Function for Grades}
 \begin{columns}[c]
 \begin{column}{0.55\textwidth}
 %$$ y = x^2  $$
-\includegraphics[scale=0.225]{function.png}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = {Hours \((x)\)},
+    ylabel = {Grades \((y)\)},
+	width = 7.5cm,
+	height = 7cm,
+	ymin = 0,
+]
+\addplot [
+    domain=-0:10, 
+    samples=100, 
+    color=red,
+	very thick,
+    ]
+    {x^2 + 20};
+\end{axis}
+\end{tikzpicture}
 \end{column}
 \begin{column}{0.45\textwidth}
 $$y=f(x)=x^{2}+20$$ \\~\\
@@ -91,7 +107,24 @@ For the function: $y=f(x)=x^{2}+20$
 \vspace{-1.5em}
 $$y=f(x)=x^{2}+20 \rightarrow f'(x) = 2x$$ 
 \centering
-\includegraphics[scale=0.225]{function.png}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = {Hours \((x)\)},
+    ylabel = {Grades \((y)\)},
+	width = 7.5cm,
+	height = 6.75cm,
+	ymin = 0,
+]
+\addplot [
+    domain=-0:10, 
+    samples=100, 
+    color=red,
+	very thick,
+    ]
+    {x^2 + 20};
+\end{axis}
+\end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Concept of a limit}
