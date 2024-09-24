@@ -3,17 +3,19 @@ title: "Project"
 format:
   html:
     anchor-sections: true
+    fig-height: 3
+    fig-width: 4
+    fig-align: center
 filters:
   - pyodide
 ---
 
 
-If you are taking this course for graduate credit, you will need to complete a project. The grade for the project will count in place of the active engagement grade. The project is due on the last day of class. You only need to complete this assignment if you are graduate student taking this course for credit, undergraduate students are not required to complete this assignment, but can do so for fun and I would be happy to check your work, but it will not count towards your grade.
+If you are taking this course for graduate credit, you need to complete this project. The grade for the project will count in place of the active engagement grade. The project is due on the last day of class. 
 
-This project will teach you how to use Python programming to solve a simple mathematical problem with some economic intution. 
+**Note**: Undergraduate students are not required to complete this assignment, but can do so for fun and I would be happy to check your work, but it will not count towards your grade.
 
-Before you get started, you need to know some basics of Python programming below and also complete the tutorial on optimization in Python. In particular, the tutorial shows code for example, you will be modifying that code to solve a related but expanded problem. Once you are done with the two tutorials, you can start the project. You will find the instructions for the exercise you need to complete at the end of this document.
-
+This project will teach you how to use Python programming to solve economic problems that involve optimization. Before you get started, you need to understand some basics of Python programming, so complete Tutorial 1 and then proceed to Tutorial 2, which teaches you how to solve an optimization problem in Python. In particular, Tutorial 2 will show you how to code a specific optimization problem. You will be modifying the code provided in this tutorial to solve a related but expanded problem as a part of your project. Once you are done with the two tutorials, you can start the project. You will find the instructions for the exercise you need to complete at the end of this document.
 
 # Tutorial 1: Basic Python Programming
 
@@ -47,66 +49,67 @@ print('Blastoff!')
 
 # Tutorial 2: Optimization in Python
 
-## Optimization by Hand
+In this tutorial, we’ll work through example 1 from the constrained optimization problems provided [here](Notes/Optimization-Examples.pdf). In particular, our optimization problem is as follows:
 
-Example 1 for constrained maximization (add link), we derived demand functions for good 1 and 2 given a utility function.
+$$ \max_{x_1, x_2} \quad x_1^{\alpha} x_2^{\beta} \quad \text{s.t.} \quad p_1 x_1 + p_2 x_2 = m $$
+
+As illustrated in the notes, we can solve this problem by formulating the Lagrangian and solving the first-order conditions, leading to the following optimal values for $x_1$ and $x_2$:
 
 $$ x_1^* = \frac{\alpha}{\alpha + \beta} \frac{m}{p_1}, \quad x_2^* = \frac{\beta}{\alpha + \beta} \frac{m}{p_2} $$
 
-Assume $\beta = 1 - \alpha$.
+We will make a simplification and assume $\beta = 1 - \alpha$, so we have:
 
 $$ x_1^* = \frac{\alpha m}{p_1}, \quad x_2^* = \frac{(1-\alpha) m}{p_2} $$
 
-Note that $m = p_1 x_1 + p_2 x_2$ is the budget constraint. $\alpha$ determines the share of expenditure on good 1. What is the value x1 and x2 for $\alpha = 0.5$, $m = 100$, $p_1 = 5$, and $p_2 = 5$, should be x1 = 10 and x2 = 10.
+Thus, the utility-maximizing values of $x_1$ and $x_2$ allocate an $\alpha$ fraction of income to good 1 and a $(1-\alpha)$ fraction to good 2.
 
-1. Write a function in python that gives x_1 and x_2 as function of $\alpha$, $m$, $p_1$, and $p_2$. Call this function `solve_by_hand` as we solved the expressions for demand by hand are then coding that in Python. Once we write the function, we will also test it with the following parameters: $\alpha = 0.5$, $m = 100$, $p_1 = 5$, and $p_2 = 5$.
+## Optimization by Hand
+
+To begin, we'll code the expressions we solved manually above to perform some comparative statics. Let's write a Python function, `solve_by_hand`, that outputs the values of $x_1$ and $x_2$ as a function of the parameters $\alpha$, $m$, $p_1$, and $p_2$ based on the above expressions.
 
 ```{python}
-#| echo: true
-#| name: solve_by_hand
-
-# Define the function
 def solve_by_hand(alpha, m, p1, p2):
     x1 = alpha * m / p1
     x2 = (1 - alpha) * m / p2
     return x1, x2
+```
 
-# Implement the function
+Let's test this function at the following parameter values: 
+$$\alpha = 0.5, \ m = 100, \ p_1 = 5, \ p_2 = 10$$
+We should get $x_1^* = 0.5 \times 100/5 = 10$ and $x_2^* = 0.5 \times 100/10 = 5$.
+
+```{python}
+# Parameters
 alpha = 0.5
 m = 100
 p1 = 5
-p2 = 5
+p2 = 10
+
+# Solve for the optimal values of x1 and x2
 x1, x2 = solve_by_hand(alpha, m, p1, p2)
 
 # Print the results (round to 2 decimal places)
-x1, x2 = round(x1, 2), round(x2, 2)
-print(f"Demand for good 1: {x1}")
-print(f"Demand for good 2: {x2}")
-
+print(f"Demand for good 1: {round(x1, 2)}")
+print(f"Demand for good 2: {round(x2, 2)}")
 ```
 
-2. Now let's do some comparative statics. 
-    - a. We will plot demand for good 1 as a function of price of good 1 fixing other parameters at above values.
-    - b. Add another curve to the existing plot 1, where m = 200.
+Next, we'll perform some comparative statics:
+
+a. We'll plot the demand for good 1 as a function of its price, keeping the other parameters fixed at the values specified above.
+b. Then, we'll add another curve to the same plot, this time with $m = 200$.
 
 ```{python}
-#| echo: true
-#| name: comparative_statics
-#| depends: solve_by_hand
 
 # Import necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Create a vector of 25 price values for good 1 between 1 and 10
+# Create a vector of 25 prices for good 1 between 1 and 10
 K = 25 # Number of points
 p1_vals = np.linspace(1, 10, K)
 
-# Calculate demand for goods for each price value in a loop
-x1_vals = np.zeros(K)
-x2_vals = np.zeros(K)
-for i in range(K):
-    x1_vals[i], x2_vals[i] = solve_by_hand(alpha, m, p1_vals[i], p2)
+# Solve for demand at each price value
+x1_vals, x2_vals = solve_by_hand(alpha, m, p1_vals, p2)
 
 # Plot demand for good 1 as a function of price of good 1
 plt.plot(p1_vals, x1_vals)
@@ -115,18 +118,12 @@ plt.ylabel('Demand for good 1')
 plt.show()
 ```
 
-So we get out regular downward sloping demand curve. Now let's add the second curve where m = 200.
+This gives us the standard downward-sloping demand curve. Now, let's overlay a second demand curve for the case when income is $m = 200$.
 
 ```{python}
-#| echo: true
-#| name: comparative_statics2
-#| depends: comparative_statics
 
-# Calculate demand for goods for each price value in a loop with m = 200
-x1_vals2 = np.zeros(K)
-x2_vals2 = np.zeros(K)
-for i in range(K):
-    x1_vals2[i], x2_vals2[i] = solve_by_hand(alpha, 2*m, p1_vals[i], p2)
+# Calculate demand when m = 200
+x1_vals2, x2_vals2 = solve_by_hand(alpha, 200, p1_vals, p2)
 
 # Create a new plot with the second curve
 plt.plot(p1_vals, x1_vals, label='m = 100')
@@ -135,20 +132,23 @@ plt.xlabel('Price of good 1')
 plt.ylabel('Demand for good 1')
 plt.legend()
 plt.show()
-
 ```
 
+Note that, since the demand for good 2 is independent of the price of good 1, both the vectors `x2_vals` and `x2_vals2` will remain constant.
 
 ## Optimization using Python
 
-We saw it can be useful to do comparative statics, etc using a computer than by hand. But for now we solved the expressions by hand and then coded them in Python. Sometimes the expressions are too complicated to solve by hand in economic models, and it can useful to just code up the models to get useful insights, without explicitly solving the model. This is bery common for complex macroeconomic models, which are sometimes only possible to solve using numerical methods. While our problem can be solved analytically, we will still learn how to use Python to solve to get a taste of how to solve more complex models.
+So far, we’ve seen how programming allows us to express quantities from our model and perform comparative statics to understand how they respond to changes in parameters. For instance, by plotting the demand curve above, we can quickly observe that the demand for good 1 decreases with price at a diminishing rate.
 
-We will first fix $alpha = 0.5$, $m = 100$, $p_1 = 5$, and $p_2 = 5$ and use minimize from scipy to solve for the optimal values of $x_1$ and $x_2$. Then as before we will use our logic and write a function to solve for demand given the parameters. Call this function `solve_demand`.
+Up to this point, we solved the expressions manually and then implemented them in Python. However, in many economic models, the expressions can become too complex to solve analytically, making it more practical to code the models directly to gain insights without explicitly solving them. While our problem can be solved analytically, we’ll still learn how to use Python to solve it without relying on analytical expressions for $x_1$ and $x_2$, to get a sense of how to approach more complex models.
+
+We will first fix the parameters at following values:
+$$\alpha = 0.5, \ m = 100, \ p_1 = 5, \ p_2 = 10$$
+
+and write the code to solve for the optimal values of $x_1$ and $x_2$ using the `minimize` function from the `scipy.optimize` library. We will then embed this code in a function called `solve_demand` that takes the parameters as inputs and returns the optimal values of $x_1$ and $x_2$.
 
 
 ```{python}
-#| echo: true
-#| name: solve_in_python
 
 import numpy as np
 from scipy.optimize import minimize
@@ -157,7 +157,7 @@ from scipy.optimize import minimize
 alpha = 0.5
 m = 100
 p1 = 5
-p2 = 5
+p2 = 10
 
 # Utility function
 def utility(x):
@@ -183,59 +183,52 @@ print(f"Demand for good 2: {round(x2, 2)}")
 
 ```
 
-So in this case, we just told the computer out objective function and constraints and it solved for the optimal values of $x_1$ and $x_2$ for a given set of parameters. The computer can also plot the function for us and tell us how x1 and x2 change with parameters, but off course it can only do so numerically, not give us the exact expressions. But in a lot of cases, that is all we need.
+Note: The utility function is defined as negative because we are maximizing utility, so we are effectively minimizing the negative of the utility function.
 
-Note that we actually defined neg of utility as function to minimize, since we want to maximize utility.
-
-Now that we know how to solve for demand using Python, let's actually define a function using the logic above to solve for demand given the parameters. Essentially just enveloping the code above in a function.
+In the code above, we simply provided the computer with our objective function and constraints, and it solved for the optimal values of $x_1$ and $x_2$ given a set of parameters. This means we didn’t need to solve the first-order conditions by hand. Of course, we don’t get an analytical expression for how demand depends on income and prices as we did before. However, we can extend this approach by embedding the code in a function that takes the parameters as inputs and returns the optimal values. This way, we can plot the quantities for different parameter values and gain insights into how the optimal quantities depend on prices and income.
 
 ```{python}
-#| echo: true
-#| name: solve_demand
-#| depends: solve_in_python
-
-# Define the function
 def solve_demand(alpha, m, p1, p2):
+    
     def utility(x):
         x1, x2 = x
         return -(x1**alpha) * x2 ** (1 - alpha)
+    
     def budget_constraint(x):
         x1, x2 = x
         return m - p1 * x1 - p2 * x2
+    
     constraints = ({"type": "eq", "fun": budget_constraint})
-    initial_guess = [2, 5]
+    initial_guess = [1, 2]
     result = minimize(utility, initial_guess, constraints=constraints)
     x1, x2 = result.x
+    
     return round(x1, 2), round(x2, 2)
-
-
-# Implement the function
-m = 100
-p1 = 5
-p2 = 5
-alpha = 0.5
-x1, x2 = solve_demand(alpha, m, p1, p2)
-
-print(f"Demand for good 1: {x1}")
-print(f"Demand for good 2: {x2}")
 
 ```
 
-Now again you can plot demand for each good as a function of it's price aka demand curve. And also see how this changes with income, shifts right. 
+Let's test the function with the same parameters as before.
 
 ```{python}
-#| echo: true
+m = 100
+p1 = 5
+p2 = 10
+alpha = 0.5
+x1, x2 = solve_demand(alpha, m, p1, p2)
+print(f"Demand for good 1: {x1}")
+print(f"Demand for good 2: {x2}")
+```
 
-# Apply function in loop for different prices of good 1
-x1vals1 = np.zeros(K)
-x1vals2 = np.zeros(K)
-for i in range(K):
-    x1vals1[i], _ = solve_demand(alpha, m, p1_vals[i], p2)
-    x1vals2[i], _ = solve_demand(alpha, 2*m, p1_vals[i], p2)
+Now that we have the function `solve_demand`, we can use it to plot the demand for good 1 as a function of its price, similar to what we did earlier.
+
+```{python}
+# Apply function to a range of prices for good 1
+x = [solve_demand(alpha, m, p1, p2) for p1 in p1_vals]
+x1_vals3, x2_vals3 = np.array(x).T
 
 # Plot demand curves
-plt.plot(p1_vals, x1vals1, label='m = 100')
-plt.plot(p1_vals, x1vals2, label='m = 200')
+plt.plot(p1_vals, x1_vals3, label='Demand for good 1')
+plt.plot(p1_vals, x2_vals3, label='Demand for good 2')
 plt.xlabel('Price of good 1')
 plt.ylabel('Demand')
 plt.legend()
@@ -245,22 +238,80 @@ plt.show()
 
 
 # Exercise 
+The utility function used in the above example is called a Cobb-Douglas function. In this exercise, we will consider utility maximization with a CES utility function. In particular, the CES utility function is given by:
 
-In this exercise, we will consider utility maximization with a CES utility function. The function used in the above example is called a Cobb-Douglas utility function, which is a special case of the CES utility function. 
-
-In particular, the utility function is given by:
 $$ U(x_1, x_2) = \left( \alpha x_1^{\rho} + (1 - \alpha) x_2^{\rho} \right)^{1/\rho} $$
 
-Where $x_1$ and $x_2$ are the quantities of good 1 and good 2 consumed, respectively. $\alpha$ is the share of expenditure on good 1, $\rho$ is the elasticity of substitution between the two goods.
+Here,
 
-- stuff about CES function, elasticity of substitution, etc.
+-  $\alpha$  is a parameter between 0 and 1 that reflects the relative weight or importance of the goods.
+-  $\rho$ controls how easily the consumer can substitute between the two goods.
+   -  When $\rho \to 1$, the goods are perfect substitutes.
+   -  When $\rho \to -\infty$, the goods are perfect complements.
+
+Also, note that the Cobb-Douglas utility function is a special case of the CES utility function with $\rho \to 0$.
 
 Each part is worth 2.5 points.
 
-1.  Modify `solve_demand` to create a function called `solve_demand_ces` that solves for the demand of good 1 and good 2 given the CES utility function.
-2. Plot the own demand and cross demand curves for good 1 and good 2 as a function of the price of good 1 and good 2. Put these plots in a 2x2 grid with appropriate labels and titles. 
-3. Verify that the demand for good 1 and good 2 same as when using solve_demand function when rho very small ie. close to 0.001.
-4.  When rho really large (try a big number like 100), what happens to the demand for good 1 and good 2? Try a number close to 1 (like 0.95)
-5.  Write a short paragraph explaining that if price of Heinz ketchup goes up, what happens to the demand for French's mustard, if the two are complements. 
+1.  Modify the `solve_demand` function to create a new function, `solve_demand_ces`, which solves for the optimal quantities of good 1 and good 2 given the CES utility function. (This new function will include an additional parameter, $\rho$.) 
+2.  Find the optimal $x_1$ and $x_2$ at the following parameter values: $\alpha = 0.5, \rho = 0.99, \ m = 100, \ p_1 = 5, \ p_2 = 10$. Print the results. How do these values change if $\rho=0.001$ and when $\rho = -200$?
+3. Plot the demand for good 2 as a function of the price of good 1 for the CES utility function with same parameters as in part 2. But in the case of $\rho = 0.5$ and $\rho=-1$.  
+4.  If I was using this utility function to model the demand for Heinz ketchup and French's mustard, which case would be more appropriate: $\rho = 0.5$ or $\rho = -1$? Now what if I was modeling the demand for Heinz ketchup and Hunts ketchup, which case would be more appropriate: $\rho = 0.5$ or $\rho = -1$? Explain your answer.
 
 Submit Jupyter notebook with the code and the answers to the questions.
+
+## Solution
+
+```{python}
+def solve_demand_ces(alpha, rho, m, p1, p2):
+    
+    def utility(x):
+        x1, x2 = x
+        return -(alpha * x1 ** rho + (1 - alpha) * x2 ** rho) ** (1 / rho)
+    
+    def budget_constraint(x):
+        x1, x2 = x
+        return m - p1 * x1 - p2 * x2
+    
+    constraints = ({"type": "eq", "fun": budget_constraint})
+    initial_guess = [1, 2]
+    result = minimize(utility, initial_guess, constraints=constraints)
+    x1, x2 = result.x
+    
+    return round(x1, 2), round(x2, 2)
+
+```
+
+```{python}
+# Parameters
+alpha = 0.5
+m = 100
+p1 = 5
+p2 = 10
+
+x1, x2 = solve_demand_ces(alpha, 0.99, m, p1, p2)
+print(f"Good 1: {x1}", f"Good 2: {x2}")
+
+x1, x2 = solve_demand_ces(alpha, 0.001, m, p1, p2)
+print(f"Good 1: {x1}", f"Good 2: {x2}")
+
+x1, x2 = solve_demand_ces(alpha, -200, m, p1, p2)
+print(f"Good 1: {x1}", f"Good 2: {x2}")
+```
+
+```{python}
+# Create a vector of 25 prices for good 1 between 1 and 10
+K = 25 # Number of points
+p1_vals = np.linspace(1, 10, K)
+
+rho = -1
+# Calculate demand for good 1 and good 2 at each price value
+x = [solve_demand_ces(alpha, rho, m, p1, p2) for p1 in p1_vals]
+x1_vals, x2_vals = np.array(x).T
+
+# Plot demand for good 1 as a function of price of good 1
+plt.plot(p1_vals, x2_vals)
+plt.xlabel('Price of good 1')
+plt.ylabel('Demand for good 2')
+
+```
