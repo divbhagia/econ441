@@ -876,133 +876,133 @@ What is the interpretation of $\beta_1$?
 \end{frame}
 
 
-%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Integration}
-%\begin{witemize}
-%  \item Integration is the reverse of differentiation 
-%  \item If $f(x)$ is the derivative of $F(x)$, we can \textit{integrate} $f(x)$ to find $F(x)$
-%  $$ \frac{d}{d x} F(x)=f(x) \Rightarrow \int f(x) d x=F(x)+c $$
-%  \item Rules of integration follow from rules of differentiation
-%\end{witemize}
-%\end{frame}
-%
-%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Rules of Integration}
-%\underline{Power Rule}
-%$$\int x^n d x=\frac{1}{n+1} \cdot x^{n +1} + c \quad(n \neq-1)$$
-%
-%\textit{Examples}: $$ \int x^3 d x , \quad \quad \int x d x, \quad  \quad \int 1 d x $$
-%\end{frame}
-%
-%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Rules of Integration}
-%\underline{Exponential Rule}
-%$$
-%\int e^x d x=e^x+c
-%$$
-%
-%\underline{Log Rule}
-%$$
-%\int \frac{1}{x} d x=\ln x+c \quad(x>0)
-%$$
-%\end{frame}
-%
-%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Rules of Integration}
-%\underline{Integral of a sum}
-%$$
-%\int[f(x)+g(x)] d x=\int f(x) d x+\int g(x) d x$$
-%
-%\underline{Integral of a multiple}
-%$$\int k f(x) d x=k \int f(x) d x$$
-%
-%\textit{Example}: $$ \int (x^2 + 3x + 1) dx \hspace{7cm} $$
-%\end{frame}
-%
-%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Definite Integrals}
-%Definite integral:
-%$$ \left.\int_a^b f(x) d x=F(x)\right]_{a}^b=F(b)-F(a) $$
-%\textit{Example}:  $$ \int_1^3 2 x^2 = \hspace{7cm}$$
-%\end{frame}
-%
-%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Area under the curve} 
-%\vspace{0.5em}
-%\begin{columns}[c]
-%\begin{column}{0.6\textwidth}
-%  	\begin{tikzpicture}[scale=0.9]
-%  \begin{axis}[
-%      axis lines = middle,
-%      xlabel = \(x\), 
-%      xlabel style={at={(axis description cs:1,0)}, anchor=west},
-%      ylabel = {\(f(x)\)}, 
-%      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
-%      ymin=0,
-%      xmin=0,
-%      xmax=6,
-%      ymax=30,
-%      xtick={0.01,1.1,2.2,3.3, 4.4, 5.5},
-%      xticklabels = {$x_0$, $x_1$, $x_2$, $x_3$, $x_4$, $x_5$},
-%      ytick=\empty,
-%      samples=100
-%    ]
-%    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=6]{25+ x-x^2}\closedcycle;
-%    \addplot[domain=0:6, black, very thick]{25+ x-x^2};
-%  \end{axis}
-%  \draw[decorate,decoration={brace,amplitude=4pt,mirror}, thick] (3.15,-0.65) -- (4.8,-0.65);
-%  \node at (4,-1.25) {$\Delta x_3 $};
-%    \node at (4,5.25) {$f(x_3) $};
-%\end{tikzpicture}
-%\end{column}	
-%\begin{column}{0.4\textwidth}
-% $ Area \approx \sum_{i=1}^n f(x_i) \Delta x_i $
-%\end{column}	
-%\end{columns}
-%\end{frame}
-%
-%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}{Area under the curve} 
-%\vspace{1em}
-%\begin{columns}[c]
-%\begin{column}{0.5\textwidth}
-%  	\begin{tikzpicture}[scale=0.9]
-%  \begin{axis}[
-%      axis lines = middle,
-%      xlabel = \(x\), 
-%      xlabel style={at={(axis description cs:1,0)}, anchor=west},
-%      ylabel = {\(f(x)\)}, 
-%      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
-%      ymin=0,
-%      xmin=0,
-%      xmax=6,
-%      ymax=30,
-%      xtick=\empty,
-%      ytick=\empty,
-%      samples=100
-%    ]
-%    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=20]{25+ x-x^2}\closedcycle;
-%    \addplot[domain=0:6, black,  very thick]{25+ x-x^2};
-%    
-%  \end{axis}
-%\end{tikzpicture}
-%\end{column}	
-%\begin{column}{0.5\textwidth}
-%\begin{align*}
-%	Area &= \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i) \Delta x_i \\
-%	& = \int_{x_1}^{x_n} f(x) dx
-%\end{align*}  
-%\end{column}	
-%\end{columns}
-%\end{frame}
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Integration}
+\begin{witemize}
+  \item Integration is the reverse of differentiation 
+  \item If $f(x)$ is the derivative of $F(x)$, we can \textit{integrate} $f(x)$ to find $F(x)$
+  $$ \frac{d}{d x} F(x)=f(x) \Rightarrow \int f(x) d x=F(x)+c $$
+  \item Rules of integration follow from rules of differentiation
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Rules of Integration}
+\underline{Power Rule}
+$$\int x^n d x=\frac{1}{n+1} \cdot x^{n +1} + c \quad(n \neq-1)$$
+
+\textit{Examples}: $$ \int x^3 d x , \quad \quad \int x d x, \quad  \quad \int 1 d x $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Rules of Integration}
+\underline{Exponential Rule}
+$$
+\int e^x d x=e^x+c
+$$
+
+\underline{Log Rule}
+$$
+\int \frac{1}{x} d x=\ln x+c \quad(x>0)
+$$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Rules of Integration}
+\underline{Integral of a sum}
+$$
+\int[f(x)+g(x)] d x=\int f(x) d x+\int g(x) d x$$
+
+\underline{Integral of a multiple}
+$$\int k f(x) d x=k \int f(x) d x$$
+
+\textit{Example}: $$ \int (x^2 + 3x + 1) dx \hspace{7cm} $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Definite Integrals}
+Definite integral:
+$$ \left.\int_a^b f(x) d x=F(x)\right]_{a}^b=F(b)-F(a) $$
+\textit{Example}:  $$ \int_1^3 2 x^2 = \hspace{7cm}$$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Area under the curve} 
+\vspace{0.5em}
+\begin{columns}[c]
+\begin{column}{0.6\textwidth}
+  	\begin{tikzpicture}[scale=0.9]
+  \begin{axis}[
+      axis lines = middle,
+      xlabel = \(x\), 
+      xlabel style={at={(axis description cs:1,0)}, anchor=west},
+      ylabel = {\(f(x)\)}, 
+      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
+      ymin=0,
+      xmin=0,
+      xmax=6,
+      ymax=30,
+      xtick={0.01,1.1,2.2,3.3, 4.4, 5.5},
+      xticklabels = {$x_0$, $x_1$, $x_2$, $x_3$, $x_4$, $x_5$},
+      ytick=\empty,
+      samples=100
+    ]
+    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=6]{25+ x-x^2}\closedcycle;
+    \addplot[domain=0:6, black, very thick]{25+ x-x^2};
+  \end{axis}
+  \draw[decorate,decoration={brace,amplitude=4pt,mirror}, thick] (3.15,-0.65) -- (4.8,-0.65);
+  \node at (4,-1.25) {$\Delta x_3 $};
+    \node at (4,5.25) {$f(x_3) $};
+\end{tikzpicture}
+\end{column}	
+\begin{column}{0.4\textwidth}
+ $ Area \approx \sum_{i=1}^n f(x_i) \Delta x_i $
+\end{column}	
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Area under the curve} 
+\vspace{1em}
+\begin{columns}[c]
+\begin{column}{0.5\textwidth}
+  	\begin{tikzpicture}[scale=0.9]
+  \begin{axis}[
+      axis lines = middle,
+      xlabel = \(x\), 
+      xlabel style={at={(axis description cs:1,0)}, anchor=west},
+      ylabel = {\(f(x)\)}, 
+      ylabel style={at={(axis description cs:0,0.95)}, anchor=east},
+      ymin=0,
+      xmin=0,
+      xmax=6,
+      ymax=30,
+      xtick=\empty,
+      ytick=\empty,
+      samples=100
+    ]
+    \addplot[ybar, ybar interval, fill=grey!30, domain=0:5.5, samples=20]{25+ x-x^2}\closedcycle;
+    \addplot[domain=0:6, black,  very thick]{25+ x-x^2};
+    
+  \end{axis}
+\end{tikzpicture}
+\end{column}	
+\begin{column}{0.5\textwidth}
+\begin{align*}
+	Area &= \lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i) \Delta x_i \\
+	& = \int_{x_1}^{x_n} f(x) dx
+\end{align*}  
+\end{column}	
+\end{columns}
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Few last words}
 \begin{witemize}
-\item Sample exam, midterm exams from previous semesters, and help sheet on course website
-\item Note: We skipped integration so ignore slides after slide 15 in Lecture 7 and homework problems from chapter 14.
-%  \item Additional office hours this week: Thursday, 4-6 pm. Or by appointment.
+\item Sample exams and help sheet on course website
+%\item Note: We skipped integration so ignore slides after slide 15 in Lecture 7 and homework problems from chapter 14.
+\item Additional office hours this week: Thursday, 4-6 pm. Or by appointment.
   \item Good luck for the exam!
 \end{witemize}
 \end{frame}
