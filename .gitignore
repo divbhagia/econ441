@@ -1,9 +1,9 @@
 # Ignore selected folders
 Compiled Material/
-Exams/Midterm/Midterm-Spring*
-Exams/Midterm/Midterm-Fall*
+Exams/Midterm/Past/Midterm-Spring*
+Exams/Midterm/Past/Midterm-Fall*
 Exams/Midterm/note_to_self.txt
-Exams/Midterm/question_bank*
+Exams/Midterm/question-bank*
 Exams/Final/Final.pdf
 Exams/Final/Final.tex
 Homeworks/
