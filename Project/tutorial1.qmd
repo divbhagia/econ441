@@ -170,12 +170,11 @@ import matplotlib.pyplot as plt
 x = np.linspace(0, 5, 100)
 y = x**3
 plt.plot(x, y)
-plt.show()
 ```
 
 <!-- `plt.plot(x, y)` creates a line plot of `y` against `x`. `plt.show()` displays the plot. -->
 
-Now what if we wanted to add another line for $z = x^3$ to the same plot? We can do this by calling the `plot` function again before calling `show`. The code below implements this and also adds a legend and labels to the plot.
+Now what if we wanted to add another line for $z = x^3$ to the same plot? We can do this by calling the `plot` function again. The code below implements this and also adds a legend and labels to the plot.
 
 ```{pyodide-python}
 plt.plot(x, y, label='y = x^3')
@@ -183,7 +182,6 @@ plt.plot(x, x**2, label='z = x^2')
 plt.xlabel('x')
 plt.ylabel('f(x)')
 plt.legend()
-plt.show()
 ```
 
 ### Loops
