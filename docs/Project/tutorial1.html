@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -228,7 +262,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"id":1,"code":"print('Hello, World!')","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":2,"code":"import numpy\nnumpy.sqrt(25)","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":3,"code":"import numpy as np\nnp.sqrt(25)","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":4,"code":"x = 1\nx","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":5,"code":"x = [1, 1.1, 'Hello', True]\nx","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":6,"code":"print('1st element:', x[0])\nprint('3rd element:', x[2])","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":7,"code":"x = [0, 1, 2, 3, 4]\nsum(x)","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":8,"code":"def square(x):\n    return x**2\n\nsquare(5)","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":9,"code":"def f(x, a, b):\n    return a*x + b","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":10,"code":"import numpy as np\nx = np.array([0, 1, 2, 3, 4])\nx","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":11,"code":"x**2","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":12,"code":"np.linspace(0, 1, 5)","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":13,"code":"import matplotlib.pyplot as plt\nx = np.linspace(0, 5, 100)\ny = x**3\nplt.plot(x, y)","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":14,"code":"plt.plot(x, y, label='y = x^3')\nplt.plot(x, x**2, label='z = x^2')\nplt.xlabel('x')\nplt.ylabel('f(x)')\nplt.legend()","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":15,"code":"for i in [1, 2, 3]:\n    print(i)","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":16,"code":"i = 1\nwhile i <= 3:\n    print(i)\n    i += 1","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":17,"code":"x = [1, 2, 3]\nsquared = [i**2 for i in x]\nsquared","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":18,"code":"x = 5\nif x > 0:\n    print('Positive')\nelif x < 0:\n    print('Negative')\nelse:\n    print('Zero')","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}},{"id":19,"code":"from scipy.optimize import minimize\n\ndef f(x):\n    return (x - 2)**2\n\nresult = minimize(f, x0=0)\nresult","options":{"label":"","message":"true","out-width":"700px","fig-cap":"","dpi":72,"comment":"","read-only":"false","output":"true","context":"interactive","classes":"","out-height":"","results":"markup","fig-width":7,"fig-height":5,"warning":"true","autorun":""}}];
+globalThis.qpyodideCellDetails = [{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":1,"code":"print('Hello, World!')"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":2,"code":"import numpy\nnumpy.sqrt(25)"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":3,"code":"import numpy as np\nnp.sqrt(25)"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":4,"code":"x = 1\nx"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":5,"code":"x = [1, 1.1, 'Hello', True]\nx"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":6,"code":"print('1st element:', x[0])\nprint('3rd element:', x[2])"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":7,"code":"x = [0, 1, 2, 3, 4]\nsum(x)"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":8,"code":"def square(x):\n    return x**2\n\nsquare(5)"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":9,"code":"def f(x, a, b):\n    return a*x + b"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":10,"code":"import numpy as np\nx = np.array([0, 1, 2, 3, 4])\nx"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":11,"code":"x**2"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":12,"code":"np.linspace(0, 1, 5)"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":13,"code":"for i in [1, 2, 3]:\n    print(i)"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":14,"code":"i = 1\nwhile i <= 3:\n    print(i)\n    i += 1"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":15,"code":"x = [1, 2, 3]\nsquared = [i**2 for i in x]\nsquared"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":16,"code":"x = 5\nif x > 0:\n    print('Positive')\nelif x < 0:\n    print('Negative')\nelse:\n    print('Zero')"},{"options":{"comment":"","results":"markup","autorun":"","classes":"","out-height":"","message":"true","context":"interactive","dpi":72,"output":"true","read-only":"false","label":"","fig-height":5,"fig-width":7,"fig-cap":"","warning":"true","out-width":"700px"},"id":17,"code":"from scipy.optimize import minimize\n\ndef f(x):\n    return (x - 2)**2\n\nresult = minimize(f, x0=0)\nresult"}];
 
 
 </script>
@@ -822,30 +856,55 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="plots">Plots</h3>
 <p>We will use the <code>matplotlib</code> library to create plots. To do so, we first need to import the <code>pyplot</code> module from <code>matplotlib</code>. Then we can use the <code>plot</code> function to create a simple line plot.</p>
 <p>Here is an example of creating a plot of <span class="math inline">\(y = x^3\)</span> for <span class="math inline">\(x\)</span> between 0 and 5:</p>
-<div id="qpyodide-insertion-location-13"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="54e4ea37" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tutorial1_files/figure-html/cell-2-output-1.png" width="352" height="263" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 <!-- `plt.plot(x, y)` creates a line plot of `y` against `x`. `plt.show()` displays the plot. -->
 <p>Now what if we wanted to add another line for <span class="math inline">\(z = x^3\)</span> to the same plot? We can do this by calling the <code>plot</code> function again. The code below implements this and also adds a legend and labels to the plot.</p>
-<div id="qpyodide-insertion-location-14"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="4ce9daa8" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, label<span class="op">=</span><span class="st">'y = x^3'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x, x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'z = x^2'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'f(x)'</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plt.legend()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tutorial1_files/figure-html/cell-3-output-1.png" width="370" height="282" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="loops" class="level3">
 <h3 class="anchored" data-anchor-id="loops">Loops</h3>
 <p>Loops are used to execute a block of code multiple times. Python has two types of loops: <code>for</code> loops and <code>while</code> loops.</p>
 <p>A <code>for</code> loop is used to iterate over a sequence (e.g., a list, tuple, string, or range). Here is an example of a <code>for</code> loop that prints the elements of a list:</p>
-<div id="qpyodide-insertion-location-15"></div>
+<div id="qpyodide-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>A <code>while</code> loop is used to execute a block of code as long as a condition is true. Here is an example of a <code>while</code> loop that prints the numbers from 1 to 3:</p>
-<div id="qpyodide-insertion-location-16"></div>
+<div id="qpyodide-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>List comprehensions utilize a <code>for</code> loop to create a new list by applying an operation to each element of an existing list. Here is an example of a list comprehension that squares each element of a list:</p>
-<div id="qpyodide-insertion-location-17"></div>
+<div id="qpyodide-insertion-location-15"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="conditional-statements" class="level3">
 <h3 class="anchored" data-anchor-id="conditional-statements">Conditional Statements</h3>
 <p>Conditional statements are used to perform different actions based on different conditions. Python has <code>if</code>, <code>elif</code>, and <code>else</code> statements for this purpose. Here is an example of an <code>if</code> statement that prints whether a number is positive, negative, or zero:</p>
-<div id="qpyodide-insertion-location-18"></div>
+<div id="qpyodide-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 </section>
@@ -853,7 +912,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="optimization-in-python">Optimization in Python</h2>
 <p>We can also use Python to solve optimization problems. To do this, we will use the <code>scipy.optimize</code> module from the <code>SciPy</code> library.</p>
 <p>Here is an example of solving a simple optimization problem using the <code>minimize</code> function from <code>scipy.optimize</code>. The code below minimizes the function <span class="math inline">\(f(x) = (x - 2)^2\)</span>:</p>
-<div id="qpyodide-insertion-location-19"></div>
+<div id="qpyodide-insertion-location-17"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>The <code>minimize</code> function takes the function to minimize and an initial guess <code>x0</code> as arguments. It returns an object that contains information about the optimization result. The optimal value of <span class="math inline">\(x\)</span> is contained in the <code>x</code> attribute of the result object, which can also be accessed directly by calling <code>result.x</code>. What is the optimal value of <span class="math inline">\(x\)</span> in this case?</p>
 <p><a href="../Project/tutorial2.html">Tutorial 2</a> will show you how to solve a slightly more complex optimization problem using Python.</p>

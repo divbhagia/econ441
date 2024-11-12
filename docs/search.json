@@ -36,18 +36,83 @@
     ]
   },
   {
-    "objectID": "syllabus.html",
-    "href": "syllabus.html",
-    "title": "Syllabus",
+    "objectID": "Project/tutorial1.html",
+    "href": "Project/tutorial1.html",
+    "title": "Tutorial 1: Basic Python Programming",
     "section": "",
-    "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsCourse StructureMaterialGrading\n\n\n\nOverview\nThe economy is shaped by the actions of various economic agents, each driven by their own unique set of incentives and constraints. Understanding this complex system is a challenging task, as it involves keeping track of the interplay of several moving pieces. Enter Mathematics, the protagonist of this story, which enables us to represent complex economic relationships and interactions elegantly. Mathematical economic models, while often simplifications of reality, provide us with a structured way of thinking about economic issues.\nThis class will introduce you to the world of mathematical economics. We will cover essential tools used in economics, including linear algebra, calculus, and optimization, and apply these tools to economic problems. For example, you will learn how to express and solve complex systems of equations that describe the economy using matrix algebra and to solve unconstrained and constrained optimization problems, such as those related to utility maximization, price determination, wage setting, and more.\nWe will also spend some time thinking about suitable assumptions for effectively modeling specific aspects the economy. Hopefully, after this class, you will develop some appreciation for mathematical economics, while also being able to think critically about the advantages and limitations of this approach to understand economics.\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nGain a deep understanding of essential mathematical tools used in economics, including the application of matrix algebra to solve systems of equations and the solving of constrained and unconstrained optimization problems.\nLearn how these mathematical tools are applied to a range of economic issues, from analyzing firm and consumer behavior to implications of fiscal policies, preparing students for graduate-level coursework in economics.\nDevelop the ability to mathematically model economic phenomenon, carefully considering the appropriate assumptions to best represent specific behavior of economic agents or particular market structures.\n\n\n\n\n\nCourse Structure\nAll meetings for this course are expected to be held in person. During our class sessions, I utilize lecture slides to cover the topics for the day, and we work on related problems together, typically using worksheets. While you work on these worksheets, I move around the classroom to provide assistance, and you can also seek help from your peers; it’s an engaging and collaborative learning experience. As a result, class attendance is crucial for this course.\nFor each week’s material, you will have homework problems that, while not graded, you should aim to complete every week. Even though solutions to the problems are provided, you will benefit immensely from trying them on your own before checking the answers. We will also have in-class quizzes about every other week, with questions similar to the homework. So another reason to keep on top of that homework!\n\n\n\n\nCourse Material\nAll course materials—including lecture slides, worksheets, notes for each topic, and homework problems with solutions—are available on the course website. These materials should generally be sufficient for your study needs. However, if you find yourself needing more detailed explanations for certain topics, you might consider acquiring the following textbook that this course is based on:\n\nChiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition\n\nYou can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me and I will try my best to find you one.\n\n\n\n\nGrading Criteria\nIf you are enrolled in this course for undergraduate-level credit, your grade will be determined by active participation, five in-class quizzes, and two exams, with the following breakdown:\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nActive Engagement\n\n\n10\n\n\n\n\nQuizzes\n\n\n20\n\n\n\n\nMidterm Exam\n\n\n30\n\n\n\n\nFinal Exam\n\n\n40\n\n\n\nIf you are enrolled in this course for graduate-level credit, you must also complete a project using Python. The project will substitute for active engagement, thus accounting for 10% of your grade, and will be due on the last day of class."
+    "text": "You need to know some basic Python programming to complete the project. This tutorial will teach you these basics. If you are already familiar with Python, you can skip this tutorial and proceed to Tutorial 2.\nIf you are looking for some additional resources to learn Python, QuantEcon is a great resource for learning programming, with a focus on economics and finance. You can find their Python programming lectures here.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
   },
   {
-    "objectID": "exams.html",
-    "href": "exams.html",
-    "title": "Exams",
+    "objectID": "Project/tutorial1.html#introduction",
+    "href": "Project/tutorial1.html#introduction",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Introduction",
+    "text": "Introduction\nPython is a general purpose programming language, which is free and open source. Open source means that the code is available for anyone to use, modify, and distribute.\nPython, when installed, comes with a standard library that includes many modules and functions to perform common tasks. However, we often need to use additional packages to perform more specialized tasks. Some of the most commonly used packages for data analysis and scientific computing include:\n\nNumPy: provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.\nPandas: provides data structures and data analysis tools for working with structured data.\nMatplotlib: provides enhanced functionality for creating plots.\nSciPy: provides a collection of numerical algorithms and toolboxes to perform scientific computing tasks such as differentiation, intergration, optimization, etc.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#getting-started",
+    "href": "Project/tutorial1.html#getting-started",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Getting Started",
+    "text": "Getting Started\nFor this project, you will use Google Colab, which is a free cloud service that allows you to write and execute Python code in your browser.\n\nYou will write and execute your code in Colab notebooks, which are interactive documents that can contain both code and rich text elements (such as paragraphs, equations, figures, links, etc.). Colab notebooks have the file extension .ipynb. If you have used Jupyter notebooks before, note that Colab notebooks are just Jupyter notebooks that are hosted by Colab.\nTo get started, follow these steps:\n\nOpen your web browser and go to Google Colab.\nSign in with your Google account.\nCreate a new notebook by clicking on File -&gt; New notebook in drive.\nYou can now start writing and executing Python code in the notebook. To test it out, type print('Hello!') in a code cell and run it by clicking the play button or pressing Shift + Enter.\nOnce you are done, you can save the notebook to your Google Drive or download it to your computer.\n\nAside: If you want to do some serious programming, you should install Python on your computer, which takes a bit more work. But since the focus of this class is not programming, Google Colab is sufficient for our purposes.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#navigating-this-tutorial",
+    "href": "Project/tutorial1.html#navigating-this-tutorial",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Navigating this Tutorial",
+    "text": "Navigating this Tutorial\nThis tutorial is meant to be interactive, so you need to use the Run button to execute the code snippets to see the output. You can also modify the code and run it to see how the output changes. Remember that once you refresh the page, the code will go back to its original state. Try it with the code snippet below by first running it and then replacing World with your name and running it again.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can also copy the code to a Google Colab notebook and play around with it there.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#python-basics",
+    "href": "Project/tutorial1.html#python-basics",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Python Basics",
+    "text": "Python Basics\n\nImporting libraries\nIn Python, you can import libraries using the import statement. For example, to import the numpy library and then use sqrt function from it, you can do the following:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nHowever, it is common to import libraries with an alias to make the code more readable. For example, you can import numpy as np, which is a common convention, and then use the sqrt function as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nData types and variables\nPython has several built-in data types, including integers, floats, booleans, strings, and lists.\n\nIntegers: whole numbers, e.g., 1, 2, 3, etc.\nFloats: numbers with decimal points, e.g., 1.0, 2.5, 3.14, etc.\nBooleans: True or False.\nStrings: sequences of characters enclosed in single or double quotes, e.g., ‘Hello’, “World”, etc.\nLists: ordered collections of elements enclosed in square brackets, e.g., [1, 2, 3], [‘a’, ‘b’, ‘c’], etc.\n\nYou can assign values to variables using the = operator. Python will automatically infer the data type based on the value assigned to the variable.\nFor instance, you can assign the integer value of 1 to a variable x as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that in the above code, we added x at the end, so that when we run the code, Python will print the value of x.\nTo create a list, we can enclose the elements in square brackets as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLists can contain elements of different data types. You can access elements of a list using their index. Python uses zero-based indexing, meaning the first element of the list has an index of 0.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nFunctions\nPython has a number of built-in functions that are available without import. For example, the print function is used to display output. Some other built-in functions include len, max, min, sum, etc. You can try these out in the code cell below:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe also saw that if built-in functions are not sufficient, we can import libraries and use functions from them (e.g., numpy.sqrt).\nHowever, sometimes we need to define our own functions. We can define a function using the def keyword followed by the function name and the arguments in parentheses. The function body is indented and can contain multiple lines of code. Here is an example of a simple function that returns the square of a number:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that in Python, ** is used for exponentiation.\nExercise: Define a function add that takes two arguments x and y and returns their sum. Test the function by calling it with x=3 and y=4.\nNow say we defined the function f as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can call the function f with the arguments x=2, a=3, and b=4 either as f(2, 3, 4) or as f(x=2, a=3, b=4). Both will give the same result. Try it out.\n\n\nNumPy Arrays\nNumPy is a popular Python library for numerical computing. The most important data structure in NumPy is the ndarray, which is a multi-dimensional array. You can create a NumPy array from a Python list using the np.array function. For example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNumPy arrays are similar to lists but must contain elements that are either all numeric or all boolean. You can perform element-wise operations on NumPy arrays, which is not possible with Python lists. For example, you can square all elements of the NumPy array defined above as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSometimes it can be useful to create a grid of evenly spaced numbers. You can do this using the np.linspace function, which takes the start, end, and number of points as arguments. For example, to create an array of 5 numbers between 0 and 1:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPlots\nWe will use the matplotlib library to create plots. To do so, we first need to import the pyplot module from matplotlib. Then we can use the plot function to create a simple line plot.\nHere is an example of creating a plot of \\(y = x^3\\) for \\(x\\) between 0 and 5:\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nx = np.linspace(0, 5, 100)\ny = x**3\nplt.plot(x, y)\n\n\n\n\n\n\n\n\n\nNow what if we wanted to add another line for \\(z = x^3\\) to the same plot? We can do this by calling the plot function again. The code below implements this and also adds a legend and labels to the plot.\n\nplt.plot(x, y, label='y = x^3')\nplt.plot(x, x**2, label='z = x^2')\nplt.xlabel('x')\nplt.ylabel('f(x)')\nplt.legend()\n\n\n\n\n\n\n\n\n\n\nLoops\nLoops are used to execute a block of code multiple times. Python has two types of loops: for loops and while loops.\nA for loop is used to iterate over a sequence (e.g., a list, tuple, string, or range). Here is an example of a for loop that prints the elements of a list:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nA while loop is used to execute a block of code as long as a condition is true. Here is an example of a while loop that prints the numbers from 1 to 3:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nList comprehensions utilize a for loop to create a new list by applying an operation to each element of an existing list. Here is an example of a list comprehension that squares each element of a list:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nConditional Statements\nConditional statements are used to perform different actions based on different conditions. Python has if, elif, and else statements for this purpose. Here is an example of an if statement that prints whether a number is positive, negative, or zero:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#optimization-in-python",
+    "href": "Project/tutorial1.html#optimization-in-python",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Optimization in Python",
+    "text": "Optimization in Python\nWe can also use Python to solve optimization problems. To do this, we will use the scipy.optimize module from the SciPy library.\nHere is an example of solving a simple optimization problem using the minimize function from scipy.optimize. The code below minimizes the function \\(f(x) = (x - 2)^2\\):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe minimize function takes the function to minimize and an initial guess x0 as arguments. It returns an object that contains information about the optimization result. The optimal value of \\(x\\) is contained in the x attribute of the result object, which can also be accessed directly by calling result.x. What is the optimal value of \\(x\\) in this case?\nTutorial 2 will show you how to solve a slightly more complex optimization problem using Python.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to Mathematical Economics",
     "section": "",
-    "text": "Midterm Exam\n\nMidterm Review Slides\nReview videos for finding the inverse of a matrix: Method, Example\nHelp Sheet\nSample Exam 1 (Solutions)\nSample Exam 2 (Solutions) \n\n\n\nFinal Exam\n\nFinal Exam Review Slides\nSample Exam\nSample Exam Solution"
+    "text": "Learn essential mathematical tools encompassing linear algebra, calculus, and optimization, that are widely utilised in analysis of economic problems.\n\nECON 441 | Fall 2024 | College of Business and Economics | California State University\n\n\nInstructor\n   Dr. Div Bhagia     Office: SGMH 3361     dbhagia@fullerton.edu \n\n\nCourse Details\n   SGMH 1308, Tuesdays, 7-9:45 PM     Office hours:\n\n\nTuesdays, 4-6.45 PM, or\nBy appointment (in-person or on Zoom)"
   },
   {
     "objectID": "Project/overview.html",
@@ -722,83 +787,18 @@
     ]
   },
   {
-    "objectID": "Project/tutorial1.html",
-    "href": "Project/tutorial1.html",
-    "title": "Tutorial 1: Basic Python Programming",
+    "objectID": "exams.html",
+    "href": "exams.html",
+    "title": "Exams",
     "section": "",
-    "text": "You need to know some basic Python programming to complete the project. This tutorial will teach you these basics. If you are already familiar with Python, you can skip this tutorial and proceed to Tutorial 2.\nIf you are looking for some additional resources to learn Python, QuantEcon is a great resource for learning programming, with a focus on economics and finance. You can find their Python programming lectures here.",
-    "crumbs": [
-      "Content",
-      "Graduate Project",
-      "Tutorial 1"
-    ]
+    "text": "Midterm Exam\n\nMidterm Review Slides\nReview videos for finding the inverse of a matrix: Method, Example\nHelp Sheet\nSample Exam 1 (Solutions)\nSample Exam 2 (Solutions) \n\n\n\nFinal Exam\n\nFinal Exam Review Slides\nSample Exam\nSample Exam Solution"
   },
   {
-    "objectID": "Project/tutorial1.html#introduction",
-    "href": "Project/tutorial1.html#introduction",
-    "title": "Tutorial 1: Basic Python Programming",
-    "section": "Introduction",
-    "text": "Introduction\nPython is a general purpose programming language, which is free and open source. Open source means that the code is available for anyone to use, modify, and distribute.\nPython, when installed, comes with a standard library that includes many modules and functions to perform common tasks. However, we often need to use additional packages to perform more specialized tasks. Some of the most commonly used packages for data analysis and scientific computing include:\n\nNumPy: provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.\nPandas: provides data structures and data analysis tools for working with structured data.\nMatplotlib: provides enhanced functionality for creating plots.\nSciPy: provides a collection of numerical algorithms and toolboxes to perform scientific computing tasks such as differentiation, intergration, optimization, etc.",
-    "crumbs": [
-      "Content",
-      "Graduate Project",
-      "Tutorial 1"
-    ]
-  },
-  {
-    "objectID": "Project/tutorial1.html#getting-started",
-    "href": "Project/tutorial1.html#getting-started",
-    "title": "Tutorial 1: Basic Python Programming",
-    "section": "Getting Started",
-    "text": "Getting Started\nFor this project, you will use Google Colab, which is a free cloud service that allows you to write and execute Python code in your browser.\n\nYou will write and execute your code in Colab notebooks, which are interactive documents that can contain both code and rich text elements (such as paragraphs, equations, figures, links, etc.). Colab notebooks have the file extension .ipynb. If you have used Jupyter notebooks before, note that Colab notebooks are just Jupyter notebooks that are hosted by Colab.\nTo get started, follow these steps:\n\nOpen your web browser and go to Google Colab.\nSign in with your Google account.\nCreate a new notebook by clicking on File -&gt; New notebook in drive.\nYou can now start writing and executing Python code in the notebook. To test it out, type print('Hello!') in a code cell and run it by clicking the play button or pressing Shift + Enter.\nOnce you are done, you can save the notebook to your Google Drive or download it to your computer.\n\nAside: If you want to do some serious programming, you should install Python on your computer, which takes a bit more work. But since the focus of this class is not programming, Google Colab is sufficient for our purposes.",
-    "crumbs": [
-      "Content",
-      "Graduate Project",
-      "Tutorial 1"
-    ]
-  },
-  {
-    "objectID": "Project/tutorial1.html#navigating-this-tutorial",
-    "href": "Project/tutorial1.html#navigating-this-tutorial",
-    "title": "Tutorial 1: Basic Python Programming",
-    "section": "Navigating this Tutorial",
-    "text": "Navigating this Tutorial\nThis tutorial is meant to be interactive, so you need to use the Run button to execute the code snippets to see the output. You can also modify the code and run it to see how the output changes. Remember that once you refresh the page, the code will go back to its original state. Try it with the code snippet below by first running it and then replacing World with your name and running it again.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can also copy the code to a Google Colab notebook and play around with it there.",
-    "crumbs": [
-      "Content",
-      "Graduate Project",
-      "Tutorial 1"
-    ]
-  },
-  {
-    "objectID": "Project/tutorial1.html#python-basics",
-    "href": "Project/tutorial1.html#python-basics",
-    "title": "Tutorial 1: Basic Python Programming",
-    "section": "Python Basics",
-    "text": "Python Basics\n\nImporting libraries\nIn Python, you can import libraries using the import statement. For example, to import the numpy library and then use sqrt function from it, you can do the following:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nHowever, it is common to import libraries with an alias to make the code more readable. For example, you can import numpy as np, which is a common convention, and then use the sqrt function as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nData types and variables\nPython has several built-in data types, including integers, floats, booleans, strings, and lists.\n\nIntegers: whole numbers, e.g., 1, 2, 3, etc.\nFloats: numbers with decimal points, e.g., 1.0, 2.5, 3.14, etc.\nBooleans: True or False.\nStrings: sequences of characters enclosed in single or double quotes, e.g., ‘Hello’, “World”, etc.\nLists: ordered collections of elements enclosed in square brackets, e.g., [1, 2, 3], [‘a’, ‘b’, ‘c’], etc.\n\nYou can assign values to variables using the = operator. Python will automatically infer the data type based on the value assigned to the variable.\nFor instance, you can assign the integer value of 1 to a variable x as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that in the above code, we added x at the end, so that when we run the code, Python will print the value of x.\nTo create a list, we can enclose the elements in square brackets as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLists can contain elements of different data types. You can access elements of a list using their index. Python uses zero-based indexing, meaning the first element of the list has an index of 0.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nFunctions\nPython has a number of built-in functions that are available without import. For example, the print function is used to display output. Some other built-in functions include len, max, min, sum, etc. You can try these out in the code cell below:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe also saw that if built-in functions are not sufficient, we can import libraries and use functions from them (e.g., numpy.sqrt).\nHowever, sometimes we need to define our own functions. We can define a function using the def keyword followed by the function name and the arguments in parentheses. The function body is indented and can contain multiple lines of code. Here is an example of a simple function that returns the square of a number:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that in Python, ** is used for exponentiation.\nExercise: Define a function add that takes two arguments x and y and returns their sum. Test the function by calling it with x=3 and y=4.\nNow say we defined the function f as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can call the function f with the arguments x=2, a=3, and b=4 either as f(2, 3, 4) or as f(x=2, a=3, b=4). Both will give the same result. Try it out.\n\n\nNumPy Arrays\nNumPy is a popular Python library for numerical computing. The most important data structure in NumPy is the ndarray, which is a multi-dimensional array. You can create a NumPy array from a Python list using the np.array function. For example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNumPy arrays are similar to lists but must contain elements that are either all numeric or all boolean. You can perform element-wise operations on NumPy arrays, which is not possible with Python lists. For example, you can square all elements of the NumPy array defined above as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSometimes it can be useful to create a grid of evenly spaced numbers. You can do this using the np.linspace function, which takes the start, end, and number of points as arguments. For example, to create an array of 5 numbers between 0 and 1:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPlots\nWe will use the matplotlib library to create plots. To do so, we first need to import the pyplot module from matplotlib. Then we can use the plot function to create a simple line plot.\nHere is an example of creating a plot of \\(y = x^3\\) for \\(x\\) between 0 and 5:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNow what if we wanted to add another line for \\(z = x^3\\) to the same plot? We can do this by calling the plot function again. The code below implements this and also adds a legend and labels to the plot.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLoops\nLoops are used to execute a block of code multiple times. Python has two types of loops: for loops and while loops.\nA for loop is used to iterate over a sequence (e.g., a list, tuple, string, or range). Here is an example of a for loop that prints the elements of a list:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nA while loop is used to execute a block of code as long as a condition is true. Here is an example of a while loop that prints the numbers from 1 to 3:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nList comprehensions utilize a for loop to create a new list by applying an operation to each element of an existing list. Here is an example of a list comprehension that squares each element of a list:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nConditional Statements\nConditional statements are used to perform different actions based on different conditions. Python has if, elif, and else statements for this purpose. Here is an example of an if statement that prints whether a number is positive, negative, or zero:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Content",
-      "Graduate Project",
-      "Tutorial 1"
-    ]
-  },
-  {
-    "objectID": "Project/tutorial1.html#optimization-in-python",
-    "href": "Project/tutorial1.html#optimization-in-python",
-    "title": "Tutorial 1: Basic Python Programming",
-    "section": "Optimization in Python",
-    "text": "Optimization in Python\nWe can also use Python to solve optimization problems. To do this, we will use the scipy.optimize module from the SciPy library.\nHere is an example of solving a simple optimization problem using the minimize function from scipy.optimize. The code below minimizes the function \\(f(x) = (x - 2)^2\\):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe minimize function takes the function to minimize and an initial guess x0 as arguments. It returns an object that contains information about the optimization result. The optimal value of \\(x\\) is contained in the x attribute of the result object, which can also be accessed directly by calling result.x. What is the optimal value of \\(x\\) in this case?\nTutorial 2 will show you how to solve a slightly more complex optimization problem using Python.",
-    "crumbs": [
-      "Content",
-      "Graduate Project",
-      "Tutorial 1"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction to Mathematical Economics",
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
     "section": "",
-    "text": "Learn essential mathematical tools encompassing linear algebra, calculus, and optimization, that are widely utilised in analysis of economic problems.\n\nECON 441 | Fall 2024 | College of Business and Economics | California State University\n\n\nInstructor\n   Dr. Div Bhagia     Office: SGMH 3361     dbhagia@fullerton.edu \n\n\nCourse Details\n   SGMH 1308, Tuesdays, 7-9:45 PM     Office hours:\n\n\nTuesdays, 4-6.45 PM, or\nBy appointment (in-person or on Zoom)"
+    "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsCourse StructureMaterialGrading\n\n\n\nOverview\nThe economy is shaped by the actions of various economic agents, each driven by their own unique set of incentives and constraints. Understanding this complex system is a challenging task, as it involves keeping track of the interplay of several moving pieces. Enter Mathematics, the protagonist of this story, which enables us to represent complex economic relationships and interactions elegantly. Mathematical economic models, while often simplifications of reality, provide us with a structured way of thinking about economic issues.\nThis class will introduce you to the world of mathematical economics. We will cover essential tools used in economics, including linear algebra, calculus, and optimization, and apply these tools to economic problems. For example, you will learn how to express and solve complex systems of equations that describe the economy using matrix algebra and to solve unconstrained and constrained optimization problems, such as those related to utility maximization, price determination, wage setting, and more.\nWe will also spend some time thinking about suitable assumptions for effectively modeling specific aspects the economy. Hopefully, after this class, you will develop some appreciation for mathematical economics, while also being able to think critically about the advantages and limitations of this approach to understand economics.\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nGain a deep understanding of essential mathematical tools used in economics, including the application of matrix algebra to solve systems of equations and the solving of constrained and unconstrained optimization problems.\nLearn how these mathematical tools are applied to a range of economic issues, from analyzing firm and consumer behavior to implications of fiscal policies, preparing students for graduate-level coursework in economics.\nDevelop the ability to mathematically model economic phenomenon, carefully considering the appropriate assumptions to best represent specific behavior of economic agents or particular market structures.\n\n\n\n\n\nCourse Structure\nAll meetings for this course are expected to be held in person. During our class sessions, I utilize lecture slides to cover the topics for the day, and we work on related problems together, typically using worksheets. While you work on these worksheets, I move around the classroom to provide assistance, and you can also seek help from your peers; it’s an engaging and collaborative learning experience. As a result, class attendance is crucial for this course.\nFor each week’s material, you will have homework problems that, while not graded, you should aim to complete every week. Even though solutions to the problems are provided, you will benefit immensely from trying them on your own before checking the answers. We will also have in-class quizzes about every other week, with questions similar to the homework. So another reason to keep on top of that homework!\n\n\n\n\nCourse Material\nAll course materials—including lecture slides, worksheets, notes for each topic, and homework problems with solutions—are available on the course website. These materials should generally be sufficient for your study needs. However, if you find yourself needing more detailed explanations for certain topics, you might consider acquiring the following textbook that this course is based on:\n\nChiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition\n\nYou can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me and I will try my best to find you one.\n\n\n\n\nGrading Criteria\nIf you are enrolled in this course for undergraduate-level credit, your grade will be determined by active participation, five in-class quizzes, and two exams, with the following breakdown:\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nActive Engagement\n\n\n10\n\n\n\n\nQuizzes\n\n\n20\n\n\n\n\nMidterm Exam\n\n\n30\n\n\n\n\nFinal Exam\n\n\n40\n\n\n\nIf you are enrolled in this course for graduate-level credit, you must also complete a project using Python. The project will substitute for active engagement, thus accounting for 10% of your grade, and will be due on the last day of class."
   },
   {
     "objectID": "schedule.html",

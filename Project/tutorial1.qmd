@@ -165,8 +165,10 @@ We will use the `matplotlib` library to create plots. To do so, we first need to
 
 Here is an example of creating a plot of $y = x^3$ for $x$ between 0 and 5:
 
-```{pyodide-python}
+```{python}
 import matplotlib.pyplot as plt
+import numpy as np
+
 x = np.linspace(0, 5, 100)
 y = x**3
 plt.plot(x, y)
@@ -176,7 +178,7 @@ plt.plot(x, y)
 
 Now what if we wanted to add another line for $z = x^3$ to the same plot? We can do this by calling the `plot` function again. The code below implements this and also adds a legend and labels to the plot.
 
-```{pyodide-python}
+```{python}
 plt.plot(x, y, label='y = x^3')
 plt.plot(x, x**2, label='z = x^2')
 plt.xlabel('x')
