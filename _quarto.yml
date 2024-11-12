@@ -61,6 +61,19 @@ website:
             file: Lectures/Lecture10/lecture10.qmd
           - text: "Lecture 11"
             file: Lectures/Lecture11/lecture11.qmd 
+      - section: "Graduate Project"
+        contents:
+          - text: "Overview"
+            file: Project/overview.qmd
+          - text: "Tutorial 1"
+            file: Project/tutorial1.qmd
+          - text: "Tutorial 2"
+            file: Project/tutorial2.qmd
+          - text: "Exercise"
+            file: Project/exercise.qmd
+          # - text: "Solution"
+          #   file: Project/solution.qmd
+
   
   page-footer:
       2024 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)

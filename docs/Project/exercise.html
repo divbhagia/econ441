@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lecture 3 – Introduction to Mathematical Economics</title>
+<title>Exercise – Introduction to Mathematical Economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,8 +67,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../assets/styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -78,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Introduction to Mathematical Economics</span>
     </a>
   </div>
@@ -89,23 +118,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../syllabus.html"> 
+    <a class="nav-link" href="../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../schedule.html"> 
+    <a class="nav-link" href="../schedule.html"> 
 <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../Lectures/Lecture1/lecture1.html" aria-current="page"> 
+    <a class="nav-link active" href="../Lectures/Lecture1/lecture1.html" aria-current="page"> 
 <span class="menu-text">Content</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../exams.html"> 
+    <a class="nav-link" href="../exams.html"> 
 <span class="menu-text">Exams</span></a>
   </li>  
   <li class="nav-item compact">
@@ -124,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Lectures/Lecture2/lecture2.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../../Lectures/Lecture3/lecture3.html">Lecture 3</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Project/overview.html">Graduate Project</a></li><li class="breadcrumb-item"><a href="../Project/exercise.html">Exercise</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -147,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture1/lecture1.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture1/lecture1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1</span></a>
   </div>
 </li>
@@ -164,19 +193,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture2/lecture2.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture2/lecture2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture3/lecture3.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Lectures/Lecture3/lecture3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture4/lecture4.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture4/lecture4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 4</span></a>
   </div>
 </li>
@@ -193,19 +222,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture5/lecture5.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture5/lecture5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture6/lecture6.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture6/lecture6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture7/lecture7.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture7/lecture7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 7</span></a>
   </div>
 </li>
@@ -222,25 +251,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture8/lecture8.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture8/lecture8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture9/lecture9.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture9/lecture9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture10/lecture10.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture10/lecture10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 10</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Lectures/Lecture11/lecture11.html" class="sidebar-item-text sidebar-link">
+  <a href="../Lectures/Lecture11/lecture11.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 11</span></a>
   </div>
 </li>
@@ -248,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../Project/project.qmd" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Graduate Project</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -257,8 +286,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Project/tutorial1.html" class="sidebar-item-text sidebar-link">
+  <a href="../Project/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Project/tutorial1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tutorial 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Project/tutorial2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tutorial 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Project/exercise.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Exercise</span></a>
   </div>
 </li>
       </ul>
@@ -268,24 +315,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#topics" id="toc-topics" class="nav-link active" data-scroll-target="#topics">Topics</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
-  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link" data-scroll-target="#practice-questions">Practice Questions</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Lectures/Lecture2/lecture2.html">Linear Algebra</a></li><li class="breadcrumb-item"><a href="../../Lectures/Lecture3/lecture3.html">Lecture 3</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Project/overview.html">Graduate Project</a></li><li class="breadcrumb-item"><a href="../Project/exercise.html">Exercise</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lecture 3</h1>
+<h1 class="title">Exercise</h1>
 </div>
 
 
@@ -302,35 +340,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="topics" class="level2">
-<h2 class="anchored" data-anchor-id="topics">Topics</h2>
+<p>The utility function used in Tutorial 2 is called a Cobb-Douglas function. In this exercise, we will consider utility maximization with a CES utility function. In particular, the CES utility function is given by:</p>
+<p><span class="math display">\[ U(x_1, x_2) = \left( \alpha x_1^{\rho} + (1 - \alpha) x_2^{\rho} \right)^{1/\rho} \]</span></p>
+<p>Here,</p>
 <ul>
-<li>Conditions for Nonsingularity of a Matrix</li>
-<li>Determinant of a Matrix</li>
-</ul>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<li><span class="math inline">\(\alpha\)</span> is a parameter between 0 and 1 that reflects the relative weight or importance of the goods.</li>
+<li><span class="math inline">\(\rho\)</span> controls how easily the consumer can substitute between the two goods.
 <ul>
-<li>Textbook sections 4.7, 5.1-5.3</li>
-<li>Review notes for <a href="./../../Notes/Linear-Algebra.pdf">Linear Algebra</a> (Lectures 2-4)</li>
+<li>When <span class="math inline">\(\rho \to 1\)</span>, the goods are perfect substitutes.</li>
+<li>When <span class="math inline">\(\rho \to -\infty\)</span>, the goods are perfect complements.</li>
+</ul></li>
 </ul>
-</section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<p>Open slides in a new <a href="Slides3.pdf" target="_blank"> tab </a> or <a href="Slides3.pdf" download="Slides3">download</a> them.</p>
-<object class="slide-deck" data="Slides3.pdf" type="application/pdf" style="width:80%; height:450px;">
-</object>
-</section>
-<section id="practice-questions" class="level2">
-<h2 class="anchored" data-anchor-id="practice-questions">Practice Questions</h2>
-<ul>
-<li><a href="Handout-Echelon-Form.pdf">Echelon Form Worksheet</a></li>
-<li><a href="homework3.pdf">Homework</a> (<a href="homework3_solutions.pdf">Solutions</a>)</li>
-</ul>
+<p>Also, note that the Cobb-Douglas utility function is a special case of the CES utility function with <span class="math inline">\(\rho \to 0\)</span>.</p>
+<p>Since this exercise builds on Tutorial 2, here is the <a href="https://colab.research.google.com/drive/16_OMSdMFGWCHFNvh2A9t5kj-e8yqvOOp?usp=sharing">link</a> to a Google Colab notebook containing the essential code from that tutorial.</p>
+<p>Each part is worth 2.5 points.</p>
+<ol type="1">
+<li><p>Modify the <code>solve_demand</code> function from Tutorial 2 to create a new function, <code>solve_demand_ces</code>, which solves for the optimal quantities of good 1 and good 2 given the CES utility function. (This new function will include an additional parameter, <span class="math inline">\(\rho\)</span>.)</p></li>
+<li><p>With the values of the other parameters set to: <span class="math display">\[\alpha = 0.5, \ m = 100, \ p_1 = 5, \ p_2 = 10\]</span> Find the optimal values of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> in three cases:</p>
+<ol type="a">
+<li><span class="math inline">\(\rho = 0.99\)</span></li>
+<li><span class="math inline">\(\rho = 0.001\)</span></li>
+<li><span class="math inline">\(\rho = -200\)</span></li>
+</ol>
+<p>Print the results for each of the three cases and intuitively explain why the results make sense.</p></li>
+<li><p>Plot the demand for <em>good 2</em> as a function of the price of <em>good 1</em> for the three cases in part 2. Let other parameters be the same as in part 2 and use the range of 1 to 20 for the price of good 1. Superimpose the three demand curves on the same plot. Make sure to include a legend and label the axes. Intuitively explain what the demand curves are telling us about the relationship between the two goods in each case.</p></li>
+<li><p>An indifference curve shows combinations of two goods that give a consumer equal utility. Plot the indifference curves for the <em>first two</em> cases specified in part 2 when utility <span class="math inline">\(U=5\)</span>. Continue to assume <span class="math inline">\(\alpha = 0.5\)</span>. As before, superimpose the two indifference curves on the same plot, include a legend, and label the axes. <!--    
+If we fix utility at some level $u$, then the quantity of good 2 in terms of good 1 can be expressed as:
+$$ x_2 = \left(\frac{u^{\rho}-\alpha x_1^{\rho}}{1-\alpha}\right)^{1/\rho} $$
+
+Fixing $u=100$, plot $x_2$ as a function of $x_1$ for the three cases and parameter values specified in part 2. Use the range of 1 to 20 for $x_1$. As before, superimpose the three indifference curves on the same plot, include a legend, and label the axes.  --></p></li>
+</ol>
+<p>Write your code and explanations in a Google Colab notebook. Save the notebook as <code>firstname_lastname.ipynb</code>, download it on your local machine, and upload it on Canvas.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

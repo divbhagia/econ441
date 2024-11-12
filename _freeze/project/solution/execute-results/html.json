@@ -1,0 +1,12 @@
+{
+  "hash": "4433ba1765d3a3d9090157dbdcd096be",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Solution\"\nnav-sidebar: false\n---\n\n::: {#ceb467ca .cell execution_count=1}\n``` {.python .cell-code}\n# def solve_demand_ces(alpha, rho, m, p1, p2):\n    \n#     def utility(x):\n#         x1, x2 = x\n#         return -(alpha * x1 ** rho + (1 - alpha) * x2 ** rho) ** (1 / rho)\n    \n#     def budget_constraint(x):\n#         x1, x2 = x\n#         return m - p1 * x1 - p2 * x2\n    \n#     constraints = ({\"type\": \"eq\", \"fun\": budget_constraint})\n#     initial_guess = [1, 2]\n#     result = minimize(utility, initial_guess, constraints=constraints)\n#     x1, x2 = result.x\n    \n#     return round(x1, 2), round(x2, 2)\n```\n:::\n\n\n::: {#892dbef1 .cell execution_count=2}\n``` {.python .cell-code}\n# # Parameters\n# alpha = 0.5\n# m = 100\n# p1 = 5\n# p2 = 10\n\n# x1, x2 = solve_demand_ces(alpha, 0.99, m, p1, p2)\n# print(f\"Good 1: {x1}\", f\"Good 2: {x2}\")\n\n# x1, x2 = solve_demand_ces(alpha, 0.001, m, p1, p2)\n# print(f\"Good 1: {x1}\", f\"Good 2: {x2}\")\n\n# x1, x2 = solve_demand_ces(alpha, -200, m, p1, p2)\n# print(f\"Good 1: {x1}\", f\"Good 2: {x2}\")\n```\n:::\n\n\n::: {#74eb858d .cell execution_count=3}\n``` {.python .cell-code}\n# # Create a vector of 25 prices for good 1 between 1 and 10\n# K = 25 # Number of points\n# p1_vals = np.linspace(1, 10, K)\n\n# rho = -1\n# # Calculate demand for good 1 and good 2 at each price value\n# x = [solve_demand_ces(alpha, rho, m, p1, p2) for p1 in p1_vals]\n# x1_vals, x2_vals = np.array(x).T\n\n# # Plot demand for good 1 as a function of price of good 1\n# plt.plot(p1_vals, x2_vals)\n# plt.xlabel('Price of good 1')\n# plt.ylabel('Demand for good 2')\n```\n:::\n\n\n",
+    "supporting": [
+      "solution_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

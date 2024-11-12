@@ -14,591 +14,15 @@
     "text": "Learn essential mathematical tools encompassing linear algebra, calculus, and optimization, that are widely utilised in analysis of economic problems.\n\nECON 441 | Fall 2024 | College of Business and Economics | California State University\n\n\nInstructor\n   Dr. Div Bhagia     Office: SGMH 3361     dbhagia@fullerton.edu \n\n\nCourse Details\n   SGMH 1308, Tuesdays, 7-9:45 PM     Office hours:\n\n\nTuesdays, 4-6.45 PM, or\nBy appointment (in-person or on Zoom)"
   },
   {
-    "objectID": "Lectures/Lecture9/lecture9.html",
-    "href": "Lectures/Lecture9/lecture9.html",
-    "title": "Lecture 9",
+    "objectID": "Project/tutorial1.html",
+    "href": "Project/tutorial1.html",
+    "title": "Tutorial 1: Basic Python Programming",
     "section": "",
-    "text": "Multivariable Optimization",
+    "text": "You need to know some basic Python programming to complete the project. This tutorial will teach you these basics. If you are already familiar with Python, you can skip this tutorial and proceed to Tutorial 2.\nIf you are looking for some additional resources to learn Python, QuantEcon is a great resource for learning programming, with a focus on economics and finance. You can find their Python programming lectures here.",
     "crumbs": [
       "Content",
-      "Optimization",
-      "Lecture 9"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture9/lecture9.html#topics",
-    "href": "Lectures/Lecture9/lecture9.html#topics",
-    "title": "Lecture 9",
-    "section": "",
-    "text": "Multivariable Optimization",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 9"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture9/lecture9.html#references",
-    "href": "Lectures/Lecture9/lecture9.html#references",
-    "title": "Lecture 9",
-    "section": "References",
-    "text": "References\n\nTextbook sections 11.1, 11.2\nReview notes for Optimization (Lectures 8-11)",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 9"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture9/lecture9.html#slides",
-    "href": "Lectures/Lecture9/lecture9.html#slides",
-    "title": "Lecture 9",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 9"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture9/lecture9.html#practice-questions",
-    "href": "Lectures/Lecture9/lecture9.html#practice-questions",
-    "title": "Lecture 9",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 9"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture7/lecture7.html",
-    "href": "Lectures/Lecture7/lecture7.html",
-    "title": "Lecture 7",
-    "section": "",
-    "text": "Implicit Function Theorem\nIntegration",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture7/lecture7.html#topics",
-    "href": "Lectures/Lecture7/lecture7.html#topics",
-    "title": "Lecture 7",
-    "section": "",
-    "text": "Implicit Function Theorem\nIntegration",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture7/lecture7.html#references",
-    "href": "Lectures/Lecture7/lecture7.html#references",
-    "title": "Lecture 7",
-    "section": "References",
-    "text": "References\n\nTextbook sections 8.5, 14.1-14.3\nReview notes for Calculus (Lectures 5-7)",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture7/lecture7.html#slides",
-    "href": "Lectures/Lecture7/lecture7.html#slides",
-    "title": "Lecture 7",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture7/lecture7.html#practice-questions",
-    "href": "Lectures/Lecture7/lecture7.html#practice-questions",
-    "title": "Lecture 7",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 7"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture5/lecture5.html",
-    "href": "Lectures/Lecture5/lecture5.html",
-    "title": "Lecture 5",
-    "section": "",
-    "text": "Limit Definition of a Derivative\nLimits\nContinuity\nRules of Differentiation",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture5/lecture5.html#topics",
-    "href": "Lectures/Lecture5/lecture5.html#topics",
-    "title": "Lecture 5",
-    "section": "",
-    "text": "Limit Definition of a Derivative\nLimits\nContinuity\nRules of Differentiation",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture5/lecture5.html#references",
-    "href": "Lectures/Lecture5/lecture5.html#references",
-    "title": "Lecture 5",
-    "section": "References",
-    "text": "References\n\nTextbook sections 6.2-6.4, 6.7, 7.1-7.3\nReview notes for Calculus (Lectures 5-7)",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture5/lecture5.html#slides",
-    "href": "Lectures/Lecture5/lecture5.html#slides",
-    "title": "Lecture 5",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture5/lecture5.html#practice-questions",
-    "href": "Lectures/Lecture5/lecture5.html#practice-questions",
-    "title": "Lecture 5",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nRules of Differentiation Worksheet\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 5"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture3/lecture3.html",
-    "href": "Lectures/Lecture3/lecture3.html",
-    "title": "Lecture 3",
-    "section": "",
-    "text": "Conditions for Nonsingularity of a Matrix\nDeterminant of a Matrix",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture3/lecture3.html#topics",
-    "href": "Lectures/Lecture3/lecture3.html#topics",
-    "title": "Lecture 3",
-    "section": "",
-    "text": "Conditions for Nonsingularity of a Matrix\nDeterminant of a Matrix",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture3/lecture3.html#references",
-    "href": "Lectures/Lecture3/lecture3.html#references",
-    "title": "Lecture 3",
-    "section": "References",
-    "text": "References\n\nTextbook sections 4.7, 5.1-5.3\nReview notes for Linear Algebra (Lectures 2-4)",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture3/lecture3.html#slides",
-    "href": "Lectures/Lecture3/lecture3.html#slides",
-    "title": "Lecture 3",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture3/lecture3.html#practice-questions",
-    "href": "Lectures/Lecture3/lecture3.html#practice-questions",
-    "title": "Lecture 3",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nEchelon Form Worksheet\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 3"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture11/lecture11.html",
-    "href": "Lectures/Lecture11/lecture11.html",
-    "title": "Lecture 11",
-    "section": "",
-    "text": "Envelope Theorem\nQuasiconcavity\nConvex sets\nHomogenous Functions",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture11/lecture11.html#topics",
-    "href": "Lectures/Lecture11/lecture11.html#topics",
-    "title": "Lecture 11",
-    "section": "",
-    "text": "Envelope Theorem\nQuasiconcavity\nConvex sets\nHomogenous Functions",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture11/lecture11.html#references",
-    "href": "Lectures/Lecture11/lecture11.html#references",
-    "title": "Lecture 11",
-    "section": "References",
-    "text": "References\n\nTextbook sections 11.5, 12.4, 12.6\nReview notes for Optimization (Lectures 8-11)",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture11/lecture11.html#slides",
-    "href": "Lectures/Lecture11/lecture11.html#slides",
-    "title": "Lecture 11",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture11/lecture11.html#practice-questions",
-    "href": "Lectures/Lecture11/lecture11.html#practice-questions",
-    "title": "Lecture 11",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nQuasiconcavity Worksheet\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 11"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture1/lecture1.html",
-    "href": "Lectures/Lecture1/lecture1.html",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Numbers and sets\nRelations and functions\nSummation notation\nNecessary and sufficient conditions\n\nTextbook references: Sections 2.2, 2.3, 2.4-2.6, pg 163, 5.1",
-    "crumbs": [
-      "Content",
-      "Preliminaries",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture1/lecture1.html#topics",
-    "href": "Lectures/Lecture1/lecture1.html#topics",
-    "title": "Lecture 1",
-    "section": "",
-    "text": "Numbers and sets\nRelations and functions\nSummation notation\nNecessary and sufficient conditions\n\nTextbook references: Sections 2.2, 2.3, 2.4-2.6, pg 163, 5.1",
-    "crumbs": [
-      "Content",
-      "Preliminaries",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture1/lecture1.html#slides",
-    "href": "Lectures/Lecture1/lecture1.html#slides",
-    "title": "Lecture 1",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.\n\nPDF display not supported in browser.",
-    "crumbs": [
-      "Content",
-      "Preliminaries",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture1/lecture1.html#practice-questions",
-    "href": "Lectures/Lecture1/lecture1.html#practice-questions",
-    "title": "Lecture 1",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nSets and Functions Worksheet\nSummation Notation Worksheet\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Preliminaries",
-      "Lecture 1"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture10/lecture10.html",
-    "href": "Lectures/Lecture10/lecture10.html",
-    "title": "Lecture 10",
-    "section": "",
-    "text": "Constrained Optimization",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture10/lecture10.html#topics",
-    "href": "Lectures/Lecture10/lecture10.html#topics",
-    "title": "Lecture 10",
-    "section": "",
-    "text": "Constrained Optimization",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture10/lecture10.html#references",
-    "href": "Lectures/Lecture10/lecture10.html#references",
-    "title": "Lecture 10",
-    "section": "References",
-    "text": "References\n\nTextbook sections 12.1, 12.2\nReview notes for Optimization (Lectures 8-11)\nAdditional Constrained Optimization Examples",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture10/lecture10.html#slides",
-    "href": "Lectures/Lecture10/lecture10.html#slides",
-    "title": "Lecture 10",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture10/lecture10.html#practice-questions",
-    "href": "Lectures/Lecture10/lecture10.html#practice-questions",
-    "title": "Lecture 10",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nConstrained Maximization Worksheet\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Optimization",
-      "Lecture 10"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture2/lecture2.html",
-    "href": "Lectures/Lecture2/lecture2.html",
-    "title": "Lecture 2",
-    "section": "",
-    "text": "Matrices: Addition, Subtraction, Scalar Multiplication\nMatrix Multiplication\nVectors\nIdentity and Null Matrices\nTranspose and Inverse of a Matrix",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture2/lecture2.html#topics",
-    "href": "Lectures/Lecture2/lecture2.html#topics",
-    "title": "Lecture 2",
-    "section": "",
-    "text": "Matrices: Addition, Subtraction, Scalar Multiplication\nMatrix Multiplication\nVectors\nIdentity and Null Matrices\nTranspose and Inverse of a Matrix",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture2/lecture2.html#references",
-    "href": "Lectures/Lecture2/lecture2.html#references",
-    "title": "Lecture 2",
-    "section": "References",
-    "text": "References\n\nTextbook sections 4.1-4.6\nReview notes for Linear Algebra (Lectures 2-4)",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture2/lecture2.html#slides",
-    "href": "Lectures/Lecture2/lecture2.html#slides",
-    "title": "Lecture 2",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture2/lecture2.html#practice-questions",
-    "href": "Lectures/Lecture2/lecture2.html#practice-questions",
-    "title": "Lecture 2",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nMatrix Operations Worksheet\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 2"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture4/lecture4.html",
-    "href": "Lectures/Lecture4/lecture4.html",
-    "title": "Lecture 4",
-    "section": "",
-    "text": "Finding the Inverse of a Matrix,\nCramer’s Rule\nEconomic Applications",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture4/lecture4.html#topics",
-    "href": "Lectures/Lecture4/lecture4.html#topics",
-    "title": "Lecture 4",
-    "section": "",
-    "text": "Finding the Inverse of a Matrix,\nCramer’s Rule\nEconomic Applications",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture4/lecture4.html#references",
-    "href": "Lectures/Lecture4/lecture4.html#references",
-    "title": "Lecture 4",
-    "section": "References",
-    "text": "References\n\nTextbook sections 5.3-5.5\nReview notes for Linear Algebra (Lectures 2-4)",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture4/lecture4.html#slides",
-    "href": "Lectures/Lecture4/lecture4.html#slides",
-    "title": "Lecture 4",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture4/lecture4.html#practice-questions",
-    "href": "Lectures/Lecture4/lecture4.html#practice-questions",
-    "title": "Lecture 4",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nDeterminant and Inverse Worksheet\nSolving a System of Equations Worksheet\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Linear Algebra",
-      "Lecture 4"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture6/lecture6.html",
-    "href": "Lectures/Lecture6/lecture6.html",
-    "title": "Lecture 6",
-    "section": "",
-    "text": "Exponential and Log Functions\nPartial Derivatives\nTotal Differential and Derivative",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture6/lecture6.html#topics",
-    "href": "Lectures/Lecture6/lecture6.html#topics",
-    "title": "Lecture 6",
-    "section": "",
-    "text": "Exponential and Log Functions\nPartial Derivatives\nTotal Differential and Derivative",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture6/lecture6.html#references",
-    "href": "Lectures/Lecture6/lecture6.html#references",
-    "title": "Lecture 6",
-    "section": "References",
-    "text": "References\n\nTextbook sections 10.5, 7.4, 8.1, 8.2, 8.4\nNotes on Log and Exponential Functions\nReview notes for Calculus (Lectures 5-7)",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture6/lecture6.html#slides",
-    "href": "Lectures/Lecture6/lecture6.html#slides",
-    "title": "Lecture 6",
-    "section": "Slides",
-    "text": "Slides\nOpen slides in a new  tab  or download them.",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 6"
-    ]
-  },
-  {
-    "objectID": "Lectures/Lecture6/lecture6.html#practice-questions",
-    "href": "Lectures/Lecture6/lecture6.html#practice-questions",
-    "title": "Lecture 6",
-    "section": "Practice Questions",
-    "text": "Practice Questions\n\nExponential and Log Functions Worksheet\nHomework (Solutions)",
-    "crumbs": [
-      "Content",
-      "Calculus",
-      "Lecture 6"
+      "Graduate Project",
+      "Tutorial 1"
     ]
   },
   {
@@ -662,6 +86,594 @@
     ]
   },
   {
+    "objectID": "Lectures/Lecture6/lecture6.html",
+    "href": "Lectures/Lecture6/lecture6.html",
+    "title": "Lecture 6",
+    "section": "",
+    "text": "Exponential and Log Functions\nPartial Derivatives\nTotal Differential and Derivative",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture6/lecture6.html#topics",
+    "href": "Lectures/Lecture6/lecture6.html#topics",
+    "title": "Lecture 6",
+    "section": "",
+    "text": "Exponential and Log Functions\nPartial Derivatives\nTotal Differential and Derivative",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture6/lecture6.html#references",
+    "href": "Lectures/Lecture6/lecture6.html#references",
+    "title": "Lecture 6",
+    "section": "References",
+    "text": "References\n\nTextbook sections 10.5, 7.4, 8.1, 8.2, 8.4\nNotes on Log and Exponential Functions\nReview notes for Calculus (Lectures 5-7)",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture6/lecture6.html#slides",
+    "href": "Lectures/Lecture6/lecture6.html#slides",
+    "title": "Lecture 6",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture6/lecture6.html#practice-questions",
+    "href": "Lectures/Lecture6/lecture6.html#practice-questions",
+    "title": "Lecture 6",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nExponential and Log Functions Worksheet\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 6"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html",
+    "href": "Lectures/Lecture4/lecture4.html",
+    "title": "Lecture 4",
+    "section": "",
+    "text": "Finding the Inverse of a Matrix,\nCramer’s Rule\nEconomic Applications",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html#topics",
+    "href": "Lectures/Lecture4/lecture4.html#topics",
+    "title": "Lecture 4",
+    "section": "",
+    "text": "Finding the Inverse of a Matrix,\nCramer’s Rule\nEconomic Applications",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html#references",
+    "href": "Lectures/Lecture4/lecture4.html#references",
+    "title": "Lecture 4",
+    "section": "References",
+    "text": "References\n\nTextbook sections 5.3-5.5\nReview notes for Linear Algebra (Lectures 2-4)",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html#slides",
+    "href": "Lectures/Lecture4/lecture4.html#slides",
+    "title": "Lecture 4",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture4/lecture4.html#practice-questions",
+    "href": "Lectures/Lecture4/lecture4.html#practice-questions",
+    "title": "Lecture 4",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nDeterminant and Inverse Worksheet\nSolving a System of Equations Worksheet\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html",
+    "href": "Lectures/Lecture2/lecture2.html",
+    "title": "Lecture 2",
+    "section": "",
+    "text": "Matrices: Addition, Subtraction, Scalar Multiplication\nMatrix Multiplication\nVectors\nIdentity and Null Matrices\nTranspose and Inverse of a Matrix",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html#topics",
+    "href": "Lectures/Lecture2/lecture2.html#topics",
+    "title": "Lecture 2",
+    "section": "",
+    "text": "Matrices: Addition, Subtraction, Scalar Multiplication\nMatrix Multiplication\nVectors\nIdentity and Null Matrices\nTranspose and Inverse of a Matrix",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html#references",
+    "href": "Lectures/Lecture2/lecture2.html#references",
+    "title": "Lecture 2",
+    "section": "References",
+    "text": "References\n\nTextbook sections 4.1-4.6\nReview notes for Linear Algebra (Lectures 2-4)",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html#slides",
+    "href": "Lectures/Lecture2/lecture2.html#slides",
+    "title": "Lecture 2",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture2/lecture2.html#practice-questions",
+    "href": "Lectures/Lecture2/lecture2.html#practice-questions",
+    "title": "Lecture 2",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nMatrix Operations Worksheet\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html",
+    "href": "Lectures/Lecture10/lecture10.html",
+    "title": "Lecture 10",
+    "section": "",
+    "text": "Constrained Optimization",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html#topics",
+    "href": "Lectures/Lecture10/lecture10.html#topics",
+    "title": "Lecture 10",
+    "section": "",
+    "text": "Constrained Optimization",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html#references",
+    "href": "Lectures/Lecture10/lecture10.html#references",
+    "title": "Lecture 10",
+    "section": "References",
+    "text": "References\n\nTextbook sections 12.1, 12.2\nReview notes for Optimization (Lectures 8-11)\nAdditional Constrained Optimization Examples",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html#slides",
+    "href": "Lectures/Lecture10/lecture10.html#slides",
+    "title": "Lecture 10",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture10/lecture10.html#practice-questions",
+    "href": "Lectures/Lecture10/lecture10.html#practice-questions",
+    "title": "Lecture 10",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nConstrained Maximization Worksheet\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 10"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture1/lecture1.html",
+    "href": "Lectures/Lecture1/lecture1.html",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Numbers and sets\nRelations and functions\nSummation notation\nNecessary and sufficient conditions\n\nTextbook references: Sections 2.2, 2.3, 2.4-2.6, pg 163, 5.1",
+    "crumbs": [
+      "Content",
+      "Preliminaries",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture1/lecture1.html#topics",
+    "href": "Lectures/Lecture1/lecture1.html#topics",
+    "title": "Lecture 1",
+    "section": "",
+    "text": "Numbers and sets\nRelations and functions\nSummation notation\nNecessary and sufficient conditions\n\nTextbook references: Sections 2.2, 2.3, 2.4-2.6, pg 163, 5.1",
+    "crumbs": [
+      "Content",
+      "Preliminaries",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture1/lecture1.html#slides",
+    "href": "Lectures/Lecture1/lecture1.html#slides",
+    "title": "Lecture 1",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.\n\nPDF display not supported in browser.",
+    "crumbs": [
+      "Content",
+      "Preliminaries",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture1/lecture1.html#practice-questions",
+    "href": "Lectures/Lecture1/lecture1.html#practice-questions",
+    "title": "Lecture 1",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nSets and Functions Worksheet\nSummation Notation Worksheet\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Preliminaries",
+      "Lecture 1"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html",
+    "href": "Lectures/Lecture11/lecture11.html",
+    "title": "Lecture 11",
+    "section": "",
+    "text": "Envelope Theorem\nQuasiconcavity\nConvex sets\nHomogenous Functions",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html#topics",
+    "href": "Lectures/Lecture11/lecture11.html#topics",
+    "title": "Lecture 11",
+    "section": "",
+    "text": "Envelope Theorem\nQuasiconcavity\nConvex sets\nHomogenous Functions",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html#references",
+    "href": "Lectures/Lecture11/lecture11.html#references",
+    "title": "Lecture 11",
+    "section": "References",
+    "text": "References\n\nTextbook sections 11.5, 12.4, 12.6\nReview notes for Optimization (Lectures 8-11)",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html#slides",
+    "href": "Lectures/Lecture11/lecture11.html#slides",
+    "title": "Lecture 11",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture11/lecture11.html#practice-questions",
+    "href": "Lectures/Lecture11/lecture11.html#practice-questions",
+    "title": "Lecture 11",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nQuasiconcavity Worksheet\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 11"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html",
+    "href": "Lectures/Lecture3/lecture3.html",
+    "title": "Lecture 3",
+    "section": "",
+    "text": "Conditions for Nonsingularity of a Matrix\nDeterminant of a Matrix",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html#topics",
+    "href": "Lectures/Lecture3/lecture3.html#topics",
+    "title": "Lecture 3",
+    "section": "",
+    "text": "Conditions for Nonsingularity of a Matrix\nDeterminant of a Matrix",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html#references",
+    "href": "Lectures/Lecture3/lecture3.html#references",
+    "title": "Lecture 3",
+    "section": "References",
+    "text": "References\n\nTextbook sections 4.7, 5.1-5.3\nReview notes for Linear Algebra (Lectures 2-4)",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html#slides",
+    "href": "Lectures/Lecture3/lecture3.html#slides",
+    "title": "Lecture 3",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture3/lecture3.html#practice-questions",
+    "href": "Lectures/Lecture3/lecture3.html#practice-questions",
+    "title": "Lecture 3",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nEchelon Form Worksheet\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Linear Algebra",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html",
+    "href": "Lectures/Lecture5/lecture5.html",
+    "title": "Lecture 5",
+    "section": "",
+    "text": "Limit Definition of a Derivative\nLimits\nContinuity\nRules of Differentiation",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html#topics",
+    "href": "Lectures/Lecture5/lecture5.html#topics",
+    "title": "Lecture 5",
+    "section": "",
+    "text": "Limit Definition of a Derivative\nLimits\nContinuity\nRules of Differentiation",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html#references",
+    "href": "Lectures/Lecture5/lecture5.html#references",
+    "title": "Lecture 5",
+    "section": "References",
+    "text": "References\n\nTextbook sections 6.2-6.4, 6.7, 7.1-7.3\nReview notes for Calculus (Lectures 5-7)",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html#slides",
+    "href": "Lectures/Lecture5/lecture5.html#slides",
+    "title": "Lecture 5",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture5/lecture5.html#practice-questions",
+    "href": "Lectures/Lecture5/lecture5.html#practice-questions",
+    "title": "Lecture 5",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nRules of Differentiation Worksheet\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 5"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html",
+    "href": "Lectures/Lecture7/lecture7.html",
+    "title": "Lecture 7",
+    "section": "",
+    "text": "Implicit Function Theorem\nIntegration",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html#topics",
+    "href": "Lectures/Lecture7/lecture7.html#topics",
+    "title": "Lecture 7",
+    "section": "",
+    "text": "Implicit Function Theorem\nIntegration",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html#references",
+    "href": "Lectures/Lecture7/lecture7.html#references",
+    "title": "Lecture 7",
+    "section": "References",
+    "text": "References\n\nTextbook sections 8.5, 14.1-14.3\nReview notes for Calculus (Lectures 5-7)",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html#slides",
+    "href": "Lectures/Lecture7/lecture7.html#slides",
+    "title": "Lecture 7",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture7/lecture7.html#practice-questions",
+    "href": "Lectures/Lecture7/lecture7.html#practice-questions",
+    "title": "Lecture 7",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Calculus",
+      "Lecture 7"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html",
+    "href": "Lectures/Lecture9/lecture9.html",
+    "title": "Lecture 9",
+    "section": "",
+    "text": "Multivariable Optimization",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 9"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html#topics",
+    "href": "Lectures/Lecture9/lecture9.html#topics",
+    "title": "Lecture 9",
+    "section": "",
+    "text": "Multivariable Optimization",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 9"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html#references",
+    "href": "Lectures/Lecture9/lecture9.html#references",
+    "title": "Lecture 9",
+    "section": "References",
+    "text": "References\n\nTextbook sections 11.1, 11.2\nReview notes for Optimization (Lectures 8-11)",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 9"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html#slides",
+    "href": "Lectures/Lecture9/lecture9.html#slides",
+    "title": "Lecture 9",
+    "section": "Slides",
+    "text": "Slides\nOpen slides in a new  tab  or download them.",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 9"
+    ]
+  },
+  {
+    "objectID": "Lectures/Lecture9/lecture9.html#practice-questions",
+    "href": "Lectures/Lecture9/lecture9.html#practice-questions",
+    "title": "Lecture 9",
+    "section": "Practice Questions",
+    "text": "Practice Questions\n\nHomework (Solutions)",
+    "crumbs": [
+      "Content",
+      "Optimization",
+      "Lecture 9"
+    ]
+  },
+  {
     "objectID": "exams.html",
     "href": "exams.html",
     "title": "Exams",
@@ -674,5 +686,240 @@
     "title": "Syllabus",
     "section": "",
     "text": "The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking here.\n\nOverviewLearning GoalsCourse StructureMaterialGrading\n\n\n\nOverview\nThe economy is shaped by the actions of various economic agents, each driven by their own unique set of incentives and constraints. Understanding this complex system is a challenging task, as it involves keeping track of the interplay of several moving pieces. Enter Mathematics, the protagonist of this story, which enables us to represent complex economic relationships and interactions elegantly. Mathematical economic models, while often simplifications of reality, provide us with a structured way of thinking about economic issues.\nThis class will introduce you to the world of mathematical economics. We will cover essential tools used in economics, including linear algebra, calculus, and optimization, and apply these tools to economic problems. For example, you will learn how to express and solve complex systems of equations that describe the economy using matrix algebra and to solve unconstrained and constrained optimization problems, such as those related to utility maximization, price determination, wage setting, and more.\nWe will also spend some time thinking about suitable assumptions for effectively modeling specific aspects the economy. Hopefully, after this class, you will develop some appreciation for mathematical economics, while also being able to think critically about the advantages and limitations of this approach to understand economics.\n\n\n\n\nLearning Goals\nUpon successful completion of this course, students will:\n\nGain a deep understanding of essential mathematical tools used in economics, including the application of matrix algebra to solve systems of equations and the solving of constrained and unconstrained optimization problems.\nLearn how these mathematical tools are applied to a range of economic issues, from analyzing firm and consumer behavior to implications of fiscal policies, preparing students for graduate-level coursework in economics.\nDevelop the ability to mathematically model economic phenomenon, carefully considering the appropriate assumptions to best represent specific behavior of economic agents or particular market structures.\n\n\n\n\n\nCourse Structure\nAll meetings for this course are expected to be held in person. During our class sessions, I utilize lecture slides to cover the topics for the day, and we work on related problems together, typically using worksheets. While you work on these worksheets, I move around the classroom to provide assistance, and you can also seek help from your peers; it’s an engaging and collaborative learning experience. As a result, class attendance is crucial for this course.\nFor each week’s material, you will have homework problems that, while not graded, you should aim to complete every week. Even though solutions to the problems are provided, you will benefit immensely from trying them on your own before checking the answers. We will also have in-class quizzes about every other week, with questions similar to the homework. So another reason to keep on top of that homework!\n\n\n\n\nCourse Material\nAll course materials—including lecture slides, worksheets, notes for each topic, and homework problems with solutions—are available on the course website. These materials should generally be sufficient for your study needs. However, if you find yourself needing more detailed explanations for certain topics, you might consider acquiring the following textbook that this course is based on:\n\nChiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition\n\nYou can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me and I will try my best to find you one.\n\n\n\n\nGrading Criteria\nIf you are enrolled in this course for undergraduate-level credit, your grade will be determined by active participation, five in-class quizzes, and two exams, with the following breakdown:\n\n\n\nComponent\n\n\nPoints\n\n\n\n\nActive Engagement\n\n\n10\n\n\n\n\nQuizzes\n\n\n20\n\n\n\n\nMidterm Exam\n\n\n30\n\n\n\n\nFinal Exam\n\n\n40\n\n\n\nIf you are enrolled in this course for graduate-level credit, you must also complete a project using Python. The project will substitute for active engagement, thus accounting for 10% of your grade, and will be due on the last day of class."
+  },
+  {
+    "objectID": "Project/tutorial1.html#packages-and-syntax",
+    "href": "Project/tutorial1.html#packages-and-syntax",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Packages and Syntax",
+    "text": "Packages and Syntax",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#listsvectors",
+    "href": "Project/tutorial1.html#listsvectors",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Lists/vectors",
+    "text": "Lists/vectors",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#loops",
+    "href": "Project/tutorial1.html#loops",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Loops",
+    "text": "Loops",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#functions",
+    "href": "Project/tutorial1.html#functions",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Functions",
+    "text": "Functions",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#plots",
+    "href": "Project/tutorial1.html#plots",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Plots",
+    "text": "Plots",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/overview.html",
+    "href": "Project/overview.html",
+    "title": "Graduate Project: Overview",
+    "section": "",
+    "text": "Who needs to complete this project?\nYou need to complete this project if you are taking this course for graduate credit. The grade for the project will count in place of the active engagement grade. The project is due on the last day of class.\nNote: Undergraduate students are not required to complete this assignment, but can do so for fun and I would be happy to check your work, but it will not count towards your grade.\n\n\nWhat am I supposed to do?\nThis project will teach you how to use Python programming to solve economic problems that involve optimization. Before you get started, you need to understand some basics of Python programming, so complete Tutorial 1 and then proceed to Tutorial 2, which teaches you how to solve an optimization problem in Python. In particular, Tutorial 2 will show you how to code a specific optimization problem. You will be modifying the code provided in this tutorial to solve a related but expanded problem as a part of your project. Once you are done with the two tutorials, you can start the project. You will find the instructions for the exercise you need to complete on the Exercise page.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial2.html",
+    "href": "Project/tutorial2.html",
+    "title": "Tutorial 2: Optimization in Python",
+    "section": "",
+    "text": "In this tutorial, we’ll work through example 1 from the constrained optimization problems provided here. In particular, our optimization problem is as follows:\n\\[ \\max_{x_1, x_2} \\quad x_1^{\\alpha} x_2^{\\beta} \\quad \\text{s.t.} \\quad p_1 x_1 + p_2 x_2 = m \\]\nAs illustrated in the notes, we can solve this problem by formulating the Lagrangian and solving the first-order conditions, leading to the following optimal values for \\(x_1\\) and \\(x_2\\):\n\\[ x_1^* = \\frac{\\alpha}{\\alpha + \\beta} \\frac{m}{p_1}, \\quad x_2^* = \\frac{\\beta}{\\alpha + \\beta} \\frac{m}{p_2} \\]\nWe will make a simplification and assume \\(\\beta = 1 - \\alpha\\), so we have:\n\\[ x_1^* = \\frac{\\alpha m}{p_1}, \\quad x_2^* = \\frac{(1-\\alpha) m}{p_2} \\]\nThus, the utility-maximizing values of \\(x_1\\) and \\(x_2\\) allocate an \\(\\alpha\\) fraction of income to good 1 and a \\((1-\\alpha)\\) fraction to good 2.\nNote: You should copy-paste the code snippets below into a Google Colab notebook and run them to see the output while you read through the tutorial.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 2"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial2.html#optimization-by-hand",
+    "href": "Project/tutorial2.html#optimization-by-hand",
+    "title": "Tutorial 2: Optimization in Python",
+    "section": "Optimization by Hand",
+    "text": "Optimization by Hand\nTo begin, we’ll code the expressions we solved manually above to perform some comparative statics. Let’s write a Python function, solve_by_hand, that outputs the values of \\(x_1\\) and \\(x_2\\) as a function of the parameters \\(\\alpha\\), \\(m\\), \\(p_1\\), and \\(p_2\\) based on the above expressions.\n\ndef solve_by_hand(alpha, m, p1, p2):\n    x1 = alpha * m / p1\n    x2 = (1 - alpha) * m / p2\n    return x1, x2\n\nLet’s test this function at the following parameter values: \\[\\alpha = 0.5, \\ m = 100, \\ p_1 = 5, \\ p_2 = 10\\] We should get \\(x_1^* = 0.5 \\times 100/5 = 10\\) and \\(x_2^* = 0.5 \\times 100/10 = 5\\).\n\n# Parameters\nalpha = 0.5\nm = 100\np1 = 5\np2 = 10\n\n# Solve for the optimal values of x1 and x2\nx1, x2 = solve_by_hand(alpha, m, p1, p2)\n\n# Print the results (round to 2 decimal places)\nprint(f\"Demand for good 1: {round(x1, 2)}\")\nprint(f\"Demand for good 2: {round(x2, 2)}\")\n\nDemand for good 1: 10.0\nDemand for good 2: 5.0\n\n\nNext, we’ll perform some comparative statics:\n\nWe’ll plot the demand for good 1 as a function of its price, keeping the other parameters fixed at the values specified above.\nThen, we’ll add another curve to the same plot, this time with \\(m = 200\\).\n\n\n# Import necessary libraries\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Create a vector of 25 prices for good 1 between 1 and 10\np1_vals = np.linspace(1, 10, 25)\n\n# Solve for demand at each price value\nx1_vals, x2_vals = solve_by_hand(alpha, m, p1_vals, p2)\n\n# Plot demand for good 1 as a function of price of good 1\nplt.plot(p1_vals, x1_vals)\nplt.xlabel('Price of good 1')\nplt.ylabel('Demand for good 1')\nplt.show()\n\n\n\n\n\n\n\n\nThis gives us the standard downward-sloping demand curve. Now, let’s overlay a second demand curve for the case when income is \\(m = 200\\).\n\n# Calculate demand when m = 200\nx1_vals2, x2_vals2 = solve_by_hand(alpha, 200, p1_vals, p2)\n\n# Create a new plot with the second curve\nplt.plot(p1_vals, x1_vals, label='m = 100')\nplt.plot(p1_vals, x1_vals2, label='m = 200')\nplt.xlabel('Price of good 1')\nplt.ylabel('Demand for good 1')\nplt.legend()\nplt.show()\n\n\n\n\n\n\n\n\nNote that, since the demand for good 2 is independent of the price of good 1, both the vectors x2_vals and x2_vals2 will remain constant.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 2"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial2.html#optimization-using-python",
+    "href": "Project/tutorial2.html#optimization-using-python",
+    "title": "Tutorial 2: Optimization in Python",
+    "section": "Optimization using Python",
+    "text": "Optimization using Python\nSo far, we’ve seen how programming allows us to express quantities from our model and perform comparative statics to understand how they respond to changes in parameters. For instance, by plotting the demand curve above, we can quickly observe that the demand for good 1 decreases with price at a diminishing rate.\nUp to this point, we solved the expressions manually and then implemented them in Python. However, in many economic models, the expressions can become too complex to solve analytically, making it more practical to code the models directly to gain insights without explicitly solving them. While our problem can be solved analytically, we’ll still learn how to use Python to solve it without relying on analytical expressions for \\(x_1\\) and \\(x_2\\), to get a sense of how to approach more complex models.\nWe will first fix the parameters at following values: \\[\\alpha = 0.5, \\ m = 100, \\ p_1 = 5, \\ p_2 = 10\\]\nand write the code to solve for the optimal values of \\(x_1\\) and \\(x_2\\) using the minimize function from the scipy.optimize library. We will then embed this code in a function called solve_demand that takes the parameters as inputs and returns the optimal values of \\(x_1\\) and \\(x_2\\).\n\nimport numpy as np\nfrom scipy.optimize import minimize\n\n# Parameters\nalpha = 0.5\nm = 100\np1 = 5\np2 = 10\n\n# Utility function\ndef utility(x):\n    x1, x2 = x\n    if x1 &lt; 0 or x2 &lt; 0:\n        return np.inf\n    else:\n        return -x1 ** alpha * x2 ** (1 - alpha)\n\n# Budget constraint\ndef budget_constraint(x):\n    x1, x2 = x\n    return m - p1 * x1 - p2 * x2\n\n# Specify the constraints and initial guess\nconstraints = ({\"type\": \"eq\", \"fun\": budget_constraint})\ninitial_guess = [1, 2] \n\n# Use minimize from scipy to solve for the optimal values of x1 and x2\nresult = minimize(utility, initial_guess, constraints=constraints)\nx1, x2 = result.x\n\n# Print the results (round to 2 decimal places)\nprint(f\"Demand for good 1: {round(x1, 2)}\")\nprint(f\"Demand for good 2: {round(x2, 2)}\")\n\nDemand for good 1: 10.0\nDemand for good 2: 5.0\n\n\nNote: The utility function is defined as negative because we are maximizing utility, so we are effectively minimizing the negative of the utility function.\nIf we also wanted to bake in the constraint that \\(x_1\\) and \\(x_2\\) must be non-negative, we can modify the utility function to return a really large value if \\(x_1\\) or \\(x_2\\) is negative. This way, the optimizer will avoid negative values for \\(x_1\\) and \\(x_2\\). The modified utility function would be defined as follows:\n\ndef utility(x):\n    x1, x2 = x\n    if x1 &lt; 0 or x2 &lt; 0:\n        return np.inf\n    else:\n        return -x1 ** alpha * x2 ** (1 - alpha)\n\nIn the code above, we simply provided the computer with our objective function and constraints, and it solved for the optimal values of \\(x_1\\) and \\(x_2\\) given a set of parameters. This means we didn’t need to solve the first-order conditions by hand. Of course, we don’t get an analytical expression for how demand depends on income and prices as we did before. However, we can extend this approach by embedding the code in a function that takes the parameters as inputs and returns the optimal values. This way, we can plot the quantities for different parameter values and gain insights into how the optimal quantities depend on prices and income.\n\ndef solve_demand(alpha, m, p1, p2):\n    \n    def utility(x):\n        x1, x2 = x\n        if x1 &lt; 0 or x2 &lt; 0:\n            return np.inf\n        else:\n            return -x1 ** alpha * x2 ** (1 - alpha)\n    \n    def budget_constraint(x):\n        x1, x2 = x\n        return m - p1 * x1 - p2 * x2\n    \n    constraints = ({\"type\": \"eq\", \"fun\": budget_constraint})\n    initial_guess = [1, 2]\n    result = minimize(utility, initial_guess, constraints=constraints)\n    x1, x2 = result.x\n    \n    return round(x1, 2), round(x2, 2)\n\nLet’s test the function with the same parameters as before.\n\nm = 100\np1 = 5\np2 = 10\nalpha = 0.5\nx1, x2 = solve_demand(alpha, m, p1, p2)\nprint(f\"Demand for good 1: {x1}\")\nprint(f\"Demand for good 2: {x2}\")\n\nDemand for good 1: 10.0\nDemand for good 2: 5.0\n\n\nNow that we have the function solve_demand, we can use it to plot the demand for good 1 as a function of its price, similar to what we did earlier.\n\n# Apply function to a range of prices for good 1\nx = [solve_demand(alpha, m, p1, p2) for p1 in p1_vals]\nx1_vals3, x2_vals3 = np.array(x).T\n\n# Plot demand curves\nplt.plot(p1_vals, x1_vals3, label='Demand for good 1')\nplt.plot(p1_vals, x2_vals3, label='Demand for good 2')\nplt.xlabel('Price of good 1')\nplt.ylabel('Demand')\nplt.legend()\nplt.show()",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 2"
+    ]
+  },
+  {
+    "objectID": "Project/exercise.html",
+    "href": "Project/exercise.html",
+    "title": "Exercise",
+    "section": "",
+    "text": "The utility function used in Tutorial 2 is called a Cobb-Douglas function. In this exercise, we will consider utility maximization with a CES utility function. In particular, the CES utility function is given by:\n\\[ U(x_1, x_2) = \\left( \\alpha x_1^{\\rho} + (1 - \\alpha) x_2^{\\rho} \\right)^{1/\\rho} \\]\nHere,\n\n\\(\\alpha\\) is a parameter between 0 and 1 that reflects the relative weight or importance of the goods.\n\\(\\rho\\) controls how easily the consumer can substitute between the two goods.\n\nWhen \\(\\rho \\to 1\\), the goods are perfect substitutes.\nWhen \\(\\rho \\to -\\infty\\), the goods are perfect complements.\n\n\nAlso, note that the Cobb-Douglas utility function is a special case of the CES utility function with \\(\\rho \\to 0\\).\nSince this exercise builds on Tutorial 2, here is the link to a Google Colab notebook containing the essential code from that tutorial.\nEach part is worth 2.5 points.\n\nModify the solve_demand function from Tutorial 2 to create a new function, solve_demand_ces, which solves for the optimal quantities of good 1 and good 2 given the CES utility function. (This new function will include an additional parameter, \\(\\rho\\).)\nWith the values of the other parameters set to: \\[\\alpha = 0.5, \\ m = 100, \\ p_1 = 5, \\ p_2 = 10\\] Find the optimal values of \\(x_1\\) and \\(x_2\\) in three cases:\n\n\\(\\rho = 0.99\\)\n\\(\\rho = 0.001\\)\n\\(\\rho = -200\\)\n\nPrint the results for each of the three cases and intuitively explain why the results make sense.\nPlot the demand for good 2 as a function of the price of good 1 for the three cases in part 2. Let other parameters be the same as in part 2 and use the range of 1 to 20 for the price of good 1. Superimpose the three demand curves on the same plot. Make sure to include a legend and label the axes. Intuitively explain what the demand curves are telling us about the relationship between the two goods in each case.\nAn indifference curve shows combinations of two goods that give a consumer equal utility. Plot the indifference curves for the first two cases specified in part 2 when utility \\(U=5\\). Continue to assume \\(\\alpha = 0.5\\). As before, superimpose the two indifference curves on the same plot, include a legend, and label the axes. \n\nWrite your code and explanations in a Google Colab notebook. Save the notebook as firstname_lastname.ipynb, download it on your local machine, and upload it on Canvas.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Exercise"
+    ]
+  },
+  {
+    "objectID": "Project/solution.html",
+    "href": "Project/solution.html",
+    "title": "Solution",
+    "section": "",
+    "text": "# def solve_demand_ces(alpha, rho, m, p1, p2):\n    \n#     def utility(x):\n#         x1, x2 = x\n#         return -(alpha * x1 ** rho + (1 - alpha) * x2 ** rho) ** (1 / rho)\n    \n#     def budget_constraint(x):\n#         x1, x2 = x\n#         return m - p1 * x1 - p2 * x2\n    \n#     constraints = ({\"type\": \"eq\", \"fun\": budget_constraint})\n#     initial_guess = [1, 2]\n#     result = minimize(utility, initial_guess, constraints=constraints)\n#     x1, x2 = result.x\n    \n#     return round(x1, 2), round(x2, 2)\n\n\n# # Parameters\n# alpha = 0.5\n# m = 100\n# p1 = 5\n# p2 = 10\n\n# x1, x2 = solve_demand_ces(alpha, 0.99, m, p1, p2)\n# print(f\"Good 1: {x1}\", f\"Good 2: {x2}\")\n\n# x1, x2 = solve_demand_ces(alpha, 0.001, m, p1, p2)\n# print(f\"Good 1: {x1}\", f\"Good 2: {x2}\")\n\n# x1, x2 = solve_demand_ces(alpha, -200, m, p1, p2)\n# print(f\"Good 1: {x1}\", f\"Good 2: {x2}\")\n\n\n# # Create a vector of 25 prices for good 1 between 1 and 10\n# K = 25 # Number of points\n# p1_vals = np.linspace(1, 10, K)\n\n# rho = -1\n# # Calculate demand for good 1 and good 2 at each price value\n# x = [solve_demand_ces(alpha, rho, m, p1, p2) for p1 in p1_vals]\n# x1_vals, x2_vals = np.array(x).T\n\n# # Plot demand for good 1 as a function of price of good 1\n# plt.plot(p1_vals, x2_vals)\n# plt.xlabel('Price of good 1')\n# plt.ylabel('Demand for good 2')"
+  },
+  {
+    "objectID": "Project/overview.html#what-is-this-project-about",
+    "href": "Project/overview.html#what-is-this-project-about",
+    "title": "Graduate Project: Overview",
+    "section": "What is this project about?",
+    "text": "What is this project about?\nThis project will teach you how to use Python programming to solve economic problems that involve optimization. Before you get started, you need to understand some basics of Python programming, so complete Tutorial 1 and then proceed to Tutorial 2, which teaches you how to solve an optimization problem in Python. In particular, Tutorial 2 will show you how to code a specific optimization problem. You will be modifying the code provided in this tutorial to solve a related but expanded problem as a part of your project. Once you are done with the two tutorials, you can start the project. You will find the instructions for the exercise you need to complete at the end of this page.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#introduction",
+    "href": "Project/tutorial1.html#introduction",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Introduction",
+    "text": "Introduction\nPython is a general purpose programming language, which is free and open source. Open source means that the code is available for anyone to use, modify, and distribute.\nPython, when installed, comes with a standard library that includes many modules and functions to perform common tasks. However, we often need to use additional packages to perform more specialized tasks. Some of the most commonly used packages for data analysis and scientific computing include:\n\nNumPy: provides support for large, multi-dimensional arrays and matrices, along with a collection of mathematical functions to operate on these arrays.\nPandas: provides data structures and data analysis tools for working with structured data.\nMatplotlib: provides enhanced functionality for creating plots.\nSciPy: provides a collection of numerical algorithms and toolboxes to perform scientific computing tasks such as differentiation, intergration, optimization, etc.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#getting-started",
+    "href": "Project/tutorial1.html#getting-started",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Getting Started",
+    "text": "Getting Started\nFor this project, you will use Google Colab, which is a free cloud service that allows you to write and execute Python code in your browser.\n\nYou will write and execute your code in Colab notebooks, which are interactive documents that can contain both code and rich text elements (such as paragraphs, equations, figures, links, etc.). Colab notebooks have the file extension .ipynb. If you have used Jupyter notebooks before, note that Colab notebooks are just Jupyter notebooks that are hosted by Colab.\nTo get started, follow these steps:\n\nOpen your web browser and go to Google Colab.\nSign in with your Google account.\nCreate a new notebook by clicking on File -&gt; New notebook in drive.\nYou can now start writing and executing Python code in the notebook. To test it out, type print('Hello!') in a code cell and run it by clicking the play button or pressing Shift + Enter.\nOnce you are done, you can save the notebook to your Google Drive or download it to your computer.\n\nAside: If you want to do some serious programming, you should install Python on your computer, which takes a bit more work. But since the focus of this class is not programming, Google Colab is sufficient for our purposes.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#importing-libraries",
+    "href": "Project/tutorial1.html#importing-libraries",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Importing Libraries",
+    "text": "Importing Libraries\nIn Python, you can import libraries using the import statement. For example, to import the numpy library and then use sqrt function from it, you can do the following:\n\nimport numpy\na = 25\nb = numpy.sqrt(25)\n\nHowever, it is common to import libraries with an alias to make the code more readable. For example, you can import numpy as np, which is a common convention, and then use the sqrt function as follows:\n\nimport numpy as np\na = 25\nb = np.sqrt(25)",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#importing-libraries-and-basic-syntax",
+    "href": "Project/tutorial1.html#importing-libraries-and-basic-syntax",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Importing Libraries and Basic Syntax",
+    "text": "Importing Libraries and Basic Syntax\nIn Python, you can import libraries using the import statement. For example, to import the numpy library and then use sqrt function from it, you can do the following:\n\nimport numpy\na = 25\nb = numpy.sqrt(25)\n\nHowever, it is common to import libraries with an alias to make the code more readable. For example, you can import numpy as np, which is a common convention, and then use the sqrt function as follows:\n\nimport numpy as np\na = 25\nb = np.sqrt(25)",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#basics",
+    "href": "Project/tutorial1.html#basics",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Basics",
+    "text": "Basics\n\nImporting libraries\nIn Python, you can import libraries using the import statement. For example, to import the numpy library and then use sqrt function from it, you can do the following:\n\nimport numpy\nnumpy.sqrt(25)\n\n5.0\n\n\nHowever, it is common to import libraries with an alias to make the code more readable. For example, you can import numpy as np, which is a common convention, and then use the sqrt function as follows:\n\nimport numpy as np\nnp.sqrt(25)\n\n5.0",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#python-basics",
+    "href": "Project/tutorial1.html#python-basics",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Python Basics",
+    "text": "Python Basics\n\nImporting libraries\nIn Python, you can import libraries using the import statement. For example, to import the numpy library and then use sqrt function from it, you can do the following:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nHowever, it is common to import libraries with an alias to make the code more readable. For example, you can import numpy as np, which is a common convention, and then use the sqrt function as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nData types and variables\nPython has several built-in data types, including integers, floats, booleans, strings, and lists.\n\nIntegers: whole numbers, e.g., 1, 2, 3, etc.\nFloats: numbers with decimal points, e.g., 1.0, 2.5, 3.14, etc.\nBooleans: True or False.\nStrings: sequences of characters enclosed in single or double quotes, e.g., ‘Hello’, “World”, etc.\nLists: ordered collections of elements enclosed in square brackets, e.g., [1, 2, 3], [‘a’, ‘b’, ‘c’], etc.\n\nYou can assign values to variables using the = operator. Python will automatically infer the data type based on the value assigned to the variable.\nFor instance, you can assign the integer value of 1 to a variable x as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that in the above code, we added x at the end, so that when we run the code, Python will print the value of x.\nTo create a list, we can enclose the elements in square brackets as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nLists can contain elements of different data types. You can access elements of a list using their index. Python uses zero-based indexing, meaning the first element of the list has an index of 0.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nFunctions\nPython has a number of built-in functions that are available without import. For example, the print function is used to display output. Some other built-in functions include len, max, min, sum, etc. You can try these out in the code cell below:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe also saw that if built-in functions are not sufficient, we can import libraries and use functions from them (e.g., numpy.sqrt).\nHowever, sometimes we need to define our own functions. We can define a function using the def keyword followed by the function name and the arguments in parentheses. The function body is indented and can contain multiple lines of code. Here is an example of a simple function that returns the square of a number:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that in Python, ** is used for exponentiation.\nExercise: Define a function add that takes two arguments x and y and returns their sum. Test the function by calling it with x=3 and y=4.\nNow say we defined the function f as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can call the function f with the arguments x=2, a=3, and b=4 either as f(2, 3, 4) or as f(x=2, a=3, b=4). Both will give the same result. Try it out.\n\n\nNumPy Arrays\nNumPy is a popular Python library for numerical computing. The most important data structure in NumPy is the ndarray, which is a multi-dimensional array. You can create a NumPy array from a Python list using the np.array function. For example:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNumPy arrays are similar to lists but must contain elements that are either all numeric or all boolean. You can perform element-wise operations on NumPy arrays, which is not possible with Python lists. For example, you can square all elements of the NumPy array defined above as follows:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSometimes it can be useful to create a grid of evenly spaced numbers. You can do this using the np.linspace function, which takes the start, end, and number of points as arguments. For example, to create an array of 5 numbers between 0 and 1:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nPlots\nWe will use the matplotlib library to create plots. To do so, we first need to import the pyplot module from matplotlib. Then we can use the plot function to create a simple line plot.\nHere is an example of creating a plot of \\(y = x^3\\) for \\(x\\) between 0 and 5:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nNow what if we wanted to add another line for \\(z = x^3\\) to the same plot? We can do this by calling the plot function again before calling show. The code below implements this and also adds a legend and labels to the plot.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLoops\nLoops are used to execute a block of code multiple times. Python has two types of loops: for loops and while loops.\nA for loop is used to iterate over a sequence (e.g., a list, tuple, string, or range). Here is an example of a for loop that prints the elements of a list:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nA while loop is used to execute a block of code as long as a condition is true. Here is an example of a while loop that prints the numbers from 1 to 3:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nList comprehensions utilize a for loop to create a new list by applying an operation to each element of an existing list. Here is an example of a list comprehension that squares each element of a list:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nConditional Statements\nConditional statements are used to perform different actions based on different conditions. Python has if, elif, and else statements for this purpose. Here is an example of an if statement that prints whether a number is positive, negative, or zero:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#navigating-this-tutorial",
+    "href": "Project/tutorial1.html#navigating-this-tutorial",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Navigating this Tutorial",
+    "text": "Navigating this Tutorial\nThis tutorial is meant to be interactive, so you need to use the Run button to execute the code snippets to see the output. You can also modify the code and run it to see how the output changes. Remember that once you refresh the page, the code will go back to its original state. Try it with the code snippet below by first running it and then replacing World with your name and running it again.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can also copy the code to a Google Colab notebook and play around with it there.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
+  },
+  {
+    "objectID": "Project/tutorial1.html#optimization-in-python",
+    "href": "Project/tutorial1.html#optimization-in-python",
+    "title": "Tutorial 1: Basic Python Programming",
+    "section": "Optimization in Python",
+    "text": "Optimization in Python\nWe can also use Python to solve optimization problems. To do this, we will use the scipy.optimize module from the SciPy library.\nHere is an example of solving a simple optimization problem using the minimize function from scipy.optimize. The code below minimizes the function \\(f(x) = (x - 2)^2\\):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe minimize function takes the function to minimize and an initial guess x0 as arguments. It returns an object that contains information about the optimization result. The optimal value of \\(x\\) is contained in the x attribute of the result object, which can also be accessed directly by calling result.x. What is the optimal value of \\(x\\) in this case?\nTutorial 2 will show you how to solve a slightly more complex optimization problem using Python.",
+    "crumbs": [
+      "Content",
+      "Graduate Project",
+      "Tutorial 1"
+    ]
   }
 ]

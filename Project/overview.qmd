@@ -1,0 +1,14 @@
+---
+title: "Graduate Project: Overview"
+nav-sidebar: false
+---
+
+#### Who needs to complete this project?
+
+You need to complete this project if you are taking this course for graduate credit. The grade for the project will count in place of the active engagement grade. The project is **due on the last day of class**. 
+
+**Note**: Undergraduate students are not required to complete this assignment, but can do so for fun and I would be happy to check your work, but it will not count towards your grade.
+
+#### What am I supposed to do?
+
+This project will teach you how to use Python programming to solve economic problems that involve optimization. Before you get started, you need to understand some basics of Python programming, so complete [Tutorial 1](tutorial1.qmd) and then proceed to [Tutorial 2](tutorial2.qmd), which teaches you how to solve an optimization problem in Python. In particular, Tutorial 2 will show you how to code a specific optimization problem. You will be modifying the code provided in this tutorial to solve a related but expanded problem as a part of your project. Once you are done with the two tutorials, you can start the project. You will find the instructions for the exercise you need to complete on the [Exercise](exercise.qmd) page.

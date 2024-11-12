@@ -1,0 +1,42 @@
+---
+title: "Exercise"
+nav-sidebar: false
+---
+
+The utility function used in Tutorial 2 is called a Cobb-Douglas function. In this exercise, we will consider utility maximization with a CES utility function. In particular, the CES utility function is given by:
+
+$$ U(x_1, x_2) = \left( \alpha x_1^{\rho} + (1 - \alpha) x_2^{\rho} \right)^{1/\rho} $$
+
+Here,
+
+-  $\alpha$  is a parameter between 0 and 1 that reflects the relative weight or importance of the goods.
+-  $\rho$ controls how easily the consumer can substitute between the two goods.
+   -  When $\rho \to 1$, the goods are perfect substitutes.
+   -  When $\rho \to -\infty$, the goods are perfect complements.
+
+Also, note that the Cobb-Douglas utility function is a special case of the CES utility function with $\rho \to 0$.
+
+Since this exercise builds on Tutorial 2, here is the [link](https://colab.research.google.com/drive/16_OMSdMFGWCHFNvh2A9t5kj-e8yqvOOp?usp=sharing) to a Google Colab notebook containing the essential code from that tutorial.
+
+Each part is worth 2.5 points.
+
+1.  Modify the `solve_demand` function from Tutorial 2 to create a new function, `solve_demand_ces`, which solves for the optimal quantities of good 1 and good 2 given the CES utility function. (This new function will include an additional parameter, $\rho$.) 
+   
+2.  With the values of the other parameters set to: $$\alpha = 0.5, \ m = 100, \ p_1 = 5, \ p_2 = 10$$ Find the optimal values of $x_1$ and $x_2$ in three cases: 
+   
+       (a) $\rho = 0.99$
+       (b) $\rho = 0.001$
+       (c) $\rho = -200$
+
+      Print the results for each of the three cases and intuitively explain why the results make sense.
+
+3. Plot the demand for *good 2* as a function of the price of *good 1* for the three cases in part 2. Let other parameters be the same as in part 2 and use the range of 1 to 20 for the price of good 1. Superimpose the three demand curves on the same plot. Make sure to include a legend and label the axes. Intuitively explain what the demand curves are telling us about the relationship between the two goods in each case.
+   
+4. An indifference curve shows combinations of two goods that give a consumer equal utility. Plot the indifference curves for the *first two* cases specified in part 2 when utility $U=5$. Continue to assume $\alpha = 0.5$. As before, superimpose the two indifference curves on the same plot, include a legend, and label the axes. 
+<!--    
+If we fix utility at some level $u$, then the quantity of good 2 in terms of good 1 can be expressed as:
+$$ x_2 = \left(\frac{u^{\rho}-\alpha x_1^{\rho}}{1-\alpha}\right)^{1/\rho} $$
+
+Fixing $u=100$, plot $x_2$ as a function of $x_1$ for the three cases and parameter values specified in part 2. Use the range of 1 to 20 for $x_1$. As before, superimpose the three indifference curves on the same plot, include a legend, and label the axes.  -->
+
+Write your code and explanations in a Google Colab notebook. Save the notebook as `firstname_lastname.ipynb`, download it on your local machine, and upload it on Canvas.
