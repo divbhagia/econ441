@@ -162,7 +162,7 @@ remaining_mods = ["opt", "add"]
 #################################################
 
 # Initialize
-sem = "fall"
+sem = "spring"
 class_days = ["Tue"]
 
 # Fall semester dates
@@ -175,7 +175,7 @@ if sem == "fall":
 if sem == "spring":
     tues_and_thurs = get_dates("01/18", "05/09", class_days, 2025)
     break_ = get_dates("03/31", "04/06", class_days, 2025)
-    examday = "Thu 05/16"  # CHECK THIS DATE
+    examday = "Thu 05/13"
 
 # Fall or spring break adjustment
 dates = [date for date in tues_and_thurs if date not in break_[1:]]
