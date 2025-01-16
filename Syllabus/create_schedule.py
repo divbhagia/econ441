@@ -353,9 +353,9 @@ with open("Syllabus/schedule.tex", "w") as f:
 #################################################
 
 # Convert dates from 08/27 to Aug 27
-df = df[df["Date"] != ""].copy()
+# df = df[df["Date"] != ""].copy()
 df["Date"] = df["Date"].apply(
-    lambda x: dt.datetime.strptime(x, "%m/%d").strftime("%b %d")
+    lambda x: dt.datetime.strptime(x, "%m/%d").strftime("%b %d") if x != "" else ""
 )
 
 # Add lecture number and links to Date column (remove lecture col)
@@ -384,6 +384,8 @@ for mod, nnotes in notes.items():
     df.loc[mod_idx, "Module"] += "<br>"
     for note in nnotes:
         df.loc[mod_idx, "Module"] += f"<a href='Notes/{note}'>{icon('notes')}</a> "
+
+# Remove text from Module column
 
 # Assessment column
 df.loc[df.index[-1], "Topics"] = "Final Exam"
