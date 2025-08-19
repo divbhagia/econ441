@@ -1,6 +1,7 @@
 import datetime as dt
 import pandas as pd
 import os, re
+import numpy as np
 
 #################################################
 # Function to get dates for the semester
@@ -150,11 +151,10 @@ topics["opt"] = [opt1, opt2, opt3, opt4]
 add1 = "TBA"
 topics["add"] = [add1]
 
-# Specify modules to cover before midterm
-midterm_mods = ["prelim", "linal", "calc"]
-remaining_mods = ["opt", "add"]
+# Collect modules
+mods = ["prelim", "linal", "calc", "opt", "add"]
+n_lecs = sum(len(topics[mod]) for mod in mods)
 
-## Code assumes only two modules after the midterm
 ## Code here slightly more general than Econ340 (can edit that)
 
 #################################################
@@ -162,37 +162,66 @@ remaining_mods = ["opt", "add"]
 #################################################
 
 # Initialize
-sem = "spring"
-class_days = ["Tue"]
+sem = "fall"
+class_days = ["Mon"]
 
 # Fall semester dates
 if sem == "fall":
-    tues_and_thurs = get_dates("08/24", "12/13", class_days, 2024)
-    break_ = get_dates("11/26", "12/01", class_days, 2024)
-    examday = "Tue 12/17"
+    dates = get_dates("08/23", "12/12", class_days, 2025)
+    break_ = get_dates("11/24", "11/30", class_days, 2025)
+    examday = "Mon 12/15"
+    add_holidays = ["Mon 09/01"]
+    holiday_names = ["Labor Day"]
 
 # Spring semester dates
 if sem == "spring":
-    tues_and_thurs = get_dates("01/18", "05/09", class_days, 2025)
+    dates = get_dates("01/18", "05/09", class_days, 2025)
     break_ = get_dates("03/31", "04/06", class_days, 2025)
     examday = "Thu 05/13"
+    add_holidays = []
+    holiday_names = []
 
-# Fall or spring break adjustment
-dates = [date for date in tues_and_thurs if date not in break_[1:]]
-dates = [date if date != break_[0] else "" for date in dates]
+# Set the midterm date
+midterm_idx = 9
 
 # Add final exam date
 dates.append(examday)
 
+# Collect indices for breaks, review classes, and exams
+mid_review_idx = midterm_idx - 1
+add_holidays_idx = [dates.index(add_holiday) for add_holiday in add_holidays]
+break_idx = dates.index(break_[0])
+final_review_idx = len(dates) - 2
+final_idx = len(dates) - 1
+
+# Create list with just lecture dates
+rm_idxs = [
+    break_idx,
+    mid_review_idx,
+    midterm_idx,
+    final_review_idx,
+    final_idx,
+] + add_holidays_idx
+lec_dates = [date for i, date in enumerate(dates) if i not in rm_idxs]
+n_lec_dates = len(lec_dates)
+
+# Review class and midterm index
+if n_lec_dates < n_lecs:
+    mods = mods[:-1]
+    n_lecs = sum(len(topics[mod]) for mod in mods)
+if n_lec_dates < n_lecs:
+    raise ValueError(f"Not enough lecture dates for the number of lectures ({n_lecs}).")
+
 # If only one class day, remove the day from dates column
 if len(class_days) == 1:
     dates = [date[4:] for date in dates]
+    lec_dates = [date[4:] for date in lec_dates]
 
 # Create a DataFrame with the dates
 df = pd.DataFrame(
     {
-        "Date": dates,
-        "Lecture": "",
+        "Date": lec_dates,
+        "Lecture": range(1, n_lecs + 1),
         "Module": "",
         "Topics": "",
         "References": "",
@@ -201,79 +230,12 @@ df = pd.DataFrame(
     dtype="object",
 )
 
-# Where empty date it's Fall or Spring Recess
-break_idx = df[df["Date"] == ""].index[0]
-if sem == "fall":
-    df.loc[break_idx, "Topics"] = "Fall Recess"
-if sem == "spring":
-    df.loc[break_idx, "Topics"] = "Spring Recess"
-
-# Add the lecture numbers and topics for lectures before the midterm
-counter = 0
-for mod in midterm_mods:
-    step = len(topics[mod])
-    df.loc[counter : counter + step - 1, "Lecture"] = list(
-        range(counter + 1, counter + step + 1)
-    )
-    df.loc[counter, "Module"] = modules[mod]
-    df.loc[counter : counter + step - 1, "Topics"] = topics[mod]
-    counter += step
-lec_counter = counter
-
-# After those lectures: Review Class and Midterm
-df.loc[counter, "Topics"] = "Review Class"
-counter += 1
-df.loc[counter, "Topics"] = "Midterm Exam"
-counter += 1
-
-# Split the module following the midterm if needed
-next_module = remaining_mods[0]
-classes_left = break_idx - counter
-# print(f"Classes to break: {classes_left}")
-# print(f"Topics in {modules[next_module]} Module: {len(topics[next_module])}")
-if classes_left < len(topics[next_module]):
-    next_topics = topics[next_module]
-    topics[next_module] = next_topics[:classes_left]
-    topics[f"{next_module}2"] = next_topics[classes_left:]
-    modules[f"{next_module}2"] = f"{modules[next_module]} "
-
-# Add the lecture numbers and topics for the next module
-step = len(topics[next_module])
-df.loc[counter : counter + step - 1, "Lecture"] = list(
-    range(lec_counter + 1, lec_counter + step + 1)
-)
-df.loc[counter, "Module"] = modules[next_module]
-df.loc[counter : counter + step - 1, "Topics"] = topics[next_module]
-counter += step
-lec_counter += step
-counter += 1  # For the break
-
-# Add continued module if next module was broken up (Spring only probably)
-if f"{next_module}2" in topics:
-    step = len(topics[f"{next_module}2"])
-    df.loc[counter : counter + step - 1, "Lecture"] = list(
-        range(lec_counter + 1, lec_counter + step + 1)
-    )
-    df.loc[counter, "Module"] = modules[f"{next_module}2"]
-    df.loc[counter : counter + step - 1, "Topics"] = topics[f"{next_module}2"]
-    counter += step
-    lec_counter += step
-
-# Add the lecture numbers and topics for remaining modules
-last_module = remaining_mods[-1]
-step = len(topics[last_module])
-df.loc[counter : counter + step - 1, "Lecture"] = list(
-    range(lec_counter + 1, lec_counter + step + 1)
-)
-df.loc[counter, "Module"] = modules[last_module]
-df.loc[counter : counter + step - 1, "Topics"] = topics[last_module]
-counter += step
-lec_counter += step
-
-# Last two lectures: Review Class and Final Exam
-df.loc[counter, "Topics"] = "Review Class"
-counter += 1
-df.loc[counter, "Topics"] = "Final Exam (7--8.50 pm)"
+# Insert modules and topics
+mod_idx = [sum(len(topics[mod]) for mod in mods[:i]) for i in range(len(mods))]
+for i, mod in enumerate(mods):
+    df.loc[mod_idx[i], "Module"] = modules[mod]
+    for j, topic in enumerate(topics[mod]):
+        df.loc[mod_idx[i] + j, "Topics"] = topic
 
 # Add references
 df.loc[df["Lecture"] == 1, "References"] = "2.2, 2.3, 2.4-2.6, pg 163, 5.1"
@@ -296,12 +258,54 @@ df.loc[df["Lecture"] == 7, "Quiz"] = "Quiz 3"
 df.loc[df["Lecture"] == 10, "Quiz"] = "Quiz 4"
 df.loc[df["Lecture"] == 12, "Quiz"] = "Quiz 5"
 
+# Add back all original dates
+df_tmp = pd.DataFrame({"Date": dates})
+df = df_tmp.merge(df, on="Date", how="left")
+
+# Add description for additional dates
+# df.loc[break_idx, "Date"] = ""
+if sem == "fall":
+    df.loc[break_idx, "Topics"] = "Fall Recess"
+if sem == "spring":
+    df.loc[break_idx, "Topics"] = "Spring Recess"
+for i, add_holiday in enumerate(add_holidays_idx):
+    df.loc[add_holiday, "Date"] = dates[add_holiday]
+    df.loc[add_holiday, "Topics"] = holiday_names[i]
+df.loc[mid_review_idx, "Topics"] = "Midterm Review"
+df.loc[midterm_idx, "Topics"] = "Midterm Exam"
+df.loc[final_review_idx, "Topics"] = "Final Review"
+df.loc[final_idx, "Topics"] = "Final Exam"
+
+# Replace missing values with empty strings
+df = df.fillna("")
+
 #################################################
 # Create latex table
 #################################################
 
 # Get the latex lines
 lines = latex(df)
+
+# Module beginnings and endings
+mdlbegs = np.array(df[df["Module"] != ""].index)
+n_tops = [len(topics[mod]) for mod in mods]
+mdlends = mdlbegs + n_tops
+
+# Specify indices for bold lines
+mdlends[-1] += 1  # Manual adjustment for the last module
+bold_lines = set(mdlends - 1) | set(mdlbegs - 1)
+bold_lines = bold_lines | {len(lines) - 1}
+
+# Full line pist midterm and final review
+full_lines = [mid_review_idx, final_review_idx, break_idx, break_idx - 1]
+
+# # Multirow for Module column
+bs = [8, 18, 14, 20]  # manually set
+for i, row in enumerate(mdlbegs):
+    row_content = df.loc[row].copy()
+    mod = df.loc[row, "Module"]
+    row_content["Module"] = f"\\multirow{{{n_tops[i]}}}[{bs[i]}]{{*}}{{{mod}}}"
+    lines[row] = " & ".join([str(x) for x in row_content]) + " \\\\\n"
 
 # Special multicolumn rows
 splrows = df[df["Lecture"] == ""].index
@@ -314,39 +318,20 @@ for row in splrows:
         + " \\\\"
     )
 
-# Manual adjustment for the following multirow cells to be vertically centered
-if sem == "fall":
-    bigstruts = [8, 18, 12, 12, 0]
-if sem == "spring":
-    bigstruts = [8, 18, 12, 4, 6, 0]
-
-# # Adjust rows with module names, also grab module end rows for later
-mdlbegs = df[df["Module"] != ""].index
-mdlends = [0] * len(mdlbegs)
-for i, row in enumerate(mdlbegs):
-    mod = df.loc[row, "Module"]
-    modkey = [key for key, value in modules.items() if value == mod][0]
-    ntops = len(topics[modkey])
-    mdlends[i] = mdlbegs[i] + ntops - 1
-    row_content = df.loc[row].copy()
-    bs = bigstruts[i]
-    row_content["Module"] = f"\\multirow{{{ntops}}}[{bs}]{{*}}{{{mod}}}"
-    lines[row] = " & ".join([str(x) for x in row_content]) + " \\\\\n"
-
-# Add lines add end of each row and bolder lines at the end of each module
-boldlines = list(set(mdlends) | set(mdlbegs[1:] - 1))
+# Add horizontal lines
 for row in range(len(lines)):
-    if row not in splrows and row not in boldlines:
+    if row in bold_lines:
+        lines[row] += "\\Xhline{1.75\\arrayrulewidth} "
+    elif row in full_lines:
+        lines[row] += "\\hline "
+    else:
         lines[row] += " \\cline{1-2} \\cline{4-6}"
-    if row in splrows and row not in boldlines:
-        lines[row] += " \\hline"
-    if row in boldlines:
-        lines[row] += " \\Xhline{1.75\\arrayrulewidth}"
 
 # Write to file
 with open("Syllabus/schedule.tex", "w") as f:
     for line in lines:
         f.write(line + "\n")
+
 
 #################################################
 # Create HTML version
@@ -384,8 +369,6 @@ for mod, nnotes in notes.items():
     df.loc[mod_idx, "Module"] += "<br>"
     for note in nnotes:
         df.loc[mod_idx, "Module"] += f"<a href='Notes/{note}'>{icon('notes')}</a> "
-
-# Remove text from Module column
 
 # Assessment column
 df.loc[df.index[-1], "Topics"] = "Final Exam"
