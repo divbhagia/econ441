@@ -12,6 +12,8 @@ References/
 */archived/
 project_files/
 project.qmd
+gen-rtp-docs/
+Syllabus/attendance-sheet.xlsx
 
 # Ignore temporary files
 .DS_Store
