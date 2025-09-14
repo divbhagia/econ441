@@ -66,7 +66,7 @@
 % Itemize
 \newenvironment{witemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
 \RequirePackage{tasks}
-\settasks{counter-format = (tsk[a])}
+% \settasks{counter-format=(tsk[a])}
 
 % Spacing 
 \RequirePackage{xspace}
