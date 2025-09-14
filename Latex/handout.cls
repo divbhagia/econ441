@@ -9,7 +9,7 @@
 \fancyhf{}
 \fancyheadoffset{1cm}
 \lhead{ECON 441: Introduction to Mathematical Economics}
-\rhead{Div Bhagia}
+\rhead{\mytitle}
 \rfoot{\center \thepage}
 \pagestyle{fancy}
 
