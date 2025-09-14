@@ -1,5 +1,5 @@
 # Ignore selected folders
-Compiled Material/
+rtp-material/
 Exams/Midterm/Past/Midterm-Spring*
 Exams/Midterm/Past/Midterm-Fall*
 Exams/Midterm/note_to_self.txt
