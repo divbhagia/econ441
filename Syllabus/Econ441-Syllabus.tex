@@ -1,55 +1,86 @@
+%% ----------------------------
+% Setup
+%% ----------------------------
+\DocumentMetadata{
+  pdfstandard=UA-2,
+  pdfversion=2.0,
+  lang=en-US
+}
 \documentclass{./../Latex/syllabus}
 
+%% ----------------------------
+% Document information
+%% ----------------------------
 
+%\hypersetup{
+%  pdftitle={ECON 441: Introduction to Mathematical Economics},
+%}
+
+%% ----------------------------
+% Header
+%% ----------------------------
+\usepackage{fancyhdr}
 \pagestyle{fancyplain}
 \fancyhf{}
 \lhead{ \fancyplain{}{ECON 441: Introduction to Mathematical Economics} }
-\rhead{ \fancyplain{}{\includegraphics[scale=0.15]{CBE-Wordmark-CMYK} } }
+\rhead{ \fancyplain{}{Syllabus} }
 \fancyfoot[c] {\thepage\ }
 \thispagestyle{plain}
 
-%%%%%%%%%%%% LISTING %%%
-\usepackage{acronym}
+%% ----------------------------
+% Begin document
+%% ----------------------------
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\begin{center}
-\includegraphics[scale=0.22]{CBE-Wordmark-CMYK} \\ \vspace{0.5em}
-{\large \textsc{ECON 441: Introduction to Mathematical Economics}} \\
-{\large \textsc{Fall 2025}}
-\end{center}
-%\date{September 26, 2014}
+\courseheader{ECON 441: Introduction to Mathematical Economics}{Fall 2025}{Department of Economics}{cbe-logo.png}
 
+%% ----------------------------
+% Course & faculty information
+%% ----------------------------
+
+\vspace{-1.5em}
 \begin{center}
 \begin{minipage}[t]{\textwidth}
 \rule{\textwidth}{0.5pt} \\
 \setstretch{1.15} 
-\textbf{Instructor:} Div Bhagia \\
-\textbf{Office:} SGMH 3361 \\
-\textbf{Email:} dbhagia@fullerton.edu, preferred (usually respond within 48 hours except on weekends) \\
-\textbf{Phone:} (657) 278-2914 \\
-\textbf{Office hours:} Mondays, 5-6.45 PM, or by appointment (in-person or on \href{https://fullerton.zoom.us/j/81895171931}{Zoom}) \\
-\textbf{Classroom:} SGMH 2301 \\
-\textbf{Class Schedule:} Mondays, 7-9.45 PM \\
-\textbf{Course Website:} \href{https://dbhagia.com/econ441}{dbhagia.com/econ441} \\
-\textbf{Technical support:} Call (657) 278-8888 or visit the \href{https://www.fullerton.edu/it/students/helpdesk/index.php}{IT Helpdesk website} \\
+\textbf{Instruction modality:} In-person \\
+\textbf{Class and exam location:} SGMH 2301 \\
+\textbf{Class days and time:} Mondays, 7-9.45 PM  \\
+\textbf{Course website:} \href{https://www.dbhagia.com/econ441/}{dbhagia.com/econ441}  \\ \vspace{-0.5em}
+
+
+\textbf{Instructor:} Div Bhagia \vspace{-0.25em}
+\begin{itemize}
+\item[] \textbf{Office:} SGMH 3361 
+\item[] \textbf{Email:} dbhagia@fullerton.edu (usually respond within 48 hours except on weekends)
+\item[] \textbf{Phone:} (657) 278-2914 
+\item[] \textbf{Office hours:} Mondays, 5-6.45 PM, or by appointment (in-person or on \href{https://fullerton.zoom.us/j/81895171931}{Zoom}) 
+\end{itemize}
 \rule{\textwidth}{0.5pt} 
 \end{minipage}
 \end{center}
 
-\vspace{0.1em}
-\section*{Course Description}
+%% ----------------------------
+% Course Information
+%% ----------------------------
 
-%\subsection*{Course Overview}
+\section*{Course Information}
+
+\subsection*{Prerequisites}
+ECON 310, ECON 315, or ECON 515; MATH 135, MATH 130, or MATH 150A
+
+\subsection*{Course Catalog Description}
+Economic theory from microeconomics and macroeconomics. Content varies; constrained optimization problems and rational decision-making.
+
+\subsection*{Additional Course Description}
 
 The economy is shaped by the actions of various economic agents, each driven by their own unique set of incentives and constraints. Understanding this complex system is a challenging task, as it involves keeping track of the interplay of several moving pieces. Enter Mathematics, the protagonist of this story, which enables us to represent complex economic relationships and interactions elegantly. Mathematical economic models, while often simplifications of reality, provide us with a structured way of thinking about economic issues.
 
 This class will introduce you to the world of mathematical economics. We will cover essential tools used in economics, including linear algebra, calculus, and optimization, and apply these tools to economic problems.  For example, you will learn how to express and solve complex systems of equations that describe the economy using matrix algebra and to solve unconstrained and constrained optimization problems, such as those related to utility maximization, price determination, wage setting, and more.
 
-%We will also spend some time thinking about suitable assumptions  for effectively modeling specific aspects the economy. Hopefully, after this class, you will develop some appreciation for mathematical economics, while also being able to think critically about the advantages and limitations of this approach to understand economics.
+%We will also spend some time thinking about suitable assumptions for effectively modeling specific aspects the economy. Hopefully, after this class, you will develop some appreciation for mathematical economics, while also being able to think critically about the advantages and limitations of this approach to understand economics.
 
-\subsection*{Learning Goals}
+\subsection*{Student Learning Outcomes}
 Upon successful completion of this course, students will:
 \begin{enumerate}
 \itemsep0em 
@@ -57,13 +88,6 @@ Upon successful completion of this course, students will:
   \item Learn how these mathematical tools are applied to a range of economic issues, from analyzing firm and consumer behavior to implications of fiscal policies, preparing students for graduate-level coursework in economics.
   \item Develop the ability to mathematically model economic phenomenon, carefully considering the appropriate assumptions to best represent specific behavior of economic agents or particular market structures.
 \end{enumerate}
-
-\newpage
-\subsection*{Prerequisites}
-ECON 310, ECON 315, or ECON 515; MATH 135, MATH 130, or MATH 150A
-
-\subsection*{Course Catalog Description}
-Economic theory from microeconomics and macroeconomics. Content varies; constrained optimization problems and rational decision-making.
 
 \subsection*{Course Structure}
 
@@ -79,10 +103,7 @@ All course materials—including lecture slides, worksheets, notes for each topi
   \item \textit{Chiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition}
 \end{itemize}
 
-You can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me and I will try my best to find you one.
-
-\section*{Instruction Modality}
-All meetings (including the midterm and final exam) for this course are expected to be held in person. You should inform me in advance if you cannot attend the class in any given week. If you test positive or are exposed to Covid, please report it using the \href{https://coronavirus.fullerton.edu/report-covid-19-case-or-exposure/}{CSUF COVID-19 Self Reporting Form}. If we must move the classes online due to unforeseen circumstances, we will meet on \href{https://fullerton.zoom.us/j/81895171931}{Zoom}.
+You can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me, and I will try my best to find you one.
 
 \section*{Course Communication}
 All course announcements and individual emails are sent through Canvas, which only uses CSUF email accounts. Therefore, you MUST check your CSUF email regularly (several times a week) for the course duration.
@@ -90,39 +111,35 @@ All course announcements and individual emails are sent through Canvas, which on
 \section*{Conduct in the Classroom}
 Use of phones, laptops, or other digital devices is not allowed during the lecture except when explicitly instructed to use one. Randomized Controlled Trials (RCTs) conducted at West Point show that in-class computer use inhibits learning. Here is a \href{https://oema.army.mil/pub/2017_Carter_Greenberg_Walker_Computer_Usage_RCT_USMA.pdf}{link} to the paper. Tablets used for taking notes that remain flat on the desk are allowed.
 
-\section*{Grading Criteria}
+\section*{Technical Problems}
+If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then, contact: \href{https://www.fullerton.edu/it/services/helpdesk/}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone = 657-278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}, online chat - log into \href{http://my.fullerton.edu}{Portal}; click ``Online IT Help''; click ``Live Chat.''
+
+\noindent \underline{For issues with Canvas}: Canvas Support Hotline = 657-278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides with AI Assistant}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+
+\section*{Grading Policies and Standards}
+
+\subsection*{Grading Scale}
 
 Plus/minus grading will be used in this course. You are guaranteed at least the following grade if your weighted average course score falls within the specified range. A curve may be applied to the final grade.
 
-\begin{center}
-\begin{minipage}[t]{0.75\textwidth}
-\begin{tabular}{|ccc|}
-\hline
-Grade & \multicolumn{2}{c|}{Range} \\
-$\mathrm{A}+$ & $100 \%$ & to $97 \%$ \\
-$\mathrm{~A}$ & $<97 \%$ & to $93 \%$ \\
-$\mathrm{~A}-$ & $<93 \%$ & to $90 \%$ \\
-$\mathrm{~B}+$ & $<90 \%$ & to $87 \%$ \\
-$\mathrm{~B}$ & $<87 \%$ & to $84 \%$ \\
-$\mathrm{~B}-$ & $<84 \%$ & to $80 \%$ \\
-$\mathrm{C}+$ & $<80 \%$ & to $77 \%$ \\
-\hline
-\end{tabular} \hspace{2cm}
-\begin{tabular}{|ccc|}
-\hline
-Grade & \multicolumn{2}{c|}{Range} \\
-C & $<77 \%$ & to $74 \%$ \\
-C- & $<74 \%$ & to $70 \%$ \\
-D+ & $<70 \%$ & to $67 \%$ \\
-D & $<67 \%$ & to $64 \%$ \\
-D- & $<64 \%$ & to $61 \%$ \\
-F & $<61 \%$ & to $0 \%$ \\
- &  &  \\
-\hline
-\end{tabular}
-\end{minipage}
-\end{center} 
-\vspace{1em}
+\begin{itemize}
+\item[] 98--100\% = A+ 
+\item[] 93--97.99\% = A (outstanding performance) 
+\item[] 90--92.99\% = A- 
+\item[] 87--89.99\% = B+ 
+\item[] 83--86.99\% = B (good performance) 
+\item[] 80--82.99\% = B- 
+\item[] 77--79.99\% = C+ 
+\item[] 73--76.99\% = C (acceptable performance) 
+\item[] 70--72.99\% = C- 
+\item[] 67--69.99\% = D+ 
+\item[] 63--66.99\% = D (poor performance) 
+\item[] 60--62.99\% = D- 
+\item[] 0--59.99\% = F 
+\end{itemize}
+
+\subsection*{Grade Breakdown}
+
 
 \noindent If you are enrolled in this course for \textbf{undergraduate-level credit}, your grade will be determined by active participation, five in-class quizzes, and two exams, with the following breakdown:
 \begin{center}
@@ -133,23 +150,24 @@ Midterm & 30\% \\
 Final Exam & 40\% \\
 \end{tabularx}
 \end{center}
-
 \noindent If you are enrolled in this course for \textbf{graduate-level credit}, you must also complete a project using Python. The project will substitute for active engagement, thus accounting for 10\% of your grade, and will be due on the last day of class. %More details will be provided later in the semester.
 
-\subsection*{Active Engagement}
-This class requires active engagement from students. I expect students to work on problems together in the class when instructed, be able to review material covered in the previous sessions and participate in other classroom activities. There is no separate grade for attendance, but if you miss class, you automatically lose points for active engagement.
+\subsection*{Assignment Descriptions}
 
-\subsection*{Homework Assignments}
-I will be assigning you homework problems each week. You must attempt these, as they are meant to reinforce the material covered in the lecture and will be crucial to your success in the quizzes and exams. I encourage you to do these problems in groups and come to my office hours for help when stuck. The homework problems will not be graded.
+\begin{itemize}
+\item \textbf{Active Engagement}: This class requires active engagement from students. I expect students to work on problems together in the class when instructed, be able to review material covered in the previous sessions, and participate in other classroom activities. There is no separate grade for attendance, but if you miss class, you automatically lose points for active engagement.
+\item \textbf{Homework Assignments}: I will be assigning you homework problems each week. You must attempt these, as they are meant to reinforce the material covered in the lecture and will be crucial to your success in the quizzes and exams. I encourage you to do these problems in groups and come to my office hours for help when stuck. The homework problems will not be graded.
+\item \textbf{Quizzes}: There will be four in-class quizzes worth equal points (see schedule below). Each quiz will be around 15-20 minutes and will be based on the material and homework questions of the preceding 2-3 weeks. %One quiz with the lowest grade will be dropped while calculating the final grade.  
+\item \textbf{Exams}: There will be a midterm and a final. The midterm will be based on material covered until a week before the exam. The final exam will be \underline{cumulative} and will cover all the material. 
+\end{itemize}
 
-\subsection*{Quizzes}
-There will be four in-class quizzes worth equal points (see schedule below). Each quiz will be around 15-20 minutes and will be based on the material and homework questions of the preceding 2-3 weeks. %One quiz with the lowest grade will be dropped while calculating the final grade.  
+\subsection*{Make-up and Late Submission Policy}
 
-\subsection*{Exams}
-There will be a midterm and a final. The midterm will be based on material covered until a week before the exam. The final exam will be \underline{cumulative} and will cover all the material. 
+Make-up exams will only be offered under very limited circumstances, such as illness or other verified emergencies. It is your responsibility to notify your instructor either in advance or within 24 hours of missing an exam. Late assignments will not be accepted unless prior approval is obtained. 
 
-\section*{Examination Policy}
-There will be NO MAKE-UP for missed exams without a documented university-approved excuse such as illness or other verified emergencies. The student is required to submit verifiable documentation supporting the make-up request within three business days of the due date of the missed exam. Please be aware that a letter stating that a student visited a doctor on exam day does not qualify as a valid document.
+\subsection*{Extra credit}
+
+There are no extra credit options in this course. 
 
 \section*{CBE Assessment Statement}
 The programs offered in the College of Business and Economics (CBE) at Cal State Fullerton are designed to provide every student with the knowledge and skills essential for a successful career in business. Since assessment plays a vital role in the college's drive to offer the best, several assessment tools are implemented to constantly evaluate our program as well as our students' progress. Students, faculty, and staff should expect to participate in CBE assessment activities. In doing so, the college can measure its strengths and weaknesses and continue cultivating a climate of excellence in its students and programs.
@@ -162,17 +180,50 @@ It is the student's responsibility to read and understand the required and impor
 
 \newgeometry{top=1in, bottom=1in, left=0.5in, right=0.5in} 
 \section*{\centering Tentative Course Schedule} \vspace{1em}
-{\renewcommand{\arraystretch}{1.5}
+{\renewcommand{\arraystretch}{1.15}
 \begin{center}
-\begin{tabularx}{1\textwidth}{|C{1.15cm}|C{1.2cm}|C{2.7cm}|X|p{3cm}|C{1.25cm}|}
+\begin{tabularx}{1\textwidth}{|C{1.15cm}|C{1.4cm}|C{2.7cm}|X|p{3cm}|C{1.25cm}|}
 \Xhline{1.75\arrayrulewidth}
 Date & Lecture & Module & Topics  & References & Quiz  \\
 \Xhline{1.75\arrayrulewidth}
-\input{schedule.tex}
-\Xhline{0.75\arrayrulewidth}
+\input{schedule.tex} \\
+\Xhline{1.75\arrayrulewidth}
 \end{tabularx}
 \end{center}
 \restoregeometry 
+
+%\begin{center}
+%\begin{table}[h]
+%  \caption{Weekly Schedule}
+%  \centering
+%  \begin{tblr}{
+%    colspec = {c c X[l] X[l,4cm] X[l,3.5cm]},
+%    rowhead = 1,
+%    row{1} = {font=\bfseries}
+%  }
+%%  Week & Date & Topic & Readings / Screenings & Assignments Due \\
+%%  1  & 1/27 & Welcome, intro, overview & N/A & \\
+%%  2  & 2/3  &  &  & \\
+%%  3  & 2/10 &  &  & \\
+%%  4  & 2/17 &  &  & \\
+%%  5  & 2/24 &  &  & \\
+%%  6  & 3/3  &  &  & \\
+%%  7  & 3/10 &  &  & \\
+%%  8  & 3/17 & Midterm Exam (if applicable) & ~ & ~ \\
+%%     & 3/24 & Spring Recess & No class & \\
+%%  9  & 3/31 &  &  & \\
+%%  10 & 4/7  &  &  & \\
+%%  11 & 4/14 &  &  & \\
+%%  12 & 4/21 &  &  & \\
+%%  13 & 4/28 &  &  & \\
+%%  14 & 5/5  &  &  & \\
+%%  15 & 5/12 &  &  & \\
+%%  16 & 5/19 & Final Exam or other assessment &  & Due no earlier than scheduled exam time \\
+%\input{schedule.tex}
+%  \end{tblr}
+%  \label{tab:schedule_of_classes}
+%\end{table}
+%\end{center}
 
 
 %
