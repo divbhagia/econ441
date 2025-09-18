@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.15)  17 SEP 2025 17:08
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.15)  17 SEP 2025 18:01
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Econ441-Syllabus.tex
@@ -867,14 +867,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(36.135pt, 542.02501pt, 36.135pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* v-part:(T,H,B)=(36.135pt, 686.565pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=542.02501pt
-* \textheight=650.43001pt
+* \textheight=686.565pt
 * \oddsidemargin=-36.135pt
 * \evensidemargin=-36.135pt
-* \topmargin=-37.0pt
+* \topmargin=-73.135pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -950,7 +950,7 @@ L3 programming layer <2024-02-20>
 )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 183 ({)
+### simple group (level 1) entered at line 182 ({)
 ### bottom level
 
 Here is how much of LuaTeX's memory you used:
@@ -958,12 +958,12 @@ Here is how much of LuaTeX's memory you used:
  125308,1977958 words of node,token memory allocated
  507 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 2 glyph, 17 attribute, 57 glue_spec, 8 attribute_list, 2 write, 2 pdf_action nodes
-   avail lists: 1:1,2:4060,3:382,4:74,5:1036,6:184,7:6456,8:2,9:1712,10:11,11:477
+   avail lists: 1:1,2:4060,3:383,4:74,5:994,6:184,7:6401,8:2,9:1712,10:11,11:475
  43230 multiletter control sequences out of 65536+600000
  64 fonts using 13654647 bytes
- 88i,11n,98p,1446b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,11n,98p,1446b,943s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-RegularIt.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-Bold.otf>
-Output written on Econ441-Syllabus.pdf (6 pages, 76896 bytes).
+Output written on Econ441-Syllabus.pdf (6 pages, 76814 bytes).
 
 PDF statistics: 128 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
