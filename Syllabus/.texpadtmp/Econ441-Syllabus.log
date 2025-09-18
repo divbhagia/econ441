@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.15)  17 SEP 2025 17:05
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.9.15)  17 SEP 2025 17:08
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Econ441-Syllabus.tex
@@ -954,16 +954,16 @@ L3 programming layer <2024-02-20>
 ### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 21501 strings out of 476447
+ 21503 strings out of 476447
  125308,1977958 words of node,token memory allocated
  507 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 2 glyph, 17 attribute, 57 glue_spec, 8 attribute_list, 2 write, 2 pdf_action nodes
    avail lists: 1:1,2:4060,3:382,4:74,5:1036,6:184,7:6456,8:2,9:1712,10:11,11:477
- 43228 multiletter control sequences out of 65536+600000
+ 43230 multiletter control sequences out of 65536+600000
  64 fonts using 13654647 bytes
  88i,11n,98p,1446b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-RegularIt.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-Regular.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-Bold.otf>
-Output written on Econ441-Syllabus.pdf (6 pages, 76744 bytes).
+Output written on Econ441-Syllabus.pdf (6 pages, 76896 bytes).
 
 PDF statistics: 128 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
