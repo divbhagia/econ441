@@ -1,19 +1,25 @@
+% !TEX program = lualatex
 %% ----------------------------
 % Setup
 %% ----------------------------
+% NOTE: compile with LuaLaTeX. PDF tagging (tagging=on) is silently skipped
+% under XeLaTeX, which would produce an untagged PDF that still claims UA-2.
 \DocumentMetadata{
   pdfstandard=UA-2,
   pdfversion=2.0,
-  lang=en-US
+  lang=en-US,
+  tagging=on
 }
-\documentclass{./../Latex/syllabus}
+\documentclass{./../latex/syllabus}
+
+\newcommand{\coursename}{ECON 441: Introduction to Mathematical Economics}
 
 %% ----------------------------
 % Document information
 %% ----------------------------
 
 \hypersetup{
-  pdftitle={ECON 441: Introduction to Mathematical Economics},
+  pdftitle={\coursename},
 }
 
 %% ----------------------------
@@ -22,7 +28,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancyplain}
 \fancyhf{}
-\lhead{ \fancyplain{}{ECON 441: Introduction to Mathematical Economics} }
+\lhead{ \fancyplain{}{\coursename} }
 \rhead{ \fancyplain{}{Syllabus} }
 \fancyfoot[c] {\thepage\ }
 \thispagestyle{plain}
@@ -32,267 +38,273 @@
 %% ----------------------------
 
 \begin{document}
-\courseheader{ECON 441: Introduction to Mathematical Economics}{Fall 2025}{Department of Economics}{cbe-logo.png}
+\courseheader{\coursename}{Fall 2026}{Department of Economics}{cbe-logo.png}
 
-%% ----------------------------
-% Course & faculty information
-%% ----------------------------
+% Section 1: Faculty Information
 
-\vspace{-1.5em}
-\begin{center}
 \begin{minipage}[t]{\textwidth}
 \rule{\textwidth}{0.5pt} \\
-\setstretch{1.15} 
+\setstretch{1.15}
 \textbf{Instruction modality:} In-person \\
-\textbf{Class and exam location:} SGMH 2301 \\
-\textbf{Class days and time:} Mondays, 7-9.45 PM  \\
-\textbf{Course website:} \href{https://www.dbhagia.com/econ441/}{dbhagia.com/econ441}  \\ \vspace{-0.5em}
+\textbf{Class and exam location:} SGMH 1303 \\
+\textbf{Class days and time:} Monday and Wednesday, 5:30--6:45 PM \\
+%\textbf{Final exam:} Monday, December 14, 2026, 5:00--6:50 PM, SGMH 1303 \\
+\textbf{Course website:} \href{https://www.dbhagia.com/econ441/}{dbhagia.com/econ441} \\ \vspace{-0.5em}
 
-
-\textbf{Instructor:} Div Bhagia \vspace{-0.25em}
-\begin{itemize}
-\item[] \textbf{Office:} SGMH 3361 
-\item[] \textbf{Email:} dbhagia@fullerton.edu (usually respond within 48 hours except on weekends)
-\item[] \textbf{Phone:} (657) 278-2914 
-\item[] \textbf{Office hours:} Mondays, 5-6.45 PM, or by appointment (in-person or on \href{https://fullerton.zoom.us/j/81895171931}{Zoom}) 
-\end{itemize}
-\rule{\textwidth}{0.5pt} 
+\textbf{Instructor:} Div Bhagia \vspace{-0.5em}
+{\setstretch{0.5}
+\begin{itemize}[nosep]
+\item[] \textbf{Office:} SGMH 3361
+\item[] \textbf{Email:} dbhagia@fullerton.edu
+\item[] \textbf{Phone:} (657) 278-2914
+\item[] \textbf{Office hours:} Wednesday, 2:30--5:15 PM, or by appointment (in-person or on \href{https://fullerton.zoom.us/j/81895171931}{Zoom})
+\end{itemize}} \vspace{-1em}
+\rule{\textwidth}{0.5pt}
 \end{minipage}
-\end{center}
 
-%% ----------------------------
-% Course Information
-%% ----------------------------
+\section*{Technical Problems}
+If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then, contact: \href{https://www.fullerton.edu/it/services/helpdesk/}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone = 657-278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}, online chat - log into \href{http://my.fullerton.edu}{Portal}; click ``Online IT Help''; click ``Live Chat.'' \underline{For issues with Canvas}: Canvas Support Hotline = 657-278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides with AI Assistant}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+
+\section*{Response Time}
+I usually respond to emails or LMS messages within 48 hours (excluding weekends or holidays).
+
+\section*{Course Communication}
+All course announcements and individual emails are sent through CANVAS, which only uses CSUF email accounts. Therefore, you MUST check your CSUF email on a regular basis (several times a week) for the duration of the course.
 
 \section*{Course Information}
 
 \subsection*{Prerequisites}
 ECON 310, ECON 315, or ECON 515; MATH 135, MATH 130, or MATH 150A
 
-\subsection*{Course Catalog Description}
+\subsection*{University Catalog Description}
 Economic theory from microeconomics and macroeconomics. Content varies; constrained optimization problems and rational decision-making.
 
 \subsection*{Additional Course Description}
 
-The economy is shaped by the actions of various economic agents, each driven by their own unique set of incentives and constraints. Understanding this complex system is a challenging task, as it involves keeping track of the interplay of several moving pieces. Enter Mathematics, the protagonist of this story, which enables us to represent complex economic relationships and interactions elegantly. Mathematical economic models, while often simplifications of reality, provide us with a structured way of thinking about economic issues.
+The economy is shaped by the actions of various economic agents, each driven by their own unique set of incentives and constraints. Understanding this complex system is challenging, as it involves tracking the interplay among several moving pieces. Enter Mathematics, the protagonist of this story, which elegantly enables us to represent complex economic relationships and interactions. Mathematical economic models, while often simplifications of reality, provide us with a structured way of thinking about economic issues.
 
-This class will introduce you to the world of mathematical economics. We will cover essential tools used in economics, including linear algebra, calculus, and optimization, and apply these tools to economic problems.  For example, you will learn how to express and solve complex systems of equations that describe the economy using matrix algebra and to solve unconstrained and constrained optimization problems, such as those related to utility maximization, price determination, wage setting, and more.
+This class will introduce you to the world of mathematical economics. We will cover essential tools used in economics, including linear algebra, calculus, and optimization, and apply them to economic problems. For example, you will learn how to express and solve complex systems of equations that describe the economy using matrix algebra and to solve unconstrained and constrained optimization problems, such as those related to utility maximization, price determination, wage setting, and more.
 
-%We will also spend some time thinking about suitable assumptions for effectively modeling specific aspects the economy. Hopefully, after this class, you will develop some appreciation for mathematical economics, while also being able to think critically about the advantages and limitations of this approach to understand economics.
+We will also spend some time considering suitable assumptions to effectively model specific aspects of the economy. Hopefully, after this class, you will develop an appreciation for mathematical economics and be able to think critically about the advantages and limitations of this approach to understanding economics.
 
-\subsection*{Student Learning Outcomes}
+\subsection*{Withdrawal Deadlines}
+
+The deadline to drop this class without a ``W'' is \textit{Tuesday, September 8, 2026}. Authorization to withdraw after September 8 shall be granted only for the most serious and compelling reasons, e.g., a documented physical, medical, emotional, or other condition that limits the student's full participation in the class. Poor academic performance, e.g., lack of effort or poor attendance, is not evidence of a serious reason for withdrawal.
+
+\newpage
+\section*{Student Learning Outcomes}
 Upon successful completion of this course, students will:
 \begin{enumerate}
-\itemsep0em 
+\itemsep0em
   \item Gain a deep understanding of essential mathematical tools used in economics, including the application of matrix algebra to solve systems of equations and the solving of constrained and unconstrained optimization problems.
   \item Learn how these mathematical tools are applied to a range of economic issues, from analyzing firm and consumer behavior to implications of fiscal policies, preparing students for graduate-level coursework in economics.
-  \item Develop the ability to mathematically model economic phenomenon, carefully considering the appropriate assumptions to best represent specific behavior of economic agents or particular market structures.
+  \item Develop the ability to mathematically model economic phenomena, carefully considering the appropriate assumptions to best represent the specific behavior of economic agents or particular market structures.
 \end{enumerate}
 
-\subsection*{Course Materials}
+\section*{Course Materials}
 
-All course materials—including lecture slides, worksheets, notes for each topic, and homework problems with solutions—are available on the course website. These materials should generally be sufficient for your study needs. However, if you find yourself needing more detailed explanations for certain topics, you might consider acquiring the following textbook that this course is based on:
+All course materials, including lecture slides, worksheets, and practice problems with solutions, are available on the course website. These materials should generally be sufficient for your study needs. However, if you find yourself needing more detailed explanations for certain topics, you might consider acquiring the following textbook that this course is based on:
 
 \begin{itemize}
   \item \textit{Chiang, Alpha C, and Wainwright K. (2005), Fundamental Methods of Mathematical Economics: 4th edition}
 \end{itemize}
 
-You can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to acquire it due to financial constraints or other reasons, please email me, and I will try my best to find you one.
-
-\subsection*{Course Structure}
-
-All meetings for this course are expected to be held in person. During our class sessions, I utilize lecture slides to cover the topics for the day, and we work on related problems together, typically using worksheets. While you work on these worksheets, I move around the classroom to provide assistance, and you can also seek help from your peers; it's an engaging and collaborative learning experience. As a result, class attendance is crucial for this course.
-
-For each week's material, you will have homework problems that, while not graded, you should aim to complete every week. Even though solutions to the problems are provided, you will benefit immensely from trying them on your own before checking the answers. We will also have in-class quizzes about every other week, with questions similar to the homework. So another reason to keep on top of that homework!
-
-\section*{Course Communication}
-All course announcements and individual emails are sent through Canvas, which only uses CSUF email accounts. Therefore, you MUST check your CSUF email regularly (several times a week) for the course duration.
+You can often find a used copy of the textbook at an affordable price on AbeBooks. If you wish to have the textbook but are unable to obtain it due to financial constraints or other reasons, please email me, and I will do my best to find one for you.
 
 \section*{Conduct in the Classroom}
-Use of phones, laptops, or other digital devices is not allowed during the lecture except when explicitly instructed to use one. Randomized Controlled Trials (RCTs) conducted at West Point show that in-class computer use inhibits learning. Here is a \href{https://oema.army.mil/pub/2017_Carter_Greenberg_Walker_Computer_Usage_RCT_USMA.pdf}{link} to the paper. Tablets used for taking notes that remain flat on the desk are allowed.
-
-\section*{Technical Problems}
-If you encounter any technical difficulties, contact the instructor immediately to document the problem. Then, contact: \href{https://www.fullerton.edu/it/services/helpdesk/}{student IT help desk}, \href{mailto:StudentITHelpDesk@fullerton.edu}{email}, phone = 657-278-8888, walk-in \href{http://www.fullerton.edu/it/students/sgc/index.php}{Student Genius Center}, online chat - log into \href{http://my.fullerton.edu}{Portal}; click ``Online IT Help''; click ``Live Chat.''
-
-\noindent \underline{For issues with Canvas}: Canvas Support Hotline = 657-278-8888, \href{https://canvashelp.fullerton.edu/}{search the CSUF Canvas Guides with AI Assistant}, or \href{https://titans.service-now.com/sp?id=sc_cat_item&sys_id=f88efe80ebea6a10fb7cfcffcad0cdc6&subject=Canvas}{report a problem.}
+Use of phones, laptops, or other digital devices is not allowed during the lecture, except when explicitly instructed to do so. Randomized Controlled Trials (RCTs) conducted at West Point show that in-class computer use inhibits learning. Here is a \href{https://oema.army.mil/pub/2017_Carter_Greenberg_Walker_Computer_Usage_RCT_USMA.pdf}{link} to the paper. Tablets used for taking notes that remain flat on the desk are allowed.
 
 \section*{Grading Policies and Standards}
 
 \subsection*{Grading Scale}
 
-Plus/minus grading will be used in this course. You are guaranteed at least the following grade if your weighted average course score falls within the specified range. A curve may be applied to the final grade.
+In this course, the plus/minus system will be used. You are guaranteed at least the following grade if your weighted average course score falls within the specified range. A curve may be applied to the final grade.
 
-\begin{itemize}
-\item[] 98--100\% = A+ 
-\item[] 93--97.99\% = A (outstanding performance) 
-\item[] 90--92.99\% = A- 
-\item[] 87--89.99\% = B+ 
-\item[] 83--86.99\% = B (good performance) 
-\item[] 80--82.99\% = B- 
-\item[] 77--79.99\% = C+ 
-\item[] 73--76.99\% = C (acceptable performance) 
-\item[] 70--72.99\% = C- 
-\item[] 67--69.99\% = D+ 
-\item[] 63--66.99\% = D (poor performance) 
-\item[] 60--62.99\% = D- 
-\item[] 0--59.99\% = F 
-\end{itemize}
+{\setstretch{1.0}
+\begin{itemize}[nosep]
+\item[] A+: 100\% to 98\%
+\item[] A: $<$98\% to 93\% (outstanding performance)
+\item[] A-: $<$93\% to 90\%
+\item[] B+: $<$90\% to 87\%
+\item[] B: $<$87\% to 84\% (good performance)
+\item[] B-: $<$84\% to 80\%
+\item[] C+: $<$80\% to 77\%
+\item[] C: $<$77\% to 74\% (acceptable performance)
+\item[] C-: $<$74\% to 70\%
+\item[] D+: $<$70\% to 67\%
+\item[] D: $<$67\% to 64\% (poor performance)
+\item[] D-: $<$64\% to 61\%
+\item[] F: $<$61\% to 0\%
+\end{itemize}}
 
 \subsection*{Grade Breakdown}
 
-
-\noindent If you are enrolled in this course for \textbf{undergraduate-level credit}, your grade will be determined by active participation, five in-class quizzes, and two exams, with the following breakdown:
+\noindent If you are enrolled in this course for \textit{undergraduate-level credit}, your grade will be determined according to the following breakdown:
 \begin{center}
-\begin{tabularx}{0.35\textwidth}{Xr}
-Active Engagement & 10\% \\
-Quizzes & 20\% \\
-Midterm & 30\% \\
-Final Exam & 40\% \\
+\begin{tabularx}{0.65\textwidth}{Xc}
+\hline
+  \textbf{Assignment}        & \textbf{Points/Percentage} \\ \hline
+Attendance & 10 \\
+Quizzes & 20 \\
+Midterm Exam 1 & 20 \\
+Midterm Exam 2 & 20 \\
+Final Exam & 30 \\
+\hline
+Total & 100 \\
+\hline
 \end{tabularx}
 \end{center}
-\noindent If you are enrolled in this course for \textbf{graduate-level credit}, you must also complete a project using Python. The project will substitute for active engagement, thus accounting for 10\% of your grade, and will be due on the last day of class. %More details will be provided later in the semester.
 
-\subsection*{Assignment Descriptions}
+\noindent If you are enrolled in this course for \textit{graduate-level credit}, you must also complete a project using Python, due on the last day of class. For graduate students, the 10 points allotted for attendance are instead allocated to the project; all other components remain unchanged.
 
-\begin{itemize}
-\item \textbf{Active Engagement}: This class requires active engagement from students. I expect students to work on problems together in the class when instructed, be able to review material covered in the previous sessions, and participate in other classroom activities. There is no separate grade for attendance, but if you miss class, you automatically lose points for active engagement.
-\item \textbf{Homework Assignments}: I will be assigning you homework problems each week. You must attempt these, as they are meant to reinforce the material covered in the lecture and will be crucial to your success in the quizzes and exams. I encourage you to do these problems in groups and come to my office hours for help when stuck. The homework problems will not be graded.
-\item \textbf{Quizzes}: There will be four in-class quizzes worth equal points (see schedule below). Each quiz will be around 15-20 minutes and will be based on the material and homework questions of the preceding 2-3 weeks. %One quiz with the lowest grade will be dropped while calculating the final grade.  
-\item \textbf{Exams}: There will be a midterm and a final. The midterm will be based on material covered until a week before the exam. The final exam will be \underline{cumulative} and will cover all the material. 
-\end{itemize}
+\subsection*{Attendance}
 
-\subsection*{Make-up and Late Submission Policy}
+Attendance will be taken on \textit{five randomly chosen days} over the course of the semester. These days will not be announced in advance, and a check may occur at any point during a session. Each check is worth \textit{2 points}, for a total of 10 points, and is scored on an all-or-nothing basis.
 
-Make-up exams will only be offered under very limited circumstances, such as illness or other verified emergencies. It is your responsibility to notify your instructor either in advance or within 24 hours of missing an exam. Late assignments will not be accepted unless prior approval is obtained. 
+%\begin{itemize}
+%\itemsep0em
+%\item[--] Present when attendance is taken: \textit{2 points (full credit)}
+%\item[--] Not present when attendance is taken: \textit{0 points}
+%\end{itemize}
+%
+%\noindent There is no partial credit, and because checks are unannounced, arriving late or leaving early may cause you to miss one. An absence will be excused only if it is documented under the make-up policy below. Signing in for another student violates academic integrity and will be reported.
+
+\subsection*{Practice Problems}
+
+A set of practice problems accompanies each lecture and is posted on the course website with worked solutions. You must attempt these, as they reinforce the material covered in the lecture and will be crucial to your success on the quizzes and exams. Work through them before checking the solutions. I encourage you to work in groups and to come to my office hours when you get stuck. Practice problems are not graded.
+
+\subsection*{Quizzes}
+
+There will be four in-class quizzes worth equal points. Quizzes are given at the start of class on days specified on the schedule at the end of this syllabus. Each quiz will be around 10--15 minutes and will be based on the material and practice problems since the previous quiz or exam. The lowest quiz score will be dropped. This is intended to account for illness, emergencies, or other unavoidable absences, so no makeup quizzes will be offered.
+
+\subsection*{Examinations}
+
+There will be two midterms and a final. Exams will be administered in person on the days indicated in the class schedule. These dates are fixed and will not be changed. The final exam will be \textit{cumulative} and will cover all the material.
+
+All work on exams must reflect your individual effort. Students are expected to follow the University policies for Academic Integrity. Requests for re-evaluation of graded material must be made within one week of the return of the assignment. All requests must be accompanied by a written explanation of your dispute. It is your responsibility to consult with any posted rubrics or keys prior to making a re-grade request.
 
 \subsection*{Extra credit}
 
-There are no extra credit options in this course. 
+There are no extra credit options in this course.
+
+\subsection*{Make-up and late submission policy}
+
+Make-up exams will only be offered under very limited circumstances, such as illness or other verified emergencies. It is your responsibility to notify your instructor either in advance or within 24 hours of missing an exam. %Missed quizzes and attendance checks cannot be made up unless the absence is documented in accordance with this policy.
+
+An assignment is considered late if it is posted/received past the due date and/or time. You are encouraged to set personal deadlines ahead of the required due dates to account for unforeseen events that may prevent you from submitting your work on time. Communicate immediately with your instructor if you encounter a problem that may impact your ability to submit work on time. Work may receive at most 50\% of the total points for assignments submitted after the original due date and time, unless approval for late work is granted in advance. Specifically, late submissions will incur a 10\% deduction per day until the maximum late credit is reached.
+
+\subsection*{Generative AI Policy}
+
+Thoughtful and transparent use of generative AI tools as learning aids is acceptable in this course. You may use AI tools like ChatGPT to help brainstorm ideas, clarify concepts, or check your reasoning on the practice problems, but you must acknowledge their use and demonstrate your own critical thinking. All final work must reflect your own analysis and understanding. Using AI to complete assignments without engagement or to generate answers you cannot explain constitutes academic dishonesty. Note that quizzes and exams in this course are administered in-person and closed-book, so the surest way to benefit from the practice problems is to work through them yourself. When in doubt about appropriate AI use, please consult with the instructor.
+
+\subsection*{Alternative procedures for submitting work}
+
+In the event of technical difficulties with CANVAS or other online resources, your instructor will communicate with students directly via their CSUF email. The instructor will provide directions on alternative methods for submitting work and/or may extend submission deadlines. If email is not available, students may contact the department office for guidance.
+
+\subsection*{Authentication of student work}
+
+All assignments submitted for a grade in this class must be your individual work unless otherwise indicated. Student work will be authenticated by submission in class for in-person instruction and through Canvas for online instruction.
+
+\subsection*{Retention of student work}
+
+Work submitted for a grade in this course, either as a hardcopy or through the CANVAS course site, shall be retained for a reasonable time after the semester is completed, not to exceed the last day of the subsequent semester. Exam material is exempt from this policy; however, students have the right to review their work in the presence of the faculty member.
+
+%%%%%%%% Academic Integrity
+\section*{Academic Integrity}
+It is expected that any work submitted for a grade in this course will be the sole product of the individual student, unless otherwise permitted. Presenting work from other sources as your own is unacceptable and will result in a notification to the Dean of Students of a violation of campus standards. Behaviors that seek to gain an unfair advantage or negatively impact the ability of others to learn will also result in a report to the Dean of Students.
+
+The consequences for cheating or other actions contrary to CSUF student conduct policies can be severe. Communicate with your instructor if you find yourself in a situation that might lead to a poor decision.
+
+You are encouraged to use the resources provided by your instructor. Discuss the use of other online resources with your instructor. The use of sites, including but not limited to Chegg and Course Hero, that require subscriptions and provide solutions to textbook problems, exam questions, etc., is explicitly prohibited in this course and constitutes academic dishonesty.
+
+Collaborating has been made easier by the many tools available to use on the internet (e.g., Discord, Zoom, Microsoft Teams). I encourage you to use these tools to work together, to form study groups, etc. However, any sharing of assignments (even if only intended to help) or using these communication tools for unauthorized collaboration is considered academic dishonesty. Unless otherwise explicitly stated by the instructor, assignments and examinations must be completed on your own.
+
+\section*{Technical Requirements}
+Students are expected to
+\begin{enumerate}
+\item Have basic computer competency, which includes:
+\begin{enumerate}
+\item	The ability to use a personal computer to locate, create, move, copy, delete, name, rename, and save files and folders on hard drives, secondary storage devices such as USB drives, and cloud storage such as Google Drive (Titan Apps) and Dropbox
+\item	The ability to use a word processing program to create, edit, format, store, retrieve, and print documents
+\item	The ability to use their CSUF email accounts to receive, create, edit, print, save, and send an e-mail message with and without an attached file
+\item	The ability to use an Internet browser such as Chrome, Safari, Firefox, or Microsoft® Edge to search and access websites on the World Wide Web
+\end{enumerate}
+\item	Have ongoing reliable access to a computer with Internet connectivity for regular course assignments
+\item	Utilize updated version of Microsoft® Office (for P.C. or Mac), including Word, PowerPoint, and Excel to learn content and communicate with colleagues and faculty; have the ability to regularly print assignments
+\item	Maintain and access their CSUF student email account at least three times weekly
+\item	Use Internet search and retrieval skills to complete assignments
+\item	Apply their educational technology skills to complete expected competencies
+\item	Utilize other software applications as course requirements dictate
+\item	Utilize the LMS to access course materials and complete assignments
+\end{enumerate}
 
 \section*{CBE Assessment Statement}
-The programs offered in the College of Business and Economics (CBE) at Cal State Fullerton are designed to provide every student with the knowledge and skills essential for a successful career in business. Since assessment plays a vital role in the college's drive to offer the best, several assessment tools are implemented to constantly evaluate our program as well as our students' progress. Students, faculty, and staff should expect to participate in CBE assessment activities. In doing so, the college can measure its strengths and weaknesses and continue cultivating a climate of excellence in its students and programs.
+The programs offered in the College of Business and Economics (CBE) at Cal State Fullerton are designed to provide every student with the knowledge and skills essential for a successful career in business. Since assessment plays a vital role in the college's drive to offer the best, several assessment tools are used to continually evaluate our program and our students' progress. Students, faculty, and staff should expect to participate in CBE assessment activities. In doing so, the college can assess its strengths and weaknesses and continue to cultivate a climate of excellence among its students and programs.
 
-Assurance of Learning (AoL) is an integral part of both our AACSB and WASC accreditation. Please visit the \href{https://business.fullerton.edu/assessment}{Assessment and Instructional Support website} for more information on our college-based assurance of learning efforts, please visit the Assessment and Instructional Support website.
+Assurance of Learning (AoL) is an integral part of both our AACSB and WASC accreditation. Please visit the \href{https://business.fullerton.edu/assessment}{Assessment and Instructional Support website} for more information on our college-based assurance of learning efforts.
 
-\section*{Important Student Information}
-It is the student's responsibility to read and understand the required and important information at this website: \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}. Included is information about students' rights to accommodations for special needs, academic integrity and dishonesty, emergency preparedness, student learning goals and outcomes, general education, library support, and the final exam schedule.
+\section*{College and University Learning Resources}
 
-\newgeometry{top=0.5in, bottom=1in, left=0.5in, right=0.5in} 
-\section*{\centering Tentative Course Schedule} \vspace{1em}
-{\renewcommand{\arraystretch}{1.15}
-\begin{center}
-\begin{tabularx}{1\textwidth}{|C{1.15cm}|C{1.4cm}|C{2.7cm}|X|p{3cm}|C{1.25cm}|}
-\Xhline{1.75\arrayrulewidth}
-Date & Lecture & Module & Topics  & References & Quiz  \\
-\Xhline{1.75\arrayrulewidth}
-\input{schedule.tex} \\
-\Xhline{1.75\arrayrulewidth}
-\end{tabularx}
-\end{center}
-\thispagestyle{plain}
+\subsection*{Wall Street Journal}
+You get a FREE subscription to the Wall Street Journal through the University. Activate your school-sponsored membership here: \href{https://partner.wsj.com/p/1110800011/register?mod=wsj_CSUF_360}{WSJ.com/ActivateCSUF}.
 
-\restoregeometry 
+\subsection*{University Learning Center}
+The goal of the University Learning Center is to provide all CSUF students with academic support in an inviting and contemporary environment. The staff of the University Learning Center will assist students with their academic assignments, general study skills, and computer user needs. The ULC staff work with all students from diverse backgrounds in most undergraduate general education courses, including science and math, humanities and social sciences, and other subjects. They offer one-to-one peer tutoring, online writing review, and many more services. More information can be found on the University Learning Center website.
 
-%\begin{center}
-%\begin{table}[h]
-%  \caption{Weekly Schedule}
-%  \centering
-%  \begin{tblr}{
-%    colspec = {c c X[l] X[l,4cm] X[l,3.5cm]},
-%    rowhead = 1,
-%    row{1} = {font=\bfseries}
-%  }
-%%  Week & Date & Topic & Readings / Screenings & Assignments Due \\
-%%  1  & 1/27 & Welcome, intro, overview & N/A & \\
-%%  2  & 2/3  &  &  & \\
-%%  3  & 2/10 &  &  & \\
-%%  4  & 2/17 &  &  & \\
-%%  5  & 2/24 &  &  & \\
-%%  6  & 3/3  &  &  & \\
-%%  7  & 3/10 &  &  & \\
-%%  8  & 3/17 & Midterm Exam (if applicable) & ~ & ~ \\
-%%     & 3/24 & Spring Recess & No class & \\
-%%  9  & 3/31 &  &  & \\
-%%  10 & 4/7  &  &  & \\
-%%  11 & 4/14 &  &  & \\
-%%  12 & 4/21 &  &  & \\
-%%  13 & 4/28 &  &  & \\
-%%  14 & 5/5  &  &  & \\
-%%  15 & 5/12 &  &  & \\
-%%  16 & 5/19 & Final Exam or other assessment &  & Due no earlier than scheduled exam time \\
-%\input{schedule.tex}
-%  \end{tblr}
-%  \label{tab:schedule_of_classes}
-%\end{table}
-%\end{center}
+\subsection*{Writing Center}
+The Writing Center offers 30-minute, one-on-one peer tutoring sessions and workshops to assist with all written assignments and student writing concerns. Writing Center services are available to students from all disciplines. Registration and appointment schedules are available at the Writing Center Appointment Scheduling System. Walk-in appointments are also available on a first-come, first-served basis to students who have registered online. More information can be found at the Writing Center webpage. The Writing Center is located on the first floor of the Pollak Library. Their phone number is (657) 278-3650.
 
+% Section 9: Student Resources Website
+\section*{Student Resources Website}
 
-%
-%\newgeometry{top=1in, bottom=1in, left=0.5in, right=0.5in} 
-%\section*{\centering Tentative Course Schedule} \vspace{1em}
-%{\renewcommand{\arraystretch}{1.5}
-%\begin{center}
-%\begin{tabularx}{1\textwidth}{|C{1.25cm}|C{1.25cm}|p{1.25cm}|p{2.75cm}|X|p{3cm}|}
-%\hline
-%Date & Lecture & Quiz & Module  & Lecture Content & References  \\
-%\hline
-% 1/25 & 1 & & Preliminaries & Numbers and sets, Relations and functions, Summation notation, Necessary and sufficient conditions & 2.2, 2.3, 2.4-2.6, pg 163, 5.1  \\
-%\hline
-%
-% 2/01 & 2 & &  Linear Algebra & Matrices: Addition, Subtraction, and Scalar Multiplication, Matrix Multiplication, Vectors, Identity and Null Matrices, Transpose and Inverse of a Matrix & 4.1-4.6  \\
-%\hline
-%
-% 2/08 & 3 & Quiz 1 & Linear Algebra & Conditions for Nonsingularity of a Matrix, Determinant of a Matrix & 4.7, 5.1-5.3  \\
-%\hline
-%
-% 2/15 & 4 & & Linear Algebra & Finding the Inverse of a Matrix, Cramer’s Rule, Applications & 5.3-5.5  \\
-%\hline
-%
-% 2/22 & 5 & Quiz 2 & Calculus & Limit Definition of a Derivative, Limits, Continuity, Rules of Differentiation & 6.2-6.4, 6.7, 7.1-7.3   \\
-%\hline
-%
-% 2/29 & 6 & & Calculus & Exponential and Log Functions, Partial Derivatives, Total Differential and Derivative & 10.5, 7.4, 8.1, 8.2, 8.4  \\
-%\hline
-%
-% 3/07 & 7 & Quiz 3 & Calculus & Implicit Function Theorem, Integration & 8.5, 14.1-14.3  \\
-%\hline
-%
-% 3/14  &\multicolumn{4}{c}{\textit{Review Class}} &       \\
-%\hline
-%
-% 3/21  &\multicolumn{4}{c}{\textit{Midterm Exam}} &    \\
-%\hline
-%
-% 3/28 & 8 & & Optimization &  Unconstrained Single-Variable Optimization, Concave and Convex Functions & 9.1, 9.2, 9.3, 9.4   \\
-%\hline
-%
-%&  \multicolumn{4}{c}{\textit{Fall Recess}} &    \\
-%\hline
-%
-% 4/11 & 9 & & Optimization & Multivariable Optimization  & 11.1, 11.2    \\
-%\hline
-%
-% 4/18 & 10 & Quiz 4 & Optimization & Constrained Optimization & 12.1, 12.2   \\
-%\hline
-%
-% 4/25 & 11 & & Optimization  & Envelope Theorem Quasiconcavity, Convex sets, Homogenous Functions & 11.5, 12.4, 12.6   \\
-%\hline
-%
-%
-% 5/02 & 12 & Quiz 5 & Add. Topics & TBA  &  \\
-%\hline
-%
-% 5/09  & \multicolumn{4}{c}{\textit{Review Class}} &   \\
-%\hline
-%
-% 5/16 &   \multicolumn{4}{c}{\textit{Final Exam}}  &   \\
-%\hline
-%
-%\end{tabularx}
-%\end{center}
-%\restoregeometry 
+\noindent It is the student's responsibility to read and understand the required and important \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{student information for course syllabi}. Included is information about:
+{\setstretch{1.0}
+\begin{itemize}[nosep]
+\item University learning goals
+\item General Education learning objectives
+\item Netiquette/appropriate online behavior
+\item Students' rights to accommodations
+\item Campus student support resources
+\item Academic integrity
+\item Emergency preparedness/what to do
+\item Library services
+\item Student IT services and competencies
+\item Software privacy and accessibility
+\item Accessibility statement
+\item Diversity statement
+\item Land acknowledgment
+\item Final exam schedule
+\item Semester calendar
+\end{itemize}
+}
 
+\vspace{0.5em}
+\noindent When you need help immediately or to report a dangerous situation, call 911. University Police non-emergency line: (657) 278-2515.
 
+%%%%% Schedule
+\clearpage
+\newgeometry{top=0.6in, bottom=0.7in, left=0.7in, right=0.7in}
+\section*{Tentative Course Schedule}
 
-%%%%%% THE END 
-\end{document} 
+%Materials for each lecture are posted on the \href{https://www.dbhagia.com/econ441/}{course website} as the semester progresses. 
+Topics and their order may be adjusted throughout the semester as we establish a suitable pace for the class.
+
+{\footnotesize\setstretch{1.0}\renewcommand{\arraystretch}{1.35}
+\begin{xltabular}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.0cm} l X >{\raggedright\arraybackslash}p{2.9cm}@{}}
+\hline
+\textbf{Module} & \textbf{Date} & \textbf{Topics} & \textbf{References} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Module} & \textbf{Date} & \textbf{Topics} & \textbf{References} \\
+\hline
+\endhead
+\hline
+\endlastfoot
+\input{schedule.tex}
+\end{xltabular}
+}
+\restoregeometry
+
+%%%%%% THE END
+\end{document}

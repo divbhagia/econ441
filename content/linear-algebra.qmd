@@ -1,0 +1,57 @@
+---
+title: "Linear Algebra"
+subtitle: "Module II"
+format: html
+---
+
+Materials for this module will be posted before we reach it. In the meantime, here is the plan. See the [Schedule](../schedule.qmd) for dates and assessments.
+
+<p class="module-notes" style="font-size:1.1rem">
+<strong>Module notes</strong> covering this whole module:
+<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="notes/Linear-Algebra.pdf" target="_blank" rel="noopener" aria-label="Linear Algebra module notes, PDF (opens in a new tab)" role="button">Linear Algebra notes</a>
+</p>
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 3: Matrices and Matrix Operations</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Economic model motivation; matrices; addition, subtraction, and scalar multiplication</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.1, 4.2</span>
+
+:::
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 4: Matrix Multiplication and Vectors</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Matrix multiplication; vectors; geometric representation; inner product; linear dependence</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.2&ndash;4.4</span>
+
+:::
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 5: Identity, Null, and Transpose Matrices</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Identity, null, and idempotent matrices; transpose of a matrix</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.5, 4.6</span>
+
+:::
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 6: Inverse, Nonsingularity, and the Determinant</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Inverse of a matrix; conditions for nonsingularity; rank; the determinant</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.6, 5.1, 5.2</span>
+
+:::
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 7: Computing Determinants, Inversion, and Cramer's Rule</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Computing determinants; matrix inversion; Cramer's rule; applications</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 5.2&ndash;5.5, 4.7</span>
+
+:::

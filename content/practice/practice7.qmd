@@ -1,0 +1,564 @@
+---
+title: "Practice Problems 7"
+subtitle: "Lecture 7: Computing Determinants, Inversion, and Cramer's Rule"
+format: html
+---
+
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each exercise yourself first, then expand the solutions to check.
+
+<p>
+<a class="btn btn-outline-primary" href="practice7.pdf" target="_blank" rel="noopener" aria-label="Download problems for Practice Problems 7, PDF (opens in a new tab)" role="button">Download problems (PDF)</a>
+<a class="btn btn-outline-primary" href="practice7_solutions.pdf" target="_blank" rel="noopener" aria-label="Download solutions for Practice Problems 7, PDF (opens in a new tab)" role="button">Download solutions (PDF)</a>
+</p>
+
+## Exercise 5.3
+
+1.  Use the determinant $\left|\begin{array}{rrr}4 & 0 & -1 \\ 2 & 1 & -7 \\ 3 & 3 & 9\end{array}\right|$ to verify the first four properties of determinants.
+
+2.  Show that when all the elements of an $n$th-order determinant \|A\| are multiplied by a number $k$, the result will be $k^{n}|A|$.
+
+3.  Calculate the determinant for the following matrices. Comment on whether the matrices are nonsingular and the rank of each matrix.
+
+    1.  $\left[\begin{array}{rrr}4 & 0 & 1 \\ 19 & 1 & -3 \\ 7 & 1 & 0\end{array}\right]$
+
+    2.  $\left[\begin{array}{rrr}4 & -2 & 1 \\ -5 & 6 & 0 \\ 7 & 0 & 3\end{array}\right]$
+
+    3.  $\left[\begin{array}{rrr}7 & -1 & 0 \\ 1 & 1 & 4 \\ 13 & -3 & -4\end{array}\right]$
+
+    4.  $\left[\begin{array}{rrr}-4 & 9 & 5 \\ 3 & 0 & 1 \\ 10 & 8 & 6\end{array}\right]$
+
+4.  Comment on the validity of the following statements:
+
+    1.  Given any matrix A, we can always derive from it a transpose and a determinant.
+
+    2.  Multiplying each element of an $n \times n$ determinant by 2 will double the value of that determinant.
+
+    3.  If a square matrix $A$ vanishes, then we can be sure that the equation system $A x=d$ is nonsingular.
+
+<details class="solution">
+<summary>Show solutions for Exercise 5.3</summary>
+
+1.  $$\begin{aligned}
+    \left|\begin{array}{ccc}
+    4 & 0 & -1 \\
+    2 & 1 & -7 \\
+    3 & 3 & 9
+    \end{array}\right| &=4\left|\begin{array}{rr}
+    1 & -7 \\
+    3 & 9
+    \end{array}\right|-0\left|\begin{array}{cc}
+    2 & -7 \\
+    3 & 9
+    \end{array}\right|-1\left|\begin{array}{ll}
+    2 & 1 \\
+    3 & 3
+    \end{array}\right| \\
+    &=4(9+21)-0(18+21)-1(6-3) \\
+    &=120-0-3=117
+    \end{aligned}$$
+
+    Interchanging rows and columns:\
+    $\begin{aligned}\left|\begin{array}{ccc}4 & 2 & 3 \\ 0 & 1 & 3 \\ -1 & -7 & 9\end{array}\right| &=4\left|\begin{array}{cc}1 & 3 \\ -7 & 9\end{array}\right|-2\left|\begin{array}{cc}0 & 3 \\ -1 & 9\end{array}\right|+3\left|\begin{array}{cc}0 & 1 \\ -1 & -7\end{array}\right| \\ &=4(9+21)-2(0+3)+3(0+1) \\ &=120-6+3=117 \end{aligned}$\
+    Interchange row 1 and 2: $$\begin{aligned}
+    \left|\begin{array}{rrr}
+    2 & 1 & -7 \\
+    4 & 0 & -1 \\
+    3 & 3 & 9
+    \end{array}\right| &=2\left|\begin{array}{rr}
+    0 & -1 \\
+    3 & 9
+    \end{array}\right|-1\left|\begin{array}{cc}
+    4 & -1 \\
+    3 & 9
+    \end{array}\right|-7\left|\begin{array}{ll}
+    4 & 0 \\
+    3 & 3
+    \end{array}\right| \\
+    &=2(0+3)-1(36+3)-7(12-0) \\
+    &=6-39-84=-117
+    \end{aligned}$$ You can verify the other two properties in the same way.
+
+2.  1.  $$\begin{array}{l}
+        4\left|\begin{array}{cc}
+        1 & -3 \\
+        1 & 0
+        \end{array}\right|+1\left|\begin{array}{cc}
+        19 & 1 \\
+        7 & 1
+        \end{array}\right| \\
+        =4(0+3)+1(19-7) \\
+        =\quad 12+12=24
+        \end{array}$$
+
+        Non-singular, rank = 3.\
+
+    2.  $$\begin{aligned}
+        & 5\left|\begin{array}{cc}
+        -2 & 1 \\
+        0 & 3
+        \end{array}\right|+6 \left| \begin{array}{ll}
+        4 & 1 \\
+        7 & 3
+        \end{array}\right| \\
+        =& 5(-6-0)+6(12-7) \\
+        =&-30+30=0
+        \end{aligned}$$
+
+        Singular. Rank\<3, will need to put in echelon form to find exact rank.\
+
+    3.  $$\begin{aligned} & 7\left|\begin{array}{cc}1 & 4 \\ -3 & -4\end{array}\right|+1\left|\begin{array}{cc}1 & 4 \\ 13 & -4\end{array}\right| \\=& 7(-4+12)+1(-4-52) \\=& 56-56=0 \end{aligned}$$
+
+        Singular. Rank \<3, will need to put in echelon form to find exact rank.\
+
+    4.  $$\begin{aligned} &-3\left|\begin{array}{ll}9 & 5 \\ 8 & 6\end{array}\right|-1\left|\begin{array}{cc}-4 & 9 \\ 10 & 8\end{array}\right| \\
+         =&-3(54-40)-1(-32-90) \\
+         =&-42+122=80 \end{aligned}$$ Non-singular, rank = 3.
+
+3.  1.  False. While we can find the transpose of any matrix, the determinant is only defined for square matrices.
+
+    2.  False. Multiplying each element of an $n \times n$ by 2 will increase the determinant by $2^n$ times.
+
+    3.  $A$ cannot be 0, but the determinant of $A$ can. In any case, if $|A|$=0, $A$ is singular.
+
+</details>
+
+## Exercise 5.4
+
+1.  Find the inverse of each of the following matrices:
+
+    1.  $A=\left[\begin{array}{ll}5 & 2 \\ 0 & 1\end{array}\right]$
+
+    2.  $B=\left[\begin{array}{rr}-1 & 0 \\ 9 & 2\end{array}\right]$
+
+    3.  $C=\left[\begin{array}{rr}3 & 7 \\ 3 & -1\end{array}\right]$
+
+    4.  $D=\left[\begin{array}{ll}7 & 6 \\ 0 & 3\end{array}\right]$
+
+2.  1.  Drawing on your answers to Prob. 2, formulate a two-step rule for finding the adjoint of a given $2 \times 2$ matrix $A$: In the first step, indicate what should be done to the two diagonal elements of $A$ in order to get the diagonal elements of $adjA$; in the second step, indicate what should be done to the two off-diagonal elements of $A$. (Warning: This rule applies only to $2 \times 2$ matrices.)
+
+    2.  Add a third step which, in conjunction with the previous two steps, yields the $2 \times 2$ inverse matrix $A^{-1}$.
+
+3.  Find the inverse of each of the following matrices:
+
+    1.  $E=\left[\begin{array}{rrr}4 & -2 & 1 \\ 7 & 3 & 0 \\ 2 & 0 & 1\end{array}\right]$
+
+    2.  $F=\left[\begin{array}{rrr}1 & -1 & 2 \\ 1 & 0 & 3 \\ 4 & 0 & 2\end{array}\right]$
+
+    3.  $G=\left[\begin{array}{lll}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0\end{array}\right]$
+
+    4.  $H=\left[\begin{array}{lll}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{array}\right]$
+
+4.  Solve the system $A x=d$ by matrix inversion, where
+
+    1.  $\begin{aligned} \\
+            4 x+3 y=28 \\
+            2 x+5 y=42
+        \end{aligned}$
+
+    2.  $\begin{aligned} \\~\\
+            4 x_{1}+x_{2}-5 x_{3}=8 \\
+            -2 x_{1}+3 x_{2}+x_{3}=12 \\
+            3 x_{1}-x_{2}+4 x_{3}=5
+        \end{aligned}$
+
+5.  Is it possible for a matrix to be its own inverse?
+
+<details class="solution">
+<summary>Show solutions for Exercise 5.4</summary>
+
+1.  Note that $$A^{-1}=\frac{1}{|A|} \operatorname{adj} A$$
+
+    Here, $\operatorname{adj} A=C^{\prime}$ where $C=\left[\left|C_{i j}\right|\right]$.
+
+    1.  $$|A|=5-0=5$$ $$\operatorname{adj} A=\left[\begin{array}{ll}\left|C_{11}\right| & \left|C_{21}\right| \\ \left|C_{12}\right| & \left|C_{22}\right|\end{array}\right]=\left[\begin{array}{cc}1 & -2 \\ 0 & 5\end{array}\right]$$ $$A^{-1}=\frac{1}{|A|} \operatorname{adj} A=\frac{1}{5}\left[\begin{array}{cc}1 & -2 \\ 0 & 5\end{array}\right]=\left[\begin{array}{cc}1 / 5 & -2 / 5 \\ 0 & 1\end{array}\right]$$
+
+    2.  $$\begin{array}{l}
+        |B|=-2-0=-2 \\
+        B^{-1}=\frac{-1}{2}\left[\begin{array}{rr}
+        2 & 0 \\
+        -9 & -1
+        \end{array}\right]
+        \end{array}$$
+
+    3.  $$\begin{array}{l}
+        |C|=-3-21=-24 \\
+        C^{-1}=\frac{-1}{24}\left[\begin{array}{cc}
+        -1 & -7 \\
+        -3 & 3
+        \end{array}\right]
+        \end{array}$$
+
+    4.  $$\begin{array}{l}
+        |D|=21-0=21 \\
+        D^{-1}=\frac{1}{21}\left[\begin{array}{rr}
+        3 & -6 \\
+        0 & 7
+        \end{array}\right]
+        \end{array}$$
+
+2.  1.  Step 1: Exchange the two diagonal elements.\
+        Step 2: Multiply both the off-diagonal elements by -1.
+
+    2.  Step 3: Multiply the resulting matrix from steps 1 and 2 by $1/|A|$.
+
+3.  (a)$$\begin{aligned}
+    |E| &=1\left|\begin{array}{ll}
+    7 & 3 \\
+    2 & 0
+    \end{array}\right|+1\left|\begin{array}{rr}
+    4 & -2 \\
+    7 & 3
+    \end{array}\right| \\
+    &=1(0-6)+1(12+14) \\
+    &=-6+26=20
+    \end{aligned}$$
+
+    $$\begin{aligned}
+    \operatorname{adj} E &=\left[\begin{array}{ccc}
+    \left|C_{11}\right| & \left|C_{21}\right| & \left|C_{31}\right| \\
+    \left|C_{12}\right| & \left|C_{22}\right| & \left|C_{32}\right| \\
+    \left|C_{13}\right| & \left|C_{23}\right| & \left|C_{33}\right|
+    \end{array}\right] \\
+    &=\left[\begin{array}{ccc}
+    3 & 2 & -3 \\
+    -7 & 2 & 7 \\
+    -6 & -4 & 26
+    \end{array}\right]
+    \end{aligned}$$ $$E^{-1}=\frac{1}{|E|} a d j E$$
+
+    \(b\) $$F^{-1}=\frac{-1}{10}\left[\begin{array}{ccc}
+    0 & 2 & -3 \\
+    10 & -6 & -1 \\
+    0 & -4 & 1
+    \end{array}\right]$$
+
+    \(c\) $$\left|C_{11}\right|=\left|\begin{array}{ll}0 & 1 \\ 1 & 0\end{array}\right|=-1 
+    \quad  \left|C_{12}\right|=-\left|\begin{array}{ll}0 & 1 \\ 0 & 0\end{array}\right|=0 
+    \quad  \left|C_{13}\right|=\left|\begin{array}{ll}0 & 0 \\ 0 & 1\end{array}\right|=0$$ $$\left|C_{21}\right|=-\left|\begin{array}{ll}0 & 0 \\ 1 & 0\end{array}\right|=0 
+    \quad  \left|C_{22}\right|=\left|\begin{array}{ll}0 & 1 \\ 0 & 0\end{array}\right|=0 
+    \quad  \left|C_{23}\right|=-\left|\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right|=-1$$ $$\left|C_{31}\right|=\left|\begin{array}{cc}
+    0 & 0 \\
+    0 & 1
+    \end{array}\right|=0 \quad\left|C_{32}\right|=-\left|\begin{array}{cc}
+    1 & 0 \\
+    0 & 1
+    \end{array}\right|=-1 \quad\left|C_{33}\right|=\left|\begin{array}{ll}
+    1 & 0 \\
+    0 & 0
+    \end{array}\right|=0$$ $$G^{-1}=-1\left[\begin{array}{ccc}-1 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & -1 & 0\end{array}\right]=\left[\begin{array}{lll}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0\end{array}\right]$$\
+    (d) $$H^{-1}=\left[\begin{array}{lll}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{array}\right]$$\
+
+4.  \(a\) $$\begin{array}{l}
+    A=\left[\begin{array}{ll}
+    4 & 3 \\
+    2 & 5
+    \end{array}\right] \quad v=\left[\begin{array}{l}
+    x \\
+    y
+    \end{array}\right] \quad b=\left[\begin{array}{ll}
+    28 \\
+    42
+    \end{array}\right] \\~\\
+    \because A v=b \Rightarrow A^{-1} A v=A^{-1} b \Rightarrow v=A^{-1}b
+    \end{array}$$
+
+    $|A| =20-6=14$
+
+    $A^{-1} =\frac{1}{14}\left[\begin{array}{cc}5 & -3 \\ -2 & 4\end{array}\right]$ $$\begin{aligned}v=A^{-1} b &=\frac{1}{14}\left[\begin{array}{cc}5 & -3 \\ -2 & 4\end{array}\right]\left[\begin{array}{l}28 \\ 42\end{array}\right] \\ &=\frac{1}{14}\left[\begin{array}{l}140-126 \\ -56+168\end{array}\right] = \frac{1}{14}\left[\begin{array}{l}14 \\ 112\end{array}\right] =\left[\begin{array}{l}1 \\ 8\end{array}\right] \end{aligned}$$\
+    So $x=1$ and $y=8$.
+
+    \(b\) $$A=\left[\begin{array}{ccc}4 & 1 & -5 \\ -2 & 3 & 1 \\ 3 & -1 & 4\end{array}\right] \quad x=\left[\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right] \quad b=\left[\begin{array}{c}8 \\ 12 \\ 5\end{array}\right]$$
+
+    $$\begin{aligned}
+    |A| &=4\left|\begin{array}{cc}
+    3 & 1 \\
+    -1 & 4
+    \end{array}\right|-1\left|\begin{array}{cc}
+    -2 & 1 \\
+    3 & 4
+    \end{array}\right|-5\left|\begin{array}{cc}
+    -2 & 3 \\
+    3 & -1
+    \end{array}\right| \\
+    &=4(12+1)-1(-8-3)-5(2-9) \\
+    &=52+11+35=98
+    \end{aligned}$$ $$\operatorname{adj} A =\left[\begin{array}{ccc}
+    13 & 1 & 16 \\
+    11 & 31 & 6 \\
+    -7 & 7 & 14
+    \end{array}\right]$$ $$x=A^{-1} b =\frac{1}{98}\left[\begin{array}{ccc}
+    13 & 1 & 16 \\
+    11 & 31 & 6 \\
+    -7 & 7 & 14
+    \end{array}\right]_{3 \times 3} \left[\begin{array}{l}
+    8 \\
+    12 \\
+    5
+    \end{array}\right]_{3 \times 1} \\
+    =\frac{1}{98}\left[\begin{array}{c}
+    196 \\
+    490 \\
+    98
+    \end{array}\right]_{3 \times 1}=\left[\begin{array}{c}
+    2 \\
+    5 \\
+    1
+    \end{array}\right]$$\
+
+5.  If a matrix is its own inverse, we would need that $A^2 = I$. This is true for the identity matrix. There are other possibilities such as matrix $G$ in exercise 4.
+
+</details>
+
+## Exercise 5.5
+
+1.  Use Cramer's rule to solve the following equation systems:
+
+    1.  $\begin{aligned} \\
+            3x_1-2x_2 = 6 \\
+            2x_1 + x_2 =11
+        \end{aligned}$
+
+    2.  $\begin{aligned} \\
+            -x_1+3x_2 =-3 \\
+            4x_1-x_2 = 12 
+        \end{aligned}$
+
+    3.  $\begin{aligned} \\
+            8x_1-7x_2 =9 \\
+            x_1 + x_2 = 3
+        \end{aligned}$
+
+    4.  $\begin{aligned} \\
+            5x_1 + 9x_2 = 14 \\
+            7 x_1-3x_2 = 4
+        \end{aligned}$
+
+2.  For each of the equation systems in Prob. 1, find the inverse of the coefficient matrix, and get the solution by the formula $x^{*}=A^{-1} d$.
+
+3.  Use Cramer's rule to solve the following equation systems:
+
+    1.  $\begin{aligned} \\~\\
+            8 x_{1}-x_{2}=16 \\
+            2x_2 + 5 x_3 = 5 \\
+            2x_1 + 3x_3 = 7
+        \end{aligned}$
+
+    2.  $\begin{aligned} \\~\\
+            -x + y+z = a \\
+            x-y + z = b \\
+            x+y-z = c
+        \end{aligned}$
+
+<details class="solution">
+<summary>Show solutions for Exercise 5.5</summary>
+
+1.  \(a\) $A=\left[\begin{array}{cc}3 & -2 \\ 2 & 1\end{array}\right] \rightarrow|A|=7 \quad b=\left[\begin{array}{c}6 \\ 11\end{array}\right]$\
+    By Cramer's Rule:
+
+    $$\begin{aligned}
+    A_{1} & =\left[\begin{array}{rr}
+    6 & -2 \\
+    11 & 1
+    \end{array}\right] \rightarrow\left|A_{1}\right|=28 \\
+    A_{2} & =\left[\begin{array}{ll}
+    3 & 6 \\
+    2 & 11
+    \end{array}\right] \rightarrow\left|A_{2}\right|=21 \\
+    x_{1}^{*} & =\frac{\left|A_{1}\right|}{|A|}=\frac{28}{7}=4 \\
+    x_{2}^{*} & =\frac{\left|A_{2}\right|}{|A|}=\frac{21}{7}=3
+    \end{aligned}$$
+
+    Taking the inverse:
+
+    $$\begin{aligned}
+    & A^{-1}=\frac{1}{|A|} \operatorname{adj}=\frac{1}{7}\left[\begin{array}{cc}1 & 2 \\-2 & 3\end{array}\right] \\
+    & \left[\begin{array}{l}x_{1}^{*} \\x_{2}^{*}\end{array}\right]=A^{-1} b=\frac{1}{7}\left[\begin{array}{rr}1 & 2 \\-2 & 3\end{array}\right]\left[\begin{array}{l}6 \\11\end{array}\right]=\frac{1}{7}\left[\begin{array}{l}28 \\21\end{array}\right]=\left[\begin{array}{l}4 \\3\end{array}\right] 
+    \end{aligned}$$
+
+    \(b\) $$A=\left[\begin{array}{cc}
+    -1 & 3 \\
+    4 & -1
+    \end{array}\right] \rightarrow|A|=-11 \quad b=\left[\begin{array}{c}
+    -3 \\
+    12
+    \end{array}\right]$$
+
+    By Cramer's rule:
+
+    $$\begin{aligned}
+    & \left|A_{1}\right|=\left|\begin{array}{cc}
+    -3 & 3 \\
+    12 & -1
+    \end{array}\right|=-33 \rightarrow x_{1}^{*}=\frac{-33}{-11}=3 \\
+    & \left|A_{2}\right|=\left|\begin{array}{cc}
+    -1 & -3 \\
+    4 & 12
+    \end{array}\right|=0 \rightarrow x_{2}^{*}=\frac{0}{-11}=0
+    \end{aligned}$$
+
+    By taking the inverse:
+
+    $$\left[\begin{array}{l}
+    x_{1}^{*} \\
+    x_{2}
+    \end{array}\right]=\frac{-1}{11}\left[\begin{array}{cc}
+    -1 & -3 \\
+    -4 & -1
+    \end{array}\right]\left[\begin{array}{c}
+    -3 \\
+    12
+    \end{array}\right]=\frac{-1}{11}\left[\begin{array}{c}
+    -33 \\
+    0
+    \end{array}\right]=\left[\begin{array}{l}
+    3 \\
+    0
+    \end{array}\right]$$
+
+    \(c\) $$\begin{aligned}
+    & |A|=\left|\begin{array}{cc}
+    8 & -7 \\
+    1 & 1
+    \end{array}\right|=15 \\
+    & \left|A_{1}\right|=\left|\begin{array}{cc}
+    9 & -7 \\
+    3 & 1
+    \end{array}\right|=30 \quad \rightarrow x_{1}^{*}=\frac{30}{15}=2 \\
+    & \left|A_{2}\right|=\left|\begin{array}{cc}
+    8 & 9 \\
+    1 & 3
+    \end{array}\right|=15 \rightarrow x_{2}^{*}=\frac{15}{15}=1 \\
+    \end{aligned}$$ Alternatively, $$\left[\begin{array}{c}
+    x_{1}^{*} \\
+    x_{2}^{*}
+    \end{array}\right]=\frac{1}{15}\left[\begin{array}{cc}
+    1 & 7 \\
+    -1 & 8
+    \end{array}\right]\left[\begin{array}{l}
+    9 \\
+    3
+    \end{array}\right]=\left[\begin{array}{l}
+    2 \\
+    1
+    \end{array}\right]$$
+
+    \(d\) $$\begin{aligned}
+    & |A|=\left|\begin{array}{cc}
+    5 & 9 \\
+    7 & -3
+    \end{array}\right|=-78 \\
+    & \left|A_{1}\right|=\left|\begin{array}{cc}
+    14 & 9 \\
+    4 & -3
+    \end{array}\right|=-78 \rightarrow x_{1}^{*}=1 \\
+    & \left|A_{2}\right|=\left|\begin{array}{cc}
+    5 & 14 \\
+    7 & 4
+    \end{array}\right|=-78 \rightarrow x_{2}^{*}=1
+    \end{aligned}$$
+
+    Alternatively, $$\left[\begin{array}{l}x_{1}^{2} \\ x_{2}^{*}\end{array}\right]=\frac{-1}{78}\left[\begin{array}{cc}-3 & -9 \\ -7 & 5\end{array}\right]\left[\begin{array}{c}14 \\ 4\end{array}\right]=\left[\begin{array}{l}1 \\ 1\end{array}\right]$$
+
+2.  \(a\) $$\begin{aligned}
+    |A| & =\left|\begin{array}{rrr}
+    8 & -1 & 0 \\
+    0 & 2 & 5 \\
+    2 & 0 & 3
+    \end{array}\right| \\
+    & =8\left|\begin{array}{cc}
+    2 & 5 \\
+    0 & 3
+    \end{array}\right|-1\left|\begin{array}{ll}
+    0 & 5 \\
+    2 & 3
+    \end{array}\right|=48-10=38
+    \end{aligned}$$
+
+    $$\begin{aligned}
+    \left|A_{1}\right|= & \left|\begin{array}{ccc}
+    16 & -1 & 0 \\
+    5 & 2 & 5 \\
+    7 & 0 & 3
+    \end{array}\right| \\
+    & 16\left|\begin{array}{cc}
+    2 & 5 \\
+    0 & 3
+    \end{array}\right|-(-1)\left|\begin{array}{rr}
+    5 & 5 \\
+    7 & 3
+    \end{array}\right|=96-20=76 \\
+    & x_{1}^{*}=\frac{76}{38}=2
+    \end{aligned}$$
+
+    $$\begin{aligned}
+    \left|A_{2}\right| & =\left|\begin{array}{ccc}
+    8 & 16 & 0 \\
+    0 & 5 & 5 \\
+    2 & 7 & 3
+    \end{array}\right| \\
+    & =8\left|\begin{array}{cc}
+    5 & 5 \\
+    7 & 3
+    \end{array}\right|-16\left|\begin{array}{cc}
+    0 & 5 \\
+    2 & 3
+    \end{array}\right| \\
+    & =8 \times-20-16 \times-10=-160+160=0 \\
+    & x_{2}^{*}=0
+    \end{aligned}$$
+
+    $$\begin{aligned}
+    \left|A_{3}\right| & =\left|\begin{array}{ccc}
+    8 & -1 & 16 \\
+    0 & 2 & 5 \\
+    2 & 0 & 7
+    \end{array}\right| \\
+    & =8\left|\begin{array}{cc}
+    2 & 5 \\
+    0 & 7
+    \end{array}\right|+1\left|\begin{array}{cc}
+    0 & 5 \\
+    2 & 7
+    \end{array}\right|+16\left|\begin{array}{ll}
+    0 & 2 \\
+    2 & 0
+    \end{array}\right| \\
+    & =112-10-64=38 \rightarrow x_{3}^{*}=1 
+    \end{aligned}$$
+
+    \(d\) $$\begin{aligned}
+    |A| & =\left|\begin{array}{rrr}
+    -1 & 1 & 1 \\
+    1 & -1 & 1 \\
+    1 & 1 & -1
+    \end{array}\right| \\
+    & =1\left|\begin{array}{rr}
+    -1 & 1 \\
+    1 & -1
+    \end{array}\right|-1\left|\begin{array}{rr}
+    1 & 1 \\
+    1 & -1
+    \end{array}\right|+1\left|\begin{array}{rr}
+    1 & -1 \\
+    1 & 1
+    \end{array}\right| \\
+    & =0+2+2=4
+    \end{aligned}$$
+
+    $$\begin{aligned}
+    & \left|A_{1}\right|=\left|\begin{array}{ccc}a & 1 & 1 \\b & -1 & 1 \\c & 1 & -1\end{array}\right| \\
+    & =a\left|\begin{array}{cc}-1 & 1 \\1 & -1\end{array}\right|-1\left|\begin{array}{cc}b & 1 \\c & -1\end{array}\right|+1\left|\begin{array}{cc}b & -1 \\c & 1\end{array}\right| \\
+    & =0-(-b-c)+(b+c)=2(b+c) \vspace{1em}
+    & \left|A_{2}\right|=\left|\begin{array}{rrr}-1 & a & 1 \\1 & b & 1 \\1 & c & -1\end{array}\right| \\
+    & =-1\left|\begin{array}{cc}b & 1 \\c & -1\end{array}\right|-a\left|\begin{array}{cc}1 & 1 \\1 & -1\end{array}\right|+1\left|\begin{array}{ll}1 & b \\1 & c\end{array}\right| \\
+    & =-1(-b-c)-a(-1-1)+1(c-b) \\
+    & =b+c-2 a+c-b=2(a+c) \vspace{1em}
+    & \left|A_{3}\right|=\left|\begin{array}{rrr}-1 & 1 & a \\1 & -1 & b \\1 & 1 & c\end{array}\right| \\
+    & =-1\left|\begin{array}{rr}-1 & b \\1 & c\end{array}\right|-1\left|\begin{array}{ll}1 & b \\1 & c\end{array}\right|+a\left|\begin{array}{cc}1 & -1 \\1 & 1\end{array}\right| \\
+    & =-1(-c-b)-1(c-b)+2 a \\
+    & =c+b-c+b+2 a=2(a+b) \\
+    \end{aligned}$$
+
+    $$x^{*}=\frac{b+c}{2} \quad y^{*}=\frac{a+c}{2} \quad z^{*}=\frac{a+b}{2}$$
+
+</details>

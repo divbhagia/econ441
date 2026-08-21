@@ -1,0 +1,181 @@
+---
+title: "Practice Problems 4"
+subtitle: "Lecture 4: Matrix Multiplication and Vectors"
+format: html
+---
+
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each exercise yourself first, then expand the solutions to check.
+
+<p>
+<a class="btn btn-outline-primary" href="practice4.pdf" target="_blank" rel="noopener" aria-label="Download problems for Practice Problems 4, PDF (opens in a new tab)" role="button">Download problems (PDF)</a>
+<a class="btn btn-outline-primary" href="practice4_solutions.pdf" target="_blank" rel="noopener" aria-label="Download solutions for Practice Problems 4, PDF (opens in a new tab)" role="button">Download solutions (PDF)</a>
+</p>
+
+## Exercise 4.4
+
+-   -   Find (i) $C=A B$, and (ii) $D=B A$, if $$A=\left[\begin{array}{r}
+        -2 \\
+        4 \\
+        7
+        \end{array}\right] \quad B=\left[\begin{array}{lll}
+        3 & 6 & -2
+        \end{array}\right]$$
+
+-   If the matrix $A$ in Example 5 had all its four elements nonzero, would $x^{\prime} A x$ still give a weighted sum of squares? Would the associative law still apply?\
+
+<details class="solution">
+<summary>Show solutions for Exercise 4.4</summary>
+
+1.  \(e\) $$\begin{aligned}
+     & A=\left[\begin{array}{c}
+    -2 \\
+    4 \\
+    7
+    \end{array}\right]_{3 \times 1} \quad B=\left[\begin{array}{lll}
+    3 & 6 & -2
+    \end{array}\right]_{1 \times 3} \\~\\
+    & C=A B=\left[\begin{array}{ccc}
+    -6 & -12 & 4 \\
+    12 & 24 & -8 \\
+    21 & 42 & -14
+    \end{array}\right] \\~\\
+    & D=B A=[3 \times-2+6 \times 4+-2 \times 7]=[4]
+    \end{aligned}$$\
+     \
+
+2.  In example 5, $\begin{aligned} x=\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right] \text{ and }A=\left[\begin{array}{cc}a_{11} & 0 \\0 & a_{22}\end{array}\right] \end{aligned}$. In which case, $$\begin{aligned}
+    & x^{\prime} A x=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\left[\begin{array}{cc}a_{11} & 0 \\0 & a_{22}\end{array}\right]\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2 \times 1} \\
+    & =\left[\begin{array}{lll}a_{11} x_{1} & a_{22} x_{2}\end{array}\right]_{1 \times 2}\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2 \times 1} \\
+    & =\underbrace{a_{11} x_{1}^{2}+a_{22} x_{2}^{2}}_{\text{Weighted sum of squares}}=\sum_{i=1}^{2} a_{i i} x_{i}^{2}
+    \end{aligned}$$
+
+    So $x^{\prime} A x$ represents a weighted sum of squares where $a_{11}, a_{22}$ are weights.\
+    But now what if $A=\left[\begin{array}{ll}a_{11} & a_{12} \\ a_{21} & a_{22}\end{array}\right]$. In this case,
+
+    $$x^{\prime} A x=\left[\begin{array}{ll}
+    x_{1} & x_{2}
+    \end{array}\right]\left[\begin{array}{ll}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22}
+    \end{array}\right]_{2 \times 2}\left[\begin{array}{l}
+    x_{1} \\
+    x_{2}
+    \end{array}\right]_{2 \times 1}$$
+
+    $$\begin{aligned}
+    & =\left[\begin{array}{rr}
+    a_{11} x_{1}+a_{21} x_{2} & a_{12} x_{1}+a_{22} x_{2}
+    \end{array}\right]\left[\begin{array}{l}
+    x_{1} \\
+    x_{2}
+    \end{array}\right]_{2 \times 1} \\
+    & =a_{11} x_{1}^{2}+a_{21} x_{1} x_{2}+a_{12} x_{1} x_{2}+a_{22} x_{2}^{2} \\
+    & =a_{11} x_{1}^{2}+\left(a_{21}+a_{12}\right) x_{1} x_{2}+a_{22} x_{2}^{2}
+    \end{aligned}$$
+
+    So $x^{\prime} A x$ no longer represents a weighted sum of squares.\
+    You can check that the associative law i.e. $$\left(x^{\prime} A\right) x=x^{\prime}(A x)$$ will apply in both cases (after all, its a law!) as all products are possible.
+
+</details>
+
+## Exercise 4.5
+
+-   Given $A=\left[\begin{array}{rrr}-1 & 5 & 7 \\ 0 & -2 & 4\end{array}\right], b=\left[\begin{array}{l}9 \\ 6 \\ 0\end{array}\right]$, and $x=\left[\begin{array}{l}x_1 \\ x_2\end{array}\right]$ :\
+     \
+    Calculate: (a) $AI \quad$ (b) $I A \quad$ (c) $I x \quad$ (d) $x^{\prime} I$\
+    Indicate the dimension of the identity matrix used in each case.
+
+-   Show that the diagonal matrix $$\left[\begin{array}{cccc}
+    a_{11} & 0 & \cdots & 0 \\
+    0 & a_{22} & \cdots & 0 \\
+    \cdots  & \cdots & \cdots & \cdots  \\
+    0 & 0 & \cdots & a_{n n}
+    \end{array}\right]$$ can be idempotent only if each diagonal element is either 1 or 0 . How many different numerical idempotent diagonal matrices of dimension $n \times n$ can be constructed altogether from such a matrix?\
+
+<details class="solution">
+<summary>Show solutions for Exercise 4.5</summary>
+
+3.  $$A=\left[\begin{array}{ccc}-1 & 5 & 7 \\0 & -2 & 4\end{array}\right]_{2 \times 3} \quad \quad B=\left[\begin{array}{c}9 \\6 \\0\end{array}\right]_{3 \times 1} \quad \quad x=\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2\times 1}$$
+
+    1.  $\begin{aligned} A I=\left[\begin{array}{ccc}-1 & 5 & 7 \\0 & -2 & 4\end{array}\right]\left[\begin{array}{lll}1 & 0 & 0 \\0 & 1 & 0 \\0 & 0 & 1\end{array}\right]_{3 \times 3}  =\left[\begin{array}{ccc}-1 & 5 & 7 \\0 & -2 & 4\end{array}\right]=A \end{aligned}$\
+         \
+
+    2.  $\begin{aligned} IA =\left[\begin{array}{ll}
+        1 & 0 \\
+        0 & 1
+        \end{array}\right]_{2\times 2}\left[\begin{array}{ccc}
+        -1 & 5 & 7 \\
+        0 & -2 & 4
+        \end{array}\right]  =\left[\begin{array}{rrr}
+        -1 & 5 & 7 \\
+        0 & -2 & 4
+        \end{array}\right] \end{aligned}$\
+         \
+
+    3.  $\begin{aligned} Ix=\left[\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right]_{2 \times 2}\left[\begin{array}{l}x_{1} \\ x_{2}\end{array}\right]=\left[\begin{array}{l}x_{1} \\ x_{2}\end{array}\right]\end{aligned}$\
+         \
+
+    4.  $\begin{aligned} x^{\prime} I=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\left[\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right]_{2 \times 2}=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\end{aligned}$\
+         \
+
+4.  Let's start with a $2 \times 2$ diagonal matrix
+
+    $$\left[\begin{array}{cc}
+    a_{11} & 0 \\
+    0 & a_{22}
+    \end{array}\right]\left[\begin{array}{cc}
+    a_{11} & 0 \\
+    0 & a_{22}
+    \end{array}\right]=\left[\begin{array}{cc}
+    a_{11}^{2} & 0 \\
+    0 & a_{22}^{2}
+    \end{array}\right]$$
+
+    $x=x^{2}$ for only $x=0,1$ so $a_{11}$ and $a_{22}$ can either be 0 or 1 . So we can have the following $2 \times 2$ idempotent diagonal matrices:
+
+    $$\left[\begin{array}{ll}
+    1 & 0 \\
+    0 & 0
+    \end{array}\right],\left[\begin{array}{ll}
+    1 & 0 \\
+    0 & 1
+    \end{array}\right],\left[\begin{array}{ll}
+    0 & 0 \\
+    0 & 0
+    \end{array}\right],\left[\begin{array}{ll}
+    0 & 0 \\
+    0 & 1
+    \end{array}\right]$$
+
+    More generally, for $n \times n$ matrix, there can be $2^{n}$ such matrices. This is because there will be $n$ elements, each of which can take two values.
+
+</details>
+
+## Exercise 5.1
+
+1.  Are the rows linearly independent in each of the following?
+
+    1.  $\left[\begin{array}{rr}24 & 8 \\ 9 & -3\end{array}\right]$
+
+    2.  $\left[\begin{array}{ll}2 & 0 \\ 0 & 2\end{array}\right]$
+
+    3.  $\left[\begin{array}{ll}0 & 4 \\ 3 & 2\end{array}\right]$
+
+    4.  $\left[\begin{array}{rr}-1 & 5 \\ 2 & -10\end{array}\right]$
+
+2.  Check whether the columns of each matrix in Prob. 3 are also linearly independent. Do you get the same answer as for row independence?
+
+<details class="solution">
+<summary>Show solutions for Exercise 5.1</summary>
+
+1.  1.  Yes
+
+    2.  Yes
+
+    3.  Yes
+
+    4.  No, the second row $=$ 2 $\times$ first row.\
+
+2.  Yes, we get the same answer.\
+
+</details>

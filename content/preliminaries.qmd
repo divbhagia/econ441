@@ -1,0 +1,35 @@
+---
+title: "Preliminaries"
+subtitle: "Module I"
+format: html
+---
+
+See the [Schedule](../schedule.qmd) for dates and assessments.
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 1: Course Introduction; Numbers and Sets</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Course introduction; numbers and sets</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 2.2, 2.3</span>
+
+<p class="lecture-links">
+<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="slides/slides1.html" target="_blank" rel="noopener" aria-label="Lecture 1 slides (opens in a new tab)" role="button">Slides</a>
+<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="handouts/handout-sets-and-functions.pdf" target="_blank" rel="noopener" aria-label="Lecture 1 worksheet: Sets and Functions, PDF (opens in a new tab)" role="button">Worksheet</a>
+<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="practice/practice1.html" target="_blank" rel="noopener" aria-label="Practice Problems 1 (opens in a new tab)" role="button">Practice problems</a>
+</p>
+:::
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 2: Relations and Functions; Summation Notation</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Relations and functions; summation notation; necessary and sufficient conditions</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 2.4&ndash;2.6, p.&nbsp;163, 5.1</span>
+
+<p class="lecture-links">
+<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="slides/slides2.html" target="_blank" rel="noopener" aria-label="Lecture 2 slides (opens in a new tab)" role="button">Slides</a>
+<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="handouts/handout-summation-notation.pdf" target="_blank" rel="noopener" aria-label="Lecture 2 worksheet: Summation Notation, PDF (opens in a new tab)" role="button">Worksheet</a>
+<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="practice/practice2.html" target="_blank" rel="noopener" aria-label="Practice Problems 2 (opens in a new tab)" role="button">Practice problems</a>
+</p>
+:::

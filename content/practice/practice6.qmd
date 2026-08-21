@@ -1,0 +1,110 @@
+---
+title: "Practice Problems 6"
+subtitle: "Lecture 6: Inverse, Nonsingularity, and the Determinant"
+format: html
+---
+
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each exercise yourself first, then expand the solutions to check.
+
+<p>
+<a class="btn btn-outline-primary" href="practice6.pdf" target="_blank" rel="noopener" aria-label="Download problems for Practice Problems 6, PDF (opens in a new tab)" role="button">Download problems (PDF)</a>
+<a class="btn btn-outline-primary" href="practice6_solutions.pdf" target="_blank" rel="noopener" aria-label="Download solutions for Practice Problems 6, PDF (opens in a new tab)" role="button">Download solutions (PDF)</a>
+</p>
+
+## Exercise 5.2
+
+1.  Evaluate the following determinants:
+
+    1.  $\left|\begin{array}{lll}4 & 0 & 2 \\ 6 & 0 & 3 \\ 8 & 2 & 3\end{array}\right|$
+
+    2.  $\left|\begin{array}{lll}a & b & c \\ b & c & a \\ c & a & b\end{array}\right|$
+
+    3.  $\left|\begin{array}{rrr}x & 5 & 0 \\ 3 & y & 2 \\ 9 & -1 & 8\end{array}\right|$
+
+2.  Determine the signs to be attached to the relevant minors in order to get the following cofactors of a determinant: $|C_{13}|,|C_{23}|, |C_{33}|,|C_{41}|$, and $|C_{34}|$.
+
+3.  Given $\begin{array}{|lll|}a & b & c \\ d & e & f \\ g & b & i\end{array}$, find the minors and cofactors of the elements $a, b$ and $f$.
+
+4.  Find the minors and cofactors of the third row, given $$A=\left[\begin{array}{rrr}
+    9 & 11 & 4 \\
+    3 & 2 & 7 \\
+    6 & 10 & 4
+    \end{array}\right]$$
+
+<details class="solution">
+<summary>Show solutions for Exercise 5.2</summary>
+
+1.  1.  $$\begin{aligned}
+        & 8\left|\begin{array}{ll}
+        0 & 1 \\
+        0 & 3
+        \end{array}\right|-1\left|\begin{array}{ll}
+        4 & 1 \\
+        6 & 3
+        \end{array}\right|+3\left|\begin{array}{ll}
+        4 & 0 \\
+        6 & 0
+        \end{array}\right| \\
+        =& 8(0-0)-1(12-6)+3(0-0) \\
+        =& 0-6+0 \\
+        = &-6 \\
+        \end{aligned}$$
+
+    2.  $$\begin{aligned}
+        & a\left|\begin{array}{ll}
+        c & a \\
+        a & b
+        \end{array}\right|-b\left|\begin{array}{cc}
+        b & a \\
+        c & b
+        \end{array}\right|+c\left|\begin{array}{cc}
+        b & c \\
+        c & a
+        \end{array}\right| \\
+        =& a\left(c b-a^{2}\right)-b\left(b^{2}-a c\right)+c\left(a b-c^{2}\right) \\
+        =& a b c-a^{3}-b^{3}+a b c+a b c-c^{3} \\
+        =&-a^{3}-b^{3}-c^{3}+3 a b c
+        \end{aligned}$$
+
+    3.  $$\begin{aligned}
+        & x\left|\begin{array}{cc}
+        y & 2 \\
+        -1 & 8
+        \end{array}\right|-5\left|\begin{array}{cc}
+        3 & 2 \\
+        9 & 8
+        \end{array}\right|+0\left|\begin{array}{rr}
+        3 & y \\
+        9 & -1
+        \end{array}\right| \\
+        =& x(8 y+2)-5(24-18)+0(-3-9 y) \\
+        =& 8 x y+2 x-30+0 \\
+        =& 8 x y+2 x-30
+        \end{aligned}$$
+
+2.  $\left|C_{13}\right|: 1+3=4$ is even so $+$\
+    $\left|C_{23}\right|: 2+3=5$ is odd so $-$\
+    $\left|C_{33}\right|: 3+3=6$ is even so $+$\
+    $\left|C_{41}\right|: 4+1=5$ is odd so $-$\
+    $\left|C_{34}\right|: 3+4=7$ is odd so $-$\
+
+3.  Minor of $a$: $$\left|M_{11}\right|=\left|\begin{array}{cc}e & f \\ h & i\end{array}\right|=e i-f h$$ Cofactor of $a$: $$\left|C_{11}\right|=(-1)^{1+1}\left|M_{11}\right|=\left|M_{11}\right|$$
+
+    Minor of $b$: $$\left|M_{12}\right|=\left|\begin{array}{ll}d & f \\ g & i\end{array}\right|=d i-f g$$ Cofactor of $b$: $$\left|C_{12}\right|=(-1)^{3}\left|M_{12}\right|=-\left|M_{12}\right|$$ Minor of $f$: $$\left|M_{23}\right|=\left|\begin{array}{ll}a & b \\ g & h\end{array}\right|=a h-b g$$ Cofactor of $f$: $$\left|C_{23}\right|=(-1)^{5}\left|M_{23}\right|=-\left|M_{23}\right|$$\
+
+4.  Minors of third row: $$\begin{aligned}
+    \left|M_{31}\right| &=\left|\begin{array}{cc}
+    11 & 4 \\
+    2 & 7
+    \end{array}\right| = 69, \quad
+    \left|M_{32}\right|&=\left|\begin{array}{cc}
+    9 & 4 \\
+    3 & 7
+    \end{array}\right| = 51, \quad
+     \left|M_{33}\right|&=\left|\begin{array}{ll}
+    9 & 11 \\
+    3 & 2
+    \end{array}\right| =-15
+    \end{aligned}$$ Cofactors: $|C_{31}| =  |M_{31}|, |C_{32}| =  -|M_{32}| , |C_{33}| =  |M_{33}|$.
+
+</details>

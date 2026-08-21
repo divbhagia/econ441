@@ -1,0 +1,48 @@
+---
+title: "Practice Problems 1"
+subtitle: "Lecture 1: Numbers and Sets"
+format: html
+---
+
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a **Show solution** toggle: try it yourself first, then expand to check.
+
+<p>
+<a class="btn btn-outline-primary" href="practice1.pdf" target="_blank" rel="noopener" aria-label="Download problems for Practice Problems 1, PDF (opens in a new tab)" role="button">Download problems (PDF)</a>
+<a class="btn btn-outline-primary" href="practice1_solutions.pdf" target="_blank" rel="noopener" aria-label="Download solutions for Practice Problems 1, PDF (opens in a new tab)" role="button">Download solutions (PDF)</a>
+</p>
+
+## Exercise 2.3
+
+**1.** Write the following in set notation:
+
+   a. The set of all real numbers greater than 34.
+   b. The set of all real numbers greater than 8 but less than 65.
+
+<details class="solution">
+<summary>Show solution</summary>
+
+a. $\{x \in \mathbb{R} \mid x>34\}$, or simply $\{x \mid x>34\}$
+b. $\{x \mid 8<x<65\}$
+
+</details>
+
+**2.** Given the sets $S_1=\{2,4,6\}$, $S_2=\{7,2,6\}$, $S_3=\{4,2,6\}$, and $S_4=\{2,4\}$, which of the following statements are true?
+
+   a. $S_1=S_3$
+   b. $S_1=\mathbb{R}$
+   c. $8 \in S_2$
+   d. $3 \notin S_2$
+   e. $4 \notin S_3$
+   f. $S_4 \subset \mathbb{R}$
+   g. $S_1 \supset S_4$
+   h. $\emptyset \subset S_2$
+   i. $S_3 \supset \{1,2\}$
+
+   Note that $\mathbb{R}$ denotes the set of real numbers.
+
+<details class="solution">
+<summary>Show solution</summary>
+
+(a), (d), (f), (g), and (h) are true.
+
+</details>

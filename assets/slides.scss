@@ -1,0 +1,184 @@
+/*-- scss:defaults --*/
+
+// Fonts: match the website (assets/custom.scss)
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Colors: match the website (assets/custom.scss)
+$primary:   #912040;   // maroon, used for navbar/links on the site
+$secondary: #e8e1e1;
+$gray:      #393A3B;
+$gray2:     #747576;
+
+// Base
+$body-bg: #ffffff;
+$body-color: $gray;
+$link-color: $primary;
+$selection-bg: $secondary;
+
+// Headings
+$presentation-font-family: Lato, Helvetica, sans-serif;
+$presentation-heading-font: "Fira Sans Condensed", Helvetica, sans-serif;
+$presentation-heading-color: $primary;
+
+// Code blocks
+$code-block-bg: #f8f9fa;
+$code-color: $gray;
+
+/*-- scss:rules --*/
+
+// Section slide heading style
+.section-slide h1 {
+  font-family: "Fira Sans Condensed", Helvetica, sans-serif !important;
+  font-size: 1.75em !important;
+}
+
+// Hide slide number on section slides
+.reveal.no-slide-num .slide-number {
+  display: none !important;
+}
+
+// Improve readability
+.reveal {
+  font-size: 32px;
+
+  h1 {
+    font-size: 1.75em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 0.4em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: $gray2;
+    margin-bottom: 0.3em;
+    text-align: left;
+  }
+
+    // Space before lists (after headings or paragraphs)
+  h1 + ul, h1 + ol,
+  h2 + ul, h2 + ol,
+  h3 + ul, h3 + ol,
+  h4 + ul, h4 + ol,
+  p + ul, p + ol,
+  strong + ul, strong + ol {
+    margin-top: -0.2em !important;  // Reduce space after headings
+  }
+  // Main list spacing
+  ul, ol {
+    line-height: 1.2;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+  }
+
+  ul > li,
+  ol > li {
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
+  }
+
+  // Nested list
+  ul ul > li,
+  ol ol > li,
+  ul ol > li,
+  ol ul > li {
+    margin-bottom: 0.4em;
+    margin-top: 0.2em;
+    line-height: 1.2;
+  }
+
+  // Better code blocks
+  pre {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+
+  code {
+    font-family: "Fira Mono", monospace;
+    font-size: 0.85em;
+  }
+
+  // Fragments (incremental reveals)
+  .fragment {
+    opacity: 0.3;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  // Boxed content
+  .boxed {
+    border: 2px solid $primary;
+    border-radius: 8px;
+    padding: 1em;
+    background-color: $secondary;
+  }
+
+  // Emphasis
+  strong {
+    color: $primary;
+    font-weight: 700;
+  }
+
+  // Math
+  .math {
+    font-size: 1em;
+  }
+
+  // Inline math in paragraphs
+  p .math {
+    font-size: 1em;
+  }
+
+  // Display math (centered equations)
+  .math.display {
+    margin-top: 0.2em !important;
+    font-size: 1em;
+    line-height: 1;
+  }
+  p + .math.display {
+    margin-top: 0.2em !important;
+  }
+
+}
+// Footer styling
+.reveal .footer {
+  font-size: 0.6em;
+  color: $gray2;
+}
+
+// Progress bar and controls in the site's primary color
+.reveal .progress {
+  color: $primary;
+}
+.reveal .controls {
+  color: $primary;
+}
+
+// Columns
+.reveal .columns {
+  gap: 2em;
+}
+
+// Force center all figures
+.reveal img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reveal figure {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

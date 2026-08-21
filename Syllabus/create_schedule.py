@@ -1,385 +1,213 @@
+"""Single source of truth for the course schedule.
+
+Emits two artifacts from one data definition:
+  syllabus/schedule.tex   - rows for the LaTeX syllabus table (print)
+
+Run from the project root:  python3 syllabus/create_schedule.py
+"""
 import datetime as dt
-import pandas as pd
-import os, re
-import numpy as np
+import pathlib
 
-#################################################
-# Function to get dates for the semester
-#################################################
+YEAR = 2026
+FIRST, LAST = (8, 24), (12, 9)
+FINAL_EXAM = ("Mon 12/14", "5:00--6:50 PM")
 
-# Dictionary to map weekdays to their index
-day_to_index = {"Mon": 0, "Tue": 1, "Wed": 2, "Thu": 3, "Fri": 4, "Sat": 5, "Sun": 6}
+HOLIDAYS = {
+    dt.date(YEAR, 9, 7): "Labor Day",
+    dt.date(YEAR, 11, 11): "Veterans Day",
+    dt.date(YEAR, 11, 23): "Fall Recess",
+    dt.date(YEAR, 11, 25): "Fall Recess",
+}
 
+MODULE_SLUG = {"Preliminaries":"preliminaries","Linear Algebra":"linear-algebra",
+               "Calculus":"calculus","Optimization":"optimization"}
 
-# Function to get dates for a specific weekday
-def get_dates(start, end, weekdays, year):
-    """
-    Returns a list of dates that fall on a specific weekday between two dates.
-        - start: The start date of the semester.
-        - end: The end date of the semester.
-        - weekdays: Weekdays to filter the dates (e.g., 'Tue', 'Thu').
-        - year: The year of the semester.
-    """
-    weekdaysnum = [day_to_index[day] for day in weekdays]
-    start_date = dt.datetime.strptime(start + "/" + str(year), "%m/%d/%Y")
-    end_date = dt.datetime.strptime(end + "/" + str(year), "%m/%d/%Y")
-    dates = []
-    current_date = start_date
-    while current_date <= end_date:
-        if current_date.weekday() in weekdaysnum:
-            dates.append(current_date.strftime("%a %m/%d"))
-        current_date += dt.timedelta(days=1)
-    return dates
+MODULES = [
+    ("Preliminaries",     dt.date(YEAR, 8, 24),  dt.date(YEAR, 8, 26)),
+    ("Linear Algebra",    dt.date(YEAR, 8, 31),  dt.date(YEAR, 9, 16)),
+    ("Calculus",          dt.date(YEAR, 9, 28),  dt.date(YEAR, 10, 14)),
+    ("Optimization",      dt.date(YEAR, 10, 26), dt.date(YEAR, 11, 18)),
+    ("Additional Topics", dt.date(YEAR, 11, 30), dt.date(YEAR, 12, 2)),
+]
 
+# date -> (lecture number or None, topics, references, worksheet file, worksheet label)
+LECTURES = {
+ dt.date(YEAR,8,24):  (1,"Course introduction; numbers and sets","2.2, 2.3","Handout-Sets-and-Functions.pdf","Sets and Functions"),
+ dt.date(YEAR,8,26):  (2,"Relations and functions; summation notation; necessary and sufficient conditions","2.4-2.6, p. 163, 5.1","Handout-Summation-Notation.pdf","Summation Notation"),
+ dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar multiplication","4.1, 4.2","Handout-Matrix-Operations.pdf","Matrix Operations"),
+ dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; inner product; linear dependence","4.2-4.4",None,None),
+ dt.date(YEAR,9,9):   (5,"Identity, null, idempotent matrices; transpose","4.5, 4.6",None,None),
+ dt.date(YEAR,9,14):  (6,"Inverse; nonsingularity; rank; the determinant","4.6, 5.1, 5.2","Handout-Determinant-and-Inverse.pdf","Determinant and Inverse"),
+ dt.date(YEAR,9,16):  (7,"Computing determinants; inversion; Cramer's rule; applications","5.2-5.5, 4.7","Handout-Solving-System-of-Equations.pdf","Solving Systems of Equations"),
+ dt.date(YEAR,9,28):  (None,"Limit definition of a derivative; limits","6.2-6.4",None,None),
+ dt.date(YEAR,9,30):  (None,"Continuity; rules of differentiation","6.7, 7.1-7.3",None,None),
+ dt.date(YEAR,10,5):  (None,"Exponential and log functions","10.5",None,None),
+ dt.date(YEAR,10,7):  (None,"Partial derivatives; total differential and derivative","7.4, 8.1, 8.2, 8.4",None,None),
+ dt.date(YEAR,10,12): (None,"Implicit function theorem","8.5",None,None),
+ dt.date(YEAR,10,14): (None,"Integration","14.1-14.3",None,None),
+ dt.date(YEAR,10,26): (None,"Unconstrained single-variable optimization","9.1, 9.2",None,None),
+ dt.date(YEAR,10,28): (None,"Concave and convex functions","9.3, 9.4",None,None),
+ dt.date(YEAR,11,2):  (None,"Multivariable optimization: first-order conditions","11.1",None,None),
+ dt.date(YEAR,11,4):  (None,"Multivariable optimization: second-order conditions","11.2",None,None),
+ dt.date(YEAR,11,9):  (None,"Constrained optimization; the Lagrange method","12.1, 12.2",None,None),
+ dt.date(YEAR,11,16): (None,"Envelope theorem","11.5",None,None),
+ dt.date(YEAR,11,18): (None,"Quasiconcavity; convex sets; homogeneous functions","12.4, 12.6",None,None),
+ dt.date(YEAR,11,30): (None,"To be announced","",None,None),
+ dt.date(YEAR,12,2):  (None,"To be announced","",None,None),
+}
 
-#################################################
-# Function to write table to latex
-#################################################
+SPECIAL = {
+ dt.date(YEAR,9,21): "Midterm 1 review",
+ dt.date(YEAR,9,23): "Midterm Exam 1",
+ dt.date(YEAR,10,19):"Midterm 2 review",
+ dt.date(YEAR,10,21):"Midterm Exam 2",
+ dt.date(YEAR,12,7): "Final review",
+ dt.date(YEAR,12,9): "Final review",
+}
+# Lectures whose materials have been vetted and published.
+# Add numbers here as each module is checked, then rerun ./build.sh all
+PUBLISHED = {1, 2}
 
-
-def latex(df, filename=None):
-    lines = []
-    if filename is None:
-        for i in range(df.shape[0]):
-            lines.append(" & ".join([str(x) for x in df.iloc[i]]) + " \\\\")
-        return lines
-    else:
-        with open(filename, "w") as f:
-            for i in range(df.shape[0]):
-                f.write(" & ".join([str(x) for x in df.iloc[i]]) + " \\\\\n")
-
-
-#################################################
-# Functions for the html table
-#################################################
-
-
-def icon(doctype):
-    if doctype == "notes":
-        return "📔"
-    if doctype == "slides":
-        return "🖥️"
-    if doctype == "ws":
-        return "🗒️"
-    if doctype == "hw":
-        return "✍️"
-    if doctype == "sol":
-        return "📖"
+QUIZZES = {dt.date(YEAR,9,9):1, dt.date(YEAR,10,12):2, dt.date(YEAR,11,9):3, dt.date(YEAR,11,30):4}
 
 
-def material_str(x):
-    if x != "" and int(x) != 12:
-        x = int(x)
-    else:
-        return ""
-    dest = f"Lectures/Lecture{x}"
-    files = os.listdir(dest)
-    material = {}
-    material["slides"] = f"Slides{x}.pdf"
-    material["ws"] = [f for f in files if re.match(r"Handout-.*\.pdf", f)]
-    material["hw"] = f"homework{x}.pdf"
-    material["sol"] = f"homework{x}_solutions.pdf"
-    material_str = ""
-    for key, value in material.items():
-        if type(value) == list:
-            for v in value:
-                material_str += f"<a href='{dest}/{v}'>{icon(key)}</a> "
+def class_dates():
+    out, d = [], dt.date(YEAR, *FIRST)
+    end = dt.date(YEAR, *LAST)
+    while d <= end:
+        if d.weekday() in (0, 2):
+            out.append(d)
+        d += dt.timedelta(days=1)
+    return out
+
+
+def module_for(d):
+    for name, a, b in MODULES:
+        if a <= d <= b:
+            return name
+    return None
+
+
+DATES = class_dates()
+SPANS = {}
+for _d in DATES:
+    _m = module_for(_d)
+    if _m:
+        SPANS[_m] = SPANS.get(_m, 0) + 1
+
+
+def build_latex():
+    lines, seen, prev_mod = [], set(), object()
+    for d in DATES:
+        ds = d.strftime("%a %-m/%-d")
+        m = module_for(d)
+        rule = "\\hline\n" if (lines and m != prev_mod) else ""
+        prev_mod = m
+        if m and m not in seen:
+            seen.add(m)
+            mod = f"\\textbf{{{m}}}"   # multirow breaks across longtable pages
         else:
-            material_str += f"<a href='{dest}/{value}'>{icon(key)}</a> "
-    return material_str
+            mod = ""
+        quiz = f"\\textbf{{Quiz {QUIZZES[d]}}}; " if d in QUIZZES else ""
+        if d in HOLIDAYS:
+            lines.append(rule + f"{mod} & {ds} & \\multicolumn{{2}}{{l}}{{\\textit{{No class ({HOLIDAYS[d]})}}}} \\\\")
+        elif d in SPECIAL:
+            lines.append(rule + f"{mod} & {ds} & \\multicolumn{{2}}{{l}}{{\\textbf{{{SPECIAL[d]}}}}} \\\\")
+        elif d in LECTURES:
+            _, tp, rf, _, _ = LECTURES[d]
+            lines.append(rule + f"{mod} & {ds} & {quiz}{tp} & {rf} \\\\")
+        else:
+            lines.append(rule + f"{mod} & {ds} & {quiz} & \\\\")
+    lines.append(f" & {FINAL_EXAM[0]} & \\multicolumn{{2}}{{l}}{{\\textbf{{Final Exam}}, {FINAL_EXAM[1]}}} \\\\")
+    body = "\n".join(lines)
+    if body.rstrip().endswith("\\\\"):
+        body = body.rstrip()[:-2].rstrip()   # drop trailing \\ on the last row
+    pathlib.Path("syllabus/schedule.tex").write_text(body + "\n")
+    return len(lines)
 
 
-#################################################
-# Specify syllabus content
-#################################################
-
-# Modules
-modules = {}
-modules["prelim"] = "Preliminaries"
-modules["linal"] = "Linear Algebra"
-modules["calc"] = "Calculus"
-modules["opt"] = "Optimization"
-modules["add"] = "Add. Topics"
-
-# Topics
-topics = {}
-
-# Topics: Preliminaries
-prelim1 = (
-    "Numbers and sets; "
-    "Relations and functions; "
-    "Summation notation; "
-    "Necessary and sufficient conditions"
-)
-topics["prelim"] = [prelim1]
-
-# Topics: Linear Algebra
-linal1 = (
-    "Matrices: Addition, Subtraction, and Scalar Multiplication; "
-    "Matrix Multiplication; "
-    "Vectors; "
-    "Identity and Null Matrices; "
-    "Transpose and Inverse of a Matrix"
-)
-linal2 = "Conditions for Nonsingularity of a Matrix; " "Determinant of a Matrix"
-linal3 = "Finding the Inverse of a Matrix; " "Cramer’s Rule; " "Applications"
-topics["linal"] = [linal1, linal2, linal3]
-
-# Topics: Calculus
-calc1 = (
-    "Limit Definition of a Derivative; "
-    "Limits; "
-    "Continuity; "
-    "Rules of Differentiation"
-)
-calc2 = (
-    "Exponential and Log Functions; "
-    "Partial Derivatives; "
-    "Total Differential and Derivative"
-)
-calc3 = "Implicit Function Theorem; " "Integration"
-topics["calc"] = [calc1, calc2, calc3]
-
-# Topics: Optimization
-opt1 = "Unconstrained Single-Variable Optimization; " "Concave and Convex Functions"
-opt2 = "Multivariable Optimization"
-opt3 = "Constrained Optimization"
-opt4 = "Envelope Theorem; " "Quasiconcavity; " "Convex sets; " "Homogenous Functions"
-topics["opt"] = [opt1, opt2, opt3, opt4]
-
-# Topics: Additional Topics
-add1 = "TBA"
-topics["add"] = [add1]
-
-# Collect modules
-mods = ["prelim", "linal", "calc", "opt", "add"]
-n_lecs = sum(len(topics[mod]) for mod in mods)
-
-## Code here slightly more general than Econ340 (can edit that)
-
-#################################################
-# Create Syllabus
-#################################################
-
-# Initialize
-sem = "fall"
-class_days = ["Mon"]
-
-# Fall semester dates
-if sem == "fall":
-    dates = get_dates("08/23", "12/12", class_days, 2025)
-    break_ = get_dates("11/24", "11/30", class_days, 2025)
-    examday = "Mon 12/15"
-    add_holidays = ["Mon 09/01"]
-    holiday_names = ["Labor Day"]
-
-# Spring semester dates
-if sem == "spring":
-    dates = get_dates("01/18", "05/09", class_days, 2025)
-    break_ = get_dates("03/31", "04/06", class_days, 2025)
-    examday = "Thu 05/13"
-    add_holidays = []
-    holiday_names = []
-
-# Set the midterm date
-midterm_idx = 9
-
-# Add final exam date
-dates.append(examday)
-
-# Collect indices for breaks, review classes, and exams
-mid_review_idx = midterm_idx - 1
-add_holidays_idx = [dates.index(add_holiday) for add_holiday in add_holidays]
-break_idx = dates.index(break_[0])
-final_review_idx = len(dates) - 2
-final_idx = len(dates) - 1
-
-# Create list with just lecture dates
-rm_idxs = [
-    break_idx,
-    mid_review_idx,
-    midterm_idx,
-    final_review_idx,
-    final_idx,
-] + add_holidays_idx
-lec_dates = [date for i, date in enumerate(dates) if i not in rm_idxs]
-n_lec_dates = len(lec_dates)
-
-# Review class and midterm index
-if n_lec_dates < n_lecs:
-    mods = mods[:-1]
-    n_lecs = sum(len(topics[mod]) for mod in mods)
-if n_lec_dates < n_lecs:
-    raise ValueError(f"Not enough lecture dates for the number of lectures ({n_lecs}).")
-
-# If only one class day, remove the day from dates column
-if len(class_days) == 1:
-    dates = [date[4:] for date in dates]
-    lec_dates = [date[4:] for date in lec_dates]
-
-# Create a DataFrame with the dates
-df = pd.DataFrame(
-    {
-        "Date": lec_dates,
-        "Lecture": range(1, n_lecs + 1),
-        "Module": "",
-        "Topics": "",
-        "References": "",
-        "Quiz": "",
-    },
-    dtype="object",
-)
-
-# Insert modules and topics
-mod_idx = [sum(len(topics[mod]) for mod in mods[:i]) for i in range(len(mods))]
-for i, mod in enumerate(mods):
-    df.loc[mod_idx[i], "Module"] = modules[mod]
-    for j, topic in enumerate(topics[mod]):
-        df.loc[mod_idx[i] + j, "Topics"] = topic
-
-# Add references
-df.loc[df["Lecture"] == 1, "References"] = "2.2, 2.3, 2.4-2.6, pg 163, 5.1"
-df.loc[df["Lecture"] == 2, "References"] = "4.1-4.6"
-df.loc[df["Lecture"] == 3, "References"] = "4.7, 5.1-5.3"
-df.loc[df["Lecture"] == 4, "References"] = "5.3-5.5"
-df.loc[df["Lecture"] == 5, "References"] = "6.2-6.4, 6.7, 7.1-7.3"
-df.loc[df["Lecture"] == 6, "References"] = "10.5, 7.4, 8.1, 8.2, 8.4"
-df.loc[df["Lecture"] == 7, "References"] = "8.5, 14.1-14.3"
-df.loc[df["Lecture"] == 8, "References"] = "9.1, 9.2, 9.3, 9.4"
-df.loc[df["Lecture"] == 9, "References"] = "11.1, 11.2"
-df.loc[df["Lecture"] == 10, "References"] = "12.1, 12.2"
-df.loc[df["Lecture"] == 11, "References"] = "11.5, 12.4, 12.6"
-df.loc[df["Lecture"] == 12, "References"] = ""
-
-# Add quizzes
-df.loc[df["Lecture"] == 3, "Quiz"] = "Quiz 1"
-df.loc[df["Lecture"] == 5, "Quiz"] = "Quiz 2"
-df.loc[df["Lecture"] == 7, "Quiz"] = "Quiz 3"
-df.loc[df["Lecture"] == 10, "Quiz"] = "Quiz 4"
-df.loc[df["Lecture"] == 12, "Quiz"] = "Quiz 5"
-
-# Add back all original dates
-df_tmp = pd.DataFrame({"Date": dates})
-df = df_tmp.merge(df, on="Date", how="left")
-
-# Add description for additional dates
-# df.loc[break_idx, "Date"] = ""
-if sem == "fall":
-    df.loc[break_idx, "Topics"] = "Fall Recess"
-if sem == "spring":
-    df.loc[break_idx, "Topics"] = "Spring Recess"
-for i, add_holiday in enumerate(add_holidays_idx):
-    df.loc[add_holiday, "Date"] = dates[add_holiday]
-    df.loc[add_holiday, "Topics"] = holiday_names[i]
-df.loc[mid_review_idx, "Topics"] = "Midterm Review"
-df.loc[midterm_idx, "Topics"] = "Midterm Exam"
-df.loc[final_review_idx, "Topics"] = "Final Review"
-df.loc[final_idx, "Topics"] = "Final Exam"
-
-# Replace missing values with empty strings
-df = df.fillna("")
-
-#################################################
-# Create latex table
-#################################################
-
-# Get the latex lines
-lines = latex(df)
-
-# Module beginnings and endings
-mdlbegs = np.array(df[df["Module"] != ""].index)
-n_tops = [len(topics[mod]) for mod in mods]
-mdlends = mdlbegs + n_tops
-
-# Specify indices for bold lines
-mdlends[-1] += 1  # Manual adjustment for the last module
-bold_lines = set(mdlends - 1) | set(mdlbegs - 1)
-bold_lines = bold_lines | {len(lines) - 1}
-
-# Full line pist midterm and final review
-full_lines = [mid_review_idx, final_review_idx, break_idx, break_idx - 1]
-
-# # Multirow for Module column
-bs = [8, 18, 14, 20]  # manually set
-for i, row in enumerate(mdlbegs):
-    row_content = df.loc[row].copy()
-    mod = df.loc[row, "Module"]
-    row_content["Module"] = f"\\multirow{{{n_tops[i]}}}[{bs[i]}]{{*}}{{{mod}}}"
-    lines[row] = " & ".join([str(x) for x in row_content]) + " \\\\\n"
-
-# Special multicolumn rows
-splrows = df[df["Lecture"] == ""].index
-for row in splrows:
-    lines[row] = (
-        df.loc[row, "Date"]
-        + " & "
-        + f'\\multicolumn{{4}}{{c}}{{{df.loc[row, "Topics"]}}}'
-        + " & "
-        + " \\\\"
-    )
-
-# Add horizontal lines
-for row in range(len(lines)):
-    if row in bold_lines:
-        lines[row] += "\\Xhline{1.75\\arrayrulewidth} "
-    elif row in full_lines:
-        lines[row] += "\\hline "
-    else:
-        lines[row] += " \\cline{1-2} \\cline{4-6}"
-
-# Write to file
-with open("Syllabus/schedule.tex", "w") as f:
-    for line in lines:
-        f.write(line + "\n")
+def icons(n, ws, wsl):
+    o = [f'<a href="content/slides/slides{n}.html" target="_blank" rel="noopener" '
+         f'aria-label="Lecture {n} slides (opens in a new tab)"><span aria-hidden="true">🖥️</span></a>']
+    if ws:
+        o.append(f'<a href="content/handouts/{ws.lower()}" target="_blank" rel="noopener" '
+                 f'aria-label="Lecture {n} worksheet: {wsl}, PDF (opens in a new tab)"><span aria-hidden="true">🗒️</span></a>')
+    o.append(f'<a href="content/practice/practice{n}.html" target="_blank" rel="noopener" '
+             f'aria-label="Practice Problems {n} (opens in a new tab)"><span aria-hidden="true">✍️</span></a>')
+    return " ".join(o)
 
 
-#################################################
-# Create HTML version
-#################################################
+def esc(t):
+    return t.replace("'", "&rsquo;").replace("-", "&ndash;") if False else t.replace("'", "&rsquo;")
 
-# Convert dates from 08/27 to Aug 27
-# df = df[df["Date"] != ""].copy()
-df["Date"] = df["Date"].apply(
-    lambda x: dt.datetime.strptime(x, "%m/%d").strftime("%b %d") if x != "" else ""
-)
 
-# Add lecture number and links to Date column (remove lecture col)
-df.loc[df["Lecture"] != "", "Date"] = (
-    df.loc[df["Lecture"] != "", "Date"]
-    + "<br><a href='Lectures/Lecture"
-    + df.loc[df["Lecture"] != "", "Lecture"].astype(str)
-    + "/lecture"
-    + df.loc[df["Lecture"] != "", "Lecture"].astype(str)
-    + ".qmd'>Lecture "
-    + df.loc[df["Lecture"] != "", "Lecture"].astype(str)
-    + "</a>"
-)
+def build_html():
+    rows, seen, prev_mod = [], set(), object()
+    for d in DATES:
+        ds = d.strftime("%a %-m/%-d")
+        m = module_for(d)
+        starts = (m != prev_mod)   # only when the block actually changes
+        prev_mod = m
+        if m and m not in seen:
+            seen.add(m)
+            label = (f'<a href="content/{MODULE_SLUG[m]}.html">{m}</a>' if m in MODULE_SLUG else m)
+            mod = f'<th scope="rowgroup" rowspan="{SPANS[m]}" style="text-align:left;vertical-align:middle;white-space:nowrap">{label}</th>'
+        elif m:
+            mod = ""
+        else:
+            mod = '<td class="modblank"></td>'
+        quiz = f"<strong>Quiz {QUIZZES[d]}</strong>; " if d in QUIZZES else ""
+        edge = " module-start" if starts else ""
+        if d in HOLIDAYS:
+            rows.append(f'<tr class="recess{edge}">{mod}<th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">{ds}</th>'
+                        f'<td colspan="3">No class ({HOLIDAYS[d]})</td></tr>')
+        elif d in SPECIAL:
+            rows.append(f'<tr class="assessment{edge}">{mod}<th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">{ds}</th>'
+                        f'<td colspan="3">{quiz}<strong>{SPECIAL[d]}</strong></td></tr>')
+        elif d in LECTURES:
+            n, tp, rf, ws, wsl = LECTURES[d]
+            mat = icons(n, ws, wsl) if (n and n in PUBLISHED) else ""
+            rows.append(f'<tr class="{edge.strip()}">{mod}<th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">{ds}</th><td class="topics" style="text-align:left;vertical-align:middle">{quiz}{esc(tp)}</td>'
+                        f'<td class="refs" style="text-align:left;vertical-align:middle">{rf}</td><td class="mat" style="text-align:center;vertical-align:middle">{mat}</td></tr>')
+        else:
+            rows.append(f'<tr class="{edge.strip()}">{mod}<th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">{ds}</th><td class="topics" style="text-align:left;vertical-align:middle">{quiz}</td>'
+                        f'<td class="refs" style="text-align:left;vertical-align:middle"></td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>')
+    rows.append(f'<tr class="assessment"><td></td><th scope="row">{FINAL_EXAM[0]}</th>'
+                f'<td colspan="3"><strong>Final Exam</strong>, {FINAL_EXAM[1].replace("--","&ndash;")}</td></tr>')
 
-# Add Material column
-df["Material"] = df["Lecture"].apply(material_str)
+    table = ('<div class="table-scroll" tabindex="0" role="region" aria-label="Semester schedule table">\n'
+             '<table class="schedule-table" aria-label="Fall 2026 course schedule, '
+             'one row per class meeting">\n'
+             '<thead>\n<tr>\n'
+             '  <th scope="col" style="width:8.5em">Module</th>\n'
+             '  <th scope="col" style="width:6.2em">Date</th>\n'
+             '  <th scope="col">Topics</th>\n'
+             '  <th scope="col" style="width:6.2em">References</th>\n'
+             '  <th scope="col" style="width:6.0em">Materials</th>\n'
+             '</tr>\n</thead>\n<tbody>\n'
+             + "\n".join(rows) + '\n</tbody>\n</table>\n</div>\n')
+    page = """---
+title: "Schedule"
+sidebar: false
+---
 
-# Add notes links to each module
-notes = {}
-notes["prelim"] = []
-notes["linal"] = ["Linear-Algebra.pdf"]
-notes["calc"] = ["Calculus.pdf", "Log-and-Exponential-Functions.pdf"]
-notes["opt"] = ["Optimization.pdf"]
-for mod, nnotes in notes.items():
-    mod_idx = df[df["Module"] == modules[mod]].index[0]
-    df.loc[mod_idx, "Module"] += "<br>"
-    for note in nnotes:
-        df.loc[mod_idx, "Module"] += f"<a href='Notes/{note}'>{icon('notes')}</a> "
+This is a tentative schedule for the semester. Topics and their order may be adjusted as we establish a suitable pace for the class. Materials are linked next to each lecture as we reach it; for materials organized by module, see the [Content](content/preliminaries.qmd) pages.
 
-# Assessment column
-df.loc[df.index[-1], "Topics"] = "Final Exam"
-df["Assessment"] = df["Quiz"]
-df.loc[df["Topics"].str.contains("Exam"), "Assessment"] = df["Topics"]
-df.loc[df["Topics"].str.contains("Exam"), "Topics"] = ""
+Quizzes are given at the start of class on the dates marked below.
 
-# Remove Lecture, References, and Quiz columns
-df = df.drop(columns=["Lecture", "References", "Quiz"])
+<p class="materials-legend">
+<span aria-hidden="true">\U0001F5A5\uFE0F</span> Slides &nbsp;
+<span aria-hidden="true">\U0001F5D2\uFE0F</span> Worksheet (PDF) &nbsp;
+<span aria-hidden="true">\u270D\uFE0F</span> Practice problems
+</p>
 
-# save to html
-df.to_html("Syllabus/schedule.html", index=False, escape=False)
+```{=html}
+""" + table + """```
+"""
+    pathlib.Path("schedule.qmd").write_text(page)
+    return len(rows)
 
-#################################################
+
+if __name__ == "__main__":
+    print("LaTeX rows:", build_latex(), "->", "syllabus/schedule.tex")
+    print("HTML rows: ", build_html(), "-> schedule.qmd")

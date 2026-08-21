@@ -1,20 +1,57 @@
 # Ignore selected folders
 rtp-material/
-Exams/Midterm/Past/Midterm-Spring*
-Exams/Midterm/Past/Midterm-Fall*
-Exams/Midterm/note_to_self.txt
-Exams/Midterm/question-bank*
-Exams/Final/Final.pdf
-Exams/Final/Final.tex
-Homeworks/
-Quizzes/
-References/
+exams/*
+homeworks/
+quizzes/
+references/
 */archived/
 project_files/
-Project/solution*
-Syllabus/attendance-sheet.xlsx
+project/solution*
+syllabus/attendance-sheet.xlsx
 
 # Ignore temporary files
 .DS_Store
 */.vscode/
 /.quarto/
+
+**/*.quarto_ipynb
+
+# Quarto build artifacts (regenerable)
+/_freeze/
+/site_libs/
+/*_files/
+**/*.quarto_ipynb
+
+# LaTeX build artifacts
+**/.texpadtmp/
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+*.nav
+*.snm
+*.vrb
+
+# Student grade data - never tracked, never published
+grades/
+
+# Python
+__pycache__/
+*.pyc
+
+# Canvas API script (reads the token, writes to the live course)
+canvas-upload.py
+
+# Dropbox conflict artifacts
+*conflicted copy*
+
+# Editor/tool droppings
+.Rhistory
+/.vscode/
+
+# Archived weekly-format material, superseded by content/
+lectures-old/

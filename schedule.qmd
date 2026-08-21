@@ -3,22 +3,63 @@ title: "Schedule"
 sidebar: false
 ---
 
-<!-- Download Link Handler -->
+This is a tentative schedule for the semester. Topics and their order may be adjusted as we establish a suitable pace for the class. Materials are linked next to each lecture as we reach it; for materials organized by module, see the [Content](content/preliminaries.qmd) pages.
 
-<div style="text-align: right">
-📔: Notes
-🖥️: Slides 
-🗒️: Worksheet
-✍️: Homework
-📖: Solutions
+Quizzes are given at the start of class on the dates marked below.
+
+<p class="materials-legend">
+<span aria-hidden="true">🖥️</span> Slides &nbsp;
+<span aria-hidden="true">🗒️</span> Worksheet (PDF) &nbsp;
+<span aria-hidden="true">✍️</span> Practice problems
+</p>
+
+```{=html}
+<div class="table-scroll" tabindex="0" role="region" aria-label="Semester schedule table">
+<table class="schedule-table" aria-label="Fall 2026 course schedule, one row per class meeting">
+<thead>
+<tr>
+  <th scope="col" style="width:8.5em">Module</th>
+  <th scope="col" style="width:6.2em">Date</th>
+  <th scope="col">Topics</th>
+  <th scope="col" style="width:6.2em">References</th>
+  <th scope="col" style="width:6.0em">Materials</th>
+</tr>
+</thead>
+<tbody>
+<tr class="module-start"><th scope="rowgroup" rowspan="2" style="text-align:left;vertical-align:middle;white-space:nowrap"><a href="content/preliminaries.html">Preliminaries</a></th><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 8/24</th><td class="topics" style="text-align:left;vertical-align:middle">Course introduction; numbers and sets</td><td class="refs" style="text-align:left;vertical-align:middle">2.2, 2.3</td><td class="mat" style="text-align:center;vertical-align:middle"><a href="content/slides/slides1.html" target="_blank" rel="noopener" aria-label="Lecture 1 slides (opens in a new tab)"><span aria-hidden="true">🖥️</span></a> <a href="content/handouts/handout-sets-and-functions.pdf" target="_blank" rel="noopener" aria-label="Lecture 1 worksheet: Sets and Functions, PDF (opens in a new tab)"><span aria-hidden="true">🗒️</span></a> <a href="content/practice/practice1.html" target="_blank" rel="noopener" aria-label="Practice Problems 1 (opens in a new tab)"><span aria-hidden="true">✍️</span></a></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 8/26</th><td class="topics" style="text-align:left;vertical-align:middle">Relations and functions; summation notation; necessary and sufficient conditions</td><td class="refs" style="text-align:left;vertical-align:middle">2.4-2.6, p. 163, 5.1</td><td class="mat" style="text-align:center;vertical-align:middle"><a href="content/slides/slides2.html" target="_blank" rel="noopener" aria-label="Lecture 2 slides (opens in a new tab)"><span aria-hidden="true">🖥️</span></a> <a href="content/handouts/handout-summation-notation.pdf" target="_blank" rel="noopener" aria-label="Lecture 2 worksheet: Summation Notation, PDF (opens in a new tab)"><span aria-hidden="true">🗒️</span></a> <a href="content/practice/practice2.html" target="_blank" rel="noopener" aria-label="Practice Problems 2 (opens in a new tab)"><span aria-hidden="true">✍️</span></a></td></tr>
+<tr class="module-start"><th scope="rowgroup" rowspan="6" style="text-align:left;vertical-align:middle;white-space:nowrap"><a href="content/linear-algebra.html">Linear Algebra</a></th><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 8/31</th><td class="topics" style="text-align:left;vertical-align:middle">Matrices; addition, subtraction, scalar multiplication</td><td class="refs" style="text-align:left;vertical-align:middle">4.1, 4.2</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 9/2</th><td class="topics" style="text-align:left;vertical-align:middle">Matrix multiplication; vectors; inner product; linear dependence</td><td class="refs" style="text-align:left;vertical-align:middle">4.2-4.4</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class="recess"><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 9/7</th><td colspan="3">No class (Labor Day)</td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 9/9</th><td class="topics" style="text-align:left;vertical-align:middle"><strong>Quiz 1</strong>; Identity, null, idempotent matrices; transpose</td><td class="refs" style="text-align:left;vertical-align:middle">4.5, 4.6</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 9/14</th><td class="topics" style="text-align:left;vertical-align:middle">Inverse; nonsingularity; rank; the determinant</td><td class="refs" style="text-align:left;vertical-align:middle">4.6, 5.1, 5.2</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 9/16</th><td class="topics" style="text-align:left;vertical-align:middle">Computing determinants; inversion; Cramer&rsquo;s rule; applications</td><td class="refs" style="text-align:left;vertical-align:middle">5.2-5.5, 4.7</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class="assessment module-start"><td class="modblank"></td><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 9/21</th><td colspan="3"><strong>Midterm 1 review</strong></td></tr>
+<tr class="assessment"><td class="modblank"></td><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 9/23</th><td colspan="3"><strong>Midterm Exam 1</strong></td></tr>
+<tr class="module-start"><th scope="rowgroup" rowspan="6" style="text-align:left;vertical-align:middle;white-space:nowrap"><a href="content/calculus.html">Calculus</a></th><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 9/28</th><td class="topics" style="text-align:left;vertical-align:middle">Limit definition of a derivative; limits</td><td class="refs" style="text-align:left;vertical-align:middle">6.2-6.4</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 9/30</th><td class="topics" style="text-align:left;vertical-align:middle">Continuity; rules of differentiation</td><td class="refs" style="text-align:left;vertical-align:middle">6.7, 7.1-7.3</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 10/5</th><td class="topics" style="text-align:left;vertical-align:middle">Exponential and log functions</td><td class="refs" style="text-align:left;vertical-align:middle">10.5</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 10/7</th><td class="topics" style="text-align:left;vertical-align:middle">Partial derivatives; total differential and derivative</td><td class="refs" style="text-align:left;vertical-align:middle">7.4, 8.1, 8.2, 8.4</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 10/12</th><td class="topics" style="text-align:left;vertical-align:middle"><strong>Quiz 2</strong>; Implicit function theorem</td><td class="refs" style="text-align:left;vertical-align:middle">8.5</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 10/14</th><td class="topics" style="text-align:left;vertical-align:middle">Integration</td><td class="refs" style="text-align:left;vertical-align:middle">14.1-14.3</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class="assessment module-start"><td class="modblank"></td><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 10/19</th><td colspan="3"><strong>Midterm 2 review</strong></td></tr>
+<tr class="assessment"><td class="modblank"></td><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 10/21</th><td colspan="3"><strong>Midterm Exam 2</strong></td></tr>
+<tr class="module-start"><th scope="rowgroup" rowspan="8" style="text-align:left;vertical-align:middle;white-space:nowrap"><a href="content/optimization.html">Optimization</a></th><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 10/26</th><td class="topics" style="text-align:left;vertical-align:middle">Unconstrained single-variable optimization</td><td class="refs" style="text-align:left;vertical-align:middle">9.1, 9.2</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 10/28</th><td class="topics" style="text-align:left;vertical-align:middle">Concave and convex functions</td><td class="refs" style="text-align:left;vertical-align:middle">9.3, 9.4</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 11/2</th><td class="topics" style="text-align:left;vertical-align:middle">Multivariable optimization: first-order conditions</td><td class="refs" style="text-align:left;vertical-align:middle">11.1</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 11/4</th><td class="topics" style="text-align:left;vertical-align:middle">Multivariable optimization: second-order conditions</td><td class="refs" style="text-align:left;vertical-align:middle">11.2</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 11/9</th><td class="topics" style="text-align:left;vertical-align:middle"><strong>Quiz 3</strong>; Constrained optimization; the Lagrange method</td><td class="refs" style="text-align:left;vertical-align:middle">12.1, 12.2</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class="recess"><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 11/11</th><td colspan="3">No class (Veterans Day)</td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 11/16</th><td class="topics" style="text-align:left;vertical-align:middle">Envelope theorem</td><td class="refs" style="text-align:left;vertical-align:middle">11.5</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 11/18</th><td class="topics" style="text-align:left;vertical-align:middle">Quasiconcavity; convex sets; homogeneous functions</td><td class="refs" style="text-align:left;vertical-align:middle">12.4, 12.6</td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class="recess module-start"><td class="modblank"></td><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 11/23</th><td colspan="3">No class (Fall Recess)</td></tr>
+<tr class="recess"><td class="modblank"></td><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 11/25</th><td colspan="3">No class (Fall Recess)</td></tr>
+<tr class="module-start"><th scope="rowgroup" rowspan="2" style="text-align:left;vertical-align:middle;white-space:nowrap">Additional Topics</th><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 11/30</th><td class="topics" style="text-align:left;vertical-align:middle"><strong>Quiz 4</strong>; To be announced</td><td class="refs" style="text-align:left;vertical-align:middle"></td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class=""><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 12/2</th><td class="topics" style="text-align:left;vertical-align:middle">To be announced</td><td class="refs" style="text-align:left;vertical-align:middle"></td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>
+<tr class="assessment module-start"><td class="modblank"></td><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Mon 12/7</th><td colspan="3"><strong>Final review</strong></td></tr>
+<tr class="assessment"><td class="modblank"></td><th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">Wed 12/9</th><td colspan="3"><strong>Final review</strong></td></tr>
+<tr class="assessment"><td></td><th scope="row">Mon 12/14</th><td colspan="3"><strong>Final Exam</strong>, 5:00&ndash;6:50 PM</td></tr>
+</tbody>
+</table>
 </div>
-
-```{python}
-#| echo: false
-from IPython.display import display, HTML
-from bs4 import BeautifulSoup
-html_table = open('./Syllabus/schedule.html', 'r').read()
-soup = BeautifulSoup(html_table, 'html.parser')
-html_table_modified = str(soup)
-display(HTML(html_table_modified))
 ```

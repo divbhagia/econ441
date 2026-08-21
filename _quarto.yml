@@ -1,10 +1,28 @@
 project:
   type: website
   output-dir: docs
-  render: 
+  render:
     - "*.qmd"
-    - "!project.qmd"
-  
+    - "content/*.qmd"
+    - "content/practice/practice1.qmd"
+    - "content/practice/practice2.qmd"
+    - "!content/practice/practice3.qmd"
+    - "!content/practice/practice4.qmd"
+    - "!content/practice/practice5.qmd"
+    - "!content/practice/practice6.qmd"
+    - "!content/practice/practice7.qmd"
+    - "content/slides/slides1.qmd"
+    - "content/slides/slides2.qmd"
+    - "!content/slides/slides3.qmd"
+    - "!content/slides/slides4.qmd"
+    - "!content/slides/slides5.qmd"
+    - "!content/slides/slides6.qmd"
+    - "!content/slides/slides7.qmd"
+    - "!grades/"
+    - "!lectures-old/"
+    - "!project/"
+    - "!exams.qmd"
+
 execute:
   freeze: auto
 
@@ -20,63 +38,33 @@ website:
       - text: "Schedule"
         file: schedule.qmd
       - text: "Content"
-        file: Lectures/Lecture1/lecture1.qmd
-      - text: "Exams"
-        file: exams.qmd
+        file: content/preliminaries.qmd
       - icon: github
         href: https://divbhagia.github.io/econ441/
+        aria-label: GitHub repository for this course
 
   sidebar:
-    - title: "Lectures"
+    - title: "Content"
       style: "docked"
       search: false
       contents:
-      - section: "Preliminaries"
-        contents:
-          - text: "Lecture 1"
-            file: Lectures/Lecture1/lecture1.qmd
-      - section: "Linear Algebra"
-        contents:
-          - text: "Lecture 2"
-            file: Lectures/Lecture2/lecture2.qmd
-          - text: "Lecture 3"
-            file: Lectures/Lecture3/lecture3.qmd
-          - text: "Lecture 4"
-            file: Lectures/Lecture4/lecture4.qmd
-      - section: "Calculus"
-        contents:
-          - text: "Lecture 5"
-            file: Lectures/Lecture5/lecture5.qmd
-          - text: "Lecture 6"
-            file: Lectures/Lecture6/lecture6.qmd
-          - text: "Lecture 7"
-            file: Lectures/Lecture7/lecture7.qmd    
-      - section: "Optimization" 
-        contents:
-          - text: "Lecture 8"
-            file: Lectures/Lecture8/lecture8.qmd
-          - text: "Lecture 9" 
-            file: Lectures/Lecture9/lecture9.qmd
-          - text: "Lecture 10"
-            file: Lectures/Lecture10/lecture10.qmd
-          - text: "Lecture 11"
-            file: Lectures/Lecture11/lecture11.qmd 
-      - section: "Graduate Project"
-        contents:
-          - text: "Overview"
-            file: Project/overview.qmd
-          - text: "Tutorial 1"
-            file: Project/tutorial1.qmd
-          - text: "Tutorial 2"
-            file: Project/tutorial2.qmd
-          - text: "Exercise"
-            file: Project/exercise.qmd
-          # - text: "Solution"
-          #   file: Project/solution.qmd
+        - text: "I. Preliminaries"
+          file: content/preliminaries.qmd
+        - section: "Practice problems"
+          contents:
+            - text: "Practice 1"
+              file: content/practice/practice1.qmd
+            - text: "Practice 2"
+              file: content/practice/practice2.qmd
+        - text: "II. Linear Algebra"
+          file: content/linear-algebra.qmd
+        - text: "III. Calculus"
+          file: content/calculus.qmd
+        - text: "IV. Optimization"
+          file: content/optimization.qmd
 
-  
   page-footer:
-      2024 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
+      2026 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
 
 format:
   html:

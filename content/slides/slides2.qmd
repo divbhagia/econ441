@@ -1,0 +1,185 @@
+---
+title: "Functions, Summation Notation, and Logical Conditions"
+subtitle: "Lecture 2"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../../assets/section-slides.lua
+---
+
+## Today's Topics & References
+-   Relations and functions (sections 2.4-2.6, page 163)
+-   Summation notation (handout)
+-   Necessary and sufficient conditions (beginning of 5.1)
+
+## Relations
+
+Relation: subset of the Cartesian product Example.
+$\{(x,y) | y \leq x \}$
+
+## Functions
+
+Function: a relation where for each $x$ there is a unique $y$
+$$f: X \rightarrow Y, \quad y = f(x)$$ Examples. $y = x, y=x^2, y=2x+3$
+
+$X:$ domain, $Y:$ codomain, $f(X):$ range
+
+Most functions we will encounter,
+$f: \mathbb{R}^k \rightarrow \mathbb{R}$
+
+## Functions
+
+Let's say, $$f: X \rightarrow \mathbb{R}, \quad y = 3x-5$$ where
+$X = \{2,3,4\}$. What is the range?
+
+## Cost Function
+
+Consider the total cost $C$ of producing hats $Q$, $$C = f(Q)$$
+
+-   Should I be able to produce 10 hats and 5 hats at the same cost?
+
+-   Possible to produce 5 hats for \$20 and \$25?
+
+## By the way
+
+Consider the total cost $C$ of producing hats $Q$, $$C = f(Q) = 2Q + 5$$
+
+What is the cost of producing 1 hat? What is the cost of producing 2
+hats? How many hats can I produce for \$25?
+
+## Types of Functions
+
+-   Constant: $y = f(x) = 5$
+
+-   Polynomial of degree $n$
+
+    -   $n=0$, constant
+
+    -   $n=1$, linear
+
+    -   $n=2$, quadratic
+
+    -   $n=3$, cubic
+
+    -   ...
+
+-   Rational function: ratio of two polynomial functions:
+    $$y = \frac{a}{x}$$
+
+## Function of More than One Variables
+
+Functions can be of two variables: $$z=g(x,y)$$ Or three, or four,...,
+or $n$
+
+## Monotonic functions
+
+Strictly increasing function:
+$$x_{1}>x_{2} \rightarrow f\left(x_{1}\right)>f\left(x_{2}\right)$$
+Strictly decreasing function:
+$$x_{1}>x_{2} \rightarrow f\left(x_{1}\right)<f\left(x_{2}\right)$$
+Increasing function:
+$$x_{1}>x_{2} \rightarrow f\left(x_{1}\right)\geq f\left(x_{2}\right)$$
+Decreasing function:
+$$x_{1}>x_{2} \rightarrow f\left(x_{1}\right)\leq f\left(x_{2}\right)$$
+
+## Inverse of a function
+
+Function $y=f(X)$ has an inverse if it is a one-to-one mapping, i.e.
+each value of $y$ is associated with a unique value of $x$. Inverse
+function $$x=f^{-1}(y)$$ returns the value corresponding value of $x$
+for each $y$. One-to-one mapping unique to strictly monotonic functions
+
+## Inverse of a function
+
+Example: Find the inverse of $y = f(x) = 3x-2$.
+
+## By the way
+
+What is $x \times x$? What is $x^2 \times x$? What is $x^2 \times x^2$?
+More generally, $x^n \times x^m = x^{m+n}$
+
+## Summation Notation
+
+$$\sum_{i=1}^N x_i = x_1 + x_2 + ... + x_N$$
+
+[*Example:*]{.underline} $x = \{2,9,6,8,11,14\}$
+$\sum_{i=1}^{4} x_i = x_1 + x_2 + x_3 + x_4 = 2+9+6+8=25$
+
+## Summation Notation
+
+Another way of using a summation sign is to write $$\sum_{x \in A} x$$
+which refers to summing up all elements in $A$. To sum up $x$ for all
+possible values $x$, we can simply write $$\sum_x x$$
+
+## Things you CAN do
+
+1.  Pull constants out of or into the summation sign.
+    $$\sum_{i=1}^N b x_i = b \sum_{i=1}^N x_i$$
+
+## Things you CAN do
+
+1.  Split apart (or combine) sums (addition) or differences
+    (subtraction)
+    $$\sum_{i=1}^N (b x_i + c y_i) = b \sum_{i=1}^N x_i  + c \sum_{i=1}^N y_i$$
+
+## Things you CAN do
+
+1.  Multiply through constants by the number of terms in the summation
+    $$\sum_{i=1}^N (a+b x_i)= aN + b \sum_{i=1}^N x_i$$
+
+## Things you CANNOT do
+
+1.  Split apart (or combine) products (multiplication) or quotients
+    (division).
+    $$\sum_{i=1}^N x_i y_i \neq  \sum_{i=1}^N x_i \times \sum_{i=1}^N y_i$$
+
+## Things you CANNOT do
+
+1.  Move the exponent out of or into the summation.
+    $$\sum_{i=1}^N x_i^a \neq  \left(\sum_{i=1}^N x_i\right)^a$$
+
+## Necessary vs. Sufficient Conditions
+
+$q$ is a necessary condition for $p$ if: $$p \implies q$$
+
+$p$: I ate tofu for dinner $q$: My dinner had protein
+
+## Necessary vs. Sufficient Conditions
+
+$q$ is a sufficient condition for $p$ if: $$p \impliedby q$$
+
+$p$: A number is even $q$: A number is divisible by 4
+
+## Necessary vs. Sufficient Conditions
+
+$q$ is both necessary and sufficient for $p$ $$p \iff q$$
+
+$p$: A number is even $q$: A number is divisible by 2
+
+## Necessary vs. Sufficient Conditions
+
+$p$: It is a holiday $q$: It is Thanksgiving
+
+## Necessary vs. Sufficient Conditions
+
+$p$: The car is out of gas $q$: The car isn't starting
+
+## Necessary vs. Sufficient Conditions
+
+$p$: A geometric figure has four sides $q$: It is a rectangle
+
+## Homework Questions
+
+-   Exercise 2.3: 1, 2
+
+-   Exercise 2.4: 5, 7, 8
+
+-   Exercise 2.5: 1 (For each part, find the inverse of the function
+    too.)
+
+-   Exercise 4.2: 6, 8
+
+-   Exercise 5.1: 1

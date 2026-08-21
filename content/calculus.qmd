@@ -1,0 +1,14 @@
+---
+title: "Calculus"
+subtitle: "Module III"
+format: html
+---
+
+Materials for this module will be posted before we reach it. See the [Schedule](../schedule.qmd) for dates and assessments.
+
+<p class="module-notes" style="font-size:1.1rem">
+<strong>Module notes</strong> covering this whole module:
+</p>
+<p class="lecture-links" style="margin-bottom:1.4em">
+<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="notes/Calculus.pdf" target="_blank" rel="noopener" aria-label="Calculus module notes, PDF (opens in a new tab)" role="button">Calculus notes</a> <a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="notes/Log-and-Exponential-Functions.pdf" target="_blank" rel="noopener" aria-label="Log and Exponential Functions module notes, PDF (opens in a new tab)" role="button">Log and Exponential Functions notes</a>
+</p>
