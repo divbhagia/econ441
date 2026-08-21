@@ -21,7 +21,7 @@ Quizzes are given at the start of class on the dates marked below.
   <th scope="col" style="width:8.5em">Module</th>
   <th scope="col" style="width:6.2em">Date</th>
   <th scope="col">Topics</th>
-  <th scope="col" style="width:6.2em">References</th>
+  <th scope="col" style="width:4.8em">References</th>
   <th scope="col" style="width:6.0em">Materials</th>
 </tr>
 </thead>

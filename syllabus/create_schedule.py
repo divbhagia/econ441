@@ -182,7 +182,7 @@ def build_html():
              '  <th scope="col" style="width:8.5em">Module</th>\n'
              '  <th scope="col" style="width:6.2em">Date</th>\n'
              '  <th scope="col">Topics</th>\n'
-             '  <th scope="col" style="width:6.2em">References</th>\n'
+             '  <th scope="col" style="width:4.8em">References</th>\n'
              '  <th scope="col" style="width:6.0em">Materials</th>\n'
              '</tr>\n</thead>\n<tbody>\n'
              + "\n".join(rows) + '\n</tbody>\n</table>\n</div>\n')
