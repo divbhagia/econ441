@@ -186,7 +186,7 @@ window.Quarto = {
 </header>
 
 
-<p>Problem numbers refer to the textbook (Chiang &amp; Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a <strong>Show solution</strong> toggle: try it yourself first, then expand to check.</p>
+<p>Problem numbers refer to the textbook (Chiang &amp; Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a <strong>Show solution</strong> toggle, and a few have one per part: try it yourself first, then expand to check.</p>
 <p>
 <a class="btn btn-outline-primary" href="practice2.pdf" target="_blank" rel="noopener" aria-label="Download problems for Practice Problems 2, PDF (opens in a new tab)" role="button">Download problems (PDF)</a> <a class="btn btn-outline-primary" href="practice2_solutions.pdf" target="_blank" rel="noopener" aria-label="Download solutions for Practice Problems 2, PDF (opens in a new tab)" role="button">Download solutions (PDF)</a>
 </p>
@@ -227,25 +227,33 @@ Show solution
 <p><strong>1.</strong> Graph the following functions and find their inverse functions.</p>
 <ol type="a">
 <li><span class="math inline">\(y = 16 + 2x\)</span></li>
+</ol>
+<details class="solution part">
+<summary>
+Show (a)
+</summary>
+<p><span class="math inline">\(f^{-1}(y) = \dfrac{y-16}{2}\)</span></p>
+<p><img src="../../assets/hw1-line-a.svg" class="img-fluid" alt="Graph of the straight line y equals 16 plus 2x: an upward-sloping line with slope 2 crossing the y-axis at 16" width="250"></p>
+</details>
+<ol start="2" type="a">
 <li><span class="math inline">\(y = 8-2x\)</span></li>
+</ol>
+<details class="solution part">
+<summary>
+Show (b)
+</summary>
+<p><span class="math inline">\(f^{-1}(y) = \dfrac{8-y}{2}\)</span></p>
+<p><img src="../../assets/hw1-line-b.svg" class="img-fluid" alt="Graph of the straight line y equals 8 minus 2x: a downward-sloping line with slope negative 2 crossing the y-axis at 8" width="250"></p>
+</details>
+<ol start="3" type="a">
 <li><span class="math inline">\(y = 2x+12\)</span></li>
 </ol>
-<details class="solution">
+<details class="solution part">
 <summary>
-Show solution
+Show (c)
 </summary>
-<div class="columns">
-<div class="column" style="width:33%;">
-<p><span class="math inline">\(y = 16 + 2x, \quad f^{-1}(y) = \dfrac{y-16}{2}\)</span></p>
-<p><img src="../../assets/hw1-line-a.svg" class="img-fluid" alt="Graph of the straight line y equals 16 plus 2x: an upward-sloping line with slope 2 crossing the y-axis at 16" width="250"></p>
-</div><div class="column" style="width:33%;">
-<p><span class="math inline">\(y = 8-2x, \quad f^{-1}(y) = \dfrac{8-y}{2}\)</span></p>
-<p><img src="../../assets/hw1-line-b.svg" class="img-fluid" alt="Graph of the straight line y equals 8 minus 2x: a downward-sloping line with slope negative 2 crossing the y-axis at 8" width="250"></p>
-</div><div class="column" style="width:33%;">
-<p><span class="math inline">\(y = 2x+12, \quad f^{-1}(y) = \dfrac{y-12}{2}\)</span></p>
+<p><span class="math inline">\(f^{-1}(y) = \dfrac{y-12}{2}\)</span></p>
 <p><img src="../../assets/hw1-line-c.svg" class="img-fluid" alt="Graph of the straight line y equals 2x plus 12: an upward-sloping line with slope 2 crossing the y-axis at 12" width="250"></p>
-</div>
-</div>
 </details>
 </section>
 <section id="exercise-4.2" class="level2">
@@ -273,20 +281,34 @@ Show solution
 <p><strong>8.</strong> Show that the following are true:</p>
 <ol type="a">
 <li><span class="math inline">\(\left(\sum_{i=0}^n x_i\right)+x_{n+1}=\sum_{i=0}^{n+1} x_i\)</span></li>
-<li><span class="math inline">\(\sum_{j=1}^n a b_j y_j=a \sum_{j=1}^n b_j y_j\)</span></li>
-<li><span class="math inline">\(\sum_{j=1}^n\left(x_j+y_j\right)=\sum_{j=1}^n x_j+\sum_{j=1}^n y_j\)</span></li>
 </ol>
-<details class="solution">
+<details class="solution part">
 <summary>
-Show solution
+Show (a)
 </summary>
-<p><strong>(a)</strong> <span class="math display">\[ \left(\sum_{i=0}^{n} x_{i} \right)+x_{n+1} = x_{0}+x_{1}+x_{2}+\ldots+x_{n+1} = \sum_{i=0}^{n+1} x_{i} \]</span></p>
-<p><strong>(b)</strong> <span class="math display">\[ \begin{aligned}
+<p><span class="math display">\[ \left(\sum_{i=0}^{n} x_{i} \right)+x_{n+1} = x_{0}+x_{1}+x_{2}+\ldots+x_{n+1} = \sum_{i=0}^{n+1} x_{i} \]</span></p>
+</details>
+<ol start="2" type="a">
+<li><span class="math inline">\(\sum_{j=1}^n a b_j y_j=a \sum_{j=1}^n b_j y_j\)</span></li>
+</ol>
+<details class="solution part">
+<summary>
+Show (b)
+</summary>
+<p><span class="math display">\[ \begin{aligned}
 \sum_{j=1}^{n} a b_{j} y_{j} &amp;= a b_{1} y_{1}+a b_{2} y_{2}+\ldots+a b_{n} y_{n} \\
 &amp;= a\left(b_{1} y_{1}+b_{2} y_{2}+\ldots+b_{n} y_{n}\right) \\
 &amp;= a \sum_{j=1}^{n} b_{j} y_{j}
 \end{aligned} \]</span></p>
-<p><strong>(c)</strong> <span class="math display">\[ \begin{aligned}
+</details>
+<ol start="3" type="a">
+<li><span class="math inline">\(\sum_{j=1}^n\left(x_j+y_j\right)=\sum_{j=1}^n x_j+\sum_{j=1}^n y_j\)</span></li>
+</ol>
+<details class="solution part">
+<summary>
+Show (c)
+</summary>
+<p><span class="math display">\[ \begin{aligned}
 \sum_{j=1}^{n}\left(x_{j}+y_{j}\right)
 &amp;= \left(x_{1}+y_{1}\right)+\left(x_{2}+y_{2}\right)+\ldots+\left(x_{n}+y_{n}\right) \\
 &amp;= x_{1}+x_{2}+\ldots+x_{n}+y_{1}+y_{2}+\ldots+y_{n} \\

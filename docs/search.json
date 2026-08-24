@@ -39,7 +39,7 @@
     "href": "content/practice/practice2.html",
     "title": "Practice Problems 2",
     "section": "",
-    "text": "Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a Show solution toggle: try it yourself first, then expand to check.\nDownload problems (PDF) Download solutions (PDF)"
+    "text": "Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a Show solution toggle, and a few have one per part: try it yourself first, then expand to check.\nDownload problems (PDF) Download solutions (PDF)"
   },
   {
     "objectID": "content/practice/practice2.html#exercise-2.4",
@@ -53,14 +53,14 @@
     "href": "content/practice/practice2.html#exercise-2.5",
     "title": "Practice Problems 2",
     "section": "Exercise 2.5",
-    "text": "Exercise 2.5\n1. Graph the following functions and find their inverse functions.\n\n\\(y = 16 + 2x\\)\n\\(y = 8-2x\\)\n\\(y = 2x+12\\)\n\n\n\nShow solution\n\n\n\n\\(y = 16 + 2x, \\quad f^{-1}(y) = \\dfrac{y-16}{2}\\)\n\n\n\\(y = 8-2x, \\quad f^{-1}(y) = \\dfrac{8-y}{2}\\)\n\n\n\\(y = 2x+12, \\quad f^{-1}(y) = \\dfrac{y-12}{2}\\)"
+    "text": "Exercise 2.5\n1. Graph the following functions and find their inverse functions.\n\n\\(y = 16 + 2x\\)\n\n\n\nShow (a)\n\n\\(f^{-1}(y) = \\dfrac{y-16}{2}\\)\n\n\n\n\\(y = 8-2x\\)\n\n\n\nShow (b)\n\n\\(f^{-1}(y) = \\dfrac{8-y}{2}\\)\n\n\n\n\\(y = 2x+12\\)\n\n\n\nShow (c)\n\n\\(f^{-1}(y) = \\dfrac{y-12}{2}\\)"
   },
   {
     "objectID": "content/practice/practice2.html#exercise-4.2",
     "href": "content/practice/practice2.html#exercise-4.2",
     "title": "Practice Problems 2",
     "section": "Exercise 4.2",
-    "text": "Exercise 4.2\n6. Expand the following summation expressions:\n\n\\(\\sum_{i=2}^5 x_i\\)\n\\(\\sum_{i=5}^8 a_i x_i\\)\n\\(\\sum_{i=1}^4 b x_i\\)\n\\(\\sum_{i=1}^n a_i x^{i-1}\\)\n\\(\\sum_{i=0}^3(x+i)^2\\)\n\n\n\nShow solution\n\n\n\\(x_{2}+x_{3}+x_{4}+x_{5}\\)\n\\(a_{5} x_{5}+a_{6} x_{6}+a_{7} x_{7}+a_{8} x_{8}\\)\n\\(b x_{1}+b x_{2}+b x_{3}+b x_{4}\\)\n\\(a_{1}+a_{2} x+a_{3} x^{2}+\\ldots+a_{n} x^{n-1}\\)\n\\(x^{2}+(x+1)^{2}+(x+2)^{2}+(x+3)^{2}\\)\n\n\n8. Show that the following are true:\n\n\\(\\left(\\sum_{i=0}^n x_i\\right)+x_{n+1}=\\sum_{i=0}^{n+1} x_i\\)\n\\(\\sum_{j=1}^n a b_j y_j=a \\sum_{j=1}^n b_j y_j\\)\n\\(\\sum_{j=1}^n\\left(x_j+y_j\\right)=\\sum_{j=1}^n x_j+\\sum_{j=1}^n y_j\\)\n\n\n\nShow solution\n\n(a) \\[ \\left(\\sum_{i=0}^{n} x_{i} \\right)+x_{n+1} = x_{0}+x_{1}+x_{2}+\\ldots+x_{n+1} = \\sum_{i=0}^{n+1} x_{i} \\]\n(b) \\[ \\begin{aligned}\n\\sum_{j=1}^{n} a b_{j} y_{j} &= a b_{1} y_{1}+a b_{2} y_{2}+\\ldots+a b_{n} y_{n} \\\\\n&= a\\left(b_{1} y_{1}+b_{2} y_{2}+\\ldots+b_{n} y_{n}\\right) \\\\\n&= a \\sum_{j=1}^{n} b_{j} y_{j}\n\\end{aligned} \\]\n(c) \\[ \\begin{aligned}\n\\sum_{j=1}^{n}\\left(x_{j}+y_{j}\\right)\n&= \\left(x_{1}+y_{1}\\right)+\\left(x_{2}+y_{2}\\right)+\\ldots+\\left(x_{n}+y_{n}\\right) \\\\\n&= x_{1}+x_{2}+\\ldots+x_{n}+y_{1}+y_{2}+\\ldots+y_{n} \\\\\n&= \\sum_{j=1}^{n} x_{j}+\\sum_{j=1}^{n} y_{j}\n\\end{aligned} \\]"
+    "text": "Exercise 4.2\n6. Expand the following summation expressions:\n\n\\(\\sum_{i=2}^5 x_i\\)\n\\(\\sum_{i=5}^8 a_i x_i\\)\n\\(\\sum_{i=1}^4 b x_i\\)\n\\(\\sum_{i=1}^n a_i x^{i-1}\\)\n\\(\\sum_{i=0}^3(x+i)^2\\)\n\n\n\nShow solution\n\n\n\\(x_{2}+x_{3}+x_{4}+x_{5}\\)\n\\(a_{5} x_{5}+a_{6} x_{6}+a_{7} x_{7}+a_{8} x_{8}\\)\n\\(b x_{1}+b x_{2}+b x_{3}+b x_{4}\\)\n\\(a_{1}+a_{2} x+a_{3} x^{2}+\\ldots+a_{n} x^{n-1}\\)\n\\(x^{2}+(x+1)^{2}+(x+2)^{2}+(x+3)^{2}\\)\n\n\n8. Show that the following are true:\n\n\\(\\left(\\sum_{i=0}^n x_i\\right)+x_{n+1}=\\sum_{i=0}^{n+1} x_i\\)\n\n\n\nShow (a)\n\n\\[ \\left(\\sum_{i=0}^{n} x_{i} \\right)+x_{n+1} = x_{0}+x_{1}+x_{2}+\\ldots+x_{n+1} = \\sum_{i=0}^{n+1} x_{i} \\]\n\n\n\\(\\sum_{j=1}^n a b_j y_j=a \\sum_{j=1}^n b_j y_j\\)\n\n\n\nShow (b)\n\n\\[ \\begin{aligned}\n\\sum_{j=1}^{n} a b_{j} y_{j} &= a b_{1} y_{1}+a b_{2} y_{2}+\\ldots+a b_{n} y_{n} \\\\\n&= a\\left(b_{1} y_{1}+b_{2} y_{2}+\\ldots+b_{n} y_{n}\\right) \\\\\n&= a \\sum_{j=1}^{n} b_{j} y_{j}\n\\end{aligned} \\]\n\n\n\\(\\sum_{j=1}^n\\left(x_j+y_j\\right)=\\sum_{j=1}^n x_j+\\sum_{j=1}^n y_j\\)\n\n\n\nShow (c)\n\n\\[ \\begin{aligned}\n\\sum_{j=1}^{n}\\left(x_{j}+y_{j}\\right)\n&= \\left(x_{1}+y_{1}\\right)+\\left(x_{2}+y_{2}\\right)+\\ldots+\\left(x_{n}+y_{n}\\right) \\\\\n&= x_{1}+x_{2}+\\ldots+x_{n}+y_{1}+y_{2}+\\ldots+y_{n} \\\\\n&= \\sum_{j=1}^{n} x_{j}+\\sum_{j=1}^{n} y_{j}\n\\end{aligned} \\]"
   },
   {
     "objectID": "content/practice/practice2.html#exercise-5.1",
@@ -121,7 +121,7 @@
     "href": "content/preliminaries.html",
     "title": "Preliminaries",
     "section": "",
-    "text": "See the Schedule for dates and assessments.\n\n\nLecture 1: Course Introduction; Numbers and Sets\n\nTopics: Course introduction; numbers and sets\nTextbook references: 2.2, 2.3\n\nSlides Worksheet Practice problems\n\n\n\n\nLecture 2: Relations and Functions; Summation Notation\n\nTopics: Relations and functions; summation notation; necessary and sufficient conditions\nTextbook references: 2.4–2.6, p. 163, 5.1\n\nSlides Worksheet: Functions Worksheet: Summation Notation Practice problems",
+    "text": "See the Schedule for dates and assessments.\n\n\nLecture 1: Course Introduction; Numbers and Sets\n\nTopics: Course introduction; numbers and sets\nTextbook references: 2.2, 2.3\n\nSlides Notes (PDF) Worksheet: Sets Practice problems\n\n\n\n\nLecture 2: Relations and Functions; Summation Notation\n\nTopics: Relations and functions; summation notation; necessary and sufficient conditions\nTextbook references: 2.4–2.6, p. 163, 5.1\n\nSlides Notes (PDF) Worksheet: Functions Worksheet: Summation Notation Practice problems",
     "crumbs": [
       "Content",
       "I. Preliminaries"
