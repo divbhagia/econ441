@@ -190,6 +190,8 @@ ordered pairs $$A \times B = \{ (1,3), (1,4), (2,3), (2,4) \}$$
 
 $$\mathbb{R}^2 =  \{(x,y) | x \in \mathbb{R}, y \in \mathbb{R}\}$$
 
+![](../../assets/cartesian-plane.svg){fig-alt="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" width=330}
+
 Can have $\mathbb{R}^3, \mathbb{R}^4,...,\mathbb{R}^n$
 
 ## By the way
