@@ -62,6 +62,24 @@ details.solution > :last-child {
   padding-bottom: 0.8em;
 }
 
+/* Per-part variant: used where a problem's parts each get their own toggle, so
+   a student can check (a) without spoiling (b) and (c). Indented under the part
+   it belongs to, and lighter than the block above -- several of these stack on
+   one problem, and the full-size treatment reads as clutter at that density.
+   Only worth using when each part's solution is more than a line or two. */
+details.solution.part {
+  margin: 0.2em 0 0.3em 1.4em;
+  padding: 0 0.8em;
+  border-left-width: 2px;
+  font-size: 0.97em;
+}
+details.solution.part > summary {
+  padding: 0.28em 0;
+  font-size: 0.92em;
+  font-weight: 600;
+}
+details.solution.part[open] > summary { margin-bottom: 0.35em; }
+
 /* Keep the content table usable on narrow screens (WCAG 1.4.10 Reflow):
    let it scroll inside its own container instead of forcing the page to
    scroll horizontally, and make it keyboard-focusable so scrolling works

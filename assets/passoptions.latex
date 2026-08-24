@@ -1,0 +1,15 @@
+% Tagged PDF/UA-2 for the lecture-notes build (see Makefile target `notes`).
+%
+% \DocumentMetadata must come before \documentclass, and this partial is the
+% only hook Pandoc's LaTeX template exposes before it. Same declaration the
+% handouts and module notes use, so all the PDFs on the site are tagged alike.
+\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagging=on}
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+$if(colorlinks)$
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+$endif$
+$if(CJKmainfont)$
+\PassOptionsToPackage{space}{xeCJK}
+$endif$
