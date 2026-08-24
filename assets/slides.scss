@@ -1,184 +1,179 @@
 /*-- scss:defaults --*/
-
-// Fonts: match the website (assets/custom.scss)
+// ECON 441 slide theme. Formatting follows the ECON 201 deck; colours and
+// fonts follow this course's website (assets/custom.scss), so the slides and
+// the site read as one thing.
 @import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-// Colors: match the website (assets/custom.scss)
-$primary:   #912040;   // maroon, used for navbar/links on the site
+$primary:   #912040;   // maroon, as on the site
 $secondary: #e8e1e1;
 $gray:      #393A3B;
 $gray2:     #747576;
+$rule:      #e3c7cf;   // maroon at ~25% over white, for the heading rule
+$wash:      #faf7f7;   // the callout tint used on the site
 
-// Base
 $body-bg: #ffffff;
 $body-color: $gray;
 $link-color: $primary;
 $selection-bg: $secondary;
 
-// Headings
 $presentation-font-family: Lato, Helvetica, sans-serif;
 $presentation-heading-font: "Fira Sans Condensed", Helvetica, sans-serif;
 $presentation-heading-color: $primary;
+// 201 runs at 44px; this course puts more on a slide (display math, matrices),
+// so it runs a little smaller. Set here rather than as `.reveal { font-size }`
+// so reveal scales the whole deck rather than just the body text.
+$presentation-font-size-root: 38px;
 
-// Code blocks
 $code-block-bg: #f8f9fa;
 $code-color: $gray;
 
 /*-- scss:rules --*/
 
-// Section slide heading style
+// Slide headings: maroon with a tinted rule beneath.
+.reveal h2 {
+  color: $primary;
+  font-size: 1.6em;
+  font-weight: 700;
+  border-bottom: 2px solid $rule;
+  padding-bottom: 0.15em;
+  margin-bottom: 0.5em;
+}
+
+// Titles sit at the top of every slide and stay there, because reveal sets
+// `display: block` inline on the current slide (flex layouts are ignored).
+// Use `{.center}` on a slide whose whole content, title included, should be
+// centred vertically; that is reveal's own mechanism.
+.reveal .slides section { text-align: left; }
+.reveal .slides section > h2:first-child { margin-top: 0; }
+
+// Section divider slides (h1, tagged by assets/section-slides.lua).
 .section-slide h1 {
   font-family: "Fira Sans Condensed", Helvetica, sans-serif !important;
   font-size: 1.75em !important;
-}
-
-// Hide slide number on section slides
-.reveal.no-slide-num .slide-number {
-  display: none !important;
-}
-
-// Improve readability
-.reveal {
-  font-size: 32px;
-
-  h1 {
-    font-size: 1.75em;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.5em;
-    font-weight: 700;
-    margin-bottom: 0.4em;
-  }
-
-  h3 {
-    font-size: 1.2em;
-    font-weight: 700;
-    color: $gray2;
-    margin-bottom: 0.3em;
-    text-align: left;
-  }
-
-    // Space before lists (after headings or paragraphs)
-  h1 + ul, h1 + ol,
-  h2 + ul, h2 + ol,
-  h3 + ul, h3 + ol,
-  h4 + ul, h4 + ol,
-  p + ul, p + ol,
-  strong + ul, strong + ol {
-    margin-top: -0.2em !important;  // Reduce space after headings
-  }
-  // Main list spacing
-  ul, ol {
-    line-height: 1.2;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-  }
-
-  ul > li,
-  ol > li {
-    margin-bottom: 0.8em;
-    margin-top: 0.8em;
-  }
-
-  // Nested list
-  ul ul > li,
-  ol ol > li,
-  ul ol > li,
-  ol ul > li {
-    margin-bottom: 0.4em;
-    margin-top: 0.2em;
-    line-height: 1.2;
-  }
-
-  // Better code blocks
-  pre {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-  }
-
-  code {
-    font-family: "Fira Mono", monospace;
-    font-size: 0.85em;
-  }
-
-  // Fragments (incremental reveals)
-  .fragment {
-    opacity: 0.3;
-
-    &.visible {
-      opacity: 1;
-    }
-  }
-
-  // Boxed content
-  .boxed {
-    border: 2px solid $primary;
-    border-radius: 8px;
-    padding: 1em;
-    background-color: $secondary;
-  }
-
-  // Emphasis
-  strong {
-    color: $primary;
-    font-weight: 700;
-  }
-
-  // Math
-  .math {
-    font-size: 1em;
-  }
-
-  // Inline math in paragraphs
-  p .math {
-    font-size: 1em;
-  }
-
-  // Display math (centered equations)
-  .math.display {
-    margin-top: 0.2em !important;
-    font-size: 1em;
-    line-height: 1;
-  }
-  p + .math.display {
-    margin-top: 0.2em !important;
-  }
-
-}
-// Footer styling
-.reveal .footer {
-  font-size: 0.6em;
-  color: $gray2;
-}
-
-// Progress bar and controls in the site's primary color
-.reveal .progress {
-  color: $primary;
-}
-.reveal .controls {
-  color: $primary;
-}
-
-// Columns
-.reveal .columns {
-  gap: 2em;
-}
-
-// Force center all figures
-.reveal img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.reveal figure {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
+.reveal.no-slide-num .slide-number { display: none !important; }
+
+// Title slide. Quarto renders it as section.quarto-title-block.
+.reveal .slides section.quarto-title-block {
+  justify-content: center;
+  text-align: center;
+}
+.reveal .slides section.quarto-title-block h1.title {
+  color: $primary;
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1.15;
+  border-bottom: none;
+  margin-bottom: 0.35em;
+}
+.reveal .slides section.quarto-title-block p.subtitle {
+  color: $gray;
+  font-size: 0.95em;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.reveal .slides section.quarto-title-block .quarto-title-author-name {
+  color: $gray2;
+  font-size: 0.8em;
+  margin-top: 1.2em;
+}
+
+// Inline emphasis: *word* renders as maroon bold, not italic. These decks use
+// it for key terms -- *Integers*, *Rational numbers* -- so it reads as a label.
+.reveal em {
+  color: $primary;
+  font-style: normal;
+  font-weight: 700;
+}
+.reveal strong { color: $primary; font-weight: 700; }
+
+// Lists. Tight enough that a long list still fits at full size.
+.reveal ul, .reveal ol {
+  line-height: 1.25;
+  margin-top: 0.35em;
+  margin-bottom: 0;
+}
+.reveal ul > li, .reveal ol > li { margin-bottom: 0.35em; }
+.reveal h1 + ul, .reveal h1 + ol,
+.reveal h2 + ul, .reveal h2 + ol,
+.reveal h3 + ul, .reveal h3 + ol,
+.reveal p + ul, .reveal p + ol { margin-top: 0.2em; }
+
+// Nested lists: indented, hollow marker, slightly smaller, tighter than the
+// parent -- so a sub-point is visibly subordinate.
+// NOTE for authoring: these files write bullets as `-` + three spaces, which
+// puts the text at column 4, so a nested bullet must be indented FOUR spaces.
+// Two spaces makes Pandoc flatten it into another top-level bullet.
+.reveal ul ul, .reveal ul ol, .reveal ol ul, .reveal ol ol {
+  margin-left: 1em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  font-size: 0.9em;
+}
+.reveal ul ul > li, .reveal ul ol > li,
+.reveal ol ul > li, .reveal ol ol > li { margin-bottom: 0.2em; }
+.reveal ul ul > li { list-style-type: circle; }
+.reveal ul ul ul > li { list-style-type: square; }
+
+// One-idea slides: pair with `## Title {.center}` for vertical centring.
+.reveal .big { font-size: 1.3em; line-height: 1.4; }
+.reveal .dim, .reveal .figcap { color: $gray2; }
+.reveal .figcap { font-size: 0.6em; }
+
+// `{.tcenter}` centres the text horizontally on that slide.
+.reveal .slides section.tcenter,
+.reveal .slides section.tcenter h2,
+.reveal .slides section.tcenter p { text-align: center; }
+
+// Boxed takeaway, for the sentence you want them to leave with.
+.reveal .takeaway {
+  background: $wash;
+  border-left: 6px solid $primary;
+  padding: 0.5em 0.8em;
+  margin-top: 0.6em;
+}
+.reveal .boxed {
+  border: 2px solid $primary;
+  border-radius: 8px;
+  padding: 1em;
+  background-color: $secondary;
+}
+
+// Math. Display equations sit tight against the line that introduces them,
+// which matters on slides that are mostly equations.
+.reveal .math { font-size: 1em; }
+.reveal .math.display {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.2em !important;
+  line-height: 1;
+}
+.reveal p + .math.display { margin-top: 0.2em !important; }
+.reveal li > .math.display { margin-top: 0.1em !important; }
+
+// Tables.
+.reveal table { font-size: 0.88em; }
+.reveal table td, .reveal table th { padding: 0.1em 0.4em; }
+.reveal .ruled table {
+  border-top: 2.5px solid $gray;
+  border-bottom: 2.5px solid $gray;
+}
+
+// Code.
+.reveal pre { box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; }
+.reveal code { font-family: "Fira Mono", monospace; font-size: 0.85em; }
+
+// Figures are centred; columns share a common vertical centre.
+.reveal img { display: block; margin-left: auto; margin-right: auto; }
+.reveal figure { text-align: center; margin-left: auto; margin-right: auto; }
+.reveal .columns { gap: 2em; align-items: center; }
+// `::: {.columns .figrow}` -- a row of diagrams, each with a label above it.
+// Slides are left-aligned by default, so the label needs centring explicitly.
+.reveal .figrow .column { text-align: center; }
+.reveal .figrow .column > p { margin-bottom: 0.25em; }
+
+.reveal .footer { font-size: 0.6em; color: $gray2; }
+.reveal .progress { color: $primary; }
+.reveal .controls { color: $primary; }

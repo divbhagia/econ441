@@ -30,30 +30,31 @@ MODULES = [
     ("Additional Topics", dt.date(YEAR, 11, 30), dt.date(YEAR, 12, 2)),
 ]
 
-# date -> (lecture number or None, topics, references, worksheet file, worksheet label)
+# date -> (lecture number or None, topics, references, [(worksheet file, label), ...])
 LECTURES = {
- dt.date(YEAR,8,24):  (1,"Course introduction; numbers and sets","2.2, 2.3","Handout-Sets-and-Functions.pdf","Sets and Functions"),
- dt.date(YEAR,8,26):  (2,"Relations and functions; summation notation; necessary and sufficient conditions","2.4-2.6, p. 163, 5.1","Handout-Summation-Notation.pdf","Summation Notation"),
- dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar multiplication","4.1, 4.2","Handout-Matrix-Operations.pdf","Matrix Operations"),
- dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; inner product; linear dependence","4.2-4.4",None,None),
- dt.date(YEAR,9,9):   (5,"Identity, null, idempotent matrices; transpose","4.5, 4.6",None,None),
- dt.date(YEAR,9,14):  (6,"Inverse; nonsingularity; rank; the determinant","4.6, 5.1, 5.2","Handout-Determinant-and-Inverse.pdf","Determinant and Inverse"),
- dt.date(YEAR,9,16):  (7,"Computing determinants; inversion; Cramer's rule; applications","5.2-5.5, 4.7","Handout-Solving-System-of-Equations.pdf","Solving Systems of Equations"),
- dt.date(YEAR,9,28):  (None,"Limit definition of a derivative; limits","6.2-6.4",None,None),
- dt.date(YEAR,9,30):  (None,"Continuity; rules of differentiation","6.7, 7.1-7.3",None,None),
- dt.date(YEAR,10,5):  (None,"Exponential and log functions","10.5",None,None),
- dt.date(YEAR,10,7):  (None,"Partial derivatives; total differential and derivative","7.4, 8.1, 8.2, 8.4",None,None),
- dt.date(YEAR,10,12): (None,"Implicit function theorem","8.5",None,None),
- dt.date(YEAR,10,14): (None,"Integration","14.1-14.3",None,None),
- dt.date(YEAR,10,26): (None,"Unconstrained single-variable optimization","9.1, 9.2",None,None),
- dt.date(YEAR,10,28): (None,"Concave and convex functions","9.3, 9.4",None,None),
- dt.date(YEAR,11,2):  (None,"Multivariable optimization: first-order conditions","11.1",None,None),
- dt.date(YEAR,11,4):  (None,"Multivariable optimization: second-order conditions","11.2",None,None),
- dt.date(YEAR,11,9):  (None,"Constrained optimization; the Lagrange method","12.1, 12.2",None,None),
- dt.date(YEAR,11,16): (None,"Envelope theorem","11.5",None,None),
- dt.date(YEAR,11,18): (None,"Quasiconcavity; convex sets; homogeneous functions","12.4, 12.6",None,None),
- dt.date(YEAR,11,30): (None,"To be announced","",None,None),
- dt.date(YEAR,12,2):  (None,"To be announced","",None,None),
+ dt.date(YEAR,8,24):  (1,"Course introduction; numbers and sets","2.2, 2.3",[("Handout-Sets.pdf","Sets")]),
+ dt.date(YEAR,8,26):  (2,"Relations and functions; summation notation; necessary and sufficient conditions","2.4-2.6, p. 163, 5.1",[("Handout-Functions.pdf","Functions"),
+                       ("Handout-Summation-Notation.pdf","Summation Notation")]),
+ dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar multiplication","4.1, 4.2",[("Handout-Matrix-Operations.pdf","Matrix Operations")]),
+ dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; inner product; linear dependence","4.2-4.4",[]),
+ dt.date(YEAR,9,9):   (5,"Identity, null, idempotent matrices; transpose","4.5, 4.6",[]),
+ dt.date(YEAR,9,14):  (6,"Inverse; nonsingularity; rank; the determinant","4.6, 5.1, 5.2",[("Handout-Determinant-and-Inverse.pdf","Determinant and Inverse")]),
+ dt.date(YEAR,9,16):  (7,"Computing determinants; inversion; Cramer's rule; applications","5.2-5.5, 4.7",[("Handout-Solving-System-of-Equations.pdf","Solving Systems of Equations")]),
+ dt.date(YEAR,9,28):  (None,"Limit definition of a derivative; limits","6.2-6.4",[]),
+ dt.date(YEAR,9,30):  (None,"Continuity; rules of differentiation","6.7, 7.1-7.3",[]),
+ dt.date(YEAR,10,5):  (None,"Exponential and log functions","10.5",[]),
+ dt.date(YEAR,10,7):  (None,"Partial derivatives; total differential and derivative","7.4, 8.1, 8.2, 8.4",[]),
+ dt.date(YEAR,10,12): (None,"Implicit function theorem","8.5",[]),
+ dt.date(YEAR,10,14): (None,"Integration","14.1-14.3",[]),
+ dt.date(YEAR,10,26): (None,"Unconstrained single-variable optimization","9.1, 9.2",[]),
+ dt.date(YEAR,10,28): (None,"Concave and convex functions","9.3, 9.4",[]),
+ dt.date(YEAR,11,2):  (None,"Multivariable optimization: first-order conditions","11.1",[]),
+ dt.date(YEAR,11,4):  (None,"Multivariable optimization: second-order conditions","11.2",[]),
+ dt.date(YEAR,11,9):  (None,"Constrained optimization; the Lagrange method","12.1, 12.2",[]),
+ dt.date(YEAR,11,16): (None,"Envelope theorem","11.5",[]),
+ dt.date(YEAR,11,18): (None,"Quasiconcavity; convex sets; homogeneous functions","12.4, 12.6",[]),
+ dt.date(YEAR,11,30): (None,"To be announced","",[]),
+ dt.date(YEAR,12,2):  (None,"To be announced","",[]),
 }
 
 SPECIAL = {
@@ -114,7 +115,7 @@ def build_latex():
         elif d in SPECIAL:
             lines.append(rule + f"{mod} & {ds} & \\multicolumn{{2}}{{l}}{{\\textbf{{{SPECIAL[d]}}}}} \\\\")
         elif d in LECTURES:
-            _, tp, rf, _, _ = LECTURES[d]
+            _, tp, rf, _ = LECTURES[d]
             lines.append(rule + f"{mod} & {ds} & {quiz}{tp} & {rf} \\\\")
         else:
             lines.append(rule + f"{mod} & {ds} & {quiz} & \\\\")
@@ -126,10 +127,12 @@ def build_latex():
     return len(lines)
 
 
-def icons(n, ws, wsl):
+def icons(n, sheets):
     o = [f'<a href="content/slides/slides{n}.html" target="_blank" rel="noopener" '
          f'aria-label="Lecture {n} slides (opens in a new tab)"><span aria-hidden="true">🖥️</span></a>']
-    if ws:
+    # One icon per worksheet; the aria-label names it, so two sheets on the same
+    # lecture stay distinguishable to a screen reader.
+    for ws, wsl in sheets:
         o.append(f'<a href="content/handouts/{ws.lower()}" target="_blank" rel="noopener" '
                  f'aria-label="Lecture {n} worksheet: {wsl}, PDF (opens in a new tab)"><span aria-hidden="true">🗒️</span></a>')
     o.append(f'<a href="content/practice/practice{n}.html" target="_blank" rel="noopener" '
@@ -171,8 +174,8 @@ def build_html():
                         f'<td class="note" colspan="3">{quiz}<strong>{SPECIAL[d]}</strong></td></tr>')
         else:
             if d in LECTURES:
-                n, tp, rf, ws, wsl = LECTURES[d]
-                tp, mat = esc(tp), (icons(n, ws, wsl) if (n and n in PUBLISHED) else "")
+                n, tp, rf, sheets = LECTURES[d]
+                tp, mat = esc(tp), (icons(n, sheets) if (n and n in PUBLISHED) else "")
             else:
                 tp, rf, mat = "", "", ""
             # References appear twice: as a column on wide screens, and folded

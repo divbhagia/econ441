@@ -1,5 +1,6 @@
 # Ignore selected folders
 rtp-material/
+canvas/
 exams/*
 homeworks/
 quizzes/
@@ -7,7 +8,6 @@ references/
 */archived/
 project_files/
 project/solution*
-syllabus/attendance-sheet.xlsx
 
 # Ignore temporary files
 .DS_Store
@@ -42,9 +42,6 @@ grades/
 # Python
 __pycache__/
 *.pyc
-
-# Canvas API script (reads the token, writes to the live course)
-canvas-upload.py
 
 # Dropbox conflict artifacts
 *conflicted copy*

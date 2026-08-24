@@ -50,12 +50,6 @@ website:
       contents:
         - text: "I. Preliminaries"
           file: content/preliminaries.qmd
-        - section: "Practice problems"
-          contents:
-            - text: "Practice 1"
-              file: content/practice/practice1.qmd
-            - text: "Practice 2"
-              file: content/practice/practice2.qmd
         - text: "II. Linear Algebra"
           file: content/linear-algebra.qmd
         - text: "III. Calculus"

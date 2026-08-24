@@ -1,0 +1,209 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 2px; /* Adjust the spacing between cells */
+    border: 0.5px solid #b7b7b7; /* White border color */
+    border-radius: 10px; /* Add rounded borders */
+
+  }
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 0.25px solid #b7b7b7; /* White border color for cells */
+    background-color: #fff !important; /* Light purple background color with !important */
+    color: #000; /* Black text color */
+    border-radius: 2px; /* Add rounded borders */
+    vertical-align: middle;
+  }
+  th {
+    background-color: #fff !important;  /* Light purple background color for header cells */
+  }
+  td {
+    background-color: #fff !important; /* White background color for data cells */
+  }
+  /* Course content table: Topics gets all remaining width */
+  table.content-table { table-layout: fixed; width: 100%; }
+  table.content-table th, table.content-table td { padding: 6px 9px; line-height: 1.35; }
+  table.content-table th[scope="row"] { text-align: center; background-color: #fff; width: 5em; }
+  table.content-table td:nth-child(2) { width: 7em; white-space: nowrap; }
+  table.content-table td:nth-child(3) { text-align: left; width: auto; }
+  table.content-table td:nth-child(4) { width: 8.5em; font-size: 0.92em; }
+  table.content-table td:nth-child(5) { width: 7em; font-size: 1.15em; letter-spacing: 0.15em; }
+  .materials-legend { font-size: 0.9em; color: #393A3B; margin: 0.25em 0 1em 0; }
+/* Collapsible solutions on homework pages.
+   Uses native <details>/<summary>: keyboard-operable and announced as a
+   disclosure widget by screen readers, with no JavaScript. */
+details.solution {
+  margin: 0.6em 0 1.4em 0;
+  border-left: 3px solid #912040;
+  background-color: #faf7f7;
+  border-radius: 4px;
+  padding: 0 1em;
+}
+details.solution > summary {
+  cursor: pointer;
+  padding: 0.55em 0;
+  font-weight: 700;
+  color: #912040;
+  list-style-position: outside;
+}
+details.solution > summary:hover {
+  text-decoration: underline;
+}
+details.solution > summary:focus-visible {
+  outline: 3px solid #912040;
+  outline-offset: 2px;
+}
+details.solution[open] > summary {
+  border-bottom: 1px solid #e8e1e1;
+  margin-bottom: 0.6em;
+}
+details.solution > :last-child {
+  padding-bottom: 0.8em;
+}
+
+/* Keep the content table usable on narrow screens (WCAG 1.4.10 Reflow):
+   let it scroll inside its own container instead of forcing the page to
+   scroll horizontally, and make it keyboard-focusable so scrolling works
+   without a mouse. */
+.table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.table-scroll:focus-visible {
+  outline: 3px solid #912040;
+  outline-offset: 2px;
+}
+@media (max-width: 600px) {
+  table.content-table { table-layout: auto; }
+  table.content-table td:nth-child(3) { min-width: 14em; }
+}
+
+/* Schedule table: 5 columns, Topics takes the remaining width */
+table.schedule-table { width: 100%; table-layout: fixed; }
+table.schedule-table th, table.schedule-table td { padding: 6px 6px; line-height: 1.35; }
+table.schedule-table thead th.col-module { width: 8.5em; }
+table.schedule-table thead th.col-date   { width: 6.2em; }
+table.schedule-table thead th.col-topics { width: auto; }
+table.schedule-table thead th.col-refs   { width: 4.8em; }
+table.schedule-table thead th.col-mat    { width: 6.0em; }
+/* Both are phone-only alternates for the module column and the references
+   column; see the narrow-screen block at the end of this file. */
+table.schedule-table tr.module-head { display: none; }
+table.schedule-table span.refs-inline { display: none; }
+table.schedule-table th[scope="row"] { width: 6.2em; text-align: left; background-color: #fff; white-space: nowrap; font-weight: 400; }
+table.schedule-table th[scope="rowgroup"] { width: 8.5em; background-color: #fff; font-weight: 700; vertical-align: middle; text-align: left; white-space: nowrap; }
+table.schedule-table td.topics { width: auto; text-align: left; }
+table.schedule-table td.refs { width: 6.2em; text-align: left; font-size: 0.95em; }
+table.schedule-table td.mat { width: 6.0em; text-align: center; font-size: 1.2em; letter-spacing: 0.12em; white-space: nowrap; }
+table.schedule-table tr.assessment td { text-align: center; background-color: #faf7f7 !important; }
+table.schedule-table tr.recess td { text-align: center; background-color: #f6f6f6 !important; }
+/* Header row and the full-width note rows read left, not the centre the
+   generic `th, td` rule at the top of this file would give them. Quarto used to
+   supply this by injecting `text-align` inline into cells that already carried
+   a style attribute -- it mirrors each column's body alignment onto its header,
+   which is also why Materials is the one centred header. Stating it here keeps
+   the layout from depending on that injection. */
+table.schedule-table thead th { text-align: left; }
+table.schedule-table thead th.col-mat { text-align: center; }
+table.schedule-table tr td.note { text-align: left; }
+/* The empty module cell on rows outside any module stays unshaded, so the
+   shading reads as "this row is a break/exam" rather than bleeding into the
+   module column. */
+table.schedule-table td.modblank { background-color: #fff !important; }
+
+/* Callouts in the site's maroon rather than Quarto's default blue */
+div.callout.callout-style-simple,
+div.callout-note.callout-style-simple { border-left-color: #912040 !important; }
+div.callout-note .callout-title,
+div.callout .callout-title { background-color: #faf7f7 !important; }
+div.callout-note .callout-title p,
+div.callout .callout-title p,
+div.callout .callout-title-container { color: #912040 !important; font-weight: 700; font-size: 1.3rem; }
+div.callout .callout-body,
+div.callout .callout-body p,
+div.callout .callout-body li { font-size: 1.1rem; }
+div.callout .callout-body p { margin-bottom: 0.5em; }
+
+
+/* Schedule: alignment made explicit (Quarto's Bootstrap table CSS competes) */
+table.schedule-table td.topics { text-align: left !important; vertical-align: middle !important; }
+table.schedule-table td.refs   { text-align: left !important; vertical-align: middle !important; }
+table.schedule-table td.mat    { text-align: center !important; vertical-align: middle !important; }
+table.schedule-table th[scope="row"] { vertical-align: middle !important; }
+table.schedule-table th[scope="rowgroup"] { vertical-align: middle !important; }
+
+/* Heavier rules: table outline and the start of each module block */
+table.schedule-table { border: 2px solid #393A3B !important; }
+table.schedule-table thead th { border-bottom: 2px solid #393A3B !important; }
+table.schedule-table tr.module-start > * { border-top: 2px solid #393A3B !important; }
+table.schedule-table tbody tr:last-child > * { border-bottom: none; }
+
+
+/* ---------------------------------------------------------------------------
+   Schedule table on narrow screens.
+
+   The five columns need ~26em of fixed width before Topics gets anything, and
+   because the table is width:100% it can never overflow .table-scroll -- so
+   rather than scrolling, a narrow screen squeezes Topics to nothing.
+
+   The breakpoint is 1100px rather than a tablet-ish 768px because the content
+   width is NOT monotonic in the viewport width: Quarto's TOC column appears at
+   768px and takes ~260px with it, so an iPad in portrait gets 505px of content
+   where a 700px-wide phone in landscape gets 644px. Content does not clear
+   its full ~800px again until the viewport passes 1200px. Measured on the page:
+
+       viewport   360  390  430  600  700 | 768  900 1024 1100 | 1200 1600
+       content    304  334  374  544  644 | 505  573  627  703 |  794  794
+                                    no TOC ^ TOC appears       ^ room again
+
+   Below that, the table drops to three columns: Date | Topics | Materials. The
+   module column becomes a heading row spanning the table, and each reference
+   folds under its topic. Both swaps are display toggles on markup that is
+   always present, so the table keeps its real <th>/scope semantics at every
+   width -- no horizontal scrolling, and no stacked-<div> rebuild that would
+   throw the table semantics away.
+   --------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  table.schedule-table { table-layout: auto; }
+
+  table.schedule-table thead th.col-module,
+  table.schedule-table thead th.col-refs,
+  table.schedule-table th[scope="rowgroup"],
+  table.schedule-table td.modblank,
+  table.schedule-table td.refs { display: none; }
+
+  table.schedule-table tr.module-head { display: table-row; }
+  table.schedule-table tr.module-head th {
+    text-align: left;
+    font-weight: 700;
+    padding: 9px 6px;
+    background-color: #faf7f7 !important;
+    border-top: 2px solid #393A3B !important;
+  }
+  /* The block already got its rule from the heading row directly above it. */
+  table.schedule-table tr.module-head + tr > * { border-top: none !important; }
+
+  table.schedule-table span.refs-inline {
+    display: block;
+    margin-top: 0.25em;
+    font-size: 0.85em;
+    color: #747576;
+  }
+
+  /* Shrink both ends to fit so Topics keeps everything left over. */
+  table.schedule-table th[scope="row"] { width: 1%; white-space: nowrap; }
+  table.schedule-table td.mat { width: 1%; letter-spacing: 0; }
+  /* Emoji links are ~17px glyphs; pad them out to a thumb-sized tap target. */
+  table.schedule-table td.mat a { display: inline-block; padding: 0.3em 0.22em; }
+}
+
+/* Phones proper: buy back a little more room for Topics. The Materials column
+   cannot wrap, so on a 360px screen it has to be trimmed or the table overflows
+   its scroll container by a few pixels. */
+@media (max-width: 600px) {
+  table.schedule-table { font-size: 0.92rem; }
+  table.schedule-table th, table.schedule-table td { padding: 7px 4px; }
+  table.schedule-table td.mat { font-size: 1.05em; word-spacing: -0.3em; }
+  table.schedule-table td.mat a { padding: 0.3em 0.18em; }
+}

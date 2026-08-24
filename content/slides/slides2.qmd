@@ -96,11 +96,6 @@ for each $y$. One-to-one mapping unique to strictly monotonic functions
 
 Example: Find the inverse of $y = f(x) = 3x-2$.
 
-## By the way
-
-What is $x \times x$? What is $x^2 \times x$? What is $x^2 \times x^2$?
-More generally, $x^n \times x^m = x^{m+n}$
-
 ## Summation Notation
 
 $$\sum_{i=1}^N x_i = x_1 + x_2 + ... + x_N$$
