@@ -21,10 +21,10 @@ $selection-bg: $secondary;
 $presentation-font-family: Lato, Helvetica, sans-serif;
 $presentation-heading-font: "Fira Sans Condensed", Helvetica, sans-serif;
 $presentation-heading-color: $primary;
-// 201 runs at 44px; this course puts more on a slide (display math, matrices),
-// so it runs a little smaller. Set here rather than as `.reveal { font-size }`
-// so reveal scales the whole deck rather than just the body text.
-$presentation-font-size-root: 38px;
+// 201 runs at 44px; this course puts far more on a slide (display maths,
+// matrices, worked examples), so it runs smaller. Set here rather than as
+// `.reveal { font-size }` so reveal scales the whole deck, not just body text.
+$presentation-font-size-root: 34px;
 
 $code-block-bg: #f8f9fa;
 $code-color: $gray;
@@ -171,6 +171,7 @@ $code-color: $gray;
 .reveal .columns { gap: 2em; align-items: center; }
 // `::: {.columns .figrow}` -- a row of diagrams, each with a label above it.
 // Slides are left-aligned by default, so the label needs centring explicitly.
+.reveal .figrow { margin-top: 0.9em; }
 .reveal .figrow .column { text-align: center; }
 .reveal .figrow .column > p { margin-bottom: 0.25em; }
 

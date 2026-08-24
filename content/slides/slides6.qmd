@@ -1,6 +1,6 @@
 ---
 title: "Inverse, Nonsingularity, and the Determinant"
-subtitle: "Lecture 6"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 6"
 author: "Div Bhagia"
 format:
   revealjs:

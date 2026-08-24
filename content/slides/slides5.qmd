@@ -1,6 +1,6 @@
 ---
 title: "Identity, Null, and Transpose Matrices"
-subtitle: "Lecture 5"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 5"
 author: "Div Bhagia"
 format:
   revealjs:

@@ -1,6 +1,6 @@
 ---
 title: "Matrices and Matrix Operations"
-subtitle: "Lecture 3"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 3"
 author: "Div Bhagia"
 format:
   revealjs:

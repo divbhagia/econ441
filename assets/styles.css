@@ -82,17 +82,17 @@ details.solution > :last-child {
 /* Schedule table: 5 columns, Topics takes the remaining width */
 table.schedule-table { width: 100%; table-layout: fixed; }
 table.schedule-table th, table.schedule-table td { padding: 6px 6px; line-height: 1.35; }
-table.schedule-table thead th.col-module { width: 8.5em; }
+table.schedule-table thead th.col-module { width: 7.2em; }
 table.schedule-table thead th.col-date   { width: 6.2em; }
 table.schedule-table thead th.col-topics { width: auto; }
 table.schedule-table thead th.col-refs   { width: 4.8em; }
-table.schedule-table thead th.col-mat    { width: 6.0em; }
+table.schedule-table thead th.col-mat    { width: 7.6em; }
 /* Both are phone-only alternates for the module column and the references
    column; see the narrow-screen block at the end of this file. */
 table.schedule-table tr.module-head { display: none; }
 table.schedule-table span.refs-inline { display: none; }
 table.schedule-table th[scope="row"] { width: 6.2em; text-align: left; background-color: #fff; white-space: nowrap; font-weight: 400; }
-table.schedule-table th[scope="rowgroup"] { width: 8.5em; background-color: #fff; font-weight: 700; vertical-align: middle; text-align: left; white-space: nowrap; }
+table.schedule-table th[scope="rowgroup"] { width: 7.2em; background-color: #fff; font-weight: 700; vertical-align: middle; text-align: left; }
 table.schedule-table td.topics { width: auto; text-align: left; }
 table.schedule-table td.refs { width: 6.2em; text-align: left; font-size: 0.95em; }
 table.schedule-table td.mat { width: 6.0em; text-align: center; font-size: 1.2em; letter-spacing: 0.12em; white-space: nowrap; }

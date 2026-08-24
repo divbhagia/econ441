@@ -1,6 +1,6 @@
 ---
 title: "Functions, Summation Notation, and Logical Conditions"
-subtitle: "Lecture 2"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 2"
 author: "Div Bhagia"
 format:
   revealjs:

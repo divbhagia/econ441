@@ -1,6 +1,6 @@
 ---
 title: "Matrix Multiplication and Vectors"
-subtitle: "Lecture 4"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 4"
 author: "Div Bhagia"
 format:
   revealjs:

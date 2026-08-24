@@ -1,6 +1,6 @@
 ---
 title: "Numbers and Sets"
-subtitle: "Lecture 1"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 1"
 author: "Div Bhagia"
 format:
   revealjs:
@@ -17,9 +17,9 @@ format:
     -   Undergrads: why you signed up for this class
     -   Grad students: why you're doing the MA
 
--   Your comfort food
-
 -   The last math class you took, and roughly when
+
+-   Your comfort food
 
 ## Real-Number System
 
@@ -34,18 +34,14 @@ format:
 ## Real-Number System
 
 -   *Rational numbers*: ratio of integers
+    -   "terminating or repeating decimal"
+    -   Example. $\frac{1}{3}=0.333$, $\frac{1}{4}=0.25$
 
--   "terminating or repeating decimal"
+-   *Irrational numbers*: cannot be expressed as a ratio of two integers
+    -   "nonterminating or nonrepeating decimal"
+    -   Example. $\sqrt{2}=1.4142$, $\pi=3.1415$
 
--   $$\text{Example. } \frac{1}{3}=0.333, \frac{1}{4}=0.25$$
-
--   *Irrational numbers:* cannot be expressed as a ratio of two integers
-
--   "nonterminating or nonrepeating decimal"
-
--   $$\text{Example. } \sqrt{2}=1.4142, \pi=3.1415$$
-
--   *Real numbers ($\mathbb{R}$): rational and irrational*
+-   *Real numbers ($\mathbb{R}$)*: rational and irrational
 
 ## Sets
 
@@ -80,10 +76,9 @@ format:
 
 -   $\emptyset$: empty or null set
 
--   What are all possible subsets of $$S = \{a,b,c\}$$
-
--   $\emptyset, \{a\}, \{b\},\{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}$
-    Always $2^n$ subsets. Here $n=3$, so 8 subsets.
+-   What are all possible subsets of $S = \{a,b,c\}$?
+    -   $\emptyset, \{a\}, \{b\},\{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}$
+    -   Always $2^n$ subsets. Here $n=3$, so 8 subsets.
 
 ## Set Operations
 
@@ -119,17 +114,17 @@ Shade the following regions:
 ::: {.column width="33%"}
 $A \cup B$
 
-![](../../assets/venn2.svg){fig-alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width=280}
+![](../../assets/venn2.svg){fig-alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width=340}
 :::
 ::: {.column width="33%"}
 $A \cap B$
 
-![](../../assets/venn2.svg){fig-alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width=280}
+![](../../assets/venn2.svg){fig-alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width=340}
 :::
 ::: {.column width="33%"}
 $A^c$
 
-![](../../assets/venn2.svg){fig-alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width=280}
+![](../../assets/venn2.svg){fig-alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width=340}
 :::
 :::
 
@@ -149,12 +144,12 @@ Verify by shading: $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
 ::: {.column width="50%"}
 $A$
 
-![](../../assets/venn3.svg){fig-alt="Blank three-set Venn diagram for shading the region A: sets A, B, and C overlapping inside universal set U" width=300}
+![](../../assets/venn3.svg){fig-alt="Blank three-set Venn diagram for shading the region A: sets A, B, and C overlapping inside universal set U" width=380}
 :::
 ::: {.column width="50%"}
 $B \cap C$
 
-![](../../assets/venn3.svg){fig-alt="Blank three-set Venn diagram for shading the region B intersect C: sets A, B, and C overlapping inside universal set U" width=300}
+![](../../assets/venn3.svg){fig-alt="Blank three-set Venn diagram for shading the region B intersect C: sets A, B, and C overlapping inside universal set U" width=380}
 :::
 :::
 
@@ -166,12 +161,12 @@ Now the right-hand side, $(A \cup B) \cap (A \cup C)$:
 ::: {.column width="50%"}
 $A \cup B$
 
-![](../../assets/venn3.svg){fig-alt="Blank three-set Venn diagram for shading the region A union B: sets A, B, and C overlapping inside universal set U" width=300}
+![](../../assets/venn3.svg){fig-alt="Blank three-set Venn diagram for shading the region A union B: sets A, B, and C overlapping inside universal set U" width=380}
 :::
 ::: {.column width="50%"}
 $A \cup C$
 
-![](../../assets/venn3.svg){fig-alt="Blank three-set Venn diagram for shading the region A union C: sets A, B, and C overlapping inside universal set U" width=300}
+![](../../assets/venn3.svg){fig-alt="Blank three-set Venn diagram for shading the region A union C: sets A, B, and C overlapping inside universal set U" width=380}
 :::
 :::
 

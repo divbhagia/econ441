@@ -1,6 +1,6 @@
 ---
 title: "Computing Determinants, Inversion, and Cramer's Rule"
-subtitle: "Lecture 7"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 7"
 author: "Div Bhagia"
 format:
   revealjs:
