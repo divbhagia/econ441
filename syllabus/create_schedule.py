@@ -151,39 +151,50 @@ def build_html():
         if m and m not in seen:
             seen.add(m)
             label = (f'<a href="content/{MODULE_SLUG[m]}.html">{m}</a>' if m in MODULE_SLUG else m)
-            mod = f'<th scope="rowgroup" rowspan="{SPANS[m]}" style="text-align:left;vertical-align:middle;white-space:nowrap">{label}</th>'
+            # Phones drop the module column and use this full-width heading row
+            # in its place. Exactly one of the two is displayed at any width, so
+            # the module name is never announced twice.
+            rows.append(f'<tr class="module-head"><th scope="colgroup" colspan="5">{label}</th></tr>')
+            mod = f'<th scope="rowgroup" rowspan="{SPANS[m]}" class="module">{label}</th>'
         elif m:
             mod = ""
         else:
             mod = '<td class="modblank"></td>'
         quiz = f"<strong>Quiz {QUIZZES[d]}</strong>; " if d in QUIZZES else ""
         edge = " module-start" if starts else ""
+        date = f'<th scope="row">{ds}</th>'
         if d in HOLIDAYS:
-            rows.append(f'<tr class="recess{edge}">{mod}<th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">{ds}</th>'
-                        f'<td colspan="3">No class ({HOLIDAYS[d]})</td></tr>')
+            rows.append(f'<tr class="recess{edge}">{mod}{date}'
+                        f'<td class="note" colspan="3">No class ({HOLIDAYS[d]})</td></tr>')
         elif d in SPECIAL:
-            rows.append(f'<tr class="assessment{edge}">{mod}<th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">{ds}</th>'
-                        f'<td colspan="3">{quiz}<strong>{SPECIAL[d]}</strong></td></tr>')
-        elif d in LECTURES:
-            n, tp, rf, ws, wsl = LECTURES[d]
-            mat = icons(n, ws, wsl) if (n and n in PUBLISHED) else ""
-            rows.append(f'<tr class="{edge.strip()}">{mod}<th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">{ds}</th><td class="topics" style="text-align:left;vertical-align:middle">{quiz}{esc(tp)}</td>'
-                        f'<td class="refs" style="text-align:left;vertical-align:middle">{rf}</td><td class="mat" style="text-align:center;vertical-align:middle">{mat}</td></tr>')
+            rows.append(f'<tr class="assessment{edge}">{mod}{date}'
+                        f'<td class="note" colspan="3">{quiz}<strong>{SPECIAL[d]}</strong></td></tr>')
         else:
-            rows.append(f'<tr class="{edge.strip()}">{mod}<th scope="row" style="text-align:left;vertical-align:middle;font-weight:400">{ds}</th><td class="topics" style="text-align:left;vertical-align:middle">{quiz}</td>'
-                        f'<td class="refs" style="text-align:left;vertical-align:middle"></td><td class="mat" style="text-align:center;vertical-align:middle"></td></tr>')
-    rows.append(f'<tr class="assessment"><td></td><th scope="row">{FINAL_EXAM[0]}</th>'
-                f'<td colspan="3"><strong>Final Exam</strong>, {FINAL_EXAM[1].replace("--","&ndash;")}</td></tr>')
+            if d in LECTURES:
+                n, tp, rf, ws, wsl = LECTURES[d]
+                tp, mat = esc(tp), (icons(n, ws, wsl) if (n and n in PUBLISHED) else "")
+            else:
+                tp, rf, mat = "", "", ""
+            # References appear twice: as a column on wide screens, and folded
+            # under the topic on phones. CSS shows one and hides the other.
+            fold = f'<span class="refs-inline">Reference: {rf}</span>' if rf else ""
+            rows.append(f'<tr class="{edge.strip()}">{mod}{date}'
+                        f'<td class="topics">{quiz}{tp}{fold}</td>'
+                        f'<td class="refs">{rf}</td><td class="mat">{mat}</td></tr>')
+    rows.append(f'<tr class="assessment"><td class="modblank"></td><th scope="row">{FINAL_EXAM[0]}</th>'
+                f'<td class="note" colspan="3"><strong>Final Exam</strong>, {FINAL_EXAM[1].replace("--","&ndash;")}</td></tr>')
 
+    # Column widths live in assets/styles.css so that the media queries there
+    # can override them; with table-layout:fixed only this row sets them.
     table = ('<div class="table-scroll" tabindex="0" role="region" aria-label="Semester schedule table">\n'
              '<table class="schedule-table" aria-label="Fall 2026 course schedule, '
              'one row per class meeting">\n'
              '<thead>\n<tr>\n'
-             '  <th scope="col" style="width:8.5em">Module</th>\n'
-             '  <th scope="col" style="width:6.2em">Date</th>\n'
-             '  <th scope="col">Topics</th>\n'
-             '  <th scope="col" style="width:4.8em">References</th>\n'
-             '  <th scope="col" style="width:6.0em">Materials</th>\n'
+             '  <th scope="col" class="col-module">Module</th>\n'
+             '  <th scope="col" class="col-date">Date</th>\n'
+             '  <th scope="col" class="col-topics">Topics</th>\n'
+             '  <th scope="col" class="col-refs">References</th>\n'
+             '  <th scope="col" class="col-mat">Materials</th>\n'
              '</tr>\n</thead>\n<tbody>\n'
              + "\n".join(rows) + '\n</tbody>\n</table>\n</div>\n')
     page = """---
@@ -196,9 +207,9 @@ This is a tentative schedule for the semester. Topics and their order may be adj
 Quizzes are given at the start of class on the dates marked below.
 
 <p class="materials-legend">
-<span aria-hidden="true">\U0001F5A5\uFE0F</span> Slides &nbsp;
-<span aria-hidden="true">\U0001F5D2\uFE0F</span> Worksheet (PDF) &nbsp;
-<span aria-hidden="true">\u270D\uFE0F</span> Practice problems
+<span aria-hidden="true">\U0001F5A5️</span> Slides &nbsp;
+<span aria-hidden="true">\U0001F5D2️</span> Worksheet (PDF) &nbsp;
+<span aria-hidden="true">✍️</span> Practice problems
 </p>
 
 ```{=html}
