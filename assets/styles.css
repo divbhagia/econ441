@@ -256,4 +256,4 @@ mjx-container.mjx-scroll {
 
 /* Material buttons on the module pages: four per lecture now (slides, PDF
    slides, worksheet, practice), so they run smaller than Bootstrap's default. */
-div.lecture .btn { font-size: 0.9rem; padding: 0.2em 0.6em; }
+div.lecture .btn { font-size: 1.02rem; padding: 0.15em 0.55em; }  /* normal text, less padding */

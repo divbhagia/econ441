@@ -52,3 +52,65 @@ function RawInline(el)
     return pandoc.RawInline('latex', '\\\\')
   end
 end
+
+-- A paragraph that is only an image is centred, as on the old beamer decks.
+-- (By the time Para runs, Image above has already turned the image into a
+-- RawInline, so that is what to look for.)
+function Para(el)
+  if #el.content == 1 then
+    local x = el.content[1]
+    local tex
+    if x.t == 'RawInline' and x.text:match('^\\includegraphics') then tex = x.text
+    elseif x.t == 'Image' then local i = Image(x); tex = i and i.text end
+    if tex then
+      return pandoc.RawBlock('latex', '\\begin{center}' .. tex .. '\\end{center}')
+    end
+  end
+end
+
+-- witemize: air between top-level list items (sub-points stay tight). Done
+-- here because the class-level knobs (\@listi, the block templates'
+-- item-vspace) are both overridden by ltx-talk's own inter-item code.
+local function space_lists(blocks, depth)
+  for _, b in ipairs(blocks) do
+    if b.t == 'BulletList' or b.t == 'OrderedList' then
+      for i, item in ipairs(b.content) do
+        space_lists(item, depth + 1)
+      end
+      -- ltx-talk adds \itemsep between items but groups each item's body,
+      -- so a local assignment is lost; a global one set in the first item
+      -- survives to every later gap on this level. Nested lists set their
+      -- own (local) \itemsep, so sub-points stay tight.
+      if depth == 0 and #b.content > 0 then
+        b.content[1]:insert(1, pandoc.RawBlock('latex', '\\global\\itemsep=0.7em'))
+      end
+    elseif b.t == 'Div' or b.t == 'BlockQuote' then
+      space_lists(b.content, depth)
+    end
+  end
+end
+-- On these decks each reveal fragment is its own one-item list, so most of the
+-- "gaps between bullets" are gaps between consecutive lists. Add the same air
+-- after every top-level block that ends in a list and is followed by more.
+local function ends_in_list(b)
+  if b.t == 'BulletList' or b.t == 'OrderedList' then return true end
+  if b.t == 'Div' and #b.content > 0 then return ends_in_list(b.content[#b.content]) end
+  return false
+end
+local function space_between_lists(blocks)
+  local out = pandoc.List()
+  for i, b in ipairs(blocks) do
+    if b.t == 'Div' then b.content = space_between_lists(b.content) end
+    out:insert(b)
+    local nxt = blocks[i + 1]
+    if nxt and ends_in_list(b) and nxt.t ~= 'Header' then
+      out:insert(pandoc.RawBlock('latex', '\\vspace{0.7em}'))
+    end
+  end
+  return out
+end
+function Pandoc(doc)
+  space_lists(doc.blocks, 0)
+  doc.blocks = space_between_lists(doc.blocks)
+  return doc
+end

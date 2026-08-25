@@ -17,26 +17,43 @@ import pathlib, re, shutil, subprocess, sys, tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-# Theme: the website's palette and type (assets/custom.scss, assets/slides.scss)
-# -- maroon structure colour, Lato body, Fira Sans Condensed headings. Fira Sans
+# Theme: as close to the HTML decks (assets/slides.scss) as ltx-talk allows --
+# site maroon, Lato body in the site's ink gray, Fira Sans Condensed headings,
+# *term* as maroon bold, and the old decks' witemize spacing. 14pt like the
+# old beamer class (latex/teaching_slides.cls). Fira Sans
 # Condensed is a system font on this machine (fontspec finds it by name); Lato
 # comes from the TeX tree. ltx-talk's template keys are experimental, so if a
 # tlmgr update breaks an \EditInstance line, the visual theme is all that is
 # lost -- tagging does not depend on it.
 PREAMBLE = r"""\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagging=on}
-\documentclass[frame-title-arg]{ltx-talk}
+\documentclass[frame-title-arg, font-size = 14pt]{ltx-talk}
 \usepackage{amsmath,graphicx}
 \providecommand{\tightlist}{}
 \setmainfont{Lato}
 \setsansfont{Lato}
 \newfontfamily\headingfont{Fira Sans Condensed}
-\DeclareColor{structure}[HTML]{912040}
-\EditInstance{header}{std}{color = structure, font = \Large\bfseries\headingfont, height = 1.35cm}
-\EditInstance{frametitle}{header}{color = structure, font = \Large\bfseries\headingfont}
-\EditInstance{titlepage-element}{title}{color = structure, font = \LARGE\bfseries\headingfont}
-\EditInstance{titlepage-element}{subtitle}{font = \large\bfseries}
-\EditInstance{footer}{std}{element-order = {title, framenumber}}
+\DeclareColor{maroon}[HTML]{912040}
+\DeclareColor{ink}[HTML]{393A3B}
+\DeclareColor{structure}[HTML]{393A3B}
+\color{ink}
+\EditInstance{header}{std}{color = maroon, font = \Large\bfseries\headingfont, height = 1.5cm}
+\EditInstance{frametitle}{header}{color = maroon, font = \Large\bfseries\headingfont}
+\EditInstance{titlepage-element}{title}{color = maroon, font = \LARGE\bfseries\headingfont}
+\EditInstance{titlepage-element}{subtitle}{color = ink, font = \large\bfseries}
+\EditInstance{footer}{std}{element-order = {framenumber}}
 \date{}
+% Frame content sits at the top, as on the old beamer decks ([t]) and the web
+% decks; ltx-talk centres it vertically by default.
+\ExplSyntaxOn
+\keys_set:nn { talk / frame } { vertical-alignment = top }
+\ExplSyntaxOff
+% *term* is maroon bold on the web decks (reveal em rule), not italic.
+\renewcommand{\emph}[1]{\textcolor{maroon}{\textbf{#1}}}
+% witemize spacing from the old decks: air between top-level bullets, tighter
+% sub-points -- the same proportions as assets/slides.scss.
+% List spacing (the old decks' witemize air) is added by assets/beamer-deck.lua:
+% ltx-talk replaces the block code's inter-item spacing with its own, which
+% reads a zeroed \itemsep, so neither \@listi nor the item-vspace key applies.
 """
 
 def meta_from_qmd(text):
@@ -79,8 +96,11 @@ def build(n):
         # header from printing the title twice.
         qtitle = re.search(r'^title:\s*"?(.*?)"?\s*$', qmd.read_text(), re.M).group(1)
         body = body.replace("\\frame{\\titlepage}",
-                            "\\begin{frame}{%s}\\maketitle[framestyle = wallpaper]\\end{frame}" % qtitle)
+                            "\\begin{frame}[vertical-alignment = center]{%s}\\maketitle[framestyle = wallpaper]\\end{frame}" % qtitle)
         body = re.sub(r"\\begin\{columns\}\[[^\]]*\]", r"\\begin{columns}", body)
+        # Top-aligned frames start flush under the header; give the body the
+        # same breathing room the web decks have below the title.
+        body = re.sub(r"(\\begin\{frame\}\{[^}]*\})(?!\\maketitle)", r"\1\\vspace*{0.9em}", body)
         body = re.sub(r"\[<\+\+?->?\]", "", body)          # itemize[<+->]
         body = re.sub(r"<\d+(-\d*)?>", "", body)           # \item<2-> etc.
         doc = PREAMBLE + meta_from_qmd(qmd.read_text()) + "\\begin{document}\n" + body + "\n\\end{document}\n"
