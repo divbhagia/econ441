@@ -2,18 +2,22 @@
 #
 #   make syllabus   regenerate the schedule, rebuild the syllabus PDF
 #   make pdfs       recompile handouts, practice problems, module notes
-#   make site       rebuild the website into docs/
+#   make site       rebuild the website into docs/ (runs the audit at the end)
+#   make audit      WCAG 2.1 AA check of docs/ (axe-core + reflow + veraPDF); fails loudly
+#   make slides-pdf tagged-PDF decks (ltx-talk) from the same slide sources
 #   make            all of the above
 #
 # The site renders in a temp copy outside Dropbox. Dropbox reverts in-place
 # overwrites of individual files, which silently drops pages from docs/.
 
 SHELL := /bin/bash
+# Published lectures; keep in step with PUBLISHED in syllabus/create_schedule.py.
+LECTURES := 1 2
 TMP   := $(TMPDIR)econ441-build
 NOTES := content/notes/{Linear-Algebra,Calculus,Log-and-Exponential-Functions,Optimization}
 AUX   := aux,log,out,fls,fdb_latexmk,xdv,toc,synctex.gz
 
-.PHONY: all syllabus pdfs site
+.PHONY: all syllabus pdfs site audit slides-pdf
 
 all: syllabus pdfs site
 
@@ -54,3 +58,17 @@ site:
 	@sleep 15
 	@find docs -name "*conflicted copy*" -exec rm -rf {} + 2>/dev/null || true
 	@echo "    pages: $$(find docs -name '*.html' ! -path '*site_libs*' | wc -l | tr -d ' ')"
+	@$(MAKE) audit
+
+# Every page must meet WCAG 2.1 AA (DOJ Title II rule, 28 CFR 35.200; CSUF
+# deadline 2027-04-26). Runs automatically at the end of `make site`, so a
+# build that introduces a violation announces itself immediately.
+audit:
+	@echo "==> accessibility audit (WCAG 2.1 AA + PDF/UA-2)"
+	@python3 scripts/audit_a11y.py
+
+# Tagged-PDF slide decks from the same .qmd sources as the web decks, compiled
+# under ltx-talk (beamer refuses tagging). Each build veraPDF-gates its output.
+slides-pdf:
+	@echo "==> slide decks as tagged PDF (ltx-talk)"
+	@python3 scripts/build_slides_pdf.py $(LECTURES)

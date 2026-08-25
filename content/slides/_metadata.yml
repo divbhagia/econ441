@@ -1,6 +1,7 @@
 format:
   revealjs:
     embed-resources: true
+    include-after-body: ../../assets/slides-a11y.html
     footer: "ECON 441 · Introduction to Mathematical Economics"
     pdf-separate-fragments: false
     navigation-mode: linear

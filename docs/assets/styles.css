@@ -127,8 +127,10 @@ table.schedule-table thead th.col-mat { text-align: center; }
 table.schedule-table tr td.note { text-align: left; }
 /* The empty module cell on rows outside any module stays unshaded, so the
    shading reads as "this row is a break/exam" rather than bleeding into the
-   module column. */
-table.schedule-table td.modblank { background-color: #fff !important; }
+   module column. Written with the row class so it outranks the
+   tr.assessment/tr.recess rules above (same !important, higher specificity). */
+table.schedule-table tr.assessment td.modblank,
+table.schedule-table tr.recess td.modblank { background-color: #fff !important; }
 
 /* Callouts in the site's maroon rather than Quarto's default blue */
 div.callout.callout-style-simple,
@@ -224,4 +226,29 @@ table.schedule-table tbody tr:last-child > * { border-bottom: none; }
   table.schedule-table th, table.schedule-table td { padding: 7px 4px; }
   table.schedule-table td.mat { font-size: 1.05em; word-spacing: -0.3em; }
   table.schedule-table td.mat a { padding: 0.3em 0.18em; }
+}
+
+/* Office-hours list on the home page: tight against the "Office hours:" line.
+   (A div + markdown list; a raw <ul> around list items emits invalid nesting.) */
+.office-hours ul { margin-top: 0; margin-bottom: 0.5em; }
+
+/* Reflow (WCAG 1.4.10): images never force the page wider than the viewport,
+   and a display equation too wide for a phone scrolls inside its own box
+   instead of scrolling the whole page sideways. */
+main img { max-width: 100%; height: auto; }
+mjx-container[display="true"] {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+/* Applied by site-a11y.js only to equations that actually poke past the
+   viewport (long inline ones, mostly). Not a blanket rule: overflow on an
+   inline-block shifts its baseline, so only offenders get it. */
+mjx-container.mjx-scroll {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
 }

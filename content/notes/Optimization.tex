@@ -44,13 +44,13 @@ We define a critical point as a point where the function's derivative is equal t
 % BOX: Critical point
 \fbox{\begin{minipage}{\textwidth}
 The \textit{necessary} condition for $x^*$ to be a maximum or minimum point of a continuously differentiable function $f(x)$ is: \\
-$$f'(x^*) = 0$$ 
+\[f'(x^*) = 0\] 
 
 Here, $x^*$ is called a critical/stationary point. 
 \end{minipage}}\\
 
 \noindent\textit{Example.} Let's find all the critical points for the function $f(x) = x^2 -24 x + 36 $. \\
-We start by taking the derivative of $f(x)$: $$f'(x) = 2x-24$$
+We start by taking the derivative of $f(x)$: \[f'(x) = 2x-24\]
 Next, we set $f'(x)$ equal to zero and solve for $x$. $2x-24=0 \rightarrow x =12$. Therefore, the critical point of $f(x)$ is $x^* = 12$.   \\
 
 Note that it is necessary that at any maxima or minima, the derivative of the function is 0. To see this, consider a point $c$ where $f'(c)>0$, so the function is increasing at point $c$. Then the value of the function at a point just to the left of $c$ will be smaller than $f(c)$, so $c$ cannot be a local minimum. Similarly, the value of the function at a point just to the right of $c$ will be greater than $f(c)$, so $c$ cannot be a local maximum. 
@@ -173,10 +173,10 @@ In economics, we often encounter situations where we need to maximize a function
 To solve for the optimal values of multiple input variables, we need to take the partial derivative of the output function with respect to each input variable and set them equal to zero. This is the first-order condition (FOC) for multivariate functions. 
 
  For a function of two variables $f(x,y)$, the FOC is given by:
-$$ f_x = \frac{\partial f}{\partial x} = 0 , \quad \quad f_y = \frac{\partial f}{\partial y} = 0 $$
+\[ f_x = \frac{\partial f}{\partial x} = 0 , \quad \quad f_y = \frac{\partial f}{\partial y} = 0 \]
 Here, $f_x$ and $f_y$ are the partial derivatives of $f$ with respect to $x$ and $y$, respectively. In particular, $f_x$ captures, how $f$ changes as $x$ changes while holding $y$ constant. So when calculating the partial derivative with respect to one variable, we treat the other variable as a constant. \\
 
-\textit{Example.} Let's find all the critical points for the function $$f(x,y) = x + y^2- x^2y$$ 
+\textit{Example.} Let's find all the critical points for the function \[f(x,y) = x + y^2- x^2y\] 
 Note that, $f_x=1-2xy$ and $f_y = 2y-x^2$. 
 Setting $f_x=0$, we get $xy=0.5$ and setting $f_y=0$, we get $y=0.5x^2$. 
 Plugging $y=0.5x^2$ in  $xy=0.5$, we get at $x=1$ and $y=0.5$. So the critical point for this function is $(1,0.5)$. \\
@@ -184,11 +184,11 @@ Plugging $y=0.5x^2$ in  $xy=0.5$, we get at $x=1$ and $y=0.5$. So the critical p
 \textit{Example.}  Consider the profit function $\pi(K,L) = Q(K,L) - rK - wL$, where $Q(K,L)$ is the production function that specifies the maximum quantity of output that can be produced using $K$ units of capital and $L$ units of labor. Here, $r$ and $w$ are the prices of capital and labor, respectively. 
 
 The partial derivative of $\pi$ with respect to $L$ is given by:
- $$ \pi_L = \frac{\partial \pi}{\partial L}  = Q_L-w = 0   $$
+ \[ \pi_L = \frac{\partial \pi}{\partial L}  = Q_L-w = 0   \]
 Here, $Q_L$ is the partial derivative of the production function with respect to labor, which measures the marginal product of labor (MPL) or the increase in output resulting from an additional unit of labor. Similarly, $Q_K$ is the partial derivative of the production function with respect to capital, which measures the marginal product of capital (MPK). 
 
 The partial derivative of $\pi$ with respect to $K$ is:
-$$ \pi_K = \frac{\partial \pi}{\partial K}  = Q_K-r = 0   $$
+\[ \pi_K = \frac{\partial \pi}{\partial K}  = Q_K-r = 0   \]
 At the critical point where both FOCs are satisfied, the firm will choose inputs so that the price of each input is equal to its marginal product. (Note that $Q_K$ and $Q_L$ are functions of $K$ and $L$.) \\
 
 For multivariate functions, the second-order conditions involve calculating all the (own and cross) second partial derivatives of the function. We will skip details on these conditions here. However, it is important to note that the concept of concavity and convexity can be extended to multivariate functions. In particular, we can define a concave (convex) function as a function whose graph lies below (above) any line segment connecting any two points on the graph. (See the slides for Lecture 12 for more details.) Moreover, as before, any critical point of a multivariate (strictly) concave/convex function represents a (unique) global maximum/minimum. 
@@ -201,9 +201,9 @@ For multivariate functions, the second-order conditions involve calculating all 
 Lots of problems in economics involve optimizing a function subject to one or more constraints. For example, a firm may want to maximize its profits subject to production constraints, or a consumer may want to maximize their utility subject to a budget constraint. To solve such problems, we use the method of Lagrange multipliers. 
 
 Suppose we want to maximize (or minimize) a function $f(x,y)$ subject to a constraint $g(x,y) = c$, where $c$ is a constant. The method of Lagrange multipliers involves constructing a new function, known as the Lagrangian, that combines the objective function and the constraint function as follows:
-$$
+\[
 L(x,y,\lambda)=f(x, y)+\lambda[c-g(x, y)]
-$$
+\]
 
 Here, $\lambda$ is the Lagrange multiplier. To find the optimal values of $x$ and $y$, we need to take partial derivatives of the Lagrangian with respect to each variable and the Lagrange multiplier and set them equal to zero. This gives us the first-order conditions:
 \begin{align*}
@@ -219,7 +219,7 @@ Intuitively, the Lagrange multiplier method works because it allows us to take i
 \textit{Example}. We want to maximize utility given by  $U(x,y) = x y$ subject to the budget constraint $4 x + y = 12$. 
 
 We start by setting up the Lagrangian:
-$$ L(x, y, \lambda) = x y + \lambda(12-4x-y) $$
+\[ L(x, y, \lambda) = x y + \lambda(12-4x-y) \]
 First-order conditions:
 \begin{align}
 \frac{\partial L}{\partial x} &= y- 4 \lambda = 0  \\ 
@@ -227,12 +227,12 @@ First-order conditions:
 \frac{\partial L}{\partial \lambda} &= 12-4x-y = 0 
 \end{align}
 From equations (1) and (2), we have $y=4 \lambda$ and $x=\lambda$, which implies that $y=4x$. Plugging this in equation (3):
-$$ 12-4x-4x = 0 \rightarrow x^* = 1.5, y^*=6, \lambda^* = 1.5 $$
+\[ 12-4x-4x = 0 \rightarrow x^* = 1.5, y^*=6, \lambda^* = 1.5 \]
 
 Interpretation of $\lambda^*$: If income increases by a dollar, utility increases by $1.5$.\\
 
 The method of Lagrange multipliers can be extended to problems with more than two variables and constraints. For example, consider the problem of maximizing a function $f(x,y,z)$ subject to two constraints $g(x,y,z) = c$ and $h(x,y,z) = m$, where $c$ and $m$ are constants. To solve this problem, we will need to introduce two Lagrange multipliers and then construct the Lagrangian function as follows:
-$$L(x,y,z,\lambda,\mu) = f(x,y,z) + \lambda [c-g(x,y,z)] + \mu [m-h(x,y,z)]$$
+\[L(x,y,z,\lambda,\mu) = f(x,y,z) + \lambda [c-g(x,y,z)] + \mu [m-h(x,y,z)]\]
 To find the optimal values of $x$, $y$, and $z$ that maximize $f(x,y,z)$ subject to the two constraints, we can take the partial derivatives of the Lagrangian with respect to $x$, $y$, $z$, $\lambda$, and $\mu$, and set them equal to zero. 
 
 \subsection*{Global Extrema with Constraints}
@@ -255,59 +255,59 @@ In economics, we are often interested in understanding how the value of a functi
 \fbox{\begin{minipage}{\textwidth}
 \textit{Envelope Theorem: Unconstrained Maximization} \\
 Consider the following maximization problem: 
-$$
+\[
 \max_{x} \quad  f(x, \alpha)  
-$$
+\]
 Here, $\alpha$ is a parameter. Since the optimal input may depend on $\alpha$, let's denote it by $x^*(\alpha)$. Now let's define the \textit{maximum value function}:
-$$ V(\alpha) = f(x^*(\alpha), \alpha) $$
+\[ V(\alpha) = f(x^*(\alpha), \alpha) \]
 The envelope theorem states that,
-$$ V_{\alpha}= \frac{\partial V}{\partial \alpha} = f_{\alpha}^* $$
+\[ V_{\alpha}= \frac{\partial V}{\partial \alpha} = f_{\alpha}^* \]
 where $f_{\alpha}^*$ is the partial derivative of $f$ with respect to $x$ at $x^*$
 \end{minipage}} \\
 
 It is actually straightforward to see why this is the case. Note, that when we differentiate $V$ with respect to $\alpha$,
-$$ V_{\alpha} = f_x^* \cdot \frac{\partial x^*}{\partial \alpha} + f_{\alpha}^* $$
+\[ V_{\alpha} = f_x^* \cdot \frac{\partial x^*}{\partial \alpha} + f_{\alpha}^* \]
 Here, $f_x^*$ is the partial derivative of $f$ with respect to $x$ at $x^*$. By first order conditions for optimization, $f_x^*=0$, and hence $ V_{\alpha}=f_{\alpha}^* $. \\
 
-\textit{Example.} Say we want to choose labor input $L$ to maximize profit $$\max_L \quad\pi(L, w) = \ln L-wL$$ 
+\textit{Example.} Say we want to choose labor input $L$ to maximize profit \[\max_L \quad\pi(L, w) = \ln L-wL\] 
 Here, $w$ is the wage rate. Writing the first-order condition:
-$$ \pi_L = \frac{1}{L}-w = 0 \rightarrow L^* = \frac{1}{w} $$
+\[ \pi_L = \frac{1}{L}-w = 0 \rightarrow L^* = \frac{1}{w} \]
 Since $L^*$ depends on $w$, we can write it as $L^*(w)$.
 
 Now, we are interested in how optimal profit changes with respect to changes in wages. To answer this question, we first write down the maximum value function, which here depends on $w$. 
-$$ V(w) = \pi(L^*(w), w) =  \ln L^*(w)-wL^*(w) $$
+\[ V(w) = \pi(L^*(w), w) =  \ln L^*(w)-wL^*(w) \]
 Now to see how $V(w)$ varies with $w$ we need the derivative of $V$ with respect to $w$. The envelope theorem says that this derivative is given by
-$$ V'(w) =  \pi_w(L^*(w), w) =-L^*(w) = -\frac{1}{w}$$
+\[ V'(w) =  \pi_w(L^*(w), w) =-L^*(w) = -\frac{1}{w}\]
 We can also verify this by plugging in $L^*(w)=1/w$ in the expression for $V(w)$ and then differentiating with respect to $w$.
-$$ V(w) =   \ln L^*(w)-wL^*(w) = \ln(1/w)-1 = \ln 1-\ln w-1 \rightarrow V'(w)=-\frac{1}{w}$$ 
+\[ V(w) =   \ln L^*(w)-wL^*(w) = \ln(1/w)-1 = \ln 1-\ln w-1 \rightarrow V'(w)=-\frac{1}{w}\] 
 
 The envelope theorem for constrained optimization problems is stated below. \\
 
 \fbox{\begin{minipage}{\textwidth}
 \textit{Envelope Theorem: Constrained Maximization} \\
-Consider the following constrained optimization problem $$ \max_{x,y} \quad  f(x, y ; \alpha) \quad \text{s.t.} \quad G(x, y ; \alpha)=0$$ 
+Consider the following constrained optimization problem \[ \max_{x,y} \quad  f(x, y ; \alpha) \quad \text{s.t.} \quad G(x, y ; \alpha)=0\] 
 Lagrangian function:
-$$
+\[
 L(x,y,\lambda; \alpha) =f(x, y ; \alpha)+\lambda G(x, y ; \alpha)
-$$
+\]
 As before, define the value function $V(\alpha)=f(x^*, y^* ; \alpha)$. Then the envelope theorem states,
-$$
-\frac{\partial V}{\partial \alpha}=\frac{\partial L(x^*, y^*, \lambda^*; \alpha)}{\partial \alpha} $$
+\[
+\frac{\partial V}{\partial \alpha}=\frac{\partial L(x^*, y^*, \lambda^*; \alpha)}{\partial \alpha} \]
 \end{minipage}} \\
 
 The above theorem directly implies interpretation of the lagrange multiplier. Say max $f(x, y)$ subject to $g(x, y)=c$ 
 Can think of the constraint as:
-$$ G(x,y,c)= c-g(x,y) $$
+\[ G(x,y,c)= c-g(x,y) \]
 So here $c$ is the parameter $\alpha$. Now what happens due to change in $c$ to the value function is given by 
-$$
-\frac{\partial V}{\partial \alpha}=\frac{\partial L(x^*, y^*, \lambda^*; \alpha)}{\partial \alpha} = \lambda^*$$ \\
+\[
+\frac{\partial V}{\partial \alpha}=\frac{\partial L(x^*, y^*, \lambda^*; \alpha)}{\partial \alpha} = \lambda^*\] \\
 
 \textit{Example}. We want to maximize the utility function $U(x_1,x_2)=x_1 x_2$ subject to the budget constraint $p_1 x_1 + p_2 x_2 = m$, where $m$ is the total income. We are interested in how the total utility changes due to a change in price of good 1. 
 
 Setting up the Lagrangian: 
-$$
+\[
 L(x_1,x_2,\lambda) =x_1 x_2 + \lambda(m-p_1x_1-p_2x_2)
-$$
+\]
 First-order conditions:
 \begin{align}
 	L_{1} &= x_2-\lambda p_1=0 \\
@@ -315,10 +315,10 @@ First-order conditions:
 	L_{\lambda} &= m-p_1x_1-p_2x_2 = 0
 \end{align}
 Equations (4) and (5) imply that $x_2/x_1 = p_1/p_2$. Plugging $x_2 = p_1x_1/p_2$ in equation (6):
-$$m-p_1x_1-p_2x_2 = m-p_1x_1-p_1x_1 \rightarrow x_1^*=\frac{m}{2p_1},x_2^*=\frac{m}{2p_2}, \lambda^* = \frac{m}{2p_1 p_2}  $$
-Denote $L^*=L(x_1^*,x_2^*,\lambda^*)$. Then according to the envelope theorem how optimal utility changes with respect to $p_1$ is given by $$ \frac{\partial L^*}{\partial p_1} = -\lambda^* x_1^* = - \frac{m^2}{4p_1^2 p_2}$$
+\[m-p_1x_1-p_2x_2 = m-p_1x_1-p_1x_1 \rightarrow x_1^*=\frac{m}{2p_1},x_2^*=\frac{m}{2p_2}, \lambda^* = \frac{m}{2p_1 p_2}  \]
+Denote $L^*=L(x_1^*,x_2^*,\lambda^*)$. Then according to the envelope theorem how optimal utility changes with respect to $p_1$ is given by \[ \frac{\partial L^*}{\partial p_1} = -\lambda^* x_1^* = - \frac{m^2}{4p_1^2 p_2}\]
 
 We can verify that this is true as:
-$$ V(p_1,p_2,m) = x_1^* x_2^* = \frac{m^2}{4p_1 p_2} \rightarrow \frac{\partial V}{\partial p_1} = - \frac{m^2}{4p_1^2 p_2}$$
+\[ V(p_1,p_2,m) = x_1^* x_2^* = \frac{m^2}{4p_1 p_2} \rightarrow \frac{\partial V}{\partial p_1} = - \frac{m^2}{4p_1^2 p_2}\]
 
 \end{document}

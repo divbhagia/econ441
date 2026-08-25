@@ -1,0 +1,29 @@
+<script>
+// Reflow (WCAG 1.4.10) + keyboard access (2.1.1) for equations.
+// A display equation gets overflow-x:auto in styles.css. Long *inline*
+// equations can also poke past a narrow viewport; those get the same
+// treatment here, but only the actual offenders -- overflow on an
+// inline-block shifts its baseline, so a blanket rule would misalign
+// every inline equation on the site. Scrollable equations get a tab stop
+// so keyboard users can reach and scroll them.
+(function () {
+  function fix() {
+    var vw = document.documentElement.clientWidth;
+    document.querySelectorAll('mjx-container').forEach(function (m) {
+      if (m.getBoundingClientRect().right > vw + 1) m.classList.add('mjx-scroll');
+      if (m.scrollWidth > m.clientWidth + 1) {
+        m.setAttribute('tabindex', '0');
+        m.setAttribute('role', 'group');
+        m.setAttribute('aria-label', 'Scrollable equation');
+      }
+    });
+  }
+  window.addEventListener('load', fix);
+  document.addEventListener('toggle', function (e) {
+    if (e.target.tagName === 'DETAILS') fix();
+  }, true);
+  var t; window.addEventListener('resize', function () {
+    clearTimeout(t); t = setTimeout(fix, 250);
+  });
+})();
+</script>

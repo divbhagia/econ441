@@ -1,0 +1,22 @@
+<script>
+// Accessibility fixes for chrome that reveal.js and its menu plugin generate at
+// runtime, so it cannot be fixed in the page source:
+//  - the viewport meta ships user-scalable=no (fails WCAG 1.4.4: zoom blocked)
+//  - the menu button is an icon-only link with no accessible name (2.4.4/4.1.2)
+//  - menu panels scroll but are not keyboard-focusable (2.1.1)
+(function () {
+  var meta = document.querySelector('meta[name="viewport"]');
+  if (meta) meta.setAttribute('content', 'width=device-width, initial-scale=1.0');
+  function fix() {
+    document.querySelectorAll('.slide-menu-button a').forEach(function (a) {
+      if (!a.getAttribute('aria-label')) a.setAttribute('aria-label', 'Slide menu');
+    });
+    document.querySelectorAll('.slide-menu-panel').forEach(function (p) {
+      if (!p.hasAttribute('tabindex')) p.setAttribute('tabindex', '0');
+    });
+  }
+  fix();
+  window.addEventListener('load', fix);
+  setTimeout(fix, 1500);
+})();
+</script>

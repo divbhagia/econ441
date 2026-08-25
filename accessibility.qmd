@@ -1,0 +1,42 @@
+---
+title: "Accessibility"
+sidebar: false
+toc: false
+---
+
+This site is designed to conform to the [Web Content Accessibility Guidelines
+(WCAG) 2.1, Level AA](https://www.w3.org/TR/WCAG21/), the standard adopted by
+the U.S. Department of Justice for state and local government web content under
+Title II of the ADA (28 CFR Part 35).
+
+**What that looks like here:**
+
+-   Pages are semantic HTML with proper headings, landmarks, and labels, and
+    work with keyboard navigation and screen readers.
+-   Mathematics is rendered as MathML, so screen readers can read equations
+    term by term rather than encountering an image.
+-   Figures carry text descriptions, tables carry header markup, and color is
+    never the only carrier of meaning. Text contrast meets or exceeds the
+    4.5:1 minimum.
+-   Pages reflow for small screens and zoom to 200% without horizontal
+    scrolling; wide tables and equations scroll within their own frame and are
+    keyboard-reachable.
+-   Every PDF on the site (worksheets, notes, slides, the syllabus) is
+    tagged and validated against the PDF/UA-2 standard with veraPDF.
+
+**Known limitation:** lecture slides are a visual, spatial format. They are
+keyboard-navigable and their content is available to screen readers, but slides
+are inherently harder to follow with assistive technology than ordinary pages.
+Each deck is also
+available as a tagged PDF (one slide per page, validated against PDF/UA-2),
+and the same material is always available in linear form -- module notes,
+worksheets, and practice pages -- via the
+[Content](content/preliminaries.qmd) pages.
+
+**If you hit a barrier** on this site or in any course material, please email
+me at [dbhagia@fullerton.edu](mailto:dbhagia@fullerton.edu) and I will fix it
+or provide the material in a form that works for you. For accommodations at
+CSUF more broadly, contact [Disability Support
+Services](https://www.fullerton.edu/dss/).
+
+*Last reviewed: August 2026.*

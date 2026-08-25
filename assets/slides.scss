@@ -195,5 +195,7 @@ $code-color: $gray;
 .reveal .figrow .column > p { margin-bottom: 0.25em; }
 
 .reveal .footer { font-size: 0.6em; color: $gray2; }
+// Reveal's default #848789 is 3.6:1 on white -- fails WCAG 1.4.3. 
+.reveal .slide-number { color: #595a5b; background-color: transparent; }
 .reveal .progress { color: $primary; }
 .reveal .controls { color: $primary; }

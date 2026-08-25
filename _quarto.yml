@@ -58,7 +58,7 @@ website:
           file: content/optimization.qmd
 
   page-footer:
-      2026 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
+      2026 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) | [Accessibility](accessibility.qmd) | Made with [Quarto](https://quarto.org/)
 
 format:
   html:
@@ -66,3 +66,4 @@ format:
     toc: true
     link-external-newwindow: true
     css: assets/styles.css
+    include-after-body: assets/site-a11y.html

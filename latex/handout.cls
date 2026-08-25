@@ -14,7 +14,14 @@
 \pagestyle{fancy}
 
 % Custom Header: Title
+% Tagging (PDF/UA-2): the \framebox{\vbox{...}} produces paragraphs nested
+% inside a paragraph, which veraPDF rejects (Table 5, P-P). Paragraph tagging
+% is switched off inside the box so the header tags as a single <P>. The
+% \hypersetup line writes the title into the XMP metadata (dc:title, clause
+% 8.11.1 requires it).
 \newcommand{\myheader}[1]{%
+\hypersetup{pdftitle={#1}}%
+\tagpdfparaOff
 \begin{center}
   \framebox{
     \vbox{
@@ -25,6 +32,7 @@
       }
     }
 \end{center}	
+\tagpdfparaOn
 %\vspace{1em}
 }
 
@@ -62,8 +70,12 @@
 \renewcommand{\thesection}{\arabic{section}} 
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} 
 \sectionfont{\large \normalfont \sc}
-\subsectionfont{\fontsize{13}{1} \normalfont \textit}
-\subsubsectionfont{\fontsize{12}{1} \normalfont \textit}
+% \itshape, not \textit: sectsty prepends these tokens to the heading, and
+% \textit takes an argument -- it swallows the heading machinery, so under
+% tagging the H2 structure never closes and everything after nests inside it
+% (veraPDF: Hn shall not contain P/Part/Hn/...). A font *switch* is safe.
+\subsectionfont{\fontsize{13}{1} \normalfont \itshape}
+\subsubsectionfont{\fontsize{12}{1} \normalfont \itshape}
 
 % Itemize
 \newenvironment{witemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
@@ -81,3 +93,20 @@
 \setstretch{1.15} 								          % Line Space
 \RequirePackage[margin=1.15in]{geometry} 		% Margins
 
+% For pdftitle metadata (PDF/UA-2 requires dc:title). Loaded last, links hidden.
+\RequirePackage[hidelinks]{hyperref}
+
+% ToUnicode mappings for extensible-symbol pieces that newtx's txexs font
+% leaves unmapped (PDF/UA-2 clause 8.4.5.8 requires every used glyph to map
+% to Unicode). These are construction pieces of big parens and vertical bars.
+\ifdefined\pdfglyphtounicode\else
+  \protected\def\pdfglyphtounicode{\pdfextension glyphtounicode }
+\fi
+\pdfglyphtounicode{barex}{007C}
+\pdfglyphtounicode{parenlefttpA}{0028}
+\pdfglyphtounicode{parenleftexA}{0028}
+\pdfglyphtounicode{parenleftbtA}{0028}
+\pdfglyphtounicode{parenrighttpA}{0029}
+\pdfglyphtounicode{parenrightexA}{0029}
+\pdfglyphtounicode{parenrightbtA}{0029}
+\pdfglyphtounicode{bracehext}{23AA}
