@@ -10,11 +10,6 @@ format:
       - ../../assets/section-slides.lua
 ---
 
-## Today's Topics & References
--   Relations and functions (sections 2.4-2.6, page 163)
--   Summation notation (handout)
--   Necessary and sufficient conditions (beginning of 5.1)
-
 ## Relations
 
 Relation: subset of the Cartesian product

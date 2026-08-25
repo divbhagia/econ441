@@ -163,7 +163,7 @@ $code-color: $gray;
 // every list centres its equations on a different axis -- two equations on the
 // same slide visibly disagree. Full-width lists put them all on one axis.
 .reveal .slides section ul,
-.reveal .slides section ol { display: block; width: 100%; }
+.reveal .slides section ol { display: block; width: calc(100% - 1em); }  // reveal gives lists margin-left: 1em
 .reveal .math.display {
   margin-top: 0.2em !important;
   margin-bottom: 0.2em !important;

@@ -69,11 +69,7 @@ format:
 
 ::: {.fragment}
 -   Subset ($\subset$) $$C = \{pizza, ramen\}$$ $C \neq A$ but
-    $C \subset A$. Note: $A \supset C$ is equivalent.
-:::
-
-::: {.fragment}
-*Is $A \subset B$?*
+    $C \subset A$. Note: $A \supset C$ is equivalent. [*Is $A \subset B$?*]{.fragment}
 :::
 
 ## Set Relations
@@ -93,14 +89,11 @@ format:
 
 ::: {.fragment}
 -   What are all possible subsets of $S = \{a,b,c\}$?
-:::
 
-::: {.fragment}
-$\emptyset, \{a\}, \{b\},\{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}$
-:::
-
-::: {.fragment}
-Always $2^n$ subsets. Here $n=3$, so 8 subsets.
+    ::: {.incremental}
+    -   $\emptyset, \{a\}, \{b\},\{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}$
+    -   Always $2^n$ subsets. Here $n=3$, so 8 subsets.
+    :::
 :::
 
 ## Set Operations
@@ -109,12 +102,10 @@ Always $2^n$ subsets. Here $n=3$, so 8 subsets.
 
 -   *Intersection:* $A \cap B$, elements in both $A$ *and* $B$
 
-Example: $$A = \{brownies, icecream, pizza, ramen\}$$
-$$B = \{salad, fruits, icecream\}$$
-
-$A \cup B =$
-
-$A \cap B =$
+-   Example: $$A = \{brownies, icecream, pizza, ramen\}$$
+    $$B = \{salad, fruits, icecream\}$$
+    -   $A \cup B =$<br>&nbsp;
+    -   $A \cap B =$
 
 ## Set Operations
 
@@ -122,12 +113,10 @@ $A \cap B =$
 
 -   *Intersection:* $A \cap B$, elements in both $A$ and $B$
 
-What about $$A = \{brownies, icecream, pizza, ramen\}$$
-$$B = \{salad, fruits\}$$
-
-$A \cup B =$
-
-$A \cap B =$
+-   What about $$A = \{brownies, icecream, pizza, ramen\}$$
+    $$B = \{salad, fruits\}$$
+    -   $A \cup B =$<br>&nbsp;
+    -   $A \cap B =$
 
 ## Set Operations
 
@@ -209,8 +198,7 @@ $A \cup C$
     $$(a,b) \neq (b,a) \text{ unless } a=b$$
 
 -   Ordered pairs, triples,...
-
-Example. $(age, weight)$, $(22,120)$ different from $(120,22)$
+    -   Example. $(age, weight)$, $(22,120)$ different from $(120,22)$
 
 ## Cartesian Product
 
@@ -234,5 +222,5 @@ What is $x^2 \times x$?
 What is $x^2 \times x^2$?
 
 ::: {.fragment}
-More generally, $x^n \times x^m = x^{m+n}$
+More generally, $x^n \times x^m = x^{m+n}$.
 :::

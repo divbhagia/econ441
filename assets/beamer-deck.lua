@@ -16,12 +16,13 @@ local function tex_escape(s)
   return (s:gsub('\\', '\\textbackslash{}'):gsub('([{}%%&#_%$])', '\\%1'))
 end
 
--- Quarto's widths are bare pixel counts relative to reveal's 1080px canvas;
+-- Quarto's widths are bare pixel counts relative to reveal's 1280px canvas
+-- (width: 1280 in content/slides/_metadata.yml);
 -- map them to the same fraction of the frame's text width. (\paperwidth: a reveal pixel width is a fraction of the full 1080px canvas, and
 -- \paperwidth is the only unit ltx-talk keeps stable inside columns.)
 local function to_length(v)
   local n = v:match('^(%d+%.?%d*)$')
-  if n then return string.format('%.3f\\paperwidth', tonumber(n) / 1080) end
+  if n then return string.format('%.3f\\paperwidth', tonumber(n) / 1280) end
   return v
 end
 
@@ -113,4 +114,18 @@ function Pandoc(doc)
   space_lists(doc.blocks, 0)
   doc.blocks = space_between_lists(doc.blocks)
   return doc
+end
+
+-- `::: {.columns .figrow}` rows of labelled diagrams (see assets/slides.scss):
+-- centre each column's label over its figure, and give the row some air
+-- above, as the web deck does.
+function Div(el)
+  if el.classes:includes('figrow') then
+    for _, col in ipairs(el.content) do
+      if col.t == 'Div' and col.classes:includes('column') then
+        col.content:insert(1, pandoc.RawBlock('latex', '\\centering'))
+      end
+    end
+    return { pandoc.RawBlock('latex', '\\vspace{0.8em}'), el }
+  end
 end

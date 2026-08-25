@@ -1,6 +1,10 @@
 format:
   revealjs:
     embed-resources: true
+    # Same canvas as the ECON 201 decks: 16:9 at 1280x720 with a moderate margin.
+    width: 1280
+    height: 720
+    margin: 0.08
     include-after-body: ../../assets/slides-a11y.html
     footer: "ECON 441 · Introduction to Mathematical Economics"
     pdf-separate-fragments: false
