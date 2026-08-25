@@ -17,8 +17,11 @@ format:
 
 ## Relations
 
-Relation: subset of the Cartesian product Example.
-$\{(x,y) | y \leq x \}$
+Relation: subset of the Cartesian product
+
+Example. $\{(x,y) | y \leq x \}$
+
+![](../../assets/cartesian-plane.svg){.nostretch fig-alt="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" width=380}
 
 ## Functions
 
@@ -140,31 +143,49 @@ possible values $x$, we can simply write $$\sum_x x$$
 
 $q$ is a necessary condition for $p$ if: $$p \implies q$$
 
-$p$: I ate tofu for dinner $q$: My dinner had protein
+::: {.fragment}
+$p$: I ate tofu for dinner
+
+$q$: My dinner had protein
+:::
 
 ## Necessary vs. Sufficient Conditions
 
 $q$ is a sufficient condition for $p$ if: $$p \impliedby q$$
 
-$p$: A number is even $q$: A number is divisible by 4
+::: {.fragment}
+$p$: A number is even
+
+$q$: A number is divisible by 4
+:::
 
 ## Necessary vs. Sufficient Conditions
 
 $q$ is both necessary and sufficient for $p$ $$p \iff q$$
 
-$p$: A number is even $q$: A number is divisible by 2
+::: {.fragment}
+$p$: A number is even
+
+$q$: A number is divisible by 2
+:::
 
 ## Necessary vs. Sufficient Conditions
 
-$p$: It is a holiday $q$: It is Thanksgiving
+$p$: It is a holiday
+
+$q$: It is Thanksgiving
 
 ## Necessary vs. Sufficient Conditions
 
-$p$: The car is out of gas $q$: The car isn't starting
+$p$: The car is out of gas
+
+$q$: The car isn't starting
 
 ## Necessary vs. Sufficient Conditions
 
-$p$: A geometric figure has four sides $q$: It is a rectangle
+$p$: A geometric figure has four sides
+
+$q$: It is a rectangle
 
 ## Homework Questions
 

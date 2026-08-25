@@ -25,11 +25,13 @@ format:
 
 -   *Integers*: $$...,-3,-2,-1,0,1,2,3,...$$
 
+:::: {.incremental}
 -   *Fractions*: $$\frac{1}{2}, \frac{3}{5}, -\frac{2}{3}$$
 
 -   *Rational numbers*: ratio of integers
 
 -   *Are fractions rational numbers? What about integers?*
+::::
 
 ## Real-Number System
 
@@ -37,11 +39,15 @@ format:
     -   "terminating or repeating decimal"
     -   Example. $\frac{1}{3}=0.333$, $\frac{1}{4}=0.25$
 
+::: {.fragment}
 -   *Irrational numbers*: cannot be expressed as a ratio of two integers
     -   "nonterminating or nonrepeating decimal"
     -   Example. $\sqrt{2}=1.4142$, $\pi=3.1415$
+:::
 
+::: {.fragment}
 -   *Real numbers ($\mathbb{R}$)*: rational and irrational
+:::
 
 ## Sets
 
@@ -50,35 +56,56 @@ format:
 
 -   $pizza \in A$, $\in$ stands for 'is in'
 
+::: {.fragment}
 -   What about sets $B$ and $C$?
     $$B = \{x | x \text{ is a positive integer}\}$$
     $$C = \{x | 1<x<5\}$$
+:::
 
-## Set Relations
+## Set Relations {.smaller}
 
 -   Equivalence ($=$) $$A = \{brownies, icecream, pizza, ramen\}$$
     $$B = \{pizza, ramen, icecream, brownies\}$$ $$A = B$$
 
+::: {.fragment}
 -   Subset ($\subset$) $$C = \{pizza, ramen\}$$ $C \neq A$ but
-    $C \subset A$. Note: $A \supset C$ is equivalent. *Is $A \subset B$?
-    Yes, but $C$ is a proper subset of A.*
+    $C \subset A$. Note: $A \supset C$ is equivalent.
+:::
+
+::: {.fragment}
+*Is $A \subset B$?*
+:::
+
+::: {.fragment}
+*Yes, but $C$ is a proper subset of $A$.*
+:::
 
 ## Set Relations
 
 -   Disjoint sets $$A = \{brownies, icecream, pizza, ramen\}$$
     $$D = \{salad, fruits\}$$
 
+::: {.fragment}
 -   Neither but still related
     $$A = \{brownies, icecream, pizza, ramen\}$$
     $$E = \{salad, fruits, icecream\}$$
+:::
 
 ## Set Relations
 
 -   $\emptyset$: empty or null set
 
+::: {.fragment}
 -   What are all possible subsets of $S = \{a,b,c\}$?
-    -   $\emptyset, \{a\}, \{b\},\{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}$
-    -   Always $2^n$ subsets. Here $n=3$, so 8 subsets.
+:::
+
+::: {.fragment}
+$\emptyset, \{a\}, \{b\},\{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}$
+:::
+
+::: {.fragment}
+Always $2^n$ subsets. Here $n=3$, so 8 subsets.
+:::
 
 ## Set Operations
 
@@ -87,7 +114,11 @@ format:
 -   *Intersection:* $A \cap B$, elements in both $A$ *and* $B$
 
 Example: $$A = \{brownies, icecream, pizza, ramen\}$$
-$$B = \{salad, fruits, icecream\}$$ $A \cup B =$ $A \cap B =$
+$$B = \{salad, fruits, icecream\}$$
+
+$A \cup B =$
+
+$A \cap B =$
 
 ## Set Operations
 
@@ -96,7 +127,11 @@ $$B = \{salad, fruits, icecream\}$$ $A \cup B =$ $A \cap B =$
 -   *Intersection:* $A \cap B$, elements in both $A$ and $B$
 
 What about $$A = \{brownies, icecream, pizza, ramen\}$$
-$$B = \{salad, fruits\}$$ $A \cup B =$ $A \cap B =$
+$$B = \{salad, fruits\}$$
+
+$A \cup B =$
+
+$A \cap B =$
 
 ## Set Operations
 

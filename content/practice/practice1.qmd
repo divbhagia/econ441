@@ -4,7 +4,7 @@ subtitle: "Lecture 1: Numbers and Sets"
 format: html
 ---
 
-Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a **Show solution** toggle: try it yourself first, then expand to check.
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a **Solution** toggle: try it yourself first, then expand to check.
 
 <p>
 <a class="btn btn-outline-primary" href="practice1.pdf" target="_blank" rel="noopener" aria-label="Download problems for Practice Problems 1, PDF (opens in a new tab)" role="button">Download problems (PDF)</a>
@@ -19,7 +19,7 @@ Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These 
    b. The set of all real numbers greater than 8 but less than 65.
 
 <details class="solution">
-<summary>Show solution</summary>
+<summary>Solution</summary>
 
 a. $\{x \in \mathbb{R} \mid x>34\}$, or simply $\{x \mid x>34\}$
 b. $\{x \mid 8<x<65\}$
@@ -41,7 +41,7 @@ b. $\{x \mid 8<x<65\}$
    Note that $\mathbb{R}$ denotes the set of real numbers.
 
 <details class="solution">
-<summary>Show solution</summary>
+<summary>Solution</summary>
 
 (a), (d), (f), (g), and (h) are true.
 

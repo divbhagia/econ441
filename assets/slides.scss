@@ -118,6 +118,12 @@ $code-color: $gray;
 .reveal ul ul > li { list-style-type: circle; }
 .reveal ul ul ul > li { list-style-type: square; }
 
+// Space below a nested list, so the group it belongs to is clearly separated
+// from the next top-level bullet. Done on the nested list rather than with
+// :has() on the parent, because Quarto's scss compiler drops :has() rules.
+.reveal ul ul, .reveal ul ol,
+.reveal ol ul, .reveal ol ol { margin-bottom: 0.85em; }
+
 // One-idea slides: pair with `## Title {.center}` for vertical centring.
 .reveal .big { font-size: 1.3em; line-height: 1.4; }
 .reveal .dim, .reveal .figcap { color: $gray2; }
@@ -145,6 +151,8 @@ $code-color: $gray;
 // Math. Display equations sit tight against the line that introduces them,
 // which matters on slides that are mostly equations.
 .reveal .math { font-size: 1em; }
+.reveal .math.display,
+.reveal mjx-container[display="true"] { text-align: center; }
 .reveal .math.display {
   margin-top: 0.2em !important;
   margin-bottom: 0.2em !important;

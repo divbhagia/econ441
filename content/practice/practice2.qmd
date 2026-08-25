@@ -4,7 +4,7 @@ subtitle: "Lecture 2: Relations and Functions; Summation Notation; Necessary and
 format: html
 ---
 
-Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a **Show solution** toggle, and a few have one per part: try it yourself first, then expand to check.
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a **Solution** toggle, and a few have one per part: try it yourself first, then expand to check.
 
 <p>
 <a class="btn btn-outline-primary" href="practice2.pdf" target="_blank" rel="noopener" aria-label="Download problems for Practice Problems 2, PDF (opens in a new tab)" role="button">Download problems (PDF)</a>
@@ -16,7 +16,7 @@ Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These 
 **5.** If the domain of the function $y=5+3x$ is the set $\{x \mid 1 \leq x \leq 9\}$, find the range of the function and express it as a set.
 
 <details class="solution">
-<summary>Show solution</summary>
+<summary>Solution</summary>
 
 For this function, when $x=1$, $y=8$, and when $x=9$, $y=32$. So the range is
 $$ f(X) =\{y \mid 8 \leq y \leq 32\} $$
@@ -31,7 +31,7 @@ Note: it is *not* always the case that extreme values of the domain correspond t
    b. Should each level of output determine a unique cost figure?
 
 <details class="solution">
-<summary>Show solution</summary>
+<summary>Solution</summary>
 
 a. No
 b. Yes
@@ -41,7 +41,7 @@ b. Yes
 **8.** If an output level $Q_1$ can be produced at a cost of $C_1$, then it must also be possible (by being less efficient) to produce $Q_1$ at a cost of $C_1+\$1$, or $C_1+\$2$, and so on. Thus it would seem that output $Q$ does not uniquely determine total cost $C$. If so, to write $C=f(Q)$ would violate the definition of a function. How, in spite of this reasoning, would you justify the use of the function $C=f(Q)$?
 
 <details class="solution">
-<summary>Show solution</summary>
+<summary>Solution</summary>
 
 For each output level, we would want to produce at the *lowest* cost. The cost function $C=f(Q)$ records that minimum cost, which is unique.
 
@@ -54,7 +54,7 @@ For each output level, we would want to produce at the *lowest* cost. The cost f
 a. $y = 16 + 2x$
 
 <details class="solution part">
-<summary>Show (a)</summary>
+<summary>Solution</summary>
 
 $f^{-1}(y) = \dfrac{y-16}{2}$
 
@@ -65,7 +65,7 @@ $f^{-1}(y) = \dfrac{y-16}{2}$
 b. $y = 8-2x$
 
 <details class="solution part">
-<summary>Show (b)</summary>
+<summary>Solution</summary>
 
 $f^{-1}(y) = \dfrac{8-y}{2}$
 
@@ -76,7 +76,7 @@ $f^{-1}(y) = \dfrac{8-y}{2}$
 c. $y = 2x+12$
 
 <details class="solution part">
-<summary>Show (c)</summary>
+<summary>Solution</summary>
 
 $f^{-1}(y) = \dfrac{y-12}{2}$
 
@@ -95,7 +95,7 @@ $f^{-1}(y) = \dfrac{y-12}{2}$
    e. $\sum_{i=0}^3(x+i)^2$
 
 <details class="solution">
-<summary>Show solution</summary>
+<summary>Solution</summary>
 
 a. $x_{2}+x_{3}+x_{4}+x_{5}$
 b. $a_{5} x_{5}+a_{6} x_{6}+a_{7} x_{7}+a_{8} x_{8}$
@@ -110,7 +110,7 @@ e. $x^{2}+(x+1)^{2}+(x+2)^{2}+(x+3)^{2}$
 a. $\left(\sum_{i=0}^n x_i\right)+x_{n+1}=\sum_{i=0}^{n+1} x_i$
 
 <details class="solution part">
-<summary>Show (a)</summary>
+<summary>Solution</summary>
 
 $$ \left(\sum_{i=0}^{n} x_{i} \right)+x_{n+1} = x_{0}+x_{1}+x_{2}+\ldots+x_{n+1} = \sum_{i=0}^{n+1} x_{i} $$
 
@@ -119,7 +119,7 @@ $$ \left(\sum_{i=0}^{n} x_{i} \right)+x_{n+1} = x_{0}+x_{1}+x_{2}+\ldots+x_{n+1}
 b. $\sum_{j=1}^n a b_j y_j=a \sum_{j=1}^n b_j y_j$
 
 <details class="solution part">
-<summary>Show (b)</summary>
+<summary>Solution</summary>
 
 $$ \begin{aligned}
 \sum_{j=1}^{n} a b_{j} y_{j} &= a b_{1} y_{1}+a b_{2} y_{2}+\ldots+a b_{n} y_{n} \\
@@ -132,7 +132,7 @@ $$ \begin{aligned}
 c. $\sum_{j=1}^n\left(x_j+y_j\right)=\sum_{j=1}^n x_j+\sum_{j=1}^n y_j$
 
 <details class="solution part">
-<summary>Show (c)</summary>
+<summary>Solution</summary>
 
 $$ \begin{aligned}
 \sum_{j=1}^{n}\left(x_{j}+y_{j}\right)
@@ -156,7 +156,7 @@ $$ \begin{aligned}
    g. The letter is returned to the sender with the marking "addressee unknown"; the sender wrote the wrong address on the envelope.
 
 <details class="solution">
-<summary>Show solution</summary>
+<summary>Solution</summary>
 
 a. $q \implies p$
 b. $q \implies p$
