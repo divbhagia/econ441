@@ -6,6 +6,10 @@ format: html
 
 See the [Schedule](../schedule.qmd) for dates and assessments.
 
+Practice problems for this module, collected:
+<a class="btn btn-outline-primary btn-sm" href="practice/practice-preliminaries.pdf" target="_blank" rel="noopener" aria-label="Practice problems for the Preliminaries module, PDF (opens in a new tab)" role="button">Problems (PDF)</a>
+<a class="btn btn-outline-primary btn-sm" href="practice/practice-preliminaries_solutions.pdf" target="_blank" rel="noopener" aria-label="Solutions for the Preliminaries module practice problems, PDF (opens in a new tab)" role="button">Solutions (PDF)</a>
+
 ::: {.lecture style="font-size:1.1rem"}
 <h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 1: Course Introduction; Numbers and Sets</h2>
 

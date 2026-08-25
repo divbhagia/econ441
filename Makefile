@@ -2,8 +2,8 @@
 #
 #   make syllabus   regenerate the schedule, rebuild the syllabus PDF
 #   make pdfs       recompile handouts, practice problems, module notes
-#   make site       rebuild the website into docs/ (runs the audit at the end)
-#   make audit      WCAG 2.1 AA check of docs/ (axe-core + reflow + veraPDF); fails loudly
+#   make site       rebuild the website into docs/
+#   make audit      WCAG 2.1 AA check of docs/ (axe-core + reflow + veraPDF); run before publishing
 #   make slides-pdf tagged-PDF decks (ltx-talk) from the same slide sources
 #   make            all of the above
 #
@@ -34,14 +34,14 @@ syllabus:
 # copies them into docs/ on its own.
 pdfs:
 	@echo "==> handouts, practice problems, notes"
-	@for f in content/handouts/*.tex content/practice/*.tex $(NOTES).tex; do \
+	@for f in content/handouts/*.tex content/practice/practice-*.tex $(NOTES).tex; do \
 	  [ -e "$$f" ] || continue; \
 	  d=$$(dirname "$$f"); b=$$(basename "$$f" .tex); \
 	  (cd "$$d"; lualatex -interaction=nonstopmode "$$b.tex" >/dev/null 2>&1; \
 	             lualatex -interaction=nonstopmode "$$b.tex" >/dev/null 2>&1; \
 	   rm -f "$$b".{$(AUX)}); \
 	done
-	@echo "    $$(ls content/handouts/*.pdf content/practice/*.pdf $(NOTES).pdf 2>/dev/null | wc -l | tr -d ' ') PDFs"
+	@echo "    $$(ls content/handouts/*.pdf content/practice/practice-*.pdf $(NOTES).pdf 2>/dev/null | wc -l | tr -d ' ') PDFs"
 
 site:
 	@echo "==> schedule table (feeds the web page)"
@@ -58,11 +58,11 @@ site:
 	@sleep 15
 	@find docs -name "*conflicted copy*" -exec rm -rf {} + 2>/dev/null || true
 	@echo "    pages: $$(find docs -name '*.html' ! -path '*site_libs*' | wc -l | tr -d ' ')"
-	@$(MAKE) audit
 
-# Every page must meet WCAG 2.1 AA (DOJ Title II rule, 28 CFR 35.200; CSUF
-# deadline 2027-04-26). Runs automatically at the end of `make site`, so a
-# build that introduces a violation announces itself immediately.
+# Every page and PDF must meet WCAG 2.1 AA / PDF/UA-2 (DOJ Title II rule,
+# 28 CFR 35.200; CSUF deadline 2027-04-26). Separate from `site` because it
+# takes several minutes (Chromium over every page, a JVM over every PDF):
+# run it before pushing, and after any new material.
 audit:
 	@echo "==> accessibility audit (WCAG 2.1 AA + PDF/UA-2)"
 	@python3 scripts/audit_a11y.py

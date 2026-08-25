@@ -230,6 +230,7 @@ table.schedule-table tbody tr:last-child > * { border-bottom: none; }
 
 /* Office-hours list on the home page: tight against the "Office hours:" line.
    (A div + markdown list; a raw <ul> around list items emits invalid nesting.) */
+.office-hours { margin-top: -0.9rem; }   /* pull up against "Office hours:" */
 .office-hours ul { margin-top: 0; margin-bottom: 0.5em; }
 
 /* Reflow (WCAG 1.4.10): images never force the page wider than the viewport,
@@ -252,3 +253,7 @@ mjx-container.mjx-scroll {
   overflow-y: hidden;
   vertical-align: middle;
 }
+
+/* Material buttons on the module pages: four per lecture now (slides, PDF
+   slides, worksheet, practice), so they run smaller than Bootstrap's default. */
+div.lecture .btn { font-size: 0.9rem; padding: 0.2em 0.6em; }

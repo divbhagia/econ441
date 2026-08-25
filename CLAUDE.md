@@ -42,8 +42,9 @@ any new or edited material:
 
 `make audit` checks every built page and PDF: axe-core (WCAG 2.1 A/AA), a
 reflow check at 320px, and veraPDF PDF/UA-2 validation of every PDF in docs/.
-It runs automatically at the end of `make site` and exits nonzero on any
-failure — **a build is not done until the audit passes.** The audit script is
+It is a separate target (it takes several minutes) and exits nonzero on any
+failure — **run `make audit` after `make site` and before pushing; nothing
+is published until it passes.** The audit script is
 `scripts/audit_a11y.py` (axe vendored at `scripts/axe.min.js`; verapdf via
 Homebrew).
 
@@ -76,3 +77,12 @@ Known gotchas that caused real failures before:
 
 `schedule.qmd` is generated — edit `syllabus/create_schedule.py`, not the qmd.
 The same script emits `syllabus/schedule.tex` for the syllabus PDF.
+
+## Practice problems
+
+HTML practice pages are per lecture (`content/practice/practiceN.qmd`). PDFs
+are per **module**: `content/practice/practice-<module>.tex` stitches the
+per-lecture bodies (`practiceN-body.tex`, `practiceN_solutions-body.tex`)
+under one header; `make pdfs` builds only those. When a new lecture's practice
+set is published, add its body to the module file (and split its wrapper the
+same way if it still has the content inline).
