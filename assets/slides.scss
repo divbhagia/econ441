@@ -153,6 +153,12 @@ $code-color: $gray;
 .reveal .math { font-size: 1em; }
 .reveal .math.display,
 .reveal mjx-container[display="true"] { text-align: center; }
+// Reveal sets lists to inline-block so it can centre them, which shrinks each
+// list to its own widest line. With display maths inside a bullet that means
+// every list centres its equations on a different axis -- two equations on the
+// same slide visibly disagree. Full-width lists put them all on one axis.
+.reveal .slides section ul,
+.reveal .slides section ol { display: block; width: 100%; }
 .reveal .math.display {
   margin-top: 0.2em !important;
   margin-bottom: 0.2em !important;

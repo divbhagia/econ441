@@ -57,12 +57,12 @@ format:
 -   $pizza \in A$, $\in$ stands for 'is in'
 
 ::: {.fragment}
--   What about sets $B$ and $C$?
+-   Other ways of writing a set
     $$B = \{x | x \text{ is a positive integer}\}$$
     $$C = \{x | 1<x<5\}$$
 :::
 
-## Set Relations {.smaller}
+## Set Relations
 
 -   Equivalence ($=$) $$A = \{brownies, icecream, pizza, ramen\}$$
     $$B = \{pizza, ramen, icecream, brownies\}$$ $$A = B$$
@@ -74,10 +74,6 @@ format:
 
 ::: {.fragment}
 *Is $A \subset B$?*
-:::
-
-::: {.fragment}
-*Yes, but $C$ is a proper subset of $A$.*
 :::
 
 ## Set Relations
@@ -231,5 +227,12 @@ Can have $\mathbb{R}^3, \mathbb{R}^4,...,\mathbb{R}^n$
 
 ## By the way
 
-What is $x \times x$? What is $x^2 \times x$? What is $x^2 \times x^2$?
+What is $x \times x$?
+
+What is $x^2 \times x$?
+
+What is $x^2 \times x^2$?
+
+::: {.fragment}
 More generally, $x^n \times x^m = x^{m+n}$
+:::
