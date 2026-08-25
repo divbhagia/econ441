@@ -96,7 +96,11 @@ $code-color: $gray;
   margin-top: 0.35em;
   margin-bottom: 0;
 }
-.reveal ul > li, .reveal ol > li { margin-bottom: 0.35em; }
+// Quarto ships `.reveal .slide ul li { margin-top: .4em; margin-bottom: .2em }`,
+// which outranks a plain `.reveal ul > li` -- so list spacing has to be written
+// at least as specifically or it silently does nothing.
+.reveal .slides .slide ul > li,
+.reveal .slides .slide ol > li { margin-top: 0.4em; margin-bottom: 0.5em; }
 .reveal h1 + ul, .reveal h1 + ol,
 .reveal h2 + ul, .reveal h2 + ol,
 .reveal h3 + ul, .reveal h3 + ol,
@@ -113,16 +117,17 @@ $code-color: $gray;
   margin-bottom: 0.25em;
   font-size: 0.9em;
 }
-.reveal ul ul > li, .reveal ul ol > li,
-.reveal ol ul > li, .reveal ol ol > li { margin-bottom: 0.2em; }
+// Sub-points stay tight; same specificity dance as above.
+.reveal .slides .slide ul ul > li, .reveal .slides .slide ul ol > li,
+.reveal .slides .slide ol ul > li, .reveal .slides .slide ol ol > li {
+  margin-top: 0.2em; margin-bottom: 0.2em;
+}
 .reveal ul ul > li { list-style-type: circle; }
 .reveal ul ul ul > li { list-style-type: square; }
 
-// Space below a nested list, so the group it belongs to is clearly separated
-// from the next top-level bullet. Done on the nested list rather than with
-// :has() on the parent, because Quarto's scss compiler drops :has() rules.
-.reveal ul ul, .reveal ul ol,
-.reveal ol ul, .reveal ol ol { margin-bottom: 0.85em; }
+// A nested list cannot carry its own bottom margin -- Quarto zeroes it with
+// `.reveal .slide ul li > *:last-child { margin-block-end: 0 }`. The gap after a
+// group comes from the parent item's margin-bottom instead.
 
 // One-idea slides: pair with `## Title {.center}` for vertical centring.
 .reveal .big { font-size: 1.3em; line-height: 1.4; }
