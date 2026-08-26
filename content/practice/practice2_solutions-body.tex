@@ -2,9 +2,9 @@
 
 \begin{enumerate}
 \item[5.] We are given the function $y=5+3x$ with domain $X = \{x | 1 \leq x \leq 9 \}$. Note that for this function, when $x=1$, $y=8$ and when $x=9$, $y=32$. So the range for this function is:
-$$
+\[
 f(X) =\{y \mid 8 \leq y \leq 32\}
-$$
+\]
 Note: It is not always the case that extreme values of the domain correspond to extreme values of the range. For example, consider $y=x^{2}$ with domain $\{x \mid-2 \leq x \leq 2\}$, the range here is $\{y \mid 0 \leq y \leq 4\}$.
 
 \item[7.] (a) No, (b) Yes
@@ -14,53 +14,75 @@ Note: It is not always the case that extreme values of the domain correspond to 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercise 2.5
 \newpage
 
+\underline{Exercise $2.5$}
 
-\underline{Exercise $2.5$} 
+% Shared look for the three line plots: axes through the origin, the axis
+% labels parked at the far end of each axis (ticklabel* cs needs compat>=1.3;
+% these are the only pgfplots pictures in this file, so setting it here is
+% safe), and the intercepts marked.
+\pgfplotsset{compat=1.18}
+\definecolor{plotline}{HTML}{912040}
+\pgfplotsset{
+  hwline/.style={
+    axis lines=middle,
+    width=6.6cm, height=3.6cm,
+    scale only axis,
+    xlabel={$x$}, ylabel={$y$},
+    every axis x label/.style={at={(ticklabel* cs:1.0)}, anchor=west},
+    every axis y label/.style={at={(ticklabel* cs:1.0)}, anchor=south},
+    label style={font=\small}, tick label style={font=\small},
+    axis line style={-latex, line width=0.3pt},
+    tick style={line width=0.3pt},
+    enlargelimits=false,
+  },
+  hwplot/.style={color=plotline, line width=0.5mm, samples=2},
+  hwdot/.style={only marks, mark=*, mark size=1.8pt, color=plotline},
+}
+
 \begin{enumerate}
-	
 \item Graph the following functions and find their inverse.
-\definecolor{mycolor}{RGB}{145,0,0}
-
-\begin{multicols}{2}
 \begin{enumerate}\renewcommand{\labelenumi}{\alph{enumi})}
-\item $\begin{aligned} y = 16 + 2x, \quad  f^{-1}(y) = \frac{y-16}{2} \end{aligned}$ 
 
-\vspace{1em}
+\item $y = 16 + 2x$, \quad $f^{-1}(y) = \dfrac{y-16}{2}$
 
-\tagstructbegin{tag=Figure,alt={Graph of the straight line y equals 16 plus 2x, an upward-sloping line crossing the y-axis at 16}}\tagmcbegin{}
-\begin{tikzpicture}[scale=0.85]
-\begin{axis}[axis lines = center, xlabel = \(x\), ylabel = \(y\), ytick distance=8, xtick distance=4, extra x ticks = {0}, xlabel style={at={(axis description cs:0.8,1.05)}, anchor=north}, ylabel style={at={(axis description cs:1.05,0.3)}, anchor=north}]
-\addplot [domain=-9:1, samples=100, color=mycolor, line width = 0.4mm]
-{16 + 2*x};
+\nopagebreak
+\tagstructbegin{tag=Figure,alt={Graph of the straight line y equals 16 plus 2x: an upward-sloping line with slope 2, crossing the y-axis at 16 and the x-axis at negative 8}}\tagmcbegin{}
+\begin{tikzpicture}
+\begin{axis}[hwline, xmin=-11, xmax=3, ymin=-6, ymax=22,
+             xtick={-8,-4}, ytick={8,16}]
+\addplot [hwplot, domain=-11:3] {16 + 2*x};
+\addplot [hwdot] coordinates {(-8,0) (0,16)};
 \end{axis}
 \end{tikzpicture}
 \tagmcend\tagstructend
-\item $ \begin{aligned} y = 8-2x \quad  f^{-1}(y) = \frac{8-y}{2}\end{aligned}$ 
 
-\vspace{1em}
+\item $y = 8 - 2x$, \quad $f^{-1}(y) = \dfrac{8-y}{2}$
 
-\tagstructbegin{tag=Figure,alt={Graph of the straight line y equals 8 minus 2x, a downward-sloping line crossing the y-axis at 8}}\tagmcbegin{}
-\begin{tikzpicture}[scale=0.85]
-\begin{axis}[axis lines = center, xlabel = \(x\), ylabel = \(y\), ytick distance=4, xtick distance=2, extra x ticks = {0}, xlabel style={at={(axis description cs:0.25,1.05)}, anchor=north}, ylabel style={at={(axis description cs:1.05,0.4)}, anchor=north}]
-\addplot [domain=-1:5, samples=100, color=mycolor, line width = 0.4mm]
-{8-2*x};
+\nopagebreak
+\tagstructbegin{tag=Figure,alt={Graph of the straight line y equals 8 minus 2x: a downward-sloping line with slope negative 2, crossing the y-axis at 8 and the x-axis at 4}}\tagmcbegin{}
+\begin{tikzpicture}
+\begin{axis}[hwline, xmin=-2, xmax=7, ymin=-6, ymax=12,
+             xtick={2,4,6}, ytick={4,8}]
+\addplot [hwplot, domain=-2:7] {8 - 2*x};
+\addplot [hwdot] coordinates {(4,0) (0,8)};
 \end{axis}
 \end{tikzpicture}
 \tagmcend\tagstructend
-\item $\begin{aligned} y = 2x+12 \quad  f^{-1}(y) = \frac{y-12}{2}\end{aligned}$ 
 
-\vspace{1em}
+\item $y = 2x + 12$, \quad $f^{-1}(y) = \dfrac{y-12}{2}$
 
-\tagstructbegin{tag=Figure,alt={Graph of the straight line y equals 2x plus 12, an upward-sloping line crossing the y-axis at 12}}\tagmcbegin{}
-\begin{tikzpicture}[scale=0.85]
-\begin{axis}[axis lines = center, xlabel = \(x\), ylabel = \(y\), ytick distance=4, xtick distance=2, extra x ticks = {0}, xlabel style={at={(axis description cs:0.75,1.05)}, anchor=north}, ylabel style={at={(axis description cs:1.05,0.3)}, anchor=north}]
-\addplot [domain=-8:2, samples=100, color=mycolor, line width = 0.4mm]
-{2*x+12};
+\nopagebreak
+\tagstructbegin{tag=Figure,alt={Graph of the straight line y equals 2x plus 12: an upward-sloping line with slope 2, crossing the y-axis at 12 and the x-axis at negative 6}}\tagmcbegin{}
+\begin{tikzpicture}
+\begin{axis}[hwline, xmin=-9, xmax=3, ymin=-6, ymax=18,
+             xtick={-6,-3}, ytick={6,12}]
+\addplot [hwplot, domain=-9:3] {2*x + 12};
+\addplot [hwdot] coordinates {(-6,0) (0,12)};
 \end{axis}
 \end{tikzpicture}
 \tagmcend\tagstructend
+
 \end{enumerate}
-\end{multicols}
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercise 4.2
@@ -85,15 +107,15 @@ Note: It is not always the case that extreme values of the domain correspond to 
 % Question 8
 \item[8.] 
 \begin{enumerate}
-\item $$ \left(\sum_{i=0}^{n} x_{i} \right)+x_{n+1} =x_{0}+x_{1}+x_{2}+\ldots+x_{n+1}  =\sum_{i=0}^{n+1} x_{i} $$
-\item $$ \begin{aligned} 
+\item \[ \left(\sum_{i=0}^{n} x_{i} \right)+x_{n+1} =x_{0}+x_{1}+x_{2}+\ldots+x_{n+1}  =\sum_{i=0}^{n+1} x_{i} \]
+\item \[ \begin{aligned} 
 \sum_{j=1}^{n} a b_{j} y_{j}&=a b_{1} y_{1}+a b_{2} y_{2}+\ldots+a b_{n} y_{n} \\ 
 &= a\left(b_{1} y_{1}+b_{2} y_{2}+\ldots+b_{n} y_{n}\right) \\
-&= a \sum_{j=1}^{n} b_{j} y_{j} \end{aligned}$$
-\item $$ \begin{aligned}  \sum_{j=1}^{n}\left(x_{j}+y_{j}\right) 
+&= a \sum_{j=1}^{n} b_{j} y_{j} \end{aligned}\]
+\item \[ \begin{aligned}  \sum_{j=1}^{n}\left(x_{j}+y_{j}\right) 
 & =\left(x_{1}+y_{1}\right)+\left(x_{2}+y_{2}\right)+\ldots+\left(x_{n}+y_{n}\right) \\
-& =x_{1}+x_{2}+\ldots+x_{n}+x_{1}+y_{2}+\ldots+y_{n} \\
-& =\sum_{j=1}^{n} x_{j}+\sum_{j=1}^{n} y_{j} \end{aligned} $$
+& =x_{1}+x_{2}+\ldots+x_{n}+y_{1}+y_{2}+\ldots+y_{n} \\
+& =\sum_{j=1}^{n} x_{j}+\sum_{j=1}^{n} y_{j} \end{aligned} \]
 \end{enumerate}
 \end{enumerate}
 

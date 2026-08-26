@@ -26,9 +26,9 @@ Practice problems for this module, collected:
 :::
 
 ::: {.lecture style="font-size:1.1rem"}
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 2: Relations and Functions; Summation Notation</h2>
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 2: Functions, Summation Notation, and Logical Conditions</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Relations and functions; summation notation; necessary and sufficient conditions</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Functions, summation notation, and logical conditions</span>
 
 <span style="font-size:1.1rem"><strong>Textbook references:</strong> 2.4&ndash;2.6, p.&nbsp;163, 5.1</span>
 

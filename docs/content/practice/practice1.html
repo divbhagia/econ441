@@ -184,9 +184,6 @@ window.Quarto = {
 
 
 <p>Problem numbers refer to the textbook (Chiang &amp; Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a <strong>Solution</strong> toggle: try it yourself first, then expand to check.</p>
-<p>
-<a class="btn btn-outline-primary" href="practice-preliminaries.pdf" target="_blank" rel="noopener" aria-label="Practice problems for the Preliminaries module, PDF (opens in a new tab)" role="button">Module problems (PDF)</a> <a class="btn btn-outline-primary" href="practice-preliminaries_solutions.pdf" target="_blank" rel="noopener" aria-label="Solutions for the Preliminaries module practice problems, PDF (opens in a new tab)" role="button">Module solutions (PDF)</a>
-</p>
 <section id="exercise-2.3" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-2.3">Exercise 2.3</h2>
 <p><strong>1.</strong> Write the following in set notation:</p>
@@ -239,7 +236,12 @@ Solution
   function fix() {
     var vw = document.documentElement.clientWidth;
     document.querySelectorAll('mjx-container').forEach(function (m) {
-      if (m.getBoundingClientRect().right > vw + 1) m.classList.add('mjx-scroll');
+      var r = m.getBoundingClientRect();
+      // Two ways an equation breaks reflow: it pokes past the viewport, or it
+      // is wider than the box it sits in (a per-part solution toggle, a table
+      // cell) and stretches that box until the *page* scrolls sideways.
+      var box = m.parentElement ? m.parentElement.clientWidth : vw;
+      if (r.right > vw + 1 || r.width > box + 1) m.classList.add('mjx-scroll');
       if (m.scrollWidth > m.clientWidth + 1) {
         m.setAttribute('tabindex', '0');
         m.setAttribute('role', 'group');

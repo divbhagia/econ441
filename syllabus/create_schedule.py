@@ -33,7 +33,7 @@ MODULES = [
 # date -> (lecture number or None, topics, references, [(worksheet file, label), ...])
 LECTURES = {
  dt.date(YEAR,8,24):  (1,"Course introduction; numbers and sets","2.2, 2.3",[("Handout-Sets.pdf","Sets")]),
- dt.date(YEAR,8,26):  (2,"Relations and functions; summation notation; necessary and sufficient conditions","2.4-2.6, p. 163, 5.1",[("Handout-Functions.pdf","Functions"),
+ dt.date(YEAR,8,26):  (2,"Functions, summation notation, and logical conditions","2.4-2.6, p. 163, 5.1",[("Handout-Functions.pdf","Functions"),
                        ("Handout-Summation-Notation.pdf","Summations")]),
  dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar multiplication","4.1, 4.2",[("Handout-Matrix-Operations.pdf","Matrix Operations")]),
  dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; inner product; linear dependence","4.2-4.4",[]),

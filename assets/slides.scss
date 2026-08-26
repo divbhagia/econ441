@@ -21,7 +21,7 @@ $selection-bg: $secondary;
 $presentation-font-family: Lato, Helvetica, sans-serif;
 $presentation-heading-font: "Fira Sans Condensed", Helvetica, sans-serif;
 $presentation-heading-color: $primary;
-// 201 runs at 44px; this course puts far more on a slide (display maths,
+// 201 runs at 38px; this course puts far more on a slide (display maths,
 // matrices, worked examples), so it runs smaller. Set here rather than as
 // `.reveal { font-size }` so reveal scales the whole deck, not just body text.
 $presentation-font-size-root: 34px;
@@ -34,7 +34,7 @@ $code-color: $gray;
 // Slide headings: maroon with a tinted rule beneath.
 .reveal h2 {
   color: $primary;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 700;
   border-bottom: 2px solid $rule;
   padding-bottom: 0.15em;
@@ -58,7 +58,7 @@ $code-color: $gray;
 // Section divider slides (h1, tagged by assets/section-slides.lua).
 .section-slide h1 {
   font-family: "Fira Sans Condensed", Helvetica, sans-serif !important;
-  font-size: 1.75em !important;
+  font-size: 1.5em !important;
   text-align: center;
 }
 .reveal.no-slide-num .slide-number { display: none !important; }
@@ -70,7 +70,7 @@ $code-color: $gray;
 }
 .reveal .slides section.quarto-title-block h1.title {
   color: $primary;
-  font-size: 1.6em;
+  font-size: 1.45em;
   font-weight: 700;
   line-height: 1.15;
   border-bottom: none;

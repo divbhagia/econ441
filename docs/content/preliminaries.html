@@ -203,9 +203,9 @@ Lecture 1: Course Introduction; Numbers and Sets
 </div>
 <div class="lecture" style="font-size:1.1rem">
 <h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em" class="anchored">
-Lecture 2: Relations and Functions; Summation Notation
+Lecture 2: Functions, Summation Notation, and Logical Conditions
 </h2>
-<p><span style="font-size:1.1rem"><strong>Topics:</strong> Relations and functions; summation notation; necessary and sufficient conditions</span></p>
+<p><span style="font-size:1.1rem"><strong>Topics:</strong> Functions, summation notation, and logical conditions</span></p>
 <p><span style="font-size:1.1rem"><strong>Textbook references:</strong> 2.4–2.6, p.&nbsp;163, 5.1</span></p>
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides2.html" target="_blank" rel="noopener" aria-label="Lecture 2 slides (opens in a new tab)" role="button">Slides</a> <a class="btn btn-outline-primary" href="slides/slides2.pdf" target="_blank" rel="noopener" aria-label="Lecture 2 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a> <a class="btn btn-outline-primary" href="handouts/handout-functions.pdf" target="_blank" rel="noopener" aria-label="Lecture 2 worksheet: Functions, PDF (opens in a new tab)" role="button">Worksheet: Functions</a> <a class="btn btn-outline-primary" href="handouts/handout-summation-notation.pdf" target="_blank" rel="noopener" aria-label="Lecture 2 worksheet: Summations, PDF (opens in a new tab)" role="button">Worksheet: Summations</a> <a class="btn btn-outline-primary" href="practice/practice2.html" target="_blank" rel="noopener" aria-label="Practice Problems 2 (opens in a new tab)" role="button">Practice problems</a>
@@ -227,7 +227,12 @@ Lecture 2: Relations and Functions; Summation Notation
   function fix() {
     var vw = document.documentElement.clientWidth;
     document.querySelectorAll('mjx-container').forEach(function (m) {
-      if (m.getBoundingClientRect().right > vw + 1) m.classList.add('mjx-scroll');
+      var r = m.getBoundingClientRect();
+      // Two ways an equation breaks reflow: it pokes past the viewport, or it
+      // is wider than the box it sits in (a per-part solution toggle, a table
+      // cell) and stretches that box until the *page* scrolls sideways.
+      var box = m.parentElement ? m.parentElement.clientWidth : vw;
+      if (r.right > vw + 1 || r.width > box + 1) m.classList.add('mjx-scroll');
       if (m.scrollWidth > m.clientWidth + 1) {
         m.setAttribute('tabindex', '0');
         m.setAttribute('role', 'group');

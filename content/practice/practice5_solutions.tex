@@ -3,7 +3,7 @@
 \documentclass{./../../latex/handout}
 \begin{document}
 \thispagestyle{plain}
-\newcommand{\mytitle}{Practice Problems 5: Solutions}
+\newcommand{\mytitle}{Solutions: Practice Problems 5}
 \myheader{\mytitle}
 
 \underline{Exercise 4.6}  \\
@@ -65,14 +65,14 @@ So, $(AC)^{\prime}=C^{\prime} A^{\prime}$.
 \item[(a.)] Say the dimension of $X$ is \( m \times n \). Then the dimension of \( X_{n \times m}^{\prime} X_{m \times n} \) is \( n \times n \). So the dimension of \( \left(X^{\prime} X\right)^{-1} \) is also  \( n \times n \).  This implies that the dimension of \( X_{m \times n}\left(X^{\prime} X\right)_{n \times n}^{-1} X_{n \times m}^{\prime} \) is \( m \times m \). Hence, \( X^{\prime} X \) and $A$ must be square matrices, but $X$ need not be square.
 
 \item[(b.)] To prove a matrix is idempotent, we need to show $AA=A$.
-$$
+\[
 \begin{aligned}
 A A &= (I-X\left(X^{\prime} X\right)^{-1} X^{\prime})(I-X\left(X^{\prime} X\right)^{-1} X^{\prime}) \\
 & = I-X\left(X^{\prime} X\right)^{-1} X^{\prime}-X\left(X^{\prime} X\right)^{-1} X^{\prime}+X\underbrace{\left(X^{\prime} X\right)^{-1} X^{\prime} X}_{I}\left(X^{\prime} X\right)^{-1} X^{\prime} \\
 &= I-X\left(X^{\prime} X\right)^{-1} X^{\prime}-X\left(X^{\prime} X\right)^{-1} X^{\prime}+X\left(X^{\prime} X\right)^{-1} X^{\prime} \\ 
 &=I-X\left(X^{\prime} X\right)^{-1} X^{\prime} = A
 \end{aligned}
-$$
+\]
 \end{itemize}
 
 

@@ -1,7 +1,7 @@
 {
-  "demand-curve.svg": "Demand curve q equals 100 minus 2p: a downward-sloping straight line on price-quantity axes",
-  "supply-curve.svg": "Supply curve q equals 20 plus 3p: an upward-sloping straight line on price-quantity axes",
-  "market-equilibrium.svg": "Demand and supply curves drawn together on price-quantity axes, crossing at the equilibrium price and quantity",
+  "demand-curve.svg": "Demand curve labelled D for q equals 100 minus 2p: a downward-sloping straight line on axes with price p across and quantity q up, running from q equals 100 at a price of zero down to zero quantity at a price of 50",
+  "supply-curve.svg": "Supply curve labelled S for q equals 20 plus 3p: an upward-sloping straight line on axes with price p across and quantity q up, starting at q equals 20 when the price is zero",
+  "market-equilibrium.svg": "Demand curve D and supply curve S drawn on the same price-quantity axes, crossing at the equilibrium price p star of 16 and quantity q star of 68, marked by dashed lines to each axis",
   "vector-geometric.svg": "A vector drawn as an arrow from the origin to the point (2, 1) on a grid",
   "vector-addition.svg": "Vector addition by the parallelogram rule: arrows from the origin to (9, 2) and to (2, 5), with dotted lines completing a parallelogram whose far corner is their sum at (11, 7)",
   "linear-dependent.svg": "Two linearly dependent vectors: arrows from the origin to (2, 4) and to (1, 2) lying along the same line",

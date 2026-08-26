@@ -34,6 +34,11 @@ PREAMBLE = r"""\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagg
 \setmainfont{Lato}
 \setsansfont{Lato}
 \newfontfamily\headingfont{Fira Sans Condensed}
+% Math in Fira Math: a sans face built on Fira Sans, so equations sit with the
+% Lato body text instead of dropping into Computer Modern. unicode-math must
+% come after the text fonts; math-style=ISO keeps upright capitals out.
+\usepackage{unicode-math}
+\setmathfont{FiraMath-Regular.otf}[Scale=MatchLowercase]
 \DeclareColor{maroon}[HTML]{912040}
 \DeclareColor{ink}[HTML]{393A3B}
 \DeclareColor{structure}[HTML]{393A3B}

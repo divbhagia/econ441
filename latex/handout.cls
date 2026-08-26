@@ -8,8 +8,11 @@
 % Header and footer
 \fancyhf{}
 \fancyheadoffset{1cm}
-\lhead{ECON 441: Introduction to Mathematical Economics}
-\rhead{\mytitle}
+% Short course tag, not the full name: the running head is left+right with no
+% glue between them, and the full name plus a title ("Worksheet: Single
+% Variable Unconstrained Optimization") runs the two into each other.
+\lhead{\small ECON 441}
+\rhead{\small \mytitle}
 \rfoot{\center \thepage}
 \pagestyle{fancy}
 

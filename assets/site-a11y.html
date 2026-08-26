@@ -10,7 +10,12 @@
   function fix() {
     var vw = document.documentElement.clientWidth;
     document.querySelectorAll('mjx-container').forEach(function (m) {
-      if (m.getBoundingClientRect().right > vw + 1) m.classList.add('mjx-scroll');
+      var r = m.getBoundingClientRect();
+      // Two ways an equation breaks reflow: it pokes past the viewport, or it
+      // is wider than the box it sits in (a per-part solution toggle, a table
+      // cell) and stretches that box until the *page* scrolls sideways.
+      var box = m.parentElement ? m.parentElement.clientWidth : vw;
+      if (r.right > vw + 1 || r.width > box + 1) m.classList.add('mjx-scroll');
       if (m.scrollWidth > m.clientWidth + 1) {
         m.setAttribute('tabindex', '0');
         m.setAttribute('role', 'group');

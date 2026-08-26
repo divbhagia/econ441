@@ -66,12 +66,19 @@ details.solution > :last-child {
    a student can check (a) without spoiling (b) and (c). Indented under the part
    it belongs to, and lighter than the block above -- several of these stack on
    one problem, and the full-size treatment reads as clutter at that density.
-   Only worth using when each part's solution is more than a line or two. */
+   Shrink-wrapped rather than full width: closed, it is a small control sitting
+   at the left under its part, not a bar spanning the column. */
 details.solution.part {
-  margin: 0.2em 0 0.3em 1.4em;
+  margin: 0.15em 0 0.5em 1.4em;
   padding: 0 0.8em;
   border-left-width: 2px;
   font-size: 0.97em;
+}
+/* Shrink-wrapped only where there is room for it. On a phone the box is the
+   full column anyway, and fit-content there lets a long equation set the
+   width, which breaks the 320px reflow check. */
+@media (min-width: 576px) {
+  details.solution.part { width: fit-content; max-width: 100%; }
 }
 details.solution.part > summary {
   padding: 0.28em 0;
