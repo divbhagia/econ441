@@ -187,6 +187,22 @@ table.schedule-table tbody tr:last-child > * { border-bottom: none; }
 @media (max-width: 1199px) {
   table.schedule-table { table-layout: auto; }
 
+  /* WebKit drops collapsed borders next to display:none cells (the hidden
+     Module/References columns), so on phones the table's right edge and
+     the Topics|Materials rule vanish in Safari. Separate borders per cell
+     do not depend on neighbours: right+bottom on every cell, top+left on
+     the table. */
+  table.schedule-table { border-collapse: separate; border-spacing: 0; box-sizing: border-box; }
+  table.schedule-table th, table.schedule-table td {
+    border: 0;
+    border-right: 1px solid #b7b7b7;
+    border-bottom: 1px solid #b7b7b7;
+  }
+  /* The outer rule is drawn by the edge cells themselves: in WebKit the
+     cells paint over the table's own border on the right/bottom. */
+  table.schedule-table tr > :last-child { border-right: 2px solid #393A3B !important; }
+  table.schedule-table tbody tr:last-child > * { border-bottom: 2px solid #393A3B !important; }
+
   table.schedule-table thead th.col-module,
   table.schedule-table thead th.col-refs,
   table.schedule-table th[scope="rowgroup"],

@@ -40,7 +40,13 @@ PREAMBLE = r"""\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagg
 \EditInstance{frametitle}{header}{color = maroon, font = \Large\bfseries\headingfont}
 \EditInstance{titlepage-element}{title}{color = maroon, font = \LARGE\bfseries\headingfont}
 \EditInstance{titlepage-element}{subtitle}{color = ink, font = \large\bfseries}
-\EditInstance{footer}{std}{element-order = {framenumber}}
+% Footer: frame number alone, bottom right, readable. The first element is
+% always printed; \date{} is empty, so leading with it and separating with
+% \hfill pushes the number to the right edge.
+\EditInstance{footer}{std}{element-order = {date, framenumber}, separator = \hfill, font = \small}
+% Air between plain paragraphs on slides without bullets (lists set their
+% own \parsep, so bullets are unaffected).
+\setlength{\parskip}{0.55em}
 \date{}
 % Frame content sits at the top, as on the old beamer decks ([t]) and the web
 % decks; ltx-talk centres it vertically by default.

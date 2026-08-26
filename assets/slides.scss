@@ -46,6 +46,13 @@ $code-color: $gray;
 // Use `{.center}` on a slide whose whole content, title included, should be
 // centred vertically; that is reveal's own mechanism.
 .reveal .slides section { text-align: left; }
+// Extra breathing room on the sides beyond reveal's uniform safe margin,
+// as on the ECON 201 decks.
+.reveal .slides section {
+  box-sizing: border-box;
+  padding-left: 64px;
+  padding-right: 64px;
+}
 .reveal .slides section > h2:first-child { margin-top: 0; }
 
 // Section divider slides (h1, tagged by assets/section-slides.lua).

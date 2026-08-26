@@ -36,7 +36,7 @@ Practice problems for this module, collected:
 <a class="btn btn-outline-primary" href="slides/slides2.html" target="_blank" rel="noopener" aria-label="Lecture 2 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides2.pdf" target="_blank" rel="noopener" aria-label="Lecture 2 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
 <a class="btn btn-outline-primary" href="handouts/handout-functions.pdf" target="_blank" rel="noopener" aria-label="Lecture 2 worksheet: Functions, PDF (opens in a new tab)" role="button">Worksheet: Functions</a>
-<a class="btn btn-outline-primary" href="handouts/handout-summation-notation.pdf" target="_blank" rel="noopener" aria-label="Lecture 2 worksheet: Summation Notation, PDF (opens in a new tab)" role="button">Worksheet: Summation Notation</a>
+<a class="btn btn-outline-primary" href="handouts/handout-summation-notation.pdf" target="_blank" rel="noopener" aria-label="Lecture 2 worksheet: Summations, PDF (opens in a new tab)" role="button">Worksheet: Summations</a>
 <a class="btn btn-outline-primary" href="practice/practice2.html" target="_blank" rel="noopener" aria-label="Practice Problems 2 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::

@@ -98,8 +98,7 @@ Example: Find the inverse of $y = f(x) = 3x-2$.
 
 $$\sum_{i=1}^N x_i = x_1 + x_2 + ... + x_N$$
 
-[*Example:*]{.underline} $x = \{2,9,6,8,11,14\}$
-$\sum_{i=1}^{4} x_i = x_1 + x_2 + x_3 + x_4 = 2+9+6+8=25$
+[*Example:*]{.underline} $x = \{2,9,6,8,11,14\}$. What is $\sum_{i=1}^{4} x_i$?
 
 ## Summation Notation
 
