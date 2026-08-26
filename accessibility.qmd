@@ -21,17 +21,11 @@ Title II of the ADA (28 CFR Part 35).
 -   Pages reflow for small screens and zoom to 200% without horizontal
     scrolling; wide tables and equations scroll within their own frame and are
     keyboard-reachable.
+-   Lecture slides are keyboard-navigable and their content is available to
+    screen readers. Each deck is also available as a tagged PDF (one slide
+    per page, validated against PDF/UA-2).
 -   Every PDF on the site (worksheets, notes, slides, the syllabus) is
     tagged and validated against the PDF/UA-2 standard with veraPDF.
-
-**Known limitation:** lecture slides are a visual, spatial format. They are
-keyboard-navigable and their content is available to screen readers, but slides
-are inherently harder to follow with assistive technology than ordinary pages.
-Each deck is also
-available as a tagged PDF (one slide per page, validated against PDF/UA-2),
-and the same material is always available in linear form -- module notes,
-worksheets, and practice pages -- via the
-[Content](content/preliminaries.qmd) pages.
 
 **If you hit a barrier** on this site or in any course material, please email
 me at [dbhagia@fullerton.edu](mailto:dbhagia@fullerton.edu) and I will fix it
