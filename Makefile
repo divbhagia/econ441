@@ -53,9 +53,8 @@ site:
 	          --exclude references --exclude exams ./ $(TMP)/
 	@cd $(TMP) && quarto render
 	@mkdir -p $(TMP)/docs/syllabus && cp syllabus/Econ441-Syllabus.pdf $(TMP)/docs/syllabus/
-	@rm -rf docs; sleep 8; mkdir -p docs
-	@(cd $(TMP)/docs && tar cf - .) | (cd docs && tar xf -)
-	@sleep 15
+	@mkdir -p docs
+	@python3 scripts/sync_docs.py $(TMP)/docs
 	@find docs -name "*conflicted copy*" -exec rm -rf {} + 2>/dev/null || true
 	@echo "    pages: $$(find docs -name '*.html' ! -path '*site_libs*' | wc -l | tr -d ' ')"
 

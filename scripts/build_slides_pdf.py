@@ -40,8 +40,10 @@ PREAMBLE = r"""\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagg
 \usepackage{unicode-math}
 \setmathfont{FiraMath-Regular.otf}[Scale=MatchLowercase]
 \DeclareColor{maroon}[HTML]{912040}
-\DeclareColor{ink}[HTML]{393A3B}
-\DeclareColor{structure}[HTML]{393A3B}
+% Body text is black on the printed deck (the web decks' ink gray reads washed
+% out on paper and through a projector).
+\DeclareColor{ink}[HTML]{000000}
+\DeclareColor{structure}[HTML]{000000}
 \color{ink}
 % The frame title is the running head. ltx-talk's geometry (top 10mm, header
 % 10mm, headsep 2mm) starts that box above the paper edge, so the title sits

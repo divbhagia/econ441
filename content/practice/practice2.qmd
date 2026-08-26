@@ -4,7 +4,7 @@ subtitle: "Lecture 2: Functions, Summation Notation, and Logical Conditions"
 format: html
 ---
 
-Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Most parts have their own **Solution** toggle: try it yourself first, then expand to check.
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Each problem has a **Solution** toggle, and a few have one per part: try it yourself first, then expand to check.
 
 ## Exercise 2.4
 
@@ -83,48 +83,20 @@ $f^{-1}(y) = \dfrac{y-12}{2}$
 
 **6.** Expand the following summation expressions:
 
-a. $\sum_{i=2}^5 x_i$
+   a. $\sum_{i=2}^5 x_i$
+   b. $\sum_{i=5}^8 a_i x_i$
+   c. $\sum_{i=1}^4 b x_i$
+   d. $\sum_{i=1}^n a_i x^{i-1}$
+   e. $\sum_{i=0}^3(x+i)^2$
 
-<details class="solution part">
+<details class="solution">
 <summary>Solution</summary>
 
-$x_{2}+x_{3}+x_{4}+x_{5}$
-
-</details>
-
-b. $\sum_{i=5}^8 a_i x_i$
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$a_{5} x_{5}+a_{6} x_{6}+a_{7} x_{7}+a_{8} x_{8}$
-
-</details>
-
-c. $\sum_{i=1}^4 b x_i$
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$b x_{1}+b x_{2}+b x_{3}+b x_{4}$
-
-</details>
-
-d. $\sum_{i=1}^n a_i x^{i-1}$
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$a_{1}+a_{2} x+a_{3} x^{2}+\ldots+a_{n} x^{n-1}$
-
-</details>
-
-e. $\sum_{i=0}^3(x+i)^2$
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$x^{2}+(x+1)^{2}+(x+2)^{2}+(x+3)^{2}$
+a. $x_{2}+x_{3}+x_{4}+x_{5}$
+b. $a_{5} x_{5}+a_{6} x_{6}+a_{7} x_{7}+a_{8} x_{8}$
+c. $b x_{1}+b x_{2}+b x_{3}+b x_{4}$
+d. $a_{1}+a_{2} x+a_{3} x^{2}+\ldots+a_{n} x^{n-1}$
+e. $x^{2}+(x+1)^{2}+(x+2)^{2}+(x+3)^{2}$
 
 </details>
 
@@ -170,65 +142,23 @@ $$ \begin{aligned}
 
 **1.** In the following paired statements, let $p$ be the first statement and $q$ the second. Which is true for each case: $p \Rightarrow q$, $p \Leftarrow q$, or $p \Leftrightarrow q$?
 
-a. It is a holiday; it is Thanksgiving Day.
+   a. It is a holiday; it is Thanksgiving Day.
+   b. A geometric figure has four sides; it is a rectangle.
+   c. Two ordered pairs $(a, b)$ and $(b, a)$ are equal; $a$ is equal to $b$.
+   d. A number is rational; it can be expressed as a ratio of two integers.
+   e. A $4 \times 4$ matrix is nonsingular; the rank of the $4 \times 4$ matrix is 4. (*skip for now*)
+   f. The gasoline tank in my car is empty; I cannot start my car.
+   g. The letter is returned to the sender with the marking "addressee unknown"; the sender wrote the wrong address on the envelope.
 
-<details class="solution part">
+<details class="solution">
 <summary>Solution</summary>
 
-$q \implies p$
-
-</details>
-
-b. A geometric figure has four sides; it is a rectangle.
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$q \implies p$
-
-</details>
-
-c. Two ordered pairs $(a, b)$ and $(b, a)$ are equal; $a$ is equal to $b$.
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$q \iff p$
-
-</details>
-
-d. A number is rational; it can be expressed as a ratio of two integers.
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$q \iff p$
-
-</details>
-
-e. A $4 \times 4$ matrix is nonsingular; the rank of the $4 \times 4$ matrix is 4. (*skip for now*)
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$q \iff p$
-
-</details>
-
-f. The gasoline tank in my car is empty; I cannot start my car.
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$p \implies q$
-
-</details>
-
-g. The letter is returned to the sender with the marking "addressee unknown"; the sender wrote the wrong address on the envelope.
-
-<details class="solution part">
-<summary>Solution</summary>
-
-$q \implies p$
+a. $q \implies p$
+b. $q \implies p$
+c. $q \iff p$
+d. $q \iff p$
+e. $q \iff p$
+f. $p \implies q$
+g. $q \implies p$
 
 </details>
