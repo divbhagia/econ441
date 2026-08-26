@@ -31,6 +31,14 @@ PREAMBLE = r"""\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagg
 % pandoc sets tables as longtable with booktabs rules
 \usepackage{longtable,booktabs,array}
 \providecommand{\tightlist}{}
+% Maths in XCharter Math: the OpenType descendant of the mathdesign Charter
+% these decks used before the site rebuild. A serif against the Lato body, so
+% an italic variable never reads as a stray body letter, and heavy enough to
+% survive a classroom projector -- ltx-talk's default (New CM Sans) is thin.
+% mathdesign itself is not an option here: it is a legacy Type 1 package that
+% ltx-talk's unicode-math overrides, and its blackboard bold fails PDF/UA-2.
+\usepackage{unicode-math}
+\setmathfont{XCharter-Math.otf}[Scale=MatchLowercase]
 \setmainfont{Lato}
 \setsansfont{Lato}
 \newfontfamily\headingfont{Fira Sans Condensed}
