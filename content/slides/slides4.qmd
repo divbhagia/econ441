@@ -84,7 +84,7 @@ $$C = AB =  \begin{bmatrix}
 \begin{bmatrix}
 0  \\
 8  \\
-\end{bmatrix}_{2 \times 1} \vspace{1cm}$$
+\end{bmatrix}_{2 \times 1}$$
 
 ## Matrix Multiplication: Examples
 
@@ -131,7 +131,7 @@ x_n
 
 Matrices with only one row: row vectors $$x' =  \begin{bmatrix}
 x_1 &
-x_2 & \hdots &
+x_2 & \cdots &
 x_n
 \end{bmatrix}$$
 

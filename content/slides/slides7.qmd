@@ -50,10 +50,10 @@ A unique solution to $A x=b$ ($x^*=A^{-1}b$) exists
 *Adjoint* of a nonsingular $n \times n$ matrix\
  \
 $$adj A = C' = \left[\begin{array}{llll}
-|C_{11}| & |C_{21}| & \hdots & |C_{n1}| \\
-|C_{12}| & |C_{22}| & \hdots &  |C_{n2}| \\
-\vdots &\vdots & \hdots &  \vdots \\
-|C_{1n}| & |C_{2n}| & \hdots & |C_{nn}| \\
+|C_{11}| & |C_{21}| & \cdots & |C_{n1}| \\
+|C_{12}| & |C_{22}| & \cdots &  |C_{n2}| \\
+\vdots &\vdots & \cdots &  \vdots \\
+|C_{1n}| & |C_{2n}| & \cdots & |C_{nn}| \\
 \end{array}\right]$$ $$A^{-1} = \frac{1}{|A|} Adj A$$
 
 ## Find the Inverse
@@ -245,10 +245,10 @@ After $t$ periods: $$\pi(t) = P^t \pi(0)$$
 
 ## Ordinary Least Squares
 
-Linear model with $k$ variables: $$Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + \hdots + \beta_k X_{ik} + \varepsilon_i$$ where $i = 1,...,n$ denotes $n$ observations.\
+Linear model with $k$ variables: $$Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i2} + \cdots + \beta_k X_{ik} + \varepsilon_i$$ where $i = 1,...,n$ denotes $n$ observations.\
 Denote $$Y  = \begin{bmatrix} Y_1 \\ Y_2 \\  \vdots \\ Y_n  \end{bmatrix}_{n \times 1},    
   \beta  = \begin{bmatrix} \beta_0 \\ \beta_1  \\ \vdots \\ \beta_k \end{bmatrix}_{k \times 1},  
-  \boldsymbol{X} = \begin{bmatrix} 1 & X_{11} & \hdots & X_{1k} \\ 1 & X_{12} & \hdots & X_{2k}  \\ \vdots & \vdots \\ 1 & X_{1n} & \hdots & X_{nk}  \end{bmatrix}_{n \times k},  
+  \boldsymbol{X} = \begin{bmatrix} 1 & X_{11} & \cdots & X_{1k} \\ 1 & X_{12} & \cdots & X_{2k}  \\ \vdots & \vdots \\ 1 & X_{1n} & \cdots & X_{nk}  \end{bmatrix}_{n \times k},  
   \varepsilon  = \begin{bmatrix} \varepsilon_1 \\ \varepsilon_2 \\ \vdots \\ \varepsilon_n  \end{bmatrix}_{n \times 1}$$ Then, $$Y = X \beta + \varepsilon  \quad \quad \text{OLS estimator: } \hat{\beta} = (X'X)^{-1} X'Y$$
 
 ## Natural Language Processing (NLP)
