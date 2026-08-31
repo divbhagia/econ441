@@ -125,6 +125,9 @@ def build(n):
         body = re.sub(r"(\\begin\{frame\}\{[^}]*\})(?!\\maketitle)", r"\1\\vspace*{0.9em}", body)
         body = re.sub(r"\[<\+\+?->?\]", "", body)          # itemize[<+->]
         body = re.sub(r"<\d+(-\d*)?>", "", body)           # \item<2-> etc.
+        body = body.replace(r"\pause", "")                 # stray \pause from
+        # the old beamer sources -- it splits a frame across two pages, and the
+        # PDF is meant to be one complete page per slide
         doc = PREAMBLE + meta_from_qmd(qmd.read_text()) + "\\begin{document}\n" + body + "\n\\end{document}\n"
         (tdp / "deck.tex").write_text(doc)
         for _ in range(2):

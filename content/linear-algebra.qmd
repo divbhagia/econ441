@@ -4,7 +4,11 @@ subtitle: "Module II"
 format: html
 ---
 
-Materials for this module will be posted before we reach it. In the meantime, here is the plan. See the [Schedule](../schedule.qmd) for dates and assessments.
+Materials go up as we reach each lecture. See the [Schedule](../schedule.qmd) for dates and assessments.
+
+Practice problems for this module, collected:
+<a class="btn btn-outline-primary" href="practice/practice-linear-algebra.pdf" target="_blank" rel="noopener" aria-label="Practice problems for the Linear Algebra module, PDF (opens in a new tab)" role="button">Problems (PDF)</a>
+<a class="btn btn-outline-primary" href="practice/practice-linear-algebra_solutions.pdf" target="_blank" rel="noopener" aria-label="Solutions for the Linear Algebra module practice problems, PDF (opens in a new tab)" role="button">Solutions (PDF)</a>
 
 <p class="module-notes" style="font-size:1.1rem">
 <strong>Module notes</strong> covering this whole module:
@@ -14,10 +18,16 @@ Materials for this module will be posted before we reach it. In the meantime, he
 ::: {.lecture style="font-size:1.1rem"}
 <h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 3: Matrices and Matrix Operations</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Economic model motivation; matrices; addition, subtraction, and scalar multiplication</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Economic model motivation; matrices; addition, subtraction, scalar and matrix multiplication</span>
 
 <span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.1, 4.2</span>
 
+<p class="lecture-links">
+<a class="btn btn-outline-primary" href="slides/slides3.html" target="_blank" rel="noopener" aria-label="Lecture 3 slides (opens in a new tab)" role="button">Slides</a>
+<a class="btn btn-outline-primary" href="slides/slides3.pdf" target="_blank" rel="noopener" aria-label="Lecture 3 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
+<a class="btn btn-outline-primary" href="handouts/handout-matrix-operations.pdf" target="_blank" rel="noopener" aria-label="Lecture 3 worksheet: Matrix Operations, PDF (opens in a new tab)" role="button">Worksheet: Matrix Operations</a>
+<a class="btn btn-outline-primary" href="practice/practice3.html" target="_blank" rel="noopener" aria-label="Practice Problems 3 (opens in a new tab)" role="button">Practice problems</a>
+</p>
 :::
 
 ::: {.lecture style="font-size:1.1rem"}

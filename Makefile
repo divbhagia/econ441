@@ -12,7 +12,7 @@
 
 SHELL := /bin/bash
 # Published lectures; keep in step with PUBLISHED in syllabus/create_schedule.py.
-LECTURES := 1 2
+LECTURES := 1 2 3
 TMP   := $(TMPDIR)econ441-build
 NOTES := content/notes/{Linear-Algebra,Calculus,Log-and-Exponential-Functions,Optimization}
 AUX   := aux,log,out,fls,fdb_latexmk,xdv,toc,synctex.gz

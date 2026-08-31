@@ -6,11 +6,6 @@ format: html
 
 Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each exercise yourself first, then expand the solutions to check.
 
-<p>
-<a class="btn btn-outline-primary" href="practice3.pdf" target="_blank" rel="noopener" aria-label="Download problems for Practice Problems 3, PDF (opens in a new tab)" role="button">Download problems (PDF)</a>
-<a class="btn btn-outline-primary" href="practice3_solutions.pdf" target="_blank" rel="noopener" aria-label="Download solutions for Practice Problems 3, PDF (opens in a new tab)" role="button">Download solutions (PDF)</a>
-</p>
-
 ## Exercise 4.2
 
 -   Given $A=\left[\begin{array}{cc}7 & -1 \\ 6 & 9\end{array}\right],  B=\left[\begin{array}{cc}0 & 4 \\ 3 & -2\end{array}\right], \text{ and }C=\left[\begin{array}{ll}8 & 3 \\ 6 & 1\end{array}\right]$, find:

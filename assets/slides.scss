@@ -16,7 +16,10 @@ $wash:      #faf7f7;   // the callout tint used on the site
 $body-bg: #ffffff;
 $body-color: $gray;
 $link-color: $primary;
-$selection-bg: $secondary;
+// Reveal's default pairs a light selection ground with white text, which is
+// unreadable. Soft maroon tint, ink text (7.3:1).
+$selection-bg: $rule;
+$selection-color: $gray;
 
 $presentation-font-family: Lato, Helvetica, sans-serif;
 $presentation-heading-font: "Fira Sans Condensed", Helvetica, sans-serif;

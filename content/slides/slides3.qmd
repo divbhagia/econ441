@@ -13,14 +13,14 @@ format:
 $q$: quantity of hats, $p$: price of a single hat\
 Demand for hats: $q = 100-2p$\
 
-![](../../assets/fig/demand-curve.svg){fig-alt="Demand curve q equals 100 minus 2p: a downward-sloping straight line on price-quantity axes" width=560}
+![](../../assets/fig/demand-curve.svg){fig-alt="Demand curve labelled D for q equals 100 minus 2p: a downward-sloping straight line on axes with price p across and quantity q up, running from q equals 100 at a price of zero down to zero quantity at a price of 50" width=620}
 
 ## A Simple Economic Model
 
 $q$: quantity of hats, $p$: price of a single hat\
 Supply for hats: $q = 20+3p$\
 
-![](../../assets/fig/supply-curve.svg){fig-alt="Supply curve q equals 20 plus 3p: an upward-sloping straight line on price-quantity axes" width=560}
+![](../../assets/fig/supply-curve.svg){fig-alt="Supply curve labelled S for q equals 20 plus 3p: an upward-sloping straight line on axes with price p across and quantity q up, starting at q equals 20 when the price is zero" width=620}
 
 ## A Simple Economic Model
 
@@ -40,7 +40,7 @@ $q ^*$ and $p^*$ are determined simultaneously.
 
 ## Equilibrium
 
-![](../../assets/fig/market-equilibrium.svg){fig-alt="Demand and supply curves drawn together on price-quantity axes, crossing at the equilibrium price and quantity" width=560}
+![](../../assets/fig/market-equilibrium.svg){fig-alt="Demand curve D and supply curve S drawn on the same price-quantity axes, crossing at the equilibrium price p star of 16 and quantity q star of 68, marked by dashed lines to each axis" width=620}
 
 ## Matrix Algebra
 
@@ -85,37 +85,22 @@ b = \begin{bmatrix}
 
 These arrays are called *matrices*.
 
-## Today
-
-Matrices: Addition, Subtraction, and Scalar Multiplication
-
-Matrix Multiplication
-
-Vectors
-
-Identity and Null Matrices
-
-Transpose and Inverse of a Matrix\
- \
-
-
-Textbook reference: 4.1-4.6
-
 ## Matrices
 
-A *matrix* is a rectangular array of numbers, parameters, or vectors.\
- \
+A *matrix* is a rectangular array of numbers, parameters, or vectors.
+
 Example. $A = \begin{bmatrix}
 2 & 3 & 1 \\
 -1 &4 & 6
-\end{bmatrix}$\
+\end{bmatrix}$
+
 Dimensions of matrix:
 
 -   Number of rows ($m$)
 
 -   Number of columns ($n$)
 
-## Matrices
+## Dimension of a Matrix
 
 A matrix with $m$ rows and $n$ columns is referred to as an $m \times n$ matrix\
  \
@@ -124,10 +109,9 @@ What's the dimension of $A$?\
 $$A = \begin{bmatrix}
 2 & 3 & 1 \\
 -1 &4 & 6
-\end{bmatrix}_{\pause 2 \times 3}$$\
- \
+\end{bmatrix}_{\_\_ \times \_\_}$$
 
-## Matrices
+## General Notation
 
 $$A = \begin{bmatrix}
 a_{11} & a_{12} & a_{13} & \hdots & a_{1n} \\
@@ -138,7 +122,7 @@ a_{m1} & a_{m2} & a_{m3} & \hdots & a_{mn} \\
 
 Can write it more compactly $$A = [ a_{ij} ] \quad i=1,2,...,m; j=1,2,...,n$$
 
-## Matrices
+## Square Matrices
 
 *Square matrix*: equal number of rows and columns\
  \
@@ -148,7 +132,7 @@ a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33} \\
 \end{bmatrix}_{3\times 3}$$
 
-## Matrices
+## Equal Matrices
 
 Two matrices are *equal* if all their elements are identical.\
  \
@@ -197,3 +181,62 @@ B = \begin{bmatrix}
 1 & 8 \\
 -2 & 3
 \end{bmatrix}$$ What is $2B$ and $A-2B$?
+
+## Matrix Multiplication
+
+A whole new animal\...
+
+Only possible to multiply two matrices, $A_{m \times n}$ and $B_{p \times q}$ to get $AB$ if $n = p$ i.e. $$\text{number of columns in } A = \text{ number of rows in } B$$
+
+Example. $A = \begin{bmatrix}
+2 & 3 & 1 \\
+4 & -6 & -2
+\end{bmatrix}_{2 \times 3}$ $B = \begin{bmatrix}
+1 & 8 \\
+-2 & 3
+\end{bmatrix}_{2 \times 2}$
+
+Cannot do $AB$, but can do $BA$
+
+## Matrix Multiplication
+
+Another example. $$A = \begin{bmatrix}
+2 & 3 & 1 \\
+4 & -6 & -2
+\end{bmatrix}_{2 \times 3}
+B = \begin{bmatrix}
+1 \\
+-2 \\
+4
+\end{bmatrix}_{3 \times 1}$$
+
+Can we multiply $A$ and $B$ to find $C=AB$?
+
+Yes, since $A$ has 3 columns, which is equal to the number of rows in $B$.
+
+Also, the dimension of $C$ will be $2 \times 1$.
+
+## Matrix Multiplication
+
+So how to actually multiply these matrices?
+
+$$C = AB$$ $$c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + ... + a_{in} b_{nj} = \sum_{k=1}^n a_{ik} b_{kj}$$
+
+The *element $c_{ij}$* is obtained by multiplying term-by-term the entries of the *$i$th row of $A$* and *$j$th column of $B$*.
+
+## Matrix Multiplication: Examples
+
+$$A = \begin{bmatrix}
+a_{11} & a_{12} &  a_{13} \\
+a_{21} & a_{22} &  a_{23} \\
+\end{bmatrix}_{2 \times 3}
+B = \begin{bmatrix}
+b_{11} & b_{12} \\
+b_{21} & b_{22} \\
+b_{31} & b_{32} \\
+\end{bmatrix}_{3 \times 2}$$
+
+Here, $$C = AB = \begin{bmatrix}
+ a_{11}b_{11} +  a_{12}b_{21} + a_{13}b_{31} &  a_{11}b_{12} +  a_{12}b_{22} + a_{13}b_{32} \\
+  a_{21}b_{11} +  a_{22}b_{21} + a_{23}b_{31} &  a_{21}b_{12} +  a_{22}b_{22} + a_{23}b_{32} \\
+\end{bmatrix}_{2 \times 2}$$

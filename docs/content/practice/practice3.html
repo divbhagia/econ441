@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Linear Algebra – Introduction to Mathematical Economics</title>
+<title>Practice Problems 3 – Introduction to Mathematical Economics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6633c62d358394232bc599d39e38c5c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9066b0ca4c76b50e6da1c97d84bf0563.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-6633c62d358394232bc599d39e38c5c9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-9066b0ca4c76b50e6da1c97d84bf0563.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,18 +69,47 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../assets/styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../assets/styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Introduction to Mathematical Economics</span>
     </a>
   </div>
@@ -91,19 +120,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../syllabus.html"> 
+    <a class="nav-link" href="../../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../schedule.html"> 
+    <a class="nav-link" href="../../schedule.html"> 
 <span class="menu-text">Schedule</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../content/preliminaries.html" aria-current="page"> 
+    <a class="nav-link" href="../../content/preliminaries.html"> 
 <span class="menu-text">Content</span></a>
   </li>  
   <li class="nav-item compact">
@@ -117,62 +146,27 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/linear-algebra.html">II. Linear Algebra</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/preliminaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">I. Preliminaries</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/linear-algebra.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">II. Linear Algebra</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/calculus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">III. Calculus</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../content/optimization.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">IV. Optimization</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#exercise-4.2" id="toc-exercise-4.2" class="nav-link active" data-scroll-target="#exercise-4.2">Exercise 4.2</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Linear Algebra</h1>
-<p class="subtitle lead">Module II</p>
+<h1 class="title">Practice Problems 3</h1>
+<p class="subtitle lead">Lecture 3: Matrices and Matrix Operations</p>
 </div>
 
 
@@ -189,51 +183,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Materials go up as we reach each lecture. See the <a href="../schedule.html">Schedule</a> for dates and assessments.</p>
-<p>Practice problems for this module, collected: <a class="btn btn-outline-primary" href="practice/practice-linear-algebra.pdf" target="_blank" rel="noopener" aria-label="Practice problems for the Linear Algebra module, PDF (opens in a new tab)" role="button">Problems (PDF)</a> <a class="btn btn-outline-primary" href="practice/practice-linear-algebra_solutions.pdf" target="_blank" rel="noopener" aria-label="Solutions for the Linear Algebra module practice problems, PDF (opens in a new tab)" role="button">Solutions (PDF)</a></p>
-<p class="module-notes" style="font-size:1.1rem">
-<strong>Module notes</strong> covering this whole module: <a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="notes/Linear-Algebra.pdf" target="_blank" rel="noopener" aria-label="Linear Algebra module notes, PDF (opens in a new tab)" role="button">Linear Algebra notes</a>
-</p>
-<div class="lecture" style="font-size:1.1rem">
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em" class="anchored">
-Lecture 3: Matrices and Matrix Operations
-</h2>
-<p><span style="font-size:1.1rem"><strong>Topics:</strong> Economic model motivation; matrices; addition, subtraction, scalar and matrix multiplication</span></p>
-<p><span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.1, 4.2</span></p>
-<p class="lecture-links">
-<a class="btn btn-outline-primary" href="slides/slides3.html" target="_blank" rel="noopener" aria-label="Lecture 3 slides (opens in a new tab)" role="button">Slides</a> <a class="btn btn-outline-primary" href="slides/slides3.pdf" target="_blank" rel="noopener" aria-label="Lecture 3 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a> <a class="btn btn-outline-primary" href="handouts/handout-matrix-operations.pdf" target="_blank" rel="noopener" aria-label="Lecture 3 worksheet: Matrix Operations, PDF (opens in a new tab)" role="button">Worksheet: Matrix Operations</a> <a class="btn btn-outline-primary" href="practice/practice3.html" target="_blank" rel="noopener" aria-label="Practice Problems 3 (opens in a new tab)" role="button">Practice problems</a>
-</p>
-</div>
-<div class="lecture" style="font-size:1.1rem">
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em" class="anchored">
-Lecture 4: Matrix Multiplication and Vectors
-</h2>
-<p><span style="font-size:1.1rem"><strong>Topics:</strong> Matrix multiplication; vectors; geometric representation; inner product; linear dependence</span></p>
-<p><span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.2–4.4</span></p>
-</div>
-<div class="lecture" style="font-size:1.1rem">
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em" class="anchored">
-Lecture 5: Identity, Null, and Transpose Matrices
-</h2>
-<p><span style="font-size:1.1rem"><strong>Topics:</strong> Identity, null, and idempotent matrices; transpose of a matrix</span></p>
-<p><span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.5, 4.6</span></p>
-</div>
-<div class="lecture" style="font-size:1.1rem">
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em" class="anchored">
-Lecture 6: Inverse, Nonsingularity, and the Determinant
-</h2>
-<p><span style="font-size:1.1rem"><strong>Topics:</strong> Inverse of a matrix; conditions for nonsingularity; rank; the determinant</span></p>
-<p><span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.6, 5.1, 5.2</span></p>
-</div>
-<div class="lecture" style="font-size:1.1rem">
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em" class="anchored">
-Lecture 7: Computing Determinants, Inversion, and Cramer’s Rule
-</h2>
-<p><span style="font-size:1.1rem"><strong>Topics:</strong> Computing determinants; matrix inversion; Cramer’s rule; applications</span></p>
-<p><span style="font-size:1.1rem"><strong>Textbook references:</strong> 5.2–5.5, 4.7</span></p>
-</div>
+<p>Problem numbers refer to the textbook (Chiang &amp; Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each exercise yourself first, then expand the solutions to check.</p>
+<section id="exercise-4.2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4.2">Exercise 4.2</h2>
+<ul>
+<li><p>Given <span class="math inline">\(A=\left[\begin{array}{cc}7 &amp; -1 \\ 6 &amp; 9\end{array}\right],  B=\left[\begin{array}{cc}0 &amp; 4 \\ 3 &amp; -2\end{array}\right], \text{ and }C=\left[\begin{array}{ll}8 &amp; 3 \\ 6 &amp; 1\end{array}\right]\)</span>, find:</p>
+<ol type="1">
+<li><p><span class="math inline">\(A+B\)</span></p></li>
+<li><p><span class="math inline">\(C-A\)</span></p></li>
+<li><p><span class="math inline">\(3A\)</span></p></li>
+<li><p><span class="math inline">\(4B+2C\)</span></p></li>
+</ol></li>
+<li><p>Given <span class="math inline">\(A = \left[\begin{array}{cc}
+2 &amp; 8 \\
+3 &amp; 0 \\
+5 &amp; 1
+\end{array}\right], B=\left[\begin{array}{cc} 2 &amp; 0 \\ 3 &amp; 8\end{array}\right], \text{ and }
+C=\left[\begin{array}{cc} 7 &amp; 2 \\ 6 &amp; 3\end{array}\right]\)</span>:</p>
+<ol type="1">
+<li><p>Is <span class="math inline">\(AB\)</span> defined? Calculate <span class="math inline">\(AB\)</span>. Can you calculate <span class="math inline">\(BA\)</span>? Why?</p></li>
+<li><p>Is <span class="math inline">\(BC\)</span> defined? Calculate <span class="math inline">\(BC\)</span>. Is <span class="math inline">\(CB\)</span> defined? If so, calculate <span class="math inline">\(CB\)</span>. Is it true that <span class="math inline">\(BC=CB\)</span>.</p></li>
+</ol></li>
+<li><p>Find the product matrices in the following (in each case, append beneath every matrix a dimension indicator):</p>
+<ol type="1">
+<li><p><span class="math inline">\(\left[\begin{array}{lll}0 &amp; 2 &amp; 0 \\ 3 &amp; 0 &amp; 4 \\ 2 &amp; 3 &amp; 0\end{array}\right]\left[\begin{array}{ll}8 &amp; 0 \\ 0 &amp; 1 \\ 3 &amp; 5\end{array}\right]\)</span></p></li>
+<li><p><span class="math inline">\(\left[\begin{array}{rrr}6 &amp; 5 &amp; -1 \\ 1 &amp; 0 &amp; 4\end{array}\right]\left[\begin{array}{rr}4 &amp; -1 \\ 5 &amp; 2 \\ 0 &amp; 1\end{array}\right]\)</span></p></li>
+<li><p><span class="math inline">\(\left[\begin{array}{rrr}3 &amp; 5 &amp; 0 \\ 4 &amp; 2 &amp; -7\end{array}\right]\left[\begin{array}{l}x \\ y \\ z\end{array}\right]\)</span></p></li>
+<li><p><span class="math inline">\(\left[\begin{array}{lll}a &amp; b &amp; c\end{array}\right]\left[\begin{array}{ll}7 &amp; 0 \\ 0 &amp; 2 \\ 1 &amp; 4\end{array}\right]\)</span></p></li>
+</ol></li>
+</ul>
+<details class="solution">
+<summary>
+Show solutions for Exercise 4.2
+</summary>
+<ol type="1">
+<li><p><span class="math inline">\(A=\left[\begin{array}{cc}7 &amp; -1 \\ 6 &amp; 9\end{array}\right] \quad B=\left[\begin{array}{cc}0 &amp; 4 \\ 3 &amp; -2\end{array}\right] \quad C=\left[\begin{array}{ll}8 &amp; 3 \\ 6 &amp; 1\end{array}\right]\)</span></p>
+<ol type="1">
+<li><p><span class="math inline">\(A+B=\left[\begin{array}{ll}7 &amp; 3 \\ 9 &amp; 7\end{array}\right]\)</span></p></li>
+<li><p><span class="math inline">\(C-A=\left[\begin{array}{cc}1 &amp; 4 \\ 0 &amp; -8\end{array}\right]\)</span></p></li>
+<li><p><span class="math inline">\(3 A=\left[\begin{array}{cc}21 &amp; -3 \\ 18 &amp; 27\end{array}\right]\)</span></p></li>
+<li><p><span class="math inline">\(4 B+2 C=\left[\begin{array}{cc}0 &amp; 16 \\ 12 &amp; -8\end{array}\right]+\left[\begin{array}{cc}16 &amp; 6 \\ 12 &amp; 2\end{array}\right]=\left[\begin{array}{cc}16 &amp; 22 \\ 24 &amp; -6\end{array}\right]\)</span><br>
+&nbsp;<br>
+</p></li>
+</ol></li>
+<li><p><span class="math inline">\(A = \left[\begin{array}{cc}
+2 &amp; 8 \\
+3 &amp; 0 \\
+5 &amp; 1
+\end{array}\right] \quad B=\left[\begin{array}{cc} 2 &amp; 0 \\ 3 &amp; 8\end{array}\right] \quad
+C=\left[\begin{array}{cc} 7 &amp; 2 \\ 6 &amp; 3\end{array}\right]\)</span></p>
+<ol type="1">
+<li><p><span class="math inline">\(A B\)</span> is defined as number of columns in <span class="math inline">\(A\)</span> is two which is equal to the number of rows in <span class="math inline">\(B\)</span>. <span class="math display">\[A B=\left[\begin{array}{cc}
+2 \times 2+8 \times 3 &amp; 2 \times 0+8 \times 8 \\
+3 \times 2+0 \times 3 &amp; 3 \times 0+0 \times 8 \\
+5 \times 2+1 \times 3 &amp; 5 \times 0+1 \times 8
+\end{array}\right]=\left[\begin{array}{cc}
+28 &amp; 64 \\
+6 &amp; 0 \\
+13 &amp; 8
+\end{array}\right]\]</span> Not possible to calculate BA as <span class="math inline">\(B\)</span> has two columns, but <span class="math inline">\(A\)</span> has three rows.</p></li>
+<li><p><span class="math inline">\(B C\)</span> and <span class="math inline">\(C B\)</span> are both defined as both have two rows and two columns. <span class="math display">\[B C=\left[\begin{array}{ll}
+14 &amp; 4 \\
+69 &amp; 30
+\end{array}\right] \neq C B=\left[\begin{array}{cc}
+20 &amp; 16 \\
+21 &amp; 24
+\end{array}\right]\]</span><br>
+</p></li>
+</ol></li>
+<li><ol type="1">
+<li><p><span class="math inline">\(\left[\begin{array}{cc}0 &amp; 2 \\ 36 &amp; 20 \\ 16 &amp; 3\end{array}\right]_{3 \times 2}\)</span></p></li>
+<li><p><span class="math inline">\(\left[\begin{array}{ll}49 &amp; 3 \\ 4 &amp; 3\end{array}\right]_{2 \times 2}\)</span></p></li>
+<li><p><span class="math inline">\(\left[\begin{array}{l}3 x+5 y \\ 4 x+2 y-7 z\end{array}\right]_{2 \times 1}\)</span></p></li>
+<li><p><span class="math inline">\([7 a+c \quad 2 b+4 c]\)</span><br>
+&nbsp;<br>
+</p></li>
+</ol></li>
+</ol>
+</details>
 
 
+</section>
 
 </main> <!-- /main -->
 <script>
@@ -682,7 +712,7 @@ Lecture 7: Computing Determinants, Inversion, and Cramer’s Rule
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> | <a href="../accessibility.html">Accessibility</a> | Made with <a href="https://quarto.org/">Quarto</a></p>
+<p>2026 Div Bhagia | <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a> | <a href="../../accessibility.html">Accessibility</a> | Made with <a href="https://quarto.org/">Quarto</a></p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

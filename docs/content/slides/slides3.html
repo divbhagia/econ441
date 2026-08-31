@@ -442,7 +442,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Div Bhagia">
-  <title>Introduction to Mathematical Economics – Functions, Summation Notation, and Logical Conditions</title>
+  <title>Introduction to Mathematical Economics – Matrices and Matrix Operations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -986,8 +986,8 @@ margin-right: 0; }
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title">Functions, Summation Notation, and Logical Conditions</h1>
-  <p class="subtitle">ECON 441: Introduction to Mathematical Economics<br>Lecture 2</p>
+  <h1 class="title">Matrices and Matrix Operations</h1>
+  <p class="subtitle">ECON 441: Introduction to Mathematical Economics<br>Lecture 3</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -999,152 +999,217 @@ Div Bhagia
 
 </section>
 <section class="slide level2">
-<h2>Relations</h2>
-<p>Relation: subset of the Cartesian product</p>
-<p>Example. <span class="math inline">\(\{(x,y) | y \leq x \}\)</span></p>
-<p><img role="img" aria-label="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgMzYwIDM2MCIgcm9sZT0iaW1nIj4KICA8ZGVmcz4KICAgIDxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjkiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI2IiBtYXJrZXJIZWlnaHQ9IjYiIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj4KICAgICAgPHBhdGggZD0iTTAsMSBMOSw1IEwwLDkgeiIgZmlsbD0iIzMzMyIvPgogICAgPC9tYXJrZXI+CiAgPC9kZWZzPgogIDxnIHN0cm9rZT0iI2NjYyIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIxIDMiPgogICAgPGxpbmUgeDE9IjM2IiB5MT0iMTgiIHgyPSIzNiIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMzYiIHgyPSIzNDIiIHkyPSIzNiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMTgiIHgyPSI3MiIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iNzIiIHgyPSIzNDIiIHkyPSI3MiIvPgogICAgPGxpbmUgeDE9IjEwOCIgeTE9IjE4IiB4Mj0iMTA4IiB5Mj0iMzQyIi8+CiAgICA8bGluZSB4MT0iMTgiIHkxPSIxMDgiIHgyPSIzNDIiIHkyPSIxMDgiLz4KICAgIDxsaW5lIHgxPSIxNDQiIHkxPSIxOCIgeDI9IjE0NCIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMTQ0IiB4Mj0iMzQyIiB5Mj0iMTQ0Ii8+CiAgICA8bGluZSB4MT0iMjE2IiB5MT0iMTgiIHgyPSIyMTYiIHkyPSIzNDIiLz4KICAgIDxsaW5lIHgxPSIxOCIgeTE9IjIxNiIgeDI9IjM0MiIgeTI9IjIxNiIvPgogICAgPGxpbmUgeDE9IjI1MiIgeTE9IjE4IiB4Mj0iMjUyIiB5Mj0iMzQyIi8+CiAgICA8bGluZSB4MT0iMTgiIHkxPSIyNTIiIHgyPSIzNDIiIHkyPSIyNTIiLz4KICAgIDxsaW5lIHgxPSIyODgiIHkxPSIxOCIgeDI9IjI4OCIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMjg4IiB4Mj0iMzQyIiB5Mj0iMjg4Ii8+CiAgICA8bGluZSB4MT0iMzI0IiB5MT0iMTgiIHgyPSIzMjQiIHkyPSIzNDIiLz4KICAgIDxsaW5lIHgxPSIxOCIgeTE9IjMyNCIgeDI9IjM0MiIgeTI9IjMyNCIvPgogIDwvZz4KICA8bGluZSB4MT0iMTgiIHkxPSIxODAiIHgyPSIzNDIiIHkyPSIxODAiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItc3RhcnQ9InVybCgjYWgpIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgogIDxsaW5lIHgxPSIxODAiIHkxPSIzNDIiIHgyPSIxODAiIHkyPSIxOCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1zdGFydD0idXJsKCNhaCkiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CiAgPGcgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuNSI+CiAgICA8bGluZSB4MT0iMzYiIHkxPSIxNzYiIHgyPSIzNiIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjM2IiB4Mj0iMTg0IiB5Mj0iMzYiLz4KICAgIDxsaW5lIHgxPSI3MiIgeTE9IjE3NiIgeDI9IjcyIiB5Mj0iMTg0Ii8+CiAgICA8bGluZSB4MT0iMTc2IiB5MT0iNzIiIHgyPSIxODQiIHkyPSI3MiIvPgogICAgPGxpbmUgeDE9IjEwOCIgeTE9IjE3NiIgeDI9IjEwOCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjEwOCIgeDI9IjE4NCIgeTI9IjEwOCIvPgogICAgPGxpbmUgeDE9IjE0NCIgeTE9IjE3NiIgeDI9IjE0NCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjE0NCIgeDI9IjE4NCIgeTI9IjE0NCIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjE3NiIgeDI9IjIxNiIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjIxNiIgeDI9IjE4NCIgeTI9IjIxNiIvPgogICAgPGxpbmUgeDE9IjI1MiIgeTE9IjE3NiIgeDI9IjI1MiIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjI1MiIgeDI9IjE4NCIgeTI9IjI1MiIvPgogICAgPGxpbmUgeDE9IjI4OCIgeTE9IjE3NiIgeDI9IjI4OCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjI4OCIgeDI9IjE4NCIgeTI9IjI4OCIvPgogICAgPGxpbmUgeDE9IjMyNCIgeTE9IjE3NiIgeDI9IjMyNCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjMyNCIgeDI9IjE4NCIgeTI9IjMyNCIvPgogIDwvZz4KICA8dGV4dCB4PSIzMzgiIHk9IjE3MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9ImVuZCI+eDwvdGV4dD4KICA8dGV4dCB4PSIxOTAiIHk9IjMyIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC1zdHlsZT0iaXRhbGljIiBmaWxsPSIjMzMzIj55PC90ZXh0Pgo8L3N2Zz4K" class alt="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" width="380"></p>
+<h2>A Simple Economic Model</h2>
+<p><span class="math inline">\(q\)</span>: quantity of hats, <span class="math inline">\(p\)</span>: price of a single hat<br>
+Demand for hats: <span class="math inline">\(q = 100-2p\)</span><br>
+</p>
+
+<img role="img" aria-label="Demand curve labelled D for q equals 100 minus 2p: a downward-sloping straight line on axes with price p across and quantity q up, running from q equals 100 at a price of zero down to zero quantity at a price of 50" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjE0IDAgNDUyIDI4NiIgcm9sZT0iaW1nIj4KPGxpbmUgeDE9IjUyIiB5MT0iMjUwIiB4Mj0iNDQyIiB5Mj0iMjUwIiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS40Ii8+CjxsaW5lIHgxPSI2MCIgeTE9IjI1OCIgeDI9IjYwIiB5Mj0iMjgiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjQiLz4KPHRleHQgeD0iNDUwIiB5PSIyNTciIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIxIiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiMzOTNBM0IiPnA8L3RleHQ+Cjx0ZXh0IHg9IjUwIiB5PSIyNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzM5M0EzQiI+cTwvdGV4dD4KPGxpbmUgeDE9IjEzMi4wIiB5MT0iMjUwIiB4Mj0iMTMyLjAiIHkyPSIyNTYiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KPHRleHQgeD0iMTMyLjAiIHk9IjI3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjEwPC90ZXh0Pgo8bGluZSB4MT0iMjA0LjAiIHkxPSIyNTAiIHgyPSIyMDQuMCIgeTI9IjI1NiIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSIyMDQuMCIgeT0iMjc2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+MjA8L3RleHQ+CjxsaW5lIHgxPSIyNzYuMCIgeTE9IjI1MCIgeDI9IjI3Ni4wIiB5Mj0iMjU2IiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS4zIi8+Cjx0ZXh0IHg9IjI3Ni4wIiB5PSIyNzYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmaWxsPSIjMzkzQTNCIj4zMDwvdGV4dD4KPGxpbmUgeDE9IjM0OC4wIiB5MT0iMjUwIiB4Mj0iMzQ4LjAiIHkyPSIyNTYiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KPHRleHQgeD0iMzQ4LjAiIHk9IjI3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjQwPC90ZXh0Pgo8bGluZSB4MT0iNDIwLjAiIHkxPSIyNTAiIHgyPSI0MjAuMCIgeTI9IjI1NiIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0MjAuMCIgeT0iMjc2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+NTA8L3RleHQ+CjxsaW5lIHgxPSI1NCIgeTE9IjIxNS4wIiB4Mj0iNjAiIHkyPSIyMTUuMCIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0OCIgeT0iMjIxLjUiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmaWxsPSIjMzkzQTNCIj4yMDwvdGV4dD4KPGxpbmUgeDE9IjU0IiB5MT0iMTgwLjAiIHgyPSI2MCIgeTI9IjE4MC4wIiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS4zIi8+Cjx0ZXh0IHg9IjQ4IiB5PSIxODYuNSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjQwPC90ZXh0Pgo8bGluZSB4MT0iNTQiIHkxPSIxNDUuMCIgeDI9IjYwIiB5Mj0iMTQ1LjAiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KPHRleHQgeD0iNDgiIHk9IjE1MS41IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+NjA8L3RleHQ+CjxsaW5lIHgxPSI1NCIgeTE9IjExMC4wIiB4Mj0iNjAiIHkyPSIxMTAuMCIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0OCIgeT0iMTE2LjUiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmaWxsPSIjMzkzQTNCIj44MDwvdGV4dD4KPGxpbmUgeDE9IjU0IiB5MT0iNzUuMCIgeDI9IjYwIiB5Mj0iNzUuMCIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0OCIgeT0iODEuNSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjEwMDwvdGV4dD4KPGxpbmUgeDE9IjU0IiB5MT0iNDAuMCIgeDI9IjYwIiB5Mj0iNDAuMCIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0OCIgeT0iNDYuNSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjEyMDwvdGV4dD4KPGxpbmUgeDE9IjYwLjAiIHkxPSI3NS4wIiB4Mj0iNDIwLjAiIHkyPSIyNTAuMCIgc3Ryb2tlPSIjOTEyMDQwIiBzdHJva2Utd2lkdGg9IjIuMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjx0ZXh0IHg9IjQyOC4wIiB5PSIyNDAuMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzkxMjA0MCI+RDwvdGV4dD4KPC9zdmc+Cg==" alt="Demand curve labelled D for q equals 100 minus 2p: a downward-sloping straight line on axes with price p across and quantity q up, running from q equals 100 at a price of zero down to zero quantity at a price of 50" width="620" class="r-stretch"></section>
+<section class="slide level2">
+<h2>A Simple Economic Model</h2>
+<p><span class="math inline">\(q\)</span>: quantity of hats, <span class="math inline">\(p\)</span>: price of a single hat<br>
+Supply for hats: <span class="math inline">\(q = 20+3p\)</span><br>
+</p>
+
+<img role="img" aria-label="Supply curve labelled S for q equals 20 plus 3p: an upward-sloping straight line on axes with price p across and quantity q up, starting at q equals 20 when the price is zero" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjE0IDAgNDUyIDI4NiIgcm9sZT0iaW1nIj4KPGxpbmUgeDE9IjUyIiB5MT0iMjUwIiB4Mj0iNDQyIiB5Mj0iMjUwIiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS40Ii8+CjxsaW5lIHgxPSI2MCIgeTE9IjI1OCIgeDI9IjYwIiB5Mj0iMjgiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjQiLz4KPHRleHQgeD0iNDUwIiB5PSIyNTciIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIxIiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiMzOTNBM0IiPnA8L3RleHQ+Cjx0ZXh0IHg9IjUwIiB5PSIyNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzM5M0EzQiI+cTwvdGV4dD4KPGxpbmUgeDE9IjEzMi4wIiB5MT0iMjUwIiB4Mj0iMTMyLjAiIHkyPSIyNTYiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KPHRleHQgeD0iMTMyLjAiIHk9IjI3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjEwPC90ZXh0Pgo8bGluZSB4MT0iMjA0LjAiIHkxPSIyNTAiIHgyPSIyMDQuMCIgeTI9IjI1NiIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSIyMDQuMCIgeT0iMjc2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+MjA8L3RleHQ+CjxsaW5lIHgxPSIyNzYuMCIgeTE9IjI1MCIgeDI9IjI3Ni4wIiB5Mj0iMjU2IiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS4zIi8+Cjx0ZXh0IHg9IjI3Ni4wIiB5PSIyNzYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmaWxsPSIjMzkzQTNCIj4zMDwvdGV4dD4KPGxpbmUgeDE9IjM0OC4wIiB5MT0iMjUwIiB4Mj0iMzQ4LjAiIHkyPSIyNTYiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KPHRleHQgeD0iMzQ4LjAiIHk9IjI3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjQwPC90ZXh0Pgo8bGluZSB4MT0iNDIwLjAiIHkxPSIyNTAiIHgyPSI0MjAuMCIgeTI9IjI1NiIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0MjAuMCIgeT0iMjc2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+NTA8L3RleHQ+CjxsaW5lIHgxPSI1NCIgeTE9IjIxNS4wIiB4Mj0iNjAiIHkyPSIyMTUuMCIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0OCIgeT0iMjIxLjUiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmaWxsPSIjMzkzQTNCIj4yMDwvdGV4dD4KPGxpbmUgeDE9IjU0IiB5MT0iMTgwLjAiIHgyPSI2MCIgeTI9IjE4MC4wIiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS4zIi8+Cjx0ZXh0IHg9IjQ4IiB5PSIxODYuNSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjQwPC90ZXh0Pgo8bGluZSB4MT0iNTQiIHkxPSIxNDUuMCIgeDI9IjYwIiB5Mj0iMTQ1LjAiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KPHRleHQgeD0iNDgiIHk9IjE1MS41IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+NjA8L3RleHQ+CjxsaW5lIHgxPSI1NCIgeTE9IjExMC4wIiB4Mj0iNjAiIHkyPSIxMTAuMCIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0OCIgeT0iMTE2LjUiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmaWxsPSIjMzkzQTNCIj44MDwvdGV4dD4KPGxpbmUgeDE9IjU0IiB5MT0iNzUuMCIgeDI9IjYwIiB5Mj0iNzUuMCIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0OCIgeT0iODEuNSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjEwMDwvdGV4dD4KPGxpbmUgeDE9IjU0IiB5MT0iNDAuMCIgeDI9IjYwIiB5Mj0iNDAuMCIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0OCIgeT0iNDYuNSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjEyMDwvdGV4dD4KPGxpbmUgeDE9IjYwLjAiIHkxPSIyMTUuMCIgeDI9IjMwMC4wIiB5Mj0iNDAuMCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjIuMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjx0ZXh0IHg9IjMxMC4wIiB5PSI0Ni4wIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zdHlsZT0iaXRhbGljIiBmaWxsPSIjMDAwMDAwIj5TPC90ZXh0Pgo8L3N2Zz4K" alt="Supply curve labelled S for q equals 20 plus 3p: an upward-sloping straight line on axes with price p across and quantity q up, starting at q equals 20 when the price is zero" width="620" class="r-stretch"></section>
+<section class="slide level2">
+<h2>A Simple Economic Model</h2>
+<p><span class="math inline">\(q\)</span>: quantity of hats, <span class="math inline">\(p\)</span>: price of a single hat<br>
+ <br>
+Demand for hats: <span class="math display">\[q = 100-2p\]</span> Supply for hats: <span class="math display">\[q = 20+3p\]</span><br>
+ <br>
+<em>Equilibrium</em>: At what price will both demand and supply be equal?</p>
 </section>
 <section class="slide level2">
-<h2>Functions</h2>
-<p>Function: a relation where for each <span class="math inline">\(x\)</span> there is a unique <span class="math inline">\(y\)</span> <span class="math display">\[f: X \rightarrow Y, \quad y = f(x)\]</span> Examples. <span class="math inline">\(y = x, y=x^2, y=2x+3\)</span></p>
-<p><span class="math inline">\(X:\)</span> domain, <span class="math inline">\(Y:\)</span> codomain, <span class="math inline">\(f(X):\)</span> range</p>
-<p>Most functions we will encounter, <span class="math inline">\(f: \mathbb{R}^k \rightarrow \mathbb{R}\)</span></p>
+<h2>Equilibrium</h2>
+<p><em>Equilibrium</em>: At what price will both demand and supply be equal? <span class="math display">\[100-2p = 20+3p \rightarrow  p^* = \$16\]</span><br>
+ <br>
+What is the quantity traded at this price? <span class="math display">\[q ^* = 100-2 \times 16 = 20+3 \times 16 = 68\]</span><br>
+ <br>
+<span class="math inline">\(q ^*\)</span> and <span class="math inline">\(p^*\)</span> are determined simultaneously.</p>
 </section>
 <section class="slide level2">
-<h2>Functions</h2>
-<p>Let’s say, <span class="math display">\[f: X \rightarrow \mathbb{R}, \quad y = 3x-5\]</span> where <span class="math inline">\(X = \{2,3,4\}\)</span>. What is the range?</p>
+<h2>Equilibrium</h2>
+
+<img role="img" aria-label="Demand curve D and supply curve S drawn on the same price-quantity axes, crossing at the equilibrium price p star of 16 and quantity q star of 68, marked by dashed lines to each axis" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjE0IDAgNDUyIDI4NiIgcm9sZT0iaW1nIj4KPGxpbmUgeDE9IjUyIiB5MT0iMjUwIiB4Mj0iNDQyIiB5Mj0iMjUwIiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS40Ii8+CjxsaW5lIHgxPSI2MCIgeTE9IjI1OCIgeDI9IjYwIiB5Mj0iMjgiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjQiLz4KPHRleHQgeD0iNDUwIiB5PSIyNTciIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIxIiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiMzOTNBM0IiPnA8L3RleHQ+Cjx0ZXh0IHg9IjUwIiB5PSIyNCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjEiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzM5M0EzQiI+cTwvdGV4dD4KPGxpbmUgeDE9IjEzMi4wIiB5MT0iMjUwIiB4Mj0iMTMyLjAiIHkyPSIyNTYiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KPHRleHQgeD0iMTMyLjAiIHk9IjI3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjEwPC90ZXh0Pgo8bGluZSB4MT0iMjc2LjAiIHkxPSIyNTAiIHgyPSIyNzYuMCIgeTI9IjI1NiIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSIyNzYuMCIgeT0iMjc2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+MzA8L3RleHQ+CjxsaW5lIHgxPSIzNDguMCIgeTE9IjI1MCIgeDI9IjM0OC4wIiB5Mj0iMjU2IiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS4zIi8+Cjx0ZXh0IHg9IjM0OC4wIiB5PSIyNzYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmaWxsPSIjMzkzQTNCIj40MDwvdGV4dD4KPGxpbmUgeDE9IjQyMC4wIiB5MT0iMjUwIiB4Mj0iNDIwLjAiIHkyPSIyNTYiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KPHRleHQgeD0iNDIwLjAiIHk9IjI3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjUwPC90ZXh0Pgo8bGluZSB4MT0iNTQiIHkxPSIyMTUuMCIgeDI9IjYwIiB5Mj0iMjE1LjAiIHN0cm9rZT0iIzM5M0EzQiIgc3Ryb2tlLXdpZHRoPSIxLjMiLz4KPHRleHQgeD0iNDgiIHk9IjIyMS41IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+MjA8L3RleHQ+CjxsaW5lIHgxPSI1NCIgeTE9IjE4MC4wIiB4Mj0iNjAiIHkyPSIxODAuMCIgc3Ryb2tlPSIjMzkzQTNCIiBzdHJva2Utd2lkdGg9IjEuMyIvPgo8dGV4dCB4PSI0OCIgeT0iMTg2LjUiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE5IiBmaWxsPSIjMzkzQTNCIj40MDwvdGV4dD4KPGxpbmUgeDE9IjU0IiB5MT0iMTEwLjAiIHgyPSI2MCIgeTI9IjExMC4wIiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS4zIi8+Cjx0ZXh0IHg9IjQ4IiB5PSIxMTYuNSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZpbGw9IiMzOTNBM0IiPjgwPC90ZXh0Pgo8bGluZSB4MT0iNTQiIHkxPSI3NS4wIiB4Mj0iNjAiIHkyPSI3NS4wIiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS4zIi8+Cjx0ZXh0IHg9IjQ4IiB5PSI4MS41IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+MTAwPC90ZXh0Pgo8bGluZSB4MT0iNTQiIHkxPSI0MC4wIiB4Mj0iNjAiIHkyPSI0MC4wIiBzdHJva2U9IiMzOTNBM0IiIHN0cm9rZS13aWR0aD0iMS4zIi8+Cjx0ZXh0IHg9IjQ4IiB5PSI0Ni41IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOSIgZmlsbD0iIzM5M0EzQiI+MTIwPC90ZXh0Pgo8bGluZSB4MT0iNjAuMCIgeTE9Ijc1LjAiIHgyPSI0MjAuMCIgeTI9IjI1MC4wIiBzdHJva2U9IiM5MTIwNDAiIHN0cm9rZS13aWR0aD0iMi4xIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHRleHQgeD0iNDI4LjAiIHk9IjI0MC4wIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMSIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zdHlsZT0iaXRhbGljIiBmaWxsPSIjOTEyMDQwIj5EPC90ZXh0Pgo8bGluZSB4MT0iNjAuMCIgeTE9IjIxNS4wIiB4Mj0iMzAwLjAiIHkyPSI0MC4wIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMi4xIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHRleHQgeD0iMzEwLjAiIHk9IjQ2LjAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjIxIiBmb250LXdlaWdodD0iNzAwIiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiMwMDAwMDAiPlM8L3RleHQ+CjxsaW5lIHgxPSI2MCIgeTE9IjEzMS4wIiB4Mj0iMTc1LjIiIHkyPSIxMzEuMCIgc3Ryb2tlPSIjNzQ3NTc2IiBzdHJva2Utd2lkdGg9IjEuNCIgc3Ryb2tlLWRhc2hhcnJheT0iNSA0Ii8+CjxsaW5lIHgxPSIxNzUuMiIgeTE9IjI1MCIgeDI9IjE3NS4yIiB5Mj0iMTMxLjAiIHN0cm9rZT0iIzc0NzU3NiIgc3Ryb2tlLXdpZHRoPSIxLjQiIHN0cm9rZS1kYXNoYXJyYXk9IjUgNCIvPgo8Y2lyY2xlIGN4PSIxNzUuMiIgY3k9IjEzMS4wIiByPSI0LjUiIGZpbGw9IiMzOTNBM0IiLz4KPHRleHQgeD0iMTc1LjIiIHk9IjI3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzM5M0EzQiI+cCo8L3RleHQ+Cjx0ZXh0IHg9IjQ4IiB5PSIxMzcuNSIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTkiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzM5M0EzQiI+cSo8L3RleHQ+Cjwvc3ZnPgo=" alt="Demand curve D and supply curve S drawn on the same price-quantity axes, crossing at the equilibrium price p star of 16 and quantity q star of 68, marked by dashed lines to each axis" width="620" class="r-stretch"></section>
+<section class="slide level2">
+<h2>Matrix Algebra</h2>
+<p>We solved a <em>system</em> of two (linear) equations in two variables.<br>
+ <br>
+Complex economic models: multiple equations with multiple variables<br>
+ <br>
+Hard to just wing it... Enter, Matrix Algebra!<br>
+ <br>
+Matrix Algebra can help us write complex system of equations compactly and solve them</p>
 </section>
 <section class="slide level2">
-<h2>Cost Function</h2>
-<p>Consider the total cost <span class="math inline">\(C\)</span> of producing hats <span class="math inline">\(Q\)</span>, <span class="math display">\[C = f(Q)\]</span></p>
+<h2>A Simple Economic Model</h2>
+<p><span class="math inline">\(q\)</span>: quantity of hats, <span class="math inline">\(p\)</span>: price of a single hat<br>
+ <br>
+Demand for hats: <span class="math inline">\(q = 100-2p\)</span><br>
+ <br>
+Supply for hats: <span class="math inline">\(q = 20+3p\)</span><br>
+ <br>
+Rewrite the two equations: <span class="math display">\[\begin{aligned}
+q + 2p &amp;= 100 \\ q-3p &amp;= 20
+\end{aligned}\]</span></p>
+</section>
+<section class="slide level2">
+<h2>A Simple Economic Model</h2>
+<p>Two equations in two unknowns: <span class="math display">\[\begin{aligned}
+q + 2p &amp;= 100 \\ q-3p &amp;= 20
+\end{aligned}\]</span></p>
+<p>Can write this as <span class="math inline">\(Ax = b\)</span>, where <span class="math display">\[A = \begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; -3
+\end{bmatrix} \quad
+x = \begin{bmatrix}
+q \\
+p
+\end{bmatrix} \quad
+b = \begin{bmatrix}
+100 \\
+20
+\end{bmatrix}\]</span></p>
+<p>These arrays are called <em>matrices</em>.</p>
+</section>
+<section class="slide level2">
+<h2>Matrices</h2>
+<p>A <em>matrix</em> is a rectangular array of numbers, parameters, or vectors.</p>
+<p>Example. <span class="math inline">\(A = \begin{bmatrix}
+2 &amp; 3 &amp; 1 \\
+-1 &amp;4 &amp; 6
+\end{bmatrix}\)</span></p>
+<p>Dimensions of matrix:</p>
 <ul>
-<li><p>Should I be able to produce 10 hats and 5 hats at the same cost?</p></li>
-<li><p>Possible to produce 5 hats for $20 and $25?</p></li>
+<li><p>Number of rows (<span class="math inline">\(m\)</span>)</p></li>
+<li><p>Number of columns (<span class="math inline">\(n\)</span>)</p></li>
 </ul>
 </section>
 <section class="slide level2">
-<h2>By the way</h2>
-<p>Consider the total cost <span class="math inline">\(C\)</span> of producing hats <span class="math inline">\(Q\)</span>, <span class="math display">\[C = f(Q) = 2Q + 5\]</span></p>
-<p>What is the cost of producing 1 hat? What is the cost of producing 2 hats? How many hats can I produce for $25?</p>
+<h2>Dimension of a Matrix</h2>
+<p>A matrix with <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns is referred to as an <span class="math inline">\(m \times n\)</span> matrix<br>
+ <br>
+What’s the dimension of <span class="math inline">\(A\)</span>?<br>
+ <br>
+<span class="math display">\[A = \begin{bmatrix}
+2 &amp; 3 &amp; 1 \\
+-1 &amp;4 &amp; 6
+\end{bmatrix}_{\_\_ \times \_\_}\]</span></p>
 </section>
 <section class="slide level2">
-<h2>Types of Functions</h2>
-<ul>
-<li><p>Constant: <span class="math inline">\(y = f(x) = 5\)</span></p></li>
-<li><p>Polynomial of degree <span class="math inline">\(n\)</span>: <span class="math inline">\(y = a_0 + a_1 x + a_2 x^2 + ... + a_n x^n\)</span></p>
-<ul>
-<li><p><span class="math inline">\(n=0\)</span>, constant</p></li>
-<li><p><span class="math inline">\(n=1\)</span>, linear</p></li>
-<li><p><span class="math inline">\(n=2\)</span>, quadratic</p></li>
-<li><p><span class="math inline">\(n=3\)</span>, cubic</p></li>
-<li><p>…</p></li>
-</ul></li>
-<li><p>Rational function: ratio of two polynomial functions: <span class="math display">\[y = \frac{a}{x}\]</span></p></li>
-</ul>
+<h2>General Notation</h2>
+<p><span class="math display">\[A = \begin{bmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; \hdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \hdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; a_{m3} &amp; \hdots &amp; a_{mn} \\
+\end{bmatrix}\]</span></p>
+<p>Can write it more compactly <span class="math display">\[A = [ a_{ij} ] \quad i=1,2,...,m; j=1,2,...,n\]</span></p>
 </section>
 <section class="slide level2">
-<h2>Function of More than One Variables</h2>
-<p>Functions can be of two variables: <span class="math display">\[z=g(x,y)\]</span> Or three, or four,…, or <span class="math inline">\(n\)</span></p>
+<h2>Square Matrices</h2>
+<p><em>Square matrix</em>: equal number of rows and columns<br>
+ <br>
+Example. <span class="math display">\[A = \begin{bmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} \\
+a_{21} &amp; a_{22} &amp; a_{23} \\
+a_{31} &amp; a_{32} &amp; a_{33} \\
+\end{bmatrix}_{3\times 3}\]</span></p>
 </section>
 <section class="slide level2">
-<h2>Monotonic functions</h2>
-<p>Strictly increasing function: <span class="math display">\[x_{1}&gt;x_{2} \rightarrow f\left(x_{1}\right)&gt;f\left(x_{2}\right)\]</span> Strictly decreasing function: <span class="math display">\[x_{1}&gt;x_{2} \rightarrow f\left(x_{1}\right)&lt;f\left(x_{2}\right)\]</span> Increasing function: <span class="math display">\[x_{1}&gt;x_{2} \rightarrow f\left(x_{1}\right)\geq f\left(x_{2}\right)\]</span> Decreasing function: <span class="math display">\[x_{1}&gt;x_{2} \rightarrow f\left(x_{1}\right)\leq f\left(x_{2}\right)\]</span></p>
+<h2>Equal Matrices</h2>
+<p>Two matrices are <em>equal</em> if all their elements are identical.<br>
+ <br>
+Example. <span class="math display">\[A = \begin{bmatrix}
+1 &amp; 8  \\
+4 &amp;-1  \\
+\end{bmatrix} \neq
+\begin{bmatrix}
+1 &amp; 8  \\
+4 &amp; 2  \\
+\end{bmatrix}\]</span></p>
+<p>So <span class="math inline">\(A=B\)</span> if and only if <span class="math inline">\(a_{ij} = b_{ij}\)</span> for all <span class="math inline">\(i, j\)</span></p>
 </section>
 <section class="slide level2">
-<h2>Inverse of a function</h2>
-<p>Function <span class="math inline">\(y=f(x)\)</span> has an inverse if it is a one-to-one mapping, i.e. each value of <span class="math inline">\(y\)</span> is associated with a unique value of <span class="math inline">\(x\)</span>. Inverse function <span class="math display">\[x=f^{-1}(y)\]</span> returns the value corresponding value of <span class="math inline">\(x\)</span> for each <span class="math inline">\(y\)</span>. One-to-one mapping unique to strictly monotonic functions</p>
+<h2>Matrix Addition and Subtraction</h2>
+<p>How to add or take the difference between two matrices?</p>
+<p><span class="math inline">\(\rightarrow\)</span> Element-by-element</p>
+<p><span class="math inline">\(\rightarrow\)</span> Matrices have to have same dimension<br>
+ <br>
+</p>
+<p>Example. <span class="math display">\[A = \begin{bmatrix}
+2 &amp; 3 \\
+4 &amp; -6
+\end{bmatrix} \quad \quad
+B = \begin{bmatrix}
+1 &amp; 8 \\
+-2 &amp; 3
+\end{bmatrix}\]</span></p>
+<p>What is <span class="math inline">\(A+B\)</span> and <span class="math inline">\(A-B\)</span>?</p>
 </section>
 <section class="slide level2">
-<h2>Inverse of a function</h2>
-<p>Example: Find the inverse of <span class="math inline">\(y = f(x) = 3x-2\)</span>.</p>
+<h2>Scalar Multiplication</h2>
+<p>How to multiply a scalar to a matrix? <span class="math display">\[\lambda \begin{bmatrix} a_{11} &amp; a_{12} &amp; a_{13} \\
+a_{21} &amp; a_{22} &amp; a_{23} \\  \end{bmatrix} = \begin{bmatrix} \lambda a_{11} &amp; \lambda a_{12} &amp; \lambda a_{13} \\
+\lambda a_{21} &amp; \lambda a_{22} &amp; \lambda a_{23} \\  \end{bmatrix}\]</span> Example. <span class="math display">\[A = \begin{bmatrix}
+2 &amp; 3 \\
+4 &amp; -6
+\end{bmatrix}  \quad \quad
+B = \begin{bmatrix}
+1 &amp; 8 \\
+-2 &amp; 3
+\end{bmatrix}\]</span> What is <span class="math inline">\(2B\)</span> and <span class="math inline">\(A-2B\)</span>?</p>
 </section>
 <section class="slide level2">
-<h2>Summation Notation</h2>
-<p><span class="math display">\[\sum_{i=1}^N x_i = x_1 + x_2 + ... + x_N\]</span></p>
-<p><u><em>Example:</em></u> <span class="math inline">\(x = \{2,9,6,8,11,14\}\)</span>. What is <span class="math inline">\(\sum_{i=1}^{4} x_i\)</span>?</p>
+<h2>Matrix Multiplication</h2>
+<p>A whole new animal...</p>
+<p>Only possible to multiply two matrices, <span class="math inline">\(A_{m \times n}\)</span> and <span class="math inline">\(B_{p \times q}\)</span> to get <span class="math inline">\(AB\)</span> if <span class="math inline">\(n = p\)</span> i.e. <span class="math display">\[\text{number of columns in } A = \text{ number of rows in } B\]</span></p>
+<p>Example. <span class="math inline">\(A = \begin{bmatrix}
+2 &amp; 3 &amp; 1 \\
+4 &amp; -6 &amp; -2
+\end{bmatrix}_{2 \times 3}\)</span> <span class="math inline">\(B = \begin{bmatrix}
+1 &amp; 8 \\
+-2 &amp; 3
+\end{bmatrix}_{2 \times 2}\)</span></p>
+<p>Cannot do <span class="math inline">\(AB\)</span>, but can do <span class="math inline">\(BA\)</span></p>
 </section>
 <section class="slide level2">
-<h2>Summation Notation</h2>
-<p>Another way of using a summation sign is to write <span class="math display">\[\sum_{x \in A} x\]</span> which refers to summing up all elements in <span class="math inline">\(A\)</span>. To sum up <span class="math inline">\(x\)</span> for all possible values <span class="math inline">\(x\)</span>, we can simply write <span class="math display">\[\sum_x x\]</span></p>
+<h2>Matrix Multiplication</h2>
+<p>Another example. <span class="math display">\[A = \begin{bmatrix}
+2 &amp; 3 &amp; 1 \\
+4 &amp; -6 &amp; -2
+\end{bmatrix}_{2 \times 3}
+B = \begin{bmatrix}
+1 \\
+-2 \\
+4
+\end{bmatrix}_{3 \times 1}\]</span></p>
+<p>Can we multiply <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> to find <span class="math inline">\(C=AB\)</span>?</p>
+<p>Yes, since <span class="math inline">\(A\)</span> has 3 columns, which is equal to the number of rows in <span class="math inline">\(B\)</span>.</p>
+<p>Also, the dimension of <span class="math inline">\(C\)</span> will be <span class="math inline">\(2 \times 1\)</span>.</p>
 </section>
 <section class="slide level2">
-<h2>Things you CAN do</h2>
-<ol type="1">
-<li>Pull constants out of or into the summation sign. <span class="math display">\[\sum_{i=1}^N b x_i = b \sum_{i=1}^N x_i\]</span></li>
-</ol>
+<h2>Matrix Multiplication</h2>
+<p>So how to actually multiply these matrices?</p>
+<p><span class="math display">\[C = AB\]</span> <span class="math display">\[c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + ... + a_{in} b_{nj} = \sum_{k=1}^n a_{ik} b_{kj}\]</span></p>
+<p>The <em>element <span class="math inline">\(c_{ij}\)</span></em> is obtained by multiplying term-by-term the entries of the <em><span class="math inline">\(i\)</span>th row of <span class="math inline">\(A\)</span></em> and <em><span class="math inline">\(j\)</span>th column of <span class="math inline">\(B\)</span></em>.</p>
 </section>
 <section class="slide level2">
-<h2>Things you CAN do</h2>
-<ol start="2" type="1">
-<li>Split apart (or combine) sums (addition) or differences (subtraction) <span class="math display">\[\sum_{i=1}^N (b x_i + c y_i) = b \sum_{i=1}^N x_i  + c \sum_{i=1}^N y_i\]</span></li>
-</ol>
-</section>
-<section class="slide level2">
-<h2>Things you CAN do</h2>
-<ol start="3" type="1">
-<li>Multiply through constants by the number of terms in the summation <span class="math display">\[\sum_{i=1}^N (a+b x_i)= aN + b \sum_{i=1}^N x_i\]</span></li>
-</ol>
-</section>
-<section class="slide level2">
-<h2>Things you CANNOT do</h2>
-<ol type="1">
-<li>Split apart (or combine) products (multiplication) or quotients (division). <span class="math display">\[\sum_{i=1}^N x_i y_i \neq  \sum_{i=1}^N x_i \times \sum_{i=1}^N y_i\]</span></li>
-</ol>
-</section>
-<section class="slide level2">
-<h2>Things you CANNOT do</h2>
-<ol start="2" type="1">
-<li>Move the exponent out of or into the summation. <span class="math display">\[\sum_{i=1}^N x_i^a \neq  \left(\sum_{i=1}^N x_i\right)^a\]</span></li>
-</ol>
-</section>
-<section class="slide level2">
-<h2>Necessary vs. Sufficient Conditions</h2>
-<p><span class="math inline">\(q\)</span> is a necessary condition for <span class="math inline">\(p\)</span> if: <span class="math display">\[p \implies q\]</span></p>
-<div class="fragment">
-<p><span class="math inline">\(p\)</span>: I ate tofu for dinner</p>
-<p><span class="math inline">\(q\)</span>: My dinner had protein</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Necessary vs. Sufficient Conditions</h2>
-<p><span class="math inline">\(q\)</span> is a sufficient condition for <span class="math inline">\(p\)</span> if: <span class="math display">\[p \impliedby q\]</span></p>
-<div class="fragment">
-<p><span class="math inline">\(p\)</span>: A number is even</p>
-<p><span class="math inline">\(q\)</span>: A number is divisible by 4</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Necessary vs. Sufficient Conditions</h2>
-<p><span class="math inline">\(q\)</span> is both necessary and sufficient for <span class="math inline">\(p\)</span> <span class="math display">\[p \iff q\]</span></p>
-<div class="fragment">
-<p><span class="math inline">\(p\)</span>: A number is even</p>
-<p><span class="math inline">\(q\)</span>: A number is divisible by 2</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Necessary vs. Sufficient Conditions</h2>
-<p><span class="math inline">\(p\)</span>: It is a holiday</p>
-<p><span class="math inline">\(q\)</span>: It is Thanksgiving</p>
-</section>
-<section class="slide level2">
-<h2>Necessary vs. Sufficient Conditions</h2>
-<p><span class="math inline">\(p\)</span>: The car is out of gas</p>
-<p><span class="math inline">\(q\)</span>: The car isn’t starting</p>
-</section>
-<section class="slide level2">
-<h2>Necessary vs. Sufficient Conditions</h2>
-<p><span class="math inline">\(p\)</span>: A geometric figure has four sides</p>
-<p><span class="math inline">\(q\)</span>: It is a rectangle</p>
-</section>
-<section class="slide level2">
-<h2>Homework Questions</h2>
-<ul>
-<li><p>Exercise 2.3: 1, 2</p></li>
-<li><p>Exercise 2.4: 5, 7, 8</p></li>
-<li><p>Exercise 2.5: 1 (For each part, find the inverse of the function too.)</p></li>
-<li><p>Exercise 4.2: 6, 8</p></li>
-<li><p>Exercise 5.1: 1</p></li>
-</ul>
+<h2>Matrix Multiplication: Examples</h2>
+<p><span class="math display">\[A = \begin{bmatrix}
+a_{11} &amp; a_{12} &amp;  a_{13} \\
+a_{21} &amp; a_{22} &amp;  a_{23} \\
+\end{bmatrix}_{2 \times 3}
+B = \begin{bmatrix}
+b_{11} &amp; b_{12} \\
+b_{21} &amp; b_{22} \\
+b_{31} &amp; b_{32} \\
+\end{bmatrix}_{3 \times 2}\]</span></p>
+<p>Here, <span class="math display">\[C = AB = \begin{bmatrix}
+a_{11}b_{11} +  a_{12}b_{21} + a_{13}b_{31} &amp;  a_{11}b_{12} +  a_{12}b_{22} + a_{13}b_{32} \\
+  a_{21}b_{11} +  a_{22}b_{21} + a_{23}b_{31} &amp;  a_{21}b_{12} +  a_{22}b_{22} + a_{23}b_{32} \\
+\end{bmatrix}_{2 \times 2}\]</span></p>
 
 
 </section>

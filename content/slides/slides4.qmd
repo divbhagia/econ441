@@ -37,7 +37,7 @@ B = \begin{bmatrix}
 \end{bmatrix}_{3 \times 1}$$\
 Can we multiply $A$ and $B$ to find $C=AB$?\
  \
-Yes, since $A$ has 3 rows which is equal to the number of columns in $B$.\
+Yes, since $A$ has 3 columns, which is equal to the number of rows in $B$.\
  \
 Also, the dimension of $C$ will be $2 \times 1$.
 
@@ -47,7 +47,7 @@ So how to actually multiply these matrices?\
  \
 $$C = AB$$ $$c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + ... + a_{in} b_{nj} = \sum_{k=1}^n a_{ik} b_{kj}$$
 
-The [element $c_{ij}$]{.alert} is obtained by multiplying term-by-term the entries of the [$i$th row of $A$]{.alert} and [$j$th column of $B$]{.alert}.
+The *element $c_{ij}$* is obtained by multiplying term-by-term the entries of the *$i$th row of $A$* and *$j$th column of $B$*.
 
 ## Matrix Multiplication: Examples
 

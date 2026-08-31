@@ -35,7 +35,7 @@ LECTURES = {
  dt.date(YEAR,8,24):  (1,"Course introduction; numbers and sets","2.2, 2.3",[("Handout-Sets.pdf","Sets")]),
  dt.date(YEAR,8,26):  (2,"Functions, summation notation, and logical conditions","2.4-2.6, p. 163, 5.1",[("Handout-Functions.pdf","Functions"),
                        ("Handout-Summation-Notation.pdf","Summations")]),
- dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar multiplication","4.1, 4.2",[("Handout-Matrix-Operations.pdf","Matrix Operations")]),
+ dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar and matrix multiplication","4.1, 4.2",[("Handout-Matrix-Operations.pdf","Matrix Operations")]),
  dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; inner product; linear dependence","4.2-4.4",[]),
  dt.date(YEAR,9,9):   (5,"Identity, null, idempotent matrices; transpose","4.5, 4.6",[]),
  dt.date(YEAR,9,14):  (6,"Inverse; nonsingularity; rank; the determinant","4.6, 5.1, 5.2",[("Handout-Determinant-and-Inverse.pdf","Determinant and Inverse")]),
@@ -67,7 +67,7 @@ SPECIAL = {
 }
 # Lectures whose materials have been vetted and published.
 # Add numbers here as each module is checked, then rerun ./build.sh all
-PUBLISHED = {1, 2}
+PUBLISHED = {1, 2, 3}
 
 QUIZZES = {dt.date(YEAR,9,9):1, dt.date(YEAR,10,12):2, dt.date(YEAR,11,9):3, dt.date(YEAR,11,30):4}
 
@@ -129,7 +129,12 @@ def build_latex():
 
 def icons(n, sheets):
     o = [f'<a href="content/slides/slides{n}.html" target="_blank" rel="noopener" '
-         f'aria-label="Lecture {n} slides (opens in a new tab)"><span aria-hidden="true">🖥️</span></a>']
+         f'aria-label="Lecture {n} slides (opens in a new tab)"><span aria-hidden="true">🖥️</span></a>',
+         # The tagged PDF of the same deck: complete slides, no overlays, the
+         # version to study from or print.
+         f'<a href="content/slides/slides{n}.pdf" target="_blank" rel="noopener" '
+         f'aria-label="Lecture {n} slides as tagged PDF (opens in a new tab)">'
+         f'<span aria-hidden="true">📑</span></a>']
     # One icon per worksheet; the aria-label names it, so two sheets on the same
     # lecture stay distinguishable to a screen reader.
     for ws, wsl in sheets:
@@ -211,6 +216,7 @@ Quizzes are given at the start of class on the dates marked below.
 
 <p class="materials-legend">
 <span aria-hidden="true">\U0001F5A5️</span> Slides &nbsp;
+<span aria-hidden="true">\U0001F4D1</span> Slides (PDF) &nbsp;
 <span aria-hidden="true">\U0001F5D2️</span> Worksheet (PDF) &nbsp;
 <span aria-hidden="true">✍️</span> Practice problems
 </p>

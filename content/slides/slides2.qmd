@@ -52,7 +52,7 @@ hats? How many hats can I produce for \$25?
 
 -   Constant: $y = f(x) = 5$
 
--   Polynomial of degree $n$
+-   Polynomial of degree $n$: $y = a_0 + a_1 x + a_2 x^2 + ... + a_n x^n$
 
     -   $n=0$, constant
 
@@ -85,7 +85,7 @@ $$x_{1}>x_{2} \rightarrow f\left(x_{1}\right)\leq f\left(x_{2}\right)$$
 
 ## Inverse of a function
 
-Function $y=f(X)$ has an inverse if it is a one-to-one mapping, i.e.
+Function $y=f(x)$ has an inverse if it is a one-to-one mapping, i.e.
 each value of $y$ is associated with a unique value of $x$. Inverse
 function $$x=f^{-1}(y)$$ returns the value corresponding value of $x$
 for each $y$. One-to-one mapping unique to strictly monotonic functions
@@ -113,13 +113,13 @@ possible values $x$, we can simply write $$\sum_x x$$
 
 ## Things you CAN do
 
-1.  Split apart (or combine) sums (addition) or differences
+2.  Split apart (or combine) sums (addition) or differences
     (subtraction)
     $$\sum_{i=1}^N (b x_i + c y_i) = b \sum_{i=1}^N x_i  + c \sum_{i=1}^N y_i$$
 
 ## Things you CAN do
 
-1.  Multiply through constants by the number of terms in the summation
+3.  Multiply through constants by the number of terms in the summation
     $$\sum_{i=1}^N (a+b x_i)= aN + b \sum_{i=1}^N x_i$$
 
 ## Things you CANNOT do
@@ -130,7 +130,7 @@ possible values $x$, we can simply write $$\sum_x x$$
 
 ## Things you CANNOT do
 
-1.  Move the exponent out of or into the summation.
+2.  Move the exponent out of or into the summation.
     $$\sum_{i=1}^N x_i^a \neq  \left(\sum_{i=1}^N x_i\right)^a$$
 
 ## Necessary vs. Sufficient Conditions
