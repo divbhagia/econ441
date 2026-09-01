@@ -227,12 +227,11 @@ Lecture 2: Functions, Summation Notation, and Logical Conditions
   function fix() {
     var vw = document.documentElement.clientWidth;
     document.querySelectorAll('mjx-container').forEach(function (m) {
-      var r = m.getBoundingClientRect();
-      // Two ways an equation breaks reflow: it pokes past the viewport, or it
-      // is wider than the box it sits in (a per-part solution toggle, a table
-      // cell) and stretches that box until the *page* scrolls sideways.
-      var box = m.parentElement ? m.parentElement.clientWidth : vw;
-      if (r.right > vw + 1 || r.width > box + 1) m.classList.add('mjx-scroll');
+      // Viewport check only. An earlier version also compared against the
+      // parent's clientWidth, but inline math sits in a <span>, whose
+      // clientWidth is always 0 -- so every equation on the site got the
+      // scroll treatment (baselines shifted, math vanishing on toggle).
+      if (m.getBoundingClientRect().right > vw + 1) m.classList.add('mjx-scroll');
       if (m.scrollWidth > m.clientWidth + 1) {
         m.setAttribute('tabindex', '0');
         m.setAttribute('role', 'group');

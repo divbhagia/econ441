@@ -61,6 +61,14 @@ details.solution[open] > summary {
 details.solution > :last-child {
   padding-bottom: 0.8em;
 }
+/* A paragraph opening with a bold marker right after a solution toggle is the
+   next problem's statement ("**2.** Given ..."); give problem boundaries clear
+   air so problems read as separate blocks. Part labels (plain "b. ..." text)
+   keep the tighter rhythm. Plain CSS, so :has() is fine here -- it is only
+   Quarto's SCSS compiler that drops it (see CLAUDE.md). */
+details.solution + p:has(> strong:first-child) {
+  margin-top: 1.8em;
+}
 
 /* Per-part variant: used where a problem's parts each get their own toggle, so
    a student can check (a) without spoiling (b) and (c). Indented under the part
