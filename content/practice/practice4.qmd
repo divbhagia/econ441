@@ -23,21 +23,21 @@ D=BA=[3 \times (-2)+6 \times 4+(-2) \times 7]=[4]_{1 \times 1}$$
 
 </details>
 
-**7.** If the matrix $A$ in Example 5 had all its four elements nonzero, would $x^{\prime} A x$ still give a weighted sum of squares? Would the associative law still apply?
+**7.** If the matrix $A$ in Example 5 had all its four elements nonzero, would $x^T A x$ still give a weighted sum of squares? Would the associative law still apply?
 
 <details class="solution">
 <summary>Solution</summary>
 
 In Example 5, $x=\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix}$ and $A=\begin{bmatrix}a_{11} & 0 \\ 0 & a_{22}\end{bmatrix}$, in which case
-$$x^{\prime} A x=\begin{bmatrix}x_{1} & x_{2}\end{bmatrix}\begin{bmatrix}a_{11} & 0 \\ 0 & a_{22}\end{bmatrix}\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix}
+$$x^T A x=\begin{bmatrix}x_{1} & x_{2}\end{bmatrix}\begin{bmatrix}a_{11} & 0 \\ 0 & a_{22}\end{bmatrix}\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix}
 =\underbrace{a_{11} x_{1}^{2}+a_{22} x_{2}^{2}}_{\text{weighted sum of squares}}=\sum_{i=1}^{2} a_{i i} x_{i}^{2}$$
 
 But if all four elements of $A$ are nonzero,
 $$\begin{aligned}
-x^{\prime} A x &= \begin{bmatrix}x_{1} & x_{2}\end{bmatrix}\begin{bmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{bmatrix}\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix} \\
+x^T A x &= \begin{bmatrix}x_{1} & x_{2}\end{bmatrix}\begin{bmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{bmatrix}\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix} \\
 &= a_{11} x_{1}^{2}+\left(a_{21}+a_{12}\right) x_{1} x_{2}+a_{22} x_{2}^{2}
 \end{aligned}$$
-which is no longer a weighted sum of squares. The associative law $\left(x^{\prime} A\right) x=x^{\prime}(A x)$ applies in both cases (after all, it's a law!) as all the products are possible.
+which is no longer a weighted sum of squares. The associative law $\left(x^T A\right) x=x^T(A x)$ applies in both cases (after all, it's a law!) as all the products are possible.
 
 </details>
 
@@ -74,12 +74,12 @@ $Ix=\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}_{2 \times 2}\begin{bmatrix}x_{1} 
 
 </details>
 
-d. $x^{\prime} I$
+d. $x^T I$
 
 <details class="solution part">
 <summary>Solution</summary>
 
-$x^{\prime} I=\begin{bmatrix}x_{1} & x_{2}\end{bmatrix}\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}_{2 \times 2}=\begin{bmatrix}x_{1} & x_{2}\end{bmatrix}=x^{\prime}$
+$x^T I=\begin{bmatrix}x_{1} & x_{2}\end{bmatrix}\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}_{2 \times 2}=\begin{bmatrix}x_{1} & x_{2}\end{bmatrix}=x^T$
 
 </details>
 
@@ -109,23 +109,23 @@ More generally, an $n \times n$ matrix allows $2^{n}$ such matrices: there are $
 
 **2.** Given $A=\begin{bmatrix}0 & 4 \\ -1 & 3\end{bmatrix}, B=\begin{bmatrix}3 & -8 \\ 0 & 1\end{bmatrix}$, and $C=\begin{bmatrix}1 & 0 & 9 \\ 6 & 1 & 1\end{bmatrix}$, verify that
 
-a. $(A+B)^{\prime}=A^{\prime}+B^{\prime}$
+a. $(A+B)^T=A^T+B^T$
 
 <details class="solution part">
 <summary>Solution</summary>
 
-$$A+B=\begin{bmatrix}3 & -4 \\ -1 & 4\end{bmatrix}, \text{ so } (A+B)^{\prime} = \begin{bmatrix}3 & -1 \\ -4 & 4\end{bmatrix}$$
-$$A^{\prime}+B^{\prime}=\begin{bmatrix}0 & -1 \\ 4 & 3\end{bmatrix}+\begin{bmatrix}3 & 0 \\ -8 & 1\end{bmatrix}=\begin{bmatrix}3 & -1 \\ -4 & 4\end{bmatrix} \checkmark$$
+$$A+B=\begin{bmatrix}3 & -4 \\ -1 & 4\end{bmatrix}, \text{ so } (A+B)^T = \begin{bmatrix}3 & -1 \\ -4 & 4\end{bmatrix}$$
+$$A^T+B^T=\begin{bmatrix}0 & -1 \\ 4 & 3\end{bmatrix}+\begin{bmatrix}3 & 0 \\ -8 & 1\end{bmatrix}=\begin{bmatrix}3 & -1 \\ -4 & 4\end{bmatrix} \checkmark$$
 
 </details>
 
-b. $(AC)^{\prime}=C^{\prime} A^{\prime}$
+b. $(AC)^T=C^T A^T$
 
 <details class="solution part">
 <summary>Solution</summary>
 
 $$AC=\begin{bmatrix}0 & 4 \\ -1 & 3\end{bmatrix}_{2 \times 2}\begin{bmatrix}1 & 0 & 9 \\ 6 & 1 & 1\end{bmatrix}_{2 \times 3}=\begin{bmatrix}24 & 4 & 4 \\ 17 & 3 & -6\end{bmatrix}_{2 \times 3}$$
-$$C^{\prime} A^{\prime}=\begin{bmatrix}1 & 6 \\ 0 & 1 \\ 9 & 1\end{bmatrix}_{3 \times 2}\begin{bmatrix}0 & -1 \\ 4 & 3\end{bmatrix}_{2 \times 2}=\begin{bmatrix}24 & 17 \\ 4 & 3 \\ 4 & -6\end{bmatrix}_{3 \times 2}=(AC)^{\prime} \checkmark$$
+$$C^T A^T=\begin{bmatrix}1 & 6 \\ 0 & 1 \\ 9 & 1\end{bmatrix}_{3 \times 2}\begin{bmatrix}0 & -1 \\ 4 & 3\end{bmatrix}_{2 \times 2}=\begin{bmatrix}24 & 17 \\ 4 & 3 \\ 4 & -6\end{bmatrix}_{3 \times 2}=(AC)^T \checkmark$$
 
 </details>
 

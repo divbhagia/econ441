@@ -13,24 +13,24 @@ Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These 
 
 ## Exercise 4.6
 
--   Let $A=I-X\left(X^{\prime} X\right)^{-1} X^{\prime}$.
+-   Let $A=I-X\left(X^T X\right)^{-1} X^T$.
 
-    1.  Must $A$ be square? Must $\left(X^{\prime} X\right)$ be square? Must $X$ be square?
+    1.  Must $A$ be square? Must $\left(X^T X\right)$ be square? Must $X$ be square?
 
     2.  Show that matrix $A$ is idempotent.
 
 <details class="solution">
 <summary>Show solutions for Exercise 4.6</summary>
 
-$A=I-X\left(X^{\prime} X\right)^{-1} X^{\prime}$
+$A=I-X\left(X^T X\right)^{-1} X^T$
 
--   Say the dimension of $X$ is $m \times n$. Then the dimension of $X_{n \times m}^{\prime} X_{m \times n}$ is $n \times n$. So the dimension of $\left(X^{\prime} X\right)^{-1}$ is also $n \times n$. This implies that the dimension of $X_{m \times n}\left(X^{\prime} X\right)_{n \times n}^{-1} X_{n \times m}^{\prime}$ is $m \times m$. Hence, $X^{\prime} X$ and $A$ must be square matrices, but $X$ need not be square.
+-   Say the dimension of $X$ is $m \times n$. Then the dimension of $X_{n \times m}^T X_{m \times n}$ is $n \times n$. So the dimension of $\left(X^T X\right)^{-1}$ is also $n \times n$. This implies that the dimension of $X_{m \times n}\left(X^T X\right)_{n \times n}^{-1} X_{n \times m}^T$ is $m \times m$. Hence, $X^T X$ and $A$ must be square matrices, but $X$ need not be square.
 
 -   To prove a matrix is idempotent, we need to show $AA=A$. $$\begin{aligned}
-    A A &= (I-X\left(X^{\prime} X\right)^{-1} X^{\prime})(I-X\left(X^{\prime} X\right)^{-1} X^{\prime}) \\
-    & = I-X\left(X^{\prime} X\right)^{-1} X^{\prime}-X\left(X^{\prime} X\right)^{-1} X^{\prime}+X\underbrace{\left(X^{\prime} X\right)^{-1} X^{\prime} X}_{I}\left(X^{\prime} X\right)^{-1} X^{\prime} \\
-    &= I-X\left(X^{\prime} X\right)^{-1} X^{\prime}-X\left(X^{\prime} X\right)^{-1} X^{\prime}+X\left(X^{\prime} X\right)^{-1} X^{\prime} \\ 
-    &=I-X\left(X^{\prime} X\right)^{-1} X^{\prime} = A
+    A A &= (I-X\left(X^T X\right)^{-1} X^T)(I-X\left(X^T X\right)^{-1} X^T) \\
+    & = I-X\left(X^T X\right)^{-1} X^T-X\left(X^T X\right)^{-1} X^T+X\underbrace{\left(X^T X\right)^{-1} X^T X}_{I}\left(X^T X\right)^{-1} X^T \\
+    &= I-X\left(X^T X\right)^{-1} X^T-X\left(X^T X\right)^{-1} X^T+X\left(X^T X\right)^{-1} X^T \\ 
+    &=I-X\left(X^T X\right)^{-1} X^T = A
     \end{aligned}$$
 
 </details>

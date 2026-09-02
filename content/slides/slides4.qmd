@@ -8,31 +8,15 @@ format:
     embed-resources: true
 ---
 
+## By the way
+
+![](../../assets/fig/ai-linal.jpeg){fig-alt="Four-panel comic: a person asks A.I. why it always wears a mask; the mask is lifted to reveal a matrix of entries a-one-one through a-m-n underneath, and the person says “let’s keep this on” - a joke that machine learning is linear algebra underneath" width=480}
+
 ## Matrix Multiplication
 
 Only possible to multiply two matrices, $A_{m \times n}$ and $B_{p \times q}$ to get $AB$ if $n = p$ i.e. $$\text{number of columns in } A = \text{ number of rows in } B$$
 
-Example. $A = \begin{bmatrix}
-2 & 3 & 1 \\
-4 & -6 & -2
-\end{bmatrix}_{2 \times 3}$ $B = \begin{bmatrix}
-1 & 8 \\
--2 & 3
-\end{bmatrix}_{2 \times 2}$
-
-Cannot do $AB$, but can do $BA$
-
-Another example. If instead $B = \begin{bmatrix}
-1 \\
--2 \\
-4
-\end{bmatrix}_{3 \times 1}$, we *can* find $C = AB$. What is the dimension of $C$?
-
-## Matrix Multiplication
-
-So how to actually multiply these matrices?\
- \
-$$C = AB$$ $$c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + ... + a_{in} b_{nj} = \sum_{k=1}^n a_{ik} b_{kj}$$
+So how to actually multiply these matrices? $$C = AB$$ $$c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + ... + a_{in} b_{nj} = \sum_{k=1}^n a_{ik} b_{kj}$$
 
 The *element $c_{ij}$* is obtained by multiplying term-by-term the entries of the *$i$th row of $A$* and *$j$th column of $B$*.
 
@@ -63,7 +47,7 @@ B = \begin{bmatrix}
 -2 & 3
 \end{bmatrix}_{2 \times 2}$$
 
-From before: $AB$ is not defined, but $BA$ is. Find $BA$.
+$AB$ is not defined here (why?), but $BA$ is. Find $BA$.
 
 ## Matrix Multiplication: Examples
 
@@ -100,10 +84,6 @@ q-3p
 
 Setting $Ax=b$ gives us back our demand and supply equations.
 
-## By the way
-
-![](../../assets/fig/ai-linal.jpeg){fig-alt="Four-panel comic: a person asks A.I. why it always wears a mask; the mask is lifted to reveal a matrix of entries a-one-one through a-m-n underneath, and the person says “let’s keep this on” - a joke that machine learning is linear algebra underneath" width=480}
-
 ## Vectors
 
 Matrices with only one column: column vectors $$x =  \begin{bmatrix}
@@ -113,7 +93,7 @@ x_2 \\
 x_n
 \end{bmatrix}$$
 
-Matrices with only one row: row vectors $$x' =  \begin{bmatrix}
+Matrices with only one row: row vectors $$x^T =  \begin{bmatrix}
 x_1 &
 x_2 & \cdots &
 x_n

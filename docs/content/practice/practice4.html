@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script src="https://dbhagia.com/econ441/assets/mathjax/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -201,17 +201,17 @@ Solution
 \end{bmatrix}_{3 \times 3} \qquad
 D=BA=[3 \times (-2)+6 \times 4+(-2) \times 7]=[4]_{1 \times 1}\]</span></p>
 </details>
-<p><strong>7.</strong> If the matrix <span class="math inline">\(A\)</span> in Example 5 had all its four elements nonzero, would <span class="math inline">\(x^{\prime} A x\)</span> still give a weighted sum of squares? Would the associative law still apply?</p>
+<p><strong>7.</strong> If the matrix <span class="math inline">\(A\)</span> in Example 5 had all its four elements nonzero, would <span class="math inline">\(x^T A x\)</span> still give a weighted sum of squares? Would the associative law still apply?</p>
 <details class="solution">
 <summary>
 Solution
 </summary>
-<p>In Example 5, <span class="math inline">\(x=\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix}\)</span> and <span class="math inline">\(A=\begin{bmatrix}a_{11} &amp; 0 \\ 0 &amp; a_{22}\end{bmatrix}\)</span>, in which case <span class="math display">\[x^{\prime} A x=\begin{bmatrix}x_{1} &amp; x_{2}\end{bmatrix}\begin{bmatrix}a_{11} &amp; 0 \\ 0 &amp; a_{22}\end{bmatrix}\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix}
+<p>In Example 5, <span class="math inline">\(x=\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix}\)</span> and <span class="math inline">\(A=\begin{bmatrix}a_{11} &amp; 0 \\ 0 &amp; a_{22}\end{bmatrix}\)</span>, in which case <span class="math display">\[x^T A x=\begin{bmatrix}x_{1} &amp; x_{2}\end{bmatrix}\begin{bmatrix}a_{11} &amp; 0 \\ 0 &amp; a_{22}\end{bmatrix}\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix}
 =\underbrace{a_{11} x_{1}^{2}+a_{22} x_{2}^{2}}_{\text{weighted sum of squares}}=\sum_{i=1}^{2} a_{i i} x_{i}^{2}\]</span></p>
 <p>But if all four elements of <span class="math inline">\(A\)</span> are nonzero, <span class="math display">\[\begin{aligned}
-x^{\prime} A x &amp;= \begin{bmatrix}x_{1} &amp; x_{2}\end{bmatrix}\begin{bmatrix}a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22}\end{bmatrix}\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix} \\
+x^T A x &amp;= \begin{bmatrix}x_{1} &amp; x_{2}\end{bmatrix}\begin{bmatrix}a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22}\end{bmatrix}\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix} \\
 &amp;= a_{11} x_{1}^{2}+\left(a_{21}+a_{12}\right) x_{1} x_{2}+a_{22} x_{2}^{2}
-\end{aligned}\]</span> which is no longer a weighted sum of squares. The associative law <span class="math inline">\(\left(x^{\prime} A\right) x=x^{\prime}(A x)\)</span> applies in both cases (after all, it’s a law!) as all the products are possible.</p>
+\end{aligned}\]</span> which is no longer a weighted sum of squares. The associative law <span class="math inline">\(\left(x^T A\right) x=x^T(A x)\)</span> applies in both cases (after all, it’s a law!) as all the products are possible.</p>
 </details>
 </section>
 <section id="exercise-4.5" class="level2">
@@ -245,13 +245,13 @@ Solution
 <p><span class="math inline">\(Ix=\begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}_{2 \times 2}\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix}=\begin{bmatrix}x_{1} \\ x_{2}\end{bmatrix}=x\)</span></p>
 </details>
 <ol start="4" type="a">
-<li><span class="math inline">\(x^{\prime} I\)</span></li>
+<li><span class="math inline">\(x^T I\)</span></li>
 </ol>
 <details class="solution part">
 <summary>
 Solution
 </summary>
-<p><span class="math inline">\(x^{\prime} I=\begin{bmatrix}x_{1} &amp; x_{2}\end{bmatrix}\begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}_{2 \times 2}=\begin{bmatrix}x_{1} &amp; x_{2}\end{bmatrix}=x^{\prime}\)</span></p>
+<p><span class="math inline">\(x^T I=\begin{bmatrix}x_{1} &amp; x_{2}\end{bmatrix}\begin{bmatrix}1 &amp; 0 \\ 0 &amp; 1\end{bmatrix}_{2 \times 2}=\begin{bmatrix}x_{1} &amp; x_{2}\end{bmatrix}=x^T\)</span></p>
 </details>
 <p><strong>4.</strong> Show that the diagonal matrix <span class="math display">\[\begin{bmatrix}
 a_{11} &amp; 0 &amp; \cdots &amp; 0 \\
@@ -272,22 +272,22 @@ Solution
 <h2 class="anchored" data-anchor-id="exercise-4.6">Exercise 4.6</h2>
 <p><strong>2.</strong> Given <span class="math inline">\(A=\begin{bmatrix}0 &amp; 4 \\ -1 &amp; 3\end{bmatrix}, B=\begin{bmatrix}3 &amp; -8 \\ 0 &amp; 1\end{bmatrix}\)</span>, and <span class="math inline">\(C=\begin{bmatrix}1 &amp; 0 &amp; 9 \\ 6 &amp; 1 &amp; 1\end{bmatrix}\)</span>, verify that</p>
 <ol type="a">
-<li><span class="math inline">\((A+B)^{\prime}=A^{\prime}+B^{\prime}\)</span></li>
+<li><span class="math inline">\((A+B)^T=A^T+B^T\)</span></li>
 </ol>
 <details class="solution part">
 <summary>
 Solution
 </summary>
-<p><span class="math display">\[A+B=\begin{bmatrix}3 &amp; -4 \\ -1 &amp; 4\end{bmatrix}, \text{ so } (A+B)^{\prime} = \begin{bmatrix}3 &amp; -1 \\ -4 &amp; 4\end{bmatrix}\]</span> <span class="math display">\[A^{\prime}+B^{\prime}=\begin{bmatrix}0 &amp; -1 \\ 4 &amp; 3\end{bmatrix}+\begin{bmatrix}3 &amp; 0 \\ -8 &amp; 1\end{bmatrix}=\begin{bmatrix}3 &amp; -1 \\ -4 &amp; 4\end{bmatrix} \checkmark\]</span></p>
+<p><span class="math display">\[A+B=\begin{bmatrix}3 &amp; -4 \\ -1 &amp; 4\end{bmatrix}, \text{ so } (A+B)^T = \begin{bmatrix}3 &amp; -1 \\ -4 &amp; 4\end{bmatrix}\]</span> <span class="math display">\[A^T+B^T=\begin{bmatrix}0 &amp; -1 \\ 4 &amp; 3\end{bmatrix}+\begin{bmatrix}3 &amp; 0 \\ -8 &amp; 1\end{bmatrix}=\begin{bmatrix}3 &amp; -1 \\ -4 &amp; 4\end{bmatrix} \checkmark\]</span></p>
 </details>
 <ol start="2" type="a">
-<li><span class="math inline">\((AC)^{\prime}=C^{\prime} A^{\prime}\)</span></li>
+<li><span class="math inline">\((AC)^T=C^T A^T\)</span></li>
 </ol>
 <details class="solution part">
 <summary>
 Solution
 </summary>
-<p><span class="math display">\[AC=\begin{bmatrix}0 &amp; 4 \\ -1 &amp; 3\end{bmatrix}_{2 \times 2}\begin{bmatrix}1 &amp; 0 &amp; 9 \\ 6 &amp; 1 &amp; 1\end{bmatrix}_{2 \times 3}=\begin{bmatrix}24 &amp; 4 &amp; 4 \\ 17 &amp; 3 &amp; -6\end{bmatrix}_{2 \times 3}\]</span> <span class="math display">\[C^{\prime} A^{\prime}=\begin{bmatrix}1 &amp; 6 \\ 0 &amp; 1 \\ 9 &amp; 1\end{bmatrix}_{3 \times 2}\begin{bmatrix}0 &amp; -1 \\ 4 &amp; 3\end{bmatrix}_{2 \times 2}=\begin{bmatrix}24 &amp; 17 \\ 4 &amp; 3 \\ 4 &amp; -6\end{bmatrix}_{3 \times 2}=(AC)^{\prime} \checkmark\]</span></p>
+<p><span class="math display">\[AC=\begin{bmatrix}0 &amp; 4 \\ -1 &amp; 3\end{bmatrix}_{2 \times 2}\begin{bmatrix}1 &amp; 0 &amp; 9 \\ 6 &amp; 1 &amp; 1\end{bmatrix}_{2 \times 3}=\begin{bmatrix}24 &amp; 4 &amp; 4 \\ 17 &amp; 3 &amp; -6\end{bmatrix}_{2 \times 3}\]</span> <span class="math display">\[C^T A^T=\begin{bmatrix}1 &amp; 6 \\ 0 &amp; 1 \\ 9 &amp; 1\end{bmatrix}_{3 \times 2}\begin{bmatrix}0 &amp; -1 \\ 4 &amp; 3\end{bmatrix}_{2 \times 2}=\begin{bmatrix}24 &amp; 17 \\ 4 &amp; 3 \\ 4 &amp; -6\end{bmatrix}_{3 \times 2}=(AC)^T \checkmark\]</span></p>
 </details>
 </section>
 <section id="exercise-5.1" class="level2">

@@ -20,6 +20,11 @@ format:
     highlight-style: a11y-light
     chalkboard: false
     mathjax: true
+    # Same self-hosted engine as the site pages (v3); the plugin's default
+    # is MathJax v2 from cdn.jsdelivr.net, which dies on filtered networks.
+    html-math-method:
+      method: mathjax
+      url: "https://dbhagia.com/econ441/assets/mathjax/tex-chtml-full.js"
     mathjax-config:
       output:
         font: mathjax-tex

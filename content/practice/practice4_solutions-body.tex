@@ -23,18 +23,18 @@
 In which case,
 \[
 \begin{aligned}
-& x^{\prime} A x=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\left[\begin{array}{cc}a_{11} & 0 \\0 & a_{22}\end{array}\right]\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2 \times 1} \\
+& x^T A x=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\left[\begin{array}{cc}a_{11} & 0 \\0 & a_{22}\end{array}\right]\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2 \times 1} \\
 & =\left[\begin{array}{lll}a_{11} x_{1} & a_{22} x_{2}\end{array}\right]_{1 \times 2}\left[\begin{array}{l}x_{1} \\x_{2}\end{array}\right]_{2 \times 1} \\
 & =\underbrace{a_{11} x_{1}^{2}+a_{22} x_{2}^{2}}_{\text{Weighted sum of squares}}=\sum_{i=1}^{2} a_{i i} x_{i}^{2}
 \end{aligned}
 \]
 
-So $x^{\prime} A x$ represents a weighted sum of squares where $a_{11}, a_{22}$ are weights.\\
+So $x^T A x$ represents a weighted sum of squares where $a_{11}, a_{22}$ are weights.\\
 
 But now what if $A=\left[\begin{array}{ll}a_{11} & a_{12} \\ a_{21} & a_{22}\end{array}\right]$. In this case,
 
 \[
-x^{\prime} A x=\left[\begin{array}{ll}
+x^T A x=\left[\begin{array}{ll}
 x_{1} & x_{2}
 \end{array}\right]\left[\begin{array}{ll}
 a_{11} & a_{12} \\
@@ -58,16 +58,15 @@ x_{2}
 \end{aligned}
 \]
 
-So $x^{\prime} A x$ no longer represents a weighted sum of squares. \\
+So $x^T A x$ no longer represents a weighted sum of squares. \\
 
 You can check that the associative law i.e.
 \[
-\left(x^{\prime} A\right) x=x^{\prime}(A x)
+\left(x^T A\right) x=x^T(A x)
 \]
 will apply in both cases (after all, its a law!) as all products are possible.
 \end{enumerate}
 
-\newpage
 %%%%% Exercise 4.5
 
 \underline{Exercise $4.5$}
@@ -92,7 +91,7 @@ will apply in both cases (after all, its a law!) as all products are possible.
 
 \item $ \begin{aligned} Ix=\left[\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right]_{2 \times 2}\left[\begin{array}{l}x_{1} \\ x_{2}\end{array}\right]=\left[\begin{array}{l}x_{1} \\ x_{2}\end{array}\right]\end{aligned}$ \\~\\
 
-\item $ \begin{aligned} x^{\prime} I=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\left[\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right]_{2 \times 2}=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\end{aligned}$ \\~\\
+\item $ \begin{aligned} x^T I=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\left[\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right]_{2 \times 2}=\left[\begin{array}{ll}x_{1} & x_{2}\end{array}\right]\end{aligned}$ \\~\\
 \end{enumerate}
 
 % Question 4
@@ -153,8 +152,8 @@ $
 \begin{enumerate}
 
 \item[(a)] \( A+B=\left[\begin{array}{cc}3 & -4 \\ -1 & 4\end{array}\right] \) \\~\\
-\( A^{\prime}+B^{\prime}=\left[\begin{array}{rr}0 & -1 \\ 4 & 3\end{array}\right]+\left[\begin{array}{cc}3 & 0 \\ -8 & 1\end{array}\right]=\left[\begin{array}{cc}3 & -1 \\ -4 & 4\end{array}\right] \) \\~\\
-So, \((A+B)^{\prime}=A^{\prime}+B^{\prime}\) \\
+\( A^T+B^T=\left[\begin{array}{rr}0 & -1 \\ 4 & 3\end{array}\right]+\left[\begin{array}{cc}3 & 0 \\ -8 & 1\end{array}\right]=\left[\begin{array}{cc}3 & -1 \\ -4 & 4\end{array}\right] \) \\~\\
+So, \((A+B)^T=A^T+B^T\) \\
 
 \item[(b)] \(
 A C=\left[\begin{array}{cc}
@@ -170,7 +169,7 @@ A C=\left[\begin{array}{cc}
 \)
 \vspace{1em}
 \(
-C^{\prime} A^{\prime}=\left[\begin{array}{ll}
+C^T A^T=\left[\begin{array}{ll}
 1 & 6 \\
 0 & 1 \\
 9 & 1
@@ -183,7 +182,7 @@ C^{\prime} A^{\prime}=\left[\begin{array}{ll}
 4 & -6
 \end{array}\right]_{3 \times 2}
 \) \vspace{1em}
-So, $(AC)^{\prime}=C^{\prime} A^{\prime}$.
+So, $(AC)^T=C^T A^T$.
 \end{enumerate}
 \end{enumerate}
 

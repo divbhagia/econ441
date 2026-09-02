@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - assets/mathjax
   render:
     - "*.qmd"
     - "content/*.qmd"
@@ -65,5 +67,10 @@ format:
     theme: assets/custom.scss
     toc: true
     link-external-newwindow: true
+    # Math engine served from this site, not cdn.jsdelivr.net: filtered or
+    # flaky networks (campus wifi) otherwise leave every equation as raw TeX.
+    html-math-method:
+      method: mathjax
+      url: "https://dbhagia.com/econ441/assets/mathjax/tex-chtml-full.js"
     css: assets/styles.css
     include-after-body: assets/site-a11y.html

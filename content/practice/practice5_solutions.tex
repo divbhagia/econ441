@@ -8,19 +8,19 @@
 
 \underline{Exercise 4.6}  \\
 
-6. \( A=I-X\left(X^{\prime} X\right)^{-1} X^{\prime} \) 
+6. \( A=I-X\left(X^T X\right)^{-1} X^T \) 
 
 \begin{itemize}
 
-\item[(a.)] Say the dimension of $X$ is \( m \times n \). Then the dimension of \( X_{n \times m}^{\prime} X_{m \times n} \) is \( n \times n \). So the dimension of \( \left(X^{\prime} X\right)^{-1} \) is also  \( n \times n \).  This implies that the dimension of \( X_{m \times n}\left(X^{\prime} X\right)_{n \times n}^{-1} X_{n \times m}^{\prime} \) is \( m \times m \). Hence, \( X^{\prime} X \) and $A$ must be square matrices, but $X$ need not be square.
+\item[(a.)] Say the dimension of $X$ is \( m \times n \). Then the dimension of \( X_{n \times m}^T X_{m \times n} \) is \( n \times n \). So the dimension of \( \left(X^T X\right)^{-1} \) is also  \( n \times n \).  This implies that the dimension of \( X_{m \times n}\left(X^T X\right)_{n \times n}^{-1} X_{n \times m}^T \) is \( m \times m \). Hence, \( X^T X \) and $A$ must be square matrices, but $X$ need not be square.
 
 \item[(b.)] To prove a matrix is idempotent, we need to show $AA=A$.
 \[
 \begin{aligned}
-A A &= (I-X\left(X^{\prime} X\right)^{-1} X^{\prime})(I-X\left(X^{\prime} X\right)^{-1} X^{\prime}) \\
-& = I-X\left(X^{\prime} X\right)^{-1} X^{\prime}-X\left(X^{\prime} X\right)^{-1} X^{\prime}+X\underbrace{\left(X^{\prime} X\right)^{-1} X^{\prime} X}_{I}\left(X^{\prime} X\right)^{-1} X^{\prime} \\
-&= I-X\left(X^{\prime} X\right)^{-1} X^{\prime}-X\left(X^{\prime} X\right)^{-1} X^{\prime}+X\left(X^{\prime} X\right)^{-1} X^{\prime} \\ 
-&=I-X\left(X^{\prime} X\right)^{-1} X^{\prime} = A
+A A &= (I-X\left(X^T X\right)^{-1} X^T)(I-X\left(X^T X\right)^{-1} X^T) \\
+& = I-X\left(X^T X\right)^{-1} X^T-X\left(X^T X\right)^{-1} X^T+X\underbrace{\left(X^T X\right)^{-1} X^T X}_{I}\left(X^T X\right)^{-1} X^T \\
+&= I-X\left(X^T X\right)^{-1} X^T-X\left(X^T X\right)^{-1} X^T+X\left(X^T X\right)^{-1} X^T \\ 
+&=I-X\left(X^T X\right)^{-1} X^T = A
 \end{aligned}
 \]
 \end{itemize}
