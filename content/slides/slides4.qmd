@@ -1,5 +1,5 @@
 ---
-title: "Matrix Multiplication and Vectors"
+title: "Matrix Multiplication, Vectors, and Special Matrices"
 subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 4"
 author: "Div Bhagia"
 format:
@@ -10,36 +10,23 @@ format:
 
 ## Matrix Multiplication
 
-A whole new animal\...\
- \
-Only possible to multiply two matrices, $A_{m \times n}$ and $B_{p \times q}$ to get $AB$ if $n = p$ i.e. $$\text{number of columns in } A = \text{ number of rows in } B$$\
- \
+Only possible to multiply two matrices, $A_{m \times n}$ and $B_{p \times q}$ to get $AB$ if $n = p$ i.e. $$\text{number of columns in } A = \text{ number of rows in } B$$
+
 Example. $A = \begin{bmatrix}
 2 & 3 & 1 \\
 4 & -6 & -2
 \end{bmatrix}_{2 \times 3}$ $B = \begin{bmatrix}
 1 & 8 \\
 -2 & 3
-\end{bmatrix}_{2 \times 2}$\
- \
+\end{bmatrix}_{2 \times 2}$
+
 Cannot do $AB$, but can do $BA$
 
-## Matrix Multiplication
-
-Another example. $$A = \begin{bmatrix}
-2 & 3 & 1 \\
-4 & -6 & -2
-\end{bmatrix}_{2 \times 3}
-B = \begin{bmatrix}
+Another example. If instead $B = \begin{bmatrix}
 1 \\
 -2 \\
 4
-\end{bmatrix}_{3 \times 1}$$\
-Can we multiply $A$ and $B$ to find $C=AB$?\
- \
-Yes, since $A$ has 3 columns, which is equal to the number of rows in $B$.\
- \
-Also, the dimension of $C$ will be $2 \times 1$.
+\end{bmatrix}_{3 \times 1}$, we *can* find $C = AB$. What is the dimension of $C$?
 
 ## Matrix Multiplication
 
@@ -70,33 +57,26 @@ Here, $$C = AB = \begin{bmatrix}
 $$A = \begin{bmatrix}
 2 & 3 & 1 \\
 4 & -6 & -2
-\end{bmatrix}_{2 \times 3}
+\end{bmatrix}_{2 \times 3} \quad
 B = \begin{bmatrix}
-1 \\
--2 \\
-4
-\end{bmatrix}_{3 \times 1}$$\
- \
-$$C = AB =  \begin{bmatrix}
-2 \times 1 + 3 \times -2 + 1 \times 4  \\
-4 \times 1 + -6 \times -2 + -2 \times 4  \\
-\end{bmatrix}_{2 \times 1} = 
-\begin{bmatrix}
-0  \\
-8  \\
-\end{bmatrix}_{2 \times 1}$$
+1 & 8 \\
+-2 & 3
+\end{bmatrix}_{2 \times 2}$$
+
+From before: $AB$ is not defined, but $BA$ is. Find $BA$.
 
 ## Matrix Multiplication: Examples
 
-$$A = \begin{bmatrix}
-1 & 3  \\
-2 & 8 \\
-4 & 0 \\
-\end{bmatrix} \quad
+One more. $$A = \begin{bmatrix}
+1 \\
+2 \\
+3
+\end{bmatrix}_{3 \times 1} \quad
 B = \begin{bmatrix}
-5 \\
-9 \\
-\end{bmatrix}$$
+2 & 0 & 1
+\end{bmatrix}_{1 \times 3}$$
+
+Both $AB$ and $BA$ are defined. Find both. What are their dimensions?
 
 ## A Simple Economic Model
 
@@ -120,6 +100,10 @@ q-3p
 
 Setting $Ax=b$ gives us back our demand and supply equations.
 
+## By the way
+
+![](../../assets/fig/ai-linal.jpeg){fig-alt="Four-panel comic: a person asks A.I. why it always wears a mask; the mask is lifted to reveal a matrix of entries a-one-one through a-m-n underneath, and the person says “let’s keep this on” - a joke that machine learning is linear algebra underneath" width=480}
+
 ## Vectors
 
 Matrices with only one column: column vectors $$x =  \begin{bmatrix}
@@ -134,28 +118,6 @@ x_1 &
 x_2 & \cdots &
 x_n
 \end{bmatrix}$$
-
-## Geometric Representation
-
-Vectors can be graphically represented by arrows
-
-The direction of the arrow indicates the vector's *direction* and the length of the arrow corresponds to its *magnitude*.
-
-Here is a plot for vector $v_1 =  \begin{bmatrix}
-2\\
-1 \\
-\end{bmatrix}$\
- \
-
-![](../../assets/fig/vector-geometric.svg){fig-alt="A vector drawn as an arrow from the origin to the point (2, 1) on a grid" width=560}
-
-## Addition of Vectors
-
-![](../../assets/fig/vector-addition.svg){fig-alt="Vector addition by the parallelogram rule: arrows from the origin to (9, 2) and to (2, 5), with dotted lines completing a parallelogram whose far corner is their sum at (11, 7)" width=560}
-
-## Inner Product
-
-Inner product of two vectors each with $n$ elements: $$u \cdot v = u_1 v_1 + u_2 v_2 +...+ u_n v_n = \sum_{i=1}^n u_i v_i$$ Example. $$u = \begin{bmatrix} 1 \\ 5 \\ 2 \end{bmatrix} \quad \quad v = \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}$$
 
 ## Linear Dependence
 
@@ -187,3 +149,103 @@ Example.$$v_1 =  \begin{bmatrix}
 ## Linear Dependence
 
 A set of $m$-vectors $v_1, v_2, ...,v_n$ is linearly dependent if and only if there exists a set of scaler $k_1, k_2, ..., k_n$ (not all zero) such that: $$\sum_{i=1}^n k_i v_i = 0 \quad (m \times 1)$$
+
+## Identity Matrices
+
+Square matrix with $1$s in its *principal diagonal* and $0$s elsewhere\
+ \
+A $2 \times 2$ identity matrix: $$I_2 = \begin{bmatrix}
+1 & 0\\
+0 & 1 \\
+\end{bmatrix}$$ A $3 \times 3$ identity matrix: $$I_3 = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}$$
+
+## Identity Matrices
+
+Acts like 1, $$AI = IA = A$$
+
+Example. $$A = \begin{bmatrix}
+2 & 3 & 1 \\
+4 & -6 & 2
+\end{bmatrix}$$
+
+## Idempotent Matrices
+
+A matrix is an *idempotent* matrix if it remains unchanged when multiplied by itself any number of times.\
+ \
+$A$ is idempotent if and only if $A = A^k$.\
+ \
+Is an identity matrix idempotent?
+
+## Null Matrix
+
+A null matrix is a matrix with all elements $0$.\
+ \
+$$\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{bmatrix}$$
+
+
+$A + 0 = A$
+
+$A 0 = 0$
+
+## Transpose of a Matrix
+
+Transpose of A ($A^T$, also written $A'$): interchange rows and columns\
+ \
+$$A = \begin{bmatrix}
+2 & 3 & 1 \\
+4 & -6 & 2
+\end{bmatrix}$$
+
+## Transpose of a Matrix
+
+A matrix $A$ is said to be *symmetric* if $$A^T=A$$
+
+A matrix $A$ is said to be *skew-symmetric* if $$A^T=-A$$
+
+A matrix $A$ is said to be *orthogonal* if $$A^T A=I$$
+
+## Example: Symmetric Matrix
+
+$$A=\left[\begin{array}{rrr}
+1 & 2 & 0 \\
+2 & 3 & -5 \\
+0 & -5 & 4
+\end{array}\right]$$
+
+## Example: Skew-symmetric Matrix
+
+$$A=\left[\begin{array}{ccc}0 & -1 & 3 \\ 1 & 0 & -4 \\ -3 & 4 & 0\end{array}\right]$$
+
+## Example: Orthogonal Matrix
+
+$$A=\left[\begin{array}{cc}
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{array}\right]$$
+
+## Properties of Transposes
+
+$$\begin{array}{l}
+\left(A^T\right)^T=A \\~\\
+(A+B)^T=A^T+B^T \\~\\
+(A B)^T=B^T A^T \\~\\
+\end{array}$$ Example: $A=\left[\begin{array}{ll}4 & 1 \\ 9 & 0\end{array}\right] \quad B=\left[\begin{array}{ll}2 & 0 \\ 7 & 1\end{array}\right]$
+
+## Homework Questions
+
+-   Exercise 4.4: 5, 7
+
+-   Exercise 4.5: 1, 4
+
+-   Exercise 4.6: 2
+
+-   Exercise 5.1: 3, 4
+
+Textbook reference: 4.2-4.6

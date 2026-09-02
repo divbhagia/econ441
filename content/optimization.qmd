@@ -10,5 +10,5 @@ Materials for this module will be posted before we reach it. See the [Schedule](
 <strong>Module notes</strong> covering this whole module:
 </p>
 <p class="lecture-links" style="margin-bottom:1.4em">
-<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="notes/Optimization.pdf" target="_blank" rel="noopener" aria-label="Optimization module notes, PDF (opens in a new tab)" role="button">Optimization notes</a>
+<a class="btn btn-outline-primary" href="notes/Optimization.pdf" target="_blank" rel="noopener" aria-label="Optimization module notes, PDF (opens in a new tab)" role="button">Optimization Notes</a>
 </p>

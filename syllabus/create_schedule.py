@@ -36,8 +36,8 @@ LECTURES = {
  dt.date(YEAR,8,26):  (2,"Functions, summation notation, and logical conditions","2.4-2.6, p. 163, 5.1",[("Handout-Functions.pdf","Functions"),
                        ("Handout-Summation-Notation.pdf","Summations")]),
  dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar and matrix multiplication","4.1, 4.2",[("Handout-Matrix-Operations.pdf","Matrix Operations")]),
- dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; inner product; linear dependence","4.2-4.4",[]),
- dt.date(YEAR,9,9):   (5,"Identity, null, idempotent matrices; transpose","4.5, 4.6",[]),
+ dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; linear dependence; identity, null, idempotent, and transpose matrices","4.2-4.6",[]),
+ dt.date(YEAR,9,9):   (5,"Inverse of a matrix; conditions for nonsingularity","4.6, 5.1",[]),
  dt.date(YEAR,9,14):  (6,"Inverse; nonsingularity; rank; the determinant","4.6, 5.1, 5.2",[("Handout-Determinant-and-Inverse.pdf","Determinant and Inverse")]),
  dt.date(YEAR,9,16):  (7,"Computing determinants; inversion; Cramer's rule; applications","5.2-5.5, 4.7",[("Handout-Solving-System-of-Equations.pdf","Solving Systems of Equations")]),
  dt.date(YEAR,9,28):  (None,"Limit definition of a derivative; limits","6.2-6.4",[]),
@@ -67,7 +67,7 @@ SPECIAL = {
 }
 # Lectures whose materials have been vetted and published.
 # Add numbers here as each module is checked, then rerun ./build.sh all
-PUBLISHED = {1, 2, 3}
+PUBLISHED = {1, 2, 3, 4}
 
 QUIZZES = {dt.date(YEAR,9,9):1, dt.date(YEAR,10,12):2, dt.date(YEAR,11,9):3, dt.date(YEAR,11,30):4}
 

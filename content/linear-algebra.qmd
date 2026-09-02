@@ -12,7 +12,7 @@ Practice problems for this module, collected:
 
 <p class="module-notes" style="font-size:1.1rem">
 <strong>Module notes</strong> covering this whole module:
-<a class="btn btn-outline-primary" style="font-size:1.02rem;padding:0.4em 1em" href="notes/Linear-Algebra.pdf" target="_blank" rel="noopener" aria-label="Linear Algebra module notes, PDF (opens in a new tab)" role="button">Linear Algebra notes</a>
+<a class="btn btn-outline-primary" href="notes/Linear-Algebra.pdf" target="_blank" rel="noopener" aria-label="Linear Algebra module notes, PDF (opens in a new tab)" role="button">Linear Algebra Notes</a>
 </p>
 
 ::: {.lecture style="font-size:1.1rem"}
@@ -31,20 +31,25 @@ Practice problems for this module, collected:
 :::
 
 ::: {.lecture style="font-size:1.1rem"}
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 4: Matrix Multiplication and Vectors</h2>
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 4: Matrix Multiplication, Vectors, and Special Matrices</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Matrix multiplication; vectors; geometric representation; inner product; linear dependence</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Matrix multiplication; vectors; linear dependence; identity, null, idempotent, and transpose matrices</span>
 
-<span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.2&ndash;4.4</span>
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.2&ndash;4.6</span>
 
+<p class="lecture-links">
+<a class="btn btn-outline-primary" href="slides/slides4.html" target="_blank" rel="noopener" aria-label="Lecture 4 slides (opens in a new tab)" role="button">Slides</a>
+<a class="btn btn-outline-primary" href="slides/slides4.pdf" target="_blank" rel="noopener" aria-label="Lecture 4 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
+<a class="btn btn-outline-primary" href="practice/practice4.html" target="_blank" rel="noopener" aria-label="Practice Problems 4 (opens in a new tab)" role="button">Practice problems</a>
+</p>
 :::
 
 ::: {.lecture style="font-size:1.1rem"}
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 5: Identity, Null, and Transpose Matrices</h2>
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 5: Inverse of a Matrix</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Identity, null, and idempotent matrices; transpose of a matrix</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Inverse of a matrix; conditions for nonsingularity</span>
 
-<span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.5, 4.6</span>
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.6, 5.1</span>
 
 :::
 
