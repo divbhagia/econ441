@@ -47,7 +47,7 @@ Practice problems for this module, collected:
 ::: {.lecture style="font-size:1.1rem"}
 <h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 5: Inverse of a Matrix</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Inverse of a matrix; conditions for nonsingularity</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Inverse of a matrix; conditions for nonsingularity; rank</span>
 
 <span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.6, 5.1</span>
 
@@ -58,11 +58,11 @@ Practice problems for this module, collected:
 :::
 
 ::: {.lecture style="font-size:1.1rem"}
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 6: Rank and the Determinant</h2>
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 6: The Determinant and the Inverse</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Linear independence and rank; computing the determinant</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Computing the determinant and the inverse</span>
 
-<span style="font-size:1.1rem"><strong>Textbook references:</strong> 5.1&ndash;5.3</span>
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 5.2&ndash;5.4</span>
 
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides6.html" target="_blank" rel="noopener" aria-label="Lecture 6 slides (opens in a new tab)" role="button">Slides</a>

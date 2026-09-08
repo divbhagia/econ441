@@ -14,6 +14,8 @@ format: html
 - [Sample Exam 2](content/exams/midterm-sample2.pdf) ([Solutions](content/exams/midterm-sample2-solutions.pdf))
 - Review videos for finding the inverse of a matrix: [Method](https://www.youtube.com/watch?v=zoTcQd6hUE4), [Example](https://www.youtube.com/watch?v=ybj3tEBBuB0)
 
+The sample exams and the help sheet have been adjusted to this midterm's coverage; past versions of these documents also included calculus, which is not on Midterm 1.
+
 Please attempt the sample exams under exam conditions before checking the solutions.
 
 <!-- Final exam material goes up later in the semester. -->

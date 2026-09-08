@@ -94,6 +94,24 @@ Necessary condition: *squareness*
 
 Sufficient condition: *rows or (equivalently) columns are linearly independent*
 
+## Rank of a Matrix
+
+Rank of a matrix $=$ maximum number of linearly independent rows\
+ \
+$$A=\left[\begin{array}{ll}
+1 & 2 \\
+3 & 4
+\end{array}\right]
+\quad
+B=\left[\begin{array}{ll}
+1 & 2 \\
+2 & 4
+\end{array}\right]$$
+
+Rank of $A$? Rank of $B$?\
+ \
+Full rank $\iff$ Nonsingularity
+
 ## Homework Questions
 
 -   Exercise 4.6: 6 (added to Practice Problems 4)

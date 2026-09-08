@@ -222,3 +222,129 @@ Non-singular, rank = 3. \vspace{1em}
 \end{enumerate}
 
 %%%%%%%%%%%%%%%% Exercise 5.4
+
+\underline{Exercise 5.4} 
+
+\begin{enumerate}
+
+% Question 2
+\item[2.] Note that \[
+A^{-1}=\frac{1}{|A|} \operatorname{adj} A
+\]
+
+Here, \( \operatorname{adj} A=C^{\prime} \) where \( C=\left[\left|C_{i j}\right|\right] \).
+
+\begin{enumerate}
+
+\item 
+\[ |A|=5-0=5 \]
+\[\operatorname{adj} A=\left[\begin{array}{ll}\left|C_{11}\right| & \left|C_{21}\right| \\ \left|C_{12}\right| & \left|C_{22}\right|\end{array}\right]=\left[\begin{array}{cc}1 & -2 \\ 0 & 5\end{array}\right] \]
+\[A^{-1}=\frac{1}{|A|} \operatorname{adj} A=\frac{1}{5}\left[\begin{array}{cc}1 & -2 \\ 0 & 5\end{array}\right]=\left[\begin{array}{cc}1 / 5 & -2 / 5 \\ 0 & 1\end{array}\right] \]
+
+\item \[
+\begin{array}{l}
+|B|=-2-0=-2 \\
+B^{-1}=\frac{-1}{2}\left[\begin{array}{rr}
+2 & 0 \\
+-9 & -1
+\end{array}\right]
+\end{array} 
+\]
+
+\item \[
+\begin{array}{l}
+|C|=-3-21=-24 \\
+C^{-1}=\frac{-1}{24}\left[\begin{array}{cc}
+-1 & -7 \\
+-3 & 3
+\end{array}\right]
+\end{array}
+\]
+
+\item \[
+\begin{array}{l}
+|D|=21-0=21 \\
+D^{-1}=\frac{1}{21}\left[\begin{array}{rr}
+3 & -6 \\
+0 & 7
+\end{array}\right]
+\end{array}
+\]
+\end{enumerate}
+
+% Question 3
+\item[3.] 
+\begin{enumerate}
+\item Step 1: Exchange the two diagonal elements.\\
+Step 2: Multiply both the off-diagonal elements by -1.
+
+\item Step 3: Multiply the resulting matrix from steps 1 and 2 by \(1/|A|\).
+\end{enumerate}
+
+% Question 4
+\item[4.] (a)\[
+\begin{aligned}
+|E| &=1\left|\begin{array}{ll}
+7 & 3 \\
+2 & 0
+\end{array}\right|+1\left|\begin{array}{rr}
+4 & -2 \\
+7 & 3
+\end{array}\right| \\
+&=1(0-6)+1(12+14) \\
+&=-6+26=20
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+\operatorname{adj} E &=\left[\begin{array}{ccc}
+\left|C_{11}\right| & \left|C_{21}\right| & \left|C_{31}\right| \\
+\left|C_{12}\right| & \left|C_{22}\right| & \left|C_{32}\right| \\
+\left|C_{13}\right| & \left|C_{23}\right| & \left|C_{33}\right|
+\end{array}\right] \\
+&=\left[\begin{array}{ccc}
+3 & 2 & -3 \\
+-7 & 2 & 7 \\
+-6 & -4 & 26
+\end{array}\right]
+\end{aligned}
+\]
+\[ E^{-1}=\frac{1}{|E|} a d j E \] 
+
+(b)
+\[
+F^{-1}=\frac{-1}{10}\left[\begin{array}{ccc}
+0 & 2 & -3 \\
+10 & -6 & -1 \\
+0 & -4 & 1
+\end{array}\right]
+\]
+
+(c)
+\[ \left|C_{11}\right|=\left|\begin{array}{ll}0 & 1 \\ 1 & 0\end{array}\right|=-1 
+\quad  \left|C_{12}\right|=-\left|\begin{array}{ll}0 & 1 \\ 0 & 0\end{array}\right|=0 
+\quad  \left|C_{13}\right|=\left|\begin{array}{ll}0 & 0 \\ 0 & 1\end{array}\right|=0 
+\]
+\[ \left|C_{21}\right|=-\left|\begin{array}{ll}0 & 0 \\ 1 & 0\end{array}\right|=0 
+\quad  \left|C_{22}\right|=\left|\begin{array}{ll}0 & 1 \\ 0 & 0\end{array}\right|=0 
+\quad  \left|C_{23}\right|=-\left|\begin{array}{ll}1 & 0 \\ 0 & 1\end{array}\right|=-1 \]
+\[
+\left|C_{31}\right|=\left|\begin{array}{cc}
+0 & 0 \\
+0 & 1
+\end{array}\right|=0 \quad\left|C_{32}\right|=-\left|\begin{array}{cc}
+1 & 0 \\
+0 & 1
+\end{array}\right|=-1 \quad\left|C_{33}\right|=\left|\begin{array}{ll}
+1 & 0 \\
+0 & 0
+\end{array}\right|=0
+\]
+\[ G^{-1}=-1\left[\begin{array}{ccc}-1 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & -1 & 0\end{array}\right]=\left[\begin{array}{lll}1 & 0 & 0 \\ 0 & 0 & 1 \\ 0 & 1 & 0\end{array}\right] \] \\
+
+(d) \[ H^{-1}=\left[\begin{array}{lll}1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{array}\right] \] \\
+
+% Question 7
+\item[7.] If a matrix is its own inverse, we would need that \(A^2 = I \). This is true for the identity matrix. There are other possibilities such as matrix \(G\) in exercise 4. \vspace{1em}
+\end{enumerate}
