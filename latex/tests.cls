@@ -24,8 +24,12 @@
     \newpage
 }
 
-% Custom Header: Title
+% Custom Header: Title. Tagged-PDF notes as in handout.cls: the framebox/vbox
+% nests paragraphs inside a paragraph (veraPDF Table 5, P-P), so paragraph
+% tagging is off inside the box; the \hypersetup line supplies dc:title.
 \newcommand{\myheader}[1]{%
+\hypersetup{pdftitle={#1}}%
+\tagpdfparaOff
 \begin{center}
   \framebox{
     \vbox{
@@ -35,7 +39,8 @@
       \small ECON 441: Introduction to Mathematical Economics \hfill Instructor: Div Bhagia
       }
     }
-\end{center}	
+\end{center}
+\tagpdfparaOn
 \vspace{1em}
 }
 
@@ -73,8 +78,10 @@
 \renewcommand{\thesection}{\arabic{section}} 
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} 
   \sectionfont{\large \normalfont \sc}
-\subsectionfont{\fontsize{13}{1} \normalfont \textit}
-\subsubsectionfont{\fontsize{12}{1} \normalfont \textit}
+% switches, not \textit: argument-taking commands here swallow the heading
+% closure under tagging (see handout.cls)
+\subsectionfont{\fontsize{13}{1} \normalfont \itshape}
+\subsubsectionfont{\fontsize{12}{1} \normalfont \itshape}
 
 % Itemize
 \newenvironment{witemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
@@ -92,3 +99,19 @@
 \setstretch{1.25} 								% Line Space
 \RequirePackage[margin=1.15in]{geometry} 		% Margins
 
+% For pdftitle metadata (PDF/UA-2 requires dc:title). Loaded last, links hidden.
+\RequirePackage[hidelinks]{hyperref}
+
+% ToUnicode mappings for extensible-symbol pieces newtx leaves unmapped
+% (copied from handout.cls; veraPDF 8.4.5.8).
+\ifdefined\pdfglyphtounicode\else
+  \protected\def\pdfglyphtounicode{\pdfextension glyphtounicode }
+\fi
+\pdfglyphtounicode{barex}{007C}
+\pdfglyphtounicode{parenlefttpA}{0028}
+\pdfglyphtounicode{parenleftexA}{0028}
+\pdfglyphtounicode{parenleftbtA}{0028}
+\pdfglyphtounicode{parenrighttpA}{0029}
+\pdfglyphtounicode{parenrightexA}{0029}
+\pdfglyphtounicode{parenrightbtA}{0029}
+\pdfglyphtounicode{bracehext}{23AA}

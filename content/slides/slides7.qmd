@@ -129,19 +129,16 @@ b = \begin{bmatrix}
 
 ## Homogeneous equation system
 
+::: {.columns}
+::: {.column width="60%"}
 A homogeneous equation system is given by $$Ax = 0$$ If $A$ is nonsingular, $x^* = A^{-1} 0 = 0$.\
  \
 If $A$ is singular there can be infinite number of solutions (this is true for any system of equations).
-
-
-
-
-
-![](../../assets/fig/stem-linal.png){fig-alt="Comic showing a precarious tower of blocks labeled 'All of STEM' balancing on one small block labeled 'That one linear algebra course'" width=380}
-
-
-
-0.25
+:::
+::: {.column width="40%"}
+![](../../assets/fig/stem-linal.png){fig-alt="Comic showing a precarious tower of blocks labeled 'All of STEM' balancing on one small block labeled 'That one linear algebra course'" width=300}
+:::
+:::
 
 ## Network Theory
 
@@ -273,8 +270,20 @@ Calculate similarity between document vectors to classify documents into predefi
 
 ## What's next?
 
-Quiz 2 next week will cover all of Linear Algebra
+Midterm 1 is next week: review on Monday, exam on Wednesday
 
-Notes for reviewing Linear Algebra uploaded (not a substitute for the textbook for understanding concepts)
+Sample exams and a help sheet are posted on the Exams page
 
-We will move on to differential calculus next week
+Notes for reviewing Linear Algebra are on the website (not a substitute for the textbook for understanding concepts)
+
+After the midterm, we move on to differential calculus
+
+## Homework Questions
+
+-   Exercise 5.3: 1, 4, 5, 8
+
+-   Exercise 5.4: 2, 3, 4, 6, 7
+
+-   Exercise 5.5: 1, 2, 3 (a), (d)
+
+Textbook reference: 5.2-5.5

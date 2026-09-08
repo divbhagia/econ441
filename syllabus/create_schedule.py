@@ -38,8 +38,8 @@ LECTURES = {
  dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar and matrix multiplication","4.1, 4.2",[("Handout-Matrix-Operations.pdf","Matrix Operations")]),
  dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; linear dependence; identity, null, idempotent, and transpose matrices","4.2-4.6",[]),
  dt.date(YEAR,9,9):   (5,"Inverse of a matrix; conditions for nonsingularity","4.6, 5.1",[]),
- dt.date(YEAR,9,14):  (6,"Inverse; nonsingularity; rank; the determinant","4.6, 5.1, 5.2",[("Handout-Determinant-and-Inverse.pdf","Determinant and Inverse")]),
- dt.date(YEAR,9,16):  (7,"Computing determinants; inversion; Cramer's rule; applications","5.2-5.5, 4.7",[("Handout-Solving-System-of-Equations.pdf","Solving Systems of Equations")]),
+ dt.date(YEAR,9,14):  (6,"Linear independence and rank; the determinant","5.1, 5.2",[]),
+ dt.date(YEAR,9,16):  (7,"Computing determinants; inversion; Cramer's rule; applications","5.2-5.5, 4.7",[("Handout-Determinant-and-Inverse.pdf","Determinant and Inverse"),("Handout-Solving-System-of-Equations.pdf","Solving Systems of Equations")]),
  dt.date(YEAR,9,28):  (None,"Limit definition of a derivative; limits","6.2-6.4",[]),
  dt.date(YEAR,9,30):  (None,"Continuity; rules of differentiation","6.7, 7.1-7.3",[]),
  dt.date(YEAR,10,5):  (None,"Exponential and log functions","10.5",[]),
@@ -67,7 +67,9 @@ SPECIAL = {
 }
 # Lectures whose materials have been vetted and published.
 # Add numbers here as each module is checked, then rerun ./build.sh all
-PUBLISHED = {1, 2, 3, 4, 5}
+PUBLISHED = {1, 2, 3, 4, 5, 6, 7}
+# Lectures whose practice problems live in the previous set (or do not exist).
+NO_PRACTICE = {5}
 
 QUIZZES = {dt.date(YEAR,9,9):1, dt.date(YEAR,10,12):2, dt.date(YEAR,11,9):3, dt.date(YEAR,11,30):4}
 
@@ -140,8 +142,9 @@ def icons(n, sheets):
     for ws, wsl in sheets:
         o.append(f'<a href="content/handouts/{ws.lower()}" target="_blank" rel="noopener" '
                  f'aria-label="Lecture {n} worksheet: {wsl}, PDF (opens in a new tab)"><span aria-hidden="true">🗒️</span></a>')
-    o.append(f'<a href="content/practice/practice{n}.html" target="_blank" rel="noopener" '
-             f'aria-label="Practice Problems {n} (opens in a new tab)"><span aria-hidden="true">✍️</span></a>')
+    if n not in NO_PRACTICE:
+        o.append(f'<a href="content/practice/practice{n}.html" target="_blank" rel="noopener" '
+                 f'aria-label="Practice Problems {n} (opens in a new tab)"><span aria-hidden="true">✍️</span></a>')
     return " ".join(o)
 
 

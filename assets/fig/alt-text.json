@@ -4,9 +4,9 @@
   "market-equilibrium.svg": "Demand curve D and supply curve S drawn on the same price-quantity axes, crossing at the equilibrium price p star of 16 and quantity q star of 68, marked by dashed lines to each axis",
   "vector-geometric.svg": "Vector v one drawn as a maroon arrow from the origin to the point (2, 1), with dashed guides marking 2 on the x-axis and 1 on the y-axis",
   "vector-addition.svg": "Vector addition by the parallelogram rule: arrows u from the origin to (9, 2) and v from the origin to (2, 5), dashed lines completing the parallelogram, and a maroon arrow labelled u plus v reaching its far corner, the sum at (11, 7)",
-  "linear-dependent.svg": "Two linearly dependent vectors: arrows from the origin to (2, 4) and to (1, 2) lying along the same line",
-  "linear-independent.svg": "Two linearly independent vectors drawn as arrows from the origin pointing in different directions",
-  "determinant-area.svg": "Geometric interpretation of a determinant: arrows from the origin to (1, 3) and (2, 4) forming two sides of a parallelogram whose area equals the absolute value of the determinant",
+  "linear-dependent.svg": "Two linearly dependent vectors: a maroon arrow v one to (2, 4) and an ink arrow v two to (1, 2), lying along the same line through the origin",
+  "linear-independent.svg": "Two linearly independent vectors: a maroon arrow v one to (1, 3) and an ink arrow v two to (3, 1), pointing in different directions from the origin",
+  "determinant-area.svg": "Geometric interpretation of a determinant: arrows from the origin to (1, 3) and (2, 4), the columns of A, with dashed lines completing a shaded parallelogram whose area equals the absolute value of the determinant of A",
   "ai-linal.jpeg": "Four-panel comic: a person asks A.I. why it always wears a mask; the mask is lifted to reveal a matrix of entries a-one-one through a-m-n underneath, and the person says “let’s keep this on” - a joke that machine learning is linear algebra underneath",
   "network-example.png": "A directed network with three nodes: an arrow from node 1 to node 2, an arrow from node 2 to node 3, and an arrow from node 3 back to node 1",
   "stem-linal.png": "Comic showing a precarious tower of blocks labeled 'All of STEM' balancing on one small block labeled 'That one linear algebra course'"

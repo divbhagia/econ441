@@ -96,6 +96,8 @@ Sufficient condition: *rows or (equivalently) columns are linearly independent*
 
 ## Homework Questions
 
--   Exercise 4.6: 6
+-   Exercise 4.6: 6 (added to Practice Problems 4)
 
-Textbook reference: 4.6, 5.1
+-   Exercise 5.1: 1 -- necessary and sufficient conditions (in Practice Problems 2)
+
+Textbook reference: 5.1

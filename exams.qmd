@@ -2,23 +2,18 @@
 title: "Exams"
 toc: false
 number-sections: false
-sidebar: false
 format: html
 ---
 
-### Midterm Exam 
+### Midterm Exam 1
 
-- [Midterm Review Slides](lectures/MidtermReview/midterm_review.pdf)
-- Review videos for finding the inverse of a matrix: [Method](https://www.youtube.com/watch?v=zoTcQd6hUE4), [Example](https://www.youtube.com/watch?v=ybj3tEBBuB0) 
-- [Help Sheet](exams/Midterm/midterm-help-sheet.pdf)
-- [Sample Exam 1](exams/Midterm/midterm-sample1.pdf) ([Solutions](exams/Midterm/midterm-sample1-solutions.pdf))
-- [Sample Exam 2](exams/Midterm/midterm-sample2.pdf) ([Solutions](exams/Midterm/midterm-sample2-solutions.pdf))
-  <!-- - Fall 2022: [Exam](exams/Midterm/Past/Midterm-Fall-2022.pdf), [Solution](exams/Midterm/Past/Midterm-Fall-2022-Solutions.pdf) 
-  - Spring 2023: [Exam](exams/Midterm/Past/Midterm-Spring-2023.pdf), [Solution](exams/Midterm/Past/Midterm-Spring-2023-Solutions.pdf) 
-  - Fall 2023: [Exam](exams/Midterm/Past/Midterm-Fall-2023.pdf), [Solution](exams/Midterm/Past/Midterm-Fall-2023-Solutions.pdf) 
-  - Spring 2024: [Exam](exams/Midterm/Past/Midterm-Spring-2024.pdf), [Solution](exams/Midterm/Past/Midterm-Spring-2024-Solutions.pdf)  -->
+**Wednesday, September 23**, in class. It covers the Preliminaries and Linear Algebra modules. We will review in class on Monday, September 21; review slides go up after that session.
 
-### Final Exam
-- [Final Exam Review Slides](lectures/FinalReview/final_review.pdf)
-- [Sample Exam](exams/Final/Sample-Final.pdf) 
-- [Sample Exam Solution](exams/Final/Sample-Final-Solution.pdf)
+- [Help Sheet](content/exams/midterm-help-sheet.pdf) — the formula sheet provided with the exam
+- [Sample Exam 1](content/exams/midterm-sample1.pdf) ([Solutions](content/exams/midterm-sample1-solutions.pdf))
+- [Sample Exam 2](content/exams/midterm-sample2.pdf) ([Solutions](content/exams/midterm-sample2-solutions.pdf))
+- Review videos for finding the inverse of a matrix: [Method](https://www.youtube.com/watch?v=zoTcQd6hUE4), [Example](https://www.youtube.com/watch?v=ybj3tEBBuB0)
+
+Work the sample exams under exam conditions before checking the solutions — they are the best predictor of the real thing.
+
+<!-- Final exam material goes up later in the semester. -->

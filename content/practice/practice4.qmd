@@ -129,6 +129,31 @@ $$C^T A^T=\begin{bmatrix}1 & 6 \\ 0 & 1 \\ 9 & 1\end{bmatrix}_{3 \times 2}\begin
 
 </details>
 
+**6.** Let $A=I-X\left(X^T X\right)^{-1} X^T$.
+
+a. Must $A$ be square? Must $\left(X^T X\right)$ be square? Must $X$ be square?
+
+<details class="solution part">
+<summary>Solution</summary>
+
+Say the dimension of $X$ is $m \times n$. Then the dimension of $X^T_{n \times m} X_{m \times n}$ is $n \times n$, so the dimension of $\left(X^T X\right)^{-1}$ is also $n \times n$. This implies that the dimension of $X_{m \times n}\left(X^T X\right)^{-1}_{n \times n} X^T_{n \times m}$ is $m \times m$. Hence, $X^T X$ and $A$ must be square matrices, but $X$ need not be square.
+
+</details>
+
+b. Show that matrix $A$ is idempotent.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+To prove a matrix is idempotent, we need to show $AA=A$:
+$$\begin{aligned}
+A A &= (I-X\left(X^T X\right)^{-1} X^T)(I-X\left(X^T X\right)^{-1} X^T) \\
+& = I-X\left(X^T X\right)^{-1} X^T-X\left(X^T X\right)^{-1} X^T+X\underbrace{\left(X^T X\right)^{-1} X^T X}_{I}\left(X^T X\right)^{-1} X^T \\
+&= I-X\left(X^T X\right)^{-1} X^T = A
+\end{aligned}$$
+
+</details>
+
 ## Exercise 5.1
 
 **3.** Are the rows linearly independent in each of the following?

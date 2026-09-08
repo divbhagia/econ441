@@ -34,7 +34,9 @@ any new or edited material:
   boxed constructs that create paragraphs-in-paragraphs need
   `\tagpdfparaOff`/`\tagpdfparaOn` (see `\myheader` in latex/handout.cls);
   newtx's txexs/txexas fonts need the `\pdfglyphtounicode` lines in
-  handout.cls for extensible-symbol pieces.
+  handout.cls for extensible-symbol pieces. newtx's `\because` and `\checkmark`
+  (txsym) embed glyph widths that contradict the font dictionary (veraPDF
+  8.4.5.6) -- write the word, or use `\surd` for a tick.
 - Don't convey meaning by color alone; keep pages usable at 320px width
   (wide content scrolls in its own container, never the page).
 
