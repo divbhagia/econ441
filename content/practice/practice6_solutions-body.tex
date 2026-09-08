@@ -105,3 +105,120 @@ Cofactor of \(f\):
 Cofactors: $ |C_{31}| =  |M_{31}|, |C_{32}| =  -|M_{32}| , |C_{33}| =  |M_{33}| $.\end{enumerate}
 
 %%%%%%%%%%%%%%%% Exercise 5.3
+
+\underline{Exercise 5.3}
+
+% Question 1
+\begin{enumerate}
+\item 
+\[
+\begin{aligned}
+\left|\begin{array}{ccc}
+4 & 0 & -1 \\
+2 & 1 & -7 \\
+3 & 3 & 9
+\end{array}\right| &=4\left|\begin{array}{rr}
+1 & -7 \\
+3 & 9
+\end{array}\right|-0\left|\begin{array}{cc}
+2 & -7 \\
+3 & 9
+\end{array}\right|-1\left|\begin{array}{ll}
+2 & 1 \\
+3 & 3
+\end{array}\right| \\
+&=4(9+21)-0(18+21)-1(6-3) \\
+&=120-0-3=117
+\end{aligned}
+\]
+
+Interchanging rows and columns:\\
+
+\( \begin{aligned}\left|\begin{array}{ccc}4 & 2 & 3 \\ 0 & 1 & 3 \\ -1 & -7 & 9\end{array}\right| &=4\left|\begin{array}{cc}1 & 3 \\ -7 & 9\end{array}\right|-2\left|\begin{array}{cc}0 & 3 \\ -1 & 9\end{array}\right|+3\left|\begin{array}{cc}0 & 1 \\ -1 & -7\end{array}\right| \\ &=4(9+21)-2(0+3)+3(0+1) \\ &=120-6+3=117 \end{aligned} \) \\
+
+Interchange row 1 and 2:
+\[
+\begin{aligned}
+\left|\begin{array}{rrr}
+2 & 1 & -7 \\
+4 & 0 & -1 \\
+3 & 3 & 9
+\end{array}\right| &=2\left|\begin{array}{rr}
+0 & -1 \\
+3 & 9
+\end{array}\right|-1\left|\begin{array}{cc}
+4 & -1 \\
+3 & 9
+\end{array}\right|-7\left|\begin{array}{ll}
+4 & 0 \\
+3 & 3
+\end{array}\right| \\
+&=2(0+3)-1(36+3)-7(12-0) \\
+&=6-39-84=-117
+\end{aligned}
+\]
+You can verify the other two properties in the same way. \vspace{1em}
+
+% Question 4
+\item[4.] Multiplying every element of an $n$th-order determinant by $k$ multiplies each of its $n$ rows by $k$. Multiplying a single row by $k$ multiplies the determinant by $k$, so doing it to all $n$ rows gives $k^{n}|A|$.
+
+% Question 5
+\item[5.] 
+\begin{enumerate}
+\item[(a)] \[
+\begin{array}{l}
+4\left|\begin{array}{cc}
+1 & -3 \\
+1 & 0
+\end{array}\right|+1\left|\begin{array}{cc}
+19 & 1 \\
+7 & 1
+\end{array}\right| \\
+=4(0+3)+1(19-7) \\
+=\quad 12+12=24
+\end{array}
+\]
+
+Non-singular, rank = 3. \\
+
+\item[(b)] \[
+\begin{aligned}
+& 5\left|\begin{array}{cc}
+-2 & 1 \\
+0 & 3
+\end{array}\right|+6 \left| \begin{array}{ll}
+4 & 1 \\
+7 & 3
+\end{array}\right| \\
+=& 5(-6-0)+6(12-7) \\
+=&-30+30=0
+\end{aligned}
+\]
+
+Singular. Rank<3, will need to put in echelon form to find exact rank. \\
+
+\item[(c)]
+\[
+\begin{aligned} & 7\left|\begin{array}{cc}1 & 4 \\ -3 & -4\end{array}\right|+1\left|\begin{array}{cc}1 & 4 \\ 13 & -4\end{array}\right| \\=& 7(-4+12)+1(-4-52) \\=& 56-56=0 \end{aligned}
+\]
+
+Singular. Rank <3, will need to put in echelon form to find exact rank. \\
+
+\item[(d)]
+\[ \begin{aligned} &-3\left|\begin{array}{ll}9 & 5 \\ 8 & 6\end{array}\right|-1\left|\begin{array}{cc}-4 & 9 \\ 10 & 8\end{array}\right| \\
+ =&-3(54-40)-1(-32-90) \\
+ =&-42+122=80 \end{aligned}\]
+Non-singular, rank = 3. \vspace{1em}
+\end{enumerate}
+
+% Question 8
+\item[8.] 
+\begin{enumerate}
+\item False. While we can find the transpose of any matrix, the determinant is only defined for square matrices. 
+\item False. Multiplying each element of an $n \times n$ by 2 will increase the determinant by $2^n$ times. 
+\item $A$ cannot be 0, but the determinant of $A$ can. In any case, if $|A|$=0, $A$ is singular.
+\end{enumerate}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%% Exercise 5.4

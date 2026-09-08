@@ -442,7 +442,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Div Bhagia">
-  <title>Introduction to Mathematical Economics – Computing Determinants, Inversion, and Cramer’s Rule</title>
+  <title>Introduction to Mathematical Economics – Solving Systems of Linear Equations</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -986,7 +986,7 @@ margin-right: 0; }
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title">Computing Determinants, Inversion, and Cramer’s Rule</h1>
+  <h1 class="title">Solving Systems of Linear Equations</h1>
   <p class="subtitle">ECON 441: Introduction to Mathematical Economics<br>Lecture 7</p>
 
 <div class="quarto-title-authors">
@@ -999,36 +999,10 @@ Div Bhagia
 
 </section>
 <section class="slide level2">
-<h2>Find the Determinant</h2>
-<p><span class="math display">\[A=\left[\begin{array}{ccc}
-1 &amp; 5 &amp; 1 \\
-0 &amp; 3 &amp; 9 \\
--1 &amp; 0 &amp; 0
-\end{array}\right]\]</span></p>
-</section>
-<section class="slide level2">
-<h2>Properties of Determinants</h2>
-<p><span class="math inline">\(|A| = |A&#39;|\)</span></p>
-<p>Interchanging rows or columns will alter the sign but not the value</p>
-<p>Multiplication of any one row (or one column) by a scalar <span class="math inline">\(k\)</span> will change the value of the determinant <span class="math inline">\(k\)</span>-fold</p>
-<p>The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered</p>
-<p>If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero.</p>
-</section>
-<section class="slide level2">
-<h2>Criteria for Nonsingularity</h2>
-<p>The following statements are equivalent:</p>
-<p><span class="math inline">\(|A| \neq 0\)</span></p>
-<p>Rows (or equivalently columns) of <span class="math inline">\(A\)</span> are independent</p>
-<p><span class="math inline">\(A\)</span> has full rank</p>
-<p><span class="math inline">\(A\)</span> is nonsingular</p>
-<p><span class="math inline">\(A^{-1}\)</span> exists</p>
-<p>A unique solution to <span class="math inline">\(A x=b\)</span> (<span class="math inline">\(x^*=A^{-1}b\)</span>) exists</p>
-</section>
-<section class="slide level2">
 <h2>Matrix Inversion</h2>
 <p><em>Adjoint</em> of a nonsingular <span class="math inline">\(n \times n\)</span> matrix<br>
  <br>
-<span class="math display">\[adj A = C&#39; = \left[\begin{array}{llll}
+<span class="math display">\[adj A = C^T = \left[\begin{array}{llll}
 |C_{11}| &amp; |C_{21}| &amp; \cdots &amp; |C_{n1}| \\
 |C_{12}| &amp; |C_{22}| &amp; \cdots &amp;  |C_{n2}| \\
 \vdots &amp;\vdots &amp; \cdots &amp;  \vdots \\
@@ -1211,7 +1185,7 @@ After <span class="math inline">\(t\)</span> periods: <span class="math display"
 Denote <span class="math display">\[Y  = \begin{bmatrix} Y_1 \\ Y_2 \\  \vdots \\ Y_n  \end{bmatrix}_{n \times 1},    
   \beta  = \begin{bmatrix} \beta_0 \\ \beta_1  \\ \vdots \\ \beta_k \end{bmatrix}_{k \times 1},  
   \boldsymbol{X} = \begin{bmatrix} 1 &amp; X_{11} &amp; \cdots &amp; X_{1k} \\ 1 &amp; X_{12} &amp; \cdots &amp; X_{2k}  \\ \vdots &amp; \vdots \\ 1 &amp; X_{1n} &amp; \cdots &amp; X_{nk}  \end{bmatrix}_{n \times k},  
-  \varepsilon  = \begin{bmatrix} \varepsilon_1 \\ \varepsilon_2 \\ \vdots \\ \varepsilon_n  \end{bmatrix}_{n \times 1}\]</span> Then, <span class="math display">\[Y = X \beta + \varepsilon  \quad \quad \text{OLS estimator: } \hat{\beta} = (X&#39;X)^{-1} X&#39;Y\]</span></p>
+  \varepsilon  = \begin{bmatrix} \varepsilon_1 \\ \varepsilon_2 \\ \vdots \\ \varepsilon_n  \end{bmatrix}_{n \times 1}\]</span> Then, <span class="math display">\[Y = X \beta + \varepsilon  \quad \quad \text{OLS estimator: } \hat{\beta} = (X^T X)^{-1} X^T Y\]</span></p>
 </section>
 <section class="slide level2">
 <h2>Natural Language Processing (NLP)</h2>
@@ -1237,11 +1211,10 @@ Denote <span class="math display">\[Y  = \begin{bmatrix} Y_1 \\ Y_2 \\  \vdots \
 <section class="slide level2">
 <h2>Homework Questions</h2>
 <ul>
-<li><p>Exercise 5.3: 1, 4, 5, 8</p></li>
 <li><p>Exercise 5.4: 2, 3, 4, 6, 7</p></li>
 <li><p>Exercise 5.5: 1, 2, 3 (a), (d)</p></li>
 </ul>
-<p>Textbook reference: 5.2-5.5</p>
+<p>Textbook reference: 5.4, 5.5, 4.7</p>
 
 
 </section>

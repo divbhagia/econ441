@@ -50,7 +50,7 @@ site:
 	@rm -rf $(TMP)
 	@rsync -a --exclude .git --exclude grades --exclude docs --exclude .quarto \
 	          --exclude _freeze --exclude lectures-old --exclude rtp-material \
-	          --exclude references --exclude exams ./ $(TMP)/
+	          --exclude references --exclude /exams ./ $(TMP)/
 	@cd $(TMP) && quarto render
 	@mkdir -p $(TMP)/docs/syllabus && cp syllabus/Econ441-Syllabus.pdf $(TMP)/docs/syllabus/
 	@mkdir -p docs

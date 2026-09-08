@@ -8,21 +8,6 @@ format:
     embed-resources: true
 ---
 
-## Linear Independence
-
-::: {.columns}
-::: {.column width="50%"}
-Linearly dependent
-
-![](../../assets/fig/linear-dependent.svg){fig-alt="Two linearly dependent vectors: a maroon arrow v one to (2, 4) and an ink arrow v two to (1, 2), lying along the same line through the origin" width=380}
-:::
-::: {.column width="50%"}
-Linearly independent
-
-![](../../assets/fig/linear-independent.svg){fig-alt="Two linearly independent vectors: a maroon arrow v one to (1, 3) and an ink arrow v two to (3, 1), pointing in different directions from the origin" width=380}
-:::
-:::
-
 ## Rank of a Matrix
 
 Rank of a matrix $=$ maximum number of linearly independent rows\
@@ -55,12 +40,6 @@ Determinant $|A|$ is a unique scalar associated with a *square* matrix $A$.\
  \
 Determinant of a $2 \times 2$ Matrix: $$A=\left[\begin{array}{ll}a_{11} & a_{12} \\ a_{21} & a_{22}\end{array}\right]$$ Can be calculated as: $$|A|=a_{11} a_{22}-a_{12} a_{21}$$
 
-## Determinant: Geometric Interpretation
-
-$$A=\left[\begin{array}{ll}1 & 2 \\ 3 & 4\end{array}\right]$$
-
-![](../../assets/fig/determinant-area.svg){fig-alt="Geometric interpretation of a determinant: arrows from the origin to (1, 3) and (2, 4), the columns of A, with dashed lines completing a shaded parallelogram whose area equals the absolute value of the determinant of A" width=290}
-
 ## Determinant of a $3 \times 3$ Matrix
 
 $$\begin{aligned}
@@ -88,8 +67,47 @@ A *minor* of the element $a_{ij}$, denoted by $|M_{ij}|$ is obtained by deleting
  \
 Cofactor $C_{ij}$ is defined as: $$|C_{ij}| = (-1)^{i+j} |M_{ij}|$$ Then, $$|A| = \sum_{i=1}^n a_{ij} |C_{ij}| = \sum_{j=1}^n a_{ij} |C_{ij}|$$
 
+## Find the Determinant
+
+$$A=\left[\begin{array}{ccc}
+1 & 5 & 1 \\
+0 & 3 & 9 \\
+-1 & 0 & 0
+\end{array}\right]$$
+
+## Properties of Determinants
+
+$|A| = |A^T|$
+
+Interchanging rows or columns will alter the sign but not the value
+
+Multiplication of any one row (or one column) by a scalar $k$ will change the value of the determinant $k$-fold
+
+The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered
+
+If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero.
+
+## Criteria for Nonsingularity
+
+The following statements are equivalent:
+
+
+$|A| \neq 0$
+
+Rows (or equivalently columns) of $A$ are independent
+
+$A$ has full rank
+
+$A$ is nonsingular
+
+$A^{-1}$ exists
+
+A unique solution to $A x=b$ ($x^*=A^{-1}b$) exists
+
 ## Homework Questions
 
 -   Exercise 5.2: 1 (c), (e), (f), 2, 3, 6
 
-Textbook reference: 5.1, 5.2
+-   Exercise 5.3: 1, 4, 5, 8
+
+Textbook reference: 5.1-5.3

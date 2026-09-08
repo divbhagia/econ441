@@ -1,5 +1,5 @@
 ---
-title: "Computing Determinants, Inversion, and Cramer's Rule"
+title: "Solving Systems of Linear Equations"
 subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 7"
 author: "Div Bhagia"
 format:
@@ -8,48 +8,11 @@ format:
     embed-resources: true
 ---
 
-## Find the Determinant
-
-$$A=\left[\begin{array}{ccc}
-1 & 5 & 1 \\
-0 & 3 & 9 \\
--1 & 0 & 0
-\end{array}\right]$$
-
-## Properties of Determinants
-
-$|A| = |A'|$
-
-Interchanging rows or columns will alter the sign but not the value
-
-Multiplication of any one row (or one column) by a scalar $k$ will change the value of the determinant $k$-fold
-
-The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered
-
-If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero.
-
-## Criteria for Nonsingularity
-
-The following statements are equivalent:
-
-
-$|A| \neq 0$
-
-Rows (or equivalently columns) of $A$ are independent
-
-$A$ has full rank
-
-$A$ is nonsingular
-
-$A^{-1}$ exists
-
-A unique solution to $A x=b$ ($x^*=A^{-1}b$) exists
-
 ## Matrix Inversion
 
 *Adjoint* of a nonsingular $n \times n$ matrix\
  \
-$$adj A = C' = \left[\begin{array}{llll}
+$$adj A = C^T = \left[\begin{array}{llll}
 |C_{11}| & |C_{21}| & \cdots & |C_{n1}| \\
 |C_{12}| & |C_{22}| & \cdots &  |C_{n2}| \\
 \vdots &\vdots & \cdots &  \vdots \\
@@ -246,7 +209,7 @@ Linear model with $k$ variables: $$Y_i = \beta_0 + \beta_1 X_{i1} + \beta_2 X_{i
 Denote $$Y  = \begin{bmatrix} Y_1 \\ Y_2 \\  \vdots \\ Y_n  \end{bmatrix}_{n \times 1},    
   \beta  = \begin{bmatrix} \beta_0 \\ \beta_1  \\ \vdots \\ \beta_k \end{bmatrix}_{k \times 1},  
   \boldsymbol{X} = \begin{bmatrix} 1 & X_{11} & \cdots & X_{1k} \\ 1 & X_{12} & \cdots & X_{2k}  \\ \vdots & \vdots \\ 1 & X_{1n} & \cdots & X_{nk}  \end{bmatrix}_{n \times k},  
-  \varepsilon  = \begin{bmatrix} \varepsilon_1 \\ \varepsilon_2 \\ \vdots \\ \varepsilon_n  \end{bmatrix}_{n \times 1}$$ Then, $$Y = X \beta + \varepsilon  \quad \quad \text{OLS estimator: } \hat{\beta} = (X'X)^{-1} X'Y$$
+  \varepsilon  = \begin{bmatrix} \varepsilon_1 \\ \varepsilon_2 \\ \vdots \\ \varepsilon_n  \end{bmatrix}_{n \times 1}$$ Then, $$Y = X \beta + \varepsilon  \quad \quad \text{OLS estimator: } \hat{\beta} = (X^T X)^{-1} X^T Y$$
 
 ## Natural Language Processing (NLP)
 
@@ -280,10 +243,8 @@ After the midterm, we move on to differential calculus
 
 ## Homework Questions
 
--   Exercise 5.3: 1, 4, 5, 8
-
 -   Exercise 5.4: 2, 3, 4, 6, 7
 
 -   Exercise 5.5: 1, 2, 3 (a), (d)
 
-Textbook reference: 5.2-5.5
+Textbook reference: 5.4, 5.5, 4.7

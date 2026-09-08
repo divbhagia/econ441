@@ -3,6 +3,7 @@ project:
   output-dir: docs
   resources:
     - assets/mathjax
+    - "content/exams/*.pdf"
   post-render:
     - scripts/postrender.py
   render:
@@ -40,10 +41,10 @@ website:
         file: syllabus.qmd
       - text: "Schedule"
         file: schedule.qmd
-      - text: "Exams"
-        file: exams.qmd
       - text: "Content"
         file: content/preliminaries.qmd
+      - text: "Exams"
+        file: exams.qmd
       - icon: github
         href: https://divbhagia.github.io/econ441/
         aria-label: GitHub repository for this course

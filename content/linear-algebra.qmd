@@ -60,28 +60,28 @@ Practice problems for this module, collected:
 ::: {.lecture style="font-size:1.1rem"}
 <h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 6: Rank and the Determinant</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Linear independence and rank; the determinant</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Linear independence and rank; computing the determinant</span>
 
-<span style="font-size:1.1rem"><strong>Textbook references:</strong> 5.1, 5.2</span>
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 5.1&ndash;5.3</span>
 
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides6.html" target="_blank" rel="noopener" aria-label="Lecture 6 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides6.pdf" target="_blank" rel="noopener" aria-label="Lecture 6 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
+<a class="btn btn-outline-primary" href="handouts/handout-determinant-and-inverse.pdf" target="_blank" rel="noopener" aria-label="Lecture 6 worksheet: Determinant and Inverse, PDF (opens in a new tab)" role="button">Worksheet: Determinant and Inverse</a>
 <a class="btn btn-outline-primary" href="practice/practice6.html" target="_blank" rel="noopener" aria-label="Practice Problems 6 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::
 
 ::: {.lecture style="font-size:1.1rem"}
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 7: Computing Determinants, Inversion, and Cramer's Rule</h2>
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 7: Solving Systems of Linear Equations</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Computing determinants; matrix inversion; Cramer's rule; applications</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Solving systems of linear equations by matrix inversion and Cramer's rule; applications</span>
 
-<span style="font-size:1.1rem"><strong>Textbook references:</strong> 5.2&ndash;5.5, 4.7</span>
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 5.4, 5.5, 4.7</span>
 
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides7.html" target="_blank" rel="noopener" aria-label="Lecture 7 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides7.pdf" target="_blank" rel="noopener" aria-label="Lecture 7 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="handouts/handout-determinant-and-inverse.pdf" target="_blank" rel="noopener" aria-label="Lecture 7 worksheet: Determinant and Inverse, PDF (opens in a new tab)" role="button">Worksheet: Determinant and Inverse</a>
 <a class="btn btn-outline-primary" href="handouts/handout-solving-system-of-equations.pdf" target="_blank" rel="noopener" aria-label="Lecture 7 worksheet: Solving Systems of Equations, PDF (opens in a new tab)" role="button">Worksheet: Solving Systems of Equations</a>
 <a class="btn btn-outline-primary" href="practice/practice7.html" target="_blank" rel="noopener" aria-label="Practice Problems 7 (opens in a new tab)" role="button">Practice problems</a>
 </p>
