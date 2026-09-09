@@ -1,0 +1,79 @@
+% !TEX program = lualatex
+% One combined sample for Midterm 1 (70 min, 20 pts): the surviving
+% linear-algebra/preliminaries questions from the two old samples, plus the
+% system-of-equations question recast as a solvable two-market equilibrium.
+\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagging=on}
+\documentclass{./../../latex/tests}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Midterm Sample}
+\rhead{Midterm Sample}
+\vspace{0.5em}
+\testHeader{70}{20}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%% Question 1
+\item (5 pts) Answer the following questions.
+\begin{enumerate}
+% Part
+\item (1 pt) Consider a mapping $f(x)$. For two distinct values of $x$, $x_0$ and $x_1$, $f(x_0) = f(x_1)$. Is $f$ a valid function? Answer yes or no. \\~\\
+% Part
+\item (1 pt) Consider two sets $A$ and $B$, where $A$ is the set of all odd real numbers and $B$ is the set of all even real numbers. What is the union of $A$ and $B$?
+\vspace{2.5cm}
+% Part
+\item (1 pt) Find the union and intersection for the following sets:
+\[ A = \{x: x \text{ is an even number} \} \quad \quad B = \{2, 4, 8 \} \]
+\vspace{2.5cm}
+% Part
+\item (1 pt) Does the inverse of the function $f: \mathbb{R} \rightarrow \mathbb{R}$, $f(x)=x^2$ exist? If yes, find the inverse.
+\vspace{2.5cm}
+% Part
+\item (1 pt) Consider the following two-variable function:
+  \[ f(x,y) = x+y \]
+  where $x \in (0,1)$ and $y \in (0,1)$. What is the range of $f$?
+\vspace{2cm}
+\end{enumerate}
+
+%%%%%%%%%%%%%% Question 2
+\newpage
+\item (5 pts) Consider the following matrix \[A = I - X(X^T X)^{-1}X^T \]
+\begin{enumerate}
+\item (3 pts)  Is $A$ a square matrix? Show your work or reasoning that led you to this conclusion. \vspace{4cm}
+\item (2 pts) Prove that $A$ is idempotent i.e. $A A = A$. \vspace{6cm}
+\end{enumerate}
+
+%%%%%%%%%%%%%% Question 3
+\newpage
+\item (10 pts) Two types of cars, gasoline (g) and electric (e), are available in the market. Denote the price of gasoline cars by \(p_g\) and the price of electric cars by \(p_e\), and the corresponding quantities by $q_g$ and $q_e$. The supply and demand equations are as follows:
+
+\textit{Supply Equations:}
+\begin{align*}
+q^s_e &= 30 + p_e \\
+q^s_g &= 20 + p_g
+\end{align*}
+\textit{Demand Equations:}
+\begin{align*}
+q^d_e &= 100 - 2p_e + p_g \\
+q^d_g &= 50 + p_e - p_g
+\end{align*}
+
+\textbf{Note}: At equilibrium, supply is equal to demand: \(q^s_e = q^d_e = q_e\) and \(q^s_g = q^d_g = q_g\).
+
+\begin{enumerate}
+\item (2 pts) Using the equilibrium conditions, derive \underline{two} equations in the two unknown prices $p_e$ and $p_g$. Rearrange each equation so that all terms with variables are on one side and all constants are on the other.
+\vspace{5cm}
+\item (2 pts) Express this system of equations in matrix format as \(Ax = b\). Clearly specify what \(A\), \(x\), and \(b\) are.
+\newpage
+\item (2 pts) Calculate the adjoint of $A$.
+\vspace{5cm}
+\item (1 pt) Calculate the determinant of $A$. Is $A$ nonsingular?
+\vspace{4cm}
+\item (1 pt) If you premultiply $A^{-1}$ on both sides of the equation $Ax = b$, you should be able to derive an expression to solve for $x$. Write down this expression.
+\vspace{2.5cm}
+\item (2 pts) Using the expression in (e), solve for the equilibrium prices $p_e^*$ and $p_g^*$.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
