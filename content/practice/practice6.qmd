@@ -227,7 +227,7 @@ $$\begin{aligned}
     =&-30+30=0
     \end{aligned}$$
 
-    Singular. Rank\<3, will need to put in echelon form to find exact rank.\
+    Singular, so the rank is less than 3.
 
 </details>
 
@@ -238,7 +238,7 @@ c. $\left[\begin{array}{rrr}7 & -1 & 0 \\ 1 & 1 & 4 \\ 13 & -3 & -4\end{array}\r
 
 $$\begin{aligned} & 7\left|\begin{array}{cc}1 & 4 \\ -3 & -4\end{array}\right|+1\left|\begin{array}{cc}1 & 4 \\ 13 & -4\end{array}\right| \\=& 7(-4+12)+1(-4-52) \\=& 56-56=0 \end{aligned}$$
 
-    Singular. Rank \<3, will need to put in echelon form to find exact rank.\
+    Singular, so the rank is less than 3.
 
 </details>
 
