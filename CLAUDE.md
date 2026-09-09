@@ -82,6 +82,14 @@ The same script emits `syllabus/schedule.tex` for the syllabus PDF.
 
 ## Practice problems
 
+Practice-page house style: bold textbook question numbers (`**N.**`), lettered
+parts on their own lines, and a **Solution toggle per part**
+(`details.solution.part`) whenever a question has lettered parts; one
+question-level toggle otherwise. Sets converted from the old semester carry
+pandoc leftovers -- escaped `\<`, trailing backslashes, `(a)` markers inside
+solutions, prime-transposes (use `^T`), and references to skipped topics
+(echelon form, inner product) -- strip these on sight.
+
 HTML practice pages are per lecture (`content/practice/practiceN.qmd`). PDFs
 are per **module**: `content/practice/practice-<module>.tex` stitches the
 per-lecture bodies (`practiceN-body.tex`, `practiceN_solutions-body.tex`)

@@ -15,16 +15,10 @@ a. $\begin{aligned} \\
         2 x+5 y=42
     \end{aligned}$
 
-b. $\begin{aligned} \\~\\
-        4 x_{1}+x_{2}-5 x_{3}=8 \\
-        -2 x_{1}+3 x_{2}+x_{3}=12 \\
-        3 x_{1}-x_{2}+4 x_{3}=5
-    \end{aligned}$
-
-<details class="solution">
+<details class="solution part">
 <summary>Solution</summary>
 
-\(a\) $$\begin{array}{l}
+$$\begin{array}{l}
 A=\left[\begin{array}{ll}
 4 & 3 \\
 2 & 5
@@ -43,7 +37,18 @@ $|A| =20-6=14$
 $A^{-1} =\frac{1}{14}\left[\begin{array}{cc}5 & -3 \\ -2 & 4\end{array}\right]$ $$\begin{aligned}v=A^{-1} b &=\frac{1}{14}\left[\begin{array}{cc}5 & -3 \\ -2 & 4\end{array}\right]\left[\begin{array}{l}28 \\ 42\end{array}\right] \\ &=\frac{1}{14}\left[\begin{array}{l}140-126 \\ -56+168\end{array}\right] = \frac{1}{14}\left[\begin{array}{l}14 \\ 112\end{array}\right] =\left[\begin{array}{l}1 \\ 8\end{array}\right] \end{aligned}$$\
 So $x=1$ and $y=8$.
 
-\(b\) $$A=\left[\begin{array}{ccc}4 & 1 & -5 \\ -2 & 3 & 1 \\ 3 & -1 & 4\end{array}\right] \quad x=\left[\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right] \quad b=\left[\begin{array}{c}8 \\ 12 \\ 5\end{array}\right]$$
+</details>
+
+b. $\begin{aligned} \\~\\
+        4 x_{1}+x_{2}-5 x_{3}=8 \\
+        -2 x_{1}+3 x_{2}+x_{3}=12 \\
+        3 x_{1}-x_{2}+4 x_{3}=5
+    \end{aligned}$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$A=\left[\begin{array}{ccc}4 & 1 & -5 \\ -2 & 3 & 1 \\ 3 & -1 & 4\end{array}\right] \quad x=\left[\begin{array}{l}x_{1} \\ x_{2} \\ x_{3}\end{array}\right] \quad b=\left[\begin{array}{c}8 \\ 12 \\ 5\end{array}\right]$$
 
 $$\begin{aligned}
 |A| &=4\left|\begin{array}{cc}
@@ -92,25 +97,10 @@ a. $\begin{aligned} \\
         2x_1 + x_2 =11
     \end{aligned}$
 
-b. $\begin{aligned} \\
-        -x_1+3x_2 =-3 \\
-        4x_1-x_2 = 12 
-    \end{aligned}$
-
-c. $\begin{aligned} \\
-        8x_1-7x_2 =9 \\
-        x_1 + x_2 = 3
-    \end{aligned}$
-
-d. $\begin{aligned} \\
-        5x_1 + 9x_2 = 14 \\
-        7 x_1-3x_2 = 4
-    \end{aligned}$
-
-<details class="solution">
+<details class="solution part">
 <summary>Solution</summary>
 
-\(a\) $A=\left[\begin{array}{cc}3 & -2 \\ 2 & 1\end{array}\right] \rightarrow|A|=7 \quad b=\left[\begin{array}{c}6 \\ 11\end{array}\right]$\
+$A=\left[\begin{array}{cc}3 & -2 \\ 2 & 1\end{array}\right] \rightarrow|A|=7 \quad b=\left[\begin{array}{c}6 \\ 11\end{array}\right]$\
 By Cramer's Rule:
 
 $$\begin{aligned}
@@ -133,7 +123,17 @@ $$\begin{aligned}
 & \left[\begin{array}{l}x_{1}^{*} \\x_{2}^{*}\end{array}\right]=A^{-1} b=\frac{1}{7}\left[\begin{array}{rr}1 & 2 \\-2 & 3\end{array}\right]\left[\begin{array}{l}6 \\11\end{array}\right]=\frac{1}{7}\left[\begin{array}{l}28 \\21\end{array}\right]=\left[\begin{array}{l}4 \\3\end{array}\right] 
 \end{aligned}$$
 
-\(b\) $$A=\left[\begin{array}{cc}
+</details>
+
+b. $\begin{aligned} \\
+        -x_1+3x_2 =-3 \\
+        4x_1-x_2 = 12 
+    \end{aligned}$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$A=\left[\begin{array}{cc}
 -1 & 3 \\
 4 & -1
 \end{array}\right] \rightarrow|A|=-11 \quad b=\left[\begin{array}{c}
@@ -173,7 +173,17 @@ x_{2}
 0
 \end{array}\right]$$
 
-\(c\) $$\begin{aligned}
+</details>
+
+c. $\begin{aligned} \\
+        8x_1-7x_2 =9 \\
+        x_1 + x_2 = 3
+    \end{aligned}$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\begin{aligned}
 & |A|=\left|\begin{array}{cc}
 8 & -7 \\
 1 & 1
@@ -200,7 +210,17 @@ x_{2}^{*}
 1
 \end{array}\right]$$
 
-\(d\) $$\begin{aligned}
+</details>
+
+d. $\begin{aligned} \\
+        5x_1 + 9x_2 = 14 \\
+        7 x_1-3x_2 = 4
+    \end{aligned}$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\begin{aligned}
 & |A|=\left|\begin{array}{cc}
 5 & 9 \\
 7 & -3
@@ -236,16 +256,10 @@ a. $\begin{aligned} \\~\\
         2x_1 + 3x_3 = 7
     \end{aligned}$
 
-b. $\begin{aligned} \\~\\
-        -x + y+z = a \\
-        x-y + z = b \\
-        x+y-z = c
-    \end{aligned}$
-
-<details class="solution">
+<details class="solution part">
 <summary>Solution</summary>
 
-\(a\) $$\begin{aligned}
+$$\begin{aligned}
 |A| & =\left|\begin{array}{rrr}
 8 & -1 & 0 \\
 0 & 2 & 5 \\
@@ -312,7 +326,18 @@ $$\begin{aligned}
 & =112-10-64=38 \rightarrow x_{3}^{*}=1 
 \end{aligned}$$
 
-\(d\) $$\begin{aligned}
+</details>
+
+b. $\begin{aligned} \\~\\
+        -x + y+z = a \\
+        x-y + z = b \\
+        x+y-z = c
+    \end{aligned}$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\begin{aligned}
 |A| & =\left|\begin{array}{rrr}
 -1 & 1 & 1 \\
 1 & -1 & 1 \\
@@ -348,4 +373,3 @@ $$\begin{aligned}
 $$x^{*}=\frac{b+c}{2} \quad y^{*}=\frac{a+c}{2} \quad z^{*}=\frac{a+b}{2}$$
 
 </details>
-

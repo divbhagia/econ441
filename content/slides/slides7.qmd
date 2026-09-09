@@ -67,13 +67,13 @@ b = \begin{bmatrix}
 ## Homogeneous equation system
 
 ::: {.columns}
-::: {.column width="60%"}
+::: {.column width="55%"}
 A homogeneous equation system is given by $$Ax = 0$$ If $A$ is nonsingular, $x^* = A^{-1} 0 = 0$.\
  \
 If $A$ is singular there can be infinite number of solutions (this is true for any system of equations).
 :::
-::: {.column width="40%"}
-![](../../assets/fig/stem-linal.png){fig-alt="Comic showing a precarious tower of blocks labeled 'All of STEM' balancing on one small block labeled 'That one linear algebra course'" width=300}
+::: {.column width="45%"}
+![](../../assets/fig/stem-linal.png){fig-alt="Comic showing a precarious tower of blocks labeled 'All of STEM' balancing on one small block labeled 'That one linear algebra course'" width=430}
 :::
 :::
 
@@ -189,8 +189,7 @@ Denote $$Y  = \begin{bmatrix} Y_1 \\ Y_2 \\  \vdots \\ Y_n  \end{bmatrix}_{n \ti
 
 Bag of Words (BoW) model is a simple and widely used method in NLP
 
-Transform text into fixed-length vectors by counting how many times each word appears in a document
-
+Transform text into fixed-length vectors by counting how many times each word appears in a document\
 Example:
 
 -   Doc1: "the cat sat on the mat"
@@ -209,9 +208,9 @@ Calculate similarity between document vectors to classify documents into predefi
 
 Midterm 1 is next week: review on Monday, exam on Wednesday
 
-Sample exams and a help sheet are posted on the Exams page
+A sample exam and a help sheet are posted on the Exams page
 
-Notes for reviewing Linear Algebra are on the website (not a substitute for the textbook for understanding concepts)
+Notes for reviewing Linear Algebra are on the website
 
 After the midterm, we move on to differential calculus
 
