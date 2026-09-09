@@ -62,13 +62,22 @@
 \RequirePackage{pgfplots}
 \RequirePackage{epsfig}
 
-% Math and Font
-\RequirePackage[default]{lato}
-%\RequirePackage{mathastext}
-\RequirePackage{newtxmath}
-\RequirePackage[english]{babel}
-\RequirePackage[utf8x]{inputenc}
-\RequirePackage[T1]{fontenc}
+% Math and Font. Under LuaLaTeX (required for tagged PDF) the lato package's
+% [default] option does not survive the later fontenc reset, so the text came
+% out Computer Modern; fontspec sets Lato directly, as the slide decks do.
+\ifdefined\directlua
+  \RequirePackage{fontspec}
+  \setmainfont{Lato}
+  \setsansfont{Lato}
+  \RequirePackage{newtxmath}
+  \RequirePackage[english]{babel}
+\else
+  \RequirePackage[default]{lato}
+  \RequirePackage{newtxmath}
+  \RequirePackage[english]{babel}
+  \RequirePackage[utf8x]{inputenc}
+  \RequirePackage[T1]{fontenc}
+\fi
 \RequirePackage{listings}
 %\RequirePackage{amssymb, amsfonts, amsmath, amsthm}
 \RequirePackage{bm}
