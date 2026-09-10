@@ -44,20 +44,36 @@
 
 %%%%%%%%%%%%%% Question 3
 \newpage
-\item (10 pts) An economy has three sectors: agriculture, manufacturing, and services. Denote their outputs (in billions of dollars) by $x$, $y$, and $z$, respectively. The planning targets require that agricultural output exceed twice the services output by 2, that manufacturing and services output together equal 12, and that total output across the three sectors equal 24:
+\item (10 pts) Three modes of transport are available between two cities: bus, train, and plane. Denote their ticket prices by $p_b$, $p_t$, and $p_a$, and the corresponding quantities of tickets by $q_b$, $q_t$, and $q_a$. Bus and train are substitutes, as are train and plane. The demand and supply equations are as follows:
+
+\textit{Demand Equations:}
 \begin{align*}
-x-2z & = 2 \\
-y+z & = 12 \\
-x+y+z &= 24
+q^d_b &= 20 - p_b + p_t \\
+q^d_t &= 36 + p_b - p_t + p_a \\
+q^d_a &= 20 + p_t - p_a
 \end{align*}
+\textit{Supply Equations:}
+\begin{align*}
+q^s_b &= 12 + p_b \\
+q^s_t &= 30 + p_t \\
+q^s_a &= 16 + p_a
+\end{align*}
+
+\textbf{Note}: At equilibrium, supply is equal to demand in each market.
+
 \begin{enumerate}
-  \item (1 pt) Write this system of equations in matrix format i.e., \[ Av=b \]
-  What is $A$, $v$, and $b$ equal to?
-  \newpage
-   \item (3 pts) Calculate the adjoint of $A$. \vspace{8.5cm}
-  \item (2 pts) Calculate the determinant of $A$. Is $A$ nonsingular? \vspace{4.5cm}
-  \item (1 pt) If you premultiply $A^{-1}$ on both sides of the equation $ Av=b $, you should be able to derive an expression to solve for $v$. Write down this expression. \vspace{2cm}
-  \item (3 pts) Using the expression in (d), solve for $v^*$, i.e., the output of each sector.
+\item (2 pts) Using the equilibrium conditions, derive \underline{three} equations in the three unknown prices $p_b$, $p_t$, and $p_a$. Rearrange each equation so that all terms with variables are on one side and all constants are on the other.
+\newpage
+\item (1 pt) Express this system of equations in matrix format as \[ Av = b \]
+What is $A$, $v$, and $b$ equal to?
+\vspace{4.5cm}
+\item (2 pts) Calculate the adjoint of $A$.
+\newpage
+\item (1 pt) Calculate the determinant of $A$. Is $A$ nonsingular?
+\vspace{5cm}
+\item (1 pt) If you premultiply $A^{-1}$ on both sides of the equation $Av = b$, you should be able to derive an expression to solve for $v$. Write down this expression.
+\vspace{2.5cm}
+\item (3 pts) Using the expression in (e), solve for the equilibrium prices.
 \end{enumerate}
 
 \end{enumerate}

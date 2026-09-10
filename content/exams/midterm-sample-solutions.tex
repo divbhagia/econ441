@@ -36,76 +36,78 @@ A A &= (I-X(X^T X)^{-1} X^T)(I-X(X^T X)^{-1} X^T) \\
 %%%%%%%%%%%%%% Question 3
 \item (10 pts)
 \begin{enumerate}
-  \item (1 pt)
-  $A=\left[\begin{array}{rrr}1 & 0 & -2 \\ 0 & 1 & 1 \\ 1 & 1 & 1\end{array}\right] \quad v=\left[\begin{array}{l}x \\ y \\ z\end{array}\right] \quad b=\left[\begin{array}{c}2 \\ 12 \\ 24\end{array}\right]$
-  \item (3 pts) We first need to calculate all the cofactors of $A$.
+\item (2 pts) Setting supply equal to demand in each market:
+\[ 20 - p_b + p_t = 12 + p_b \implies 2p_b - p_t = 8 \]
+\[ 36 + p_b - p_t + p_a = 30 + p_t \implies -p_b + 2p_t - p_a = 6 \]
+\[ 20 + p_t - p_a = 16 + p_a \implies -p_t + 2p_a = 4 \]
+\item (1 pt)
+\[ A=\left[\begin{array}{rrr}2 & -1 & 0 \\ -1 & 2 & -1 \\ 0 & -1 & 2\end{array}\right] \quad v=\left[\begin{array}{l}p_b \\ p_t \\ p_a\end{array}\right] \quad b=\left[\begin{array}{c}8 \\ 6 \\ 4\end{array}\right] \]
+\item (2 pts) We first need to calculate all the cofactors of $A$.
 \[
 \begin{aligned}
-&\left|C_{11}\right|=\left|\begin{array}{ll}
-1 & 1 \\
-1 & 1
-\end{array}\right|=0 \quad\left|C_{12}\right|=-1\left|\begin{array}{ll}
-0 & 1 \\
-1 & 1
-\end{array}\right|=1 \quad\left|C_{13}\right|=\left|\begin{array}{ll}
-0 & 1 \\
-1 & 1
-\end{array}\right|=-1 \\~\\
-&\left|C_{21}\right|=-1\left|\begin{array}{cc}
-0 & -2 \\
-1 & 1
-\end{array}\right|=-2 \quad\left|C_{22}\right|=\left|\begin{array}{cc}
-1 & -2 \\
-1 & 1
-\end{array}\right|=3 \quad\left|C_{23}\right|=-1\left|\begin{array}{ll}
-1 & 0 \\
-1 & 1
-\end{array}\right|=-1 \\~\\
-&\left|C_{31}\right|=\left|\begin{array}{cc}
-0 & -2 \\
-1 & 1
-\end{array}\right|=2 \quad\left|C_{32}\right|=-1\left|\begin{array}{cc}
-1 & -2 \\
-0 & 1
-\end{array}\right|=-1 \quad\left|C_{33}\right|=\left|\begin{array}{ll}
-1 & 0 \\
-0 & 1
+&\left|C_{11}\right|=\left|\begin{array}{rr}
+2 & -1 \\
+-1 & 2
+\end{array}\right|=3 \quad \left|C_{12}\right|=-\left|\begin{array}{rr}
+-1 & -1 \\
+0 & 2
+\end{array}\right|=2 \quad \left|C_{13}\right|=\left|\begin{array}{rr}
+-1 & 2 \\
+0 & -1
 \end{array}\right|=1 \\~\\
-&adj A=\left[\begin{array}{ccc}
-0 & -2 & 2 \\
-1 & 3 & -1 \\
--1 & -1 & 1
+&\left|C_{21}\right|=-\left|\begin{array}{rr}
+-1 & 0 \\
+-1 & 2
+\end{array}\right|=2 \quad \left|C_{22}\right|=\left|\begin{array}{rr}
+2 & 0 \\
+0 & 2
+\end{array}\right|=4 \quad \left|C_{23}\right|=-\left|\begin{array}{rr}
+2 & -1 \\
+0 & -1
+\end{array}\right|=2 \\~\\
+&\left|C_{31}\right|=\left|\begin{array}{rr}
+-1 & 0 \\
+2 & -1
+\end{array}\right|=1 \quad \left|C_{32}\right|=-\left|\begin{array}{rr}
+2 & 0 \\
+-1 & -1
+\end{array}\right|=2 \quad \left|C_{33}\right|=\left|\begin{array}{rr}
+2 & -1 \\
+-1 & 2
+\end{array}\right|=3 \\~\\
+&adj A = C^T =\left[\begin{array}{lll}
+3 & 2 & 1 \\
+2 & 4 & 2 \\
+1 & 2 & 3
 \end{array}\right]
 \end{aligned}
 \]
-  \item (2 pts)
-\[
-|A| =a_{11}\left|C_{11}\right|+a_{12}\left|C_{12}\right|+a_{13}\left|C_{13}\right| = 1 \times 0+0 \times 1+(-2) \times (-1)=2
-\]
+\item (1 pt)
+\[ |A| = a_{11}\left|C_{11}\right|+a_{12}\left|C_{12}\right|+a_{13}\left|C_{13}\right| = 2 \times 3 + (-1) \times 2 + 0 \times 1 = 4 \]
 $A$ is nonsingular as $|A| \neq 0$.
-  \item (1 pt) Premultiplying by $A^{-1}$: $A^{-1} A v=A^{-1} b$. Since $A^{-1} A=I$, we have $v^*=A^{-1} b$.
-  \item (3 pts) Since $A^{-1}=\frac{1}{|A|} adj A$,
+\item (1 pt) Premultiplying by $A^{-1}$: $A^{-1} A v = A^{-1} b$. Since $A^{-1} A = I$, we have $v^* = A^{-1} b$.
+\item (3 pts) Since $A^{-1}=\frac{1}{|A|} adj A$,
 \[
-v^{*} =\frac{1}{2}\left[\begin{array}{rrr}
-0 & -2 & 2 \\
-1 & 3 & -1 \\
--1 & -1 & 1
+v^{*} =\frac{1}{4}\left[\begin{array}{lll}
+3 & 2 & 1 \\
+2 & 4 & 2 \\
+1 & 2 & 3
 \end{array}\right]\left[\begin{array}{c}
-2 \\
-12 \\
-24
+8 \\
+6 \\
+4
 \end{array}\right]
-=\frac{1}{2}\left[\begin{array}{c}
--24+48 \\
-2+36-24 \\
--2-12+24
+=\frac{1}{4}\left[\begin{array}{c}
+24+12+4 \\
+16+24+8 \\
+8+12+12
 \end{array}\right]=\left[\begin{array}{c}
+10 \\
 12 \\
-7 \\
-5
+8
 \end{array}\right]
 \]
-Checking: $12-2(5)=2$, $7+5=12$, $12+7+5=24$. So agriculture produces 12, manufacturing 7, and services 5 (billions of dollars).
+So $p_b^* = 10$, $p_t^* = 12$, and $p_a^* = 8$. (Substituting back: $q_b^* = 22$, $q_t^* = 42$, $q_a^* = 24$ in both the demand and supply equations.)
 \end{enumerate}
 
 \end{enumerate}
