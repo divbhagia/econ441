@@ -51,15 +51,15 @@ $$A=\left[\begin{array}{ccc}
 
 ## Properties of Determinants
 
-$|A| = |A^T|$
+-   $|A| = |A^T|$
 
-Interchanging rows or columns will alter the sign but not the value
+-   Interchanging rows or columns will alter the sign but not the value
 
-Multiplication of any one row (or one column) by a scalar $k$ will change the value of the determinant $k$-fold
+-   Multiplication of any one row (or one column) by a scalar $k$ will change the value of the determinant $k$-fold
 
-The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered
+-   The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered
 
-If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero.
+-   If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero.
 
 ## Criteria for Nonsingularity
 
