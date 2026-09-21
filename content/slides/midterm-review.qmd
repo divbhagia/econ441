@@ -123,14 +123,6 @@ Find the inverse of $y = 4x + 8$. Does $y = x^2$ have an inverse?
 
 $$\sum_{i=1}^N x_i = x_1 + x_2 + ... + x_N$$
 
-Things you *can* do:
-$$\sum_{i=1}^N b x_i = b \sum_{i=1}^N x_i \qquad \sum_{i=1}^N (a + b x_i) = aN + b \sum_{i=1}^N x_i$$
-
-Things you *cannot* do:
-$$\sum_{i=1}^N x_i y_i \neq  \sum_{i=1}^N x_i \times \sum_{i=1}^N y_i \qquad \sum_{i=1}^N x_i^a \neq  \left(\sum_{i=1}^N x_i\right)^a$$
-
-## Summation Notation
-
 Let $x_1 = 3$, $x_2 = 5$, $x_3 = 1$, $x_4 = 7$.
 
 -   Evaluate $\sum_{i=2}^{4} x_i$
@@ -147,7 +139,9 @@ $q$ is a *sufficient* condition for $p$ if $q \implies p$
 
 If both hold, $p \iff q$ and each is *necessary and sufficient* for the other
 
-Example. $p$: a matrix is nonsingular; $q$: a matrix is square. Which is it?
+Example. $p$: you got an A in this course; $q$: you passed this course.
+
+Is passing *necessary* for an A? Is it *sufficient*?
 
 # Linear Algebra
 
@@ -244,12 +238,12 @@ Then, expanding along any row or column: $$|A| = \sum_{j=1}^n a_{ij} |C_{ij}|$$
 ## Find the Determinant
 
 $$A=\begin{bmatrix}
-2 & 0 & 1 \\
-1 & 3 & 2 \\
-0 & 1 & 4
+1 & 1 & 0 \\
+0 & 1 & 1 \\
+1 & 0 & 1
 \end{bmatrix}$$
 
-Expand along the third row. Is $A$ nonsingular?
+Is $A$ nonsingular? Will it be easy to find its inverse?
 
 ## Criteria for Nonsingularity
 
@@ -284,7 +278,8 @@ Start with $$A=\begin{bmatrix}
 3 & 2
 \end{bmatrix}$$
 
-Then try $$A=\begin{bmatrix}
+Now go back to the matrix whose determinant we just found, and find its inverse:
+$$A=\begin{bmatrix}
 1 & 1 & 0 \\
 0 & 1 & 1 \\
 1 & 0 & 1
@@ -292,35 +287,37 @@ Then try $$A=\begin{bmatrix}
 
 ## Solving a System of Equations
 
-$$Ax = b \quad \implies \quad x^* = A^{-1} b$$
+*By matrix inversion*: premultiply $Ax = b$ by $A^{-1}$ to get
+$$x^* = A^{-1} b$$
 
-*Cramer's rule*: form $A_k$ by replacing the $k$th column of $A$ with $b$; then
+*By Cramer's rule*: form $A_k$ by replacing the $k$th column of $A$ with $b$; then
 $$x^*_k = \frac{|A_k|}{|A|}$$
 
 If $A$ is singular, a unique solution does not exist.
 
 ## A Simple Economic Model
 
-Demand and supply for a good, rearranged:
-$$q + 2p = 24$$
-$$q - 3p = 4$$
+National income $Y$ and consumption $C$, where investment and government spending together are 30:
+$$Y = C + 30 \qquad C = 20 + \tfrac{1}{2} Y$$
 
-Write this as $Ax = b$. What are $A$, $x$, and $b$?
+Rearranged, this is
+$$Y - C = 30$$
+$$-Y + 2C = 40$$
 
-Solve it two ways: by matrix inversion, and by Cramer's rule.
+Write it as $Ax = b$. Solve it two ways: by matrix inversion, and by Cramer's rule.
 
-## Few last words
+## For your review
 
-Everything is on the course website:
+-   Lecture slides and worksheets
 
--   Lecture slides, worksheets, and practice problems 1--7 with solutions
+-   Practice problems 1--7, with solutions
 
 -   Module notes for Linear Algebra
 
--   Videos on finding the inverse of a matrix, under Lecture 6
+-   Videos on finding the inverse, under Lecture 6
 
--   Sample exam with solutions, and the help sheet, on the Exams page
+-   Sample exam and help sheet, on the Exams page
 
--   The textbook has additional problems if you want more practice
+-   Additional problems in the textbook
 
-Good luck for the exam!
+Good luck!
