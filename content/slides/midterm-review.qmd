@@ -12,13 +12,17 @@ format:
 
 ## What's on the exam
 
-Modules I and II: Preliminaries and Linear Algebra (Lectures 1--7)
+-   Wednesday, September 23, in class. 70 minutes, 20 points.
 
-Chiang & Wainwright: 2.2--2.6, p. 163, 4.1--4.7, 5.1--5.5
+-   Modules I and II: Preliminaries (Lectures 1--2) and Linear Algebra (Lectures 3--7)
 
-The help sheet provided with the exam is on the course website. Everything else you should know.
+-   Chiang & Wainwright: 2.2--2.6, p. 163, 4.1--4.7, 5.1--5.5
 
-Work through the sample exam under exam conditions before checking the solutions.
+-   The help sheet provided with the exam is on the course website
+
+-   Closed book: no phones or computers
+
+The examples today are new. Work the practice problems and the sample exam for more.
 
 # Preliminaries
 
@@ -28,7 +32,7 @@ $\mathbb{R}$ is the set of real numbers (rational and irrational)
 
 $x \in \mathbb{R}$ denotes that $x$ belongs to the set of real numbers
 
-Consider the universe of all real numbers, with set $A$ given by $$A = \{x | x > 0\}$$
+Consider the universe of all real numbers, with set $A$ given by $$A = \{x \mid x \geq 2\}$$
 
 What is the complement of $A$?
 
@@ -36,9 +40,9 @@ What is the complement of $A$?
 
 Consider the following sets:
 $$\begin{aligned}
-A &= \{x | x > 0\} \\
-B &= \{x | x \text{ is a positive integer}\} \\
-C &= \{x | 1<x<5\}
+A &= \{x \mid x \geq 1\} \\
+B &= \{x \mid x \text{ is a positive integer}\} \\
+C &= \{x \mid 2 < x < 7\}
 \end{aligned}$$
 
 -   Is $A=B$? Is $B \subset A$?
@@ -53,9 +57,9 @@ C &= \{x | 1<x<5\}
 
 $\emptyset$: empty or null set
 
-What are all possible subsets of $$S = \{a,b,c\}$$
+How many subsets does $S = \{a,b,c,d\}$ have? Write down three of them.
 
-Always $2^n$ subsets. Here $n=3$, so 8 subsets.
+Always $2^n$ subsets. Here $n=4$, so 16 subsets.
 
 ## Set Operations: Venn Diagrams
 
@@ -84,11 +88,11 @@ $A^c$
 The *Cartesian product* of two sets $A$ and $B$ is the set of all ordered pairs whose first element comes from $A$ and second from $B$:
 $$A \times B = \{(a,b) \mid a \in A, \; b \in B\}$$
 
-Example. $A = \{1,2\}$, $B = \{3,4\}$. What is $A \times B$?
+Example. $A = \{0,1\}$, $B = \{5,6,7\}$. What is $A \times B$? How many pairs?
 
 ## Cartesian Plane
 
-$$\mathbb{R}^2 =  \{(x,y) | x \in \mathbb{R}, y \in \mathbb{R}\}$$
+$$\mathbb{R}^2 =  \{(x,y) \mid x \in \mathbb{R}, y \in \mathbb{R}\}$$
 
 ![](../../assets/cartesian-plane.svg){.nostretch fig-alt="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" width=330}
 
@@ -96,14 +100,14 @@ Can have $\mathbb{R}^3, \mathbb{R}^4,...,\mathbb{R}^n$
 
 ## Relations and Functions
 
-*Relation*: subset of the Cartesian product, e.g. $\{(x,y) | y \leq x \}$
+*Relation*: subset of the Cartesian product, e.g. $\{(x,y) \mid y \leq x \}$
 
 *Function*: a relation where for each $x$ there is a unique $y$
 $$f: X \rightarrow Y, \quad y = f(x)$$
 
 $X:$ domain, $Y:$ codomain, $f(X):$ range
 
-Is $y = x^2$ a function? Is $\{(x,y) \mid y^2 = x\}$ a function?
+Is $y = |x|$ a function? Is $\{(x,y) \mid x = y^2\}$ a function of $x$?
 
 ## Inverse of a Function
 
@@ -113,7 +117,7 @@ The inverse function $$x=f^{-1}(y)$$ returns the corresponding value of $x$ for 
 
 One-to-one mapping is unique to strictly monotonic functions.
 
-Find the inverse of $y = 3x - 2$. Does $y = x^2$ have an inverse?
+Find the inverse of $y = 4x + 8$. Does $y = x^2$ have an inverse?
 
 ## Summation Notation
 
@@ -125,6 +129,16 @@ $$\sum_{i=1}^N b x_i = b \sum_{i=1}^N x_i \qquad \sum_{i=1}^N (a + b x_i) = aN +
 Things you *cannot* do:
 $$\sum_{i=1}^N x_i y_i \neq  \sum_{i=1}^N x_i \times \sum_{i=1}^N y_i \qquad \sum_{i=1}^N x_i^a \neq  \left(\sum_{i=1}^N x_i\right)^a$$
 
+## Summation Notation
+
+Let $x_1 = 3$, $x_2 = 5$, $x_3 = 1$, $x_4 = 7$.
+
+-   Evaluate $\sum_{i=2}^{4} x_i$
+
+-   Evaluate $\sum_{i=1}^{4} (2 x_i + 3)$
+
+-   Expand $\sum_{i=1}^{3} b_i x^{i}$
+
 ## Necessary vs. Sufficient Conditions
 
 $q$ is a *necessary* condition for $p$ if $p \implies q$
@@ -133,7 +147,7 @@ $q$ is a *sufficient* condition for $p$ if $q \implies p$
 
 If both hold, $p \iff q$ and each is *necessary and sufficient* for the other
 
-Example. $p$: the number is divisible by 4; $q$: the number is even. Which is it?
+Example. $p$: a matrix is nonsingular; $q$: a matrix is square. Which is it?
 
 # Linear Algebra
 
@@ -146,14 +160,14 @@ $$A = [ a_{ij} ] \quad i=1,2,...,m; \; j=1,2,...,n$$
 
 Two matrices are *equal* if all their elements are identical
 
-What is the dimension of $A = \begin{bmatrix} 2 & 3 & 1 \\ -1 & 4 & 6 \end{bmatrix}$?
+What is the dimension of $A = \begin{bmatrix} 5 & 0 \\ 2 & 7 \\ 1 & 3 \end{bmatrix}$?
 
 ## Addition and Scalar Multiplication
 
 Element-by-element, and the matrices must have the same dimension:
-$$A = \begin{bmatrix} 2 & 3 \\ 4 & -6 \end{bmatrix} \quad B = \begin{bmatrix} 1 & 8 \\ -2 & 3 \end{bmatrix}$$
+$$A = \begin{bmatrix} 1 & 4 \\ 3 & 2 \end{bmatrix} \quad B = \begin{bmatrix} 5 & 0 \\ -1 & 6 \end{bmatrix}$$
 
-Find $A + B$, $A - B$, and $2B$.
+Find $A + B$, $A - B$, and $3A$.
 
 ## Matrix Multiplication
 
@@ -166,7 +180,7 @@ The element $c_{ij}$ comes from the $i$th row of $A$ and the $j$th column of $B$
 
 ## Matrix Multiplication
 
-$$A = \begin{bmatrix} 2 & 3 & 1 \\ 4 & -6 & -2 \end{bmatrix}_{2 \times 3} \quad B = \begin{bmatrix} 1 \\ -2 \\ 4 \end{bmatrix}_{3 \times 1}$$
+$$A = \begin{bmatrix} 1 & 0 & 2 \\ 3 & 1 & -1 \end{bmatrix}_{2 \times 3} \quad B = \begin{bmatrix} 2 \\ 4 \\ 1 \end{bmatrix}_{3 \times 1}$$
 
 Is $AB$ defined? What is its dimension? Find it.
 
@@ -179,7 +193,7 @@ Matrices with only one column are *column vectors*; with only one row, *row vect
 A set of vectors is *linearly dependent* if and only if any one of them can be expressed as a linear combination of the remaining vectors
 
 Are these linearly independent?
-$$v_1 = \begin{bmatrix} 1 \\ 2 \end{bmatrix} \quad v_2 = \begin{bmatrix} 2 \\ 4 \end{bmatrix} \qquad \qquad u_1 = \begin{bmatrix} 3 \\ 2 \end{bmatrix} \quad u_2 = \begin{bmatrix} 1 \\ 3 \end{bmatrix}$$
+$$v_1 = \begin{bmatrix} 2 \\ 6 \end{bmatrix} \quad v_2 = \begin{bmatrix} 1 \\ 3 \end{bmatrix} \qquad \qquad u_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \quad u_2 = \begin{bmatrix} 2 \\ 5 \end{bmatrix}$$
 
 ## Special Matrices
 
@@ -195,11 +209,9 @@ Is an identity matrix idempotent?
 
 $A^T$: interchange rows and columns
 
-$$\left(A^T\right)^T=A \qquad (A+B)^T=A^T+B^T \qquad (A B)^T=B^T A^T$$
+Find $A^T$ for $$A = \begin{bmatrix} 1 & 0 & 4 \\ 2 & 5 & 3 \end{bmatrix}$$
 
-$A$ is *symmetric* if $A^T = A$, *skew-symmetric* if $A^T = -A$, and *orthogonal* if $A^T A = I$
-
-Find $A^T$ for $A = \begin{bmatrix} 2 & 3 & 1 \\ 4 & -6 & 2 \end{bmatrix}$
+What is the dimension of $A^T$? What about $A^T A$?
 
 ## Inverse of a Matrix
 
@@ -208,15 +220,13 @@ $$A A^{-1}=A^{-1} A=I$$
 
 If the inverse exists, $A$ is *nonsingular*
 
-$$\left(A^{-1}\right)^{-1}=A \qquad (A B)^{-1}=B^{-1} A^{-1} \qquad \left(A^T\right)^{-1}=\left(A^{-1}\right)^T$$
+Squareness is *necessary* but not *sufficient*
 
 ## Conditions for Nonsingularity
 
-Squareness is *necessary* but not *sufficient*
-
 Sufficient condition: *rows (or equivalently) columns are linearly independent*
 
-$$A=\begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix} \quad B=\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$$
+$$A=\begin{bmatrix} 2 & 6 \\ 1 & 3 \end{bmatrix} \quad B=\begin{bmatrix} 2 & 6 \\ 1 & 4 \end{bmatrix}$$
 
 Which is singular, and which is nonsingular?
 
@@ -234,9 +244,9 @@ Then, expanding along any row or column: $$|A| = \sum_{j=1}^n a_{ij} |C_{ij}|$$
 ## Find the Determinant
 
 $$A=\begin{bmatrix}
-1 & 5 & 1 \\
-0 & 3 & 9 \\
--1 & 0 & 0
+2 & 0 & 1 \\
+1 & 3 & 2 \\
+0 & 1 & 4
 \end{bmatrix}$$
 
 Expand along the third row. Is $A$ nonsingular?
@@ -269,16 +279,15 @@ The *inverse* of $A$ is defined as: $$A^{-1} = \frac{1}{|A|} \, adj A$$
 
 ## Find the Inverse
 
-$$A=\begin{bmatrix}
-3 & 2 \\
-1 & 0
+Start with $$A=\begin{bmatrix}
+2 & 1 \\
+3 & 2
 \end{bmatrix}$$
 
-Then try
-$$A=\begin{bmatrix}
-1 & 5 & 1 \\
-0 & 3 & 9 \\
--1 & 0 & 0
+Then try $$A=\begin{bmatrix}
+1 & 1 & 0 \\
+0 & 1 & 1 \\
+1 & 0 & 1
 \end{bmatrix}$$
 
 ## Solving a System of Equations
@@ -292,8 +301,9 @@ If $A$ is singular, a unique solution does not exist.
 
 ## A Simple Economic Model
 
-$$q + 2p = 100$$
-$$q - 3p = 20$$
+Demand and supply for a good, rearranged:
+$$q + 2p = 24$$
+$$q - 3p = 4$$
 
 Write this as $Ax = b$. What are $A$, $x$, and $b$?
 
@@ -301,10 +311,16 @@ Solve it two ways: by matrix inversion, and by Cramer's rule.
 
 ## Few last words
 
-The sample exam and help sheet are on the course website
+Everything is on the course website:
 
-Practice problems 1--7 and their solutions are the best preparation
+-   Lecture slides, worksheets, and practice problems 1--7 with solutions
 
-Additional office hours this week, or by appointment
+-   Module notes for Linear Algebra
+
+-   Videos on finding the inverse of a matrix, under Lecture 6
+
+-   Sample exam with solutions, and the help sheet, on the Exams page
+
+-   The textbook has additional problems if you want more practice
 
 Good luck for the exam!

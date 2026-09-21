@@ -1000,10 +1000,14 @@ Div Bhagia
 </section>
 <section class="slide level2">
 <h2>What’s on the exam</h2>
-<p>Modules I and II: Preliminaries and Linear Algebra (Lectures 1–7)</p>
-<p>Chiang &amp; Wainwright: 2.2–2.6, p. 163, 4.1–4.7, 5.1–5.5</p>
-<p>The help sheet provided with the exam is on the course website. Everything else you should know.</p>
-<p>Work through the sample exam under exam conditions before checking the solutions.</p>
+<ul>
+<li><p>Wednesday, September 23, in class. 70 minutes, 20 points.</p></li>
+<li><p>Modules I and II: Preliminaries (Lectures 1–2) and Linear Algebra (Lectures 3–7)</p></li>
+<li><p>Chiang &amp; Wainwright: 2.2–2.6, p. 163, 4.1–4.7, 5.1–5.5</p></li>
+<li><p>The help sheet provided with the exam is on the course website</p></li>
+<li><p>Closed book: no phones or computers</p></li>
+</ul>
+<p>The examples today are new. Work the practice problems and the sample exam for more.</p>
 </section>
 <section>
 <section class="title-slide slide level1 section-slide no-print center">
@@ -1014,15 +1018,15 @@ Div Bhagia
 <h2>Sets</h2>
 <p><span class="math inline">\(\mathbb{R}\)</span> is the set of real numbers (rational and irrational)</p>
 <p><span class="math inline">\(x \in \mathbb{R}\)</span> denotes that <span class="math inline">\(x\)</span> belongs to the set of real numbers</p>
-<p>Consider the universe of all real numbers, with set <span class="math inline">\(A\)</span> given by <span class="math display">\[A = \{x | x &gt; 0\}\]</span></p>
+<p>Consider the universe of all real numbers, with set <span class="math inline">\(A\)</span> given by <span class="math display">\[A = \{x \mid x \geq 2\}\]</span></p>
 <p>What is the complement of <span class="math inline">\(A\)</span>?</p>
 </section>
 <section class="slide level2">
 <h2>Set Relations and Operations</h2>
 <p>Consider the following sets: <span class="math display">\[\begin{aligned}
-A &amp;= \{x | x &gt; 0\} \\
-B &amp;= \{x | x \text{ is a positive integer}\} \\
-C &amp;= \{x | 1&lt;x&lt;5\}
+A &amp;= \{x \mid x \geq 1\} \\
+B &amp;= \{x \mid x \text{ is a positive integer}\} \\
+C &amp;= \{x \mid 2 &lt; x &lt; 7\}
 \end{aligned}\]</span></p>
 <ul>
 <li><p>Is <span class="math inline">\(A=B\)</span>? Is <span class="math inline">\(B \subset A\)</span>?</p></li>
@@ -1034,8 +1038,8 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 <section class="slide level2">
 <h2>Subsets</h2>
 <p><span class="math inline">\(\emptyset\)</span>: empty or null set</p>
-<p>What are all possible subsets of <span class="math display">\[S = \{a,b,c\}\]</span></p>
-<p>Always <span class="math inline">\(2^n\)</span> subsets. Here <span class="math inline">\(n=3\)</span>, so 8 subsets.</p>
+<p>How many subsets does <span class="math inline">\(S = \{a,b,c,d\}\)</span> have? Write down three of them.</p>
+<p>Always <span class="math inline">\(2^n\)</span> subsets. Here <span class="math inline">\(n=4\)</span>, so 16 subsets.</p>
 </section>
 <section class="slide level2">
 <h2>Set Operations: Venn Diagrams</h2>
@@ -1055,27 +1059,27 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 <section class="slide level2">
 <h2>Cartesian Product</h2>
 <p>The <em>Cartesian product</em> of two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is the set of all ordered pairs whose first element comes from <span class="math inline">\(A\)</span> and second from <span class="math inline">\(B\)</span>: <span class="math display">\[A \times B = \{(a,b) \mid a \in A, \; b \in B\}\]</span></p>
-<p>Example. <span class="math inline">\(A = \{1,2\}\)</span>, <span class="math inline">\(B = \{3,4\}\)</span>. What is <span class="math inline">\(A \times B\)</span>?</p>
+<p>Example. <span class="math inline">\(A = \{0,1\}\)</span>, <span class="math inline">\(B = \{5,6,7\}\)</span>. What is <span class="math inline">\(A \times B\)</span>? How many pairs?</p>
 </section>
 <section class="slide level2">
 <h2>Cartesian Plane</h2>
-<p><span class="math display">\[\mathbb{R}^2 =  \{(x,y) | x \in \mathbb{R}, y \in \mathbb{R}\}\]</span></p>
+<p><span class="math display">\[\mathbb{R}^2 =  \{(x,y) \mid x \in \mathbb{R}, y \in \mathbb{R}\}\]</span></p>
 <p><img role="img" aria-label="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgMzYwIDM2MCIgcm9sZT0iaW1nIj4KICA8ZGVmcz4KICAgIDxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjkiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI2IiBtYXJrZXJIZWlnaHQ9IjYiIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj4KICAgICAgPHBhdGggZD0iTTAsMSBMOSw1IEwwLDkgeiIgZmlsbD0iIzMzMyIvPgogICAgPC9tYXJrZXI+CiAgPC9kZWZzPgogIDxnIHN0cm9rZT0iI2NjYyIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIxIDMiPgogICAgPGxpbmUgeDE9IjM2IiB5MT0iMTgiIHgyPSIzNiIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMzYiIHgyPSIzNDIiIHkyPSIzNiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMTgiIHgyPSI3MiIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iNzIiIHgyPSIzNDIiIHkyPSI3MiIvPgogICAgPGxpbmUgeDE9IjEwOCIgeTE9IjE4IiB4Mj0iMTA4IiB5Mj0iMzQyIi8+CiAgICA8bGluZSB4MT0iMTgiIHkxPSIxMDgiIHgyPSIzNDIiIHkyPSIxMDgiLz4KICAgIDxsaW5lIHgxPSIxNDQiIHkxPSIxOCIgeDI9IjE0NCIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMTQ0IiB4Mj0iMzQyIiB5Mj0iMTQ0Ii8+CiAgICA8bGluZSB4MT0iMjE2IiB5MT0iMTgiIHgyPSIyMTYiIHkyPSIzNDIiLz4KICAgIDxsaW5lIHgxPSIxOCIgeTE9IjIxNiIgeDI9IjM0MiIgeTI9IjIxNiIvPgogICAgPGxpbmUgeDE9IjI1MiIgeTE9IjE4IiB4Mj0iMjUyIiB5Mj0iMzQyIi8+CiAgICA8bGluZSB4MT0iMTgiIHkxPSIyNTIiIHgyPSIzNDIiIHkyPSIyNTIiLz4KICAgIDxsaW5lIHgxPSIyODgiIHkxPSIxOCIgeDI9IjI4OCIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMjg4IiB4Mj0iMzQyIiB5Mj0iMjg4Ii8+CiAgICA8bGluZSB4MT0iMzI0IiB5MT0iMTgiIHgyPSIzMjQiIHkyPSIzNDIiLz4KICAgIDxsaW5lIHgxPSIxOCIgeTE9IjMyNCIgeDI9IjM0MiIgeTI9IjMyNCIvPgogIDwvZz4KICA8bGluZSB4MT0iMTgiIHkxPSIxODAiIHgyPSIzNDIiIHkyPSIxODAiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItc3RhcnQ9InVybCgjYWgpIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgogIDxsaW5lIHgxPSIxODAiIHkxPSIzNDIiIHgyPSIxODAiIHkyPSIxOCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1zdGFydD0idXJsKCNhaCkiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CiAgPGcgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuNSI+CiAgICA8bGluZSB4MT0iMzYiIHkxPSIxNzYiIHgyPSIzNiIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjM2IiB4Mj0iMTg0IiB5Mj0iMzYiLz4KICAgIDxsaW5lIHgxPSI3MiIgeTE9IjE3NiIgeDI9IjcyIiB5Mj0iMTg0Ii8+CiAgICA8bGluZSB4MT0iMTc2IiB5MT0iNzIiIHgyPSIxODQiIHkyPSI3MiIvPgogICAgPGxpbmUgeDE9IjEwOCIgeTE9IjE3NiIgeDI9IjEwOCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjEwOCIgeDI9IjE4NCIgeTI9IjEwOCIvPgogICAgPGxpbmUgeDE9IjE0NCIgeTE9IjE3NiIgeDI9IjE0NCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjE0NCIgeDI9IjE4NCIgeTI9IjE0NCIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjE3NiIgeDI9IjIxNiIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjIxNiIgeDI9IjE4NCIgeTI9IjIxNiIvPgogICAgPGxpbmUgeDE9IjI1MiIgeTE9IjE3NiIgeDI9IjI1MiIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjI1MiIgeDI9IjE4NCIgeTI9IjI1MiIvPgogICAgPGxpbmUgeDE9IjI4OCIgeTE9IjE3NiIgeDI9IjI4OCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjI4OCIgeDI9IjE4NCIgeTI9IjI4OCIvPgogICAgPGxpbmUgeDE9IjMyNCIgeTE9IjE3NiIgeDI9IjMyNCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjMyNCIgeDI9IjE4NCIgeTI9IjMyNCIvPgogIDwvZz4KICA8dGV4dCB4PSIzMzgiIHk9IjE3MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9ImVuZCI+eDwvdGV4dD4KICA8dGV4dCB4PSIxOTAiIHk9IjMyIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC1zdHlsZT0iaXRhbGljIiBmaWxsPSIjMzMzIj55PC90ZXh0Pgo8L3N2Zz4K" class alt="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" width="330"></p>
 <p>Can have <span class="math inline">\(\mathbb{R}^3, \mathbb{R}^4,...,\mathbb{R}^n\)</span></p>
 </section>
 <section class="slide level2">
 <h2>Relations and Functions</h2>
-<p><em>Relation</em>: subset of the Cartesian product, e.g. <span class="math inline">\(\{(x,y) | y \leq x \}\)</span></p>
+<p><em>Relation</em>: subset of the Cartesian product, e.g. <span class="math inline">\(\{(x,y) \mid y \leq x \}\)</span></p>
 <p><em>Function</em>: a relation where for each <span class="math inline">\(x\)</span> there is a unique <span class="math inline">\(y\)</span> <span class="math display">\[f: X \rightarrow Y, \quad y = f(x)\]</span></p>
 <p><span class="math inline">\(X:\)</span> domain, <span class="math inline">\(Y:\)</span> codomain, <span class="math inline">\(f(X):\)</span> range</p>
-<p>Is <span class="math inline">\(y = x^2\)</span> a function? Is <span class="math inline">\(\{(x,y) \mid y^2 = x\}\)</span> a function?</p>
+<p>Is <span class="math inline">\(y = |x|\)</span> a function? Is <span class="math inline">\(\{(x,y) \mid x = y^2\}\)</span> a function of <span class="math inline">\(x\)</span>?</p>
 </section>
 <section class="slide level2">
 <h2>Inverse of a Function</h2>
 <p>Function <span class="math inline">\(y=f(x)\)</span> has an inverse if it is a one-to-one mapping, i.e. each value of <span class="math inline">\(y\)</span> is associated with a unique value of <span class="math inline">\(x\)</span>.</p>
 <p>The inverse function <span class="math display">\[x=f^{-1}(y)\]</span> returns the corresponding value of <span class="math inline">\(x\)</span> for each <span class="math inline">\(y\)</span>.</p>
 <p>One-to-one mapping is unique to strictly monotonic functions.</p>
-<p>Find the inverse of <span class="math inline">\(y = 3x - 2\)</span>. Does <span class="math inline">\(y = x^2\)</span> have an inverse?</p>
+<p>Find the inverse of <span class="math inline">\(y = 4x + 8\)</span>. Does <span class="math inline">\(y = x^2\)</span> have an inverse?</p>
 </section>
 <section class="slide level2">
 <h2>Summation Notation</h2>
@@ -1084,11 +1088,20 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 <p>Things you <em>cannot</em> do: <span class="math display">\[\sum_{i=1}^N x_i y_i \neq  \sum_{i=1}^N x_i \times \sum_{i=1}^N y_i \qquad \sum_{i=1}^N x_i^a \neq  \left(\sum_{i=1}^N x_i\right)^a\]</span></p>
 </section>
 <section class="slide level2">
+<h2>Summation Notation</h2>
+<p>Let <span class="math inline">\(x_1 = 3\)</span>, <span class="math inline">\(x_2 = 5\)</span>, <span class="math inline">\(x_3 = 1\)</span>, <span class="math inline">\(x_4 = 7\)</span>.</p>
+<ul>
+<li><p>Evaluate <span class="math inline">\(\sum_{i=2}^{4} x_i\)</span></p></li>
+<li><p>Evaluate <span class="math inline">\(\sum_{i=1}^{4} (2 x_i + 3)\)</span></p></li>
+<li><p>Expand <span class="math inline">\(\sum_{i=1}^{3} b_i x^{i}\)</span></p></li>
+</ul>
+</section>
+<section class="slide level2">
 <h2>Necessary vs. Sufficient Conditions</h2>
 <p><span class="math inline">\(q\)</span> is a <em>necessary</em> condition for <span class="math inline">\(p\)</span> if <span class="math inline">\(p \implies q\)</span></p>
 <p><span class="math inline">\(q\)</span> is a <em>sufficient</em> condition for <span class="math inline">\(p\)</span> if <span class="math inline">\(q \implies p\)</span></p>
 <p>If both hold, <span class="math inline">\(p \iff q\)</span> and each is <em>necessary and sufficient</em> for the other</p>
-<p>Example. <span class="math inline">\(p\)</span>: the number is divisible by 4; <span class="math inline">\(q\)</span>: the number is even. Which is it?</p>
+<p>Example. <span class="math inline">\(p\)</span>: a matrix is nonsingular; <span class="math inline">\(q\)</span>: a matrix is square. Which is it?</p>
 </section></section>
 <section>
 <section class="title-slide slide level1 section-slide no-print center">
@@ -1100,12 +1113,12 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 <p>A matrix with <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns is an <span class="math inline">\(m \times n\)</span> matrix <span class="math display">\[A = [ a_{ij} ] \quad i=1,2,...,m; \; j=1,2,...,n\]</span></p>
 <p><em>Square matrix</em>: equal number of rows and columns</p>
 <p>Two matrices are <em>equal</em> if all their elements are identical</p>
-<p>What is the dimension of <span class="math inline">\(A = \begin{bmatrix} 2 &amp; 3 &amp; 1 \\ -1 &amp; 4 &amp; 6 \end{bmatrix}\)</span>?</p>
+<p>What is the dimension of <span class="math inline">\(A = \begin{bmatrix} 5 &amp; 0 \\ 2 &amp; 7 \\ 1 &amp; 3 \end{bmatrix}\)</span>?</p>
 </section>
 <section class="slide level2">
 <h2>Addition and Scalar Multiplication</h2>
-<p>Element-by-element, and the matrices must have the same dimension: <span class="math display">\[A = \begin{bmatrix} 2 &amp; 3 \\ 4 &amp; -6 \end{bmatrix} \quad B = \begin{bmatrix} 1 &amp; 8 \\ -2 &amp; 3 \end{bmatrix}\]</span></p>
-<p>Find <span class="math inline">\(A + B\)</span>, <span class="math inline">\(A - B\)</span>, and <span class="math inline">\(2B\)</span>.</p>
+<p>Element-by-element, and the matrices must have the same dimension: <span class="math display">\[A = \begin{bmatrix} 1 &amp; 4 \\ 3 &amp; 2 \end{bmatrix} \quad B = \begin{bmatrix} 5 &amp; 0 \\ -1 &amp; 6 \end{bmatrix}\]</span></p>
+<p>Find <span class="math inline">\(A + B\)</span>, <span class="math inline">\(A - B\)</span>, and <span class="math inline">\(3A\)</span>.</p>
 </section>
 <section class="slide level2">
 <h2>Matrix Multiplication</h2>
@@ -1115,7 +1128,7 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 </section>
 <section class="slide level2">
 <h2>Matrix Multiplication</h2>
-<p><span class="math display">\[A = \begin{bmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; -6 &amp; -2 \end{bmatrix}_{2 \times 3} \quad B = \begin{bmatrix} 1 \\ -2 \\ 4 \end{bmatrix}_{3 \times 1}\]</span></p>
+<p><span class="math display">\[A = \begin{bmatrix} 1 &amp; 0 &amp; 2 \\ 3 &amp; 1 &amp; -1 \end{bmatrix}_{2 \times 3} \quad B = \begin{bmatrix} 2 \\ 4 \\ 1 \end{bmatrix}_{3 \times 1}\]</span></p>
 <p>Is <span class="math inline">\(AB\)</span> defined? What is its dimension? Find it.</p>
 <p>What about <span class="math inline">\(BA\)</span>?</p>
 </section>
@@ -1123,7 +1136,7 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 <h2>Vectors and Linear Dependence</h2>
 <p>Matrices with only one column are <em>column vectors</em>; with only one row, <em>row vectors</em></p>
 <p>A set of vectors is <em>linearly dependent</em> if and only if any one of them can be expressed as a linear combination of the remaining vectors</p>
-<p>Are these linearly independent? <span class="math display">\[v_1 = \begin{bmatrix} 1 \\ 2 \end{bmatrix} \quad v_2 = \begin{bmatrix} 2 \\ 4 \end{bmatrix} \qquad \qquad u_1 = \begin{bmatrix} 3 \\ 2 \end{bmatrix} \quad u_2 = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\]</span></p>
+<p>Are these linearly independent? <span class="math display">\[v_1 = \begin{bmatrix} 2 \\ 6 \end{bmatrix} \quad v_2 = \begin{bmatrix} 1 \\ 3 \end{bmatrix} \qquad \qquad u_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \quad u_2 = \begin{bmatrix} 2 \\ 5 \end{bmatrix}\]</span></p>
 </section>
 <section class="slide level2">
 <h2>Special Matrices</h2>
@@ -1135,21 +1148,19 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 <section class="slide level2">
 <h2>Transpose of a Matrix</h2>
 <p><span class="math inline">\(A^T\)</span>: interchange rows and columns</p>
-<p><span class="math display">\[\left(A^T\right)^T=A \qquad (A+B)^T=A^T+B^T \qquad (A B)^T=B^T A^T\]</span></p>
-<p><span class="math inline">\(A\)</span> is <em>symmetric</em> if <span class="math inline">\(A^T = A\)</span>, <em>skew-symmetric</em> if <span class="math inline">\(A^T = -A\)</span>, and <em>orthogonal</em> if <span class="math inline">\(A^T A = I\)</span></p>
-<p>Find <span class="math inline">\(A^T\)</span> for <span class="math inline">\(A = \begin{bmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; -6 &amp; 2 \end{bmatrix}\)</span></p>
+<p>Find <span class="math inline">\(A^T\)</span> for <span class="math display">\[A = \begin{bmatrix} 1 &amp; 0 &amp; 4 \\ 2 &amp; 5 &amp; 3 \end{bmatrix}\]</span></p>
+<p>What is the dimension of <span class="math inline">\(A^T\)</span>? What about <span class="math inline">\(A^T A\)</span>?</p>
 </section>
 <section class="slide level2">
 <h2>Inverse of a Matrix</h2>
 <p>For a <em>square</em> matrix <span class="math inline">\(A\)</span>, its inverse <span class="math inline">\(A^{-1}\)</span> is defined as <span class="math display">\[A A^{-1}=A^{-1} A=I\]</span></p>
 <p>If the inverse exists, <span class="math inline">\(A\)</span> is <em>nonsingular</em></p>
-<p><span class="math display">\[\left(A^{-1}\right)^{-1}=A \qquad (A B)^{-1}=B^{-1} A^{-1} \qquad \left(A^T\right)^{-1}=\left(A^{-1}\right)^T\]</span></p>
+<p>Squareness is <em>necessary</em> but not <em>sufficient</em></p>
 </section>
 <section class="slide level2">
 <h2>Conditions for Nonsingularity</h2>
-<p>Squareness is <em>necessary</em> but not <em>sufficient</em></p>
 <p>Sufficient condition: <em>rows (or equivalently) columns are linearly independent</em></p>
-<p><span class="math display">\[A=\begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 4 \end{bmatrix} \quad B=\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\]</span></p>
+<p><span class="math display">\[A=\begin{bmatrix} 2 &amp; 6 \\ 1 &amp; 3 \end{bmatrix} \quad B=\begin{bmatrix} 2 &amp; 6 \\ 1 &amp; 4 \end{bmatrix}\]</span></p>
 <p>Which is singular, and which is nonsingular?</p>
 </section>
 <section class="slide level2">
@@ -1162,9 +1173,9 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 <section class="slide level2">
 <h2>Find the Determinant</h2>
 <p><span class="math display">\[A=\begin{bmatrix}
-1 &amp; 5 &amp; 1 \\
-0 &amp; 3 &amp; 9 \\
--1 &amp; 0 &amp; 0
+2 &amp; 0 &amp; 1 \\
+1 &amp; 3 &amp; 2 \\
+0 &amp; 1 &amp; 4
 \end{bmatrix}\]</span></p>
 <p>Expand along the third row. Is <span class="math inline">\(A\)</span> nonsingular?</p>
 </section>
@@ -1191,14 +1202,14 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 </section>
 <section class="slide level2">
 <h2>Find the Inverse</h2>
-<p><span class="math display">\[A=\begin{bmatrix}
-3 &amp; 2 \\
-1 &amp; 0
+<p>Start with <span class="math display">\[A=\begin{bmatrix}
+2 &amp; 1 \\
+3 &amp; 2
 \end{bmatrix}\]</span></p>
 <p>Then try <span class="math display">\[A=\begin{bmatrix}
-1 &amp; 5 &amp; 1 \\
-0 &amp; 3 &amp; 9 \\
--1 &amp; 0 &amp; 0
+1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1 \\
+1 &amp; 0 &amp; 1
 \end{bmatrix}\]</span></p>
 </section>
 <section class="slide level2">
@@ -1209,15 +1220,20 @@ C &amp;= \{x | 1&lt;x&lt;5\}
 </section>
 <section class="slide level2">
 <h2>A Simple Economic Model</h2>
-<p><span class="math display">\[q + 2p = 100\]</span> <span class="math display">\[q - 3p = 20\]</span></p>
+<p>Demand and supply for a good, rearranged: <span class="math display">\[q + 2p = 24\]</span> <span class="math display">\[q - 3p = 4\]</span></p>
 <p>Write this as <span class="math inline">\(Ax = b\)</span>. What are <span class="math inline">\(A\)</span>, <span class="math inline">\(x\)</span>, and <span class="math inline">\(b\)</span>?</p>
 <p>Solve it two ways: by matrix inversion, and by Cramer’s rule.</p>
 </section>
 <section class="slide level2">
 <h2>Few last words</h2>
-<p>The sample exam and help sheet are on the course website</p>
-<p>Practice problems 1–7 and their solutions are the best preparation</p>
-<p>Additional office hours this week, or by appointment</p>
+<p>Everything is on the course website:</p>
+<ul>
+<li><p>Lecture slides, worksheets, and practice problems 1–7 with solutions</p></li>
+<li><p>Module notes for Linear Algebra</p></li>
+<li><p>Videos on finding the inverse of a matrix, under Lecture 6</p></li>
+<li><p>Sample exam with solutions, and the help sheet, on the Exams page</p></li>
+<li><p>The textbook has additional problems if you want more practice</p></li>
+</ul>
 <p>Good luck for the exam!</p>
 
 
