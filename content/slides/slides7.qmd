@@ -64,14 +64,6 @@ b = \begin{bmatrix}
 20 
 \end{bmatrix}$$
 
-## Homogeneous equation system
-
-A homogeneous equation system is given by $$Ax = 0$$
-
-If $A$ is nonsingular, $x^* = A^{-1} 0 = 0$.
-
-If $A$ is singular there can be infinite number of solutions (this is true for any system of equations).
-
 ## Coming up: Applications of Matrix Algebra
 
 ![](../../assets/fig/stem-linal.png){fig-alt="Comic showing a precarious tower of blocks labeled 'All of STEM' balancing on one small block labeled 'That one linear algebra course'" width=430}

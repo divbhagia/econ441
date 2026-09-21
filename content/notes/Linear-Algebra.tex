@@ -272,8 +272,6 @@ Properties of inverses:
 
  Squareness is a \textit{necessary} condition for an inverse to exist, but not a \textit{sufficient} condition. The sufficient condition for nonsingularity of a matrix is if all the rows or (equivalently) columns of this matrix are linearly independent. 
 
-\textbf{Rank} of a matrix is defined as the maximum number of linearly independent rows or (equivalently) columns. 
-
 \textit{Example.} \[A=\left[\begin{array}{ll}
 1 & 2 \\
 3 & 4
@@ -285,87 +283,9 @@ B=\left[\begin{array}{ll}
 \end{array}\right]
 \]
 
-Rows and columns of $A$ are linearly independent, so $A$ is nonsingular and has full rank 2. The second row of $B$ can be written as two times the first row of $B$,  so the rank of $B$ is 1 and $B$ is a singular matrix.  \\
+Rows and columns of $A$ are linearly independent, so $A$ is nonsingular. The second row of $B$ can be written as two times the first row of $B$, so $B$ is a singular matrix.  \\
 
-We can check for linear independence and find the rank of a matrix by converting the matrix to its \textbf{echelon} form. 
-
-For a matrix in echelon form:
-\begin{itemize}
-\item First row: all elements \textit{can be} non-zero
-\item Second row: first element $0$
-\item Third row: first two elements $0$
-\[\vdots\]
-\item Last row: first $m-1$ elements zero \\
-\end{itemize}
-
-\textit{Echelon} form of a $2 \times 2$ matrix. 
-\[
-A=\left[\begin{array}{ll}
-a_{11} & a_{12} \\
-0 & a_{22}
-\end{array}\right]
-\]
-
-\textit{Echelon} form of a $3 \times 3$ matrix. 
-\[
-A=\left[\begin{array}{ccc}
-a_{11} & a_{12} & a_{13} \\
-{0} & a_{22} & a_{23}  \\
-{0} & {0} & a_{33}
-\end{array}\right]
-\]
-
-Valid operations to convert to echelon form:
-\begin{itemize}
-\item Interchange any two rows
-\item Multiplication (or division) of a row by a scalar $k \neq 0$
-\item Addition of a (or $k$ times of a) row to another \\
-\end{itemize}
-
-%%%% Convert $3 \times 3$ matrix to echelon
-\fbox{\begin{minipage}{\textwidth}
-\textit{How to convert a $3 \times 3$ matrix to its echelon form?}
-
-\[
-A=\left[\begin{array}{lll}
-a_{11} & a_{12} & a_{13} \\
-a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33}
-\end{array}\right]
-\]
-
-Step 1: Try to make $a_{31}=0$
-
-\[
-A_{1}=\left[\begin{array}{ccc}
-a_{11} & a_{12} & a_{13} \\
-a_{21} & a_{22} & a_{23} \\
-0 & a_{32} & a_{33}
-\end{array}\right]
-\]
-
-Step 2: Try to make $a_{21}=0$
-
-\[
-A_{2}=\left[\begin{array}{ccc}
-a_{11} & a_{12} & a_{13} \\
-0 & a_{22} & a_{23} \\
-0 & a_{32} & a_{33}
-\end{array}\right]
-\]
-
-Step 3: Try to make $a_{32}=0$
-
-\[
-A_{3}=\left[\begin{array}{ccc}
-a_{11} & a_{12} & a_{13} \\
-0 & a_{22} & a_{23} \\
-0 & 0 & a_{33}
-\end{array}\right]
-\] \\
-\end{minipage}} \vspace{1em}
-
-In summary, a square matrix is nonsingular i.e. its inverse exists if and only if all its rows (or equivalently columns) are linearly independent. We can also rephrase this as --- a square matrix is nonsingular if it is full rank. 
+In summary, a square matrix is nonsingular i.e. its inverse exists if and only if all its rows (or equivalently columns) are linearly independent. 
 
 %%%%%%%%%%%%%%%%%%%%%%% Determinants
 
@@ -573,11 +493,5 @@ If we pre-multiply the equation $Ax=b$ by $A^{-1}$, we get
 Cramer's rule basically gives a slightly more efficient way of solving a system of equations than finding the inverse. This method is still based on matrix inversion. In particular, the $k$th element of $x$ can be solved by:
 \[ x^*_k = \frac{|A_k|}{|A|} \]
 where $A_k$ is a matrix formed by exchanging $k$th column of $A$ by $b$.
-
-\subsection{Homogeneous-equation system}
-
-A homogeneous equation system is given by 
-\[ Ax = 0\]
-For this system of equations, if $A$ is nonsingular, $x^* = A^{-1} 0 = 0$. If $A$ is singular there can be infinite number of solutions (this is true for any system of equations).
 
 \end{document}

@@ -442,7 +442,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Div Bhagia">
-  <title>Introduction to Mathematical Economics – The Determinant and the Inverse</title>
+  <title>Introduction to Mathematical Economics – Midterm 1 Review</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -986,8 +986,8 @@ margin-right: 0; }
     <div class="slides">
 
 <section class="quarto-title-block center">
-  <h1 class="title">The Determinant and the Inverse</h1>
-  <p class="subtitle">ECON 441: Introduction to Mathematical Economics<br>Lecture 6</p>
+  <h1 class="title">Midterm 1 Review</h1>
+  <p class="subtitle">ECON 441: Introduction to Mathematical Economics</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -999,55 +999,174 @@ Div Bhagia
 
 </section>
 <section class="slide level2">
-<h2>Determinant</h2>
-<p>Determinant <span class="math inline">\(|A|\)</span> is a unique scalar associated with a <em>square</em> matrix <span class="math inline">\(A\)</span>.<br>
- <br>
-Determinant of a <span class="math inline">\(2 \times 2\)</span> Matrix: <span class="math display">\[A=\left[\begin{array}{ll}a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22}\end{array}\right]\]</span> Can be calculated as: <span class="math display">\[|A|=a_{11} a_{22}-a_{12} a_{21}\]</span></p>
+<h2>What’s on the exam</h2>
+<p>Modules I and II: Preliminaries and Linear Algebra (Lectures 1–7)</p>
+<p>Chiang &amp; Wainwright: 2.2–2.6, p. 163, 4.1–4.7, 5.1–5.5</p>
+<p>The help sheet provided with the exam is on the course website. Everything else you should know.</p>
+<p>Work through the sample exam under exam conditions before checking the solutions.</p>
+</section>
+<section>
+<section class="title-slide slide level1 section-slide no-print center">
+<h1>Preliminaries</h1>
+
 </section>
 <section class="slide level2">
-<h2>Determinant of a <span class="math inline">\(3 \times 3\)</span> Matrix</h2>
-<p><span class="math display">\[\begin{aligned}
-|A| &amp;=\left|\begin{array}{lll}
-a_{11} &amp; a_{12} &amp; a_{13} \\
-a_{21} &amp; a_{22} &amp; a_{23} \\
-a_{31} &amp; a_{32} &amp; a_{33}
-\end{array}\right| \\~\\
-&amp;=a_{11}\left|\begin{array}{ll}
-a_{22} &amp; a_{23} \\
-a_{32} &amp; a_{33}
-\end{array}\right|-a_{12}\left|\begin{array}{ll}
-a_{21} &amp; a_{23} \\
-a_{31} &amp; a_{33}
-\end{array}\right|
-+a_{13}\left|\begin{array}{ll}
-a_{21} &amp; a_{22} \\
-a_{31} &amp; a_{32}
-\end{array}\right|
+<h2>Sets</h2>
+<p><span class="math inline">\(\mathbb{R}\)</span> is the set of real numbers (rational and irrational)</p>
+<p><span class="math inline">\(x \in \mathbb{R}\)</span> denotes that <span class="math inline">\(x\)</span> belongs to the set of real numbers</p>
+<p>Consider the universe of all real numbers, with set <span class="math inline">\(A\)</span> given by <span class="math display">\[A = \{x | x &gt; 0\}\]</span></p>
+<p>What is the complement of <span class="math inline">\(A\)</span>?</p>
+</section>
+<section class="slide level2">
+<h2>Set Relations and Operations</h2>
+<p>Consider the following sets: <span class="math display">\[\begin{aligned}
+A &amp;= \{x | x &gt; 0\} \\
+B &amp;= \{x | x \text{ is a positive integer}\} \\
+C &amp;= \{x | 1&lt;x&lt;5\}
 \end{aligned}\]</span></p>
+<ul>
+<li><p>Is <span class="math inline">\(A=B\)</span>? Is <span class="math inline">\(B \subset A\)</span>?</p></li>
+<li><p>Are <span class="math inline">\(C\)</span> and <span class="math inline">\(B\)</span> disjoint sets?</p></li>
+<li><p>What is <span class="math inline">\(A \cap B\)</span>? What about <span class="math inline">\(A \cup B\)</span>?</p></li>
+<li><p>What is <span class="math inline">\(B \cap C\)</span>?</p></li>
+</ul>
 </section>
 <section class="slide level2">
-<h2>Determinant of a <span class="math inline">\(n \times n\)</span> Matrix</h2>
-<p>A <em>minor</em> of the element <span class="math inline">\(a_{ij}\)</span>, denoted by <span class="math inline">\(|M_{ij}|\)</span> is obtained by deleting the <span class="math inline">\(i\)</span>th row and <span class="math inline">\(j\)</span>th column.<br>
- <br>
-Cofactor <span class="math inline">\(C_{ij}\)</span> is defined as: <span class="math display">\[|C_{ij}| = (-1)^{i+j} |M_{ij}|\]</span> Then, <span class="math display">\[|A| = \sum_{i=1}^n a_{ij} |C_{ij}| = \sum_{j=1}^n a_{ij} |C_{ij}|\]</span></p>
+<h2>Subsets</h2>
+<p><span class="math inline">\(\emptyset\)</span>: empty or null set</p>
+<p>What are all possible subsets of <span class="math display">\[S = \{a,b,c\}\]</span></p>
+<p>Always <span class="math inline">\(2^n\)</span> subsets. Here <span class="math inline">\(n=3\)</span>, so 8 subsets.</p>
+</section>
+<section class="slide level2">
+<h2>Set Operations: Venn Diagrams</h2>
+<p>Shade the following regions:</p>
+<div class="columns figrow">
+<div class="column" style="width:33%;">
+<p><span class="math inline">\(A \cup B\)</span></p>
+<p><img role="img" aria-label="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjAwIiByb2xlPSJpbWciPgogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIzMTIiIGhlaWdodD0iMTkyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9IjI5MiIgeT0iMjYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiMzMzMiPlU8L3RleHQ+CiAgPGNpcmNsZSBjeD0iMTI1IiBjeT0iMTAwIiByPSI2MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSIxOTUiIGN5PSIxMDAiIHI9IjYyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9Ijg4IiB5PSI3MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzMzMyI+QTwvdGV4dD4KICA8dGV4dCB4PSIyMjIiIHk9IjcwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC1zdHlsZT0iaXRhbGljIiBmaWxsPSIjMzMzIj5CPC90ZXh0Pgo8L3N2Zz4K" alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width="340"></p>
+</div><div class="column" style="width:33%;">
+<p><span class="math inline">\(A \cap B\)</span></p>
+<p><img role="img" aria-label="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjAwIiByb2xlPSJpbWciPgogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIzMTIiIGhlaWdodD0iMTkyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9IjI5MiIgeT0iMjYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiMzMzMiPlU8L3RleHQ+CiAgPGNpcmNsZSBjeD0iMTI1IiBjeT0iMTAwIiByPSI2MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSIxOTUiIGN5PSIxMDAiIHI9IjYyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9Ijg4IiB5PSI3MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzMzMyI+QTwvdGV4dD4KICA8dGV4dCB4PSIyMjIiIHk9IjcwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC1zdHlsZT0iaXRhbGljIiBmaWxsPSIjMzMzIj5CPC90ZXh0Pgo8L3N2Zz4K" alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width="340"></p>
+</div><div class="column" style="width:33%;">
+<p><span class="math inline">\(A^c\)</span></p>
+<p><img role="img" aria-label="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMjAgMjAwIiByb2xlPSJpbWciPgogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIzMTIiIGhlaWdodD0iMTkyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9IjI5MiIgeT0iMjYiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiMzMzMiPlU8L3RleHQ+CiAgPGNpcmNsZSBjeD0iMTI1IiBjeT0iMTAwIiByPSI2MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSIxOTUiIGN5PSIxMDAiIHI9IjYyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPgogIDx0ZXh0IHg9Ijg4IiB5PSI3MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjAiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzMzMyI+QTwvdGV4dD4KICA8dGV4dCB4PSIyMjIiIHk9IjcwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMCIgZm9udC1zdHlsZT0iaXRhbGljIiBmaWxsPSIjMzMzIj5CPC90ZXh0Pgo8L3N2Zz4K" alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width="340"></p>
+</div></div>
+</section>
+<section class="slide level2">
+<h2>Cartesian Product</h2>
+<p>The <em>Cartesian product</em> of two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is the set of all ordered pairs whose first element comes from <span class="math inline">\(A\)</span> and second from <span class="math inline">\(B\)</span>: <span class="math display">\[A \times B = \{(a,b) \mid a \in A, \; b \in B\}\]</span></p>
+<p>Example. <span class="math inline">\(A = \{1,2\}\)</span>, <span class="math inline">\(B = \{3,4\}\)</span>. What is <span class="math inline">\(A \times B\)</span>?</p>
+</section>
+<section class="slide level2">
+<h2>Cartesian Plane</h2>
+<p><span class="math display">\[\mathbb{R}^2 =  \{(x,y) | x \in \mathbb{R}, y \in \mathbb{R}\}\]</span></p>
+<p><img role="img" aria-label="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" data-src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjAiIGhlaWdodD0iMzYwIiB2aWV3Qm94PSIwIDAgMzYwIDM2MCIgcm9sZT0iaW1nIj4KICA8ZGVmcz4KICAgIDxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjkiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI2IiBtYXJrZXJIZWlnaHQ9IjYiIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj4KICAgICAgPHBhdGggZD0iTTAsMSBMOSw1IEwwLDkgeiIgZmlsbD0iIzMzMyIvPgogICAgPC9tYXJrZXI+CiAgPC9kZWZzPgogIDxnIHN0cm9rZT0iI2NjYyIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIxIDMiPgogICAgPGxpbmUgeDE9IjM2IiB5MT0iMTgiIHgyPSIzNiIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMzYiIHgyPSIzNDIiIHkyPSIzNiIvPgogICAgPGxpbmUgeDE9IjcyIiB5MT0iMTgiIHgyPSI3MiIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iNzIiIHgyPSIzNDIiIHkyPSI3MiIvPgogICAgPGxpbmUgeDE9IjEwOCIgeTE9IjE4IiB4Mj0iMTA4IiB5Mj0iMzQyIi8+CiAgICA8bGluZSB4MT0iMTgiIHkxPSIxMDgiIHgyPSIzNDIiIHkyPSIxMDgiLz4KICAgIDxsaW5lIHgxPSIxNDQiIHkxPSIxOCIgeDI9IjE0NCIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMTQ0IiB4Mj0iMzQyIiB5Mj0iMTQ0Ii8+CiAgICA8bGluZSB4MT0iMjE2IiB5MT0iMTgiIHgyPSIyMTYiIHkyPSIzNDIiLz4KICAgIDxsaW5lIHgxPSIxOCIgeTE9IjIxNiIgeDI9IjM0MiIgeTI9IjIxNiIvPgogICAgPGxpbmUgeDE9IjI1MiIgeTE9IjE4IiB4Mj0iMjUyIiB5Mj0iMzQyIi8+CiAgICA8bGluZSB4MT0iMTgiIHkxPSIyNTIiIHgyPSIzNDIiIHkyPSIyNTIiLz4KICAgIDxsaW5lIHgxPSIyODgiIHkxPSIxOCIgeDI9IjI4OCIgeTI9IjM0MiIvPgogICAgPGxpbmUgeDE9IjE4IiB5MT0iMjg4IiB4Mj0iMzQyIiB5Mj0iMjg4Ii8+CiAgICA8bGluZSB4MT0iMzI0IiB5MT0iMTgiIHgyPSIzMjQiIHkyPSIzNDIiLz4KICAgIDxsaW5lIHgxPSIxOCIgeTE9IjMyNCIgeDI9IjM0MiIgeTI9IjMyNCIvPgogIDwvZz4KICA8bGluZSB4MT0iMTgiIHkxPSIxODAiIHgyPSIzNDIiIHkyPSIxODAiIHN0cm9rZT0iIzMzMyIgc3Ryb2tlLXdpZHRoPSIyIiBtYXJrZXItc3RhcnQ9InVybCgjYWgpIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgogIDxsaW5lIHgxPSIxODAiIHkxPSIzNDIiIHgyPSIxODAiIHkyPSIxOCIgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjIiIG1hcmtlci1zdGFydD0idXJsKCNhaCkiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CiAgPGcgc3Ryb2tlPSIjMzMzIiBzdHJva2Utd2lkdGg9IjEuNSI+CiAgICA8bGluZSB4MT0iMzYiIHkxPSIxNzYiIHgyPSIzNiIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjM2IiB4Mj0iMTg0IiB5Mj0iMzYiLz4KICAgIDxsaW5lIHgxPSI3MiIgeTE9IjE3NiIgeDI9IjcyIiB5Mj0iMTg0Ii8+CiAgICA8bGluZSB4MT0iMTc2IiB5MT0iNzIiIHgyPSIxODQiIHkyPSI3MiIvPgogICAgPGxpbmUgeDE9IjEwOCIgeTE9IjE3NiIgeDI9IjEwOCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjEwOCIgeDI9IjE4NCIgeTI9IjEwOCIvPgogICAgPGxpbmUgeDE9IjE0NCIgeTE9IjE3NiIgeDI9IjE0NCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjE0NCIgeDI9IjE4NCIgeTI9IjE0NCIvPgogICAgPGxpbmUgeDE9IjIxNiIgeTE9IjE3NiIgeDI9IjIxNiIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjIxNiIgeDI9IjE4NCIgeTI9IjIxNiIvPgogICAgPGxpbmUgeDE9IjI1MiIgeTE9IjE3NiIgeDI9IjI1MiIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjI1MiIgeDI9IjE4NCIgeTI9IjI1MiIvPgogICAgPGxpbmUgeDE9IjI4OCIgeTE9IjE3NiIgeDI9IjI4OCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjI4OCIgeDI9IjE4NCIgeTI9IjI4OCIvPgogICAgPGxpbmUgeDE9IjMyNCIgeTE9IjE3NiIgeDI9IjMyNCIgeTI9IjE4NCIvPgogICAgPGxpbmUgeDE9IjE3NiIgeTE9IjMyNCIgeDI9IjE4NCIgeTI9IjMyNCIvPgogIDwvZz4KICA8dGV4dCB4PSIzMzgiIHk9IjE3MCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtc3R5bGU9Iml0YWxpYyIgZmlsbD0iIzMzMyIgdGV4dC1hbmNob3I9ImVuZCI+eDwvdGV4dD4KICA8dGV4dCB4PSIxOTAiIHk9IjMyIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC1zdHlsZT0iaXRhbGljIiBmaWxsPSIjMzMzIj55PC90ZXh0Pgo8L3N2Zz4K" class alt="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" width="330"></p>
+<p>Can have <span class="math inline">\(\mathbb{R}^3, \mathbb{R}^4,...,\mathbb{R}^n\)</span></p>
+</section>
+<section class="slide level2">
+<h2>Relations and Functions</h2>
+<p><em>Relation</em>: subset of the Cartesian product, e.g. <span class="math inline">\(\{(x,y) | y \leq x \}\)</span></p>
+<p><em>Function</em>: a relation where for each <span class="math inline">\(x\)</span> there is a unique <span class="math inline">\(y\)</span> <span class="math display">\[f: X \rightarrow Y, \quad y = f(x)\]</span></p>
+<p><span class="math inline">\(X:\)</span> domain, <span class="math inline">\(Y:\)</span> codomain, <span class="math inline">\(f(X):\)</span> range</p>
+<p>Is <span class="math inline">\(y = x^2\)</span> a function? Is <span class="math inline">\(\{(x,y) \mid y^2 = x\}\)</span> a function?</p>
+</section>
+<section class="slide level2">
+<h2>Inverse of a Function</h2>
+<p>Function <span class="math inline">\(y=f(x)\)</span> has an inverse if it is a one-to-one mapping, i.e. each value of <span class="math inline">\(y\)</span> is associated with a unique value of <span class="math inline">\(x\)</span>.</p>
+<p>The inverse function <span class="math display">\[x=f^{-1}(y)\]</span> returns the corresponding value of <span class="math inline">\(x\)</span> for each <span class="math inline">\(y\)</span>.</p>
+<p>One-to-one mapping is unique to strictly monotonic functions.</p>
+<p>Find the inverse of <span class="math inline">\(y = 3x - 2\)</span>. Does <span class="math inline">\(y = x^2\)</span> have an inverse?</p>
+</section>
+<section class="slide level2">
+<h2>Summation Notation</h2>
+<p><span class="math display">\[\sum_{i=1}^N x_i = x_1 + x_2 + ... + x_N\]</span></p>
+<p>Things you <em>can</em> do: <span class="math display">\[\sum_{i=1}^N b x_i = b \sum_{i=1}^N x_i \qquad \sum_{i=1}^N (a + b x_i) = aN + b \sum_{i=1}^N x_i\]</span></p>
+<p>Things you <em>cannot</em> do: <span class="math display">\[\sum_{i=1}^N x_i y_i \neq  \sum_{i=1}^N x_i \times \sum_{i=1}^N y_i \qquad \sum_{i=1}^N x_i^a \neq  \left(\sum_{i=1}^N x_i\right)^a\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Necessary vs. Sufficient Conditions</h2>
+<p><span class="math inline">\(q\)</span> is a <em>necessary</em> condition for <span class="math inline">\(p\)</span> if <span class="math inline">\(p \implies q\)</span></p>
+<p><span class="math inline">\(q\)</span> is a <em>sufficient</em> condition for <span class="math inline">\(p\)</span> if <span class="math inline">\(q \implies p\)</span></p>
+<p>If both hold, <span class="math inline">\(p \iff q\)</span> and each is <em>necessary and sufficient</em> for the other</p>
+<p>Example. <span class="math inline">\(p\)</span>: the number is divisible by 4; <span class="math inline">\(q\)</span>: the number is even. Which is it?</p>
+</section></section>
+<section>
+<section class="title-slide slide level1 section-slide no-print center">
+<h1>Linear Algebra</h1>
+
+</section>
+<section class="slide level2">
+<h2>Matrices</h2>
+<p>A matrix with <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns is an <span class="math inline">\(m \times n\)</span> matrix <span class="math display">\[A = [ a_{ij} ] \quad i=1,2,...,m; \; j=1,2,...,n\]</span></p>
+<p><em>Square matrix</em>: equal number of rows and columns</p>
+<p>Two matrices are <em>equal</em> if all their elements are identical</p>
+<p>What is the dimension of <span class="math inline">\(A = \begin{bmatrix} 2 &amp; 3 &amp; 1 \\ -1 &amp; 4 &amp; 6 \end{bmatrix}\)</span>?</p>
+</section>
+<section class="slide level2">
+<h2>Addition and Scalar Multiplication</h2>
+<p>Element-by-element, and the matrices must have the same dimension: <span class="math display">\[A = \begin{bmatrix} 2 &amp; 3 \\ 4 &amp; -6 \end{bmatrix} \quad B = \begin{bmatrix} 1 &amp; 8 \\ -2 &amp; 3 \end{bmatrix}\]</span></p>
+<p>Find <span class="math inline">\(A + B\)</span>, <span class="math inline">\(A - B\)</span>, and <span class="math inline">\(2B\)</span>.</p>
+</section>
+<section class="slide level2">
+<h2>Matrix Multiplication</h2>
+<p>Only possible to multiply <span class="math inline">\(A_{m \times n}\)</span> and <span class="math inline">\(B_{p \times q}\)</span> to get <span class="math inline">\(AB\)</span> if <span class="math inline">\(n = p\)</span>: <span class="math display">\[\text{number of columns in } A = \text{ number of rows in } B\]</span></p>
+<p><span class="math display">\[C = AB, \qquad c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + ... + a_{in} b_{nj} = \sum_{k=1}^n a_{ik} b_{kj}\]</span></p>
+<p>The element <span class="math inline">\(c_{ij}\)</span> comes from the <span class="math inline">\(i\)</span>th row of <span class="math inline">\(A\)</span> and the <span class="math inline">\(j\)</span>th column of <span class="math inline">\(B\)</span>.</p>
+</section>
+<section class="slide level2">
+<h2>Matrix Multiplication</h2>
+<p><span class="math display">\[A = \begin{bmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; -6 &amp; -2 \end{bmatrix}_{2 \times 3} \quad B = \begin{bmatrix} 1 \\ -2 \\ 4 \end{bmatrix}_{3 \times 1}\]</span></p>
+<p>Is <span class="math inline">\(AB\)</span> defined? What is its dimension? Find it.</p>
+<p>What about <span class="math inline">\(BA\)</span>?</p>
+</section>
+<section class="slide level2">
+<h2>Vectors and Linear Dependence</h2>
+<p>Matrices with only one column are <em>column vectors</em>; with only one row, <em>row vectors</em></p>
+<p>A set of vectors is <em>linearly dependent</em> if and only if any one of them can be expressed as a linear combination of the remaining vectors</p>
+<p>Are these linearly independent? <span class="math display">\[v_1 = \begin{bmatrix} 1 \\ 2 \end{bmatrix} \quad v_2 = \begin{bmatrix} 2 \\ 4 \end{bmatrix} \qquad \qquad u_1 = \begin{bmatrix} 3 \\ 2 \end{bmatrix} \quad u_2 = \begin{bmatrix} 1 \\ 3 \end{bmatrix}\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Special Matrices</h2>
+<p><em>Identity matrix</em> <span class="math inline">\(I\)</span>: <span class="math inline">\(1\)</span>s on the principal diagonal, <span class="math inline">\(0\)</span>s elsewhere; acts like 1, so <span class="math inline">\(AI = IA = A\)</span></p>
+<p><em>Null matrix</em>: all elements <span class="math inline">\(0\)</span>; <span class="math inline">\(A + 0 = A\)</span> and <span class="math inline">\(A0 = 0\)</span></p>
+<p><em>Idempotent</em>: <span class="math inline">\(A\)</span> is idempotent if <span class="math inline">\(A = A^k\)</span>, i.e. it is unchanged when multiplied by itself</p>
+<p>Is an identity matrix idempotent?</p>
+</section>
+<section class="slide level2">
+<h2>Transpose of a Matrix</h2>
+<p><span class="math inline">\(A^T\)</span>: interchange rows and columns</p>
+<p><span class="math display">\[\left(A^T\right)^T=A \qquad (A+B)^T=A^T+B^T \qquad (A B)^T=B^T A^T\]</span></p>
+<p><span class="math inline">\(A\)</span> is <em>symmetric</em> if <span class="math inline">\(A^T = A\)</span>, <em>skew-symmetric</em> if <span class="math inline">\(A^T = -A\)</span>, and <em>orthogonal</em> if <span class="math inline">\(A^T A = I\)</span></p>
+<p>Find <span class="math inline">\(A^T\)</span> for <span class="math inline">\(A = \begin{bmatrix} 2 &amp; 3 &amp; 1 \\ 4 &amp; -6 &amp; 2 \end{bmatrix}\)</span></p>
+</section>
+<section class="slide level2">
+<h2>Inverse of a Matrix</h2>
+<p>For a <em>square</em> matrix <span class="math inline">\(A\)</span>, its inverse <span class="math inline">\(A^{-1}\)</span> is defined as <span class="math display">\[A A^{-1}=A^{-1} A=I\]</span></p>
+<p>If the inverse exists, <span class="math inline">\(A\)</span> is <em>nonsingular</em></p>
+<p><span class="math display">\[\left(A^{-1}\right)^{-1}=A \qquad (A B)^{-1}=B^{-1} A^{-1} \qquad \left(A^T\right)^{-1}=\left(A^{-1}\right)^T\]</span></p>
+</section>
+<section class="slide level2">
+<h2>Conditions for Nonsingularity</h2>
+<p>Squareness is <em>necessary</em> but not <em>sufficient</em></p>
+<p>Sufficient condition: <em>rows (or equivalently) columns are linearly independent</em></p>
+<p><span class="math display">\[A=\begin{bmatrix} 1 &amp; 2 \\ 2 &amp; 4 \end{bmatrix} \quad B=\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\]</span></p>
+<p>Which is singular, and which is nonsingular?</p>
+</section>
+<section class="slide level2">
+<h2>Determinant</h2>
+<p>The determinant <span class="math inline">\(|A|\)</span> is a unique scalar associated with a <em>square</em> matrix <span class="math inline">\(A\)</span></p>
+<p>For a <span class="math inline">\(2 \times 2\)</span> matrix: <span class="math display">\[|A|=a_{11} a_{22}-a_{12} a_{21}\]</span></p>
+<p>A <em>minor</em> <span class="math inline">\(|M_{ij}|\)</span> deletes the <span class="math inline">\(i\)</span>th row and <span class="math inline">\(j\)</span>th column; the cofactor is <span class="math display">\[|C_{ij}| = (-1)^{i+j} |M_{ij}|\]</span></p>
+<p>Then, expanding along any row or column: <span class="math display">\[|A| = \sum_{j=1}^n a_{ij} |C_{ij}|\]</span></p>
 </section>
 <section class="slide level2">
 <h2>Find the Determinant</h2>
-<p><span class="math display">\[A=\left[\begin{array}{ccc}
+<p><span class="math display">\[A=\begin{bmatrix}
 1 &amp; 5 &amp; 1 \\
 0 &amp; 3 &amp; 9 \\
 -1 &amp; 0 &amp; 0
-\end{array}\right]\]</span></p>
-</section>
-<section class="slide level2">
-<h2>Properties of Determinants</h2>
-<ul>
-<li><p><span class="math inline">\(|A| = |A^T|\)</span></p></li>
-<li><p>Interchanging rows or columns will alter the sign but not the value</p></li>
-<li><p>Multiplication of any one row (or one column) by a scalar <span class="math inline">\(k\)</span> will change the value of the determinant <span class="math inline">\(k\)</span>-fold</p></li>
-<li><p>The addition (subtraction) of a multiple of any row (or column) to (from) another row (or column) will leave the determinant unaltered</p></li>
-<li><p>If one row (or column) is a multiple of another row (or column), the value of the determinant will be zero.</p></li>
-</ul>
+\end{bmatrix}\]</span></p>
+<p>Expand along the third row. Is <span class="math inline">\(A\)</span> nonsingular?</p>
 </section>
 <section class="slide level2">
 <h2>Criteria for Nonsingularity</h2>
@@ -1062,40 +1181,47 @@ Cofactor <span class="math inline">\(C_{ij}\)</span> is defined as: <span class=
 </section>
 <section class="slide level2">
 <h2>Matrix Inversion</h2>
-<p><em>Adjoint</em> of a nonsingular <span class="math inline">\(n \times n\)</span> matrix: <span class="math display">\[adj A = C^T = \left[\begin{array}{llll}
+<p><em>Adjoint</em> of a nonsingular <span class="math inline">\(n \times n\)</span> matrix: <span class="math display">\[adj A = C^T = \begin{bmatrix}
 |C_{11}| &amp; |C_{21}| &amp; \cdots &amp; |C_{n1}| \\
 |C_{12}| &amp; |C_{22}| &amp; \cdots &amp;  |C_{n2}| \\
 \vdots &amp;\vdots &amp; \cdots &amp;  \vdots \\
-|C_{1n}| &amp; |C_{2n}| &amp; \cdots &amp; |C_{nn}| \\
-\end{array}\right]\]</span></p>
+|C_{1n}| &amp; |C_{2n}| &amp; \cdots &amp; |C_{nn}|
+\end{bmatrix}\]</span></p>
 <p>The <em>inverse</em> of <span class="math inline">\(A\)</span> is defined as: <span class="math display">\[A^{-1} = \frac{1}{|A|} \, adj A\]</span></p>
 </section>
 <section class="slide level2">
 <h2>Find the Inverse</h2>
-<p><span class="math display">\[A=\left[\begin{array}{ccc}
+<p><span class="math display">\[A=\begin{bmatrix}
 3 &amp; 2 \\
-1 &amp; 0 \\
-\end{array}\right]\]</span></p>
-</section>
-<section class="slide level2">
-<h2>Find the Inverse</h2>
-<p><span class="math display">\[A=\left[\begin{array}{ccc}
+1 &amp; 0
+\end{bmatrix}\]</span></p>
+<p>Then try <span class="math display">\[A=\begin{bmatrix}
 1 &amp; 5 &amp; 1 \\
 0 &amp; 3 &amp; 9 \\
 -1 &amp; 0 &amp; 0
-\end{array}\right]\]</span></p>
+\end{bmatrix}\]</span></p>
 </section>
 <section class="slide level2">
-<h2>Homework Questions</h2>
-<ul>
-<li><p>Exercise 5.2: 1 (c), (e), (f), 2, 3, 6</p></li>
-<li><p>Exercise 5.3: 1, 4, 5, 8</p></li>
-<li><p>Exercise 5.4: 2, 3, 4, 7</p></li>
-</ul>
-<p>Textbook reference: 5.2-5.4</p>
-
-
+<h2>Solving a System of Equations</h2>
+<p><span class="math display">\[Ax = b \quad \implies \quad x^* = A^{-1} b\]</span></p>
+<p><em>Cramer’s rule</em>: form <span class="math inline">\(A_k\)</span> by replacing the <span class="math inline">\(k\)</span>th column of <span class="math inline">\(A\)</span> with <span class="math inline">\(b\)</span>; then <span class="math display">\[x^*_k = \frac{|A_k|}{|A|}\]</span></p>
+<p>If <span class="math inline">\(A\)</span> is singular, a unique solution does not exist.</p>
 </section>
+<section class="slide level2">
+<h2>A Simple Economic Model</h2>
+<p><span class="math display">\[q + 2p = 100\]</span> <span class="math display">\[q - 3p = 20\]</span></p>
+<p>Write this as <span class="math inline">\(Ax = b\)</span>. What are <span class="math inline">\(A\)</span>, <span class="math inline">\(x\)</span>, and <span class="math inline">\(b\)</span>?</p>
+<p>Solve it two ways: by matrix inversion, and by Cramer’s rule.</p>
+</section>
+<section class="slide level2">
+<h2>Few last words</h2>
+<p>The sample exam and help sheet are on the course website</p>
+<p>Practice problems 1–7 and their solutions are the best preparation</p>
+<p>Additional office hours this week, or by appointment</p>
+<p>Good luck for the exam!</p>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

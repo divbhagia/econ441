@@ -37,7 +37,7 @@ LECTURES = {
                        ("Handout-Summation-Notation.pdf","Summations")]),
  dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar and matrix multiplication","4.1, 4.2",[("Handout-Matrix-Operations.pdf","Matrix Operations")]),
  dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; linear dependence; identity, null, idempotent, and transpose matrices","4.2-4.6",[]),
- dt.date(YEAR,9,9):   (5,"Inverse of a matrix; conditions for nonsingularity; rank","4.6, 5.1",[]),
+ dt.date(YEAR,9,9):   (5,"Inverse of a matrix; conditions for nonsingularity","4.6, 5.1",[]),
  dt.date(YEAR,9,14):  (6,"Computing the determinant and the inverse","5.2-5.4",[("Handout-Determinant-and-Inverse.pdf","Determinant and Inverse")]),
  dt.date(YEAR,9,16):  (7,"Solving systems of equations by inversion and Cramer's rule; applications","5.4, 5.5, 4.7",[("Handout-Solving-System-of-Equations.pdf","Solving Systems of Equations")]),
  dt.date(YEAR,9,28):  (None,"Limit definition of a derivative; limits","6.2-6.4",[]),

@@ -47,7 +47,7 @@ Practice problems for this module, collected:
 ::: {.lecture style="font-size:1.1rem"}
 <h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 5: Inverse of a Matrix</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Inverse of a matrix; conditions for nonsingularity; rank</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Inverse of a matrix; conditions for nonsingularity</span>
 
 <span style="font-size:1.1rem"><strong>Textbook references:</strong> 4.6, 5.1</span>
 

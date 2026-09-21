@@ -91,7 +91,9 @@ def meta_from_qmd(text):
     return out
 
 def build(n):
-    qmd = ROOT / "content" / "slides" / f"slides{n}.qmd"
+    # n is a lecture number ("3") or a deck stem ("midterm-review")
+    stem = f"slides{n}" if str(n).isdigit() else str(n)
+    qmd = ROOT / "content" / "slides" / f"{stem}.qmd"
     with tempfile.TemporaryDirectory() as td:
         tdp = pathlib.Path(td)
         # figures: svg -> pdf, raster copied, under assets/ relative to the tex
@@ -147,11 +149,11 @@ def build(n):
             shutil.copy(pdf, keep)
             sys.exit(f"lecture {n}: deck does not pass veraPDF UA-2 "
                      f"({', '.join(f'{c} x{k}' for c, k in fails)}); kept {keep.name} for inspection")
-        dest = ROOT / "content" / "slides" / f"slides{n}.pdf"
+        dest = ROOT / "content" / "slides" / f"{stem}.pdf"
         shutil.copy(pdf, dest)
         pages = subprocess.run(["pdfinfo", str(dest)], capture_output=True, text=True)
         np = re.search(r"Pages:\s+(\d+)", pages.stdout).group(1)
-        print(f"    lecture {n}: {np} pages, tagged, veraPDF ua2 PASS -> {dest.relative_to(ROOT)}")
+        print(f"    {stem}: {np} pages, tagged, veraPDF ua2 PASS -> {dest.relative_to(ROOT)}")
 
 if __name__ == "__main__":
     for n in sys.argv[1:]:

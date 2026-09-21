@@ -1,0 +1,310 @@
+---
+title: "Midterm 1 Review"
+subtitle: "ECON 441: Introduction to Mathematical Economics"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../../assets/section-slides.lua
+---
+
+## What's on the exam
+
+Modules I and II: Preliminaries and Linear Algebra (Lectures 1--7)
+
+Chiang & Wainwright: 2.2--2.6, p. 163, 4.1--4.7, 5.1--5.5
+
+The help sheet provided with the exam is on the course website. Everything else you should know.
+
+Work through the sample exam under exam conditions before checking the solutions.
+
+# Preliminaries
+
+## Sets
+
+$\mathbb{R}$ is the set of real numbers (rational and irrational)
+
+$x \in \mathbb{R}$ denotes that $x$ belongs to the set of real numbers
+
+Consider the universe of all real numbers, with set $A$ given by $$A = \{x | x > 0\}$$
+
+What is the complement of $A$?
+
+## Set Relations and Operations
+
+Consider the following sets:
+$$\begin{aligned}
+A &= \{x | x > 0\} \\
+B &= \{x | x \text{ is a positive integer}\} \\
+C &= \{x | 1<x<5\}
+\end{aligned}$$
+
+-   Is $A=B$? Is $B \subset A$?
+
+-   Are $C$ and $B$ disjoint sets?
+
+-   What is $A \cap B$? What about $A \cup B$?
+
+-   What is $B \cap C$?
+
+## Subsets
+
+$\emptyset$: empty or null set
+
+What are all possible subsets of $$S = \{a,b,c\}$$
+
+Always $2^n$ subsets. Here $n=3$, so 8 subsets.
+
+## Set Operations: Venn Diagrams
+
+Shade the following regions:
+
+::: {.columns .figrow}
+::: {.column width="33%"}
+$A \cup B$
+
+![](../../assets/venn2.svg){fig-alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width=340}
+:::
+::: {.column width="33%"}
+$A \cap B$
+
+![](../../assets/venn2.svg){fig-alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width=340}
+:::
+::: {.column width="33%"}
+$A^c$
+
+![](../../assets/venn2.svg){fig-alt="Blank two-set Venn diagram: sets A and B overlapping inside universal set U" width=340}
+:::
+:::
+
+## Cartesian Product
+
+The *Cartesian product* of two sets $A$ and $B$ is the set of all ordered pairs whose first element comes from $A$ and second from $B$:
+$$A \times B = \{(a,b) \mid a \in A, \; b \in B\}$$
+
+Example. $A = \{1,2\}$, $B = \{3,4\}$. What is $A \times B$?
+
+## Cartesian Plane
+
+$$\mathbb{R}^2 =  \{(x,y) | x \in \mathbb{R}, y \in \mathbb{R}\}$$
+
+![](../../assets/cartesian-plane.svg){.nostretch fig-alt="A Cartesian plane: a horizontal x-axis and a vertical y-axis crossing at the origin, each arrowed at both ends and running from negative 4 to 4, over a dotted unit grid" width=330}
+
+Can have $\mathbb{R}^3, \mathbb{R}^4,...,\mathbb{R}^n$
+
+## Relations and Functions
+
+*Relation*: subset of the Cartesian product, e.g. $\{(x,y) | y \leq x \}$
+
+*Function*: a relation where for each $x$ there is a unique $y$
+$$f: X \rightarrow Y, \quad y = f(x)$$
+
+$X:$ domain, $Y:$ codomain, $f(X):$ range
+
+Is $y = x^2$ a function? Is $\{(x,y) \mid y^2 = x\}$ a function?
+
+## Inverse of a Function
+
+Function $y=f(x)$ has an inverse if it is a one-to-one mapping, i.e. each value of $y$ is associated with a unique value of $x$.
+
+The inverse function $$x=f^{-1}(y)$$ returns the corresponding value of $x$ for each $y$.
+
+One-to-one mapping is unique to strictly monotonic functions.
+
+Find the inverse of $y = 3x - 2$. Does $y = x^2$ have an inverse?
+
+## Summation Notation
+
+$$\sum_{i=1}^N x_i = x_1 + x_2 + ... + x_N$$
+
+Things you *can* do:
+$$\sum_{i=1}^N b x_i = b \sum_{i=1}^N x_i \qquad \sum_{i=1}^N (a + b x_i) = aN + b \sum_{i=1}^N x_i$$
+
+Things you *cannot* do:
+$$\sum_{i=1}^N x_i y_i \neq  \sum_{i=1}^N x_i \times \sum_{i=1}^N y_i \qquad \sum_{i=1}^N x_i^a \neq  \left(\sum_{i=1}^N x_i\right)^a$$
+
+## Necessary vs. Sufficient Conditions
+
+$q$ is a *necessary* condition for $p$ if $p \implies q$
+
+$q$ is a *sufficient* condition for $p$ if $q \implies p$
+
+If both hold, $p \iff q$ and each is *necessary and sufficient* for the other
+
+Example. $p$: the number is divisible by 4; $q$: the number is even. Which is it?
+
+# Linear Algebra
+
+## Matrices
+
+A matrix with $m$ rows and $n$ columns is an $m \times n$ matrix
+$$A = [ a_{ij} ] \quad i=1,2,...,m; \; j=1,2,...,n$$
+
+*Square matrix*: equal number of rows and columns
+
+Two matrices are *equal* if all their elements are identical
+
+What is the dimension of $A = \begin{bmatrix} 2 & 3 & 1 \\ -1 & 4 & 6 \end{bmatrix}$?
+
+## Addition and Scalar Multiplication
+
+Element-by-element, and the matrices must have the same dimension:
+$$A = \begin{bmatrix} 2 & 3 \\ 4 & -6 \end{bmatrix} \quad B = \begin{bmatrix} 1 & 8 \\ -2 & 3 \end{bmatrix}$$
+
+Find $A + B$, $A - B$, and $2B$.
+
+## Matrix Multiplication
+
+Only possible to multiply $A_{m \times n}$ and $B_{p \times q}$ to get $AB$ if $n = p$:
+$$\text{number of columns in } A = \text{ number of rows in } B$$
+
+$$C = AB, \qquad c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + ... + a_{in} b_{nj} = \sum_{k=1}^n a_{ik} b_{kj}$$
+
+The element $c_{ij}$ comes from the $i$th row of $A$ and the $j$th column of $B$.
+
+## Matrix Multiplication
+
+$$A = \begin{bmatrix} 2 & 3 & 1 \\ 4 & -6 & -2 \end{bmatrix}_{2 \times 3} \quad B = \begin{bmatrix} 1 \\ -2 \\ 4 \end{bmatrix}_{3 \times 1}$$
+
+Is $AB$ defined? What is its dimension? Find it.
+
+What about $BA$?
+
+## Vectors and Linear Dependence
+
+Matrices with only one column are *column vectors*; with only one row, *row vectors*
+
+A set of vectors is *linearly dependent* if and only if any one of them can be expressed as a linear combination of the remaining vectors
+
+Are these linearly independent?
+$$v_1 = \begin{bmatrix} 1 \\ 2 \end{bmatrix} \quad v_2 = \begin{bmatrix} 2 \\ 4 \end{bmatrix} \qquad \qquad u_1 = \begin{bmatrix} 3 \\ 2 \end{bmatrix} \quad u_2 = \begin{bmatrix} 1 \\ 3 \end{bmatrix}$$
+
+## Special Matrices
+
+*Identity matrix* $I$: $1$s on the principal diagonal, $0$s elsewhere; acts like 1, so $AI = IA = A$
+
+*Null matrix*: all elements $0$; $A + 0 = A$ and $A0 = 0$
+
+*Idempotent*: $A$ is idempotent if $A = A^k$, i.e. it is unchanged when multiplied by itself
+
+Is an identity matrix idempotent?
+
+## Transpose of a Matrix
+
+$A^T$: interchange rows and columns
+
+$$\left(A^T\right)^T=A \qquad (A+B)^T=A^T+B^T \qquad (A B)^T=B^T A^T$$
+
+$A$ is *symmetric* if $A^T = A$, *skew-symmetric* if $A^T = -A$, and *orthogonal* if $A^T A = I$
+
+Find $A^T$ for $A = \begin{bmatrix} 2 & 3 & 1 \\ 4 & -6 & 2 \end{bmatrix}$
+
+## Inverse of a Matrix
+
+For a *square* matrix $A$, its inverse $A^{-1}$ is defined as
+$$A A^{-1}=A^{-1} A=I$$
+
+If the inverse exists, $A$ is *nonsingular*
+
+$$\left(A^{-1}\right)^{-1}=A \qquad (A B)^{-1}=B^{-1} A^{-1} \qquad \left(A^T\right)^{-1}=\left(A^{-1}\right)^T$$
+
+## Conditions for Nonsingularity
+
+Squareness is *necessary* but not *sufficient*
+
+Sufficient condition: *rows (or equivalently) columns are linearly independent*
+
+$$A=\begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix} \quad B=\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$$
+
+Which is singular, and which is nonsingular?
+
+## Determinant
+
+The determinant $|A|$ is a unique scalar associated with a *square* matrix $A$
+
+For a $2 \times 2$ matrix: $$|A|=a_{11} a_{22}-a_{12} a_{21}$$
+
+A *minor* $|M_{ij}|$ deletes the $i$th row and $j$th column; the cofactor is
+$$|C_{ij}| = (-1)^{i+j} |M_{ij}|$$
+
+Then, expanding along any row or column: $$|A| = \sum_{j=1}^n a_{ij} |C_{ij}|$$
+
+## Find the Determinant
+
+$$A=\begin{bmatrix}
+1 & 5 & 1 \\
+0 & 3 & 9 \\
+-1 & 0 & 0
+\end{bmatrix}$$
+
+Expand along the third row. Is $A$ nonsingular?
+
+## Criteria for Nonsingularity
+
+The following statements are equivalent:
+
+-   $|A| \neq 0$
+
+-   Rows (or equivalently columns) of $A$ are independent
+
+-   $A$ is nonsingular
+
+-   $A^{-1}$ exists
+
+-   A unique solution to $A x=b$ ($x^*=A^{-1}b$) exists
+
+## Matrix Inversion
+
+*Adjoint* of a nonsingular $n \times n$ matrix:
+$$adj A = C^T = \begin{bmatrix}
+|C_{11}| & |C_{21}| & \cdots & |C_{n1}| \\
+|C_{12}| & |C_{22}| & \cdots &  |C_{n2}| \\
+\vdots &\vdots & \cdots &  \vdots \\
+|C_{1n}| & |C_{2n}| & \cdots & |C_{nn}|
+\end{bmatrix}$$
+
+The *inverse* of $A$ is defined as: $$A^{-1} = \frac{1}{|A|} \, adj A$$
+
+## Find the Inverse
+
+$$A=\begin{bmatrix}
+3 & 2 \\
+1 & 0
+\end{bmatrix}$$
+
+Then try
+$$A=\begin{bmatrix}
+1 & 5 & 1 \\
+0 & 3 & 9 \\
+-1 & 0 & 0
+\end{bmatrix}$$
+
+## Solving a System of Equations
+
+$$Ax = b \quad \implies \quad x^* = A^{-1} b$$
+
+*Cramer's rule*: form $A_k$ by replacing the $k$th column of $A$ with $b$; then
+$$x^*_k = \frac{|A_k|}{|A|}$$
+
+If $A$ is singular, a unique solution does not exist.
+
+## A Simple Economic Model
+
+$$q + 2p = 100$$
+$$q - 3p = 20$$
+
+Write this as $Ax = b$. What are $A$, $x$, and $b$?
+
+Solve it two ways: by matrix inversion, and by Cramer's rule.
+
+## Few last words
+
+The sample exam and help sheet are on the course website
+
+Practice problems 1--7 and their solutions are the best preparation
+
+Additional office hours this week, or by appointment
+
+Good luck for the exam!

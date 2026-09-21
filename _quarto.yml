@@ -23,6 +23,7 @@ project:
     - "content/slides/slides5.qmd"
     - "content/slides/slides6.qmd"
     - "content/slides/slides7.qmd"
+    - "content/slides/midterm-review.qmd"
     - "!grades/"
     - "!lectures-old/"
     - "!project/"

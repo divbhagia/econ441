@@ -69,8 +69,6 @@ The following statements are equivalent:
 
 -   Rows (or equivalently columns) of $A$ are independent
 
--   $A$ has full rank
-
 -   $A$ is nonsingular
 
 -   $A^{-1}$ exists

@@ -146,9 +146,8 @@ $$ \begin{aligned}
    b. A geometric figure has four sides; it is a rectangle.
    c. Two ordered pairs $(a, b)$ and $(b, a)$ are equal; $a$ is equal to $b$.
    d. A number is rational; it can be expressed as a ratio of two integers.
-   e. A $4 \times 4$ matrix is nonsingular; the rank of the $4 \times 4$ matrix is 4. (*skip for now*)
-   f. The gasoline tank in my car is empty; I cannot start my car.
-   g. The letter is returned to the sender with the marking "addressee unknown"; the sender wrote the wrong address on the envelope.
+   e. The gasoline tank in my car is empty; I cannot start my car.
+   f. The letter is returned to the sender with the marking "addressee unknown"; the sender wrote the wrong address on the envelope.
 
 <details class="solution">
 <summary>Solution</summary>
@@ -157,8 +156,7 @@ a. $q \implies p$
 b. $q \implies p$
 c. $q \iff p$
 d. $q \iff p$
-e. $q \iff p$
-f. $p \implies q$
-g. $q \implies p$
+e. $p \implies q$
+f. $q \implies p$
 
 </details>
