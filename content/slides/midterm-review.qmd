@@ -22,8 +22,6 @@ format:
 
 -   Closed book: no phones or computers
 
-The examples today are new. Work the practice problems and the sample exam for more.
-
 # Preliminaries
 
 ## Sets
@@ -57,9 +55,11 @@ C &= \{x \mid 2 < x < 7\}
 
 $\emptyset$: empty or null set
 
-How many subsets does $S = \{a,b,c,d\}$ have? Write down three of them.
+What are all possible subsets of $$S = \{a,b,c\}$$
 
-Always $2^n$ subsets. Here $n=4$, so 16 subsets.
+$\emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{b,c\}, \{a,c\}, \{a,b,c\}$
+
+Always $2^n$ subsets. Here $n=3$, so 8 subsets.
 
 ## Set Operations: Venn Diagrams
 
