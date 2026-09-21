@@ -243,7 +243,7 @@ $$A=\begin{bmatrix}
 1 & 0 & 1
 \end{bmatrix}$$
 
-Is $A$ nonsingular? Will it be easy to find its inverse?
+Is $A$ nonsingular?
 
 ## Criteria for Nonsingularity
 
