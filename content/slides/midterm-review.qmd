@@ -310,7 +310,7 @@ Write it as $Ax = b$. Solve it two ways: by matrix inversion, and by Cramer's ru
 
 -   Lecture slides and worksheets
 
--   Practice problems 1--7, with solutions
+-   Practice problems 1--7 with solutions, also collected as one PDF per module
 
 -   Module notes for Linear Algebra
 
