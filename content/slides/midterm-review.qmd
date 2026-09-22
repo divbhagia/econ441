@@ -273,17 +273,25 @@ The *inverse* of $A$ is defined as: $$A^{-1} = \frac{1}{|A|} \, adj A$$
 
 ## Find the Inverse
 
-Start with $$A=\begin{bmatrix}
+::: {.columns}
+::: {.column width="50%"}
+*Example 1*
+
+$$A=\begin{bmatrix}
 2 & 1 \\
 3 & 2
 \end{bmatrix}$$
+:::
+::: {.column width="50%"}
+*Example 2*
 
-Now go back to the matrix whose determinant we just found, and find its inverse:
 $$A=\begin{bmatrix}
 1 & 1 & 0 \\
 0 & 1 & 1 \\
 1 & 0 & 1
 \end{bmatrix}$$
+:::
+:::
 
 ## Solving a System of Equations
 
