@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" role="img">
+<line x1="64" y1="153" x2="416" y2="153" stroke="#e9e3e4" stroke-width="1.1" stroke-dasharray="4 4"/>
+<line x1="64" y1="107" x2="416" y2="107" stroke="#e9e3e4" stroke-width="1.1" stroke-dasharray="4 4"/>
+<line x1="46.4" y1="268" x2="433.6" y2="268" stroke="#393A3B" stroke-width="1.4"/>
+<line x1="240" y1="279.5" x2="240" y2="24.2" stroke="#393A3B" stroke-width="1.4"/>
+<line x1="64" y1="268" x2="64" y2="262" stroke="#393A3B" stroke-width="1.2"/>
+<text x="64.0" y="292.0" font-family="sans-serif" font-size="19" font-weight="700" fill="#393A3B" text-anchor="middle">-4</text>
+<line x1="152" y1="268" x2="152" y2="262" stroke="#393A3B" stroke-width="1.2"/>
+<text x="152.0" y="292.0" font-family="sans-serif" font-size="19" font-weight="700" fill="#393A3B" text-anchor="middle">-2</text>
+<line x1="328" y1="268" x2="328" y2="262" stroke="#393A3B" stroke-width="1.2"/>
+<text x="328.0" y="292.0" font-family="sans-serif" font-size="19" font-weight="700" fill="#393A3B" text-anchor="middle">2</text>
+<line x1="416" y1="268" x2="416" y2="262" stroke="#393A3B" stroke-width="1.2"/>
+<text x="416.0" y="292.0" font-family="sans-serif" font-size="19" font-weight="700" fill="#393A3B" text-anchor="middle">4</text>
+<line x1="234" y1="153" x2="240" y2="153" stroke="#393A3B" stroke-width="1.2"/>
+<text x="54.0" y="159.0" font-family="sans-serif" font-size="19" font-weight="700" fill="#393A3B" text-anchor="end">5</text>
+<line x1="234" y1="107" x2="240" y2="107" stroke="#393A3B" stroke-width="1.2"/>
+<text x="54.0" y="113.0" font-family="sans-serif" font-size="19" font-weight="700" fill="#393A3B" text-anchor="end">7</text>
+<polyline points="64.0,245.0 66.9,242.0 69.9,239.0 72.8,236.0 75.7,233.1 78.7,230.3 81.6,227.5 84.5,224.8 87.5,222.1 90.4,219.5 93.3,216.9 96.3,214.4 99.2,211.9 102.1,209.5 105.1,207.1 108.0,204.8 110.9,202.5 113.9,200.3 116.8,198.1 119.7,196.0 122.7,193.9 125.6,191.9 128.5,189.9 131.5,188.0 134.4,186.1 137.3,184.3 140.3,182.5 143.2,180.8 146.1,179.2 149.1,177.6 152.0,176.0 154.9,174.5 157.9,173.0 160.8,171.6 163.7,170.3 166.7,169.0 169.6,167.7 172.5,166.5 175.5,165.4 178.4,164.3 181.3,163.2 184.3,162.2 187.2,161.3 190.1,160.4 193.1,159.5 196.0,158.8 198.9,158.0 201.9,157.3 204.8,156.7 207.7,156.1 210.7,155.6 213.6,155.1 216.5,154.6 219.5,154.3 222.4,153.9 225.3,153.6 228.3,153.4 231.2,153.2 234.1,153.1 237.1,153.0 240.0,153.0" fill="none" stroke="#912040" stroke-width="2.6"/>
+<polyline points="240.0,107.0 242.9,107.0 245.9,106.9 248.8,106.9 251.7,106.8 254.7,106.6 257.6,106.4 260.5,106.2 263.5,106.0 266.4,105.8 269.3,105.5 272.3,105.1 275.2,104.8 278.1,104.4 281.1,104.0 284.0,103.5 286.9,103.1 289.9,102.6 292.8,102.0 295.7,101.5 298.7,100.9 301.6,100.2 304.5,99.6 307.5,98.9 310.4,98.2 313.3,97.4 316.3,96.6 319.2,95.8 322.1,95.0 325.1,94.1 328.0,93.2 330.9,92.3 333.9,91.3 336.8,90.3 339.7,89.3 342.7,88.2 345.6,87.1 348.5,86.0 351.5,84.9 354.4,83.7 357.3,82.5 360.3,81.2 363.2,80.0 366.1,78.6 369.1,77.3 372.0,76.0 374.9,74.6 377.9,73.1 380.8,71.7 383.7,70.2 386.7,68.7 389.6,67.1 392.5,65.5 395.5,63.9 398.4,62.3 401.3,60.6 404.3,58.9 407.2,57.2 410.1,55.4 413.1,53.6 416.0,51.8" fill="none" stroke="#912040" stroke-width="2.6"/>
+<circle cx="240.0" cy="153.0" r="5.5" fill="#ffffff" stroke="#912040" stroke-width="2.4"/>
+<circle cx="240.0" cy="107.0" r="5.5" fill="#ffffff" stroke="#912040" stroke-width="2.4"/>
+<text x="441.6" y="275.0" font-family="sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#393A3B">x</text>
+<text x="250.0" y="28.2" font-family="sans-serif" font-size="21" font-weight="700" font-style="italic" fill="#393A3B">y</text>
+</svg>

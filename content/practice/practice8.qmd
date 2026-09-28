@@ -1,0 +1,65 @@
+---
+title: "Practice Problems 8"
+subtitle: "Lecture 8: Limits and the Derivative"
+format: html
+---
+
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each question yourself first, then expand the **Solution** to check.
+
+## Exercise 6.2
+
+**2.** Given the function $y=5x^{2}-4x$:
+
+a. Find the difference quotient as a function of $x$ and $\Delta x$.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\begin{aligned}
+\frac{\Delta y}{\Delta x} &=\frac{f(x+\Delta x)-f(x)}{\Delta x} \\
+&=\frac{5(x+\Delta x)^{2}-4(x+\Delta x)-\left(5 x^{2}-4 x\right)}{\Delta x} \\
+&=\frac{5\left(x^{2}+2 x \Delta x+(\Delta x)^{2}\right)-4 x-4 \Delta x-5 x^{2}+4 x}{\Delta x} \\
+&=\frac{10 x \Delta x+5 (\Delta x)^{2}-4 \Delta x}{\Delta x}=10 x-4+5 \Delta x
+\end{aligned}$$
+
+</details>
+
+b. Find the derivative $dy/dx$, using the limit definition.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\frac{d y}{d x}=\lim _{\Delta x \rightarrow 0} \frac{\Delta y}{\Delta x}=\lim _{\Delta x \rightarrow 0}\,(10 x-4+5 \Delta x)=10 x-4$$
+
+</details>
+
+c. Find $f'(2)$ and $f'(3)$.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$f'(2) =10 \times 2-4=16 \qquad f'(3) =10 \times 3-4=26$$
+
+</details>
+
+**3.** Given the function $y=5x-2$:
+
+a. Find the difference quotient $\Delta y / \Delta x$. What type of function is it?
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\frac{\Delta y}{\Delta x}=\frac{5(x+\Delta x)-2-(5 x-2)}{\Delta x}=\frac{5 \Delta x}{\Delta x}=5$$
+
+It is a constant function.
+
+</details>
+
+b. Since $\Delta x$ does not appear in $\Delta y / \Delta x$ in part (a), does it make any difference to the value of $\Delta y / \Delta x$ whether $\Delta x$ is large or small? Consequently, what is the limit of the difference quotient as $\Delta x$ approaches zero?
+
+<details class="solution part">
+<summary>Solution</summary>
+
+No: the difference quotient equals 5 whatever the size of $\Delta x$. So its limit as $\Delta x \rightarrow 0$ is also 5, i.e. $dy/dx = 5$.
+
+</details>
