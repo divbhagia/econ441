@@ -22,6 +22,11 @@
 % is switched off inside the box so the header tags as a single <P>. The
 % \hypersetup line writes the title into the XMP metadata (dc:title, clause
 % 8.11.1 requires it).
+% \tagpdfparaOff/On exist only when \DocumentMetadata turns tagging on;
+% without it (a plain pdflatex compile of an older quiz) they would be
+% undefined, so fall back to no-ops.
+\providecommand\tagpdfparaOff{}
+\providecommand\tagpdfparaOn{}
 \newcommand{\myheader}[1]{%
 \hypersetup{pdftitle={#1}}%
 \tagpdfparaOff

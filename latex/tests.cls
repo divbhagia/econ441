@@ -27,6 +27,11 @@
 % Custom Header: Title. Tagged-PDF notes as in handout.cls: the framebox/vbox
 % nests paragraphs inside a paragraph (veraPDF Table 5, P-P), so paragraph
 % tagging is off inside the box; the \hypersetup line supplies dc:title.
+% \tagpdfparaOff/On exist only when \DocumentMetadata turns tagging on;
+% without it (a plain pdflatex compile of an older quiz) they would be
+% undefined, so fall back to no-ops.
+\providecommand\tagpdfparaOff{}
+\providecommand\tagpdfparaOn{}
 \newcommand{\myheader}[1]{%
 \hypersetup{pdftitle={#1}}%
 \tagpdfparaOff
