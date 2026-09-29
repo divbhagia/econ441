@@ -30,3 +30,18 @@ Practice problems for this module, collected:
 <a class="btn btn-outline-primary" href="practice/practice8.html" target="_blank" rel="noopener" aria-label="Practice Problems 8 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 9: Continuity and Rules of Differentiation</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Continuity; rules of differentiation</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 6.7, 7.1&ndash;7.3</span>
+
+<p class="lecture-links">
+<a class="btn btn-outline-primary" href="slides/slides9.html" target="_blank" rel="noopener" aria-label="Lecture 9 slides (opens in a new tab)" role="button">Slides</a>
+<a class="btn btn-outline-primary" href="slides/slides9.pdf" target="_blank" rel="noopener" aria-label="Lecture 9 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
+<a class="btn btn-outline-primary" href="handouts/handout-rules-of-differentiation.pdf" target="_blank" rel="noopener" aria-label="Lecture 9 worksheet: Rules of Differentiation, PDF (opens in a new tab)" role="button">Worksheet: Rules of Differentiation</a>
+<a class="btn btn-outline-primary" href="practice/practice9.html" target="_blank" rel="noopener" aria-label="Practice Problems 9 (opens in a new tab)" role="button">Practice problems</a>
+</p>
+:::

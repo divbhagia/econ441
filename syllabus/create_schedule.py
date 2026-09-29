@@ -41,7 +41,7 @@ LECTURES = {
  dt.date(YEAR,9,14):  (6,"Computing the determinant and the inverse","5.2-5.4",[("Handout-Determinant-and-Inverse.pdf","Determinant and Inverse")]),
  dt.date(YEAR,9,16):  (7,"Solving systems of equations by inversion and Cramer's rule; applications","5.4, 5.5, 4.7",[("Handout-Solving-System-of-Equations.pdf","Solving Systems of Equations")]),
  dt.date(YEAR,9,28):  (8,"Limit definition of a derivative; limits","6.2-6.4",[]),
- dt.date(YEAR,9,30):  (None,"Continuity; rules of differentiation","6.7, 7.1-7.3",[]),
+ dt.date(YEAR,9,30):  (9,"Continuity; rules of differentiation","6.7, 7.1-7.3",[("Handout-Rules-of-Differentiation.pdf","Rules of Differentiation")]),
  dt.date(YEAR,10,5):  (None,"Exponential and log functions","10.5",[]),
  dt.date(YEAR,10,7):  (None,"Partial derivatives; total differential and derivative","7.4, 8.1, 8.2, 8.4",[]),
  dt.date(YEAR,10,12): (None,"Implicit function theorem","8.5",[]),
@@ -67,7 +67,7 @@ SPECIAL = {
 }
 # Lectures whose materials have been vetted and published.
 # Add numbers here as each module is checked, then rerun ./build.sh all
-PUBLISHED = {1, 2, 3, 4, 5, 6, 7, 8}
+PUBLISHED = {1, 2, 3, 4, 5, 6, 7, 8, 9}
 # Lectures whose practice problems live in the previous set (or do not exist).
 NO_PRACTICE = {5}
 

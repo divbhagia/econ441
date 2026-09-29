@@ -1,3 +1,6 @@
+% !TEX program = lualatex
+% Tagged PDF/UA output: compile with LuaLaTeX.
+\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagging=on}
 \documentclass{./../../latex/handout}
 \begin{document}
 \thispagestyle{plain}
@@ -27,7 +30,7 @@
 \end{itemize}
 \textit{Exercises}
 \begin{enumerate}
-	\item Find the derivative of $y=-3x^6$? \\~\\ \vspace{1.25cm}
+	\item Find the derivative of $y=-3x^6$. \\~\\ \vspace{1.25cm}
 	\item Verify the inverse function rule for $y=6x+1$. \\~\\ \vspace{2.5cm}
 	\item Find the derivative of $y=1/x$. 
 \end{enumerate}
@@ -70,10 +73,10 @@ Similarly, for $y=ax^2$
 \frac{dy}{d x} &=3 x(2 x)+3\left(x^{2}+1\right) \\
 &=6 x^{2}+3x^2+3 = 9 x^2+3
 \end{aligned}
-\]\\
+\]
 Alternatively, one can write \( y =3x^3+3x \) and evaluate the derivative directly. \\
 \item \underline{Quotient Rule}
-\[ \frac{d}{d x} \frac{f(x)}{g(x)}=\frac{f^{\prime}(x) g(x)-f(x) g^{\prime}(x)}{g(x)^2} \] \\
+\[ \frac{d}{d x} \frac{f(x)}{g(x)}=\frac{f^{\prime}(x) g(x)-f(x) g^{\prime}(x)}{g(x)^2} \]
 \textit{Example}. Given the function \[
 y=\frac{2 x-3}{x+1}
 \]
@@ -122,6 +125,6 @@ If you are bored:
 \textit{Exercise. Verify the product rule using the limit definition of the derivative.} 
 
 Easier if you start with the following definition:
-\[ h'(x)=\lim _{x_0 \rightarrow x}  \frac{h(x)-h(x_0)}{x-x_0} \]\\
+\[ h'(x)=\lim _{x_0 \rightarrow x}  \frac{h(x)-h(x_0)}{x-x_0} \]
 (Hint: Start by adding and subtracting $f(x)g(x_0)$ in the numerator.)
 \end{document}
