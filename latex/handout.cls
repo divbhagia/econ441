@@ -63,12 +63,23 @@
 \RequirePackage{epsfig}
 
 % Math and Font
-\RequirePackage[default]{lato}
-%\RequirePackage{mathastext}
-\RequirePackage{newtxmath}
-\RequirePackage[english]{babel}
-\RequirePackage[utf8x]{inputenc}
-\RequirePackage[T1]{fontenc}
+% Under LuaLaTeX (required for tagged PDF) the lato package's [default]
+% option does not survive the later fontenc reset: every shape fell back to
+% upright Computer Modern, so bold and italic silently printed as plain text.
+% fontspec sets Lato directly, as in tests.cls and the slide decks.
+\ifdefined\directlua
+  \RequirePackage{fontspec}
+  \setmainfont{Lato}
+  \setsansfont{Lato}
+  \RequirePackage{newtxmath}
+  \RequirePackage[english]{babel}
+\else
+  \RequirePackage[default]{lato}
+  \RequirePackage{newtxmath}
+  \RequirePackage[english]{babel}
+  \RequirePackage[utf8x]{inputenc}
+  \RequirePackage[T1]{fontenc}
+\fi
 \RequirePackage{listings}
 %\RequirePackage{amssymb, amsfonts, amsmath, amsthm}
 \RequirePackage{bm}
