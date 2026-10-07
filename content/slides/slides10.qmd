@@ -31,16 +31,16 @@ $$\frac{d R}{d L} = \frac{d R}{d Q} \cdot \frac{d Q}{d L}$$
 ## Exponential Functions
 
 The exponential function can be represented as:
-$$y=f(t)=b^{t} \quad (b>1)$$
+$$y=f(x)=b^{x} \quad (b>1)$$
 where $b$ denotes a fixed base of the exponent.
 
 A more generalized version can be written as:
-$$y=a b^{c t}$$
+$$y=a b^{c x}$$
 
 ## Natural Exponential Function
 
 *Natural exponential function*: the base is a special mathematical constant called Euler's number $e=2.71828...$
-$$y=a e^{r t}$$
+$$y=a e^{r x}$$
 
 ::: {.fragment}
 Where did this number $e$ come from?
@@ -71,10 +71,10 @@ Since the exponential function is a monotonic function, its inverse exists.
 The inverse of the exponential function is called the *log* or *logarithmic* function.
 
 For the exponential function:
-$$y=b^{t} \rightarrow \log_b y = t$$
+$$y=b^{x} \rightarrow \log_b y = x$$
 
 For the natural exponential function:
-$$y=e^{t} \rightarrow \log_{e} y = \ln y = t$$
+$$y=e^{x} \rightarrow \log_{e} y = \ln y = x$$
 
 ## $y = e^x$
 
@@ -86,38 +86,43 @@ $$y=e^{t} \rightarrow \log_{e} y = \ln y = t$$
 
 ## Rules for Logarithmic Functions
 
--   $\ln (u v)=\ln u+\ln v$
+Let $p=\ln u$ and $q=\ln v$, so that $u=e^{p}$ and $v=e^{q}$.
 
--   $\ln (u / v)=\ln u-\ln v$
+$\ln (u v)=\ln u+\ln v$, since
+$$uv=e^{p}e^{q}=e^{p+q} \;\Rightarrow\; \ln(uv)=p+q$$
 
--   $\ln u^{a}=a \ln u$
+$\ln (u / v)=\ln u-\ln v$, since
+$$\frac{u}{v}=\frac{e^{p}}{e^{q}}=e^{p-q} \;\Rightarrow\; \ln\left(\frac{u}{v}\right)=p-q$$
+
+$\ln u^{a}=a \ln u$, since
+$$u^{a}=\left(e^{p}\right)^{a}=e^{ap} \;\Rightarrow\; \ln u^{a}=ap$$
 
 ## Derivatives of Exponential Functions
 
 Derivative of the exponential function:
-$$y=e^{t} \quad \rightarrow \quad \frac{dy}{dt} = e^t$$
+$$y=e^{x} \quad \rightarrow \quad \frac{dy}{dx} = e^x$$
 
 Using the chain rule:
-$$y=e^{f(t)} \quad \rightarrow \quad \frac{dy}{dt} = f'(t) e^{f(t)}$$
+$$y=e^{f(x)} \quad \rightarrow \quad \frac{dy}{dx} = f'(x) e^{f(x)}$$
 
 ## Derivatives of Logarithmic Functions
 
 Derivative of the log function:
-$$\frac{d}{d t} \ln t =\frac{1}{t}$$
+$$\frac{d}{d x} \ln x =\frac{1}{x}$$
 
 Using the chain rule:
-$$\frac{d}{d t} \ln f(t) =\frac{f'(t)}{f(t)}$$
+$$\frac{d}{d x} \ln f(x) =\frac{f'(x)}{f(x)}$$
 
 ## Examples
 
 Find the derivatives for the following functions:
 
-1.  $y=e^t$
-2.  $y=\ln t$
-3.  $y=ae^{rt}$
-4.  $y=e^{-t}$
-5.  $y=\ln at$
-6.  $y=\ln t^{c}$
+1.  $y=e^x$
+2.  $y=\ln x$
+3.  $y=ae^{rx}$
+4.  $y=e^{-x}$
+5.  $y=\ln ax$
+6.  $y=\ln x^{c}$
 
 ## Homework Questions
 
