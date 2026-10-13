@@ -29,24 +29,6 @@ $$P(t) = 2 t^{0.5} + c$$
 
 However, if we have an initial condition such as $P(0) = 50$, we can also find $c$.
 
-## Where Integration Shows Up in Economics
-
-Whenever we know a *rate* and want the *total*:
-
--   Marginal cost $\rightarrow$ total cost; marginal revenue $\rightarrow$ total revenue
-
--   Investment flow $I(t)$ $\rightarrow$ capital stock $K(t)$
-
--   Growth rate of a variable $\rightarrow$ its path over time
-
-And whenever a quantity is an *area under a curve*:
-
--   Consumer surplus and producer surplus
-
--   Present value of a stream of income
-
--   Probabilities and expected values
-
 ## Example: From Marginal Cost to Total Cost
 
 A firm's marginal cost is
@@ -100,6 +82,16 @@ $$\int_a^b f(x)\, d x=\Big[F(x)\Big]_{a}^b=F(b)-F(a)$$
 
 Example:
 $$\int_1^3 2 x^2\, dx = \hspace{7em}$$
+
+## Example: Investment and the Capital Stock
+
+A firm's capital stock $K(t)$ grows through investment: $I(t) = \dfrac{dK}{dt}$.
+
+Suppose $I(t) = 2t + 5$ and the initial capital stock is $K(0) = 100$.
+
+-   Find the path of the capital stock $K(t)$.
+
+-   How much capital is accumulated between $t = 2$ and $t = 4$?
 
 ## Area Under the Curve
 
