@@ -3,6 +3,8 @@ title: "Exercise"
 nav-sidebar: false
 ---
 
+<p class="project-nav">Graduate Project: <a href="overview.qmd">Overview</a> &middot; <a href="tutorial1.qmd">Tutorial 1</a> &middot; <a href="tutorial2.qmd">Tutorial 2</a> &middot; <a href="exercise.qmd">Exercise</a></p>
+
 The utility function used in Tutorial 2 is called a Cobb-Douglas function. In this exercise, we will consider utility maximization with a CES utility function. In particular, the CES utility function is given by:
 
 $$ U(x_1, x_2) = \left( \alpha x_1^{\rho} + (1 - \alpha) x_2^{\rho} \right)^{1/\rho} $$
@@ -39,4 +41,4 @@ $$ x_2 = \left(\frac{u^{\rho}-\alpha x_1^{\rho}}{1-\alpha}\right)^{1/\rho} $$
 
 Fixing $u=100$, plot $x_2$ as a function of $x_1$ for the three cases and parameter values specified in part 2. Use the range of 1 to 20 for $x_1$. As before, superimpose the three indifference curves on the same plot, include a legend, and label the axes.  -->
 
-Write your code and explanations in a Google Colab notebook. Save the notebook as `firstname_lastname.ipynb`, download it on your local machine, and upload it on Canvas.
+Write your code and explanations in a Google Colab notebook. Save the notebook as `firstname_lastname.ipynb`, download it on your local machine, and upload it on Canvas by **Wednesday, December 9**.

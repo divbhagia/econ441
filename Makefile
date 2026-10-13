@@ -12,9 +12,9 @@
 
 SHELL := /bin/bash
 # Published lectures; keep in step with PUBLISHED in syllabus/create_schedule.py.
-LECTURES := 1 2 3 4 5 6 7 8 9 10 11
+LECTURES := 1 2 3 4 5 6 7 8 9 10 11 12
 TMP   := $(TMPDIR)econ441-build
-NOTES := content/notes/{Linear-Algebra,Calculus,Log-and-Exponential-Functions,Optimization}
+NOTES := content/notes/{Linear-Algebra,Calculus,Log-and-Exponential-Functions,Optimization,Optimization-Examples}
 AUX   := aux,log,out,fls,fdb_latexmk,xdv,toc,synctex.gz
 
 .PHONY: all syllabus pdfs site audit slides-pdf
@@ -49,7 +49,7 @@ site:
 	@echo "==> website"
 	@rm -rf $(TMP)
 	@rsync -a --exclude .git --exclude grades --exclude docs --exclude .quarto \
-	          --exclude _freeze --exclude lectures-old --exclude rtp-material \
+	          --exclude _freeze --exclude older-version --exclude rtp-material \
 	          --exclude references --exclude /exams ./ $(TMP)/
 	@cd $(TMP) && quarto render
 	@mkdir -p $(TMP)/docs/syllabus && cp syllabus/Econ441-Syllabus.pdf $(TMP)/docs/syllabus/

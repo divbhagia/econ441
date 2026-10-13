@@ -1,0 +1,113 @@
+---
+title: "Implicit Functions"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 12"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../../assets/slides.scss]
+    embed-resources: true
+---
+
+## Implicit Functions
+
+Explicit function:
+$$y=f\left(x_{1}, x_{2}, \cdots, x_{n}\right)$$
+
+Implicit function:
+$$F\left(y, x_{1}, x_{2}, \cdots, x_{n}\right)=0$$
+
+## Example
+
+Implicit function:
+$$F(x,y)=y-3x^2 =0$$
+
+Corresponding explicit function:
+$$y = f(x) = 3x^2$$
+
+However, not all implicit functions have a corresponding explicit function. E.g. $F(x,y) = x^2 + y^2 -9=0$
+
+## Implicit Function Theorem
+
+Given,
+$$F\left(x, y \right)=0$$
+
+If the following conditions are met:
+
+-   $F_y$ and $F_x$ are continuous, and
+
+-   At some point $(a,b)$, $F_y$ is non-zero
+
+Then in a neighborhood around $(a,b)$, an implicit function exists. Moreover, this function is continuous and has continuous partial derivatives.
+
+## Derivatives of Implicit Functions
+
+Totally differentiating $F$, we have $dF=0$, or
+$$F_{y} d y+F_{1} d x_{1}+\cdots+F_{n} d x_{n}=0$$
+
+Suppose that only $y$ and $x_{1}$ are allowed to vary:
+$$\frac{\partial y}{\partial x_{1}}=-\frac{F_{1}}{F_{y}}$$
+
+In the simple case where the given equation is $F(y, x)=0$, the rule gives
+$$\frac{d y}{d x}=-\frac{F_{x}}{F_{y}}$$
+
+## Example: Market Equilibrium
+
+Demand: $Q^d = 100 - 2P + 0.02Y$, where $Y$ is income
+
+Supply: $Q^s = 20 + 3P - c$, where $c$ is an input cost
+
+In equilibrium $Q^d = Q^s$, that is,
+$$F(P, Y, c) = 80 - 5P + 0.02Y + c = 0$$
+
+This defines the equilibrium price $P$ as an implicit function of $Y$ and $c$. Find $\partial P/\partial Y$ and $\partial P/\partial c$.
+
+Check your answer by solving for $P$ explicitly.
+
+## Example: When You Cannot Solve for $y$
+
+Given the following function, let's find $\partial y/\partial x$ and $\partial y/\partial z$.
+$$F(x,y,z) = x^3 z^2+y^3+4xyz = 0$$
+
+## Another Example
+
+Estimate the following model for demand for fast food:
+$$\text{orders} = \beta_0 + \beta_1 \, \text{price} + \beta_2 \, \text{quality} + \varepsilon$$
+
+What is the interpretation of $\beta_1$?
+
+## Another Example (cont.)
+
+What if instead we estimate:
+$$\ln(\text{orders}) = \beta_0 + \beta_1 \ln(\text{price}) + \beta_2 \, \text{quality} + \varepsilon$$
+
+What is the interpretation of $\beta_1$?
+
+## Another Related Example
+
+Production function:
+$$Y = A L^{\alpha} K^\beta$$
+
+To estimate the elasticities from data:
+$$\ln Y = \ln A + \alpha \ln L+ \beta \ln K + \varepsilon$$
+
+## Elasticity in Logs
+
+Recall that elasticity is a ratio of percentage changes:
+$$\varepsilon = \frac{dQ/Q}{dP/P}$$
+
+Since $d \ln Q = \dfrac{dQ}{Q}$ and $d \ln P = \dfrac{dP}{P}$,
+$$\varepsilon = \frac{d \ln Q}{d \ln P}$$
+
+So if $\ln Q = a - \alpha \ln P$, then $\varepsilon = -\alpha$
+
+## Find the Derivative by Taking the Log
+
+$$\text{Demand:} \quad Q(p) = \frac{c}{p^{\alpha}}$$
+
+## Homework Questions
+
+-   Exercise 8.5: 1, 2 (d), 3 (a)
+
+Textbook reference: 8.5
+
+Midterm 2 is on Wednesday, October 21: a sample exam and a help sheet are posted on the Exams page

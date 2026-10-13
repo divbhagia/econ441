@@ -5,7 +5,7 @@ nav-sidebar: false
 
 #### Who needs to complete this project?
 
-You need to complete this project if you are taking this course for graduate credit. The grade for the project will count in place of the active engagement grade. The project is **due on the last day of class**. 
+You need to complete this project if you are taking this course for graduate credit. The grade for the project (10 points) counts in place of the attendance grade. The project is **due on Wednesday, December 9**, the last day of class.
 
 **Note**: Undergraduate students are not required to complete this assignment, but can do so for fun and I would be happy to check your work, but it will not count towards your grade.
 

@@ -1,0 +1,75 @@
+% !TEX program = lualatex
+% Sample for Midterm 2 (60 min, 20 pts), Calculus module. Q1: Fall 2023 kink
+% (with a plot), Fall 2024 ln(x^2+1), old sample 1 short answers; Q2: old sample 1 Q3 plus a
+% total-differential part; Q3: old sample 2 Q5 without its monotonicity part;
+% Q4: old sample 1 Q4 at 2 + 2 points; Q5: new, integration of marginal cost
+% in the spirit of the lecture's population example.
+\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagging=on}
+\documentclass{./../../latex/tests}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Midterm 2 Sample}
+\rhead{Midterm 2 Sample}
+\vspace{0.5em}
+\testHeader{60}{20}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%% Question 1
+\item (5 pts) Answer the following questions.
+\begin{enumerate}
+% Part
+\item (2 pts) Plot the following function. Is it continuous? Is it differentiable? Justify your answer.
+\[ f(x) = \begin{cases} x^2 & \text{if } x < 0 \\ x & \text{if } x \geq 0 \end{cases} \]
+\vspace{6.5cm}
+% Part
+\item (1 pt) Find the derivative of $f(x) = \ln(x^2 + 1)$.
+\vspace{3cm}
+% Part
+\item (1 pt) Find the derivative of $f(x) = \dfrac{5e^x}{5x+e^x}$.
+\vspace{3.5cm}
+% Part
+\item (1 pt) Find the following integral: $\displaystyle \int_0^3 x^2 \, dx$
+\end{enumerate}
+
+%%%%%%%%%%%%%% Question 2
+\newpage
+\item (5 pts) Consider a utility function for two goods $x$ and $y$ given by:
+\[ U(x, y) = x^{\frac{1}{3}} y^{\frac{2}{3}} \]
+The marginal utility of each good is given by the partial derivative of the utility function with respect to that good.
+\begin{enumerate}
+\item (3 pts) Compute the marginal utility of $x$ (denoted by $U_x$) and the marginal utility of $y$ (denoted by $U_y$) for this utility function.
+\vspace{7cm}
+\item (1 pt) Is the marginal utility of $x$ increasing with respect to $x$? What about with respect to $y$?
+\vspace{5cm}
+\item (1 pt) Find the total differential of $U$. You can denote it by $dU$.
+\end{enumerate}
+
+%%%%%%%%%%%%%% Question 3
+\newpage
+\item (5 pts) Denote the demand for a good as a function of its price by $Q(p)$, and suppose that
+\[ \ln Q(p) = f(p) \]
+\begin{enumerate}
+\item (2 pts) Express the price elasticity of demand $\varepsilon$ in terms of $f'(p)$ and $p$.
+\vspace{6cm}
+\item (2 pts) Now suppose $f(p) = 5 - 2 \ln p$. Find $\varepsilon$. Is demand elastic ($|\varepsilon| > 1$) or inelastic ($|\varepsilon| < 1$)?
+\vspace{5cm}
+\item (1 pt) In words, what does your answer in (b) say happens to the quantity demanded when the price rises by 1\%?
+\end{enumerate}
+
+%%%%%%%%%%%%%% Question 4
+\newpage
+\item (5 pts) Answer the following questions.
+\begin{enumerate}
+\item (2 pts) Let aggregate wealth $W$, technology $A$, and population $N$ be defined as:
+\[ W(t) = A(t) + N(t), \qquad N(t) = k e^{st}, \qquad A(t) = at \]
+where $k$, $s$, and $a$ are constants, and $t$ represents time. Determine the total rate of change of aggregate wealth with respect to time. (You need to find the total derivative of $W$ with respect to time.)
+\vspace{6.5cm}
+\item (3 pts) A firm's marginal cost of producing output $Q$ is
+\[ MC(Q) = 2Q + 4 \]
+and its fixed cost is 10, so that total cost at zero output is $C(0) = 10$. Find the firm's total cost function $C(Q)$. (Remember that marginal cost is the derivative of total cost.) Then, using a definite integral, find the increase in total cost when output rises from $Q = 1$ to $Q = 3$.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

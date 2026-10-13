@@ -72,6 +72,6 @@ If you are enrolled in this course for **undergraduate-level credit**, your grad
 
 Attendance is taken on five randomly chosen, unannounced days over the semester, worth 2 points each and scored all-or-nothing.
 
-If you are enrolled in this course for **graduate-level credit**, you must also complete a project using Python, due on the last day of class. For graduate students, the 10 points allotted to attendance are instead allotted to the project; all other components are unchanged.
+If you are enrolled in this course for **graduate-level credit**, you must also complete a [project using Python](project/overview.qmd), due on the last day of class. For graduate students, the 10 points allotted to attendance are instead allotted to the project; all other components are unchanged.
 
 :::

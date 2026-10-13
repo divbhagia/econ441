@@ -20,6 +20,7 @@ project:
     - "content/practice/practice9.qmd"
     - "content/practice/practice10.qmd"
     - "content/practice/practice11.qmd"
+    - "content/practice/practice12.qmd"
     - "content/slides/slides1.qmd"
     - "content/slides/slides2.qmd"
     - "content/slides/slides3.qmd"
@@ -31,10 +32,12 @@ project:
     - "content/slides/slides9.qmd"
     - "content/slides/slides10.qmd"
     - "content/slides/slides11.qmd"
-    - "content/slides/midterm-review.qmd"
+    - "content/slides/slides12.qmd"
+    - "content/slides/midterm1-review.qmd"
     - "!grades/"
-    - "!lectures-old/"
-    - "!project/"
+    - "!older-version/"
+    - "project/*.qmd"
+    - "!project/solution.ipynb"
 
 execute:
   freeze: auto
@@ -54,6 +57,8 @@ website:
         file: content/preliminaries.qmd
       - text: "Exams"
         file: exams.qmd
+      - text: "Project"
+        file: project/overview.qmd
       - icon: github
         href: https://divbhagia.github.io/econ441/
         aria-label: GitHub repository for this course

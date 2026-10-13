@@ -7,6 +7,8 @@ fig-width: 4
 fig-height: 3
 ---
 
+<p class="project-nav">Graduate Project: <a href="overview.qmd">Overview</a> &middot; <a href="tutorial1.qmd">Tutorial 1</a> &middot; <a href="tutorial2.qmd">Tutorial 2</a> &middot; <a href="exercise.qmd">Exercise</a></p>
+
 You need to know some basic Python programming to complete the project. This tutorial will teach you these basics. If you are already familiar with Python, you can skip this tutorial and proceed to [Tutorial 2](tutorial2.qmd).
 
 If you are looking for some additional resources to learn Python, [QuantEcon](https://quantecon.org) is a great resource for learning programming, with a focus on economics and finance. You can find their Python programming lectures [here](https://python-programming.quantecon.org/).

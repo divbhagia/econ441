@@ -1,0 +1,66 @@
+% !TEX program = lualatex
+% Trimmed from the Comparative Statics section of the old help sheet
+% (older-version/exams/Midterm/midterm-help-sheet.tex): definitions and the
+% product/quotient rules only, no rules for specific functions. Two columns
+% so that it fits on one page.
+\DocumentMetadata{pdfstandard=UA-2,pdfversion=2.0,lang=en-US,tagging=on}
+\documentclass{./../../latex/tests}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Midterm Exam 2: Help Sheet}
+\rhead{Midterm Exam 2: Help Sheet}
+\vspace{-1.2em}
+\small
+\setlength{\parskip}{1.6mm}
+\setlength{\abovedisplayskip}{4pt}
+\setlength{\belowdisplayskip}{4pt}
+\setlength{\abovedisplayshortskip}{3pt}
+\setlength{\belowdisplayshortskip}{3pt}
+\setlength{\columnsep}{9mm}
+
+\begin{multicols}{2}
+
+\textbf{Limit Definition of the Derivative}
+\[ \frac{dy}{dx} = f'(x_0) = \lim_{\Delta x \rightarrow 0} \frac{f\left(x_{0}+\Delta x\right)-f\left(x_{0}\right)}{\Delta x} \]
+
+\textbf{Limit of a Function}\\
+The limit of a function $f(x)$ exists at $x = a$ if both the right-side and left-side limits at $a$ are equal.
+
+\textbf{Continuity of a Function}\\
+A function $y = f(x)$ is continuous at $a$ if the limit of $f(x)$ at $a$ exists and is equal to the value of the function at $a$, i.e. $\lim_{x \rightarrow a} f(x) = f(a)$.
+
+\textbf{Product Rule}
+\[ \frac{d}{dx}[f(x) g(x)] = f(x) g'(x) + f'(x) g(x) \]
+
+\textbf{Quotient Rule}
+\[ \frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x) g(x) - f(x) g'(x)}{g(x)^2} \]
+
+\textbf{Elasticity}
+\[ \varepsilon = \frac{\text{Percentage change in } y}{\text{Percentage change in } x} = \frac{dy/y}{dx/x} = \frac{dy}{dx} \cdot \frac{x}{y} = \frac{d \ln y}{d \ln x} \]
+
+\textbf{Integration}\\
+Integration reverses differentiation: if $F'(x) = f(x)$, then
+\[ \int f(x)\, dx = F(x) + c \qquad \int_a^b f(x)\, dx = F(b) - F(a) \]
+
+\columnbreak
+
+\textbf{Partial Derivative}\\
+If $x_1$ changes by $\Delta x_1$ but all other variables remain constant:
+\[ \frac{\Delta y}{\Delta x_{1}} = \frac{f\left(x_{1}+\Delta x_1, x_{2}, \ldots, x_{n}\right)-f\left(x_{1}, x_{2}, \ldots, x_{n}\right)}{\Delta x_{1}} \]
+The partial derivative of $y$ with respect to $x_i$:
+\[ \frac{\partial y}{\partial x_{i}} = f_i = \lim_{\Delta x_{i} \rightarrow 0} \frac{\Delta y}{\Delta x_{i}} \]
+
+\textbf{Gradient Vector}
+\[ \nabla f(x_1, x_2, \ldots, x_n) = [f_1, f_2, \ldots, f_n]^T \]
+
+\textbf{Total Differential}
+\[ df = f_{1}\, dx_{1} + f_{2}\, dx_{2} + \cdots + f_{n}\, dx_{n} = \sum_{i=1}^{n} f_{i}\, dx_{i} \]
+
+\textbf{Total Derivative}\\
+Total derivative with respect to $x_1$:
+\[ \frac{df}{dx_1} = f_{1} + f_{2} \frac{dx_{2}}{dx_1} + \cdots + f_{n} \frac{dx_{n}}{dx_1} \]
+If $x_i$ does not depend on $x_1$ then $dx_i/dx_1 = 0$. If $f$ does not directly depend on $x_1$ then $f_{1} = 0$.
+
+\end{multicols}
+
+\end{document}

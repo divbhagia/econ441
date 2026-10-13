@@ -6,9 +6,11 @@ fig-width: 4
 fig-height: 3
 ---
 
+<p class="project-nav">Graduate Project: <a href="overview.qmd">Overview</a> &middot; <a href="tutorial1.qmd">Tutorial 1</a> &middot; <a href="tutorial2.qmd">Tutorial 2</a> &middot; <a href="exercise.qmd">Exercise</a></p>
+
 <!-- Before, we get started with the tutorial, note that you can launch the content of this page in a [Google Colab](https://colab.research.google.com) notebook by clicking here. This will allow you to run the code interactively and make changes to the code. -->
 
-In this tutorial, we’ll work through example 1 from the constrained optimization problems provided [here](notes/Optimization-Examples.pdf). In particular, our optimization problem is as follows:
+In this tutorial, we’ll work through example 1 from the constrained optimization problems provided [here](../content/notes/Optimization-Examples.pdf). In particular, our optimization problem is as follows:
 
 $$ \max_{x_1, x_2} \quad x_1^{\alpha} x_2^{\beta} \quad \text{s.t.} \quad p_1 x_1 + p_2 x_2 = m $$
 

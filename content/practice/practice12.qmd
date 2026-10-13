@@ -1,0 +1,74 @@
+---
+title: "Practice Problems 12"
+subtitle: "Lecture 12: Implicit Functions"
+format: html
+---
+
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each question yourself first, then expand the **Solution** to check.
+
+## Exercise 8.5
+
+**1.** For each $F(x,y)=0$, find $dy/dx$:
+
+a. $y-6x+7=0$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+With $F_{x}=-6$ and $F_{y}=1$, the implicit-function rule gives
+
+$$\frac{dy}{dx}=-\frac{F_{x}}{F_{y}}=-\frac{-6}{1}=6$$
+
+Equivalently, solving for $y=6x-7$ and differentiating gives $dy/dx=6$.
+
+</details>
+
+b. $3y+12x+17=0$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+With $F_{x}=12$ and $F_{y}=3$,
+
+$$\frac{dy}{dx}=-\frac{F_{x}}{F_{y}}=-\frac{12}{3}=-4$$
+
+</details>
+
+c. $x^{2}+6x-13-y=0$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+With $F_{x}=2x+6$ and $F_{y}=-1$,
+
+$$\frac{dy}{dx}=-\frac{F_{x}}{F_{y}}=-\frac{2x+6}{-1}=2x+6$$
+
+</details>
+
+**2.** For each $F(x,y)=0$ use the implicit-function rule to find $dy/dx$:
+
+d. $F(x,y)=6x^{3}-3y=0$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$F_{x}=18x^{2} \qquad F_{y}=-3$$
+
+$$\frac{dy}{dx}=-\frac{F_{x}}{F_{y}}=-\frac{18x^{2}}{-3}=6x^{2}$$
+
+</details>
+
+**3.** For each $F(x,y,z)=0$ use the implicit-function rule to find $\partial y/\partial x$ and $\partial y/\partial z$:
+
+a. $F(x,y,z)=x^{2}y^{3}+z^{2}+xyz=0$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$F_{x}=2xy^{3}+yz \qquad F_{y}=3x^{2}y^{2}+xz \qquad F_{z}=2z+xy$$
+
+$$\frac{\partial y}{\partial x}=-\frac{F_{x}}{F_{y}}=-\frac{2xy^{3}+yz}{3x^{2}y^{2}+xz}$$
+
+$$\frac{\partial y}{\partial z}=-\frac{F_{z}}{F_{y}}=-\frac{2z+xy}{3x^{2}y^{2}+xz}$$
+
+</details>
