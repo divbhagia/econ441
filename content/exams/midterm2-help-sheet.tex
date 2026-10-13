@@ -35,23 +35,20 @@ A function $y = f(x)$ is continuous at $a$ if the limit of $f(x)$ at $a$ exists 
 \textbf{Quotient Rule}
 \[ \frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x) g(x) - f(x) g'(x)}{g(x)^2} \]
 
-\textbf{Elasticity}
-\[ \varepsilon = \frac{\text{Percentage change in } y}{\text{Percentage change in } x} = \frac{dy/y}{dx/x} = \frac{dy}{dx} \cdot \frac{x}{y} = \frac{d \ln y}{d \ln x} \]
-
-\textbf{Integration}\\
-Integration reverses differentiation: if $F'(x) = f(x)$, then
-\[ \int f(x)\, dx = F(x) + c \qquad \int_a^b f(x)\, dx = F(b) - F(a) \]
-
-\columnbreak
-
 \textbf{Partial Derivative}\\
 If $x_1$ changes by $\Delta x_1$ but all other variables remain constant:
-\[ \frac{\Delta y}{\Delta x_{1}} = \frac{f\left(x_{1}+\Delta x_1, x_{2}, \ldots, x_{n}\right)-f\left(x_{1}, x_{2}, \ldots, x_{n}\right)}{\Delta x_{1}} \]
+\[ \frac{\Delta y}{\Delta x_{1}} = \frac{f\left(x_{1}+\Delta x_1, x_{2}, \ldots, x_{n}\right)-f\left(x_{1}, \ldots, x_{n}\right)}{\Delta x_{1}} \]
 The partial derivative of $y$ with respect to $x_i$:
 \[ \frac{\partial y}{\partial x_{i}} = f_i = \lim_{\Delta x_{i} \rightarrow 0} \frac{\Delta y}{\Delta x_{i}} \]
 
 \textbf{Gradient Vector}
 \[ \nabla f(x_1, x_2, \ldots, x_n) = [f_1, f_2, \ldots, f_n]^T \]
+
+\columnbreak
+
+\textbf{Elasticity}\\
+Percentage change in $y$ per percentage change in $x$:
+\[ \varepsilon = \frac{dy/y}{dx/x} = \frac{dy}{dx} \cdot \frac{x}{y} = \frac{d \ln y}{d \ln x} \]
 
 \textbf{Total Differential}
 \[ df = f_{1}\, dx_{1} + f_{2}\, dx_{2} + \cdots + f_{n}\, dx_{n} = \sum_{i=1}^{n} f_{i}\, dx_{i} \]
@@ -60,6 +57,11 @@ The partial derivative of $y$ with respect to $x_i$:
 Total derivative with respect to $x_1$:
 \[ \frac{df}{dx_1} = f_{1} + f_{2} \frac{dx_{2}}{dx_1} + \cdots + f_{n} \frac{dx_{n}}{dx_1} \]
 If $x_i$ does not depend on $x_1$ then $dx_i/dx_1 = 0$. If $f$ does not directly depend on $x_1$ then $f_{1} = 0$.
+
+\textbf{Integration}\\
+Integration reverses differentiation: if $F'(x) = f(x)$, then
+\[ \int f(x)\, dx = F(x) + c \]
+\[ \int_a^b f(x)\, dx = F(b) - F(a) \]
 
 \end{multicols}
 
