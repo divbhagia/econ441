@@ -9,10 +9,9 @@ format: html
 
 **Wednesday, October 21**, in class. It covers the Calculus module (Lectures 8 to 13).
 
+- [Review Slides](content/slides/midterm2-review.html) ([PDF](content/slides/midterm2-review.pdf))
 - [Help Sheet](content/exams/midterm2-help-sheet.pdf): the formula sheet provided with the exam
 - [Sample Exam](content/exams/midterm2-sample.pdf) ([Solutions](content/exams/midterm2-sample-solutions.pdf))
-
-Review slides go up before the review session on Monday, October 19.
 
 ### Midterm Exam 1
 

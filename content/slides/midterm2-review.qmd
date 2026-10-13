@@ -1,0 +1,176 @@
+---
+title: "Midterm 2 Review"
+subtitle: "ECON 441: Introduction to Mathematical Economics"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../../assets/slides.scss]
+    embed-resources: true
+    filters:
+      - ../../assets/section-slides.lua
+---
+
+## What's on the exam
+
+-   Wednesday, October 21, in class. 60 minutes, 20 points.
+
+-   Module III: Calculus (Lectures 8--13)
+
+-   Chiang & Wainwright: 6.2--6.4, 6.7, 7.1--7.4, 8.1, 8.2, 8.4, 8.5, 10.5, 14.1--14.3
+
+-   The help sheet provided with the exam is on the course website
+
+-   Closed book: no phones or computers
+
+# Limits and the Derivative
+
+## The Derivative
+
+Average rate of change, then let the change shrink:
+$$\frac{d y}{d x} = f'(x)= \lim_{\Delta x \rightarrow 0} \frac{f\left(x+\Delta x\right)-f\left(x\right)}{\Delta x}$$
+
+Use the limit definition to find $f'(x)$ for $y = f(x) = x^2 + 3x$.
+
+## Limits and Continuity
+
+$\lim_{x \rightarrow a} f(x) = L$ exists only if the left-side and right-side limits agree.
+
+$f$ is *continuous* at $a$ if the limit exists and $\lim_{x \rightarrow a} f(x) = f(a)$.
+
+$$f(x) = \begin{cases} x+1 & \text{if } x < 1 \\ 3 & \text{if } x = 1 \\ x + 1 & \text{if } x > 1 \end{cases}$$
+
+Does $\lim_{x \rightarrow 1} f(x)$ exist? Is $f$ continuous at $x = 1$?
+
+## Continuity and Differentiability
+
+Continuity is *necessary* for differentiability, but not *sufficient*.
+
+$$g(x) = \begin{cases} 2x & \text{if } x < 1 \\ x + 1 & \text{if } x \geq 1 \end{cases}$$
+
+Plot $g$. Is it continuous at $x = 1$? Is it differentiable there?
+
+# Rules of Differentiation
+
+## The Rules
+
+Constant, power, sum-difference; then
+
+$$\frac{d}{d x}[f g]=f g' + f' g \qquad \frac{d}{d x} \frac{f}{g}=\frac{f' g-f g'}{g^2} \qquad \frac{d z}{d x}=\frac{d z}{d y} \cdot \frac{d y}{d x}$$
+
+Find $dy/dx$:
+
+-   $y = (x^2 + 1)(3x - 2)$
+
+-   $y = \dfrac{x}{x + 2}$
+
+-   $y = (2x + 1)^3$
+
+## Exponential and Log Functions
+
+$$\frac{d}{dx} e^{f(x)} = f'(x) e^{f(x)} \qquad \frac{d}{dx} \ln f(x) = \frac{f'(x)}{f(x)}$$
+
+$$\ln(uv) = \ln u + \ln v \qquad \ln(u/v) = \ln u - \ln v \qquad \ln u^a = a \ln u$$
+
+Find $dy/dx$:
+
+-   $y = 3e^{2x}$
+
+-   $y = x^2 \ln x$
+
+-   $y = \ln(x^2 + 4)$
+
+## Elasticity in Logs
+
+$$\varepsilon = \frac{dy}{dx} \cdot \frac{x}{y} = \frac{d \ln y}{d \ln x}$$
+
+Demand satisfies $\ln Q = 2 - 0.5 \ln p$. What is the price elasticity of demand? Is demand elastic or inelastic?
+
+# Functions of Several Variables
+
+## Partial Derivatives
+
+Differentiate with respect to one variable, holding the others constant.
+
+$$f(x, y) = x^2 y + y^3$$
+
+Find $f_x$, $f_y$, and the gradient $\nabla f$. Is $f_x$ increasing in $y$?
+
+## Production Function
+
+$$Q = K^{0.3} L^{0.7}$$
+
+Find the marginal product of capital $Q_K$ and of labor $Q_L$.
+
+Is the marginal product of labor decreasing in $L$?
+
+## Elasticity
+
+$$\varepsilon = \frac{\text{Percentage change in } y}{\text{Percentage change in } x} = \frac{dy}{dx} \cdot \frac{x}{y}$$
+
+Demand is $Q = 50 - 2p$. Find the elasticity at $p = 10$. Elastic or inelastic?
+
+## Total Differential and Total Derivative
+
+For $y = f(x_1, x_2)$:
+$$dy = f_1\, dx_1 + f_2\, dx_2 \qquad \frac{dy}{dx_1} = f_1 + f_2 \frac{dx_2}{dx_1}$$
+
+$z = x^2 + xy$, where $x = t$ and $y = t^2$. Find $dz$ and $dz/dt$.
+
+## Total Derivative with Time
+
+Output $Y(t) = K(t) + N(t)$, where $K(t) = 3t$ and $N(t) = e^{0.5t}$.
+
+Find the rate of change of output over time, $dY/dt$.
+
+# Implicit Functions
+
+## Implicit-Function Rule
+
+For $F(x, y) = 0$, totally differentiate: $F_x\, dx + F_y\, dy = 0$, so
+$$\frac{dy}{dx} = -\frac{F_x}{F_y}$$
+
+$F(x, y) = x^2 + y^2 - 25 = 0$. Find $dy/dx$, and its value at $(3, 4)$.
+
+## Market Equilibrium
+
+Demand $Q^d = 60 - 3P + 0.1Y$, supply $Q^s = 10 + 2P$.
+
+Write the equilibrium condition as $F(P, Y) = 0$ and find $\partial P/\partial Y$ by the implicit-function rule. Check by solving for $P$.
+
+# Integration
+
+## Rules of Integration
+
+$$\int x^n\, dx = \frac{x^{n+1}}{n+1} + c \ (n \neq -1) \qquad \int e^x\, dx = e^x + c \qquad \int \frac{1}{x}\, dx = \ln x + c$$
+
+Find:
+
+-   $\displaystyle \int (3x^2 + 2x)\, dx$
+
+-   $\displaystyle \int 4e^{-2x}\, dx$
+
+## Definite Integrals
+
+$$\int_a^b f(x)\, dx = F(b) - F(a)$$
+
+Evaluate $\displaystyle \int_1^2 \left( x + \frac{1}{x} \right) dx$
+
+## Marginal to Total
+
+A firm's marginal cost is $MC(Q) = 4Q + 1$ and its fixed cost is 20.
+
+Find the total cost function $C(Q)$. What is the cost of raising output from $Q = 2$ to $Q = 4$?
+
+## For your review
+
+-   Lecture slides and worksheets
+
+-   Practice problems 8--13 with solutions, also collected as one PDF for the module
+
+-   Module notes for Calculus and for Log and Exponential Functions
+
+-   Sample exam and help sheet, on the Exams page
+
+-   Additional problems in the textbook
+
+Good luck!

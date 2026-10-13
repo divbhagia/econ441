@@ -21,6 +21,7 @@ project:
     - "content/practice/practice10.qmd"
     - "content/practice/practice11.qmd"
     - "content/practice/practice12.qmd"
+    - "content/practice/practice13.qmd"
     - "content/slides/slides1.qmd"
     - "content/slides/slides2.qmd"
     - "content/slides/slides3.qmd"
@@ -33,7 +34,9 @@ project:
     - "content/slides/slides10.qmd"
     - "content/slides/slides11.qmd"
     - "content/slides/slides12.qmd"
+    - "content/slides/slides13.qmd"
     - "content/slides/midterm1-review.qmd"
+    - "content/slides/midterm2-review.qmd"
     - "!grades/"
     - "!older-version/"
     - "project/*.qmd"
@@ -76,6 +79,18 @@ website:
           file: content/calculus.qmd
         - text: "IV. Optimization"
           file: content/optimization.qmd
+    - title: "Project"
+      style: "docked"
+      search: false
+      contents:
+        - text: "Overview"
+          file: project/overview.qmd
+        - text: "Tutorial 1: Python Basics"
+          file: project/tutorial1.qmd
+        - text: "Tutorial 2: Optimization"
+          file: project/tutorial2.qmd
+        - text: "Exercise"
+          file: project/exercise.qmd
 
   page-footer:
       2026 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) | [Accessibility](/accessibility.qmd) | Made with [Quarto](https://quarto.org/)

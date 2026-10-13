@@ -1,0 +1,106 @@
+---
+title: "Practice Problems 13"
+subtitle: "Lecture 13: Integration"
+format: html
+---
+
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each question yourself first, then expand the **Solution** to check.
+
+## Exercise 14.2
+
+**1.** Find the following:
+
+a. $\displaystyle\int 16x^{-3}\, dx \quad (x \neq 0)$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\int 16x^{-3}\, dx = 16 \cdot \frac{x^{-2}}{-2} + c = -8x^{-2} + c$$
+
+</details>
+
+c. $\displaystyle\int \left(x^{5}-3x\right) dx$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\int \left(x^{5}-3x\right) dx = \int x^{5}\, dx - 3\int x\, dx = \frac{x^{6}}{6} - \frac{3x^{2}}{2} + c$$
+
+</details>
+
+d. $\displaystyle\int 2e^{-2x}\, dx$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\int 2e^{-2x}\, dx = 2\int e^{-2x}\, dx = 2 \cdot \frac{e^{-2x}}{-2} + c = -e^{-2x} + c$$
+
+</details>
+
+## Exercise 14.3
+
+**1.** Evaluate the following:
+
+a. $\displaystyle\int_{1}^{3} \tfrac{1}{2}x^{2}\, dx$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\int_{1}^{3} \frac{1}{2}x^{2}\, dx = \left[\frac{x^{3}}{6}\right]_{1}^{3} = \frac{27 - 1}{6} = \frac{13}{3}$$
+
+</details>
+
+e. $\displaystyle\int_{-1}^{1} \left(ax^{2}+bx+c\right) dx$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\begin{aligned}
+\int_{-1}^{1} \left(ax^{2}+bx+c\right) dx &= \left[\frac{ax^{3}}{3}+\frac{bx^{2}}{2}+cx\right]_{-1}^{1} \\
+&= \left(\frac{a}{3}+\frac{b}{2}+c\right)-\left(-\frac{a}{3}+\frac{b}{2}-c\right) = \frac{2a}{3}+2c
+\end{aligned}$$
+
+</details>
+
+**2.** Evaluate the following:
+
+a. $\displaystyle\int_{1}^{2} e^{-2x}\, dx$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\begin{aligned}
+\int_{1}^{2} e^{-2x}\, dx &= \left[\frac{e^{-2x}}{-2}\right]_{1}^{2} \\
+&= -\frac{1}{2}\left(e^{-4}-e^{-2}\right) = \frac{1}{2}\left(e^{-2}-e^{-4}\right)
+\end{aligned}$$
+
+</details>
+
+d. $\displaystyle\int_{e}^{6} \left(\frac{1}{x}+\frac{1}{1+x}\right) dx$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\Big[\ln x + \ln(1+x)\Big]_{e}^{6} = \ln 6 + \ln 7 - \ln e - \ln(1+e) = \ln 42 - 1 - \ln(1+e)$$
+
+</details>
+
+**5.** Verify that a constant $c$ can be equivalently expressed as a definite integral:
+
+a. $c=\displaystyle\int_{0}^{b} \frac{c}{b}\, dx$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\int_{0}^{b} \frac{c}{b}\, dx = \left[\frac{cx}{b}\right]_{0}^{b} = \frac{cb}{b} - 0 = c$$
+
+</details>
+
+b. $c=\displaystyle\int_{0}^{c} 1\, dt$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\int_{0}^{c} 1\, dt = \Big[t\Big]_{0}^{c} = c - 0 = c$$
+
+</details>
