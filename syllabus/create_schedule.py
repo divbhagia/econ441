@@ -45,7 +45,7 @@ LECTURES = {
  dt.date(YEAR,10,5):  (10,"Exponential and log functions","10.5",[("Handout-Log-Exponential.pdf","Exponential and Log Functions")]),
  dt.date(YEAR,10,7):  (11,"Partial derivatives; total differential and derivative","7.4, 8.1, 8.2, 8.4",[]),
  dt.date(YEAR,10,12): (12,"Implicit function theorem","8.5",[]),
- dt.date(YEAR,10,14): (13,"Integration","14.1-14.3",[]),
+ dt.date(YEAR,10,14): (13,"Integration","14.1-14.3",[("Handout-Integration.pdf","Integration")]),
  dt.date(YEAR,10,26): (None,"Unconstrained single-variable optimization","9.1, 9.2",[]),
  dt.date(YEAR,10,28): (None,"Concave and convex functions","9.3, 9.4",[]),
  dt.date(YEAR,11,2):  (None,"Multivariable optimization: first-order conditions","11.1",[]),

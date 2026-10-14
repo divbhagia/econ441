@@ -120,16 +120,13 @@ $$\begin{aligned}
 
 ## Example: Consumer Surplus
 
+Demand: $p = 48 - Q^2$. Market price: $p = 12$. Find the consumer surplus.
+
 ::: {.columns}
-::: {.column width="55%"}
-![](../../assets/fig/consumer-surplus.svg){.nostretch fig-alt="The demand curve p equals 48 minus Q squared, falling from a price of 48 at zero quantity and getting steeper as quantity rises, with dashed lines marking the market price of 12 on the price axis and the quantity of 6 on the quantity axis, meeting at a point on the curve" width=520}
+::: {.column width="50%"}
+![](../../assets/fig/consumer-surplus.svg){.nostretch fig-alt="The demand curve p equals 48 minus Q squared, falling from a price of 48 at zero quantity and getting steeper as quantity rises, with dashed lines marking the market price of 12 on the price axis and the quantity of 6 on the quantity axis, meeting at a point on the curve" width=480}
 :::
-::: {.column width="45%"}
-Demand: $p = 48 - Q^2$
-
-Market price: $p = 12$
-
-Find the consumer surplus.
+::: {.column width="50%"}
 :::
 :::
 
