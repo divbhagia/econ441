@@ -120,10 +120,10 @@ $$\begin{aligned}
 
 ## Example: Consumer Surplus
 
-Demand is $p = 20 - Q$ and the market price is $p = 8$, so $Q = 12$ units are sold.
+Demand is $p = 48 - Q^2$ and the market price is $p = 12$, so $Q = 6$ units are sold.
 
-Consumer surplus is the area under the demand curve and above the price:
-$$CS = \int_0^{12} (20 - Q)\, dQ - 8 \times 12 = \hspace{6em}$$
+Consumer surplus is the area under the demand curve and above the price. The curve is not a straight line, so it is not a triangle: we need the integral.
+$$CS = \int_0^{6} (48 - Q^2)\, dQ - 12 \times 6 = \hspace{6em}$$
 
 ## Homework Questions
 
