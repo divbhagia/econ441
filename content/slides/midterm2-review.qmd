@@ -14,7 +14,7 @@ format:
 
 -   Wednesday, October 21, in class. 60 minutes, 20 points.
 
--   Module III: Calculus (Lectures 8--12). Integration (Lecture 13) is not covered.
+-   Module III: Calculus (Lectures 8--12; integration is not covered)
 
 -   A sample exam with solutions and the help sheet provided with the exam are on the Exams page
 
@@ -53,7 +53,7 @@ Plot $g$. Is it continuous at $x = 1$? Is it differentiable there?
 
 ## The Rules
 
-Constant, power, sum-difference; then
+Constant, power, sum-difference, and the inverse-function rule $\dfrac{dx}{dy} = \dfrac{1}{dy/dx}$; then
 
 $$\frac{d}{d x}[f g]=f g' + f' g \qquad \frac{d}{d x} \frac{f}{g}=\frac{f' g-f g'}{g^2} \qquad \frac{d z}{d x}=\frac{d z}{d y} \cdot \frac{d y}{d x}$$
 
