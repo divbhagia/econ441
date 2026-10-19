@@ -14,11 +14,13 @@ format:
 
 -   Wednesday, October 21, in class. 60 minutes, 20 points.
 
--   Module III: Calculus (Lectures 8--13)
+-   Module III: Calculus (Lectures 8--12). Integration (Lecture 13) is not covered.
 
--   The help sheet provided with the exam is on the course website
+-   A sample exam with solutions and the help sheet provided with the exam are on the Exams page
 
 -   Closed book: no phones or computers
+
+-   For your review: lecture slides and worksheets, Practice Problems 8--12 (also collected as one PDF for the module), the module notes, and additional problems in the textbook
 
 # Limits and the Derivative
 
@@ -134,41 +136,3 @@ $F(x, y) = x^2 + y^2 - 25 = 0$. Find $dy/dx$, and its value at $(3, 4)$.
 Demand $Q^d = 60 - 3P + 0.1Y$, supply $Q^s = 10 + 2P$.
 
 Write the equilibrium condition as $F(P, Y) = 0$ and find $\partial P/\partial Y$ by the implicit-function rule. Check by solving for $P$.
-
-# Integration
-
-## Rules of Integration
-
-$$\int x^n\, dx = \frac{x^{n+1}}{n+1} + c \ (n \neq -1) \qquad \int e^x\, dx = e^x + c \qquad \int \frac{1}{x}\, dx = \ln x + c$$
-
-Find:
-
--   $\displaystyle \int (3x^2 + 2x)\, dx$
-
--   $\displaystyle \int 4e^{-2x}\, dx$
-
-## Definite Integrals
-
-$$\int_a^b f(x)\, dx = F(b) - F(a)$$
-
-Evaluate $\displaystyle \int_1^2 \left( x + \frac{1}{x} \right) dx$
-
-## Marginal to Total
-
-A firm's marginal cost is $MC(Q) = 4Q + 1$ and its fixed cost is 20.
-
-Find the total cost function $C(Q)$. What is the cost of raising output from $Q = 2$ to $Q = 4$?
-
-## For your review
-
--   Lecture slides and worksheets
-
--   Practice problems 8--13 with solutions, also collected as one PDF for the module
-
--   Module notes for Calculus and for Log and Exponential Functions
-
--   Sample exam and help sheet, on the Exams page
-
--   Additional problems in the textbook
-
-Good luck!

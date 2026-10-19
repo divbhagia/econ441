@@ -7,7 +7,7 @@ format: html
 
 ### Midterm Exam 2
 
-**Wednesday, October 21**, in class. It covers the Calculus module (Lectures 8 to 13).
+**Wednesday, October 21**, in class. It covers the Calculus module (Lectures 8 to 12). Integration (Lecture 13) is not covered on this exam.
 
 - [Review Slides](content/slides/midterm2-review.html) ([PDF](content/slides/midterm2-review.pdf))
 - [Help Sheet](content/exams/midterm2-help-sheet.pdf): the formula sheet provided with the exam
