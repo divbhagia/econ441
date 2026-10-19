@@ -33,13 +33,18 @@ Use the limit definition to find $f'(x)$ for $y = f(x) = x^2 + 3x$.
 
 ## Limits and Continuity
 
-$\lim_{x \rightarrow a} f(x) = L$ exists only if the left-side and right-side limits agree.
+$\lim_{x \rightarrow a} f(x)$ exists only if the left-side and right-side limits agree; $f$ is *continuous* at $a$ if the limit exists and equals $f(a)$.
 
-$f$ is *continuous* at $a$ if the limit exists and $\lim_{x \rightarrow a} f(x) = f(a)$.
+::: {.columns}
+::: {.column width="50%"}
+![](../../assets/fig/discont-jump.svg){.nostretch fig-alt="A line of slope 1 rising to an open circle at the point (1, 2), then jumping up to a filled dot at (1, 3) and continuing with slope 1 from there" width=400}
+:::
+::: {.column width="50%"}
+![](../../assets/fig/discont-hole.svg){.nostretch fig-alt="A line of slope 1 with a hole, an open circle, at the point (1, 2), and an isolated filled dot above the hole at (1, 3); the line continues past the hole with the same slope" width=400}
+:::
+:::
 
-$$f(x) = \begin{cases} x+1 & \text{if } x < 1 \\ 3 & \text{if } x = 1 \\ x + 1 & \text{if } x > 1 \end{cases}$$
-
-Does $\lim_{x \rightarrow 1} f(x)$ exist? Is $f$ continuous at $x = 1$?
+For each function: does $\lim_{x \rightarrow 1} f(x)$ exist? Is $f$ continuous at $x = 1$?
 
 ## Continuity and Differentiability
 
@@ -53,7 +58,7 @@ Plot $g$. Is it continuous at $x = 1$? Is it differentiable there?
 
 ## The Rules
 
-Constant, power, sum-difference, and the inverse-function rule $\dfrac{dx}{dy} = \dfrac{1}{dy/dx}$; then
+Product, Quotient, and Chain Rule:
 
 $$\frac{d}{d x}[f g]=f g' + f' g \qquad \frac{d}{d x} \frac{f}{g}=\frac{f' g-f g'}{g^2} \qquad \frac{d z}{d x}=\frac{d z}{d y} \cdot \frac{d y}{d x}$$
 

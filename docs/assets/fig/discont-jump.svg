@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 400" role="img">
+<line x1="60.0" y1="40" x2="60.0" y2="330" stroke="#e4dcde" stroke-width="1.2"/>
+<line x1="230.0" y1="40" x2="230.0" y2="330" stroke="#e4dcde" stroke-width="1.2"/>
+<line x1="315.0" y1="40" x2="315.0" y2="330" stroke="#e4dcde" stroke-width="1.2"/>
+<line x1="400.0" y1="40" x2="400.0" y2="330" stroke="#e4dcde" stroke-width="1.2"/>
+<line x1="60" y1="272.0" x2="400" y2="272.0" stroke="#e4dcde" stroke-width="1.2"/>
+<line x1="60" y1="214.0" x2="400" y2="214.0" stroke="#e4dcde" stroke-width="1.2"/>
+<line x1="60" y1="156.0" x2="400" y2="156.0" stroke="#e4dcde" stroke-width="1.2"/>
+<line x1="60" y1="98.0" x2="400" y2="98.0" stroke="#e4dcde" stroke-width="1.2"/>
+<line x1="60" y1="40.0" x2="400" y2="40.0" stroke="#e4dcde" stroke-width="1.2"/>
+<line x1="50" y1="330.0" x2="410" y2="330.0" stroke="#393A3B" stroke-width="2"/>
+<line x1="145.0" y1="340" x2="145.0" y2="30" stroke="#393A3B" stroke-width="2"/>
+<text x="422.0" y="338.0" font-family="sans-serif" font-weight="700" font-style="italic" font-size="24" fill="#393A3B" text-anchor="middle" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">x</text>
+<text x="159.0" y="26.0" font-family="sans-serif" font-weight="700" font-style="italic" font-size="24" fill="#393A3B" text-anchor="start" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">y</text>
+<line x1="60.0" y1="324.0" x2="60.0" y2="336.0" stroke="#393A3B" stroke-width="1.6"/>
+<text x="60.0" y="360.0" font-family="sans-serif" font-weight="700" font-size="21" fill="#393A3B" text-anchor="middle" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">-1</text>
+<line x1="230.0" y1="324.0" x2="230.0" y2="336.0" stroke="#393A3B" stroke-width="1.6"/>
+<text x="230.0" y="360.0" font-family="sans-serif" font-weight="700" font-size="21" fill="#393A3B" text-anchor="middle" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">1</text>
+<line x1="315.0" y1="324.0" x2="315.0" y2="336.0" stroke="#393A3B" stroke-width="1.6"/>
+<text x="315.0" y="360.0" font-family="sans-serif" font-weight="700" font-size="21" fill="#393A3B" text-anchor="middle" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">2</text>
+<line x1="400.0" y1="324.0" x2="400.0" y2="336.0" stroke="#393A3B" stroke-width="1.6"/>
+<text x="400.0" y="360.0" font-family="sans-serif" font-weight="700" font-size="21" fill="#393A3B" text-anchor="middle" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">3</text>
+<line x1="139.0" y1="272.0" x2="151.0" y2="272.0" stroke="#393A3B" stroke-width="1.6"/>
+<text x="133.0" y="279.0" font-family="sans-serif" font-weight="700" font-size="21" fill="#393A3B" text-anchor="end" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">1</text>
+<line x1="139.0" y1="214.0" x2="151.0" y2="214.0" stroke="#393A3B" stroke-width="1.6"/>
+<text x="133.0" y="221.0" font-family="sans-serif" font-weight="700" font-size="21" fill="#393A3B" text-anchor="end" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">2</text>
+<line x1="139.0" y1="156.0" x2="151.0" y2="156.0" stroke="#393A3B" stroke-width="1.6"/>
+<text x="133.0" y="163.0" font-family="sans-serif" font-weight="700" font-size="21" fill="#393A3B" text-anchor="end" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">3</text>
+<line x1="139.0" y1="98.0" x2="151.0" y2="98.0" stroke="#393A3B" stroke-width="1.6"/>
+<text x="133.0" y="105.0" font-family="sans-serif" font-weight="700" font-size="21" fill="#393A3B" text-anchor="end" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">4</text>
+<line x1="139.0" y1="40.0" x2="151.0" y2="40.0" stroke="#393A3B" stroke-width="1.6"/>
+<text x="133.0" y="47.0" font-family="sans-serif" font-weight="700" font-size="21" fill="#393A3B" text-anchor="end" stroke="white" stroke-width="5" stroke-linejoin="round" paint-order="stroke">5</text>
+<polyline points="60.0,330.0 226.6,216.3" fill="none" stroke="#912040" stroke-width="4" stroke-linecap="round"/>
+<polyline points="233.4,153.7 391.5,45.8" fill="none" stroke="#912040" stroke-width="4" stroke-linecap="round"/>
+<circle cx="230.0" cy="214.0" r="7" fill="white" stroke="#912040" stroke-width="3"/>
+<circle cx="230.0" cy="156.0" r="7" fill="#912040" stroke="#912040" stroke-width="3"/>
+</svg>
