@@ -16,7 +16,7 @@ format:
 
 -   Module III: Calculus (Lectures 8--12; integration is not covered)
 
--   A sample exam with solutions and the help sheet provided with the exam are on the Exams page
+-   A sample exam with solutions and the help sheet provided with the exam are on the Exams page (skip the sample's two integration parts, 1(d) and 4(b))
 
 -   Closed book: no phones or computers
 
