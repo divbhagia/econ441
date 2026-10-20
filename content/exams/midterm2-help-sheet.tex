@@ -35,6 +35,10 @@ A function $y = f(x)$ is continuous at $a$ if the limit of $f(x)$ at $a$ exists 
 \textbf{Quotient Rule}
 \[ \frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x) g(x) - f(x) g'(x)}{g(x)^2} \]
 
+\textbf{Chain Rule}\\
+For $z = f(y)$ and $y = g(x)$:
+\[ \frac{dz}{dx} = \frac{dz}{dy} \cdot \frac{dy}{dx} = f'(y)\, g'(x) \]
+
 \textbf{Partial Derivative}\\
 If $x_1$ changes by $\Delta x_1$ but all other variables remain constant:
 \[ \frac{\Delta y}{\Delta x_{1}} = \frac{f\left(x_{1}+\Delta x_1, x_{2}, \ldots, x_{n}\right)-f\left(x_{1}, \ldots, x_{n}\right)}{\Delta x_{1}} \]
@@ -58,10 +62,10 @@ Total derivative with respect to $x_1$:
 \[ \frac{df}{dx_1} = f_{1} + f_{2} \frac{dx_{2}}{dx_1} + \cdots + f_{n} \frac{dx_{n}}{dx_1} \]
 If $x_i$ does not depend on $x_1$ then $dx_i/dx_1 = 0$. If $f$ does not directly depend on $x_1$ then $f_{1} = 0$.
 
-\textbf{Integration}\\
-Integration reverses differentiation: if $F'(x) = f(x)$, then
-\[ \int f(x)\, dx = F(x) + c \]
-\[ \int_a^b f(x)\, dx = F(b) - F(a) \]
+% \textbf{Integration}\\
+% Integration reverses differentiation: if $F'(x) = f(x)$, then
+% \[ \int f(x)\, dx = F(x) + c \]
+% \[ \int_a^b f(x)\, dx = F(b) - F(a) \]
 
 \end{multicols}
 

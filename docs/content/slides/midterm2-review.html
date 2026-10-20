@@ -1063,7 +1063,7 @@ Div Bhagia
 <section class="slide level2">
 <h2>Elasticity and Logs</h2>
 <p><span class="math display">\[\varepsilon = \frac{dy}{dx} \cdot \frac{x}{y} = \frac{d \ln y}{d \ln x}\]</span></p>
-<p>Demand is <span class="math inline">\(Q = \dfrac{50}{p^{2}}\)</span>. Take logs, then find the price elasticity of demand. Is demand elastic or inelastic?</p>
+<p>Demand is <span class="math inline">\(Q = \dfrac{50}{p^{2}}\)</span>. What is the price elasticity of demand? Is demand elastic or inelastic?</p>
 </section></section>
 <section>
 <section class="title-slide slide level1 section-slide no-print center">
@@ -1073,9 +1073,7 @@ Div Bhagia
 <section class="slide level2">
 <h2>Partial Derivatives</h2>
 <p>Differentiate with respect to one variable, holding the others constant.</p>
-<p> </p>
-<p><span class="math display">\[f(x, y) = x^2 y + y^3\]</span></p>
-<p>Find <span class="math inline">\(f_x\)</span>, <span class="math inline">\(f_y\)</span>, and the gradient <span class="math inline">\(\nabla f\)</span>. Is <span class="math inline">\(f_x\)</span> increasing in <span class="math inline">\(y\)</span>?</p>
+<p>For <span class="math inline">\(f(x, y) = x^2 y + y^3\)</span>, find <span class="math inline">\(f_x\)</span>, <span class="math inline">\(f_y\)</span>, and the gradient <span class="math inline">\(\nabla f\)</span>. Is <span class="math inline">\(f_x\)</span> increasing in <span class="math inline">\(y\)</span>?</p>
 </section>
 <section class="slide level2">
 <h2>Production Function</h2>
@@ -1085,18 +1083,13 @@ Div Bhagia
 </section>
 <section class="slide level2">
 <h2>Total Differential and Total Derivative</h2>
-<p>For <span class="math inline">\(y = f(x_1, x_2, \ldots, x_n)\)</span>, the <em>total differential</em> is <span class="math display">\[dy = f_1\, dx_1 + f_2\, dx_2 + \cdots + f_n\, dx_n\]</span></p>
-<p>If the other variables depend on <span class="math inline">\(x_1\)</span>, the <em>total derivative</em> with respect to <span class="math inline">\(x_1\)</span> is <span class="math display">\[\frac{dy}{dx_1} = f_1 + f_2 \frac{dx_2}{dx_1} + \cdots + f_n \frac{dx_n}{dx_1}\]</span></p>
+<p>For <span class="math inline">\(y = f(x_1, x_2, \ldots, x_n)\)</span>, the <em>total differential</em> is <span class="math display">\[dy = f_1 \cdot dx_1 + f_2 \cdot dx_2 + \cdots + f_n \cdot dx_n\]</span></p>
+<p>If the other variables depend on <span class="math inline">\(x_1\)</span>, the <em>total derivative</em> with respect to <span class="math inline">\(x_1\)</span> is <span class="math display">\[\frac{dy}{dx_1} = f_1 + f_2 \cdot \frac{dx_2}{dx_1} + \cdots + f_n \cdot \frac{dx_n}{dx_1}\]</span></p>
 </section>
 <section class="slide level2">
 <h2>Example</h2>
 <p><span class="math display">\[z = x^2 + xy, \quad \text{where } x = t \text{ and } y = t^2\]</span></p>
 <p>Find the total differential <span class="math inline">\(dz\)</span> and the total derivative <span class="math inline">\(dz/dt\)</span>.</p>
-</section>
-<section class="slide level2">
-<h2>Total Derivative with Time</h2>
-<p>Output <span class="math inline">\(Y(t) = K(t) + N(t)\)</span>, where <span class="math inline">\(K(t) = 3t\)</span> and <span class="math inline">\(N(t) = e^{0.5t}\)</span>.</p>
-<p>Find the rate of change of output over time, <span class="math inline">\(dY/dt\)</span>.</p>
 </section></section>
 <section>
 <section class="title-slide slide level1 section-slide no-print center">
@@ -1105,12 +1098,13 @@ Div Bhagia
 </section>
 <section class="slide level2">
 <h2>Implicit-Function Rule</h2>
-<p>For <span class="math inline">\(F(x, y) = 0\)</span>, totally differentiate: <span class="math inline">\(F_x\, dx + F_y\, dy = 0\)</span>, so <span class="math display">\[\frac{dy}{dx} = -\frac{F_x}{F_y}\]</span></p>
+<p>For <span class="math inline">\(F(x, y) = 0\)</span>, totally differentiate: <span class="math inline">\(F_x \cdot dx + F_y \cdot dy = 0\)</span>, so <span class="math display">\[\frac{dy}{dx} = -\frac{F_x}{F_y}\]</span></p>
 </section>
 <section class="slide level2">
 <h2>Market Equilibrium</h2>
-<p>Demand <span class="math inline">\(Q^d = Y - P^2\)</span>, where <span class="math inline">\(Y\)</span> is income; supply <span class="math inline">\(Q^s = P + \ln P\)</span>.</p>
-<p>The equilibrium condition <span class="math inline">\(Q^d = Q^s\)</span> cannot be solved for <span class="math inline">\(P\)</span> explicitly. Write it as <span class="math inline">\(F(P, Y) = 0\)</span> and find <span class="math inline">\(\partial P/\partial Y\)</span> by the implicit-function rule. Does a rise in income raise the price?</p>
+<p>Demand: <span class="math inline">\(Q^d = Y - P^2\)</span>, with <span class="math inline">\(Y\)</span> income</p>
+<p>Supply: <span class="math inline">\(Q^s = P + \ln P\)</span></p>
+<p>The equilibrium condition cannot be solved for <span class="math inline">\(P\)</span> explicitly. Write it as <span class="math inline">\(F(P, Y) = 0\)</span> and find <span class="math inline">\(\partial P / \partial Y\)</span>. Does higher income raise the price?</p>
 
 
 </section></section>

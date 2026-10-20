@@ -84,7 +84,7 @@ For $e^{f(x)}$ and $\ln f(x)$, combine these with the chain rule. Find $dy/dx$:
 
 $$\varepsilon = \frac{dy}{dx} \cdot \frac{x}{y} = \frac{d \ln y}{d \ln x}$$
 
-Demand is $Q = \dfrac{50}{p^{2}}$. Take logs, then find the price elasticity of demand. Is demand elastic or inelastic?
+Demand is $Q = \dfrac{50}{p^{2}}$. What is the price elasticity of demand? Is demand elastic or inelastic?
 
 # Functions of Several Variables
 
@@ -92,11 +92,7 @@ Demand is $Q = \dfrac{50}{p^{2}}$. Take logs, then find the price elasticity of 
 
 Differentiate with respect to one variable, holding the others constant.
 
-&nbsp;
-
-$$f(x, y) = x^2 y + y^3$$
-
-Find $f_x$, $f_y$, and the gradient $\nabla f$. Is $f_x$ increasing in $y$?
+For $f(x, y) = x^2 y + y^3$, find $f_x$, $f_y$, and the gradient $\nabla f$. Is $f_x$ increasing in $y$?
 
 ## Production Function
 
@@ -109,10 +105,10 @@ Is the marginal product of labor decreasing in $L$?
 ## Total Differential and Total Derivative
 
 For $y = f(x_1, x_2, \ldots, x_n)$, the *total differential* is
-$$dy = f_1\, dx_1 + f_2\, dx_2 + \cdots + f_n\, dx_n$$
+$$dy = f_1 \cdot dx_1 + f_2 \cdot dx_2 + \cdots + f_n \cdot dx_n$$
 
 If the other variables depend on $x_1$, the *total derivative* with respect to $x_1$ is
-$$\frac{dy}{dx_1} = f_1 + f_2 \frac{dx_2}{dx_1} + \cdots + f_n \frac{dx_n}{dx_1}$$
+$$\frac{dy}{dx_1} = f_1 + f_2 \cdot \frac{dx_2}{dx_1} + \cdots + f_n \cdot \frac{dx_n}{dx_1}$$
 
 ## Example
 
@@ -120,21 +116,17 @@ $$z = x^2 + xy, \quad \text{where } x = t \text{ and } y = t^2$$
 
 Find the total differential $dz$ and the total derivative $dz/dt$.
 
-## Total Derivative with Time
-
-Output $Y(t) = K(t) + N(t)$, where $K(t) = 3t$ and $N(t) = e^{0.5t}$.
-
-Find the rate of change of output over time, $dY/dt$.
-
 # Implicit Functions
 
 ## Implicit-Function Rule
 
-For $F(x, y) = 0$, totally differentiate: $F_x\, dx + F_y\, dy = 0$, so
+For $F(x, y) = 0$, totally differentiate: $F_x \cdot dx + F_y \cdot dy = 0$, so
 $$\frac{dy}{dx} = -\frac{F_x}{F_y}$$
 
 ## Market Equilibrium
 
-Demand $Q^d = Y - P^2$, where $Y$ is income; supply $Q^s = P + \ln P$.
+Demand: $Q^d = Y - P^2$, with $Y$ income
 
-The equilibrium condition $Q^d = Q^s$ cannot be solved for $P$ explicitly. Write it as $F(P, Y) = 0$ and find $\partial P/\partial Y$ by the implicit-function rule. Does a rise in income raise the price?
+Supply: $Q^s = P + \ln P$
+
+The equilibrium condition cannot be solved for $P$ explicitly. Write it as $F(P, Y) = 0$ and find $\partial P / \partial Y$. Does higher income raise the price?
