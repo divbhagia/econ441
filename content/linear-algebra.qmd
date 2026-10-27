@@ -25,7 +25,7 @@ Practice problems for this module, collected:
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides3.html" target="_blank" rel="noopener" aria-label="Lecture 3 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides3.pdf" target="_blank" rel="noopener" aria-label="Lecture 3 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="handouts/handout-matrix-operations.pdf" target="_blank" rel="noopener" aria-label="Lecture 3 worksheet: Matrix Operations, PDF (opens in a new tab)" role="button">Worksheet: Matrix Operations</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet3.pdf" target="_blank" rel="noopener" aria-label="Lecture 3 worksheet: Matrix Operations, PDF (opens in a new tab)" role="button">Worksheet: Matrix Operations</a>
 <a class="btn btn-outline-primary" href="practice/practice3.html" target="_blank" rel="noopener" aria-label="Practice Problems 3 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::
@@ -67,7 +67,7 @@ Practice problems for this module, collected:
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides6.html" target="_blank" rel="noopener" aria-label="Lecture 6 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides6.pdf" target="_blank" rel="noopener" aria-label="Lecture 6 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="handouts/handout-determinant-and-inverse.pdf" target="_blank" rel="noopener" aria-label="Lecture 6 worksheet: Determinant and Inverse, PDF (opens in a new tab)" role="button">Worksheet: Determinant and Inverse</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet6.pdf" target="_blank" rel="noopener" aria-label="Lecture 6 worksheet: Determinant and Inverse, PDF (opens in a new tab)" role="button">Worksheet: Determinant and Inverse</a>
 <a class="btn btn-outline-primary" href="practice/practice6.html" target="_blank" rel="noopener" aria-label="Practice Problems 6 (opens in a new tab)" role="button">Practice problems</a>
 <a class="btn btn-outline-primary" href="https://www.youtube.com/watch?v=zoTcQd6hUE4" target="_blank" rel="noopener" aria-label="Video: method for finding the inverse of a matrix, on YouTube (opens in a new tab)" role="button">Video: Finding the Inverse</a>
 <a class="btn btn-outline-primary" href="https://www.youtube.com/watch?v=ybj3tEBBuB0" target="_blank" rel="noopener" aria-label="Video: worked example of finding the inverse of a matrix, on YouTube (opens in a new tab)" role="button">Video: Worked Example</a>
@@ -84,7 +84,7 @@ Practice problems for this module, collected:
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides7.html" target="_blank" rel="noopener" aria-label="Lecture 7 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides7.pdf" target="_blank" rel="noopener" aria-label="Lecture 7 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="handouts/handout-solving-system-of-equations.pdf" target="_blank" rel="noopener" aria-label="Lecture 7 worksheet: Solving Systems of Equations, PDF (opens in a new tab)" role="button">Worksheet: Solving Systems of Equations</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet7.pdf" target="_blank" rel="noopener" aria-label="Lecture 7 worksheet: Solving Systems of Equations, PDF (opens in a new tab)" role="button">Worksheet: Solving Systems of Equations</a>
 <a class="btn btn-outline-primary" href="practice/practice7.html" target="_blank" rel="noopener" aria-label="Practice Problems 7 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::

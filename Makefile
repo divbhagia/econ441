@@ -12,7 +12,7 @@
 
 SHELL := /bin/bash
 # Published lectures; keep in step with PUBLISHED in syllabus/create_schedule.py.
-LECTURES := 1 2 3 4 5 6 7 8 9 10 11 12 13
+LECTURES := 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
 TMP   := $(TMPDIR)econ441-build
 NOTES := content/notes/{Linear-Algebra,Calculus,Log-and-Exponential-Functions,Optimization,Optimization-Examples}
 AUX   := aux,log,out,fls,fdb_latexmk,xdv,toc,synctex.gz
@@ -34,14 +34,14 @@ syllabus:
 # copies them into docs/ on its own.
 pdfs:
 	@echo "==> handouts, practice problems, notes"
-	@for f in content/handouts/*.tex content/practice/practice-*.tex $(NOTES).tex; do \
+	@for f in content/worksheets/*.tex content/practice/practice-*.tex $(NOTES).tex; do \
 	  [ -e "$$f" ] || continue; \
 	  d=$$(dirname "$$f"); b=$$(basename "$$f" .tex); \
 	  (cd "$$d"; lualatex -interaction=nonstopmode "$$b.tex" >/dev/null 2>&1; \
 	             lualatex -interaction=nonstopmode "$$b.tex" >/dev/null 2>&1; \
 	   rm -f "$$b".{$(AUX)}); \
 	done
-	@echo "    $$(ls content/handouts/*.pdf content/practice/practice-*.pdf $(NOTES).pdf 2>/dev/null | wc -l | tr -d ' ') PDFs"
+	@echo "    $$(ls content/worksheets/*.pdf content/practice/practice-*.pdf $(NOTES).pdf 2>/dev/null | wc -l | tr -d ' ') PDFs"
 
 site:
 	@echo "==> schedule table (feeds the web page)"

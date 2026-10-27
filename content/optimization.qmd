@@ -4,7 +4,11 @@ subtitle: "Module IV"
 format: html
 ---
 
-Materials for this module will be posted before we reach it. See the [Schedule](../schedule.qmd) for dates and assessments.
+Materials go up as we reach each lecture. See the [Schedule](../schedule.qmd) for dates and assessments.
+
+Practice problems for this module, collected:
+<a class="btn btn-outline-primary" href="practice/practice-optimization.pdf" target="_blank" rel="noopener" aria-label="Practice problems for the Optimization module, PDF (opens in a new tab)" role="button">Problems (PDF)</a>
+<a class="btn btn-outline-primary" href="practice/practice-optimization_solutions.pdf" target="_blank" rel="noopener" aria-label="Solutions for the Optimization module practice problems, PDF (opens in a new tab)" role="button">Solutions (PDF)</a>
 
 <p class="module-notes" style="font-size:1.1rem">
 <strong>Module notes</strong> covering this whole module:
@@ -12,3 +16,33 @@ Materials for this module will be posted before we reach it. See the [Schedule](
 <p class="lecture-links" style="margin-bottom:1.4em">
 <a class="btn btn-outline-primary" href="notes/Optimization.pdf" target="_blank" rel="noopener" aria-label="Optimization module notes, PDF (opens in a new tab)" role="button">Optimization Notes</a>
 </p>
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 14: Unconstrained Optimization</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Unconstrained single-variable optimization</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 9.1, 9.2</span>
+
+<p class="lecture-links">
+<a class="btn btn-outline-primary" href="slides/slides14.html" target="_blank" rel="noopener" aria-label="Lecture 14 slides (opens in a new tab)" role="button">Slides</a>
+<a class="btn btn-outline-primary" href="slides/slides14.pdf" target="_blank" rel="noopener" aria-label="Lecture 14 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet14.pdf" target="_blank" rel="noopener" aria-label="Lecture 14 worksheet: Unconstrained Optimization, PDF (opens in a new tab)" role="button">Worksheet: Unconstrained Optimization</a>
+<a class="btn btn-outline-primary" href="practice/practice14.html" target="_blank" rel="noopener" aria-label="Practice Problems 14 (opens in a new tab)" role="button">Practice problems</a>
+</p>
+:::
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 15: Second-Order Conditions, Concavity, and Convexity</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Second-derivative test; concave and convex functions</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 9.3, 9.4</span>
+
+<p class="lecture-links">
+<a class="btn btn-outline-primary" href="slides/slides15.html" target="_blank" rel="noopener" aria-label="Lecture 15 slides (opens in a new tab)" role="button">Slides</a>
+<a class="btn btn-outline-primary" href="slides/slides15.pdf" target="_blank" rel="noopener" aria-label="Lecture 15 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet15.pdf" target="_blank" rel="noopener" aria-label="Lecture 15 worksheet: Second-Order Conditions, PDF (opens in a new tab)" role="button">Worksheet: Second-Order Conditions</a>
+<a class="btn btn-outline-primary" href="practice/practice15.html" target="_blank" rel="noopener" aria-label="Practice Problems 15 (opens in a new tab)" role="button">Practice problems</a>
+</p>
+:::

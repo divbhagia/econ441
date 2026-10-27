@@ -1,7 +1,7 @@
 # ECON 441 course site
 
 Quarto website (output in `docs/`, served via GitHub Pages) plus LaTeX-built
-PDFs (handouts, notes, syllabus). `make site` renders in a temp copy outside
+PDFs (worksheets, notes, syllabus). `make site` renders in a temp copy outside
 Dropbox and replaces `docs/` — never render into `docs/` directly.
 
 ## Accessibility is a hard requirement

@@ -41,7 +41,7 @@ Practice problems for this module, collected:
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides9.html" target="_blank" rel="noopener" aria-label="Lecture 9 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides9.pdf" target="_blank" rel="noopener" aria-label="Lecture 9 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="handouts/handout-rules-of-differentiation.pdf" target="_blank" rel="noopener" aria-label="Lecture 9 worksheet: Rules of Differentiation, PDF (opens in a new tab)" role="button">Worksheet: Rules of Differentiation</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet9.pdf" target="_blank" rel="noopener" aria-label="Lecture 9 worksheet: Rules of Differentiation, PDF (opens in a new tab)" role="button">Worksheet: Rules of Differentiation</a>
 <a class="btn btn-outline-primary" href="practice/practice9.html" target="_blank" rel="noopener" aria-label="Practice Problems 9 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::
@@ -56,7 +56,7 @@ Practice problems for this module, collected:
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides10.html" target="_blank" rel="noopener" aria-label="Lecture 10 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides10.pdf" target="_blank" rel="noopener" aria-label="Lecture 10 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="handouts/handout-log-exponential.pdf" target="_blank" rel="noopener" aria-label="Lecture 10 worksheet: Exponential and Log Functions, PDF (opens in a new tab)" role="button">Worksheet: Exponential and Log Functions</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet10.pdf" target="_blank" rel="noopener" aria-label="Lecture 10 worksheet: Exponential and Log Functions, PDF (opens in a new tab)" role="button">Worksheet: Exponential and Log Functions</a>
 <a class="btn btn-outline-primary" href="practice/practice10.html" target="_blank" rel="noopener" aria-label="Practice Problems 10 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::
@@ -99,7 +99,7 @@ Practice problems for this module, collected:
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides13.html" target="_blank" rel="noopener" aria-label="Lecture 13 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides13.pdf" target="_blank" rel="noopener" aria-label="Lecture 13 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="handouts/handout-integration.pdf" target="_blank" rel="noopener" aria-label="Lecture 13 worksheet: Integration, PDF (opens in a new tab)" role="button">Worksheet: Integration</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet13.pdf" target="_blank" rel="noopener" aria-label="Lecture 13 worksheet: Integration, PDF (opens in a new tab)" role="button">Worksheet: Integration</a>
 <a class="btn btn-outline-primary" href="practice/practice13.html" target="_blank" rel="noopener" aria-label="Practice Problems 13 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::

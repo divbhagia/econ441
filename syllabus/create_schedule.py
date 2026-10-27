@@ -32,22 +32,22 @@ MODULES = [
 
 # date -> (lecture number or None, topics, references, [(worksheet file, label), ...])
 LECTURES = {
- dt.date(YEAR,8,24):  (1,"Course introduction; numbers and sets","2.2, 2.3",[("Handout-Sets.pdf","Sets")]),
- dt.date(YEAR,8,26):  (2,"Functions, summation notation, and logical conditions","2.4-2.6, p. 163, 5.1",[("Handout-Functions.pdf","Functions"),
-                       ("Handout-Summation-Notation.pdf","Summations")]),
- dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar and matrix multiplication","4.1, 4.2",[("Handout-Matrix-Operations.pdf","Matrix Operations")]),
+ dt.date(YEAR,8,24):  (1,"Course introduction; numbers and sets","2.2, 2.3",[("worksheet1.pdf","Sets")]),
+ dt.date(YEAR,8,26):  (2,"Functions, summation notation, and logical conditions","2.4-2.6, p. 163, 5.1",[("worksheet2a.pdf","Functions"),
+                       ("worksheet2b.pdf","Summations")]),
+ dt.date(YEAR,8,31):  (3,"Matrices; addition, subtraction, scalar and matrix multiplication","4.1, 4.2",[("worksheet3.pdf","Matrix Operations")]),
  dt.date(YEAR,9,2):   (4,"Matrix multiplication; vectors; linear dependence; identity, null, idempotent, and transpose matrices","4.2-4.6",[]),
  dt.date(YEAR,9,9):   (5,"Inverse of a matrix; conditions for nonsingularity","4.6, 5.1",[]),
- dt.date(YEAR,9,14):  (6,"Computing the determinant and the inverse","5.2-5.4",[("Handout-Determinant-and-Inverse.pdf","Determinant and Inverse")]),
- dt.date(YEAR,9,16):  (7,"Solving systems of equations by inversion and Cramer's rule; applications","5.4, 5.5, 4.7",[("Handout-Solving-System-of-Equations.pdf","Solving Systems of Equations")]),
+ dt.date(YEAR,9,14):  (6,"Computing the determinant and the inverse","5.2-5.4",[("worksheet6.pdf","Determinant and Inverse")]),
+ dt.date(YEAR,9,16):  (7,"Solving systems of equations by inversion and Cramer's rule; applications","5.4, 5.5, 4.7",[("worksheet7.pdf","Solving Systems of Equations")]),
  dt.date(YEAR,9,28):  (8,"Limit definition of a derivative; limits","6.2-6.4",[]),
- dt.date(YEAR,9,30):  (9,"Continuity; rules of differentiation","6.7, 7.1-7.3",[("Handout-Rules-of-Differentiation.pdf","Rules of Differentiation")]),
- dt.date(YEAR,10,5):  (10,"Exponential and log functions","10.5",[("Handout-Log-Exponential.pdf","Exponential and Log Functions")]),
+ dt.date(YEAR,9,30):  (9,"Continuity; rules of differentiation","6.7, 7.1-7.3",[("worksheet9.pdf","Rules of Differentiation")]),
+ dt.date(YEAR,10,5):  (10,"Exponential and log functions","10.5",[("worksheet10.pdf","Exponential and Log Functions")]),
  dt.date(YEAR,10,7):  (11,"Partial derivatives; total differential and derivative","7.4, 8.1, 8.2, 8.4",[]),
  dt.date(YEAR,10,12): (12,"Implicit function theorem","8.5",[]),
- dt.date(YEAR,10,14): (13,"Integration","14.1-14.3",[("Handout-Integration.pdf","Integration")]),
- dt.date(YEAR,10,26): (None,"Unconstrained single-variable optimization","9.1, 9.2",[]),
- dt.date(YEAR,10,28): (None,"Concave and convex functions","9.3, 9.4",[]),
+ dt.date(YEAR,10,14): (13,"Integration","14.1-14.3",[("worksheet13.pdf","Integration")]),
+ dt.date(YEAR,10,26): (14,"Unconstrained single-variable optimization","9.1, 9.2",[("worksheet14.pdf","Unconstrained Optimization")]),
+ dt.date(YEAR,10,28): (15,"Second-derivative test; concave and convex functions","9.3, 9.4",[("worksheet15.pdf","Second-Order Conditions")]),
  dt.date(YEAR,11,2):  (None,"Multivariable optimization: first-order conditions","11.1",[]),
  dt.date(YEAR,11,4):  (None,"Multivariable optimization: second-order conditions","11.2",[]),
  dt.date(YEAR,11,9):  (None,"Constrained optimization; the Lagrange method","12.1, 12.2",[]),
@@ -67,7 +67,7 @@ SPECIAL = {
 }
 # Lectures whose materials have been vetted and published.
 # Add numbers here as each module is checked, then rerun ./build.sh all
-PUBLISHED = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
+PUBLISHED = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
 # Lectures whose practice problems live in the previous set (or do not exist).
 NO_PRACTICE = {5}
 
@@ -140,7 +140,7 @@ def icons(n, sheets):
     # One icon per worksheet; the aria-label names it, so two sheets on the same
     # lecture stay distinguishable to a screen reader.
     for ws, wsl in sheets:
-        o.append(f'<a href="content/handouts/{ws.lower()}" target="_blank" rel="noopener" '
+        o.append(f'<a href="content/worksheets/{ws}" target="_blank" rel="noopener" '
                  f'aria-label="Lecture {n} worksheet: {wsl}, PDF (opens in a new tab)"><span aria-hidden="true">🗒️</span></a>')
     if n not in NO_PRACTICE:
         o.append(f'<a href="content/practice/practice{n}.html" target="_blank" rel="noopener" '
