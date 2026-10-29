@@ -33,16 +33,16 @@ Practice problems for this module, collected:
 :::
 
 ::: {.lecture style="font-size:1.1rem"}
-<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 15: Second-Order Conditions, Concavity, and Convexity</h2>
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 15: Second-Order Conditions</h2>
 
-<span style="font-size:1.1rem"><strong>Topics:</strong> Second-derivative test; concave and convex functions</span>
+<span style="font-size:1.1rem"><strong>Topics:</strong> Second-derivative test</span>
 
-<span style="font-size:1.1rem"><strong>Textbook references:</strong> 9.3, 9.4</span>
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 9.4</span>
 
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides15.html" target="_blank" rel="noopener" aria-label="Lecture 15 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides15.pdf" target="_blank" rel="noopener" aria-label="Lecture 15 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="worksheets/worksheet15.pdf" target="_blank" rel="noopener" aria-label="Lecture 15 worksheet: Second-Order Conditions, PDF (opens in a new tab)" role="button">Worksheet: Second-Order Conditions</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet14.pdf" target="_blank" rel="noopener" aria-label="Lecture 15 worksheet: Unconstrained Optimization, PDF (opens in a new tab)" role="button">Worksheet: Unconstrained Optimization</a>
 <a class="btn btn-outline-primary" href="practice/practice15.html" target="_blank" rel="noopener" aria-label="Practice Problems 15 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::

@@ -1,0 +1,115 @@
+---
+title: "Practice Problems 16"
+subtitle: "Lecture 16: Concave and Convex Functions"
+format: html
+---
+
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each question yourself first, then expand the **Solution** to check.
+
+## Exercise 9.3
+
+**2.** Which of the following quadratic functions are strictly convex?
+
+a. $y = 9x^{2} - 4x + 8$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$y' = 18x - 4$ and $y'' = 18 > 0$ for all $x$: strictly convex.
+
+</details>
+
+b. $w = -3x^{2} + 39$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$w' = -6x$ and $w'' = -6 < 0$: strictly concave, not convex.
+
+</details>
+
+c. $u = 9 - 2x^{2}$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$u' = -4x$ and $u'' = -4 < 0$: strictly concave, not convex.
+
+</details>
+
+d. $v = 8 - 5x + x^{2}$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$v' = -5 + 2x$ and $v'' = 2 > 0$: strictly convex.
+
+</details>
+
+**3.** Draw (a) a concave curve which is not strictly concave, and (b) a curve which qualifies simultaneously as a concave curve and a convex curve.
+
+<details class="solution">
+<summary>Solution</summary>
+
+(a) Any concave curve that contains a straight segment, for example $y = \sqrt{x}$ for $0 \leq x \leq 4$ continued as the horizontal line $y = 2$ for $x > 4$. (b) A straight line, for example $y = x$: its second derivative is zero everywhere, so it satisfies both $f'' \leq 0$ and $f'' \geq 0$.
+
+![](../../assets/fig/concave-examples.svg){fig-alt="Two panels. Panel a: a curve that rises like a square root and then continues as a flat horizontal line, so it is concave but contains a straight segment. Panel b: a straight line through the origin with slope 1, which is both concave and convex" width=600}
+
+</details>
+
+**4.** Given the function $y = a - \dfrac{b}{c + x}$ $(a, b, c > 0;\; x \geq 0)$, determine the general shape of its graph by examining (a) its first and second derivatives, (b) its vertical intercept, and (c) the limit of $y$ as $x$ tends to infinity. If this function is to be used as a consumption function, how should the parameters be restricted in order to make it economically sensible?
+
+<details class="solution">
+<summary>Solution</summary>
+
+(a) $\dfrac{dy}{dx} = \dfrac{b}{(c + x)^{2}} > 0$ and $\dfrac{d^{2}y}{dx^{2}} = -\dfrac{2b}{(c + x)^{3}} < 0$, so the function is increasing and strictly concave.
+
+(b) At $x = 0$, $y = a - b/c$.
+
+(c) As $x \to \infty$, $b/(c + x) \to 0$, so $y \to a$. The graph rises from $a - b/c$ toward the horizontal asymptote $y = a$, flattening as it goes.
+
+As a consumption function with income $x$: consumption should be positive at zero income, which requires $ac > b$, and the marginal propensity to consume $dy/dx$ should be less than $1$ at every income level, which requires $b/c^{2} < 1$, that is, $b < c^{2}$.
+
+</details>
+
+**5.** Draw the graph of a function $f(x)$ such that $f'(x) \equiv 0$, and the graph of a function $g(x)$ such that $g'(3) = 0$. Summarize in one sentence the essential difference between $f(x)$ and $g(x)$ in terms of the concept of stationary point.
+
+<details class="solution">
+<summary>Solution</summary>
+
+$f(x)$ must be a constant, say $f(x) = 1$; every point is a stationary point. $g(x)$ could be $g(x) = x^{2} - 6x + 10$, which has a single stationary point at $x = 3$. The difference: $f$ is stationary everywhere, whereas $g$ is stationary only at $x = 3$.
+
+![](../../assets/fig/stationary-points.svg){fig-alt="A dashed horizontal line f of x equals 1 and a maroon parabola g of x with its minimum at (3, 1), marked by a dot, touching the line there" width=400}
+
+</details>
+
+## Exercise 9.4
+
+**5.** A quadratic profit function $\pi(Q) = hQ^{2} + jQ + k$ is to be used to reflect the following assumptions:
+
+a. If nothing is produced, the profit will be negative (because of fixed costs).
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$\pi(0) = k$, so we need $k < 0$.
+
+</details>
+
+b. The profit function is strictly concave.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$\pi'(Q) = 2hQ + j$ and $\pi''(Q) = 2h$, so strict concavity requires $h < 0$.
+
+</details>
+
+c. The maximum profit occurs at a positive output level $Q^{*}$.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+The critical point is $\pi'(Q) = 0 \Rightarrow Q^{*} = -j/(2h)$. With $h < 0$, we need $j > 0$ to make $Q^{*} > 0$.
+
+</details>

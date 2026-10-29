@@ -43,6 +43,9 @@ project:
     - "content/slides/midterm2-review.qmd"
     - "!grades/"
     - "!older-version/"
+    # Lecture 16 drafts: publish on Mon 11/2
+    - "!content/slides/slides16.qmd"
+    - "!content/practice/practice16.qmd"
     - "project/*.qmd"
     - "!project/solution.ipynb"
 
