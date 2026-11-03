@@ -27,7 +27,6 @@ Practice problems for this module, collected:
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides14.html" target="_blank" rel="noopener" aria-label="Lecture 14 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides14.pdf" target="_blank" rel="noopener" aria-label="Lecture 14 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="worksheets/worksheet14.pdf" target="_blank" rel="noopener" aria-label="Lecture 14 worksheet: Unconstrained Optimization, PDF (opens in a new tab)" role="button">Worksheet: Unconstrained Optimization</a>
 <a class="btn btn-outline-primary" href="practice/practice14.html" target="_blank" rel="noopener" aria-label="Practice Problems 14 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::
@@ -42,7 +41,22 @@ Practice problems for this module, collected:
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides15.html" target="_blank" rel="noopener" aria-label="Lecture 15 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides15.pdf" target="_blank" rel="noopener" aria-label="Lecture 15 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="worksheets/worksheet14.pdf" target="_blank" rel="noopener" aria-label="Lecture 15 worksheet: Unconstrained Optimization, PDF (opens in a new tab)" role="button">Worksheet: Unconstrained Optimization</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet15.pdf" target="_blank" rel="noopener" aria-label="Lecture 15 worksheet: Unconstrained Optimization, PDF (opens in a new tab)" role="button">Worksheet: Unconstrained Optimization</a>
 <a class="btn btn-outline-primary" href="practice/practice15.html" target="_blank" rel="noopener" aria-label="Practice Problems 15 (opens in a new tab)" role="button">Practice problems</a>
+</p>
+:::
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 16: Concave and Convex Functions</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Concave and convex functions</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 9.3</span>
+
+<p class="lecture-links">
+<a class="btn btn-outline-primary" href="slides/slides16.html" target="_blank" rel="noopener" aria-label="Lecture 16 slides (opens in a new tab)" role="button">Slides</a>
+<a class="btn btn-outline-primary" href="slides/slides16.pdf" target="_blank" rel="noopener" aria-label="Lecture 16 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet16.pdf" target="_blank" rel="noopener" aria-label="Lecture 16 worksheet: Concave and Convex Functions, PDF (opens in a new tab)" role="button">Worksheet: Concave and Convex Functions</a>
+<a class="btn btn-outline-primary" href="practice/practice16.html" target="_blank" rel="noopener" aria-label="Practice Problems 16 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::

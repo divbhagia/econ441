@@ -8,6 +8,16 @@ format:
     embed-resources: true
 ---
 
+## Example
+
+Find the critical points and determine whether each one is a maximum, a minimum, or neither.
+$$f(x) = x^4 - 4x^3$$
+
+## Example
+
+Find the critical points and determine whether each one is a maximum, a minimum, or neither.
+$$f(x) = x + \frac{1}{x} \qquad (x \neq 0)$$
+
 ## Concave and Convex Functions
 
 -   *Concave* function: $f''(x) \leq 0$ for all $x$
@@ -30,25 +40,19 @@ For strict concavity or convexity, replace with strict inequalities.
 
 ## Concave Function
 
-![](../../assets/fig/concave-chord.svg){.nostretch fig-alt="A concave curve rising and flattening, with two points on it at x one and x two joined by a dashed chord. At the midpoint x m between them, the point on the curve, labeled f of x m, sits above the point on the chord" width=600}
+![](../../assets/fig/concave-chord.svg){.nostretch fig-alt="A concave curve rising and flattening, with points on it at x one and x two joined by a dashed chord. Dashed guide lines run from each point down to the x axis and across to the y axis, which is labeled f of x one and f of x two. At the x axis point lambda x one plus one minus lambda x two, the point on the curve, with height f of lambda x one plus one minus lambda x two, sits above the point on the chord, with height lambda f of x one plus one minus lambda f of x two" width=900}
 
-At $x_m = \lambda x_1 + (1 - \lambda) x_2$, the curve lies *above* the chord: $f(x_m) \geq \lambda f(x_1) + (1 - \lambda) f(x_2)$
+The curve lies *above* the chord.
 
 ## Convex Function
 
-![](../../assets/fig/convex-chord.svg){.nostretch fig-alt="A convex curve rising ever more steeply, with two points on it at x one and x two joined by a dashed chord. At the midpoint x m between them, the point on the curve, labeled f of x m, sits below the point on the chord" width=600}
+![](../../assets/fig/convex-chord.svg){.nostretch fig-alt="A convex curve rising ever more steeply, with points on it at x one and x two joined by a dashed chord. Dashed guide lines run from each point down to the x axis and across to the y axis, which is labeled f of x one and f of x two. At the x axis point lambda x one plus one minus lambda x two, the point on the curve, with height f of lambda x one plus one minus lambda x two, sits below the point on the chord, with height lambda f of x one plus one minus lambda f of x two" width=900}
 
-At $x_m = \lambda x_1 + (1 - \lambda) x_2$, the curve lies *below* the chord: $f(x_m) \leq \lambda f(x_1) + (1 - \lambda) f(x_2)$
+The curve lies *below* the chord.
 
 ## Attitudes toward Risk
 
-Consider the following game: flip a coin, collect \$0 if tails, collect \$20 if heads.
-
-How much would you pay to play this game?
-
-::: {.fragment}
-If your utility from money $u(m)$ is concave, how does $u(10)$ compare with $\tfrac{1}{2} u(0) + \tfrac{1}{2} u(20)$?
-:::
+Consider the following game: flip a coin, collect \$0 if tails, collect \$20 if heads. How much would you pay to play this game?
 
 ## Example
 
