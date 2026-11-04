@@ -1,0 +1,108 @@
+---
+title: "Practice Problems 17"
+subtitle: "Lecture 17: Multivariable Optimization"
+format: html
+---
+
+Problem numbers refer to the textbook (Chiang & Wainwright, 4th edition). These are not graded, but you should attempt them all before the quiz. Try each question yourself first, then expand the **Solution** to check.
+
+## Exercise 11.2
+
+Find the extreme value(s) of each of the following four functions, and determine whether they are maxima or minima:
+
+**1.** $z = x^{2} + xy + 2y^{2} + 3$
+
+<details class="solution">
+<summary>Solution</summary>
+
+The first-order conditions are
+$$z_x = 2x + y = 0 \quad\text{and}\quad z_y = x + 4y = 0$$
+which give $(x^{*}, y^{*}) = (0, 0)$, with $z^{*} = 3$. At this point,
+$$z_{xx} = 2 > 0, \quad z_{yy} = 4 > 0, \quad z_{xy} = 1, \quad z_{xx} z_{yy} = 8 > 1 = z_{xy}^{2}$$
+so $z^{*}$ is a minimum.
+
+</details>
+
+**2.** $z = -x^{2} - y^{2} + 6x + 2y$
+
+<details class="solution">
+<summary>Solution</summary>
+
+The first-order conditions are
+$$z_x = -2x + 6 = 0 \quad\text{and}\quad z_y = -2y + 2 = 0$$
+which give $(x^{*}, y^{*}) = (3, 1)$, with $z^{*} = 10$. At this point,
+$$z_{xx} = -2 < 0, \quad z_{yy} = -2 < 0, \quad z_{xy} = 0, \quad z_{xx} z_{yy} = 4 > 0 = z_{xy}^{2}$$
+so $z^{*}$ is a maximum.
+
+</details>
+
+**3.** $z = ax^{2} + by^{2} + c$; consider each of the three subcases:
+
+a. $a > 0$, $b > 0$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+The first-order conditions $z_x = 2ax = 0$ and $z_y = 2by = 0$ give $(x^{*}, y^{*}) = (0, 0)$, with $z^{*} = c$. Here $z_{xx} = 2a$, $z_{yy} = 2b$, $z_{xy} = 0$, and $z_{xx} z_{yy} = 4ab$. With $a, b > 0$, $z_{xx} > 0$, $z_{yy} > 0$, and $4ab > 0$, so $z^{*} = c$ is a minimum.
+
+</details>
+
+b. $a < 0$, $b < 0$
+
+<details class="solution part">
+<summary>Solution</summary>
+
+The first-order conditions $z_x = 2ax = 0$ and $z_y = 2by = 0$ give $(x^{*}, y^{*}) = (0, 0)$, with $z^{*} = c$. Here $z_{xx} = 2a$, $z_{yy} = 2b$, $z_{xy} = 0$, and $z_{xx} z_{yy} = 4ab$. With $a, b < 0$, $z_{xx} < 0$, $z_{yy} < 0$, and $4ab > 0$, so $z^{*} = c$ is a maximum.
+
+</details>
+
+c. $a$ and $b$ opposite in sign
+
+<details class="solution part">
+<summary>Solution</summary>
+
+The first-order conditions $z_x = 2ax = 0$ and $z_y = 2by = 0$ give $(x^{*}, y^{*}) = (0, 0)$, with $z^{*} = c$. Here $z_{xx} = 2a$, $z_{yy} = 2b$, $z_{xy} = 0$, and $z_{xx} z_{yy} = 4ab$. With $a$ and $b$ opposite in sign, $4ab < 0 = z_{xy}^{2}$, so $(0, 0)$ is a saddle point: neither a maximum nor a minimum.
+
+</details>
+
+**4.** $z = e^{2x} - 2x + 2y^{2} + 3$
+
+<details class="solution">
+<summary>Solution</summary>
+
+The first-order conditions are
+$$z_x = 2e^{2x} - 2 = 0 \quad\text{and}\quad z_y = 4y = 0$$
+which give $(x^{*}, y^{*}) = (0, 0)$, with $z^{*} = 4$. At this point,
+$$z_{xx} = 4e^{2x} = 4 > 0, \quad z_{yy} = 4 > 0, \quad z_{xy} = 0, \quad z_{xx} z_{yy} = 16 > 0 = z_{xy}^{2}$$
+so $z^{*}$ is a minimum.
+
+</details>
+
+**5.** Consider the function $z = (x-2)^{4} + (y-3)^{4}$.
+
+a. Establish by intuitive reasoning that $z$ attains a minimum $(z^{*} = 0)$ at $x^{*} = 2$ and $y^{*} = 3$.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$(x-2)^{4}$ and $(y-3)^{4}$ are never negative, and both are zero only at $x = 2$, $y = 3$. So $z \geq 0$ everywhere, with $z^{*} = 0$ at $(2, 3)$.
+
+</details>
+
+b. Is the first-order necessary condition satisfied?
+
+<details class="solution part">
+<summary>Solution</summary>
+
+Yes. $z_x = 4(x-2)^{3}$ and $z_y = 4(y-3)^{3}$ are both zero at $(2, 3)$.
+
+</details>
+
+c. Is the second-order sufficient condition satisfied?
+
+<details class="solution part">
+<summary>Solution</summary>
+
+No. $z_{xx} = 12(x-2)^{2}$, $z_{yy} = 12(y-3)^{2}$, and $z_{xy} = 0$ are all zero at $(2, 3)$, so $z_{xx} > 0$ fails. The second-order condition is sufficient, not necessary: this point is a minimum even though the condition does not hold.
+
+</details>
