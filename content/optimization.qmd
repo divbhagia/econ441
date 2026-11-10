@@ -71,7 +71,21 @@ Practice problems for this module, collected:
 <p class="lecture-links">
 <a class="btn btn-outline-primary" href="slides/slides17.html" target="_blank" rel="noopener" aria-label="Lecture 17 slides (opens in a new tab)" role="button">Slides</a>
 <a class="btn btn-outline-primary" href="slides/slides17.pdf" target="_blank" rel="noopener" aria-label="Lecture 17 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
-<a class="btn btn-outline-primary" href="worksheets/worksheet17.pdf" target="_blank" rel="noopener" aria-label="Lecture 17 worksheet: Multivariable Optimization, PDF (opens in a new tab)" role="button">Worksheet: Multivariable Optimization</a>
 <a class="btn btn-outline-primary" href="practice/practice17.html" target="_blank" rel="noopener" aria-label="Practice Problems 17 (opens in a new tab)" role="button">Practice problems</a>
+</p>
+:::
+
+::: {.lecture style="font-size:1.1rem"}
+<h2 style="font-size:1.45rem;color:#912040;margin-top:0;margin-bottom:0.5em">Lecture 18: Constrained Optimization</h2>
+
+<span style="font-size:1.1rem"><strong>Topics:</strong> Constrained optimization; the Lagrange method</span>
+
+<span style="font-size:1.1rem"><strong>Textbook references:</strong> 12.1, 12.2</span>
+
+<p class="lecture-links">
+<a class="btn btn-outline-primary" href="slides/slides18.html" target="_blank" rel="noopener" aria-label="Lecture 18 slides (opens in a new tab)" role="button">Slides</a>
+<a class="btn btn-outline-primary" href="slides/slides18.pdf" target="_blank" rel="noopener" aria-label="Lecture 18 slides as tagged PDF (opens in a new tab)" role="button">Slides (PDF)</a>
+<a class="btn btn-outline-primary" href="worksheets/worksheet18.pdf" target="_blank" rel="noopener" aria-label="Lecture 18 worksheet: Constrained Optimization, PDF (opens in a new tab)" role="button">Worksheet: Constrained Optimization</a>
+<a class="btn btn-outline-primary" href="practice/practice18.html" target="_blank" rel="noopener" aria-label="Practice Problems 18 (opens in a new tab)" role="button">Practice problems</a>
 </p>
 :::

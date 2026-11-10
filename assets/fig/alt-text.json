@@ -44,5 +44,6 @@
   "paraboloid-plain.svg": "A dome-shaped surface over the x y plane with its single highest point at the origin, where z equals 0",
   "paraboloid-curves.svg": "A dome-shaped surface with its highest point at the origin. A solid curve along the x direction and a dashed curve along the y direction both bend downward and meet at the top, so the origin is a maximum",
   "saddle-simple.svg": "A saddle-shaped surface. Through the origin, a solid curve along the x direction bends upward while a dashed curve along the y direction bends downward, so the origin is a saddle point",
-  "saddle-cross.svg": "A saddle-shaped surface twisted relative to the axes. Through the origin, the solid curve along the x direction and the dashed curve along the y direction both bend upward, yet the surface falls away along the diagonal where x equals negative y, so the origin is a saddle point and not a minimum"
+  "saddle-cross.svg": "A saddle-shaped surface twisted relative to the axes. Through the origin, the solid curve along the x direction and the dashed curve along the y direction both bend upward, yet the surface falls away along the diagonal where x equals negative y, so the origin is a saddle point and not a minimum",
+  "tangency.svg": "Axes x1 across and x2 up. A straight downward-sloping line runs from 40 on the x2 axis to 20 on the x1 axis. A bowed-in curve touches the line at exactly one point, (10, 20), marked with a dot and dashed guide lines to both axes"
 }

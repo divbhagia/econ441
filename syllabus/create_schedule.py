@@ -49,8 +49,8 @@ LECTURES = {
  dt.date(YEAR,10,26): (14,"Unconstrained single-variable optimization","9.1, 9.2",[]),
  dt.date(YEAR,10,28): (15,"Second-derivative test","9.4",[("worksheet15.pdf","Unconstrained Optimization")]),
  dt.date(YEAR,11,2):  (16,"Concave and convex functions","9.3",[("worksheet16.pdf","Concave and Convex Functions")]),
- dt.date(YEAR,11,4):  (17,"Multivariable optimization: first- and second-order conditions","11.1, 11.2",[("worksheet17.pdf","Multivariable Optimization")]),
- dt.date(YEAR,11,9):  (None,"Constrained optimization; the Lagrange method","12.1, 12.2",[]),
+ dt.date(YEAR,11,4):  (17,"Multivariable optimization: first- and second-order conditions","11.1, 11.2",[]),
+ dt.date(YEAR,11,9):  (18,"Constrained optimization; the Lagrange method","12.1, 12.2",[("worksheet18.pdf","Constrained Optimization")]),
  dt.date(YEAR,11,16): (None,"Envelope theorem","11.5",[]),
  dt.date(YEAR,11,18): (None,"Quasiconcavity; convex sets; homogeneous functions","12.4, 12.6",[]),
  dt.date(YEAR,11,30): (None,"To be announced","",[]),
@@ -67,7 +67,7 @@ SPECIAL = {
 }
 # Lectures whose materials have been vetted and published.
 # Add numbers here as each module is checked, then rerun ./build.sh all
-PUBLISHED = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17}
+PUBLISHED = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
 # Lectures whose practice problems live in the previous set (or do not exist).
 NO_PRACTICE = {5}
 

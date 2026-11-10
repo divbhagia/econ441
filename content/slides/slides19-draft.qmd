@@ -1,0 +1,102 @@
+---
+title: "Constrained Optimization, continued"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 19 (draft, not in render list)"
+author: "Div Bhagia"
+format:
+  revealjs:
+    theme: [default, ../../assets/slides.scss]
+    embed-resources: true
+---
+
+## Example I
+
+$$\max_{\{x_1, x_2\}} \quad x_1^2 x_2 \quad \text{s.t.} \quad 2x_1^2 + x_2^2 = 3$$
+
+## Example II
+
+$$\max_{\{x, y\}} \quad x^a y^b \quad \text{s.t.} \quad x + y = 10$$
+
+## Example III
+
+$$\max_{\{x_1, x_2\}} \quad x_1^{1/3} x_2^{2/3} \quad \text{s.t.} \quad x_1 + 4x_2 = 30$$
+
+## More Generally
+
+$$\max_{\{x_1, x_2\}} \quad x_1^{\alpha} x_2^{\beta} \quad \text{s.t.} \quad p_1 x_1 + p_2 x_2 = m$$
+
+## Multiple Variables
+
+Objective function:
+$$\text{Maximize } f(x_1, x_2, \ldots, x_n) \quad \text{subject to} \quad g(x_1, x_2, \ldots, x_n) = c$$
+
+Lagrange function:
+$$L = f(x_1, x_2, \ldots, x_n) + \lambda[c - g(x_1, x_2, \ldots, x_n)]$$
+
+First-order conditions:
+$$\begin{aligned}
+L_i &= f_i(x_1, x_2, \ldots, x_n) - \lambda g_i(x_1, x_2, \ldots, x_n) = 0 \qquad [i = 1, 2, \ldots, n] \\[0.4em]
+L_\lambda &= c - g(x_1, x_2, \ldots, x_n) = 0
+\end{aligned}$$
+
+## Multiple Constraints
+
+Maximize $f(x_1, x_2, \ldots, x_n)$ subject to
+$$g(x_1, x_2, \ldots, x_n) = c \quad \text{and} \quad h(x_1, x_2, \ldots, x_n) = d$$
+
+Lagrange function:
+$$L = f(x_1, \ldots, x_n) + \lambda[c - g(x_1, \ldots, x_n)] + \mu[d - h(x_1, \ldots, x_n)]$$
+
+First-order conditions:
+$$\begin{aligned}
+L_\lambda &= c - g(x_1, \ldots, x_n) = 0 \\[0.3em]
+L_\mu &= d - h(x_1, \ldots, x_n) = 0 \\[0.3em]
+L_i &= f_i - \lambda g_i - \mu h_i = 0 \qquad [i = 1, 2, \ldots, n]
+\end{aligned}$$
+
+## Example IV
+
+$$\max_{\{x, y, z\}} \quad yz + xz \quad \text{s.t.} \quad y^2 + z^2 = 1 \quad \text{and} \quad xz = 3$$
+
+## Intertemporal Utility Maximization
+
+$$U = U(c_1, c_2) = \ln c_1 + \beta \ln c_2 \qquad 0 < \beta < 1$$
+
+-   $y_1, y_2 > 0$: income in periods 1 and 2
+
+-   Income you save, $s$, in period 1 earns interest $r > 0$
+
+-   In which case,
+    $$c_1 + s = y_1 \qquad c_2 = y_2 + (1 + r)s$$
+
+-   Combining these constraints:
+    $$c_1 + \frac{1}{1+r} c_2 = \underbrace{y_1 + \frac{1}{1+r} y_2}_{m \,\equiv\, \text{present-discounted income}}$$
+
+## Intertemporal Utility Maximization
+
+$$\max_{\{c_1, c_2\}} \quad U(c_1, c_2) = \ln c_1 + \beta \ln c_2 \quad \text{s.t.} \quad c_1 + \frac{1}{1+r} c_2 = m$$
+
+## Another Example: Lasso Regression
+
+-   Regularization is a fundamental concept in machine learning and statistics, used to improve how well models generalize to new data by preventing overfitting
+
+-   Overfitting occurs when a model learns the detail and noise in the training data
+
+-   Regularization techniques modify the learning algorithm to impose constraints on the model parameters, typically by adding a penalty term to the loss function
+
+## Lasso Regression
+
+Linear regression, unconstrained minimization:
+$$L(\beta) = \sum_{i=1}^n (Y_i - X_i^T \beta)^2$$
+
+Lasso regression, with a penalty on the size of the coefficients:
+$$L(\beta) = \sum_{i=1}^n (Y_i - X_i^T \beta)^2 + \lambda \sum_{j=1}^p |\beta_j|$$
+
+Higher values of $\lambda$ increase the penalty for large coefficients.
+
+## Homework Questions
+
+-   Exercise 12.2: 1, 2, 3, 4
+
+-   Examples from today's class
+
+Textbook reference: 12.1, 12.2

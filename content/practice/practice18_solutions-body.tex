@@ -1,0 +1,87 @@
+\underline{Exercise 12.2}
+\begin{enumerate}
+% Question 1
+\item[1.] Use the Lagrange-multiplier method to find the stationary values of $z$.
+\begin{enumerate}
+\item[(a)] $z = xy$, subject to $x + 2y = 2$
+
+The Lagrangian is
+\[L(x, y, \lambda) = xy + \lambda(2 - x - 2y)\]
+with first-order conditions
+\[L_x = y - \lambda = 0, \qquad L_y = x - 2\lambda = 0, \qquad L_\lambda = 2 - x - 2y = 0\]
+The first two give $y = \lambda$ and $x = 2\lambda$, so $x = 2y$. Substituting into the constraint, $2 - 2y - 2y = 0$, so $y^{*} = \tfrac{1}{2}$ and $x^{*} = 1$. Then $\lambda^{*} = y^{*} = \tfrac{1}{2}$ and $z^{*} = \tfrac{1}{2}$.
+
+\item[(b)] $z = x(y + 4)$, subject to $x + y = 8$
+
+The Lagrangian is
+\[L(x, y, \lambda) = x(y + 4) + \lambda(8 - x - y)\]
+with first-order conditions
+\[L_x = y + 4 - \lambda = 0, \qquad L_y = x - \lambda = 0, \qquad L_\lambda = 8 - x - y = 0\]
+The first two give $x = y + 4$. Substituting into the constraint, $8 - (y + 4) - y = 0$, so $y^{*} = 2$ and $x^{*} = 6$. Then $\lambda^{*} = x^{*} = 6$ and $z^{*} = 36$.
+
+\item[(c)] $z = x - 3y - xy$, subject to $x + y = 6$
+
+The Lagrangian is
+\[L(x, y, \lambda) = x - 3y - xy + \lambda(6 - x - y)\]
+with first-order conditions
+\[L_x = 1 - y - \lambda = 0, \qquad L_y = -3 - x - \lambda = 0, \qquad L_\lambda = 6 - x - y = 0\]
+The first two give $1 - y = -3 - x$, so $y = x + 4$. Substituting into the constraint, $6 - x - (x + 4) = 2 - 2x = 0$, so $x^{*} = 1$ and $y^{*} = 5$. Then $\lambda^{*} = 1 - y^{*} = -4$ and $z^{*} = -19$.
+
+\item[(d)] $z = 7 - y + x^{2}$, subject to $x + y = 0$
+
+The Lagrangian is
+\[L(x, y, \lambda) = 7 - y + x^{2} + \lambda(0 - x - y)\]
+with first-order conditions
+\[L_x = 2x - \lambda = 0, \qquad L_y = -1 - \lambda = 0, \qquad L_\lambda = -x - y = 0\]
+The second gives $\lambda^{*} = -1$; the first then gives $x^{*} = \lambda^{*}/2 = -\tfrac{1}{2}$, and the constraint gives $y^{*} = -x^{*} = \tfrac{1}{2}$. So $z^{*} = 7 - \tfrac{1}{2} + \tfrac{1}{4} = \tfrac{27}{4}$.
+\end{enumerate}
+
+% Question 2
+\item[2.] In Prob.~1, find whether a slight relaxation of the constraint will increase or decrease the optimal value of $z$. At what rate?
+
+Write the constraint as $g(x, y) = c$. At the optimum, $dz^{*}/dc = \lambda^{*}$: by the chain rule,
+\[\frac{dz^{*}}{dc} = f_x \frac{dx^{*}}{dc} + f_y \frac{dy^{*}}{dc} = \lambda^{*}\left(g_x \frac{dx^{*}}{dc} + g_y \frac{dy^{*}}{dc}\right) = \lambda^{*}\]
+using $f_x = \lambda^{*} g_x$ and $f_y = \lambda^{*} g_y$ from the first-order conditions, and the fact that differentiating the constraint $g(x^{*}, y^{*}) = c$ with respect to $c$ makes the term in parentheses equal 1. So relaxing the constraint (raising $c$ slightly) changes $z^{*}$ at the rate $\lambda^{*}$:
+\begin{itemize}
+\item[(a)] $\lambda^{*} = \tfrac{1}{2}$: $z^{*}$ increases at rate $\tfrac{1}{2}$.
+\item[(b)] $\lambda^{*} = 6$: $z^{*}$ increases at rate 6.
+\item[(c)] $\lambda^{*} = -4$: $z^{*}$ decreases at rate 4.
+\item[(d)] $\lambda^{*} = -1$: $z^{*}$ decreases at rate 1.
+\end{itemize}
+
+% Question 3
+\item[3.] Write the Lagrangian function and the first-order condition for stationary values (without solving the equations) for each of the following:
+\begin{enumerate}
+\item[(a)] $z = x + 2y + 3w + xy - yw$, subject to $x + y + 2w = 10$
+\[L = x + 2y + 3w + xy - yw + \lambda(10 - x - y - 2w)\]
+First-order conditions:
+\begin{align*}
+L_x &= 1 + y - \lambda = 0 \\
+L_y &= 2 + x - w - \lambda = 0 \\
+L_w &= 3 - y - 2\lambda = 0 \\
+L_\lambda &= 10 - x - y - 2w = 0
+\end{align*}
+
+\item[(b)] $z = x^{2} + 2xy + yw^{2}$, subject to $2x + y + w^{2} = 24$ and $x + w = 8$
+
+With one multiplier per constraint,
+\[L = x^{2} + 2xy + yw^{2} + \lambda(24 - 2x - y - w^{2}) + \mu(8 - x - w)\]
+First-order conditions:
+\begin{align*}
+L_x &= 2x + 2y - 2\lambda - \mu = 0 \\
+L_y &= 2x + w^{2} - \lambda = 0 \\
+L_w &= 2yw - 2w\lambda - \mu = 0 \\
+L_\lambda &= 24 - 2x - y - w^{2} = 0 \\
+L_\mu &= 8 - x - w = 0
+\end{align*}
+\end{enumerate}
+
+% Question 4
+\item[4.] If, instead of $g(x, y) = c$, the constraint is written in the form of $G(x, y) = 0$, how should the Lagrangian function and the first-order condition be modified as a consequence?
+
+The constant is now zero, so the Lagrangian becomes
+\[L(x, y, \lambda) = f(x, y) + \lambda[0 - G(x, y)] = f(x, y) - \lambda G(x, y)\]
+and the first-order conditions are
+\[L_x = f_x - \lambda G_x = 0, \qquad L_y = f_y - \lambda G_y = 0, \qquad L_\lambda = -G(x, y) = 0\]
+
+\end{enumerate}
