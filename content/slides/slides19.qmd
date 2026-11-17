@@ -1,6 +1,6 @@
 ---
-title: "Constrained Optimization, continued"
-subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 19 (draft, not in render list)"
+title: "Constrained Optimization, Continued"
+subtitle: "ECON 441: Introduction to Mathematical Economics<br>Lecture 19"
 author: "Div Bhagia"
 format:
   revealjs:
@@ -95,8 +95,8 @@ Higher values of $\lambda$ increase the penalty for large coefficients.
 
 ## Homework Questions
 
--   Exercise 12.2: 1, 2, 3, 4
+-   Exercise 12.2: 1, 2, 3, 4 (in Practice Problems 18)
 
--   Examples from today's class
+-   Examples from today's class (Worksheet: Constrained Optimization)
 
-Textbook reference: 12.1, 12.2
+Textbook reference: 12.2
