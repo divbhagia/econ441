@@ -50,11 +50,11 @@ LECTURES = {
  dt.date(YEAR,10,28): (15,"Second-derivative test","9.4",[("worksheet15.pdf","Unconstrained Optimization")]),
  dt.date(YEAR,11,2):  (16,"Concave and convex functions","9.3",[("worksheet16.pdf","Concave and Convex Functions")]),
  dt.date(YEAR,11,4):  (17,"Multivariable optimization: first- and second-order conditions","11.1, 11.2",[]),
- dt.date(YEAR,11,9):  (18,"Constrained optimization; the Lagrange method","12.1, 12.2",[("worksheet18.pdf","Constrained Optimization")]),
- dt.date(YEAR,11,16): (19,"Constrained optimization: examples; multiple variables and constraints","12.2",[]),
- dt.date(YEAR,11,18): (None,"Envelope theorem","11.5",[]),
- dt.date(YEAR,11,30): (None,"Quasiconcavity; convex sets; homogeneous functions","12.4, 12.6",[]),
- dt.date(YEAR,12,2):  (None,"To be announced","",[]),
+ dt.date(YEAR,11,9):  (18,"Constrained optimization; the Lagrange method","12.1, 12.2",[]),
+ dt.date(YEAR,11,16): (19,"Constrained optimization: worksheet examples","12.2",[("worksheet19.pdf","Constrained Optimization")]),
+ dt.date(YEAR,11,18): (20,"Interpretation of the Lagrange multiplier; multiple variables and constraints","12.2",[]),
+ dt.date(YEAR,11,30): (None,"Envelope theorem","11.5",[]),
+ dt.date(YEAR,12,2):  (None,"Quasiconcavity; convex sets; homogeneous functions","12.4, 12.6",[]),
 }
 
 SPECIAL = {
@@ -67,9 +67,11 @@ SPECIAL = {
 }
 # Lectures whose materials have been vetted and published.
 # Add numbers here as each module is checked, then rerun ./build.sh all
-PUBLISHED = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}
+PUBLISHED = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
 # Lectures whose practice problems live in the previous set (or do not exist).
 NO_PRACTICE = {5, 19}
+# Lectures taught from a worksheet, with no slide deck.
+NO_SLIDES = {19}
 
 QUIZZES = {dt.date(YEAR,9,9):1, dt.date(YEAR,10,12):2, dt.date(YEAR,11,9):3, dt.date(YEAR,11,30):4}
 
@@ -130,7 +132,7 @@ def build_latex():
 
 
 def icons(n, sheets):
-    o = [f'<a href="content/slides/slides{n}.html" target="_blank" rel="noopener" '
+    o = [] if n in NO_SLIDES else [f'<a href="content/slides/slides{n}.html" target="_blank" rel="noopener" '
          f'aria-label="Lecture {n} slides (opens in a new tab)"><span aria-hidden="true">🖥️</span></a>',
          # The tagged PDF of the same deck: complete slides, no overlays, the
          # version to study from or print.

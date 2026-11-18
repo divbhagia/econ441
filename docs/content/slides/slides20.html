@@ -987,7 +987,7 @@ margin-right: 0; }
 
 <section class="quarto-title-block center">
   <h1 class="title">Constrained Optimization, Continued</h1>
-  <p class="subtitle">ECON 441: Introduction to Mathematical Economics<br>Lecture 19</p>
+  <p class="subtitle">ECON 441: Introduction to Mathematical Economics<br>Lecture 20</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -999,12 +999,19 @@ Div Bhagia
 
 </section>
 <section class="slide level2">
-<h2>Example I</h2>
-<p><span class="math display">\[\max_{\{x_1, x_2\}} \quad x_1^2 x_2 \quad \text{s.t.} \quad 2x_1^2 + x_2^2 = 3\]</span></p>
+<h2>Interpretation of the Lagrange Multiplier</h2>
+<p>At the optimum: <span class="math display">\[L(x_1^*, x_2^*, \lambda^*) = f(x_1^*, x_2^*) + \lambda^*[c - g(x_1^*, x_2^*)]\]</span></p>
+<p>What if <span class="math inline">\(c\)</span> changes by a little bit?</p>
+<p><span class="math display">\[\begin{aligned}
+\frac{dL^*}{dc} &amp;= f_1 \frac{dx_1^*}{dc} + f_2 \frac{dx_2^*}{dc} + \lambda^*\left[1 - g_1 \frac{dx_1^*}{dc} - g_2 \frac{dx_2^*}{dc}\right] \\[0.6em]
+&amp;= \underbrace{(f_1 - \lambda^* g_1)}_{0} \frac{dx_1^*}{dc} + \underbrace{(f_2 - \lambda^* g_2)}_{0} \frac{dx_2^*}{dc} + \lambda^* = \lambda^*
+\end{aligned}\]</span></p>
 </section>
 <section class="slide level2">
-<h2>Example II</h2>
-<p><span class="math display">\[\max_{\{x, y\}} \quad x^a y^b \quad \text{s.t.} \quad x + y = 10\]</span></p>
+<h2>Utility Maximization</h2>
+<p><span class="math display">\[L(x_1, x_2, \lambda) = x_1 x_2 + \lambda(40 - 2x_1 - x_2)\]</span></p>
+<p>At the optimum: <span class="math display">\[x_2^* = 2x_1^*, \quad 2x_1^* + x_2^* = 40 \quad \rightarrow \quad x_1^* = 10, \ x_2^* = 20, \ \lambda^* = 10\]</span></p>
+<p>If my income increases by $1, by how much does my utility increase? <span class="math inline">\(\lambda^* = 10\)</span></p>
 </section>
 <section class="slide level2">
 <h2>Example III</h2>
@@ -1069,7 +1076,7 @@ L_i &amp;= f_i - \lambda g_i - \mu h_i = 0 \qquad [i = 1, 2, \ldots, n]
 <h2>Homework Questions</h2>
 <ul>
 <li><p>Exercise 12.2: 1, 2, 3, 4 (in Practice Problems 18)</p></li>
-<li><p>Examples from today’s class (Worksheet: Constrained Optimization)</p></li>
+<li><p>Practice Problems 20: utility maximization, cost minimization, and intertemporal choice</p></li>
 </ul>
 <p>Textbook reference: 12.2</p>
 

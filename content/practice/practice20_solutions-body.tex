@@ -1,0 +1,59 @@
+\underline{Additional Examples}
+\begin{enumerate}
+% Question 1
+\item[1.] Utility maximization: $\max x_1^{\alpha} x_2^{\beta}$ s.t.\ $p_1 x_1 + p_2 x_2 = m$.
+
+The Lagrange function is
+\[\mathcal{L}(x_1, x_2, \lambda) = x_1^{\alpha} x_2^{\beta} + \lambda(m - p_1 x_1 - p_2 x_2)\]
+with first-order conditions
+\begin{align*}
+\frac{\partial \mathcal{L}}{\partial x_1} &= \alpha x_1^{\alpha - 1} x_2^{\beta} - \lambda p_1 = 0 \\
+\frac{\partial \mathcal{L}}{\partial x_2} &= \beta x_1^{\alpha} x_2^{\beta - 1} - \lambda p_2 = 0 \\
+\frac{\partial \mathcal{L}}{\partial \lambda} &= m - p_1 x_1 - p_2 x_2 = 0
+\end{align*}
+Dividing the first condition by the second,
+\[\frac{\alpha x_1^{\alpha - 1} x_2^{\beta}}{\beta x_1^{\alpha} x_2^{\beta - 1}} = \frac{p_1}{p_2} \quad \Rightarrow \quad \frac{\alpha x_2}{\beta x_1} = \frac{p_1}{p_2} \quad \Rightarrow \quad x_2 = \frac{\beta}{\alpha} \cdot \frac{p_1}{p_2} \cdot x_1\]
+Substituting into the constraint,
+\[m - p_1 x_1 - \frac{\beta}{\alpha} p_1 x_1 = m - p_1 x_1 \left(1 + \frac{\beta}{\alpha}\right) = 0 \quad \Rightarrow \quad x_1^* = \frac{\alpha}{\alpha + \beta} \cdot \frac{m}{p_1}\]
+and then
+\[x_2^* = \frac{\beta}{\alpha + \beta} \cdot \frac{m}{p_2}\]
+
+% Question 2
+\item[2.] Cost minimization: $\min pK + wL$ s.t.\ $Q(K, L) = \bar{Q}$.
+
+The Lagrange function is
+\[\mathcal{L}(K, L, \lambda) = pK + wL + \lambda\left(\bar{Q} - Q(K, L)\right)\]
+with first-order conditions
+\begin{align*}
+\frac{\partial \mathcal{L}}{\partial K} &= p - \lambda Q_K(K, L) = 0 \\
+\frac{\partial \mathcal{L}}{\partial L} &= w - \lambda Q_L(K, L) = 0 \\
+\frac{\partial \mathcal{L}}{\partial \lambda} &= \bar{Q} - Q(K, L) = 0
+\end{align*}
+where $Q_K = \partial Q / \partial K$ and $Q_L = \partial Q / \partial L$. Dividing the first condition by the second, the optimal $K^*$ and $L^*$ satisfy
+\[\frac{Q_K(K^*, L^*)}{Q_L(K^*, L^*)} = \frac{p}{w} \qquad \text{and} \qquad Q(K^*, L^*) = \bar{Q}\]
+
+% Question 3
+\item[3.] Intertemporal utility maximization: $\max \ln c_1 + \beta \ln c_2$ s.t.\ $c_1 + \frac{1}{1+r} c_2 = m$.
+\begin{enumerate}
+\item[(a)] The Lagrange function is
+\[L(c_1, c_2, \lambda) = \ln c_1 + \beta \ln c_2 + \lambda\left(m - c_1 - \frac{1}{1+r} c_2\right)\]
+with first-order conditions
+\begin{align*}
+\frac{\partial L}{\partial c_1} &= \frac{1}{c_1} - \lambda = 0 \\
+\frac{\partial L}{\partial c_2} &= \frac{\beta}{c_2} - \frac{\lambda}{1+r} = 0 \\
+\frac{\partial L}{\partial \lambda} &= m - c_1 - \frac{1}{1+r} c_2 = 0
+\end{align*}
+
+\item[(b)] The first condition gives $\lambda^* = 1/c_1^*$. Substituting into the second, $\beta / c_2^* = 1 / \left((1+r) c_1^*\right)$, so
+\[c_2^* = \beta(1+r) c_1^*\]
+Substituting into the constraint,
+\[c_1^* + \frac{1}{1+r} \beta(1+r) c_1^* = m \quad \Rightarrow \quad c_1^* = \frac{m}{1 + \beta}\]
+Then
+\[c_2^* = \frac{\beta(1+r) m}{1 + \beta} \qquad \text{and} \qquad \lambda^* = \frac{1}{c_1^*} = \frac{1 + \beta}{m}\]
+
+\item[(c)] The Lagrange multiplier measures how the optimal value changes when the constraint is relaxed:
+\[\frac{dU^*}{dm} = \lambda^* = \frac{1 + \beta}{m} > 0\]
+So utility rises with income, by $(1 + \beta)/m$ per extra unit, and by less the richer you already are.
+\end{enumerate}
+
+\end{enumerate}

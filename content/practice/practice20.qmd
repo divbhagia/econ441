@@ -1,0 +1,99 @@
+---
+title: "Practice Problems 20"
+subtitle: "Lecture 20: Constrained Optimization, Continued"
+format: html
+---
+
+These are not graded, but you should attempt them all before the quiz. Try each question yourself first, then expand the **Solution** to check.
+
+## Additional Examples
+
+**1.** Utility maximization. Consider the problem
+$$\max_{\{x_1, x_2\}} \quad x_1^{\alpha} x_2^{\beta} \quad \text{s.t.} \quad p_1 x_1 + p_2 x_2 = m$$
+where $p_1$ and $p_2$ are the prices of goods 1 and 2, and $m$ is the income available to spend on the two goods. Find the optimal $x_1^*$ and $x_2^*$.
+
+<details class="solution">
+<summary>Solution</summary>
+
+The Lagrange function is
+$$\mathcal{L}(x_1, x_2, \lambda) = x_1^{\alpha} x_2^{\beta} + \lambda(m - p_1 x_1 - p_2 x_2)$$
+with first-order conditions
+$$\begin{aligned}
+\frac{\partial \mathcal{L}}{\partial x_1} &= \alpha x_1^{\alpha - 1} x_2^{\beta} - \lambda p_1 = 0 \\
+\frac{\partial \mathcal{L}}{\partial x_2} &= \beta x_1^{\alpha} x_2^{\beta - 1} - \lambda p_2 = 0 \\
+\frac{\partial \mathcal{L}}{\partial \lambda} &= m - p_1 x_1 - p_2 x_2 = 0
+\end{aligned}$$
+Dividing the first condition by the second,
+$$\frac{\alpha x_1^{\alpha - 1} x_2^{\beta}}{\beta x_1^{\alpha} x_2^{\beta - 1}} = \frac{p_1}{p_2} \quad \Rightarrow \quad \frac{\alpha x_2}{\beta x_1} = \frac{p_1}{p_2} \quad \Rightarrow \quad x_2 = \frac{\beta}{\alpha} \cdot \frac{p_1}{p_2} \cdot x_1$$
+Substituting into the constraint,
+$$m - p_1 x_1 - \frac{\beta}{\alpha} p_1 x_1 = m - p_1 x_1 \left(1 + \frac{\beta}{\alpha}\right) = 0 \quad \Rightarrow \quad x_1^* = \frac{\alpha}{\alpha + \beta} \cdot \frac{m}{p_1}$$
+and then
+$$x_2^* = \frac{\beta}{\alpha + \beta} \cdot \frac{m}{p_2}$$
+
+</details>
+
+**2.** Cost minimization. A firm chooses capital $K$ and labor $L$ to produce a fixed quantity $\bar{Q}$ at the lowest cost, where $p$ is the price of capital and $w$ is the price of labor:
+$$\min_{\{K, L\}} \quad pK + wL \quad \text{s.t.} \quad Q(K, L) = \bar{Q}$$
+Set up the Lagrange function, write down the first-order conditions, and find the two conditions that the optimal $K^*$ and $L^*$ satisfy.
+
+<details class="solution">
+<summary>Solution</summary>
+
+The Lagrange function is
+$$\mathcal{L}(K, L, \lambda) = pK + wL + \lambda\left(\bar{Q} - Q(K, L)\right)$$
+with first-order conditions
+$$\begin{aligned}
+\frac{\partial \mathcal{L}}{\partial K} &= p - \lambda Q_K(K, L) = 0 \\
+\frac{\partial \mathcal{L}}{\partial L} &= w - \lambda Q_L(K, L) = 0 \\
+\frac{\partial \mathcal{L}}{\partial \lambda} &= \bar{Q} - Q(K, L) = 0
+\end{aligned}$$
+where $Q_K = \partial Q / \partial K$ and $Q_L = \partial Q / \partial L$. Dividing the first condition by the second, the optimal $K^*$ and $L^*$ satisfy
+$$\frac{Q_K(K^*, L^*)}{Q_L(K^*, L^*)} = \frac{p}{w} \qquad \text{and} \qquad Q(K^*, L^*) = \bar{Q}$$
+
+</details>
+
+**3.** Intertemporal utility maximization. Your utility from consumption $c_1$ in period 1 and $c_2$ in period 2 is
+$$U(c_1, c_2) = \ln c_1 + \beta \ln c_2 \qquad 0 < \beta < 1$$
+You earn income $y_1 > 0$ in period 1 and $y_2 > 0$ in period 2, and any income $s$ you save in period 1 earns interest $r > 0$, so $c_1 + s = y_1$ and $c_2 = y_2 + (1 + r)s$. Combining these, your budget constraint is
+$$c_1 + \frac{1}{1+r} c_2 = m, \qquad \text{where } m = y_1 + \frac{1}{1+r} y_2$$
+is your present-discounted income.
+
+a. Write down the Lagrange function and the first-order conditions.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$L(c_1, c_2, \lambda) = \ln c_1 + \beta \ln c_2 + \lambda\left(m - c_1 - \frac{1}{1+r} c_2\right)$$
+First-order conditions:
+$$\begin{aligned}
+\frac{\partial L}{\partial c_1} &= \frac{1}{c_1} - \lambda = 0 \\
+\frac{\partial L}{\partial c_2} &= \frac{\beta}{c_2} - \frac{\lambda}{1+r} = 0 \\
+\frac{\partial L}{\partial \lambda} &= m - c_1 - \frac{1}{1+r} c_2 = 0
+\end{aligned}$$
+
+</details>
+
+b. Find the optimal $c_1^*$, $c_2^*$, and $\lambda^*$.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+The first condition gives $\lambda^* = 1/c_1^*$. Substituting into the second, $\beta / c_2^* = 1 / \left((1+r) c_1^*\right)$, so
+$$c_2^* = \beta(1+r) c_1^*$$
+Substituting into the constraint,
+$$c_1^* + \frac{1}{1+r} \beta(1+r) c_1^* = m \quad \Rightarrow \quad c_1^* = \frac{m}{1 + \beta}$$
+Then
+$$c_2^* = \frac{\beta(1+r) m}{1 + \beta} \qquad \text{and} \qquad \lambda^* = \frac{1}{c_1^*} = \frac{1 + \beta}{m}$$
+
+</details>
+
+c. How does the maximum utility $U^*$ change when present-discounted income $m$ increases slightly?
+
+<details class="solution part">
+<summary>Solution</summary>
+
+The Lagrange multiplier measures how the optimal value changes when the constraint is relaxed:
+$$\frac{dU^*}{dm} = \lambda^* = \frac{1 + \beta}{m} > 0$$
+So utility rises with income, by $(1 + \beta)/m$ per extra unit, and by less the richer you already are.
+
+</details>
