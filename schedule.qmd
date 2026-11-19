@@ -62,7 +62,7 @@ Quizzes are given at the start of class on the dates marked below.
 <tr class="module-head"><th scope="colgroup" colspan="5">Additional Topics</th></tr>
 <tr class="module-start"><th scope="rowgroup" rowspan="2" class="module">Additional Topics</th><th scope="row">Mon 11/30</th><td class="topics"><strong>Quiz 4</strong>; Envelope theorem<span class="refs-inline">Reference: 11.5</span></td><td class="refs">11.5</td><td class="mat"></td></tr>
 <tr class=""><th scope="row">Wed 12/2</th><td class="topics">Quasiconcavity; convex sets; homogeneous functions<span class="refs-inline">Reference: 12.4, 12.6</span></td><td class="refs">12.4, 12.6</td><td class="mat"></td></tr>
-<tr class="assessment module-start"><td class="modblank"></td><th scope="row">Mon 12/7</th><td class="note" colspan="3"><strong>Final review</strong></td></tr>
+<tr class="module-start"><td class="modblank"></td><th scope="row">Mon 12/7</th><td class="topics">To be announced</td><td class="refs"></td><td class="mat"></td></tr>
 <tr class="assessment"><td class="modblank"></td><th scope="row">Wed 12/9</th><td class="note" colspan="3"><strong>Final review</strong></td></tr>
 <tr class="assessment"><td class="modblank"></td><th scope="row">Mon 12/14</th><td class="note" colspan="3"><strong>Final Exam</strong>, 5:00&ndash;6:50 PM</td></tr>
 </tbody>

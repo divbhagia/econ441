@@ -55,6 +55,7 @@ LECTURES = {
  dt.date(YEAR,11,18): (20,"Interpretation of the Lagrange multiplier; multiple variables and constraints","12.2",[]),
  dt.date(YEAR,11,30): (None,"Envelope theorem","11.5",[]),
  dt.date(YEAR,12,2):  (None,"Quasiconcavity; convex sets; homogeneous functions","12.4, 12.6",[]),
+ dt.date(YEAR,12,7):  (None,"To be announced","",[]),
 }
 
 SPECIAL = {
@@ -62,7 +63,6 @@ SPECIAL = {
  dt.date(YEAR,9,23): "Midterm Exam 1",
  dt.date(YEAR,10,19):"Midterm 2 review",
  dt.date(YEAR,10,21):"Midterm Exam 2",
- dt.date(YEAR,12,7): "Final review",
  dt.date(YEAR,12,9): "Final review",
 }
 # Lectures whose materials have been vetted and published.

@@ -97,3 +97,72 @@ $$\frac{dU^*}{dm} = \lambda^* = \frac{1 + \beta}{m} > 0$$
 So utility rises with income, by $(1 + \beta)/m$ per extra unit, and by less the richer you already are.
 
 </details>
+
+**4.** Cost minimization with numbers. A firm produces output $Q = K^{1/2} L^{1/2}$ from capital $K$ and labor $L$. Capital costs \$2 per unit and labor costs \$8 per unit. The firm wants to produce $Q = 4$ at the lowest cost:
+$$\min_{\{K, L\}} \quad 2K + 8L \quad \text{s.t.} \quad K^{1/2} L^{1/2} = 4$$
+
+a. Set up the Lagrange function and write down the first-order conditions.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$\mathcal{L}(K, L, \lambda) = 2K + 8L + \lambda\left(4 - K^{1/2} L^{1/2}\right)$$
+First-order conditions:
+$$\begin{aligned}
+\frac{\partial \mathcal{L}}{\partial K} &= 2 - \tfrac{1}{2} \lambda K^{-1/2} L^{1/2} = 0 \\
+\frac{\partial \mathcal{L}}{\partial L} &= 8 - \tfrac{1}{2} \lambda K^{1/2} L^{-1/2} = 0 \\
+\frac{\partial \mathcal{L}}{\partial \lambda} &= 4 - K^{1/2} L^{1/2} = 0
+\end{aligned}$$
+
+</details>
+
+b. Find $K^*$, $L^*$, the minimum cost, and $\lambda^*$.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+Dividing the first condition by the second,
+$$\frac{2}{8} = \frac{K^{-1/2} L^{1/2}}{K^{1/2} L^{-1/2}} = \frac{L}{K} \quad \Rightarrow \quad K = 4L$$
+Substituting into the constraint, $(4L \cdot L)^{1/2} = 2L = 4$, so
+$$L^* = 2, \qquad K^* = 8, \qquad \text{cost} = 2(8) + 8(2) = 32$$
+From the first condition, $2 = \tfrac{1}{2} \lambda (L/K)^{1/2} = \tfrac{1}{2} \lambda \cdot \tfrac{1}{2}$, so $\lambda^* = 8$.
+
+</details>
+
+c. What does $\lambda^*$ tell you about the firm's costs?
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$\lambda^*$ is how much the minimum cost rises when the constraint is relaxed, that is, when the firm must produce one more unit of output. So $\lambda^* = 8$ is the marginal cost: producing a fifth unit adds about \$8 to cost.
+
+Check: for any output $Q$, the same steps give $K = 2Q$ and $L = Q/2$, so the minimum cost is $2(2Q) + 8(Q/2) = 8Q$, and $dC/dQ = 8$.
+
+</details>
+
+**5.** Closest point on a line. Find the point on the line $x + 2y = 10$ that is closest to the origin. (Hint: minimize the squared distance $x^2 + y^2$ subject to the line.)
+
+a. Find the closest point and its distance from the origin.
+
+<details class="solution part">
+<summary>Solution</summary>
+
+$$L(x, y, \lambda) = x^2 + y^2 + \lambda(10 - x - 2y)$$
+First-order conditions:
+$$2x - \lambda = 0, \qquad 2y - 2\lambda = 0, \qquad 10 - x - 2y = 0$$
+The first two give $x = \lambda/2$ and $y = \lambda$, so $y = 2x$. Substituting into the constraint, $x + 4x = 10$, so
+$$x^* = 2, \qquad y^* = 4, \qquad \lambda^* = 4$$
+The squared distance is $2^2 + 4^2 = 20$, so the distance is $\sqrt{20} = 2\sqrt{5} \approx 4.47$.
+
+</details>
+
+b. If the line shifts to $x + 2y = c$ with $c$ slightly above 10, about how much does the minimum squared distance change?
+
+<details class="solution part">
+<summary>Solution</summary>
+
+By the interpretation of the Lagrange multiplier, the minimum squared distance changes at the rate $\lambda^* = 4$ per unit increase in $c$.
+
+Check: for any $c$, the same steps give $x^* = c/5$ and $y^* = 2c/5$, so the minimum squared distance is $c^2/5$, and its derivative $2c/5$ equals 4 at $c = 10$.
+
+</details>

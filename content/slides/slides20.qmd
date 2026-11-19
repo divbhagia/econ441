@@ -8,6 +8,80 @@ format:
     embed-resources: true
 ---
 
+## Utility Maximization
+
+$$\max_{\{x_1, x_2\}} \quad x_1 x_2 \quad \text{s.t.} \quad 2x_1 + x_2 = 40$$
+
+Lagrange function:
+$$L(x_1, x_2, \lambda) = x_1 x_2 + \lambda(40 - 2x_1 - x_2)$$
+
+First-order conditions:
+$$x_2 - 2\lambda = 0, \qquad x_1 - \lambda = 0, \qquad 40 - 2x_1 - x_2 = 0$$
+
+From the first two, $x_2 = 2x_1$. Then $2x_1 + 2x_1 = 40$:
+$$x_1^* = 10, \qquad x_2^* = 20, \qquad \lambda^* = 10$$
+
+## The Solution on the Graph
+
+:::: {.columns}
+::: {.column width="55%"}
+![](../../assets/fig/tangency.svg){.nostretch fig-alt="Axes x1 across and x2 up. A straight downward-sloping line runs from 40 on the x2 axis to 20 on the x1 axis. A bowed-in curve touches the line at exactly one point, (10, 20), marked with a dot and dashed guide lines to both axes" width=520}
+:::
+::: {.column width="45%"}
+Slope of the indifference curve:
+$$-\frac{f_1}{f_2} = -\frac{x_2}{x_1}$$
+
+Slope of the budget line:
+$$-\frac{p_1}{p_2} = -2$$
+
+At $(10, 20)$ both equal $-2$: the curves are *tangent*.
+:::
+::::
+
+## Why Is $(10, 20)$ the Best?
+
+:::: {.columns}
+::: {.column width="56%"}
+![](../../assets/fig/tangency-points.svg){.nostretch fig-alt="Axes x1 across and x2 up. A straight budget line 2 x1 plus x2 equals 40 runs from 40 on the x2 axis to 20 on the x1 axis. A bold bowed-in indifference curve labeled U equals 200 touches the budget line at exactly one point, (10, 20). A dashed, lower indifference curve labeled U equals 150 crosses the budget line at the point (5, 30) and again further right" width=560}
+:::
+::: {.column width="44%"}
+Both points cost \$40.
+
+Utility per dollar, $f_1/p_1$ vs. $f_2/p_2$:
+$$\begin{aligned}
+(5, 30)&: \quad 15 \ \text{vs.}\ 5 \\
+(10, 20)&: \quad 10 \ \text{vs.}\ 10
+\end{aligned}$$
+
+At $(5, 30)$, moving \$1 to good 1 gains 15 and loses 5.
+
+At $(10, 20)$, no move helps.
+:::
+::::
+
+## What the Lagrange Conditions Say
+
+At the optimum, utility per dollar is the same for both goods:
+$$\frac{f_1}{p_1} = \frac{f_2}{p_2} = \lambda \qquad \Longleftrightarrow \qquad \frac{f_1}{f_2} = \frac{p_1}{p_2} \quad \text{(tangency)}$$
+
+That is exactly what the first-order conditions of $L$ say:
+$$f_1 = \lambda p_1, \qquad f_2 = \lambda p_2, \qquad 2x_1 + x_2 = 40$$
+
+$\lambda^* = 10$ is that common utility per dollar: the extra utility from one more dollar of income.
+
+## Lagrange-Multiplier Method
+
+In general, to maximize $f(x_1, x_2)$ subject to $g(x_1, x_2) = c$:
+
+$$L(x_1, x_2, \lambda) = f(x_1, x_2) + \lambda[c - g(x_1, x_2)]$$
+
+First-order conditions:
+$$\begin{aligned}
+\frac{\partial L}{\partial x_1} &= f_1(x_1^*, x_2^*) - \lambda^* g_1(x_1^*, x_2^*) = 0 \\[0.6em]
+\frac{\partial L}{\partial x_2} &= f_2(x_1^*, x_2^*) - \lambda^* g_2(x_1^*, x_2^*) = 0 \\[0.6em]
+\frac{\partial L}{\partial \lambda} &= c - g(x_1^*, x_2^*) = 0
+\end{aligned}$$
+
 ## Interpretation of the Lagrange Multiplier
 
 At the optimum:
@@ -20,14 +94,12 @@ $$\begin{aligned}
 &= \underbrace{(f_1 - \lambda^* g_1)}_{0} \frac{dx_1^*}{dc} + \underbrace{(f_2 - \lambda^* g_2)}_{0} \frac{dx_2^*}{dc} + \lambda^* = \lambda^*
 \end{aligned}$$
 
-## Utility Maximization
+## Back to the Example
 
-$$L(x_1, x_2, \lambda) = x_1 x_2 + \lambda(40 - 2x_1 - x_2)$$
+$\lambda^* = 10$: one more dollar of income should raise utility by about 10.
 
-At the optimum:
-$$x_2^* = 2x_1^*, \quad 2x_1^* + x_2^* = 40 \quad \rightarrow \quad x_1^* = 10, \ x_2^* = 20, \ \lambda^* = 10$$
-
-If my income increases by \$1, by how much does my utility increase? $\lambda^* = 10$
+Check: with \$41 instead of \$40,
+$$x_1^* = 10.25, \qquad x_2^* = 20.5, \qquad f = 210.1 \approx 200 + 10$$
 
 ## Example III
 
